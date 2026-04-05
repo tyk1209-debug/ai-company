@@ -25,13 +25,13 @@
   <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
   <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
   <!-- Google Analytics 4 -->
-  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQXDS1Z41Y"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-HQXDS1Z41Y');
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -449,9 +449,91 @@
       font-weight: 700;
     }
 
+
+    /* ---- sidebar layout ---- */
+    .content-with-sidebar {
+      display: grid;
+      grid-template-columns: 1fr 28%;
+      gap: 2rem;
+      align-items: start;
+    }
+    .sidebar { position: sticky; top: 1.5rem; }
+    .sidebar-widget {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-widget-title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--navy);
+      border-left: 3px solid var(--blue);
+      padding-left: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .sidebar-category-list { list-style: none; padding: 0; margin: 0; }
+    .sidebar-category-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+    }
+    .sidebar-category-list li:last-child { border-bottom: none; }
+    .sidebar-category-list a { color: var(--text); }
+    .sidebar-category-list a:hover { color: var(--blue); text-decoration: none; }
+    .sidebar-category-count {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.1rem 0.45rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    .sidebar-about { font-size: 0.82rem; line-height: 1.7; color: var(--text-muted); }
+    .sidebar-recent-list { list-style: none; padding: 0; margin: 0; }
+    .sidebar-recent-list li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+    .sidebar-recent-list li:last-child { border-bottom: none; }
+    .sidebar-recent-list a { color: var(--text); }
+    .sidebar-recent-list a:hover { color: var(--blue); text-decoration: none; }
+    /* ---- share button ---- */
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: #1d9bf0;
+      color: #fff;
+      border-radius: 4px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .share-btn:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
+    .card-footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    /* ---- reading time ---- */
+    .reading-time { font-size: 0.78rem; color: #a0aec0; margin-bottom: 1rem; }
+
     /* ---- responsive ---- */
     @media (max-width: 768px) {
       nav a { margin-left: 0.75rem; font-size: 0.78rem; }
+      .content-with-sidebar { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
     }
     @media (max-width: 640px) {
       nav a { font-size: 0.72rem; margin-left: 0.5rem; }
@@ -555,10 +637,11 @@
     })();
   </script>
   <div class="container">
-    <main class="main-content">
-      <h2 class="section-title">最新ニュース</h2>
-      <div class="article-list">
-        
+    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
+      <main>
+        <h2 class="section-title">最新ニュース</h2>
+        <div class="article-list">
+          
       <article class="article-card" data-category="BIM_ECOSYSTEM">
         <div class="card-meta">
           <span class="badge">BIMエコシステム</span>
@@ -569,7 +652,10 @@
         </h2>
         <p class="card-excerpt">BIMエコシステムの最新情報👇 Model Analytics Public Beta: What Happens When Insight Is Embedded, Not Ad…（1/27） https://autodeskblog.…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/model-analytics-public-beta-what-happens-when-insight-is-embedded-not-added-a-ne.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/model-analytics-public-beta-what-happens-when-insight-is-embedded-not-added-a-ne.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Model%20Analytics%20Public%20Beta%3A%20What%20Happens%20When%20Insight%20Is%20Embedded%2C%20Not%20Added%3F%20A%20New%20Era%20for%20Model%20Health%20in%20Autodesk%20Construction%20Cloud&url=https%3A%2F%2Faec-news.com%2Fposts%2Fmodel-analytics-public-beta-what-happens-when-insight-is-embedded-not-added-a-ne.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="REVIT">
@@ -582,7 +668,10 @@
         </h2>
         <p class="card-excerpt">Revitユーザー注目の情報です Discover New Revit Design Tips in Less Than 90 Seconds with Autodesk L…（4/1） https://autodeskblog.wpeng…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/discover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-re.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/discover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-re.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Discover%20New%20Revit%20Design%20Tips%20in%20Less%20Than%2090%20Seconds%20with%20Autodesk%20Learning%20Reels&url=https%3A%2F%2Faec-news.com%2Fposts%2Fdiscover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-re.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="REVIT">
@@ -595,7 +684,10 @@
         </h2>
         <p class="card-excerpt">Autodesk / Revit アップデート情報 Introducing the New Revit Add-On Release for Content Catalog（1/15） https://autodeskblog.wpengi…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/introducing-the-new-revit-add-on-release-for-content-catalog.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/introducing-the-new-revit-add-on-release-for-content-catalog.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Introducing%20the%20New%20Revit%20Add-On%20Release%20for%20Content%20Catalog&url=https%3A%2F%2Faec-news.com%2Fposts%2Fintroducing-the-new-revit-add-on-release-for-content-catalog.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
@@ -608,7 +700,10 @@
         </h2>
         <p class="card-excerpt">BIMエコシステムの最新情報👇 What’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk …（4/3） https://autodeskblog.…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/whats-new-in-civil-3d-2027-advancing-infrastructure-design-with-autodesk-assista.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/whats-new-in-civil-3d-2027-advancing-infrastructure-design-with-autodesk-assista.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=What%E2%80%99s%20New%20in%20Civil%203D%202027%3A%20Advancing%20Infrastructure%20Design%20with%20Autodesk%20Assistant%20and%20Forma%20Data%20Management%20Essentials&url=https%3A%2F%2Faec-news.com%2Fposts%2Fwhats-new-in-civil-3d-2027-advancing-infrastructure-design-with-autodesk-assista.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
@@ -621,7 +716,10 @@
         </h2>
         <p class="card-excerpt">建設テックの最前線情報 Autodesk Construction Cloud is now Autodesk Forma（3/24） https://adsknews.autodesk.com/en/news/autodesk-const…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/autodesk-construction-cloud-is-now-autodesk-forma.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/autodesk-construction-cloud-is-now-autodesk-forma.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Autodesk%20Construction%20Cloud%20is%20now%20Autodesk%20Forma&url=https%3A%2F%2Faec-news.com%2Fposts%2Fautodesk-construction-cloud-is-now-autodesk-forma.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
@@ -634,7 +732,10 @@
         </h2>
         <p class="card-excerpt">BIMエコシステムの最新情報👇 Autodesk at the 2025 RIBA Stirling Prize Ceremony（1/7） https://autodeskblog.wpengine.com/aec/2026/01/06…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/autodesk-at-the-2025-riba-stirling-prize-ceremony.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/autodesk-at-the-2025-riba-stirling-prize-ceremony.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Autodesk%20at%20the%202025%20RIBA%20Stirling%20Prize%20Ceremony&url=https%3A%2F%2Faec-news.com%2Fposts%2Fautodesk-at-the-2025-riba-stirling-prize-ceremony.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="AI_DX">
@@ -647,7 +748,10 @@
         </h2>
         <p class="card-excerpt">DX推進に役立つ情報です Autodesk Flow Studio launches Wonder 3D Gen AI model to help creators make 3D char…（4/3） https://adsknews.a…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Autodesk%20Flow%20Studio%20launches%20Wonder%203D%20Gen%20AI%20model%20to%20help%20creators%20make%203D%20characters%20and%20objects%20faster%20and%20easier&url=https%3A%2F%2Faec-news.com%2Fposts%2Fautodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
@@ -660,7 +764,10 @@
         </h2>
         <p class="card-excerpt">BIMエコシステムの最新情報👇 Preserving the past with digital innovation: Autodesk named a Fast Company…（3/26） https://adsknews.auto…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Preserving%20the%20past%20with%20digital%20innovation%3A%20Autodesk%20named%20a%20Fast%20Company%20Most%20Innovative%20Company%20for%202026&url=https%3A%2F%2Faec-news.com%2Fposts%2Fpreserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
@@ -673,7 +780,10 @@
         </h2>
         <p class="card-excerpt">BIMエコシステムの最新情報👇 Autodesk Construction Cloud to join Autodesk Forma on March 24（2/26） https://adsknews.autodesk.com/en/n…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/autodesk-construction-cloud-to-join-autodesk-forma-on-march-24.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/autodesk-construction-cloud-to-join-autodesk-forma-on-march-24.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Autodesk%20Construction%20Cloud%20to%20join%20Autodesk%20Forma%20on%20March%2024&url=https%3A%2F%2Faec-news.com%2Fposts%2Fautodesk-construction-cloud-to-join-autodesk-forma-on-march-24.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
@@ -686,7 +796,10 @@
         </h2>
         <p class="card-excerpt">建設テックの最前線情報 Expanding FedRAMP® Moderate Authorization brings connected, secure future to Au…（2/13） https://adsknews.auto…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/expanding-fedramp-moderate-authorization-brings-connected-secure-future-to-autod.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/expanding-fedramp-moderate-authorization-brings-connected-secure-future-to-autod.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Expanding%20FedRAMP%C2%AE%20Moderate%20Authorization%20brings%20connected%2C%20secure%20future%20to%20Autodesk%20Construction%20Cloud%20and%20Fusion%20federal%20customers&url=https%3A%2F%2Faec-news.com%2Fposts%2Fexpanding-fedramp-moderate-authorization-brings-connected-secure-future-to-autod.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="IFC">
@@ -699,7 +812,10 @@
         </h2>
         <p class="card-excerpt">IFC・openBIM 標準化の最新情報 Key Outcomes from the Domain Leadership Conference in Zuri…（3/20） https://www.buildingsmart.org/key…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/key-outcomes-from-the-domain-leadership-conference-in-zurich.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/key-outcomes-from-the-domain-leadership-conference-in-zurich.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Key%20Outcomes%20from%20the%20Domain%20Leadership%20Conference%20in%20Zurich&url=https%3A%2F%2Faec-news.com%2Fposts%2Fkey-outcomes-from-the-domain-leadership-conference-in-zurich.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="AI_DX">
@@ -712,7 +828,10 @@
         </h2>
         <p class="card-excerpt">建設業界のAI活用事例です Autodesk acquires Rhumbix in construction data push（4/3） https://www.constructiondive.com/news/autodesk-ac…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/autodesk-acquires-rhumbix-in-construction-data-push.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/autodesk-acquires-rhumbix-in-construction-data-push.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Autodesk%20acquires%20Rhumbix%20in%20construction%20data%20push&url=https%3A%2F%2Faec-news.com%2Fposts%2Fautodesk-acquires-rhumbix-in-construction-data-push.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
       <article class="article-card" data-category="AI_DX">
@@ -725,11 +844,30 @@
         </h2>
         <p class="card-excerpt">DX推進に役立つ情報です Choreographing Lagos: Dele Adeyemo on Dance, Cosmology, and Spatial Practices（4/4） https://www.archdaily.co…</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/choreographing-lagos-dele-adeyemo-on-dance-cosmology-and-spatial-practices.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/choreographing-lagos-dele-adeyemo-on-dance-cosmology-and-spatial-practices.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=Choreographing%20Lagos%3A%20Dele%20Adeyemo%20on%20Dance%2C%20Cosmology%2C%20and%20Spatial%20Practices&url=https%3A%2F%2Faec-news.com%2Fposts%2Fchoreographing-lagos-dele-adeyemo-on-dance-cosmology-and-spatial-practices.html" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>
+        </div>
+      </main>
+      
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">カテゴリ一覧</div>
+        <ul class="sidebar-category-list"><li><a href="./">BIMエコシステム</a><span class="sidebar-category-count">7</span></li><li><a href="./">AI/DX</a><span class="sidebar-category-count">3</span></li><li><a href="./">Revit</a><span class="sidebar-category-count">2</span></li><li><a href="./">IFC</a><span class="sidebar-category-count">1</span></li></ul>
       </div>
-    </main>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">このサイトについて</div>
+        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新ニュースをAIが日本語で解説する専門メディアです。Autodesk・IFC・デジタルツインなど業界の最新動向をお届けします。</p>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">最新記事</div>
+        <ul class="sidebar-recent-list"><li><a href="./posts/model-analytics-public-beta-what-happens-when-insight-is-embedded-not-added-a-ne.html">Model Analytics Public Beta: What Happens When Insight Is Embedded, Not Added? A New Era for Model Health in Autodesk Construction Cloud</a></li><li><a href="./posts/discover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-re.html">Discover New Revit Design Tips in Less Than 90 Seconds with Autodesk Learning Reels</a></li><li><a href="./posts/introducing-the-new-revit-add-on-release-for-content-catalog.html">Introducing the New Revit Add-On Release for Content Catalog</a></li><li><a href="./posts/whats-new-in-civil-3d-2027-advancing-infrastructure-design-with-autodesk-assista.html">What’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk Assistant and Forma Data Management Essentials</a></li><li><a href="./posts/autodesk-construction-cloud-is-now-autodesk-forma.html">Autodesk Construction Cloud is now Autodesk Forma</a></li></ul>
+      </div>
+    </aside>
+    </div>
   </div>
   <footer class="site-footer">
     <div class="footer-nav">

@@ -25,13 +25,13 @@
   <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
   <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
   <!-- Google Analytics 4 -->
-  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQXDS1Z41Y"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-HQXDS1Z41Y');
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -449,9 +449,91 @@
       font-weight: 700;
     }
 
+
+    /* ---- sidebar layout ---- */
+    .content-with-sidebar {
+      display: grid;
+      grid-template-columns: 1fr 28%;
+      gap: 2rem;
+      align-items: start;
+    }
+    .sidebar { position: sticky; top: 1.5rem; }
+    .sidebar-widget {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-widget-title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--navy);
+      border-left: 3px solid var(--blue);
+      padding-left: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .sidebar-category-list { list-style: none; padding: 0; margin: 0; }
+    .sidebar-category-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+    }
+    .sidebar-category-list li:last-child { border-bottom: none; }
+    .sidebar-category-list a { color: var(--text); }
+    .sidebar-category-list a:hover { color: var(--blue); text-decoration: none; }
+    .sidebar-category-count {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.1rem 0.45rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    .sidebar-about { font-size: 0.82rem; line-height: 1.7; color: var(--text-muted); }
+    .sidebar-recent-list { list-style: none; padding: 0; margin: 0; }
+    .sidebar-recent-list li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+    .sidebar-recent-list li:last-child { border-bottom: none; }
+    .sidebar-recent-list a { color: var(--text); }
+    .sidebar-recent-list a:hover { color: var(--blue); text-decoration: none; }
+    /* ---- share button ---- */
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: #1d9bf0;
+      color: #fff;
+      border-radius: 4px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .share-btn:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
+    .card-footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    /* ---- reading time ---- */
+    .reading-time { font-size: 0.78rem; color: #a0aec0; margin-bottom: 1rem; }
+
     /* ---- responsive ---- */
     @media (max-width: 768px) {
       nav a { margin-left: 0.75rem; font-size: 0.78rem; }
+      .content-with-sidebar { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
     }
     @media (max-width: 640px) {
       nav a { font-size: 0.72rem; margin-left: 0.5rem; }
@@ -491,6 +573,7 @@
           <span>2026年2月26日</span>
           <span>出典: Autodesk News</span>
         </div>
+        <p class="reading-time">約1分で読めます</p>
         <div class="article-body">
           <div class="ai-comment-label">AIによる専門家コメント</div><div class="post-text-box">BIMエコシステムの最新情報👇
 
@@ -506,6 +589,9 @@ https://adsknews.autodesk.com/en/news/autodesk-construction-cloud-to-join-forma
         <div class="affiliate-box">
           <p>※ 本記事に関連する書籍・学習リソース（広告）</p>
           <a href="https://www.amazon.co.jp/s?k=BIM+建築+設計&amp;tag=aecnewsjapan-22" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 BIM導入・活用ガイド を Amazonで見る →</a>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a class="share-btn" href="https://twitter.com/intent/tweet?text=Autodesk%20Construction%20Cloud%20to%20join%20Autodesk%20Forma%20on%20March%2024&url=https%3A%2F%2Faec-news.com%2Fposts%2Fautodesk-construction-cloud-to-join-autodesk-forma-on-march-24.html" target="_blank" rel="noopener noreferrer">X でシェアする</a>
         </div>
       </div>
       

@@ -102,13 +102,13 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
   <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
   <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
   <!-- Google Analytics 4 -->
-  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQXDS1Z41Y"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-HQXDS1Z41Y');
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -663,6 +663,44 @@ function htmlFooter(base = '.', articleCount = 0) {
 </html>`;
 }
 
+// ---- sidebar ----------------------------------------------------------------
+
+function buildSidebar(posts, base = '.') {
+  // Category counts
+  const catCounts = {};
+  for (const p of posts) {
+    const label = categoryLabel(p.category);
+    catCounts[label] = (catCounts[label] || 0) + 1;
+  }
+  const catItems = Object.entries(catCounts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([label, count]) =>
+      `<li><a href="${base}/">${escape(label)}</a><span class="sidebar-category-count">${count}</span></li>`
+    ).join('');
+
+  // Recent 5 posts
+  const recent = posts.slice(0, 5);
+  const recentItems = recent.map(p =>
+    `<li><a href="${base}/posts/${escape(p.slug)}.html">${escape(p.titleJa || p.title)}</a></li>`
+  ).join('');
+
+  return `
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">カテゴリ一覧</div>
+        <ul class="sidebar-category-list">${catItems}</ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">このサイトについて</div>
+        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新ニュースをAIが日本語で解説する専門メディアです。Autodesk・IFC・デジタルツインなど業界の最新動向をお届けします。</p>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">最新記事</div>
+        <ul class="sidebar-recent-list">${recentItems}</ul>
+      </div>
+    </aside>`;
+}
+
 // ---- index page -------------------------------------------------------------
 
 function buildIndex(posts, totalCount = 0) {
@@ -688,7 +726,10 @@ function buildIndex(posts, totalCount = 0) {
         </h2>
         <p class="card-excerpt">${escape(snip)}</p>
         <div class="card-footer">
-          <a class="read-more" href="./posts/${escape(slug)}.html">続きを読む &rarr;</a>
+          <div class="card-footer-row">
+            <a class="read-more" href="./posts/${escape(slug)}.html">続きを読む &rarr;</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(SITE_URL + '/posts/' + slug + '.html')}" target="_blank" rel="noopener noreferrer">X シェア</a>
+          </div>
         </div>
       </article>`;
   }).join('');
@@ -797,12 +838,15 @@ function buildIndex(posts, totalCount = 0) {
     categoryNavHtml +
     `
   <div class="container">
-    <main class="main-content">
-      <h2 class="section-title">最新ニュース</h2>
-      <div class="article-list">
-        ${cards}
-      </div>
-    </main>
+    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
+      <main>
+        <h2 class="section-title">最新ニュース</h2>
+        <div class="article-list">
+          ${cards}
+        </div>
+      </main>
+      ${buildSidebar(posts, '.')}
+    </div>
   </div>` +
     htmlFooter('.', articleCount);
 }
@@ -831,6 +875,8 @@ function buildRelatedArticles(post, allPosts) {
 function buildArticlePage(post, allPosts) {
   const catLabel = categoryLabel(post.category);
   const date = formatDate(post.pubDate);
+  const bodyText = post.bodyJa || post.postText || post.summary || '';
+  const readingMinutes = Math.max(1, Math.ceil(bodyText.length / 500));
   const bodyContent = post.bodyJa
     ? `<div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>${escape(post.bodyJa)}</p></div>`
     : post.postText
@@ -886,6 +932,7 @@ function buildArticlePage(post, allPosts) {
           <span>${escape(date)}</span>
           <span>出典: ${escape(post.source || '')}</span>
         </div>
+        <p class="reading-time">約${readingMinutes}分で読めます</p>
         <div class="article-body">
           ${bodyContent}
         </div>
@@ -900,6 +947,9 @@ function buildArticlePage(post, allPosts) {
           <p>※ 本記事に関連する書籍・学習リソース（広告）</p>${links}
         </div>`;
         })()}
+        <div style="margin-top:1.5rem;">
+          <a class="share-btn" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(SITE_URL + '/posts/' + post.slug + '.html')}" target="_blank" rel="noopener noreferrer">X でシェアする</a>
+        </div>
       </div>
       ${buildRelatedArticles(post, allPosts)}
     </main>

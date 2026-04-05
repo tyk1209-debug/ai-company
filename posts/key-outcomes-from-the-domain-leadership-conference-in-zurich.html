@@ -59,6 +59,18 @@
       background: var(--bg);
     }
 
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #0f1923; }
+    ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 3px; }
+
     a { color: var(--blue); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
@@ -197,11 +209,11 @@
       border-radius: 6px;
       padding: 1.25rem 1.5rem;
       box-shadow: var(--card-shadow);
-      transition: transform 0.15s, box-shadow 0.15s;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
     }
     .article-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(26,39,68,0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(59,130,246,0.15), 0 4px 12px rgba(0,0,0,0.3);
     }
     .card-meta {
       display: flex;
@@ -564,13 +576,13 @@
   <div class="container">
     <main class="main-content">
       <nav class="breadcrumb">
-        <a href="../">ホーム</a> &rsaquo; <span>IFC</span>
+        <a href="../">ホーム</a> &rsaquo; <span>🔗 IFC</span>
       </nav>
       <div class="article-detail">
         <h1>Key Outcomes from the Domain Leadership Conference in Zurich</h1>
         
         <div class="meta">
-          <span class="badge">IFC</span>
+          <span class="badge">🔗 IFC</span>
           <span>2026年3月20日</span>
           <span>出典: buildingSMART International</span>
         </div>

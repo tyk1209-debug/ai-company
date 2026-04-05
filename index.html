@@ -59,6 +59,18 @@
       background: var(--bg);
     }
 
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #0f1923; }
+    ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 3px; }
+
     a { color: var(--blue); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
@@ -197,11 +209,11 @@
       border-radius: 6px;
       padding: 1.25rem 1.5rem;
       box-shadow: var(--card-shadow);
-      transition: transform 0.15s, box-shadow 0.15s;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
     }
     .article-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(26,39,68,0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(59,130,246,0.15), 0 4px 12px rgba(0,0,0,0.3);
     }
     .card-meta {
       display: flex;
@@ -567,6 +579,15 @@
       <span class="hero-badge">Revit・ArchiCAD・IFC・デジタルツイン・建設テックの最新トレンドをAIが日本語で解説</span>
     </div>
   </div>
+  <style>
+    .ticker-wrap { overflow: hidden; border-top: 1px solid rgba(59,130,246,0.25); border-bottom: 1px solid rgba(59,130,246,0.25); background: rgba(59,130,246,0.05); padding: 10px 0; margin-bottom: 2rem; }
+    .ticker-inner { display: flex; animation: ticker-scroll 30s linear infinite; white-space: nowrap; }
+    .ticker-inner:hover { animation-play-state: paused; }
+    .ticker-item { padding: 0 3rem; font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+    .ticker-item::before { content: '▶ '; color: #3b82f6; font-size: 0.7rem; }
+    @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  </style>
+  <div class="ticker-wrap"><div class="ticker-inner"><span class="ticker-item">今週のBIM・AEC注目ニュース（3月29日〜4月5日）</span><span class="ticker-item">Model Analytics Public Beta: What Happens When Insight Is Embedded, Not Added? A New Era for Model Health in Autodesk Construction Cloud</span><span class="ticker-item">Discover New Revit Design Tips in Less Than 90 Seconds with Autodesk Learning Reels</span><span class="ticker-item">Introducing the New Revit Add-On Release for Content Catalog</span><span class="ticker-item">What’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk Assistant and Forma Data Management Essentials</span><span class="ticker-item">今週のBIM・AEC注目ニュース（3月29日〜4月5日）</span><span class="ticker-item">Model Analytics Public Beta: What Happens When Insight Is Embedded, Not Added? A New Era for Model Health in Autodesk Construction Cloud</span><span class="ticker-item">Discover New Revit Design Tips in Less Than 90 Seconds with Autodesk Learning Reels</span><span class="ticker-item">Introducing the New Revit Add-On Release for Content Catalog</span><span class="ticker-item">What’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk Assistant and Forma Data Management Essentials</span></div></div>
   <div class="category-nav-wrapper">
     <div class="container">
       <div class="category-nav" id="categoryNav">
@@ -645,7 +666,7 @@
           
       <article class="article-card" data-category="BIM_ECOSYSTEM">
         <div class="card-meta">
-          <span class="badge">BIMエコシステム</span>
+          <span class="badge">🔧 BIM全般</span>
           <span class="card-meta-right"><span>AEC News Japan 週次まとめ</span><span>2026年4月5日</span></span>
         </div>
         <h2 class="card-title">
@@ -661,7 +682,7 @@
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
         <div class="card-meta">
-          <span class="badge">BIMエコシステム</span>
+          <span class="badge">🔧 BIM全般</span>
           <span class="card-meta-right"><span>Autodesk AEC Blog</span><span>2026年1月27日</span></span>
         </div>
         <h2 class="card-title">
@@ -677,7 +698,7 @@
       </article>
       <article class="article-card" data-category="REVIT">
         <div class="card-meta">
-          <span class="badge">Revit</span>
+          <span class="badge">🏗️ Revit</span>
           <span class="card-meta-right"><span>Autodesk AEC Blog</span><span>2026年4月1日</span></span>
         </div>
         <h2 class="card-title">
@@ -693,7 +714,7 @@
       </article>
       <article class="article-card" data-category="REVIT">
         <div class="card-meta">
-          <span class="badge">Revit</span>
+          <span class="badge">🏗️ Revit</span>
           <span class="card-meta-right"><span>Autodesk AEC Blog</span><span>2026年1月15日</span></span>
         </div>
         <h2 class="card-title">
@@ -709,7 +730,7 @@
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
         <div class="card-meta">
-          <span class="badge">BIMエコシステム</span>
+          <span class="badge">🔧 BIM全般</span>
           <span class="card-meta-right"><span>Autodesk AEC Blog</span><span>2026年4月3日</span></span>
         </div>
         <h2 class="card-title">
@@ -725,7 +746,7 @@
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
         <div class="card-meta">
-          <span class="badge">BIMエコシステム</span>
+          <span class="badge">🔧 BIM全般</span>
           <span class="card-meta-right"><span>Autodesk News</span><span>2026年3月24日</span></span>
         </div>
         <h2 class="card-title">
@@ -741,7 +762,7 @@
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
         <div class="card-meta">
-          <span class="badge">BIMエコシステム</span>
+          <span class="badge">🔧 BIM全般</span>
           <span class="card-meta-right"><span>Autodesk AEC Blog</span><span>2026年1月7日</span></span>
         </div>
         <h2 class="card-title">
@@ -757,7 +778,7 @@
       </article>
       <article class="article-card" data-category="AI_DX">
         <div class="card-meta">
-          <span class="badge">AI/DX</span>
+          <span class="badge">🤖 AI/DX</span>
           <span class="card-meta-right"><span>Autodesk News</span><span>2026年4月3日</span></span>
         </div>
         <h2 class="card-title">
@@ -773,7 +794,7 @@
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
         <div class="card-meta">
-          <span class="badge">BIMエコシステム</span>
+          <span class="badge">🔧 BIM全般</span>
           <span class="card-meta-right"><span>Autodesk News</span><span>2026年3月26日</span></span>
         </div>
         <h2 class="card-title">
@@ -789,7 +810,7 @@
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
         <div class="card-meta">
-          <span class="badge">BIMエコシステム</span>
+          <span class="badge">🔧 BIM全般</span>
           <span class="card-meta-right"><span>Autodesk News</span><span>2026年2月26日</span></span>
         </div>
         <h2 class="card-title">
@@ -805,7 +826,7 @@
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
         <div class="card-meta">
-          <span class="badge">BIMエコシステム</span>
+          <span class="badge">🔧 BIM全般</span>
           <span class="card-meta-right"><span>Autodesk News</span><span>2026年2月13日</span></span>
         </div>
         <h2 class="card-title">
@@ -821,7 +842,7 @@
       </article>
       <article class="article-card" data-category="IFC">
         <div class="card-meta">
-          <span class="badge">IFC</span>
+          <span class="badge">🔗 IFC</span>
           <span class="card-meta-right"><span>buildingSMART International</span><span>2026年3月20日</span></span>
         </div>
         <h2 class="card-title">
@@ -837,7 +858,7 @@
       </article>
       <article class="article-card" data-category="AI_DX">
         <div class="card-meta">
-          <span class="badge">AI/DX</span>
+          <span class="badge">🤖 AI/DX</span>
           <span class="card-meta-right"><span>Construction Dive</span><span>2026年4月3日</span></span>
         </div>
         <h2 class="card-title">
@@ -853,7 +874,7 @@
       </article>
       <article class="article-card" data-category="AI_DX">
         <div class="card-meta">
-          <span class="badge">AI/DX</span>
+          <span class="badge">🤖 AI/DX</span>
           <span class="card-meta-right"><span>ArchDaily</span><span>2026年4月4日</span></span>
         </div>
         <h2 class="card-title">
@@ -873,7 +894,7 @@
     <aside class="sidebar">
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">カテゴリ一覧</div>
-        <ul class="sidebar-category-list"><li><a href="./">BIMエコシステム</a><span class="sidebar-category-count">8</span></li><li><a href="./">AI/DX</a><span class="sidebar-category-count">3</span></li><li><a href="./">Revit</a><span class="sidebar-category-count">2</span></li><li><a href="./">IFC</a><span class="sidebar-category-count">1</span></li></ul>
+        <ul class="sidebar-category-list"><li><a href="./">🔧 BIM全般</a><span class="sidebar-category-count">8</span></li><li><a href="./">🤖 AI/DX</a><span class="sidebar-category-count">3</span></li><li><a href="./">🏗️ Revit</a><span class="sidebar-category-count">2</span></li><li><a href="./">🔗 IFC</a><span class="sidebar-category-count">1</span></li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">このサイトについて</div>

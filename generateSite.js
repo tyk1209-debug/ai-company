@@ -40,21 +40,21 @@ function excerpt(text, maxLen) {
 
 function categoryLabel(cat) {
   const map = {
-    BIM_ECOSYSTEM: 'BIMエコシステム',
-    REVIT: 'Revit',
-    ARCHICAD: 'ArchiCAD',
-    IFC: 'IFC',
+    BIM_ECOSYSTEM: '🔧 BIM全般',
+    REVIT: '🏗️ Revit',
+    ARCHICAD: '📐 ArchiCAD',
+    IFC: '🔗 IFC',
     DIGITAL_TWIN: 'デジタルツイン',
     CONSTRUCTION_TECH: '建設テック',
     AI: 'AI',
-    AI_DX: 'AI/DX',
-    BIM_AI: 'BIM×AI',
+    AI_DX: '🤖 AI/DX',
+    BIM_AI: '💡 BIM×AI',
     GIS: 'GIS',
     SUSTAINABILITY: 'サステナビリティ',
-    GLOOBE: 'GLOOBE',
-    OTHER: 'その他',
+    GLOOBE: '🏢 GLOOBE',
+    OTHER: '📰 AEC',
   };
-  return map[cat] || cat || '一般';
+  return map[cat] || cat || '📰 AEC';
 }
 
 function categorySlug(cat) {
@@ -136,6 +136,18 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       color: var(--text);
       background: var(--bg);
     }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #0f1923; }
+    ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 3px; }
 
     a { color: var(--blue); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -275,11 +287,11 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       border-radius: 6px;
       padding: 1.25rem 1.5rem;
       box-shadow: var(--card-shadow);
-      transition: transform 0.15s, box-shadow 0.15s;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
     }
     .article-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(26,39,68,0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(59,130,246,0.15), 0 4px 12px rgba(0,0,0,0.3);
     }
     .card-meta {
       display: flex;
@@ -838,6 +850,13 @@ function buildIndex(posts, totalCount = 0) {
     })();
   </script>`;
 
+  const tickerItems = recentPosts.slice(0, 5).map(p =>
+    `<span class="ticker-item">${escape(p.titleJa || p.title)}</span>`
+  ).join('');
+  const tickerHtml = tickerItems
+    ? `<div class="ticker-wrap"><div class="ticker-inner">${tickerItems}${tickerItems}</div></div>`
+    : '';
+
   return htmlHead(
     `${SITE_NAME} | BIM・AEC・建設DXニュース`,
     SITE_DESC,
@@ -852,7 +871,16 @@ function buildIndex(posts, totalCount = 0) {
       <h1>BIM・AEC・建設DXの最新ニュース</h1>
       <span class="hero-badge">Revit・ArchiCAD・IFC・デジタルツイン・建設テックの最新トレンドをAIが日本語で解説</span>
     </div>
-  </div>` +
+  </div>
+  <style>
+    .ticker-wrap { overflow: hidden; border-top: 1px solid rgba(59,130,246,0.25); border-bottom: 1px solid rgba(59,130,246,0.25); background: rgba(59,130,246,0.05); padding: 10px 0; margin-bottom: 2rem; }
+    .ticker-inner { display: flex; animation: ticker-scroll 30s linear infinite; white-space: nowrap; }
+    .ticker-inner:hover { animation-play-state: paused; }
+    .ticker-item { padding: 0 3rem; font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+    .ticker-item::before { content: '▶ '; color: #3b82f6; font-size: 0.7rem; }
+    @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  </style>
+  ${tickerHtml}` +
     categoryNavHtml +
     `
   <div class="container">

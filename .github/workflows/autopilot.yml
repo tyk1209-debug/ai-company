@@ -49,9 +49,48 @@ jobs:
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Actions"
-          git add index.html posts/ privacy.html about.html sitemap.xml robots.txt || true
+          git add index.html posts/ privacy.html about.html sitemap.xml robots.txt categories/ || true
           git diff --staged --quiet || git commit -m "chore: update website [skip ci]"
           git push
+
+      - name: Notify Telegram on success
+        if: success()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          node -e "
+          const https = require('https');
+          const token = process.env.TELEGRAM_BOT_TOKEN;
+          const chatId = process.env.TELEGRAM_CHAT_ID;
+          if (!token || !chatId) process.exit(0);
+          const jst = new Date(Date.now() + 9*60*60*1000);
+          const time = jst.toISOString().replace('T',' ').slice(0,16) + ' JST';
+          const fs = require('fs');
+          let count = 0;
+          try { count = JSON.parse(fs.readFileSync('data/posts.json','utf-8')).length; } catch(e) {}
+          const text = 'AEC News Japan - 自動投稿完了\n' + time + '\n累計記事数: ' + count + '件\nhttps://tyk1209-debug.github.io/ai-company/';
+          const body = JSON.stringify({ chat_id: chatId, text });
+          const req = https.request({ hostname:'api.telegram.org', path:'/bot'+token+'/sendMessage', method:'POST', headers:{'Content-Type':'application/json','Content-Length':Buffer.byteLength(body)} });
+          req.write(body); req.end();
+          "
+
+      - name: Notify Telegram on failure
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          node -e "
+          const https = require('https');
+          const token = process.env.TELEGRAM_BOT_TOKEN;
+          const chatId = process.env.TELEGRAM_CHAT_ID;
+          if (!token || !chatId) process.exit(0);
+          const text = 'AEC News Japan - パイプライン失敗\nGitHub Actionsを確認してください\nhttps://github.com/tyk1209-debug/ai-company/actions';
+          const body = JSON.stringify({ chat_id: chatId, text });
+          const req = https.request({ hostname:'api.telegram.org', path:'/bot'+token+'/sendMessage', method:'POST', headers:{'Content-Type':'application/json','Content-Length':Buffer.byteLength(body)} });
+          req.write(body); req.end();
+          "
 
       - name: Upload pipeline artifacts
         if: always()
@@ -62,11 +101,9 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-  # 動画生成は1日1回（夜便）のみ実行してYouTubeにアップロード
   generate-video:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    # 20:00 JST（11:00 UTC）のみ実行
     if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 11 * * *'
 
     steps:
@@ -86,35 +123,7 @@ jobs:
         run: sudo apt-get install -y fonts-noto-cjk
 
       - name: Generate and upload video
-        run: |
-          node -e "
-            const { generateVideos } = require('./generateVideo.js');
-            const { uploadVideo } = require('./uploadYouTube.js');
-            const fs = require('fs');
-            const path = require('path');
-
-            async function run() {
-              const postsFile = path.join(__dirname, 'data', 'posts.json');
-              if (!fs.existsSync(postsFile)) {
-                console.log('posts.json not found - skip');
-                return;
-              }
-              const posts = JSON.parse(fs.readFileSync(postsFile, 'utf-8'));
-              if (!posts.length) { console.log('no posts'); return; }
-
-              const results = await generateVideos(posts, 1);
-              for (const r of results) {
-                await uploadVideo({
-                  videoPath:   r.videoPath,
-                  title:       r.title,
-                  description: (r.script && r.script.slides ? r.script.slides.map(function(s){ return s.body; }).join('\n') : ''),
-                  tags:        ['BIM', 'AEC'],
-                });
-              }
-            }
-
-            run().catch(function(e){ console.error(e.message); process.exit(1); });
-          "
+        run: node -e "const {generateVideos}=require('./generateVideo.js');const {uploadVideo}=require('./uploadYouTube.js');const fs=require('fs');const path=require('path');async function run(){const f=path.join(__dirname,'data','posts.json');if(!fs.existsSync(f)){console.log('skip');return;}const posts=JSON.parse(fs.readFileSync(f,'utf-8'));if(!posts.length)return;const r=await generateVideos(posts,1);for(const v of r)await uploadVideo({videoPath:v.videoPath,title:v.title,description:'',tags:['BIM','AEC']});}run().catch(e=>{console.error(e.message);process.exit(1);});"
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_CLOUD_API_KEY: ${{ secrets.GOOGLE_CLOUD_API_KEY }}
@@ -122,7 +131,6 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
 
-  # 週次まとめ記事の自動生成（毎週月曜 09:00 JST = UTC 00:00）
   weekly-digest:
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -153,3 +161,20 @@ jobs:
           git add index.html posts/ data/posts.json || true
           git diff --staged --quiet || git commit -m "feat: add weekly BIM/AEC digest [skip ci]"
           git push
+
+      - name: Notify Telegram weekly digest
+        if: success()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          node -e "
+          const https = require('https');
+          const token = process.env.TELEGRAM_BOT_TOKEN;
+          const chatId = process.env.TELEGRAM_CHAT_ID;
+          if (!token || !chatId) process.exit(0);
+          const text = 'AEC News Japan - 週次まとめ記事を生成しました\nhttps://tyk1209-debug.github.io/ai-company/';
+          const body = JSON.stringify({ chat_id: chatId, text });
+          const req = https.request({ hostname:'api.telegram.org', path:'/bot'+token+'/sendMessage', method:'POST', headers:{'Content-Type':'application/json','Content-Length':Buffer.byteLength(body)} });
+          req.write(body); req.end();
+          "

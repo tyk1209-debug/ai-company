@@ -44,29 +44,38 @@ async function getArticleBody(article) {
 // 専門家コメント付きX投稿文を生成
 // ─────────────────────────────────────────────────────────────
 
-const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門家です。
+const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者です。
 記事を読んで、以下をJSON形式で返してください。
 
 【出力形式】
 {
+  "relevant": true,
   "titleJa": "日本語の見出し（25〜40文字、読者が思わずクリックしたくなる表現）",
   "bodyJa": "記事の要点を200〜300文字の日本語で解説。背景・内容・業界への影響を含む。",
   "xPost": "X投稿本文（100字以内。絵文字と本文のみ。URLやハッシュタグは含めない）"
 }
 
-【titleJaのルール】
+【relevantの判定ルール】
+- BIM・AEC・建設DX・設計ソフト（Revit/ArchiCAD/IFC等）・建設テックに直接関係する場合は true
+- 以下のいずれかに該当する場合は false（titleJa/bodyJa/xPostは空文字でよい）:
+  - 建築の文化・歴史・芸術・哲学・社会論（ダンス、宇宙観、植民地主義等）
+  - 一般的なAI話題でBIM/建設現場との接続が皆無
+  - 不動産マーケット・住宅価格・建売情報
+  - 建設業界と無関係なイベント・受賞・人物紹介
+
+【titleJaのルール】（relevant: true のときのみ）
 - ニュースの核心を一文で表す
 - 「〜が変わる」「〜の衝撃」「〜ついに登場」など引きのある表現を使う
 - 専門用語はそのまま使ってよい（BIM、IFC、デジタルツイン等）
 - 体言止めOK
 
-【bodyJaのルール】
+【bodyJaのルール】（relevant: true のときのみ）
 - 導入・内容・影響の3部構成で書く
 - 専門用語（BIM、IFC、デジタルツイン等）はそのまま使用
 - ですます調で統一する
 - 200〜300文字を厳守する
 
-【xPostのルール】
+【xPostのルール】（relevant: true のときのみ）
 - 冒頭に建設・設計関連の絵文字を必ず1つ入れる（🏗️🔧📐💡🖥️🏢📊🔩⚙️など）
 - 「何が重要か」「なぜ今注目すべきか」「現場への影響」のどれかを入れる
 - タイトルをそのまま訳した文章は禁止
@@ -106,13 +115,14 @@ ${articleBody.slice(0, 2500)}
 
     const parsed = JSON.parse(jsonMatch[0]);
     return {
+      relevant: parsed.relevant !== false, // 明示的にfalseの場合のみ除外
       xPost:   (parsed.xPost   || "").slice(0, 100),
       titleJa: (parsed.titleJa || "").slice(0, 60),
       bodyJa:  (parsed.bodyJa  || "").slice(0, 400),
     };
   } catch (err) {
     console.error(`[summarize] Claude API エラー: ${err.message}`);
-    return { xPost: "", titleJa: "", bodyJa: "" };
+    return { relevant: true, xPost: "", titleJa: "", bodyJa: "" };
   }
 }
 
@@ -172,6 +182,13 @@ async function summarizeArticle(article) {
   const body    = await getArticleBody(article);
   console.log(`[summarize] 記事本文取得: ${body.length}文字`);
   const result = await generateXPostBody(article, body);
+
+  // 適切性チェック: relevant=false の場合は除外フラグを立てて早期リターン
+  if (result.relevant === false) {
+    console.log(`[summarize] ⛔ 不適切と判定 — 除外: ${article.title?.slice(0, 60)}`);
+    return { ...article, relevant: false, xPostBody: "", japaneseSummary: "", bodyJa: "", titleJa: "" };
+  }
+
   console.log(`[summarize] 投稿文生成: ${result.xPost.length > 0 ? "成功" : "空（失敗）"}`);
   console.log(`[summarize] 日本語タイトル: ${result.titleJa || "（生成失敗）"}`);
   console.log(`[summarize] 日本語本文: ${result.bodyJa.length > 0 ? `${result.bodyJa.length}文字` : "（生成失敗）"}`);
@@ -182,6 +199,7 @@ async function summarizeArticle(article) {
 
   return {
     ...article,
+    relevant:        true,
     titleJa:         result.titleJa,
     bodyJa:          result.bodyJa,
     xPostBody:       xPostFinal,

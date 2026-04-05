@@ -168,8 +168,16 @@ async function main() {
   const summarized = await summarizeArticles(selected, { limit: 5 });
   saveJson("summarized_news.json", summarized);
 
+  // 5b. 適切性フィルタ（要約時にrelevant=falseと判定された記事を除外）
+  const irrelevant = summarized.filter((a) => a.relevant === false);
+  if (irrelevant.length > 0) {
+    console.log(`\n[適切性フィルタ] ${irrelevant.length}件を除外しました`);
+    irrelevant.forEach((a) => console.log(`  ⛔ ${a.title?.slice(0, 60)}`));
+  }
+  const relevant = summarized.filter((a) => a.relevant !== false);
+
   // 6. ハルシネーション検証（HIGHリスクを自動ブロック）
-  const { passed, blocked } = await checkArticles(summarized);
+  const { passed, blocked } = await checkArticles(relevant);
   if (blocked.length > 0) {
     console.log(`\n[ハルシネーション検証] ${blocked.length}件を自動ブロックしました`);
     blocked.forEach((a) => console.log(`  ❌ ${a.title?.slice(0, 60)}`));

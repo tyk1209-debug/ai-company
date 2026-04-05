@@ -10,6 +10,8 @@ on:
     - cron: '0 11 * * *'
     # 毎週月曜 09:00 JST (00:00 UTC)
     - cron: '0 0 * * 1'
+    # 毎週月曜 10:00 JST (01:00 UTC) デザインレビュー
+    - cron: '0 1 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -178,3 +180,24 @@ jobs:
           const req = https.request({ hostname:'api.telegram.org', path:'/bot'+token+'/sendMessage', method:'POST', headers:{'Content-Type':'application/json','Content-Length':Buffer.byteLength(body)} });
           req.write(body); req.end();
           "
+
+  design-review:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' && github.event.schedule == '0 1 * * 1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - name: デザインレビュー実行
+        run: node designReview.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: レビュー結果をコミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add DESIGN_REVIEW.md
+          git diff --staged --quiet || git commit -m "docs: 週次デザインレビュー $(date +'%Y-%m-%d')"
+          git push

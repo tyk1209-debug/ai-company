@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { getAffiliateLinks } = require('./affiliateLinks.js');
 
 const SITE_NAME = 'AEC News Japan';
 const SITE_DESC = 'BIM・AEC・建設DXの最新ニュースをAIが日本語で解説';
@@ -85,6 +86,9 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
   <meta name="twitter:image" content="${SITE_URL}/assets/og-image.png">
   <link rel="icon" type="image/png" href="${base}/assets/favicon.png">
   <meta name="robots" content="index, follow">${jsonLdScript}
+  <!-- Google AdSense -->
+  <!-- TODO: 20記事蓄積後に有効化 — ca-pub-XXXXXXXXXXXXXXXX を実際のパブリッシャーIDに差し替える -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
   <!-- Google Search Console verification -->
   <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
   <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
@@ -381,6 +385,28 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     }
     .source-box a { font-weight: 600; word-break: break-all; }
 
+    /* ---- affiliate box ---- */
+    .affiliate-box {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      font-size: 0.875rem;
+    }
+    .affiliate-box p {
+      color: #92400e;
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .affiliate-link {
+      display: block;
+      color: #b45309;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .affiliate-link:hover { color: #92400e; }
+
     /* ---- post-text display ---- */
     .ai-comment-label {
       font-size: 0.78rem;
@@ -510,7 +536,10 @@ function htmlHeader(base = '.') {
   </header>`;
 }
 
-function htmlFooter(base = '.') {
+function htmlFooter(base = '.', articleCount = 0) {
+  const countLine = articleCount > 0
+    ? `<div class="footer-article-count">累計 ${articleCount} 記事を掲載</div>`
+    : '';
   return `
   <footer class="site-footer">
     <div class="footer-nav">
@@ -520,6 +549,7 @@ function htmlFooter(base = '.') {
       <a href="https://x.com/aec_news_jp" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>
+    ${countLine}
     <div>&copy; ${CURRENT_YEAR} ${SITE_NAME}. All rights reserved.</div>
   </footer>
 </body>
@@ -528,14 +558,15 @@ function htmlFooter(base = '.') {
 
 // ---- index page -------------------------------------------------------------
 
-function buildIndex(posts) {
+function buildIndex(posts, totalCount = 0) {
   const recentPosts = posts.slice(0, 30);
+  const articleCount = totalCount || posts.length;
 
   const cards = recentPosts.map((post) => {
     const slug = post.slug;
     const catLabel = categoryLabel(post.category);
     const date = formatDate(post.pubDate);
-    const snippetText = post.postText || post.summary || '';
+    const snippetText = post.bodyJa || post.postText || post.summary || '';
     const snip = excerpt(snippetText, 120);
 
     return `
@@ -658,6 +689,14 @@ function buildArticlePage(post) {
         <div class="source-box">
           元記事: <a href="${escape(post.link)}" target="_blank" rel="noopener noreferrer">${escape(post.link)}</a>
         </div>
+        ${(() => {
+          const affiliates = getAffiliateLinks(post);
+          const links = affiliates.map(a => `
+          <a href="${escape(a.url)}" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 ${escape(a.title)} を Amazonで見る →</a>`).join('');
+          return `<div class="affiliate-box">
+          <p>※ 本記事に関連する書籍・学習リソース（広告）</p>${links}
+        </div>`;
+        })()}
       </div>
     </main>
   </div>

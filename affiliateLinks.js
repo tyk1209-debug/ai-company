@@ -97,4 +97,62 @@ function applyAffiliateLinks(articles) {
   }));
 }
 
-module.exports = { getAffiliateLink, appendAffiliateLink, applyAffiliateLinks };
+// ─────────────────────────────────────────────────────────────
+// ウェブサイト記事ページ用アフィリエイトリンク
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * BIM/AEC関連のAmazonアソシエイトリンク定義
+ * TODO: 実際のアソシエイトタグに差し替える（現在はプレースホルダー）
+ * アソシエイトタグ形式: ?tag=YOUR-ASSOCIATE-TAG-22
+ */
+const AFFILIATE_TAG = process.env.AMAZON_ASSOCIATE_TAG || 'aecnewsjapan-22';
+
+const SITE_AFFILIATE_LINKS = [
+  {
+    keywords: ['Revit', 'revit', 'オートデスク'],
+    title: 'Autodesk Revit公式ガイド',
+    url: `https://www.amazon.co.jp/s?k=Revit+BIM&tag=${AFFILIATE_TAG}`,
+    category: 'REVIT',
+  },
+  {
+    keywords: ['ArchiCAD', 'アーキキャド', 'Graphisoft'],
+    title: 'ArchiCAD完全ガイド',
+    url: `https://www.amazon.co.jp/s?k=ArchiCAD&tag=${AFFILIATE_TAG}`,
+    category: 'BIM_ECOSYSTEM',
+  },
+  {
+    keywords: ['BIM', 'ビム', '建設DX', 'デジタルツイン'],
+    title: 'BIM導入・活用ガイド',
+    url: `https://www.amazon.co.jp/s?k=BIM+建築+設計&tag=${AFFILIATE_TAG}`,
+    category: 'BIM_ECOSYSTEM',
+  },
+  {
+    keywords: ['IFC', '建築情報', 'データ連携'],
+    title: 'BIM/IFC関連書籍',
+    url: `https://www.amazon.co.jp/s?k=BIM+IFC+建築&tag=${AFFILIATE_TAG}`,
+    category: 'IFC',
+  },
+  {
+    keywords: ['Vectorworks', 'ベクターワークス'],
+    title: 'Vectorworks実践ガイド',
+    url: `https://www.amazon.co.jp/s?k=Vectorworks&tag=${AFFILIATE_TAG}`,
+    category: 'BIM_ECOSYSTEM',
+  },
+];
+
+/**
+ * 記事のタイトル・本文に応じたアフィリエイトリンクを返す（記事ページ用）
+ * @param {object} post
+ * @returns {Array<{ title: string, url: string }>}
+ */
+function getAffiliateLinks(post) {
+  const text = `${post.title || ''} ${post.titleJa || ''} ${post.postText || ''}`;
+  const matched = SITE_AFFILIATE_LINKS.filter(link =>
+    link.keywords.some(kw => text.includes(kw))
+  );
+  // マッチしなければデフォルト（BIM全般）
+  return matched.length > 0 ? matched.slice(0, 2) : [SITE_AFFILIATE_LINKS[2]];
+}
+
+module.exports = { getAffiliateLink, appendAffiliateLink, applyAffiliateLinks, getAffiliateLinks };

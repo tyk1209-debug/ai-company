@@ -118,6 +118,7 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       background: var(--navy);
       color: var(--white);
       padding: 0 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     .header-inner {
       max-width: 1100px;
@@ -127,6 +128,17 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       justify-content: space-between;
       gap: 1rem;
       padding: 1rem 0;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .logo-icon {
+      width: 8px;
+      height: 8px;
+      background: #2563eb;
+      flex-shrink: 0;
     }
     .site-title {
       font-size: 1.25rem;
@@ -139,6 +151,12 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       opacity: 0.7;
       margin-top: 0.15rem;
     }
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+    }
     nav a {
       color: rgba(255,255,255,0.85);
       font-size: 0.875rem;
@@ -148,30 +166,51 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
 
     /* ---- hero ---- */
     .hero {
-      background: url('./assets/default-thumb.png') center/cover no-repeat,
-                  linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      background: linear-gradient(135deg, #1a2744 0%, #243460 60%, #1e3a6e 100%);
       color: var(--white);
       padding: 3rem 1.5rem;
-      text-align: center;
+      text-align: left;
       position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
     }
-    .hero::before {
+    .hero::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background: rgba(26, 39, 68, 0.72);
+      right: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 340px;
+      height: 280px;
+      border: 2px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      box-shadow:
+        inset 0 0 0 20px rgba(255,255,255,0.03),
+        20px -20px 0 0 rgba(255,255,255,0.04),
+        40px -40px 0 0 rgba(255,255,255,0.03);
+      pointer-events: none;
     }
-    .hero > * { position: relative; z-index: 1; }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+    }
     .hero h1 {
       font-size: clamp(1.5rem, 4vw, 2.5rem);
       font-weight: 700;
       margin-bottom: 0.75rem;
     }
-    .hero p {
-      font-size: 1rem;
-      opacity: 0.85;
-      max-width: 600px;
-      margin: 0 auto;
+    .hero-badge {
+      display: inline-block;
+      background: rgba(37,99,235,0.3);
+      border: 1px solid rgba(37,99,235,0.5);
+      border-radius: 20px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.875rem;
+      opacity: 0.95;
+      margin-top: 0.25rem;
     }
 
     /* ---- layout ---- */
@@ -200,12 +239,16 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     .article-card {
       background: var(--white);
       border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
       border-radius: 6px;
       padding: 1.25rem 1.5rem;
       box-shadow: var(--card-shadow);
-      transition: box-shadow 0.15s;
+      transition: transform 0.15s, box-shadow 0.15s;
     }
-    .article-card:hover { box-shadow: 0 4px 12px rgba(26,39,68,0.12); }
+    .article-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(26,39,68,0.12);
+    }
     .card-meta {
       display: flex;
       align-items: center;
@@ -213,6 +256,15 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       font-size: 0.78rem;
       color: var(--text-muted);
       margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .card-meta-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--text-muted);
     }
     .badge {
       background: var(--blue);
@@ -223,7 +275,7 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       font-weight: 600;
     }
     .card-title {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 700;
       line-height: 1.45;
       margin-bottom: 0.5rem;
@@ -240,7 +292,7 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       font-size: 0.875rem;
       color: var(--text-muted);
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
@@ -295,20 +347,38 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     .source-box {
       margin-top: 2rem;
       padding: 1rem 1.25rem;
-      background: var(--bg);
+      background: #f8f9fb;
+      border: 1px solid var(--border);
       border-left: 3px solid var(--blue);
-      border-radius: 0 4px 4px 0;
+      border-radius: 0 6px 6px 0;
       font-size: 0.875rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
-    .source-box a { font-weight: 600; }
+    .source-box::before {
+      content: '🔗';
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+    .source-box a { font-weight: 600; word-break: break-all; }
 
     /* ---- post-text display ---- */
+    .ai-comment-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
     .post-text-box {
       white-space: pre-wrap;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1rem 1.25rem;
+      background: #f0f4ff;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
       font-size: 0.9rem;
       line-height: 1.75;
     }
@@ -346,11 +416,17 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
 
     /* ---- footer ---- */
     .site-footer {
-      background: var(--navy);
+      background: #0f1a33;
       color: rgba(255,255,255,0.7);
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.5rem 2rem;
       text-align: center;
       font-size: 0.8rem;
+    }
+    .footer-catchcopy {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1rem;
+      font-weight: 500;
     }
     .footer-nav { margin-bottom: 0.75rem; }
     .footer-nav a { color: rgba(255,255,255,0.7); margin: 0 0.75rem; }
@@ -383,10 +459,14 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     }
 
     /* ---- responsive ---- */
+    @media (max-width: 768px) {
+      nav a { margin-left: 0.75rem; font-size: 0.78rem; }
+    }
     @media (max-width: 640px) {
-      nav { display: none; }
+      nav a { font-size: 0.72rem; margin-left: 0.5rem; }
       .article-detail { padding: 1.25rem; }
       .static-page { padding: 1.25rem; }
+      .hero::after { display: none; }
     }
   </style>
 </head>
@@ -398,7 +478,10 @@ function htmlHeader(base = '.') {
   <header class="site-header">
     <div class="header-inner">
       <div>
-        <div class="site-title"><a href="${base}/">${SITE_NAME}</a></div>
+        <div class="logo-wrapper">
+          <span class="logo-icon"></span>
+          <div class="site-title"><a href="${base}/">${SITE_NAME}</a></div>
+        </div>
         <div class="site-tagline">${SITE_DESC}</div>
       </div>
       <nav>
@@ -417,7 +500,9 @@ function htmlFooter(base = '.') {
       <a href="${base}/">ホーム</a>
       <a href="${base}/about.html">運営者情報</a>
       <a href="${base}/privacy.html">プライバシーポリシー</a>
+      <a href="https://x.com/aec_news_jp" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
     </div>
+    <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>
     <div>&copy; ${CURRENT_YEAR} ${SITE_NAME}. All rights reserved.</div>
   </footer>
 </body>
@@ -440,8 +525,7 @@ function buildIndex(posts) {
       <article class="article-card">
         <div class="card-meta">
           <span class="badge">${escape(catLabel)}</span>
-          <span>${escape(date)}</span>
-          <span>${escape(post.source || '')}</span>
+          <span class="card-meta-right"><span>${escape(post.source || '')}</span><span>${escape(date)}</span></span>
         </div>
         <h2 class="card-title">
           <a href="./posts/${escape(slug)}.html">${escape(post.titleJa || post.title)}</a>
@@ -477,8 +561,10 @@ function buildIndex(posts) {
     htmlHeader() +
     `
   <div class="hero">
-    <h1>BIM・AEC・建設DXの最新ニュース</h1>
-    <p>Autodesk、IFC、デジタルツイン、建設テックの最新トレンドをAIが日本語で解説</p>
+    <div class="hero-content">
+      <h1>BIM・AEC・建設DXの最新ニュース</h1>
+      <span class="hero-badge">Autodesk・IFC・デジタルツイン・建設テックの最新トレンドをAIが日本語で解説</span>
+    </div>
   </div>
   <div class="container">
     <main class="main-content">
@@ -497,7 +583,7 @@ function buildArticlePage(post) {
   const catLabel = categoryLabel(post.category);
   const date = formatDate(post.pubDate);
   const bodyContent = post.postText
-    ? `<div class="post-text-box">${escape(post.postText)}</div>`
+    ? `<div class="ai-comment-label">AIによる専門家コメント</div><div class="post-text-box">${escape(post.postText)}</div>`
     : `<p>${escape(post.summary || '')}</p>`;
 
   const pageTitle = `${post.title} | ${SITE_NAME}`;

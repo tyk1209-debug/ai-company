@@ -721,7 +721,7 @@ function buildAboutPage() {
           <li>BIM担当者・BIMマネージャー</li>
           <li>建設会社・設計事務所のデジタル化推進担当者</li>
           <li>AECテクノロジーに関心のある建設・不動産プロフェッショナル</li>
-          <li>AutodeskやBentleyなどのAECソフトウェアユーザー</li>
+          <li>Autodesk Revit・ArchiCADユーザー</li>
         </ul>
 
         <h2>掲載コンテンツ</h2>

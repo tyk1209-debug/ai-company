@@ -166,7 +166,9 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
 
     /* ---- hero ---- */
     .hero {
-      background: linear-gradient(135deg, #1a2744 0%, #243460 60%, #1e3a6e 100%);
+      background:
+        linear-gradient(135deg, rgba(26,39,68,0.88) 0%, rgba(36,52,96,0.82) 60%, rgba(30,58,110,0.80) 100%),
+        url('./assets/hero-bg.jpg') center/cover no-repeat;
       color: var(--white);
       padding: 3rem 1.5rem;
       text-align: left;

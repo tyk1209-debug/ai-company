@@ -171,15 +171,12 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     .logo-wrapper {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
     }
-    .logo-icon {
-      width: 28px;
+    .logo-img {
       height: 28px;
+      width: auto;
+      display: block;
       flex-shrink: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 21V7l9-4 9 4v14'/%3E%3Cpath d='M3 21h18'/%3E%3Cpath d='M9 21V12h6v9'/%3E%3Cpath d='M9 7.5h.01M15 7.5h.01'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-size: contain;
     }
     .site-title {
       font-size: 1.25rem;
@@ -650,8 +647,7 @@ function htmlHeader(base = '.') {
     <div class="header-inner">
       <div>
         <div class="logo-wrapper">
-          <span class="logo-icon"></span>
-          <div class="site-title"><a href="${base}/">${SITE_NAME}</a></div>
+          <a href="${base}/"><img src="${base}/assets/logo.svg" alt="${SITE_NAME}" class="logo-img"></a>
         </div>
         <div class="site-tagline">${SITE_DESC}</div>
       </div>

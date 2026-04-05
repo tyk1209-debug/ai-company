@@ -8,6 +8,8 @@ on:
     - cron: '0 3 * * *'
     # 毎日 20:00 JST (11:00 UTC)
     - cron: '0 11 * * *'
+    # 毎週月曜 09:00 JST (00:00 UTC)
+    - cron: '0 0 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -119,3 +121,35 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+
+  # 週次まとめ記事の自動生成（毎週月曜 09:00 JST = UTC 00:00）
+  weekly-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 1'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate weekly digest
+        run: node weeklyDigest.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit and push weekly digest
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Actions"
+          git add index.html posts/ data/posts.json || true
+          git diff --staged --quiet || git commit -m "feat: add weekly BIM/AEC digest [skip ci]"
+          git push

@@ -684,6 +684,22 @@ function buildSidebar(posts, base = '.') {
     `<li><a href="${base}/posts/${escape(p.slug)}.html">${escape(p.titleJa || p.title)}</a></li>`
   ).join('');
 
+  // Weekly digest posts (isWeekly === true), most recent 5
+  const weeklyPosts = posts
+    .filter((p) => p.isWeekly === true)
+    .slice(0, 5);
+  const weeklyWidget = weeklyPosts.length > 0
+    ? `
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">週次まとめ</div>
+        <ul class="sidebar-recent-list">
+          ${weeklyPosts.map((p) =>
+            `<li><a href="${base}/posts/${escape(p.slug)}.html">${escape(p.titleJa || p.title)}</a></li>`
+          ).join('')}
+        </ul>
+      </div>`
+    : '';
+
   return `
     <aside class="sidebar">
       <div class="sidebar-widget">
@@ -697,7 +713,7 @@ function buildSidebar(posts, base = '.') {
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
         <ul class="sidebar-recent-list">${recentItems}</ul>
-      </div>
+      </div>${weeklyWidget}
     </aside>`;
 }
 
@@ -1182,9 +1198,14 @@ function main() {
     posts = [];
   }
 
-  // Assign slugs
+  // Assign slugs — respect pre-set slugs (e.g. weekly-YYYY-MM-DD)
   const usedSlugs = new Map();
   posts = posts.map((post) => {
+    // If the post already has a valid slug, keep it
+    if (post.slug && /^[a-z0-9-]+$/.test(post.slug)) {
+      usedSlugs.set(post.slug, true);
+      return post;
+    }
     let base = slugify(post.title || 'post');
     if (!base) base = 'post';
     let slug = base;

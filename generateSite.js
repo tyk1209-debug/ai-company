@@ -1232,6 +1232,13 @@ function main() {
     return { ...post, slug };
   });
 
+  // Sort posts by pubDate descending (newest first)
+  posts.sort((a, b) => {
+    const da = a.pubDate ? new Date(a.pubDate).getTime() : 0;
+    const db = b.pubDate ? new Date(b.pubDate).getTime() : 0;
+    return db - da;
+  });
+
   // Ensure posts/ directory exists
   const postsDir = path.join(__dirname, 'posts');
   if (!fs.existsSync(postsDir)) {

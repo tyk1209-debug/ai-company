@@ -33,6 +33,11 @@ module.exports = [
     url: "https://www.aecbytes.com/aecbytes-news-and-reviews-feed.rss",
   },
   {
+    name: "AEC Magazine",
+    url: "https://aecmag.com/feed/",
+    category: "BIM_ECOSYSTEM",
+  },
+  {
     name: "Construction Dive",
     url: "https://www.constructiondive.com/feeds/news/",
   },
@@ -43,6 +48,11 @@ module.exports = [
   {
     name: "ArchDaily",
     url: "https://www.archdaily.com/feed/",
+  },
+  {
+    name: "Dezeen",
+    url: "https://www.dezeen.com/feed/",
+    category: "CONSTRUCTION_TECH",
   },
 
   // ── AI / GPU 技術系（BIM接続性が高い）───────────────────

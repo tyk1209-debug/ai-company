@@ -62,7 +62,10 @@ function escape(str) {
 
 // ---- shared HTML parts ------------------------------------------------------
 
-function htmlHead(title, desc, canonical, base = '.') {
+function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
+  const jsonLdScript = jsonLd
+    ? `\n  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`
+    : '';
   return `<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -81,7 +84,7 @@ function htmlHead(title, desc, canonical, base = '.') {
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${SITE_URL}/assets/og-image.png">
   <link rel="icon" type="image/png" href="${base}/assets/favicon.png">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow">${jsonLdScript}
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -450,10 +453,26 @@ function buildIndex(posts) {
       </article>`;
   }).join('');
 
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    description: SITE_DESC,
+    url: SITE_URL + '/',
+    inLanguage: 'ja',
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL + '/',
+    },
+  };
+
   return htmlHead(
     `${SITE_NAME} | BIM・AEC・建設DXニュース`,
     SITE_DESC,
-    SITE_URL + '/'
+    SITE_URL + '/',
+    '.',
+    websiteJsonLd
   ) +
     htmlHeader() +
     `
@@ -484,11 +503,36 @@ function buildArticlePage(post) {
   const pageTitle = `${post.title} | ${SITE_NAME}`;
   const descText = excerpt(post.summary || post.postText || '', 120);
 
+  const isoDate = post.pubDate
+    ? new Date(post.pubDate).toISOString()
+    : new Date().toISOString();
+
+  const newsArticleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: post.titleJa || post.title,
+    description: descText,
+    datePublished: isoDate,
+    dateModified: isoDate,
+    inLanguage: 'ja',
+    url: `${SITE_URL}/posts/${post.slug}.html`,
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL + '/',
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/posts/${post.slug}.html`,
+    },
+  };
+
   return htmlHead(
     pageTitle,
     descText,
     `${SITE_URL}/posts/${post.slug}.html`,
-    '..'
+    '..',
+    newsArticleJsonLd
   ) +
     htmlHeader('..') +
     `
@@ -675,6 +719,38 @@ function main() {
 
   fs.writeFileSync(path.join(__dirname, 'about.html'), buildAboutPage(), 'utf-8');
   console.log('[generateSite] Generated about.html');
+
+  // Generate sitemap.xml
+  const now = new Date().toISOString().split('T')[0];
+  const staticUrls = [
+    { loc: `${SITE_URL}/`, lastmod: now },
+    { loc: `${SITE_URL}/about.html`, lastmod: now },
+    { loc: `${SITE_URL}/privacy.html`, lastmod: now },
+  ];
+  const articleUrls = posts.map((post) => {
+    const lastmod = post.pubDate
+      ? new Date(post.pubDate).toISOString().split('T')[0]
+      : now;
+    return { loc: `${SITE_URL}/posts/${post.slug}.html`, lastmod };
+  });
+  const allUrls = [...staticUrls, ...articleUrls];
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${allUrls.map((u) => `  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${u.lastmod}</lastmod>
+  </url>`).join('\n')}
+</urlset>`;
+  fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemapXml, 'utf-8');
+  console.log(`[generateSite] Generated sitemap.xml (${allUrls.length} URLs)`);
+
+  // Generate robots.txt
+  const robotsTxt = `User-agent: *
+Allow: /
+Sitemap: ${SITE_URL}/sitemap.xml
+`;
+  fs.writeFileSync(path.join(__dirname, 'robots.txt'), robotsTxt, 'utf-8');
+  console.log('[generateSite] Generated robots.txt');
 
   console.log('[generateSite] Done.');
 }

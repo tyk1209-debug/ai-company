@@ -47,7 +47,7 @@ jobs:
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Actions"
-          git add index.html posts/ privacy.html about.html || true
+          git add index.html posts/ privacy.html about.html sitemap.xml robots.txt || true
           git diff --staged --quiet || git commit -m "chore: update website [skip ci]"
           git push
 

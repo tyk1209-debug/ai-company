@@ -54,7 +54,7 @@ function categoryLabel(cat) {
     GLOOBE: 'GLOOBE',
     OTHER: 'AEC',
   };
-  return map[cat] || cat || '📰 AEC';
+  return map[cat] || cat || 'AEC';
 }
 
 function categorySlug(cat) {
@@ -174,10 +174,12 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       gap: 0.6rem;
     }
     .logo-icon {
-      width: 8px;
-      height: 8px;
-      background: #2563eb;
+      width: 28px;
+      height: 28px;
       flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 21V7l9-4 9 4v14'/%3E%3Cpath d='M3 21h18'/%3E%3Cpath d='M9 21V12h6v9'/%3E%3Cpath d='M9 7.5h.01M15 7.5h.01'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
     }
     .site-title {
       font-size: 1.25rem;
@@ -401,10 +403,15 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       gap: 0.5rem;
     }
     .source-box::before {
-      content: '🔗';
-      font-size: 0.9rem;
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
       flex-shrink: 0;
-      margin-top: 0.05rem;
+      margin-top: 0.15rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
     }
     .source-box a { font-weight: 600; word-break: break-all; }
 

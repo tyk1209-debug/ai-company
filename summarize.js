@@ -224,6 +224,7 @@ async function summarizeArticles(articles, options = {}) {
 
   const restWithEmpty = rest.map((a) => ({
     ...a,
+    relevant:        true,
     xPostBody:       "",
     japaneseSummary: "",
     bodyJa:          "",

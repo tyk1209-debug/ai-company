@@ -158,7 +158,7 @@ async function generateDigestContent(articles, startDate, endDate) {
     const endJa = formatDateJa(endDate.toISOString());
     return {
       titleJa: `今週のBIM・AEC注目ニュース（${startJa}〜${endJa}）`,
-      bodyJa: `今週のBIM・AECニュースまとめの生成に失敗しました。（エラー: ${err.message}）`,
+      bodyJa: `今週のBIM・AECニュースまとめを準備中です。しばらくお待ちください。`,
     };
   }
 }
@@ -189,7 +189,7 @@ function escape(str) {
     .replace(/"/g, '&quot;');
 }
 
-function buildWeeklyHtml(post, allPosts) {
+function buildWeeklyHtml(post) {
   // Reuse generateSite.js for full rendering by injecting the post into posts.json
   // then running generateSite.js. We just write the record here; site gen happens later.
   // But we also produce a standalone HTML for immediate use.

@@ -142,7 +142,7 @@ function detectCategory(text) {
 
   // "bim" と AI関連キーワードが別々に含まれる場合も BIM_AI として検出
   if (!scores["BIM_AI"] && detectBimAi(text)) {
-    const bimAiHits = ["bim", "ai"].filter((w) => text.includes(w));
+    const bimAiHits = ["bim", "ai"].filter((w) => wordMatch(text, w));
     scores["BIM_AI"] = { count: bimAiHits.length, hits: bimAiHits };
   }
 

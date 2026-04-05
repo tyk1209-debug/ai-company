@@ -11,7 +11,11 @@
 
 const Anthropic = require("@anthropic-ai/sdk");
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+function createClient() {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) return null;
+  return new Anthropic({ apiKey });
+}
 
 // ─────────────────────────────────────────────────────────────
 // BIM/AEC ドメイン固有の危険パターン
@@ -54,6 +58,7 @@ function staticRiskCheck(summary) {
 // ─────────────────────────────────────────────────────────────
 
 async function deepCheck(article) {
+  const client = createClient();
   const prompt = `あなたはBIM/AEC業界の専門家です。以下の記事タイトルと日本語要約を照合し、ハルシネーション（事実と異なる記述）のリスクを評価してください。
 
 ## 記事情報
@@ -76,6 +81,10 @@ ${article.japaneseSummary || "（要約なし）"}
 - LOW: 要約が元記事の内容と一致、または検証不能だが重大な断言なし
 - MEDIUM: 軽微な誇張・ニュアンスのズレがある
 - HIGH: 元記事にない事実・数値・バージョン情報・法規の断言が含まれる`;
+
+  if (!client) {
+    return { score: "LOW", flags: [], reason: "ANTHROPIC_API_KEY 未設定 — スキップ" };
+  }
 
   try {
     const response = await client.messages.create({

@@ -75,6 +75,12 @@ function htmlHead(title, desc, canonical) {
   <meta property="og:description" content="${escape(desc)}">
   <meta property="og:url" content="${escape(canonical)}">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="${SITE_URL}/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="${SITE_URL}/assets/og-image.png">
+  <link rel="icon" type="image/png" href="${SITE_URL}/assets/favicon.png">
   <meta name="robots" content="index, follow">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -139,11 +145,20 @@ function htmlHead(title, desc, canonical) {
 
     /* ---- hero ---- */
     .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      background: url('${SITE_URL}/assets/og-image.png') center/cover no-repeat,
+                  linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
       color: var(--white);
       padding: 3rem 1.5rem;
       text-align: center;
+      position: relative;
     }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 39, 68, 0.72);
+    }
+    .hero > * { position: relative; z-index: 1; }
     .hero h1 {
       font-size: clamp(1.5rem, 4vw, 2.5rem);
       font-weight: 700;

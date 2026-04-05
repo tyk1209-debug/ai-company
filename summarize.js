@@ -51,7 +51,7 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門家です�
 {
   "titleJa": "日本語の見出し（25〜40文字、読者が思わずクリックしたくなる表現）",
   "bodyJa": "記事の要点を200〜300文字の日本語で解説。背景・内容・業界への影響を含む。",
-  "xPost": "X投稿本文（140字以内）"
+  "xPost": "X投稿本文（100字以内。絵文字と本文のみ。URLやハッシュタグは含めない）"
 }
 
 【titleJaのルール】
@@ -67,9 +67,13 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門家です�
 - 200〜300文字を厳守する
 
 【xPostのルール】
+- 冒頭に建設・設計関連の絵文字を必ず1つ入れる（🏗️🔧📐💡🖥️🏢📊🔩⚙️など）
 - 「何が重要か」「なぜ今注目すべきか」「現場への影響」のどれかを入れる
 - タイトルをそのまま訳した文章は禁止
+- 「〜です」「〜ます」の単調な語尾を避け、問いかけや驚きの表現を入れる
 - 体言止め・箇条書き禁止。自然な日本語で書く
+- URLやハッシュタグは含めない（後でワークフローが付与する）
+- 100字以内を厳守する
 - JSON以外は返さない`;
 
 async function generateXPostBody(article, articleBody) {
@@ -102,7 +106,7 @@ ${articleBody.slice(0, 2500)}
 
     const parsed = JSON.parse(jsonMatch[0]);
     return {
-      xPost:   (parsed.xPost   || "").slice(0, 140),
+      xPost:   (parsed.xPost   || "").slice(0, 100),
       titleJa: (parsed.titleJa || "").slice(0, 60),
       bodyJa:  (parsed.bodyJa  || "").slice(0, 400),
     };
@@ -110,6 +114,47 @@ ${articleBody.slice(0, 2500)}
     console.error(`[summarize] Claude API エラー: ${err.message}`);
     return { xPost: "", titleJa: "", bodyJa: "" };
   }
+}
+
+// ─────────────────────────────────────────────────────────────
+// カテゴリ別ハッシュタグ定義
+// ─────────────────────────────────────────────────────────────
+
+const CATEGORY_HASHTAGS = {
+  REVIT:         "#Revit #BIM",
+  ARCHICAD:      "#ArchiCAD #BIM",
+  BIM_ECOSYSTEM: "#BIM #建設DX",
+  BIM_AI:        "#BIM #建設DX",
+  IFC:           "#IFC #BIM",
+  AI_DX:         "#建設DX #AI",
+  GLOOBE:        "#GLOOBE #BIM",
+  OTHER:         "#BIM #AEC",
+};
+
+/**
+ * カテゴリに対応するハッシュタグ文字列を返す
+ * @param {string|undefined} category
+ * @returns {string}
+ */
+function getHashtags(category) {
+  if (!category) return CATEGORY_HASHTAGS.OTHER;
+  const key = category.toUpperCase().replace(/[^A-Z_]/g, "_");
+  return CATEGORY_HASHTAGS[key] || CATEGORY_HASHTAGS.OTHER;
+}
+
+/**
+ * xPost本文にハッシュタグを末尾付与する（140字超えの場合は本文を切り詰める）
+ * @param {string} xPost
+ * @param {string} hashtags
+ * @returns {string}
+ */
+function appendHashtags(xPost, hashtags) {
+  const suffix = " " + hashtags;
+  const combined = xPost + suffix;
+  if ([...combined].length <= 140) return combined;
+  // 超過する場合は本文を切り詰めてハッシュタグを付与
+  const maxBodyLen = 140 - [...suffix].length;
+  return [...xPost].slice(0, maxBodyLen).join("") + suffix;
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -131,12 +176,16 @@ async function summarizeArticle(article) {
   console.log(`[summarize] 日本語タイトル: ${result.titleJa || "（生成失敗）"}`);
   console.log(`[summarize] 日本語本文: ${result.bodyJa.length > 0 ? `${result.bodyJa.length}文字` : "（生成失敗）"}`);
 
+  const hashtags   = getHashtags(article.category);
+  const xPostFinal = result.xPost ? appendHashtags(result.xPost, hashtags) : "";
+  console.log(`[summarize] ハッシュタグ付与: ${hashtags} → ${[...xPostFinal].length}字`);
+
   return {
     ...article,
     titleJa:         result.titleJa,
     bodyJa:          result.bodyJa,
-    xPostBody:       result.xPost,
-    japaneseSummary: result.xPost, // 後方互換
+    xPostBody:       xPostFinal,
+    japaneseSummary: xPostFinal, // 後方互換
   };
 }
 

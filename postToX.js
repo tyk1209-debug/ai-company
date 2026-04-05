@@ -13,6 +13,56 @@
 const { TwitterApi } = require("twitter-api-v2");
 
 // ─────────────────────────────────────────────────────────────
+// 定数
+// ─────────────────────────────────────────────────────────────
+
+const SITE_BASE_URL = "https://aec-news.com";
+
+// ─────────────────────────────────────────────────────────────
+// 記事URL生成ユーティリティ
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * 記事タイトルからスラグを生成する（generateSite.js と同じロジック）
+ * @param {string} str
+ * @returns {string}
+ */
+function slugify(str) {
+  return (str || "")
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .substring(0, 80);
+}
+
+/**
+ * 記事のAEC News Japan正規URLを返す
+ * @param {object} article - slug または title を持つ記事オブジェクト
+ * @returns {string}
+ */
+function buildArticleUrl(article) {
+  const slug = article.slug || slugify(article.title || "");
+  if (!slug) return SITE_BASE_URL + "/";
+  return `${SITE_BASE_URL}/posts/${slug}.html`;
+}
+
+/**
+ * postText にサイトURLが含まれていない場合は末尾に追記して返す
+ * @param {string} postText
+ * @param {object} article
+ * @returns {string}
+ */
+function ensureArticleUrl(postText, article) {
+  if (!postText) return postText;
+  // すでにサイトURLが含まれていればそのまま返す
+  if (postText.includes(SITE_BASE_URL)) return postText;
+  const url = buildArticleUrl(article);
+  return postText + "\n" + url;
+}
+
+// ─────────────────────────────────────────────────────────────
 // クライアント初期化
 // ─────────────────────────────────────────────────────────────
 
@@ -126,7 +176,8 @@ async function postArticles(articles, options = {}) {
 
     console.log(`── ${i + 1}/${targets.length} ──────────────────────────`);
 
-    const result = await postTweet(article.postText, { dryRun });
+    const tweetText = ensureArticleUrl(article.postText, article);
+    const result = await postTweet(tweetText, { dryRun });
 
     results.push({ title: article.title, ...result });
 

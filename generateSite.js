@@ -62,7 +62,7 @@ function escape(str) {
 
 // ---- shared HTML parts ------------------------------------------------------
 
-function htmlHead(title, desc, canonical) {
+function htmlHead(title, desc, canonical, base = '.') {
   return `<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -80,7 +80,7 @@ function htmlHead(title, desc, canonical) {
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${SITE_URL}/assets/og-image.png">
-  <link rel="icon" type="image/png" href="${SITE_URL}/assets/favicon.png">
+  <link rel="icon" type="image/png" href="${base}/assets/favicon.png">
   <meta name="robots" content="index, follow">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -145,7 +145,7 @@ function htmlHead(title, desc, canonical) {
 
     /* ---- hero ---- */
     .hero {
-      background: url('${SITE_URL}/assets/og-image.png') center/cover no-repeat,
+      background: url('./assets/og-image.png') center/cover no-repeat,
                   linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
       color: var(--white);
       padding: 3rem 1.5rem;
@@ -453,7 +453,7 @@ function buildIndex(posts) {
     `
   <div class="hero">
     <h1>BIM・AEC・建設DXの最新ニュース</h1>
-    <p>Autodesk、Bentley、IFC、デジタルツイン、建設テックの最新トレンドをAIが日本語で解説</p>
+    <p>Autodesk、IFC、デジタルツイン、建設テックの最新トレンドをAIが日本語で解説</p>
   </div>
   <div class="container">
     <main class="main-content">
@@ -481,7 +481,8 @@ function buildArticlePage(post) {
   return htmlHead(
     pageTitle,
     descText,
-    `${SITE_URL}/posts/${post.slug}.html`
+    `${SITE_URL}/posts/${post.slug}.html`,
+    '..'
   ) +
     htmlHeader('..') +
     `
@@ -584,7 +585,7 @@ function buildAboutPage() {
         </ul>
 
         <h2>掲載コンテンツ</h2>
-        <p>当サイトは海外のBIM・AEC関連ブログ・プレスリリース・技術記事をAIが収集・要約し、日本語で提供しています。各記事には元記事へのリンクを掲載しています。</p>
+        <p>当サイトはBIM・AEC関連ブログ・プレスリリース・技術記事をAIが収集・要約し、日本語で提供しています。各記事には元記事へのリンクを掲載しています。</p>
 
         <h2>免責事項</h2>
         <p>掲載情報は参考目的であり、内容の正確性・最新性を保証するものではありません。重要な意思決定の際は必ず元記事や一次情報をご確認ください。</p>

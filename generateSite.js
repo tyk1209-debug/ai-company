@@ -40,19 +40,19 @@ function excerpt(text, maxLen) {
 
 function categoryLabel(cat) {
   const map = {
-    BIM_ECOSYSTEM: '🔧 BIM全般',
-    REVIT: '🏗️ Revit',
-    ARCHICAD: '📐 ArchiCAD',
-    IFC: '🔗 IFC',
+    BIM_ECOSYSTEM: 'BIM全般',
+    REVIT: 'Revit',
+    ARCHICAD: 'ArchiCAD',
+    IFC: 'IFC',
     DIGITAL_TWIN: 'デジタルツイン',
     CONSTRUCTION_TECH: '建設テック',
     AI: 'AI',
-    AI_DX: '🤖 AI/DX',
-    BIM_AI: '💡 BIM×AI',
+    AI_DX: 'AI/DX',
+    BIM_AI: 'BIM×AI',
     GIS: 'GIS',
     SUSTAINABILITY: 'サステナビリティ',
-    GLOOBE: '🏢 GLOOBE',
-    OTHER: '📰 AEC',
+    GLOOBE: 'GLOOBE',
+    OTHER: 'AEC',
   };
   return map[cat] || cat || '📰 AEC';
 }

@@ -692,7 +692,7 @@ function buildSidebar(posts, base = '.') {
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">このサイトについて</div>
-        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新ニュースをAIが日本語で解説する専門メディアです。Autodesk・IFC・デジタルツインなど業界の最新動向をお届けします。</p>
+        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新情報をAIが日本語で解説する専門メディアです。Revit・ArchiCAD・Vectorworksなど主要BIMソフトから建設テック全般の最新動向をお届けします。</p>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
@@ -832,7 +832,7 @@ function buildIndex(posts, totalCount = 0) {
   <div class="hero">
     <div class="hero-content">
       <h1>BIM・AEC・建設DXの最新ニュース</h1>
-      <span class="hero-badge">Autodesk・IFC・デジタルツイン・建設テックの最新トレンドをAIが日本語で解説</span>
+      <span class="hero-badge">Revit・ArchiCAD・IFC・デジタルツイン・建設テックの最新トレンドをAIが日本語で解説</span>
     </div>
   </div>` +
     categoryNavHtml +

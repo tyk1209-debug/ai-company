@@ -96,6 +96,7 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${SITE_URL}/assets/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="${base}/assets/favicon.svg">
   <link rel="icon" type="image/png" href="${base}/assets/favicon.png">${jsonLdScript}
   <!-- Google AdSense -->
   <!-- TODO: 20記事蓄積後に有効化 — ca-pub-XXXXXXXXXXXXXXXX を実際のパブリッシャーIDに差し替える -->

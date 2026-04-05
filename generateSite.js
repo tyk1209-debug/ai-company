@@ -179,17 +179,17 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     .hero::after {
       content: '';
       position: absolute;
-      right: -40px;
+      right: 60px;
       top: 50%;
       transform: translateY(-50%);
-      width: 340px;
-      height: 280px;
-      border: 2px solid rgba(255,255,255,0.08);
+      width: 260px;
+      height: 220px;
+      border: 2px solid rgba(59,130,246,0.45);
       border-radius: 4px;
       box-shadow:
-        inset 0 0 0 20px rgba(255,255,255,0.03),
-        20px -20px 0 0 rgba(255,255,255,0.04),
-        40px -40px 0 0 rgba(255,255,255,0.03);
+        inset 0 0 0 18px rgba(37,99,235,0.08),
+        22px -22px 0 0 rgba(59,130,246,0.30),
+        44px -44px 0 0 rgba(59,130,246,0.18);
       pointer-events: none;
     }
     .hero-content {
@@ -198,9 +198,12 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       max-width: 600px;
     }
     .hero h1 {
-      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
       font-weight: 700;
       margin-bottom: 0.75rem;
+      word-break: keep-all;
+      overflow-wrap: normal;
+      white-space: nowrap;
     }
     .hero-badge {
       display: inline-block;

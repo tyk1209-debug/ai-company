@@ -18,6 +18,18 @@
   <link rel="icon" type="image/png" href="../assets/favicon.png">
   <meta name="robots" content="index, follow">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"What’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk Assistant and Forma Data Management Essentials","description":"Autodesk Civil 3D 2027 expands how teams design, analyze, and collaborate with the new Autodesk Assistant Tech Preview a…","datePublished":"2026-04-02T15:34:00.000Z","dateModified":"2026-04-02T15:34:00.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/whats-new-in-civil-3d-2027-advancing-infrastructure-design-with-autodesk-assista.html","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/whats-new-in-civil-3d-2027-advancing-infrastructure-design-with-autodesk-assista.html"}}</script>
+  <!-- Google Search Console verification -->
+  <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
+  <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
+  <!-- Google Analytics 4 -->
+  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -453,6 +465,24 @@ https://autodeskblog.wpengine.com/aec/2026/04/02/whats-new-in-civil-3d-2027
       </div>
     </main>
   </div>
+  <script>
+    (function() {
+      var fired = false;
+      function onScroll() {
+        if (fired) return;
+        var scrolled = window.scrollY + window.innerHeight;
+        var total = document.documentElement.scrollHeight;
+        if (total > 0 && scrolled / total >= 0.5) {
+          fired = true;
+          if (typeof gtag === 'function') {
+            gtag('event', 'scroll_50', { event_category: 'engagement' });
+          }
+          window.removeEventListener('scroll', onScroll);
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
   <footer class="site-footer">
     <div class="footer-nav">
       <a href="../">ホーム</a>

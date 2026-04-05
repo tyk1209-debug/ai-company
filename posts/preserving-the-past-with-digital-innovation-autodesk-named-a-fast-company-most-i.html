@@ -18,6 +18,18 @@
   <link rel="icon" type="image/png" href="../assets/favicon.png">
   <meta name="robots" content="index, follow">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Preserving the past with digital innovation: Autodesk named a Fast Company Most Innovative Company for 2026","description":"Autodesk recognized in Fast Company’s 2026 Most Innovative Companies list for advancing historic and cultural preservati…","datePublished":"2026-03-26T14:56:40.000Z","dateModified":"2026-03-26T14:56:40.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html"}}</script>
+  <!-- Google Search Console verification -->
+  <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
+  <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
+  <!-- Google Analytics 4 -->
+  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -453,6 +465,24 @@ https://adsknews.autodesk.com/en/news/autodesk-named-fast-company-most-innovativ
       </div>
     </main>
   </div>
+  <script>
+    (function() {
+      var fired = false;
+      function onScroll() {
+        if (fired) return;
+        var scrolled = window.scrollY + window.innerHeight;
+        var total = document.documentElement.scrollHeight;
+        if (total > 0 && scrolled / total >= 0.5) {
+          fired = true;
+          if (typeof gtag === 'function') {
+            gtag('event', 'scroll_50', { event_category: 'engagement' });
+          }
+          window.removeEventListener('scroll', onScroll);
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
   <footer class="site-footer">
     <div class="footer-nav">
       <a href="../">ホーム</a>

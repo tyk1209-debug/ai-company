@@ -85,6 +85,18 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
   <meta name="twitter:image" content="${SITE_URL}/assets/og-image.png">
   <link rel="icon" type="image/png" href="${base}/assets/favicon.png">
   <meta name="robots" content="index, follow">${jsonLdScript}
+  <!-- Google Search Console verification -->
+  <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
+  <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
+  <!-- Google Analytics 4 -->
+  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -648,7 +660,25 @@ function buildArticlePage(post) {
         </div>
       </div>
     </main>
-  </div>` +
+  </div>
+  <script>
+    (function() {
+      var fired = false;
+      function onScroll() {
+        if (fired) return;
+        var scrolled = window.scrollY + window.innerHeight;
+        var total = document.documentElement.scrollHeight;
+        if (total > 0 && scrolled / total >= 0.5) {
+          fired = true;
+          if (typeof gtag === 'function') {
+            gtag('event', 'scroll_50', { event_category: 'engagement' });
+          }
+          window.removeEventListener('scroll', onScroll);
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>` +
     htmlFooter('..');
 }
 

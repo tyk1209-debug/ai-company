@@ -18,6 +18,18 @@
   <link rel="icon" type="image/png" href="../assets/favicon.png">
   <meta name="robots" content="index, follow">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Expanding FedRAMP® Moderate Authorization brings connected, secure future to Autodesk Construction Cloud and Fusion federal customers","description":"Bringing FedRAMP Moderate Authorization to Autodesk Construction Cloud and Fusion.","datePublished":"2026-02-12T15:58:44.000Z","dateModified":"2026-02-12T15:58:44.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/expanding-fedramp-moderate-authorization-brings-connected-secure-future-to-autod.html","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/expanding-fedramp-moderate-authorization-brings-connected-secure-future-to-autod.html"}}</script>
+  <!-- Google Search Console verification -->
+  <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
+  <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
+  <!-- Google Analytics 4 -->
+  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -453,6 +465,24 @@ https://adsknews.autodesk.com/en/news/fedramp-acc-fusion
       </div>
     </main>
   </div>
+  <script>
+    (function() {
+      var fired = false;
+      function onScroll() {
+        if (fired) return;
+        var scrolled = window.scrollY + window.innerHeight;
+        var total = document.documentElement.scrollHeight;
+        if (total > 0 && scrolled / total >= 0.5) {
+          fired = true;
+          if (typeof gtag === 'function') {
+            gtag('event', 'scroll_50', { event_category: 'engagement' });
+          }
+          window.removeEventListener('scroll', onScroll);
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
   <footer class="site-footer">
     <div class="footer-nav">
       <a href="../">ホーム</a>

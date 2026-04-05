@@ -850,13 +850,6 @@ function buildIndex(posts, totalCount = 0) {
     })();
   </script>`;
 
-  const tickerItems = recentPosts.slice(0, 5).map(p =>
-    `<span class="ticker-item">${escape(p.titleJa || p.title)}</span>`
-  ).join('');
-  const tickerHtml = tickerItems
-    ? `<div class="ticker-wrap"><div class="ticker-inner">${tickerItems}${tickerItems}</div></div>`
-    : '';
-
   return htmlHead(
     `${SITE_NAME} | BIM・AEC・建設DXニュース`,
     SITE_DESC,
@@ -871,16 +864,7 @@ function buildIndex(posts, totalCount = 0) {
       <h1>BIM・AEC・建設DXの最新ニュース</h1>
       <span class="hero-badge">Revit・ArchiCAD・IFC・デジタルツイン・建設テックの最新トレンドをAIが日本語で解説</span>
     </div>
-  </div>
-  <style>
-    .ticker-wrap { overflow: hidden; border-top: 1px solid rgba(59,130,246,0.25); border-bottom: 1px solid rgba(59,130,246,0.25); background: rgba(59,130,246,0.05); padding: 10px 0; margin-bottom: 2rem; }
-    .ticker-inner { display: flex; animation: ticker-scroll 30s linear infinite; white-space: nowrap; }
-    .ticker-inner:hover { animation-play-state: paused; }
-    .ticker-item { padding: 0 3rem; font-size: 0.82rem; color: rgba(255,255,255,0.65); }
-    .ticker-item::before { content: '▶ '; color: #3b82f6; font-size: 0.7rem; }
-    @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  </style>
-  ${tickerHtml}` +
+  </div>` +
     categoryNavHtml +
     `
   <div class="container">

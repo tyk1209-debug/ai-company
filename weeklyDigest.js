@@ -121,7 +121,7 @@ async function generateDigestContent(articles, startDate, endDate) {
     const endJa = formatDateJa(endDate.toISOString());
     return {
       titleJa: `今週のBIM・AEC注目ニュース（${startJa}〜${endJa}）`,
-      bodyJa: `今週は${articles.length}件のBIM・AECニュースがありました。（ANTHROPIC_API_KEY が未設定のためまとめを生成できませんでした）`,
+      bodyJa: `今週は${articles.length}件のBIM・AEC関連ニュースをお届けしました。各記事の詳細は上のリンクからご覧ください。`,
     };
   }
 

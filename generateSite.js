@@ -862,7 +862,7 @@ function buildIndex(posts, totalCount = 0) {
   <div class="hero">
     <div class="hero-content">
       <h1>BIM・AEC・建設DXの最新ニュース</h1>
-      <span class="hero-badge">Revit・ArchiCAD・IFC・デジタルツイン・建設テックの最新トレンドをAIが日本語で解説</span>
+      <span class="hero-badge">Revit・ArchiCAD・IFC・デジタルツイン・建設テックの最新トレンドをAIが解説</span>
     </div>
   </div>` +
     categoryNavHtml +

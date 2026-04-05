@@ -13,7 +13,8 @@ const fs     = require("fs");
 const path   = require("path");
 const Parser = require("rss-parser");
 
-const feeds                 = require("./feeds.js");
+const feeds                       = require("./feeds.js");
+const { scrapeJapaneseSources }   = require("./scraper.js");
 const { normalizeArticles } = require("./normalizeNews.js");
 const { dedupeNews }        = require("./dedupeNews.js");
 const { scoreNews }         = require("./scoreNews.js");
@@ -133,7 +134,17 @@ async function main() {
   ensureDataDir();
 
   // 1. RSS取得 & 正規化
-  const { succeeded, failed, raw } = await fetchAllFeeds();
+  const { succeeded, failed, raw: rssRaw } = await fetchAllFeeds();
+
+  // 1b. スクレイピング（RSSなし日本語ソース）をマージ
+  let scraped = [];
+  try {
+    scraped = await scrapeJapaneseSources();
+    console.log(`[scraper] ${scraped.length}件取得 (mlit.go.jp)`);
+  } catch (err) {
+    console.error(`[scraper] 取得エラー: ${err.message}`);
+  }
+  const raw = [...rssRaw, ...scraped];
   saveJson("raw_news.json", raw);
 
   // 2. 重複除去

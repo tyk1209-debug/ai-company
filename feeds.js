@@ -63,11 +63,26 @@ module.exports = [
 
   // ── 日本語ソース ──────────────────────────────────────────
   {
+    name: "AppTec ニュース",
+    url: "https://www.apptec.co.jp/news/feed/",
+    category: "CONSTRUCTION_TECH",
+  },
+  {
     name: "建設ITワールド",
     url: "https://ken-it.world/feed",
   },
   {
     name: "日経クロステック",
     url: "https://xtech.nikkei.com/rss/index.rdf",
+  },
+  {
+    name: "BIMゲート",
+    url: "https://bimgate.jp/feed/",
+    category: "BIM_ECOSYSTEM",
+  },
+  {
+    name: "Graphisoft Japan",
+    url: "https://www.graphisoft.com/jp/feed",
+    category: "BIM_ECOSYSTEM",
   },
 ];

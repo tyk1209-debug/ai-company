@@ -369,30 +369,30 @@ function htmlHead(title, desc, canonical) {
 <body>`;
 }
 
-function htmlHeader() {
+function htmlHeader(base = '.') {
   return `
   <header class="site-header">
     <div class="header-inner">
       <div>
-        <div class="site-title"><a href="/">${SITE_NAME}</a></div>
+        <div class="site-title"><a href="${base}/">${SITE_NAME}</a></div>
         <div class="site-tagline">${SITE_DESC}</div>
       </div>
       <nav>
-        <a href="/">ホーム</a>
-        <a href="/about.html">運営者情報</a>
-        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="${base}/">ホーム</a>
+        <a href="${base}/about.html">運営者情報</a>
+        <a href="${base}/privacy.html">プライバシーポリシー</a>
       </nav>
     </div>
   </header>`;
 }
 
-function htmlFooter() {
+function htmlFooter(base = '.') {
   return `
   <footer class="site-footer">
     <div class="footer-nav">
-      <a href="/">ホーム</a>
-      <a href="/about.html">運営者情報</a>
-      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="${base}/">ホーム</a>
+      <a href="${base}/about.html">運営者情報</a>
+      <a href="${base}/privacy.html">プライバシーポリシー</a>
     </div>
     <div>&copy; ${CURRENT_YEAR} ${SITE_NAME}. All rights reserved.</div>
   </footer>
@@ -420,11 +420,11 @@ function buildIndex(posts) {
           <span>${escape(post.source || '')}</span>
         </div>
         <h2 class="card-title">
-          <a href="/posts/${escape(slug)}.html">${escape(post.title)}</a>
+          <a href="./posts/${escape(slug)}.html">${escape(post.title)}</a>
         </h2>
         <p class="card-excerpt">${escape(snip)}</p>
         <div class="card-footer">
-          <a class="read-more" href="/posts/${escape(slug)}.html">続きを読む &rarr;</a>
+          <a class="read-more" href="./posts/${escape(slug)}.html">続きを読む &rarr;</a>
         </div>
       </article>`;
   }).join('');
@@ -468,12 +468,12 @@ function buildArticlePage(post) {
     descText,
     `${SITE_URL}/posts/${post.slug}.html`
   ) +
-    htmlHeader() +
+    htmlHeader('..') +
     `
   <div class="container">
     <main class="main-content">
       <nav class="breadcrumb">
-        <a href="/">ホーム</a> &rsaquo; <span>${escape(catLabel)}</span>
+        <a href="../">ホーム</a> &rsaquo; <span>${escape(catLabel)}</span>
       </nav>
       <div class="article-detail">
         <h1>${escape(post.title)}</h1>
@@ -491,7 +491,7 @@ function buildArticlePage(post) {
       </div>
     </main>
   </div>` +
-    htmlFooter();
+    htmlFooter('..');
 }
 
 // ---- privacy policy page ----------------------------------------------------

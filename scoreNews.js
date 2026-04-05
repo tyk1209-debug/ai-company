@@ -94,8 +94,8 @@ const CATEGORY_ORDER = [
  */
 function detectBimAi(text) {
   return (
-    text.includes("bim") &&
-    (text.includes("ai") || text.includes("llm") || text.includes("automation"))
+    wordMatch(text, "bim") &&
+    (wordMatch(text, "ai") || wordMatch(text, "llm") || text.includes("automation"))
   );
 }
 
@@ -103,12 +103,25 @@ function getSearchText(article) {
   return `${article.title} ${article.summary} ${article.source}`.toLowerCase();
 }
 
+/**
+ * 単語境界マッチ: 短いキーワード（3文字以下）はスペースや文字境界で区切られた場合のみマッチ
+ * これにより "ai" が "ArchDaily" や "capitalism" に誤マッチするのを防ぐ
+ */
+function wordMatch(text, word) {
+  // 英数字のみの短いキーワードは単語境界マッチ
+  if (/^[a-z0-9 ]+$/.test(word) && word.length <= 4) {
+    const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp(`\\b${escaped}\\b`).test(text);
+  }
+  return text.includes(word);
+}
+
 function calcKeywordScore(text) {
   const hits = [];
   let total = 0;
 
   for (const { word, score } of SCORE_KEYWORDS) {
-    if (text.includes(word)) {
+    if (wordMatch(text, word)) {
       hits.push(word);
       total += score;
     }
@@ -121,7 +134,7 @@ function detectCategory(text) {
   const scores = {};
 
   for (const [category, words] of Object.entries(CATEGORY_KEYWORDS)) {
-    const hits = words.filter((w) => text.includes(w));
+    const hits = words.filter((w) => wordMatch(text, w));
     if (hits.length > 0) {
       scores[category] = { count: hits.length, hits };
     }

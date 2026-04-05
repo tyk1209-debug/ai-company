@@ -1,0 +1,15 @@
+{
+  "name": "ai-company",
+  "version": "1.0.0",
+  "description": "BIM / AEC / 建設DX / AI 特化ニュース収集AI",
+  "main": "news.js",
+  "scripts": {
+    "start": "node news.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.82.0",
+    "node-cron": "^4.2.1",
+    "rss-parser": "^3.13.0",
+    "twitter-api-v2": "^1.29.0"
+  }
+}

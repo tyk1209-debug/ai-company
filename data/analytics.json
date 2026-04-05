@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": "dry-run",
+      "postedAt": "2026-04-05T05:29:53.737Z",
+      "title": "Model Analytics Public Beta: What Happens When Insight Is Embedded, Not Added? A New Era for Model Health in Autodesk Construction Cloud",
+      "link": "https://autodeskblog.wpengine.com/aec/2026/01/27/model-analytics-public-beta",
+      "category": "BIM_ECOSYSTEM",
+      "score": 14,
+      "keywordHits": [
+        "revit",
+        "aec",
+        "autodesk",
+        "construction cloud"
+      ],
+      "dryRun": true,
+      "success": true,
+      "xPostId": "dry-run"
+    },
+    {
+      "id": "dry-run",
+      "postedAt": "2026-04-05T05:29:53.739Z",
+      "title": "Discover New Revit Design Tips in Less Than 90 Seconds with Autodesk Learning Reels",
+      "link": "https://autodeskblog.wpengine.com/aec/2026/03/31/discover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-reels",
+      "category": "REVIT",
+      "score": 13,
+      "keywordHits": [
+        "revit",
+        "aec",
+        "autodesk",
+        "workflow"
+      ],
+      "dryRun": true,
+      "success": true,
+      "xPostId": "dry-run"
+    },
+    {
+      "id": "dry-run",
+      "postedAt": "2026-04-05T05:29:53.740Z",
+      "title": "Introducing the New Revit Add-On Release for Content Catalog",
+      "link": "https://autodeskblog.wpengine.com/aec/2026/01/15/introducing-the-new-revit-add-on-release-for-content-catalog",
+      "category": "REVIT",
+      "score": 12,
+      "keywordHits": [
+        "revit",
+        "aec",
+        "autodesk",
+        "workflow"
+      ],
+      "dryRun": true,
+      "success": true,
+      "xPostId": "dry-run"
+    }
+  ]
+}

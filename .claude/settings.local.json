@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node news.js)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "WebSearch",
+      "Bash(curl*)",
+      "Bash(npm install*)",
+      "Bash(node*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(node -e \"require\\(''''./analytics.js''''\\)\")",
+      "Bash(node -e \"require\\(''''./scheduler.js''''\\)\")",
+      "Bash(DRY_RUN=true node news.js)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/tyk12/AppData/Local/Temp/claude/C--Users-tyk12-ai-company/de543180-1e6d-4c12-a44b-c72b6b2757a9/tasks/**)",
+      "Bash(done)"
+    ]
+  }
+}

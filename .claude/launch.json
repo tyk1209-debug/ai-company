@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ニュース収集（ドライラン）",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["news.js"],
+      "env": {
+        "DRY_RUN": "true"
+      },
+      "description": "RSS収集 → スコアリング → X投稿文生成（投稿はしない）"
+    },
+    {
+      "name": "ニュース収集（本番投稿）",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["news.js"],
+      "env": {
+        "DRY_RUN": "false"
+      },
+      "description": "RSS収集 → スコアリング → X自動投稿（要: .env に APIキー設定）"
+    },
+    {
+      "name": "ニュース収集（Claude要約あり）",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["news.js"],
+      "env": {
+        "DRY_RUN": "true",
+        "SUMMARIZE": "true"
+      },
+      "description": "RSS収集 → Claude API日本語要約 → X投稿文生成（要: ANTHROPIC_API_KEY）"
+    }
+  ]
+}

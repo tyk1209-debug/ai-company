@@ -1,0 +1,2805 @@
+[
+  {
+    "title": "ISO Publishes New Compatibility Policy for ISO 16739-1 (IFC): A Major Step for Stable Evolution of the Standard",
+    "link": "https://www.buildingsmart.org/iso-publishes-new-compatibility-policy-for-iso-16739-1",
+    "source": "buildingSMART International",
+    "pubDate": "2025-11-13T11:27:34.000Z",
+    "summary": "buildingSMART International is pleased to share important news with the openBIM community: ISO/TC 59/SC 13 has published the new Compatibility Policy for ISO 16739-1, the international standard for IFC. This… The post ISO Publishes New Compatibility Policy for ISO 16739-1 (IFC): A Major Step for Stable Evolution of the Standard appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-05T05:28:52.885Z",
+    "category": "IFC",
+    "categoryHits": [
+      "ifc",
+      "openbim",
+      "buildingsmart"
+    ],
+    "keywordHits": [
+      "ifc",
+      "openbim",
+      "buildingsmart",
+      "bim"
+    ],
+    "score": 18,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Model Analytics Public Beta: What Happens When Insight Is Embedded, Not Added? A New Era for Model Health in Autodesk Construction Cloud",
+    "link": "https://autodeskblog.wpengine.com/aec/2026/01/27/model-analytics-public-beta",
+    "source": "Autodesk AEC Blog",
+    "pubDate": "2026-01-27T14:00:00.000Z",
+    "summary": "In the world of AEC, data is everywhere—but making it useful is another story. Most firms simply don’t have the time or resources to track things like sync behavior, model growth, version alignment, or change history across their projects. Even when this information exists, it’s scattered across Revit journals, ACC activity logs, spreadsheets, and ad‑hoc […] The post Model Analytics Public Beta: What Happens When Insight Is Embedded, Not Added? A New Era for Model Health in Autodesk Construction Cloud appeared first on AEC Tech Drop.",
+    "fetchedAt": "2026-04-05T05:28:50.243Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec",
+      "construction cloud"
+    ],
+    "keywordHits": [
+      "revit",
+      "aec",
+      "autodesk",
+      "construction cloud"
+    ],
+    "score": 14,
+    "freshnessScore": 0
+  },
+  {
+    "title": "What’s New in Civil 3D 2026.2: Enhanced Drainage and Collaboration Workflows",
+    "link": "https://autodeskblog.wpengine.com/aec/2025/12/11/whats-new-in-civil-3d-2026-2",
+    "source": "Autodesk AEC Blog",
+    "pubDate": "2025-12-11T18:25:00.000Z",
+    "summary": "Autodesk Civil 3D 2026.2 introduces significant enhancements to civil infrastructure workflows. These include improved drainage design and analysis tools, updates to Dynamo and Feature Lines, and the ability to export AutoCAD 3D Objects from Project Explorer. This comes in addition to new collaboration tools in Autodesk Construction Cloud (ACC) designed for Civil 3D users. Let’s […] The post What’s New in Civil 3D 2026.2: Enhanced Drainage and Collaboration Workflows appeared first on AEC Tech Drop.",
+    "fetchedAt": "2026-04-05T05:28:50.243Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec",
+      "construction cloud"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "dynamo",
+      "construction cloud",
+      "ai",
+      "workflow"
+    ],
+    "score": 14,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Discover New Revit Design Tips in Less Than 90 Seconds with Autodesk Learning Reels",
+    "link": "https://autodeskblog.wpengine.com/aec/2026/03/31/discover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-reels",
+    "source": "Autodesk AEC Blog",
+    "pubDate": "2026-04-01T02:30:00.000Z",
+    "summary": "What if you could learn something useful about your favorite Autodesk design software in under 90 seconds? We’re experimenting with “Learning Reels,” ultra-short videos designed to surface practical tips, highlight expert workflows, and spark ideas you can immediately apply in your work. They are “quick wins” for your day. We would love your feedback! Check […] The post Discover New Revit Design Tips in Less Than 90 Seconds with Autodesk Learning Reels appeared first on AEC Tech Drop.",
+    "fetchedAt": "2026-04-05T05:28:50.243Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "keywordHits": [
+      "revit",
+      "aec",
+      "autodesk",
+      "workflow"
+    ],
+    "score": 13,
+    "freshnessScore": 1
+  },
+  {
+    "title": "openBIM Practitioner Certification enters full-scale implementation across Chapters",
+    "link": "https://www.buildingsmart.org/openbim-practitioner-certification-enters-full-scale-implementation-across-chapters",
+    "source": "buildingSMART International",
+    "pubDate": "2025-12-05T22:18:08.000Z",
+    "summary": "The openBIM Practitioner Certification is now rolling out across the buildingSMART community, as part of the ongoing expansion of the Professional Certification Program, marking a major milestone in professional development… The post openBIM Practitioner Certification enters full-scale implementation across Chapters appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-05T05:28:52.885Z",
+    "category": "IFC",
+    "categoryHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "keywordHits": [
+      "openbim",
+      "buildingsmart",
+      "bim"
+    ],
+    "score": 13,
+    "freshnessScore": 0
+  },
+  {
+    "title": "The buildingSMART openBIM Awards 2025 – Winners Announced",
+    "link": "https://www.buildingsmart.org/the-buildingsmart-openbim-awards-2025-winners-announced",
+    "source": "buildingSMART International",
+    "pubDate": "2025-09-26T13:18:09.000Z",
+    "summary": "Berlin, Germany – September 25, 2025 The openBIM Awards 2025 concluded with a celebratory ceremony on Wednesday, 24 September, during the closing plenary of the buildingSMART International Summit – Berlin… The post The buildingSMART openBIM Awards 2025 – Winners Announced appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-05T05:28:52.885Z",
+    "category": "IFC",
+    "categoryHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "keywordHits": [
+      "openbim",
+      "buildingsmart",
+      "bim"
+    ],
+    "score": 13,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Introducing the New Revit Add-On Release for Content Catalog",
+    "link": "https://autodeskblog.wpengine.com/aec/2026/01/15/introducing-the-new-revit-add-on-release-for-content-catalog",
+    "source": "Autodesk AEC Blog",
+    "pubDate": "2026-01-15T14:00:00.000Z",
+    "summary": "We are excited to announce the latest add-on release for Content Catalog, Autodesk’s cloud-based digital asset management tool. This update includes performance improvements and a refined connection workflow for a more efficient and seamless user experience. Automatic Account Connectivity for Revit Cloud Models A significant feature of this new release is the elimination of manual […] The post Introducing the New Revit Add-On Release for Content Catalog appeared first on AEC Tech Drop.",
+    "fetchedAt": "2026-04-05T05:28:50.243Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "keywordHits": [
+      "revit",
+      "aec",
+      "autodesk",
+      "workflow"
+    ],
+    "score": 12,
+    "freshnessScore": 0
+  },
+  {
+    "title": "What’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk Assistant and Forma Data Management Essentials",
+    "link": "https://autodeskblog.wpengine.com/aec/2026/04/02/whats-new-in-civil-3d-2027",
+    "source": "Autodesk AEC Blog",
+    "pubDate": "2026-04-02T15:34:00.000Z",
+    "summary": "Autodesk Civil 3D 2027 expands how teams design, analyze, and collaborate with the new Autodesk Assistant Tech Preview and Forma Data Management Essentials. These updates bring Autodesk AI-powered guidance and cloud-connected workflows directly into the Civil 3D experience, helping teams stay informed and aligned throughout project lifecycles. This release also includes enhancements to drainage design […] The post What’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk Assistant and Forma Data Management Essentials appeared first on AEC Tech Drop.",
+    "fetchedAt": "2026-04-05T05:28:50.243Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "ai",
+      "workflow"
+    ],
+    "score": 10,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Autodesk Construction Cloud is now Autodesk Forma",
+    "link": "https://adsknews.autodesk.com/en/news/autodesk-construction-cloud-is-now-autodesk-forma",
+    "source": "Autodesk News",
+    "pubDate": "2026-03-24T14:56:49.000Z",
+    "summary": "Autodesk Forma connects design and construction workflows across the AECO lifecycle.",
+    "fetchedAt": "2026-04-05T05:28:52.255Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec",
+      "construction cloud"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "construction cloud",
+      "workflow"
+    ],
+    "score": 10,
+    "freshnessScore": 0
+  },
+  {
+    "title": "建設業をデジタル変革！ 「建設DXへの道」メルマガ無料配信中",
+    "link": "https://ken-it.world/magazine.html",
+    "source": "建設ITワールド",
+    "pubDate": "2014-01-25T16:14:58.000Z",
+    "summary": "BIM/CIM、ドローンから、VR・MR、建設用3Dプリンター、さらにはロボット・AIを駆使して、「建設業のデジタルトランスフォーメーション（DX）」を実現するための実践方法や最新情報が満載の「建設DXへの道」メルマガ（旧・建設ITワールドメルマガ）を毎週火曜日に無料配信中です。 編集長は、日本でた […] The post 建設業をデジタル変革！ 「建設DXへの道」メルマガ無料配信中 first appeared on 建設ITワールド.",
+    "fetchedAt": "2026-04-05T05:28:51.080Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "keywordHits": [
+      "bim",
+      "建設dx",
+      "cim",
+      "ai"
+    ],
+    "score": 8,
+    "freshnessScore": 0
+  },
+  {
+    "title": "当サイトについて",
+    "link": "https://ken-it.world/about.html",
+    "source": "建設ITワールド",
+    "pubDate": "2014-01-25T14:37:41.000Z",
+    "summary": "日本唯一の「建設ITジャーナリスト」、家入龍太の公式サイト。IT活用による建設産業の成長戦略を追求するのがテーマです。 【活動内容】 BIM/CIMやi-Construction、ロボット・AIなどの導入により、コロナ禍対策と生産性向上の両立、地球環境保全、国際化、さらには建設DXの実現といった建設 […] The post 当サイトについて first appeared on 建設ITワールド.",
+    "fetchedAt": "2026-04-05T05:28:51.080Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "keywordHits": [
+      "bim",
+      "建設dx",
+      "cim",
+      "ai"
+    ],
+    "score": 8,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Autodesk at the 2025 RIBA Stirling Prize Ceremony",
+    "link": "https://autodeskblog.wpengine.com/aec/2026/01/06/autodesk-at-the-2025-riba-stirling-prize-ceremony",
+    "source": "Autodesk AEC Blog",
+    "pubDate": "2026-01-06T19:21:49.000Z",
+    "summary": "Celebrating Sustainability and Design Excellence The Royal Institute of British Architects (RIBA) Awards continue to stand as one of the most respected platforms for recognizing architectural excellence, celebrating projects that advance design quality, social value, and environmental responsibility. This was the RIBA Stirling Prize 2025 Ceremony, held on October 16 at the Roundhouse in London, […] The post Autodesk at the 2025 RIBA Stirling Prize Ceremony appeared first on AEC Tech Drop.",
+    "fetchedAt": "2026-04-05T05:28:50.243Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "ai"
+    ],
+    "score": 7,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Autodesk Flow Studio launches Wonder 3D Gen AI model to help creators make 3D characters and objects faster and easier",
+    "link": "https://adsknews.autodesk.com/en/news/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-characters-and-objects-faster-and-easier",
+    "source": "Autodesk News",
+    "pubDate": "2026-04-02T20:12:53.000Z",
+    "summary": "New model in Flow Studio enables text and image to 3D workflows",
+    "fetchedAt": "2026-04-05T05:28:52.255Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "autodesk",
+      "ai",
+      "workflow"
+    ],
+    "score": 7,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Preserving the past with digital innovation: Autodesk named a Fast Company Most Innovative Company for 2026",
+    "link": "https://adsknews.autodesk.com/en/news/autodesk-named-fast-company-most-innovative-company-2026",
+    "source": "Autodesk News",
+    "pubDate": "2026-03-26T14:56:40.000Z",
+    "summary": "Autodesk recognized in Fast Company’s 2026 Most Innovative Companies list for advancing historic and cultural preservation through BIM, reality capture, and cloud-based collaboration.",
+    "fetchedAt": "2026-04-05T05:28:52.255Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "bim"
+    ],
+    "keywordHits": [
+      "bim",
+      "autodesk"
+    ],
+    "score": 6,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Autodesk Construction Cloud to join Autodesk Forma on March 24",
+    "link": "https://adsknews.autodesk.com/en/news/autodesk-construction-cloud-to-join-forma",
+    "source": "Autodesk News",
+    "pubDate": "2026-02-25T15:57:16.000Z",
+    "summary": "Autodesk Construction Cloud becomes part of Autodesk Forma on March 24.",
+    "fetchedAt": "2026-04-05T05:28:52.255Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "construction cloud"
+    ],
+    "keywordHits": [
+      "autodesk",
+      "construction cloud"
+    ],
+    "score": 6,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Expanding FedRAMP® Moderate Authorization brings connected, secure future to Autodesk Construction Cloud and Fusion federal customers",
+    "link": "https://adsknews.autodesk.com/en/news/fedramp-acc-fusion",
+    "source": "Autodesk News",
+    "pubDate": "2026-02-12T15:58:44.000Z",
+    "summary": "Bringing FedRAMP Moderate Authorization to Autodesk Construction Cloud and Fusion.",
+    "fetchedAt": "2026-04-05T05:28:52.255Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "construction cloud"
+    ],
+    "keywordHits": [
+      "autodesk",
+      "construction cloud"
+    ],
+    "score": 6,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Key Outcomes from the Domain Leadership Conference in Zurich",
+    "link": "https://www.buildingsmart.org/key-outcomes-from-the-domain-leadership-conference-in-zurich",
+    "source": "buildingSMART International",
+    "pubDate": "2026-03-20T10:06:51.000Z",
+    "summary": "The recent Domain Leadership Conference held in Zurich on 4 & 5 February marked an important moment for buildingSMART International. bSI Domains are membership-led, pro bono programmes representing different industry… The post Key Outcomes from the Domain Leadership Conference in Zurich appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-05T05:28:52.885Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "keywordHits": [
+      "buildingsmart",
+      "ai"
+    ],
+    "score": 6,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Autodesk acquires Rhumbix in construction data push",
+    "link": "https://www.constructiondive.com/news/autodesk-acquires-rhumbix-construction-data/816526",
+    "source": "Construction Dive",
+    "pubDate": "2026-04-03T12:51:00.000Z",
+    "summary": "The startup, which aims to provide builders with better data visibility, counts Turner Construction, Suffolk Construction and DPR Construction among its customers.",
+    "fetchedAt": "2026-04-05T05:28:50.943Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "autodesk",
+      "ai"
+    ],
+    "score": 6,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Choreographing Lagos: Dele Adeyemo on Dance, Cosmology, and Spatial Practices",
+    "link": "https://www.archdaily.com/1039851/choreographing-lagos-dele-adeyemo-on-dance-cosmology-and-spatial-practices",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-04T07:30:00.000Z",
+    "summary": "Having thrown a stone today, Eshu kills a bird of yesterday. The Yoruba proverb tells both a story of reparation and of ancestrality by joyfully bending spacetime conventions and accessing subjects from the past with present actions. The saying offers a poetic entry point to broader West African traditions and to the practice of Scottish-Nigerian artist and architect Dele Adeyemo. Named one of the winners of the ArchDaily 2025 Next Practices Awards, Adeyemo's work brings together ecology, spirituality, dance, and territory, examining how embodied cultural practices can generate alternative spatial possibilities within and against the architecture of racial capitalism.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "api",
+      "ai"
+    ],
+    "score": 6,
+    "freshnessScore": 3
+  },
+  {
+    "title": "How new Autodesk AI tools are boosting productivity while keeping artists in control",
+    "link": "https://adsknews.autodesk.com/en/news/how-new-autodesk-ai-tools-are-boosting-productivity",
+    "source": "Autodesk News",
+    "pubDate": "2026-04-01T16:03:06.000Z",
+    "summary": "How do you animate a horse faster? How do you create realistic destruction of buildings and bridges in movies and video games?",
+    "fetchedAt": "2026-04-05T05:28:52.255Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "autodesk",
+      "ai"
+    ],
+    "score": 5,
+    "freshnessScore": 1
+  },
+  {
+    "title": "buildingSMART Brazil has been formally approved as a Full Chapter",
+    "link": "https://www.buildingsmart.org/buildingsmart-brazil-has-been-formally-approved-as-a-full-chapter",
+    "source": "buildingSMART International",
+    "pubDate": "2026-03-27T10:19:53.000Z",
+    "summary": "London, U.K. – March 27th, 2026 — buildingSMART International (bSI) is pleased to announce that buildingSMART Brazil has been formally approved by the Board to become a Full Chapter, effective March… The post buildingSMART Brazil has been formally approved as a Full Chapter appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-05T05:28:52.885Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "keywordHits": [
+      "buildingsmart"
+    ],
+    "score": 5,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Alfred Waschl Steps Down from buildingSMART International Board of Directors",
+    "link": "https://www.buildingsmart.org/alfred-waschl-resigned-from-the-board",
+    "source": "buildingSMART International",
+    "pubDate": "2026-02-27T09:21:11.000Z",
+    "summary": "London, U.K. – February 27th, 2026 — buildingSMART International (bSI) announces that Alfred Waschl resigned from the Board of Directors on 29 January 2026. Due to ill health, Alfred previously stepped… The post Alfred Waschl Steps Down from buildingSMART International Board of Directors appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-05T05:28:52.885Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "keywordHits": [
+      "buildingsmart"
+    ],
+    "score": 5,
+    "freshnessScore": 0
+  },
+  {
+    "title": "buildingSMART International announces that Céline Bent has left the organisation",
+    "link": "https://www.buildingsmart.org/buildingsmart-international-announces-that-celine-bent-has-left-the-organisation",
+    "source": "buildingSMART International",
+    "pubDate": "2026-01-28T10:40:44.000Z",
+    "summary": "London, U.K. – January 28th, 2026 — buildingSMART International (bSI) announces that Céline Bent has left the organisation. bSI commented that “it is with our regrets to announce that Céline has… The post buildingSMART International announces that Céline Bent has left the organisation appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-05T05:28:52.885Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "keywordHits": [
+      "buildingsmart"
+    ],
+    "score": 5,
+    "freshnessScore": 0
+  },
+  {
+    "title": "buildingSMART Chile has been formally approved as a “Chapter-in-formation”",
+    "link": "https://www.buildingsmart.org/buildingsmart-chile-has-been-formally-approved-as-a-chapter-in-formation",
+    "source": "buildingSMART International",
+    "pubDate": "2025-12-08T19:22:27.000Z",
+    "summary": "London, U.K. – December 8th, 2025 — buildingSMART International (bSI) is pleased to announce that buildingSMART Chile has been formally approved as a \"Chapter-in-formation\". The latest Chapter to join the… The post buildingSMART Chile has been formally approved as a “Chapter-in-formation” appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-05T05:28:52.885Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "keywordHits": [
+      "buildingsmart"
+    ],
+    "score": 5,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Board of Directors Changes",
+    "link": "https://www.buildingsmart.org/board-of-directors-changes",
+    "source": "buildingSMART International",
+    "pubDate": "2025-12-05T19:25:08.000Z",
+    "summary": "London, U.K. – December 5th, 2025 — buildingSMART International (bSI) is today announcing some Board of Director changes. Board Changes Due to ill health, Alfred Waschl has stepped down from… The post Board of Directors Changes appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-05T05:28:52.885Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "keywordHits": [
+      "buildingsmart"
+    ],
+    "score": 5,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Voting for the Standards Committee Executive is now open",
+    "link": "https://www.buildingsmart.org/voting-for-the-standards-committee-executive-is-now-open",
+    "source": "buildingSMART International",
+    "pubDate": "2025-10-17T15:10:46.000Z",
+    "summary": "Vote closing date: 12 Nov 2025Report: Link The buildingSMART International Community is invited to elect five additional members to the Standards Committee Executive (SCE).This is an important governance body for… The post Voting for the Standards Committee Executive is now open appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-05T05:28:52.885Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "keywordHits": [
+      "buildingsmart"
+    ],
+    "score": 5,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Coldefy Leads Winning Masterplan to Transform Budapest Brownfield into Rewilded Urban District",
+    "link": "https://www.archdaily.com/1040337/coldefy-leads-winning-masterplan-to-transform-budapest-brownfield-into-rewilded-urban-district",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-03T05:30:00.000Z",
+    "summary": "A team led by French architecture practice Coldefy, comprising CITYFÖRSTER, Sporaarchitects, TREIBHAUS.LAND, and Marko & Placemakers, has won the competition to design a masterplan for Rákosrendező in Budapest. The project is developed for the Budapest Capital Asset Management Centre, acting on behalf of the Municipality of Budapest. The design outlines a 15-year scheme to transform a brownfield site long regarded as the city's \"rust belt,\" located on the eastern side of the Hungarian capital. The regeneration plan includes over 10,000 apartments, new transportation links, and commercial and civic spaces, forming a comprehensive urban redevelopment strategy aligned with 15-minute city principles.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "api",
+      "ai"
+    ],
+    "score": 5,
+    "freshnessScore": 2
+  },
+  {
+    "title": "「Tモバイルなど、AI-RANでフィジカルAI」など5本",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/02928/032900090",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "今回は、2026年3月16～22日に移動通信関連企業・組織から発表されたニュースの中からセレクトした5本をお届けします。欧州からは標準化団体がネットワークAPI試験環境を、企業や研究機関に提供開始するといったニュースも発表されています。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "api",
+      "ai"
+    ],
+    "score": 5,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Autodesk invests $200 million in World Labs, secures strategic advisor role",
+    "link": "https://adsknews.autodesk.com/en/news/autodesk-invests-in-world-labs",
+    "source": "Autodesk News",
+    "pubDate": "2026-02-18T14:02:34.000Z",
+    "summary": "Why we’re partnering to bring AI to the physical world.",
+    "fetchedAt": "2026-04-05T05:28:52.255Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "autodesk",
+      "ai"
+    ],
+    "score": 4,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Sunrise Garden Restaurant / M9 Design Studio",
+    "link": "https://www.archdaily.com/1040320/sunrise-garden-restaurant-m9-design-studio",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-04T21:00:00.000Z",
+    "summary": "Located within an industrial suburb of Bangalore, Sunrise Garden Restaurant emerges as a quiet counterpoint to its context — transforming a previously utilitarian structure into a layered spatial experience rooted in the idea of the garden as a place of pause, gathering, and imagination. Conceived as an urban oasis, the project explores how architecture can introduce softness, greenery, and sensory calm within an otherwise rugged industrial landscape.",
+    "fetchedAt": "2026-04-05T05:28:52.129Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 4,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Abbie Abbotsford Terrace / Eckersley Architects",
+    "link": "https://www.archdaily.com/1040161/abbie-abbotsford-terrace-eckersley-architects",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-04T17:00:00.000Z",
+    "summary": "Located directly opposite a leafy park, Abbie House is a modern, single-level addition to an existing Victorian weatherboard in Melbourne's inner-city suburb, Abbotsford.",
+    "fetchedAt": "2026-04-05T05:28:52.129Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 4,
+    "freshnessScore": 3
+  },
+  {
+    "title": "PETÉN / REIMS 502",
+    "link": "https://www.archdaily.com/1039290/peten-reims-502",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-04T15:00:00.000Z",
+    "summary": "In Mexico City, buildings from the 1950s in the Vértiz-Narvarte neighborhood displayed a modern architectural style characterized by clean lines, bold geometry, and minimalist façades. Within this context, in 1956 a multifamily residential building for working-class residents was constructed, designed by architect and civil engineer Enrique Hernández Camarena.",
+    "fetchedAt": "2026-04-05T05:28:52.129Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 4,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Mennorode Hotel and Conference Center - Phase I. / Namelok",
+    "link": "https://www.archdaily.com/1040070/mennorode-hotel-and-conference-center-phase-i-namelok",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-04T11:00:00.000Z",
+    "summary": "Mennorode is a phased renovation and masterplan for a former Mennonite community house, now operating as a hotel and conference centre in Elspeet, the Netherlands. Founded in 1925, the site has developed over time into a dispersed ensemble of low-rise buildings embedded among the trees.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 4,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Infante House / Blaanc",
+    "link": "https://www.archdaily.com/1039988/infante-house-blaanc",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-04T09:00:00.000Z",
+    "summary": "Situated in the vibrant urban fabric of Lisbon, this 150 m² project unfolds over two floors of an iconic building from the 1950s, recently rehabilitated to embrace the demands of contemporary life. The intervention goes beyond mere restoration; it emerges as a manifesto of respect for the modernist legacy, reinterpreting the sobriety of the era through a bold and current lens. The central proposal was clear: to honor the memory of the original structure while injecting new energy that responds to the fluidity of today's daily life.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 4,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Senior Citizens' Home in Nový Bydžov / Architektura",
+    "link": "https://www.archdaily.com/1040229/senior-citizens-home-in-novy-bydzov-architektura",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-04T06:00:00.000Z",
+    "summary": "The client's brief was to design a new retirement home on the site of a former orchard adjacent to a hospital. The building is conceived as four independently functioning households for approximately 60 residents, fully barrier-free. An orchard and brick walls near a cemetery with a church, a historic town with a beautiful town hall. Tall trees. And then old age as a phenomenon—calm, silence, brick as the archetype of home. The proximity of the hospital and cemetery may invite bitter associations; here, however, we see quality, an image of quiet and contemplation, an image of the peaceful edge of town. A chateau-like, symmetrical, almost classicist layout brings atriums, gardens, views, and abundant daylight into the Home. Old age is one of today's European themes. How do we approach ageing? What do we do for older people, how do we perceive them, what do we offer them, and what do we ask of them? What is it like to be an elderly person in the Czech Republic in 2026?",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 4,
+    "freshnessScore": 3
+  },
+  {
+    "title": "National Robotics Week — Latest Physical AI Research, Breakthroughs and Resources",
+    "link": "https://blogs.nvidia.com/blog/national-robotics-week-2026",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-04-04T17:00:59.000Z",
+    "summary": "This National Robotics Week, NVIDIA is highlighting the breakthroughs that are bringing AI into the physical world — as well as the growing wave of robots transforming industries, from agricultural and manufacturing to energy and beyond. Advancements in robot learning, simulation and foundation models are accelerating development, enabling robots to move from training in virtual […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 4,
+    "freshnessScore": 3
+  },
+  {
+    "title": "From RTX to Spark: NVIDIA Accelerates Gemma 4 for Local Agentic AI",
+    "link": "https://blogs.nvidia.com/blog/rtx-ai-garage-open-models-google-gemma-4",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-04-02T16:15:58.000Z",
+    "summary": "Open models are driving a new wave of on-device AI, extending innovation beyond the cloud to everyday devices. As these models advance, their value increasingly depends on access to local, real-time context that can turn meaningful insights into action. Designed for this shift, Google’s latest additions to the Gemma 4 family introduce a class of small, fast and omni-capable models built for efficient local execution across a wide range […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai",
+      "agent"
+    ],
+    "keywordHits": [
+      "ai",
+      "agent"
+    ],
+    "score": 4,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Autodesk recognized by Ethisphere as one of the 2026 World’s Most Ethical Companies® for the third consecutive year",
+    "link": "https://adsknews.autodesk.com/en/news/autodesk-recognized-by-ethisphere-as-one-of-the-2026-worlds-most-ethical-companies-for-the-third-consecutive-year",
+    "source": "Autodesk News",
+    "pubDate": "2026-03-18T15:29:36.000Z",
+    "summary": "Ethisphere recognition highlights Autodesk’s continued ethics and governance progress.",
+    "fetchedAt": "2026-04-05T05:28:52.255Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [
+      "autodesk"
+    ],
+    "score": 3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Immersive for Autodesk VRED coming to Apple Vision Pro",
+    "link": "https://adsknews.autodesk.com/en/news/vred-on-apple-vision-pro",
+    "source": "Autodesk News",
+    "pubDate": "2026-03-17T17:00:48.000Z",
+    "summary": "Immersive for Autodesk VRED expands spatial automotive design review.",
+    "fetchedAt": "2026-04-05T05:28:52.255Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [
+      "autodesk"
+    ],
+    "score": 3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Autodesk and U.S. Paralympian, CEO & Founder of BioDapt, Mike Schultz, announce partnership to advance next-generation prosthetics",
+    "link": "https://adsknews.autodesk.com/en/news/autodesk-biodapt-partnership-to-advance-next-generation-prosthetics",
+    "source": "Autodesk News",
+    "pubDate": "2026-02-24T13:58:26.000Z",
+    "summary": "Together with Autodesk, Schultz and his company BioDapt, are setting their sights on summer 2028—working to reimagine next-generation prosthetics for a broader community of para athletes.",
+    "fetchedAt": "2026-04-05T05:28:52.255Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [
+      "autodesk"
+    ],
+    "score": 3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Granite scoops up $114M job segment on California’s Highway 101",
+    "link": "https://www.constructiondive.com/news/granite-construction-santa-barbara-highway-101/816648",
+    "source": "Construction Dive",
+    "pubDate": "2026-04-03T20:17:00.000Z",
+    "summary": "The contractor won the last of seven mainline projects along an 11-mile stretch of the thoroughfare along the Pacific coast in Santa Barbara.",
+    "fetchedAt": "2026-04-05T05:28:50.943Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Researchers turn sawdust into fire-resistant building panels",
+    "link": "https://www.constructiondive.com/news/research-sawdust-fire-resistant-building-material/816589",
+    "source": "Construction Dive",
+    "pubDate": "2026-04-03T14:27:00.000Z",
+    "summary": "If commercialized, the panels could turn waste products from timber and water treatment into a sustainable construction material.",
+    "fetchedAt": "2026-04-05T05:28:50.943Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Punch List: Turner files $7M lien, NYC skyscrapers are world’s most expensive",
+    "link": "https://www.constructiondive.com/news/turner-files-lien-nyc-skyscrapers-worlds-most-expensive/816531",
+    "source": "Construction Dive",
+    "pubDate": "2026-04-03T14:27:00.000Z",
+    "summary": "The Big Apple remains one of the costliest places to build high-rises, Turner filed a lien on a condominium in North Carolina and more news builders may have missed this week.",
+    "fetchedAt": "2026-04-05T05:28:50.943Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Sociable: Meta outlines AI benefits for US construction industry",
+    "link": "https://www.constructiondive.com/news/sociable-meta-outlines-ai-benefits-for-us-construction-industry/816445",
+    "source": "Construction Dive",
+    "pubDate": "2026-04-02T14:08:00.000Z",
+    "summary": "The company discussed how its AI approach to cement and concrete development can help producers compete on cost and build supply chain resilience.",
+    "fetchedAt": "2026-04-05T05:28:50.943Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Willmeng starts $7B Phoenix mixed-use project, companion to TSMC site",
+    "link": "https://www.constructiondive.com/news/willmeng-starts-halo-vista-companion-tsmc/816286",
+    "source": "Construction Dive",
+    "pubDate": "2026-03-31T21:27:40.000Z",
+    "summary": "Halo Vista, the 2,300-acre master-planned development north of Phoenix, will sit immediately adjacent to the Taiwan Semiconductor Manufacturing Company’s $65 billion campus.",
+    "fetchedAt": "2026-04-05T05:28:50.943Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai",
+      "llm"
+    ],
+    "keywordHits": [
+      "ai",
+      "llm"
+    ],
+    "score": 3,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Single Person / Offhand Practice",
+    "link": "https://www.archdaily.com/1039794/single-person-offhand-practice",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-04T02:00:00.000Z",
+    "summary": "185 Yongkang Road formerly was a 60-square-meter street dinner. During our first site visit in November 2018, The venue itself did not leave us a particularly deep impression. The only intuitive feeling is that the venue is long and narrow. In December, client decided to use this venue for a vintage houseware gallery, named 'Single Person'.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Waiheke House / Cheshire Architects",
+    "link": "https://www.archdaily.com/1040300/waiheke-house-cheshire-architects",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-03T19:00:00.000Z",
+    "summary": "Lightness and solidity, exposure and retreat. On the easternmost reaches of Waiheke Island, a house occupies the crest of a ridgeline - permanence in an otherwise shifting landscape.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Casa Komorebi / Studio Saxe",
+    "link": "https://www.archdaily.com/1039923/casa-komorebi-studio-saxe",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-03T15:00:00.000Z",
+    "summary": "Above the Pacific coastline of Costa Rica, pavilions unfold around a garden and connect beneath a single floating roof. Nature becomes the pathway, guiding movement between views of ocean, forest, and sky.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Cardwell Clubhouse / Dubbeldam Architecture + Design",
+    "link": "https://www.archdaily.com/1040000/cardwell-clubhouse-dubbeldam-architecture-plus-design",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-03T12:00:00.000Z",
+    "summary": "Set at the edge of a clearing for the photovoltaic array that powers the main cottage on the site, Cardwell Clubhouse is an off-grid hybrid building that is part utility and part leisure hub. Designed by Dubbeldam Architecture + Design for an outdoors-oriented family who spend much of their time on the site immersed in nature and active pursuits, the clubhouse functions as the site's central social and activity hub. It combines a multipurpose clubhouse room – doubling as a flexible guest suite – with a garage that stores outdoor leisure equipment for activities like racquet sports, cross-country skiing, snowshoeing, and more. An adjacent outdoor court for tennis, basketball, and pickleball (created in the clearing necessitated by the solar array), along with areas for bocce, horseshoes, and children's games, reinforce the clubhouse's role as a destination for gathering and play.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Strážné Cottage / Mimosa architects",
+    "link": "https://www.archdaily.com/1040212/strazne-cottage-mimosa-architects",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-03T10:00:00.000Z",
+    "summary": "On the slope above the Krkonoše village of Strážné, a timber log cottage once stood. It was swallowed by the era of mass recreation, along with respect for ownership, craftsmanship, people, objects, and nature. The original house was concealed beneath layers of alterations, extensions, and makeshift additions, poor repairs, and artificial panel cladding. Unfortunately, almost nothing of the original cottage remained worth saving. The small amount of preserved original structures was, for the most part, in poor technical condition. Rather than merely preserving its material substance, the aim therefore became to rediscover the spirit of the house.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Cultural Centers Beyond the Building: 6 Unbuilt Projects Integrating Landscape",
+    "link": "https://www.archdaily.com/1040131/cultural-centers-beyond-the-building-6-unbuilt-projects-integrating-landscape",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-03T07:30:00.000Z",
+    "summary": "Cultural centers continue to serve as a productive ground for unbuilt architectural exploration, reflecting how architects are rethinking the role of public institutions in relation to landscape, experience, and program hybridity. In this Unbuilt edition, submitted by the ArchDaily community, the selected projects bring together a range of proposals that expand the definition of the cultural center beyond a singular building. These works position architecture as a spatial framework that mediates between research, exhibition, retreat, and public life, often embedded within or distributed across natural and urban contexts.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "The Prairie House / Hoem + Folstad Arkitekter",
+    "link": "https://www.archdaily.com/1040034/the-prairie-house-hoem-plus-folstad-arkitekter",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-03T07:00:00.000Z",
+    "summary": "The house is located on a wide plain by the coast of the North Sea. An old log house forms the core of a new detached house for a young family with small children.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Kengo Kuma & Associates Present Site-Specific Installation “Earth | Tree” at Copenhagen Contemporary",
+    "link": "https://www.archdaily.com/1040347/kengo-kuma-and-associates-present-site-specific-installation-earth-tree-at-copenhagen-contemporary",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-03T06:30:00.000Z",
+    "summary": "Japanese architect Kengo Kuma and his studio Kengo Kuma & Associates (KKAA) have unveiled Earth | Tree, a site-specific installation at Copenhagen Contemporary, developed in collaboration with Danish wood manufacturer Dinesen. Opened on March 28, 2026, as part of the institution's CCreate programme, the project occupies a former industrial hall, introducing a spatial intervention defined by timber, brick, and light. Led by partner Yuki Ikeguchi, with team members Asger T. Taarnberg, Nicolas Guichard, and Yasemin Shiner, the installation marks KKAA's first exhibition in Scandinavia and situates the studio's material-oriented practice within an exhibition format.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Kaloki Nyamai Studio / Adjaye Associates",
+    "link": "https://www.archdaily.com/1040273/kaloki-nyamai-studio-adjaye-associates",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-03T06:00:00.000Z",
+    "summary": "\"The landscape in Karen carries a quiet density, and the studio is conceived as something that settles lightly into that condition. The ambition was to create a space that holds both introspection and production, where material, light and structure move with a certain restraint. The building draws from archetypal African forms as a way of thinking about permanence, climate and memory. It is a place where making unfolds slowly, in dialogue with its environment.\" David Adjaye",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Off the Mainland: Floating Architecture Projects Redefining the Built Environment",
+    "link": "https://www.archdaily.com/884450/15-of-the-best-and-most-ambitious-floating-architecture-projects",
+    "source": "ArchDaily",
+    "pubDate": "2026-04-03T04:00:00.000Z",
+    "summary": "Building above water means doing away with a part of construction that is quite literally the basis of most of our built environment: the foundation. In a world dominated by water, currents, and shifting levels are variables that simply cannot be ignored, which is why the most emblematic feature these projects share is their adaptability.",
+    "fetchedAt": "2026-04-05T05:28:52.130Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Press Start on April: GeForce NOW Brings 10 Games to the Cloud",
+    "link": "https://blogs.nvidia.com/blog/geforce-now-thursday-april-2026-games-list",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-04-02T13:00:09.000Z",
+    "summary": "No joke — GFN Thursday is skipping the tricks and heading straight into the games. April kicks off with ten new titles, bringing fresh adventures to GeForce NOW, including the launch of Capcom’s highly anticipated PRAGMATA. A dozen new games are available to stream this week, including Arknights: Endfield, which expands the acclaimed series into a full […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Advancing Open Source AI, NVIDIA Donates Dynamic Resource Allocation Driver for GPUs to Kubernetes Community",
+    "link": "https://blogs.nvidia.com/blog/nvidia-at-kubecon-2026",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-24T08:00:12.000Z",
+    "summary": "Artificial intelligence has rapidly emerged as one of the most critical workloads in modern computing. For the vast majority of enterprises, this workload runs on Kubernetes, an open source platform that automates the deployment, scaling and management of containerized applications. To help the global developer community manage high-performance AI infrastructure with greater transparency and efficiency, […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "api",
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "How Autonomous AI Agents Become Secure by Design With NVIDIA OpenShell",
+    "link": "https://blogs.nvidia.com/blog/secure-autonomous-ai-agents-openshell",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-23T15:00:03.000Z",
+    "summary": "Autonomous agents mark a new inflection point in AI. Systems are no longer limited to generating responses or reasoning through tasks. They can take action: Agents can read files, use tools, write and run code, and execute workflows across enterprise systems, all while expanding their own capabilities. Application-layer risk grows exponentially when agents continuously improve […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai",
+      "agent"
+    ],
+    "keywordHits": [
+      "ai",
+      "agent",
+      "workflow"
+    ],
+    "score": 3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "More Than Meets the Eye: NVIDIA RTX-Accelerated Computers Now Connect Directly to Apple Vision Pro",
+    "link": "https://blogs.nvidia.com/blog/nvidia-cloudxr-apple-vision-pro",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-17T17:00:58.000Z",
+    "summary": "NVIDIA and Apple’s collaboration brings native integration of NVIDIA CloudXR 6.0 to visionOS, securely delivering NVIDIA RTX-powered simulators and professional 3D graphics applications — like Immersive for Autodesk VRED on Innoactive’s XR streaming solutions — to Apple Vision Pro.",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [
+      "autodesk"
+    ],
+    "score": 3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "GTC Spotlights NVIDIA RTX PCs and DGX Sparks Running Latest Open Models and AI Agents Locally",
+    "link": "https://blogs.nvidia.com/blog/rtx-ai-garage-gtc-2026-nemoclaw",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-17T13:00:46.000Z",
+    "summary": "The paradigm of consumer computing has revolved around the concept of a personal device — from PCs to smartphones and tablets. Now, generative AI — particularly OpenClaw — has introduced a new category: agent computers. These devices, like the NVIDIA DGX Spark desktop AI supercomputer or dedicated NVIDIA RTX PCs, are ideal for running personal […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai",
+      "generative ai",
+      "agent"
+    ],
+    "keywordHits": [
+      "ai",
+      "agent",
+      "generative ai"
+    ],
+    "score": 3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Microsoftが日本で100万人のAI人材育成、DCなどに1.6兆円投資も",
+    "link": "https://xtech.nikkei.com/atcl/nxt/news/24/03164",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-03T04:55:00.000Z",
+    "summary": "米マイクロソフトは2026年4月3日、2030年までに日本で100万人のAI人材を育成すると発表した。NEC、NTTデータ、ソフトバンク、日立製作所、富士通と連携する。ITエンジニア向けに、AIを設計・構築・運用するスキルやAI活用に関する実践的なノウハウを提供する。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "AIエージェント時代に台頭する「FDE」、SHIFTと富士通が挑む脱人月",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03509/032400005",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "AI（人工知能）エージェントがSIerのビジネスモデルをも変えようとしている。「御用聞き」で顧客の要望を聞き取り、仕様を固め、設計し、人海戦術で実装して納品するといったビジネスモデルが通用しないシステム構築の現場が、AI導入を契機に増えているのだ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Windows 11で「メモ帳」が進化、マークダウン形式や生成AIを利用可能に",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03527/030300002",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "Windows 11の「メモ帳」は、文書作成アプリのように使える。書式の設定や置換といった本格的な編集機能、AI（人工知能）による文章生成や編集機能も利用でき、とても多機能だ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "文書からAIで音声生成、「ElevenLabs」は自然な発話で解説動画にも",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/02737/032700055",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "米ElevenLabs（イレブンラボ）が提供する「ElevenLabs」は音声生成AI（人工知能）サービスだ。従来の機械的にテキストを読み上げる音声サービスとは異なり、抑揚や感情表現を再現し、人が話しているような音声を生成できるのが特徴だ。日本語を含む70以上の言語に対応する。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "三菱電機、AIでサーボシステムのパラメーター調整回数9割削減",
+    "link": "https://xtech.nikkei.com/atcl/nxt/news/24/03157",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "三菱電機と産業技術総合研究所（産総研）は、サーボシステムのパラメーター調整の手間を軽減するAI（人工知能）技術を開発した。産業機械の物理モデルを活用して膨大な組み合わせの中から適切なパラメーターを効率的に絞り込むことにより、パラメーターの調整回数を従来比で90％減らせるとする。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "新規事業開発へ向け生成AIの利用が進行、調査で明らかに",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03241/033100006",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "生成AI（人工知能）を新規事業開発に応用できる可能性が見えてきた。2016年、2021年に続いて3回目となる新規事業開発についての調査を実施したところ、生成AIを利用しているとの回答が6割に及び、成果が出始めている兆候も得られた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "フィジカルAIに沸く建設業、i-Constructionの教訓生かしプロセス変革に踏み込め",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00138/033101988",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "テック界隈（かいわい）で旋風を巻き起こしている「フィジカルAI（人工知能）」に、建設業界も熱い視線を注いでいる。国土交通省が2026年3月17日に初開催したピッチイベントには、建設会社や建機メーカー、スタートアップ企業、電機・通信企業、行政機関など104団体から253人が参加。会場は猛烈な熱気に包まれた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 3,
+    "freshnessScore": 2
+  },
+  {
+    "title": "5つのコードを用意、ローカルWebサーバーでAPIと通信",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03535/030600002",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": ".envファイル以外の、残りの5つのコードを解説します。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [
+      "api"
+    ],
+    "score": 3,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Gemini API活用の下準備、アプリ構造を意識して環境を構築しよう",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03535/030600001",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "ユーザーが発した言葉を文章として書き起こし、さらにその文章を、選択したタイプの文章（お礼の手紙の文面など）に変換し、さらに校閲までしてくれるアプリケーションを作ります。題して、「音声認識文章書き起こし＆校閲アプリ」です。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [
+      "api"
+    ],
+    "score": 3,
+    "freshnessScore": 1
+  },
+  {
+    "title": "NABTU, CPWR partner with Bechtel-backed suicide prevention initiative",
+    "link": "https://www.constructiondive.com/news/nabtu-cpwr-bechtel-suicide-prevention-initiative-construction/816641",
+    "source": "Construction Dive",
+    "pubDate": "2026-04-03T19:46:00.000Z",
+    "summary": "The union membership group and safety research organization have joined forces with Hard Hat Courage, the program run by the American Foundation for Suicide Prevention.",
+    "fetchedAt": "2026-04-05T05:28:50.943Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Efficiency at Scale: NVIDIA, Energy Leaders Accelerating Power‑Flexible AI Factories to Fortify the Grid",
+    "link": "https://blogs.nvidia.com/blog/energy-efficiency-ai-factories-grid",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-31T15:00:51.000Z",
+    "summary": "CERAWeek — dubbed the Davos of energy — is where policymakers, producers, technologists and financiers gather to discuss how the world powers itself next. NVIDIA and Emerald AI unveiled at the conference last week a new way forward — treating AI factories not as static power loads but as flexible, intelligent grid assets. This collaboration […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Into the Omniverse: NVIDIA GTC Showcases Virtual Worlds Powering the Physical AI Era",
+    "link": "https://blogs.nvidia.com/blog/gtc-2026-virtual-worlds-physical-ai",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-26T15:00:56.000Z",
+    "summary": "Editor’s note: This post is part of Into the Omniverse, a series focused on how developers, 3D practitioners, and enterprises can transform their workflows using the latest advances in OpenUSD and NVIDIA Omniverse. NVIDIA GTC last week showcased a turning point in physical AI: Robots, vehicles and factories are scaling from single use cases and […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai",
+      "workflow"
+    ],
+    "score": 2,
+    "freshnessScore": 0
+  },
+  {
+    "title": "From Simulation to Production: How to Build Robots With AI",
+    "link": "https://blogs.nvidia.com/blog/build-robots-with-ai",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-18T13:00:13.000Z",
+    "summary": "The latest open models and frameworks from NVIDIA bring together simulation, robot learning and embedded compute to accelerate cloud-to-robot workflows.",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai",
+      "workflow"
+    ],
+    "score": 2,
+    "freshnessScore": 0
+  },
+  {
+    "title": "NVIDIA, Telecom Leaders Build AI Grids to Optimize Inference on Distributed Networks",
+    "link": "https://blogs.nvidia.com/blog/telecom-ai-grids-inference",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-17T17:00:15.000Z",
+    "summary": "As AI‑native applications scale to more users, agents and devices, the telecommunications network is becoming the next frontier for distributing AI. At NVIDIA GTC 2026, leading operators in the U.S. and Asia showed that this shift is underway, announcing AI grids — geographically distributed and interconnected AI infrastructure — using their network footprint to power […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai",
+      "agent"
+    ],
+    "keywordHits": [
+      "ai",
+      "agent"
+    ],
+    "score": 2,
+    "freshnessScore": 0
+  },
+  {
+    "title": "「建設DXへの道」メルマガ登録フォーム",
+    "link": "https://ken-it.world/magazine-rgs20240528.html",
+    "source": "建設ITワールド",
+    "pubDate": "2023-11-07T00:27:20.000Z",
+    "summary": "メールマガジンを読んでみませんか？ 建設ITワールドマガジン メールアドレス お 名 前 ひとこと欄 【読者アンケート】 一番近い専門分野はどれですか？ 建築住宅土木不動産ITその他 あなたの業種を教えてください 建築設計事務所構造設計事務所設備設計事務所ハウスメーカー工務店総 […] The post 「建設DXへの道」メルマガ登録フォーム first appeared on 建設ITワールド.",
+    "fetchedAt": "2026-04-05T05:28:51.080Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "建設dx"
+    ],
+    "keywordHits": [
+      "建設dx"
+    ],
+    "score": 2,
+    "freshnessScore": 0
+  },
+  {
+    "title": "伸び悩むテスラ、6人乗りモデルYLを日本投入 「ミニバン市場に成長余地」",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03564/040300001",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-03T09:30:00.000Z",
+    "summary": "米Tesla（テスラ）は2026年4月3日、6人乗りの多目的スポーツ車（SUV）「Model YL（モデルYL）」を日本で発売した。販売価格は749万円。電気自動車（EV）化が遅れている日本のミニバン市場を狙う。世界的に販売が伸び悩む中、日本などで販売をてこ入れしたい考えだ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "NTTドコモの顧客接点システムでトラブル、店頭やネット手続きに影響",
+    "link": "https://xtech.nikkei.com/atcl/nxt/news/24/03163",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-03T04:41:00.000Z",
+    "summary": "NTTドコモは2026年4月3日、同日午前2時57分ごろから自社開発の顧客接点システムにトラブルが発生していると発表した。ドコモショップの店頭や、「My docomo」「ahamo」などのWebサイト、コールセンターなどにおける各種手続きに影響が出ているという。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "コマンドでアプリを起動、音声認識の精度を確認しよう",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03535/030600003",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "すべてのファイルを、Cドライブ直下に保存し、コマンドプロンプトを起動してcdコマンドでprojectディレクトリに移動します。「npm init -y」と入力して実行するとpackage.jsonファイルができ、「npm install axios dotenv express」と入力して実行することで必要なライブラリがインストールされます。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "自動車業界、非地上系通信網に熱視線 クアルコムやサムスン系が共同実証",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03505/032300014",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "人工衛星や無人航空機で通信インフラを構築する非地上系ネットワーク（NTN）技術に、自動車業界が熱視線を送っている。車両の故障や事故の際、地上の携帯通信網に頼らず衛星経由で緊急通報する目的などに使える。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "「需給調整市場」の商品区分に約定方法、今春のルール変更内容は？",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/02421/033100120",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "最新エネルギー用語を解説する新連載。初回は「需給調整市場」を取り上げる。市場の基本的な仕組みや商品区分、ΔkW価格とkWh価格による約定と発動の流れ、さらには2026年3月実施の制度改正内容まで、実務に必要な需給調整市場の基礎を解説する。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "スカパーJSAT、衛星100機で観測や通信 宇宙ソリューション提供へ",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01819/00045",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "「スペースインテリジェンス（地球観測）事業で2030年度に約70億円の純利益創出を目指す」",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Transformerは「マルチヘッドアテンション」で文章を多角的に見る",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03557/00005",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "マルチヘッドアテンションはTransformerの核ともいえる部品で、複数のヘッドから構成されます。まずは1つのヘッドに注目してみます。ヘッドではクエリ・キー・バリューのベクトルを別々に線形変換し、変換結果をスケール化内積アテンションに入力しています。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "ソフトバンクはF1で活用を模索、「使えない」ミリ波に各社が注力する理由",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00745/033000246",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "携帯電話業界において、ミリ波は世界的に「使えない」という評価が定着している。そのミリ波の活用に、日本の携帯各社が力を入れ始めた。一体、なぜだろうか。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "ビットコインの暗号解読は予想より早く実現、Googleが警告する根拠とは",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00692/040200185",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "米Google（グーグル）が2026年3月下旬、量子コンピューターに関する発表を2つ行った。1つはビットコインなどの暗号資産（仮想通貨）が使う「楕円曲線暗号」は従来の想定よりも少ない量子ビットで解読できるという研究だ。もう1つは中性原子方式の量子コンピューターの開発だ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "世界最大スパンの二層橋・獅子洋大橋 主塔が完成=中国",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/02406/040200065",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "中国の広東・香港・マカオグレーターベイエリア（粤港澳大湾区）の中核ハブプロジェクト「獅子洋通路」の重要な工事である獅子洋大橋で3月26日、東西両側にある主塔の工事が完了し、上部構造の施工に移行しました。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "日立系やシーメンスが工場で時系列基盤モデル、ダウンタイム発生件数を半減",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03559/040100004",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "追加学習なしに時系列予測ができるとして注目を集める「時系列基盤モデル（Time Series Foundation Model、TSFM）」。海外では製造業を中心に活用事例が増えつつある。米Hitachi Digital Services（HDS）と独シーメンス（Siemens）を例に、活用のメリットを見ていこう。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "中央日本土地建物が初の木造混構造ビル、間取り変更容易なCLTパネル天井",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00154/02762",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "日本有数のオフィス街である東京・新橋エリアで、10階建ての木造混構造オフィスビル「REVZO（レブゾ）新橋」が2026年2月28日に竣工した。中央日本土地建物グループが初めて木造・木質化に取り組んだ賃貸オフィスだ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "設計者に再びモジュール化のニーズ、主眼は熟練依存からの脱却",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01187/00081",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "「モジュール化」という言葉は、設計者にとって決して新しいものではありません。製造業では20年以上前から標準化や共通化、ユニット化、流用設計といった文脈の中で、モジュール化という言葉が繰り返し語られてきました。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "階段状の緑化テラスと吹き抜け空間が交流促す、京都橘大学の新校舎が完成",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00154/02766",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "緑豊かな山並みに囲まれた京都橘大学のキャンパス内に、地上8階建ての新校舎「ACADEMIC TERRACE（アカデミックテラス）」が完成した。同大学では2026年4月に計3つの新学部・新学科を開設。それに合わせて、学内で最大規模の研究・交流施設を整備した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "ファイル名変更のトラブル、クラウドの同期で元の名前に戻ることも",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03518/021900008",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "ファイル名を変更する操作は複数ある。エクスプローラーでは、ファイルを選択した状態で、ツールバーのボタンをクリック、右クリックメニューからの項目選択、アイコンの名前部分をクリックなどの操作によってファイル名が編集状態になる。また、キーボードの上段にあるファンクションキーの「F2」キーにもファイル名の変更が割り当てられている。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "発注者に課された責任にどう対応、山下PMC丸山社長に改正建設業法を聞く",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00154/02763",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "適正な労務費を著しく下回る金額での契約締結を禁止した改正建設業法。この新しいルールは民間発注者にも課される。その影響について、国土交通省の中央建設業審議会に設けた労務費の基準に関するワーキンググループに委員として参加した山下PMCの丸山優子社長に聞いた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "日本郵船などが洋上データセンターの実証実験、陸上の「3つの不足」に活路",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11629",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "日本郵船などがデータセンターを洋上に構築して運用する実証実験を開始した。太陽光発電と蓄電池を活用した再生可能エネルギー100％で稼働する浮体式のデータセンターは世界初だという。2027年の商用化を目指す。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "淀川橋梁の部材に溶接不良2万8000カ所、再製作費をカナデビアに請求",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00142/02579",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "建設中の阪神なんば線淀川橋梁で見つかった橋梁部材の溶接不良が約2万8000カ所に上ることを、施工を手掛ける日本橋梁（大阪市）の親会社のオリエンタル白石が明らかにした。日本橋梁は部材の再製作などに要する費用の全額を、溶接不良の部材を製作したカナデビア（旧日立造船）に請求する考えだ。同社は費用負担について「関係者と協議を継続中」などとコメントした。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "不可視文字でマルウエア混入 GitHubなどで汚染拡大、開発基盤の信頼揺らぐ",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00989/040100204",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T20:00:00.000Z",
+    "summary": "不可視の属性を持つUnicode（ユニコード）文字をコードに埋め込んで、悪意あるプログラムを実行させる新手の攻撃手法「GlassWorm（グラスワーム）」が急拡大している。攻撃者は、GitHubで多数の開発者が参画する開発プロジェクトなどで善意を装いコードを提供。誰もが使う開発基盤の信頼性が揺らぐ事態となっている。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 2,
+    "freshnessScore": 2
+  },
+  {
+    "title": "三井住友FGが新中計を発表、IT投資3年で1兆円規模 AI活用加速",
+    "link": "https://xtech.nikkei.com/atcl/nxt/news/24/03160",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-02T02:50:00.000Z",
+    "summary": "三井住友フィナンシャルグループ（FG）は2026年4月1日、2026年度から2028年度までの3年間を計画期間とする新たな中期経営計画を発表した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "エヌビディア、「脱・GPU一本足」へ 推論特化チップ「Groq 3 LPU」発表",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/032601413",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T22:05:00.000Z",
+    "summary": "米エヌビディアは2026年3月16～19日（米国時間）に米カリフォルニア州サンノゼで開催した年次開発者会議「GTC 2026」で、推論特化チップ「NVIDIA Groq 3 LPU」を発表した。米AI（人工知能）半導体スタートアップのグロックの技術を用いて開発した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "12月の特許出願数が前月比2.69倍 AIツール利用拡大が背景に",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/032601412",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T22:02:00.000Z",
+    "summary": "特許出願件数が異例の水準に達した。特許庁が2026年2月26日に公開した「特許出願等統計速報」によると、2025年12月の特許出願件数は8万2188件と、前月比約2.69倍になった。月単位の出願数は、件数が増える3月を除けばおおむね2万件台前半で推移していた。4万件を超えたのは2020年以降で初めてとなる。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "住信SBIネット銀、法務業務を効率化 契約確認の5割超を事業部に移行",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/032601411",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T22:01:00.000Z",
+    "summary": "住信SBIネット銀行は法務機能の一部を事業部に移行し、業務の効率化を進めている。リーガルオンテクノロジーズのAI（人工知能）を使って法務業務の効率化を支援するSaaS（ソフトウエア・アズ・ア・サービス）「LegalOn Cloud」を2025年2月に導入。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Teamsと独自AIで残業時間を4割減 曖昧な指示を監視、疑問は気軽に相談",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/032601414",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T22:00:00.000Z",
+    "summary": "特注設備の設計・製造を行う広島（名古屋市）が、自社の暗黙知を学習させたAI（人工知能）を「Microsoft Teams」と組み合わせ、プロジェクトメンバーの業務を支援する「WAIOS（ワイオス）」を開発。2026年2月に社内での運用を開始した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "「技術の変化は急激で不連続」、富士フイルムBI鍋田CTO",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/02127/00201",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "AI（人工知能）をはじめとする技術が発展するスピードは速く、従来にないような不連続な進化も多い。不連続な技術進化に対しては従来の常識が通用せず、経営判断を誤る可能性が生じる点で、CTOによる提言が重要になっている、と富士フイルムビジネスイノベーションCTOの鍋田敏之氏は語る。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "非地上系通信網、スペースXの独壇場 欧州はAI活用に望み",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03505/032300013",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "既存の携帯通信網に頼らず、人工衛星や無人航空機で通信インフラを構築する非地上系ネットワーク（NTN）で米スペースXが独走している。独自の衛星通信網構築を目指す欧州でも、通信大手がスペースXの衛星通信網「Starlink（スターリンク）」の採用を決めた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "話題のコンテキストエンジニアリング、日本企業が後れを取る根深い理由",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00849/00183",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "AI（人工知能）分野で今、大きな話題と言えば「コンテキストエンジニアリング」だ。米オープンAIや米アンソロピックなどの生成AIベンダーだけでなく、米セールスフォースや米オラクルといった既存のITベンダーもその重要性を説く。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "AIで製造業の暗黙知が「資産」に、旭化成やダイキンのAI責任者が議論",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03543/031100007",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "製造業の現場に眠る暗黙知をAI（人工知能）で形式知に変換して活用する取り組みが加速している。AI活用によって「従来は2年から3年を要していた開発期間が数カ月まで短縮された」（旭化成の久世和資副社長）というケースもでてきている。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "AIで賢くなる組織、「文書」から「判断資産」へのデータ設計とナレッジ管理",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03242/032700020",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "AIの推論能力は飛躍的に向上しているにもかかわらず、組織は賢くならない――。この根本原因はAIの性能不足ではなく、AIに与える「データ」そのものにあります。AIエージェント時代において、管理すべき対象は単なる「文書」から人とAIが共に使える「判断資産」へとシフトしています。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "政府が18万人で生成AI活用を実証、国産モデルも使い業務変革目指す",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11637",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "政府は2026年5月から政府共通のAI（人工知能）基盤であるガバメントAI「源内」の大規模実証を開始する。国会答弁を作成するための調査・分析といった実際の業務で使える複数の業務支援アプリを提供するほか、国内開発の「国産AIモデル」も活用して業務変革につなげる。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "暗黙知をAIに学ばせただけでは形式知にならない",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00138/033101990",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "AI（人工知能）を活用した暗黙知の形式知化に注目が集まっている。特に製造業では技能継承を目的とする場合が多い。筆者は最近、こうした取り組みについて取材する機会があった。その中で改めて感じたのが、AIを活用した技能継承の難しさである。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "SaaSは「死なない」 AIエージェント取り込み、管理・運用が競争軸に",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03509/032300003",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "AI（人工知能）エージェントの急速な進化によって、「SaaS（ソフトウエア・アズ・ア・サービス）の死（SaaS is Dead）」論が再燃している。2026年2月にAIエージェントが自律的に業務をこなす段階にまで進化する中、SaaSベンダーの株価は再び低迷。国内外のSaaSベンダーはAIエージェントという新次元の競合に対抗しつつ、一方でAIエージェントを自らに取り入れ新たな競争に突入する。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "世界モデル到来",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/032600541/032600001",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T22:00:00.000Z",
+    "summary": "現実世界で発生する事象を予測できる「世界モデル」。ロボットの高度な自律動作などを可能にするフィジカルAI（人工知能）の実現に向けた技術として注目が高まっている。本特集では、国内外の企業が提供する世界モデル関連のサービスや実証実験の取り組み、将来的な世界モデルの可能性について取り上げる。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "教員校務での生成AI利用率は過半数 81％のユーザーが利用に課題",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600010/032600221",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T22:00:00.000Z",
+    "summary": "ICT調査コンサルティングのMM総研は、全国の公立小学校、中学校、高校における教員向け生成AI（人工知能）の利用状況を調査した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "先端LLMの「思わぬ弱点」を観測",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/040900481/032600026",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T22:00:00.000Z",
+    "summary": "最先端のLLM（大規模言語モデル）は、単一の質問（プロンプト）に対しては高い精度で回答できる。一方で日常会話でよくある複数回のやり取りからなる質問には精度がガクッと落ちる──。そんなLLMの思わぬ弱点を示す論文が、2026年2月の世界SNS言及で1位になった。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "llm"
+    ],
+    "keywordHits": [
+      "llm"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "中国AI企業が「ただ乗り蒸留」か 米社が主張、安全保障リスクも",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/092400133/032600191",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T22:00:00.000Z",
+    "summary": "中国企業による米国ビッグテックの生成AI（人工知能）サービスへの「ただ乗り蒸留」疑惑が、相次いで明るみになった。蒸留とは、既存のモデルの学習結果を用いて新しいモデルをつくり出す技術だ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "三菱HCキャピタルがAIエージェント活用推進、営業事務合理化に適用",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11635",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "リース大手の三菱HCキャピタルは2026年4月以降、AI（人工知能）を活用して業務改革を推進する。営業事務や社内の問い合わせ対応などの業務を対象にAIを適用する検討を始めた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "サムスン電子、GPU2強とHBMで協力強化 AMDトップが公式訪韓",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01231/00151",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "GPU（画像処理半導体）市場の2大メーカーであり競合関係にある米NVIDIA（エヌビディア）と米AMDが、韓国Samsung Electronics（サムスン電子）にAI（人工知能）半導体に関して協力関係の強化を求めている。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "乱立するAIエージェント、富士フイルムBIの勝算「嘘はデータ構造化で防ぐ」",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/02127/00200",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "業務効率化やセキュリティー向上といった顧客の課題解決に向き合う上で、AIが比重を増しつつある。そのAIによって確実に成果を得るには、元になるデータが構造化され、整理された形になっている必要があるという。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "基幹システムのコアにAIを正しく入れる方法",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01195/032300129",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "本稿では一般企業の基幹システムのコアにAI（人工知能）のパワーを確実に、正確に導入するための具体策を提案します。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "みずほ証券・ぴあが挑む全工程AI駆動、開発のボトルネックは下流から上流に",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03509/032400004",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "AI（人工知能）エージェントの台頭が、ソフトウエア開発を変えつつある。これまで開発において多くの労力を投じてきたのは「実装」だった。設計が固まった後、コードを書き、テストし、不具合を修正する工程に多くの人手と時間を投じてきた。しかし、生成AI進化によって、この常識が崩れ、より上流工程がボトルネックとなってきた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "柴田社長肝いり「Renesas 365」姿現す、将来はAIエージェントと連携",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11636",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "ルネサスエレクトロニクスは、かねてアピールしてきた組み込み設計支援システム「Renesas 365, Powered by Altium」の提供を始めた。第1弾として、Armコアマイコン「RAファミリ」ベースの組み込みシステムの設計に向けた機能を用意した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "車載向け売り上げ戻るメイコー、AIサーバー需要との両輪で事業拡大",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/02373/032400039",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "プリント基板大手のメイコーの株価が好調だ。2026年2月6日の2026年3月期第3四半期の決算発表の辺りから急上昇した。同年1月末の終値が1万2710円だったのに対し、3月19日の終値では実に3.6倍という大幅な値上がりとなった。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "GMOが福岡と東京のAIインフラをIOWNで接続、遅延の影響はわずか",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11632",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T06:00:00.000Z",
+    "summary": "GMOインターネットとNTT東西、QTnetの4社が2026年3月30日、福岡にあるGPUサーバーと東京にあるストレージ装置を「IOWN APN」で接続してAIモデルを学習するという技術検証の結果を公開した。遅延の影響はわずかだった。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Construction hiring data indicates a cooling labor market",
+    "link": "https://www.constructiondive.com/news/construction-slow-labor-market-february-2026/816383",
+    "source": "Construction Dive",
+    "pubDate": "2026-04-01T19:35:00.000Z",
+    "summary": "Slow hiring and few job separations in February led to the lowest construction labor turnover rate since 2000, according to Anirban Basu, chief economist at ABC.",
+    "fetchedAt": "2026-04-05T05:28:50.943Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Data centers must have a community benefits spec: NY Build panel",
+    "link": "https://www.constructiondive.com/news/data-centers-community-benefits-spec-new-york-build-panel/816335",
+    "source": "Construction Dive",
+    "pubDate": "2026-04-01T15:27:00.000Z",
+    "summary": "Alongside the project, developers should allocate resources to the area’s surrounding infrastructure, such as roads or water systems.",
+    "fetchedAt": "2026-04-05T05:28:50.943Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Office-to-housing conversions grew 28% last year",
+    "link": "https://www.constructiondive.com/news/office-to-apartment-conversion-projects-rentcafe/816315",
+    "source": "Construction Dive",
+    "pubDate": "2026-04-01T14:16:00.000Z",
+    "summary": "New York City led other cities in converted residential units by a wide margin, followed by Washington, D.C., and Chicago, according to RentCafe.",
+    "fetchedAt": "2026-04-05T05:28:50.943Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Game On: Five New Titles Now Streaming on GeForce NOW",
+    "link": "https://blogs.nvidia.com/blog/geforce-now-thursday-screamer",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-26T13:00:47.000Z",
+    "summary": "That gaming backlog won’t clear itself — GeForce NOW is here to help. Stream the latest titles straight from the cloud across a variety of devices. This week, five new titles are ready to play instantly in the cloud gaming platform’s library. Screamer drifts onto the scene with retro‑racing attitude and pixel‑perfect speed. Plus, Honkai: Star Rail Version […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 1,
+    "freshnessScore": 0
+  },
+  {
+    "title": "The Future of AI Is Open and Proprietary",
+    "link": "https://blogs.nvidia.com/blog/ai-future-open-and-proprietary",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-25T19:00:04.000Z",
+    "summary": "AI is the defining technology of our time, quickly becoming core business infrastructure. It’s fueled by a diverse ecosystem of models: large and small, open and proprietary, generalist and specialist. This variety is essential for a future where every application will be powered by AI, every country will build it and every company will use […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 1,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Blowing Off Steam: How Power-Flexible AI Factories Can Stabilize the Global Energy Grid",
+    "link": "https://blogs.nvidia.com/blog/power-flexible-ai-factories-energy-grid",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-25T11:00:00.000Z",
+    "summary": "At the half-time whistle of the UEFA EURO 2020 round of 16 football match between England and Germany, millions of viewers stepped away from their screens in the U.K. to do the same thing at the same time — turn on their kettles. National Grid, which provides electricity for England and Wales, saw a demand […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 1,
+    "freshnessScore": 0
+  },
+  {
+    "title": "NVIDIA GTC 2026: Live Updates on What’s Next in AI",
+    "link": "https://blogs.nvidia.com/blog/gtc-2026-news",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-20T00:15:17.000Z",
+    "summary": "Rolling coverage from San Jose, including NVIDIA CEO Jensen Huang’s keynote, news highlights, live demos and on‑the‑ground color through March 19.",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 1,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Roche Scales NVIDIA AI Factories Globally to Accelerate Drug Discovery, Diagnostic Solutions and Manufacturing Breakthroughs",
+    "link": "https://blogs.nvidia.com/blog/roche-ai-factories-omniverse",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-16T20:30:59.000Z",
+    "summary": "Roche's new deployment spans more than 3,500 NVIDIA Blackwell GPUs across its worldwide operations and embedded across the entire value chain, massively scaling R&D productivity, next-generation diagnostics and manufacturing efficiencies.",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "keywordHits": [
+      "ai"
+    ],
+    "score": 1,
+    "freshnessScore": 0
+  },
+  {
+    "title": "アスクルがCISOと新組織を設置 全社でセキュリティーを強化",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/032601410",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T22:04:00.000Z",
+    "summary": "アスクルは2026年3月11日、CISO（最高情報セキュリティー責任者）を設置すると発表した。CISOには親会社のLINEヤフーでサイバーセキュリティー戦略などを担った中村憲夫氏が、3月21日付で就任した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "ランサムウエア被害、長期化傾向 サイバー攻撃想定のBCP策定で短縮",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020800017/032601415",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T22:03:00.000Z",
+    "summary": "警察庁が2026年3月12日に公開したリポート「令和7年におけるサイバー空間をめぐる脅威の情勢等について」によると、ランサムウエア被害は2022年以降、年間200件前後で高止まりしている。復旧までの期間は、「長期化する傾向にあり、被害組織の経営に与える影響は決して小さくないと考えられる」と指摘。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "iPhoneを狙うマルウエア",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/111900071/031700077",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T22:00:00.000Z",
+    "summary": "2025年12月、米Appleは84カ国・地域のユーザーに新たなサイバー脅威の警告を一斉通知した。続く2026年2月にもゼロデイ脆弱性の緊急パッチ（修正プログラム）を公開しており、同社は極めて巧妙な標的型攻撃で悪用された可能性があると報告した。どちらもスパイウエアの関与が示唆されている。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "シニア向け「折り畳みスマホ」を開け閉めしながら考えてみた",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/091900173/031700031",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T22:00:00.000Z",
+    "summary": "スマートフォンにおける日本の一市場に、シニア向けスマホがある。ここに韓国ALTが参入し、折り畳み型の新機種「MIVEケースマ」を2026年2月に発売した。新製品発表会に参加した筆者はあと数年でいわゆる高齢者に属する年齢だが、個人的にあまり食指が動かなかった。スペックが低過ぎたからだ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "電力販売上位30社を独自調査、企業向け新規契約に停止の動き",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/02421/033100119",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "イラン攻撃の影響を受け、販売電力量上位30社のうち2社が特高・高圧の新規受け付けを停止、3社が一部料金プランの受け付けを停止している。停止の背景には、燃料価格の高騰などによる電力会社の逆ざやのリスクがある。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "26年2月の欧州市場は2カ月ぶりにプラス、EV補助金を縮小した国はマイナス",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03214/033000101",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "欧州自動車工業会（ACEA）の発表によれば、欧州31カ国（EU＋EFTA＋UK）の2026年2月の新車販売台数は、97万9321台で前年同月比1.7％増となり、2カ月ぶりにプラスになった。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "運命的な人事で熊本城へ、大林組「初陣」所長が地震による崩落阻止",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03444/032600015",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "2016年4月の熊本地震で被災した熊本市のシンボル、熊本城では52年度の復旧完了を目指して、丸10年を迎える今も工事が続く。その中で主要な工事を担ってきたのが大林組だ。被災直後、彼らの技術と尽力のおかげで飯田丸五階櫓（やぐら）の倒壊を防いだ。（敬称略）",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "大規模言語モデルのキモ「アテンション機構」をPythonで実装してみる",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03557/00004",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "ではアテンション機構を実装してみましょう。コード1にsoftmax関数の実装を示します。ここでは入力の最大値を引いた値を用いて計算しています。これはsoftmax関数の式で分子分母にexp(b)を掛けることに対応しており、計算結果が変わらないことはわかると思います。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Excelで「拡張型ドロップダウンリスト」、UNIQUE関数とコンボ",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00286/033100407",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "Excelには、重複を除いた一覧を簡単に作れる UNIQUE関数がある。取り出したデータで一覧を作り、ドロップダウンリストの値として利用してみる。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "どこでもスマホで解施錠 スマートロック、26年世界標準対応へ",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11616",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "鍵を持たなくてもスマートフォンやスマートウオッチで解錠や施錠ができるスマートロック。これまでは規格の乱立が普及の阻害要因になっていたが、世界標準規格に準拠した製品が2026年後半以降に登場しそうだ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "1位は「工事を止めた5mmの不足、鉄筋のコンクリートかぶり厚に注意」",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00241/101400408",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "日経クロステック建築面で、過去に公開したニュースをランキング形式でご紹介します。2025年3月30日～4月5日に読まれた記事の1位～10位を26年4月2日～4月8日に無料で読めるようにしました。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "NOT A HOTELコンペ最優秀は屋久島の雨生かす建築、豪建築家受賞",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00154/02764",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "世界的建築家と協働し、斬新な建物を次々と建てて話題を集めるNOT A HOTEL。鹿児島県・屋久島でのプロジェクトの設計者を決めるコンペで、オーストラリア在住のスティーブン・チュウ氏が最優秀賞を射止めた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "アプリをダウンロードするには？",
+    "link": "https://xtech.nikkei.com/atcl/nxt/cpbook/18/00075/00032",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "日経クロステックは、スマートフォン用アプリの提供をしています。App StoreまたはGoogle Playからダウンロードしてください。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "オークマが多彩な自動化システムを品ぞろえ、金属加工の人手不足に照準",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03352/033000013",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "オークマが、金属加工現場の自動化ニーズの吸収に動いている。目指すのは「顧客が使いこなせる自動化」（同社）だ。現場の無人化に対する多様な顧客ニーズに応えるべく、工作機械と組み合わせて使う新たな自動化システムの開発や、適応機種の拡大に力を入れている。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "時系列基盤モデルが気軽な予測を可能に、小売業と好相性 実用に3つの壁",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03559/032700003",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "追加学習なしに時系列予測ができるとして注目を集める「時系列基盤モデル（Time Series Foundation Model、TSFM）」。気になるのは「どこまで使い物になるのか」だ。適性領域と課題を追った。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "新人に社会人マナーを教わろう、ベテランほど基本の徹底がおろそかに",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01775/040100263",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "新人が配属されて少し時間が経過したら、「先生」になってもらうのはいかがでしょうか。新人研修で教えている内容は「新人だけに必要なもの」ではなく、全世代にとって本質的に重要な仕事の基本なのです。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "高輪ゲートウェイシティの施設「MoN」開館、らせんの外観は隈研吾氏監修",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00110/00523",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "高輪ゲートウェイシティの複合型ミュージアム「MoN Takanawa」が2026年3月28日に開館した。スパイラル状の外観が特徴で、外装デザインアーキテクトは隈研吾氏が手掛けた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "土木広報大賞は縦型ショートドラマ、大分県津久見市を舞台に地域建設業描く",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00142/02581",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "土木業界の優れた広報の活動や作品に贈られる「土木広報大賞 2025」が決定した。最優秀賞に輝いたのは地域建設業を舞台にした縦型のショートドラマ「つくみの風」だ。大分県建設業協会津久見支部が作成した。他にも、各部門の受賞活動・作品に、学生向けイベントなどバラエティー豊かな内容が連なった。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "ウインドウ1つに複数フォルダー、エクスプローラーのタブを使いこなそう",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03527/030300001",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "日ごろから何気なく使っているエクスプローラーには、便利な機能がたくさんある。例えば、タブを使うと1つのウインドウで複数のフォルダーを同時に開ける。2つ以上のフォルダー間で、コピーや移動などを頻繁にする場面でも、タブを使えば1つのウィンドウで操作が完結する。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "ファイルを探す効率的な方法、一覧表示と検索を使う",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03518/021900007",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T20:00:00.000Z",
+    "summary": "目当てのファイルを探すときは、まず保存したはずのフォルダーを調べよう。そのとき、ファイルを一覧表示する詳細表示に切り替えて名前順に整列させると、目的のファイルを探しやすくなる。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "KDDI傘下2社の広告事業、99.7％架空取引 2人の社員が続けた循環の手口",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11640",
+    "source": "日経クロステック",
+    "pubDate": "2026-04-01T07:20:00.000Z",
+    "summary": "KDDIは2026年3月31日、連結子会社でプロバイダー事業を手掛けるビッグローブとその子会社のジー・プランの広告代理事業を巡る不適切取引の疑いに関して、特別調査委員会の調査結果を発表、問題となった架空取引の概要も公表した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Linuxって何？",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/041800014/031700106",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T22:00:00.000Z",
+    "summary": "Linuxは元々、フィンランドのLinus Torvalds氏が個人的に開発を始めたOSS（Open Source Software）のOS（Operating System）です。それが発展し、現在では世界中のコミュニティーが共同で開発を進めています。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "有線LANの要「イーサネット」を学ぶ",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/071500225/031700009",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T22:00:00.000Z",
+    "summary": "インターネットは数え切れないほどの有線LANが連なり支えている。今回は有線LANについて理解を深める目的で、「TCP/IPモデル」の最下層である「データリンク層」について解説する。TCP/IPモデルのデータリンク層は「レイヤー2」と呼ぶことが多い。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "レイヤー2スイッチ",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/091900172/031700031",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T22:00:00.000Z",
+    "summary": "レイヤー2スイッチはイーサネットで接続したネットワーク機器やパソコンなどの間でフレームを転送する。イーサネットはレイヤー2（Layer 2：L2）に属するため、L2スイッチと呼ばれる。LAN（Local Area Network）スイッチ、スイッチングハブと呼ばれることもある。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "英ポストオフィス事件の「功労者」 富士通の欧州リージョンCEOが退任",
+    "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600008/032600216",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T22:00:00.000Z",
+    "summary": "富士通のポール・パターソン執行役員常務EuropeリージョンCEOが2026年4月1日付で退任、社長特命事項担当に就く。富士通広報によれば「パターソン氏は執行役員常務のまま、ビジネスアドバイザーという役割で英国における問題の交渉事を継続して指揮する」。後任は斉藤幹人執行役員専務になる。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "海上工事施工管理技術者、海上工事固有の知識を認定",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03511/021600020",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "海上工事施工管理技術者は、一般の土木技術に加え、海上工事固有の専門的知識や技術に習熟した技術者を認定する民間資格だ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "多段ブロック積み擁壁に要注意、幅2mの小段設けて安定計算せず",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03534/030400016",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "広島県の砂防工事で、多段ブロック積み擁壁の設計時に上段から下段への荷重の影響を考慮していなかった。県は幅2mの小段を設けることでそれぞれが独立した擁壁になり、安定計算の必要がないと考えていた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "壁紙と石こうボードが一体化したパネル",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00120/01008",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "サンゲツは、壁紙と石こうボードが一体化した「イノパネル」を2026年2月に発売した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "住宅リフォームの建築確認が改正建築基準法で様変わり、4つのポイントで解説",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03555/032300002",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "2025年4月施行の改正建築基準法では、4号建築物の区分が廃止された。この結果、住宅リフォームでも建築確認が必要なケースが増えた。特に「大規模の修繕、大規模も模様替え」は注意が必要だ。どんなリフォームで建築確認が必要になったのか。4つのポイントを解説する。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "内蔵SSDを「外付け化」、自作すれば市販品より安く済む",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03516/021800019",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "外付けSSDは自作できる。自作すれば容量も外観（ケース）も自由に決められるうえ、市販品より安く済むことが多い。高根の花だった大容量SSDがお値打ち価格で手に入ることもある。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "大規模言語モデルの基礎となる「アテンション機構」を理解しよう",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03557/00003",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "アテンション機構は、「クエリ」と呼ばれる1つの入力について、他の入力をどれだけ注意するべきかを示す「注意度」を計算します。そして、注意度に応じて足し合わせた結果を出力とします。。注意度を計算する際の他の入力のことを「キー」と呼び、クエリとキーのペアに対して実数値の注意度が計算されます。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "オムロン、祖業の電子部品事業を分社化し売却 競争激化受け事業再編",
+    "link": "https://xtech.nikkei.com/atcl/nxt/news/24/03156",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "オムロンは電子部品事業を米投資ファンドのカーライル・グループへ売却する。譲渡事業価値は810億円。2026年3月30日に発表した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "貼り替えたクロスに再び染み、「やり直せ」とお客が激しい剣幕",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03495/020600001",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "貼り替えたクロスに再び染みが生じた問題。お客の住宅には、天井と壁の取り合い付近に染みが広がっていた。貼り替え工事は無事に終了したが、約3カ月後にお客から電話がかかってきた。「クロスにまた染みが出てきた。工事が悪い」というクレームだった。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "「時系列基盤モデル」に世界が熱視線、ビッグテックや研究機関の参画続く",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03559/032600001",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "時系列基盤モデル（Time Series Foundation Model、TSFM）が流行の兆しを見せている。「NeurIPS」や「KDD」といった有力学会がワークショップを開催したり、米ビッグテックを中心とした開発元がモデルを相次ぎ発表したりするなど、世界のフロントランナーたちが熱い視線を送っている。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "複数使えるiPhoneのアプリストア、App Storeだけに戻す方法",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03514/021700004",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "iOS 26.2で選択肢が増えたことは、自由度が高まったという意味では歓迎すべき変化だ。一方で、全てをユーザーの判断で選ばなければならないことに、負担を感じる人も少なくないだろう。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "ファイル整理、フォルダー頼みは逆効果 名前の工夫で浅い階層に",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03518/021900006",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "ファイルを細かく整理しようとしてフォルダーの階層を深くすると、目的のファイルを探すのに手間取る。ファイル名の文字数制限をオーバーする可能性すらある。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "軽井沢の「黒柳徹子ミュージアム」、着物の重ね合わせ表現した大屋根",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03129/032600027",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "タレントの黒柳徹子氏のミュージアムは、軽井沢の新名所だ。木造2階建てのミュージアム設計は、黒柳氏と縁がある建築家の内藤廣氏が手掛けた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "全銀の新システム、焦点は接続コスト 次こそ「NTTデータ依存」脱却なるか",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11634",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "全国銀行資金決済ネットワーク（全銀ネット）が2030年の稼働開始を予定する新決済システム構築で焦点となるのが、システムを利用する金融機関の接続コストの低減だ。複雑化した設計を見直したり、ベンダーロックインから脱却したりすることで実現したい考えだ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "佐藤工業、ドリルジャンボを遠隔操作 インターネット経由でもほぼ遅れなし",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00142/02580",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "佐藤工業（東京・中央）は一般的なインターネット回線を経由した山岳トンネル施工用ドリルジャンボの遠隔操作で遅れ時間を0.4秒以内に抑え、ほぼ支障なく施工できることを実証した。ポケット・クエリーズ（東京・新宿）、古河ロックドリル（東京・千代田）と共同で開発した「無線遠隔操作システム」をインターネット経由で接続した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "相模原市の下水道破損事故、26年度末に機能回復 工法組み合わせて復旧へ",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00142/02578",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "東京電力パワーグリッド（東電PG）が発注した工事のシールドマシンが相模原市内の流域下水道管を破損した事故で、同社と神奈川県、市は2026年度末までの下水道の機能回復を目標に掲げた。管の内面に新たに樹脂を巻き立てる内面更生工法と断面修復工法を組み合わせ、27年度末までに復旧工事を完了させる予定だ。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "療養中のITエンジニア、無給でも社会保険料と住民税の支払いを会社が請求",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00084/00415",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "休職中の26歳ITエンジニアです。会社が立て替えている社会保険料と住民税の支払いに関する書類を受け取りました。2カ月分約14万円（月7万円）です。復職のめどはたっておらず、お金の話は、復職後にしてほしかったです。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "ソニー・ホンダの今後、「AFEELA 3」や「第三者に生産委託」はあるか",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00138/033101987",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "ソニーグループとホンダが共同出資するソニー・ホンダモビリティがEVの開発・発売を中止した。工場を持たない「ファブレス」として「アセットライト」な新しい自動車の事業モデルの創出を目指したが「水平分業」の形を採っていたため、ホンダのEV開発中止に引きずられる結果となった。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "藤本壮介氏設計「JINS銀座店」、レーモンド建築に左官壁と万博の白い鹿",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00110/00521",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "東京・銀座にまた1つ新名所が誕生した。丸みがある白い外壁の路面店「JINS銀座店」だ。建築家アントニン・レーモンド設計の「教文館ビル」の低層部に入居し、内外装設計は建築家の藤本壮介氏が手掛けた。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "感染経路はVPNが過半、復元失敗は7割超え 変わらぬランサム被害の実態",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00676/032400220",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T20:00:00.000Z",
+    "summary": "警察庁が公開した「サイバー空間をめぐる脅威の情勢等について」を基に、国内におけるランサムウエア攻撃被害の実態を見てみよう。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "情報処理技術者試験の見直し案公表、新試験は2027年夏以降 記述式なし",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11639",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T10:15:00.000Z",
+    "summary": "経済産業省と情報処理推進機構（IPA）は2026年3月31日、2027年度以降の見直しを予定する情報処理技術者試験に関する試験区分体系の見直し案を公表した。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "デンソー林社長、ローム買収に意欲「産業・民生・車載のシナジー最大化」",
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11638",
+    "source": "日経クロステック",
+    "pubDate": "2026-03-31T10:00:00.000Z",
+    "summary": "デンソー社長の林新之助氏は、ロームへの買収提案について「車載・産業・民生分野を横断したシナジー（相乗効果）を最大化したい」と話した。2040年度には半導体など成長領域の売上高比率を約3割に高める。",
+    "fetchedAt": "2026-04-05T05:28:51.485Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 1,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Smooth Moves: 90 Frames-Per-Second Virtual Reality Arrives on GeForce NOW",
+    "link": "https://blogs.nvidia.com/blog/geforce-now-thursday-virtual-reality-update",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-19T13:00:09.000Z",
+    "summary": "It’s a double feature on GFN Thursday. This week, GeForce NOW offers smoother sights in virtual reality (VR) and a sprawling new land to conquer. Streaming at 90 frames per second (fps) comes to supported VR headsets. And Crimson Desert, which recently surpassed 3 million wishlist additions on Steam, debuts in the cloud with GeForce […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 0,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Snap Decisions: How Open Libraries for Accelerated Data Processing Boost A/B Testing for Snapchat",
+    "link": "https://blogs.nvidia.com/blog/snap-accelerated-data-processing",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-03-17T13:00:23.000Z",
+    "summary": "The features on social media apps like Snapchat evolve nearly as fast as what’s trending. To keep pace, its parent company Snap has adopted open data processing libraries from NVIDIA on Google Cloud services to boost development. Every new feature rolled out to Snapchat’s more than 940 million monthly active users goes through a set […]",
+    "fetchedAt": "2026-04-05T05:28:51.357Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 0,
+    "freshnessScore": 0
+  },
+  {
+    "title": "問い合わせ完了",
+    "link": "https://ken-it.world/thanks.html",
+    "source": "建設ITワールド",
+    "pubDate": "2020-06-22T13:15:40.000Z",
+    "summary": "お問い合わせ頂きありがとうござました。 The post 問い合わせ完了 first appeared on 建設ITワールド.",
+    "fetchedAt": "2026-04-05T05:28:51.080Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 0,
+    "freshnessScore": 0
+  },
+  {
+    "title": "メールフォーム",
+    "link": "https://ken-it.world/form.html",
+    "source": "建設ITワールド",
+    "pubDate": "2014-01-25T16:24:16.000Z",
+    "summary": "[contact-form-7] The post メールフォーム first appeared on 建設ITワールド .",
+    "fetchedAt": "2026-04-05T05:28:51.080Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 0,
+    "freshnessScore": 0
+  },
+  {
+    "title": "広告掲載",
+    "link": "https://ken-it.world/support.html",
+    "source": "建設ITワールド",
+    "pubDate": "2014-01-25T16:22:12.000Z",
+    "summary": "当サイトでは、年間を通じたバナー広告、サポーターズ・コーナーへの情報掲載などが可能な協賛社（サポーター）を募集しています。また、製品活用事例記事（サクセスストーリー）の企画・取材・執筆・掲載など、各種広告プランもご用意しています。 掲載ご希望の方は、詳しい資料をお送りしますので、下記までご連絡くださ […] The post 広告掲載 first appeared on 建設ITワールド.",
+    "fetchedAt": "2026-04-05T05:28:51.080Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 0,
+    "freshnessScore": 0
+  },
+  {
+    "title": "業務案内",
+    "link": "https://ken-it.world/services.html",
+    "source": "建設ITワールド",
+    "pubDate": "2014-01-25T16:21:15.000Z",
+    "summary": "【業務内容】 株式会社 建設ITワールドでは、次のような業務を行っています。 ・建設、IT、経営に関する記事、書籍、広告企画、WEBの取材、執筆、編集。 ・建設、IT、経営に関する講演、セミナー、研修。 ・建設、IT、経営に関する調査、コンサルティング、ソリューション提案、コーチング。 ・その他、「 […] The post 業務案内 first appeared on 建設ITワールド.",
+    "fetchedAt": "2026-04-05T05:28:51.080Z",
+    "category": "OTHER",
+    "categoryHits": [],
+    "keywordHits": [],
+    "score": 0,
+    "freshnessScore": 0
+  }
+]

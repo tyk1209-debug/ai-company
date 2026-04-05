@@ -80,7 +80,8 @@ ${articleBody.slice(0, 2500)}
       .join("")
       .trim()
       .slice(0, 140);
-  } catch {
+  } catch (err) {
+    console.error(`[summarize] Claude API エラー: ${err.message}`);
     return "";
   }
 }
@@ -92,11 +93,15 @@ ${articleBody.slice(0, 2500)}
 async function summarizeArticle(article) {
   const client = createClient();
   if (!client) {
+    console.log("[summarize] ANTHROPIC_API_KEY 未設定 — スキップ");
     return { ...article, xPostBody: "", japaneseSummary: "" };
   }
 
+  console.log(`[summarize] 処理中: ${article.title?.slice(0, 50)}`);
   const body    = await getArticleBody(article);
+  console.log(`[summarize] 記事本文取得: ${body.length}文字`);
   const postBody = await generateXPostBody(article, body);
+  console.log(`[summarize] 投稿文生成: ${postBody.length > 0 ? "成功" : "空（失敗）"}`);
 
   return {
     ...article,

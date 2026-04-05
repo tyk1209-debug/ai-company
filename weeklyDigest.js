@@ -7,6 +7,8 @@
  * 生成後は generateSite.js を再実行してサイトを更新する。
  */
 
+try { require('dotenv').config(); } catch (e) {}
+
 const Anthropic = require('@anthropic-ai/sdk');
 const fs = require('fs');
 const path = require('path');

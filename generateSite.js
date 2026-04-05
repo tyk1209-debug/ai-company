@@ -42,14 +42,23 @@ function categoryLabel(cat) {
   const map = {
     BIM_ECOSYSTEM: 'BIMエコシステム',
     REVIT: 'Revit',
+    ARCHICAD: 'ArchiCAD',
     IFC: 'IFC',
     DIGITAL_TWIN: 'デジタルツイン',
     CONSTRUCTION_TECH: '建設テック',
     AI: 'AI',
+    AI_DX: 'AI/DX',
+    BIM_AI: 'BIM×AI',
     GIS: 'GIS',
     SUSTAINABILITY: 'サステナビリティ',
+    GLOOBE: 'GLOOBE',
+    OTHER: 'その他',
   };
   return map[cat] || cat || '一般';
+}
+
+function categorySlug(cat) {
+  return cat.toLowerCase().replace(/_/g, '-');
 }
 
 function escape(str) {
@@ -517,9 +526,91 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       font-weight: 700;
     }
 
+
+    /* ---- sidebar layout ---- */
+    .content-with-sidebar {
+      display: grid;
+      grid-template-columns: 1fr 28%;
+      gap: 2rem;
+      align-items: start;
+    }
+    .sidebar { position: sticky; top: 1.5rem; }
+    .sidebar-widget {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-widget-title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--navy);
+      border-left: 3px solid var(--blue);
+      padding-left: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .sidebar-category-list { list-style: none; padding: 0; margin: 0; }
+    .sidebar-category-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+    }
+    .sidebar-category-list li:last-child { border-bottom: none; }
+    .sidebar-category-list a { color: var(--text); }
+    .sidebar-category-list a:hover { color: var(--blue); text-decoration: none; }
+    .sidebar-category-count {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.1rem 0.45rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    .sidebar-about { font-size: 0.82rem; line-height: 1.7; color: var(--text-muted); }
+    .sidebar-recent-list { list-style: none; padding: 0; margin: 0; }
+    .sidebar-recent-list li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+    .sidebar-recent-list li:last-child { border-bottom: none; }
+    .sidebar-recent-list a { color: var(--text); }
+    .sidebar-recent-list a:hover { color: var(--blue); text-decoration: none; }
+    /* ---- share button ---- */
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: #1d9bf0;
+      color: #fff;
+      border-radius: 4px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .share-btn:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
+    .card-footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    /* ---- reading time ---- */
+    .reading-time { font-size: 0.78rem; color: #a0aec0; margin-bottom: 1rem; }
+
     /* ---- responsive ---- */
     @media (max-width: 768px) {
       nav a { margin-left: 0.75rem; font-size: 0.78rem; }
+      .content-with-sidebar { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
     }
     @media (max-width: 640px) {
       nav a { font-size: 0.72rem; margin-left: 0.5rem; }
@@ -581,12 +672,13 @@ function buildIndex(posts, totalCount = 0) {
   const cards = recentPosts.map((post) => {
     const slug = post.slug;
     const catLabel = categoryLabel(post.category);
+    const catKey = (post.category || 'OTHER').toUpperCase();
     const date = formatDate(post.pubDate);
     const snippetText = post.bodyJa || post.postText || post.summary || '';
     const snip = excerpt(snippetText, 120);
 
     return `
-      <article class="article-card">
+      <article class="article-card" data-category="${escape(catKey)}">
         <div class="card-meta">
           <span class="badge">${escape(catLabel)}</span>
           <span class="card-meta-right"><span>${escape(post.source || '')}</span><span>${escape(date)}</span></span>
@@ -615,6 +707,78 @@ function buildIndex(posts, totalCount = 0) {
     },
   };
 
+  const categoryNavHtml = `
+  <div class="category-nav-wrapper">
+    <div class="container">
+      <div class="category-nav" id="categoryNav">
+        <button class="cat-tab active" data-filter="ALL">すべて</button>
+        <button class="cat-tab" data-filter="REVIT">Revit</button>
+        <button class="cat-tab" data-filter="ARCHICAD">ArchiCAD</button>
+        <button class="cat-tab" data-filter="BIM_ECOSYSTEM">BIM全般</button>
+        <button class="cat-tab" data-filter="AI_DX,BIM_AI,AI">AI/DX</button>
+        <button class="cat-tab" data-filter="IFC">IFC</button>
+      </div>
+    </div>
+  </div>
+  <style>
+    .category-nav-wrapper {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .category-nav {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 0;
+    }
+    .category-nav::-webkit-scrollbar { display: none; }
+    .cat-tab {
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      padding: 0.75rem 1.1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.15s, border-color 0.15s;
+      font-family: inherit;
+    }
+    .cat-tab:hover { color: var(--navy); }
+    .cat-tab.active {
+      color: var(--blue);
+      border-bottom-color: var(--blue);
+    }
+  </style>
+  <script>
+    (function() {
+      var nav = document.getElementById('categoryNav');
+      if (!nav) return;
+      nav.addEventListener('click', function(e) {
+        var btn = e.target.closest('.cat-tab');
+        if (!btn) return;
+        nav.querySelectorAll('.cat-tab').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.getAttribute('data-filter');
+        var filters = filter === 'ALL' ? null : filter.split(',');
+        document.querySelectorAll('.article-card').forEach(function(card) {
+          if (!filters) {
+            card.style.display = '';
+          } else {
+            var cat = card.getAttribute('data-category') || '';
+            card.style.display = filters.indexOf(cat) !== -1 ? '' : 'none';
+          }
+        });
+      });
+    })();
+  </script>`;
+
   return htmlHead(
     `${SITE_NAME} | BIM・AEC・建設DXニュース`,
     SITE_DESC,
@@ -629,7 +793,9 @@ function buildIndex(posts, totalCount = 0) {
       <h1>BIM・AEC・建設DXの最新ニュース</h1>
       <span class="hero-badge">Autodesk・IFC・デジタルツイン・建設テックの最新トレンドをAIが日本語で解説</span>
     </div>
-  </div>
+  </div>` +
+    categoryNavHtml +
+    `
   <div class="container">
     <main class="main-content">
       <h2 class="section-title">最新ニュース</h2>
@@ -643,7 +809,26 @@ function buildIndex(posts, totalCount = 0) {
 
 // ---- article detail page ----------------------------------------------------
 
-function buildArticlePage(post) {
+function buildRelatedArticles(post, allPosts) {
+  if (!allPosts || allPosts.length === 0) return '';
+  const related = allPosts
+    .filter((p) => p.slug !== post.slug && p.category === post.category)
+    .slice(0, 3);
+  if (related.length === 0) return '';
+  const items = related.map((p) => `
+          <li class="related-item">
+            <a href="../posts/${escape(p.slug)}.html">${escape(p.titleJa || p.title)}</a>
+            <span class="related-date">${escape(formatDate(p.pubDate))}</span>
+          </li>`).join('');
+  return `
+      <div class="related-articles">
+        <h2 class="related-title">関連記事</h2>
+        <ul class="related-list">${items}
+        </ul>
+      </div>`;
+}
+
+function buildArticlePage(post, allPosts) {
   const catLabel = categoryLabel(post.category);
   const date = formatDate(post.pubDate);
   const bodyContent = post.bodyJa
@@ -716,8 +901,43 @@ function buildArticlePage(post) {
         </div>`;
         })()}
       </div>
+      ${buildRelatedArticles(post, allPosts)}
     </main>
   </div>
+  <style>
+    .related-articles {
+      margin-top: 2rem;
+    }
+    .related-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      border-left: 4px solid var(--blue);
+      padding-left: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .related-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .related-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue-light);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.875rem;
+    }
+    .related-item a { color: var(--text); font-weight: 600; }
+    .related-item a:hover { color: var(--blue); text-decoration: none; }
+    .related-date { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; }
+  </style>
   <script>
     (function() {
       var fired = false;
@@ -834,6 +1054,61 @@ function buildAboutPage() {
     htmlFooter();
 }
 
+// ---- category page ----------------------------------------------------------
+
+function buildCategoryPage(category, posts) {
+  const label = categoryLabel(category);
+  const catPosts = posts.filter((p) => (p.category || 'OTHER').toUpperCase() === category.toUpperCase());
+
+  const cards = catPosts.map((post) => {
+    const slug = post.slug;
+    const catLabel = categoryLabel(post.category);
+    const date = formatDate(post.pubDate);
+    const snippetText = post.bodyJa || post.postText || post.summary || '';
+    const snip = excerpt(snippetText, 120);
+
+    return `
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">${escape(catLabel)}</span>
+          <span class="card-meta-right"><span>${escape(post.source || '')}</span><span>${escape(date)}</span></span>
+        </div>
+        <h2 class="card-title">
+          <a href="../posts/${escape(slug)}.html">${escape(post.titleJa || post.title)}</a>
+        </h2>
+        <p class="card-excerpt">${escape(snip)}</p>
+        <div class="card-footer">
+          <a class="read-more" href="../posts/${escape(slug)}.html">続きを読む &rarr;</a>
+        </div>
+      </article>`;
+  }).join('');
+
+  const pageTitle = `${label}の記事一覧 | ${SITE_NAME}`;
+  const pageDesc = `BIM・AEC・建設DXに関する${label}カテゴリの最新ニュース一覧です。`;
+  const canonicalUrl = `${SITE_URL}/categories/${categorySlug(category)}.html`;
+
+  const emptyMsg = catPosts.length === 0
+    ? '<p style="color:var(--text-muted);padding:2rem 0;">このカテゴリの記事はまだありません。</p>'
+    : '';
+
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..') +
+    htmlHeader('..') +
+    `
+  <div class="container">
+    <main class="main-content">
+      <nav class="breadcrumb">
+        <a href="../">ホーム</a> &rsaquo; <span>${escape(label)}</span>
+      </nav>
+      <h2 class="section-title">${escape(label)} の記事一覧（${catPosts.length}件）</h2>
+      ${emptyMsg}
+      <div class="article-list">
+        ${cards}
+      </div>
+    </main>
+  </div>` +
+    htmlFooter('..', catPosts.length);
+}
+
 // ---- main -------------------------------------------------------------------
 
 function main() {
@@ -885,11 +1160,26 @@ function main() {
   // Generate individual article pages
   let articleCount = 0;
   for (const post of posts) {
-    const html = buildArticlePage(post);
+    const html = buildArticlePage(post, posts);
     fs.writeFileSync(path.join(postsDir, `${post.slug}.html`), html, 'utf-8');
     articleCount++;
   }
   console.log(`[generateSite] Generated ${articleCount} article pages in posts/`);
+
+  // Generate category pages
+  const categoriesDir = path.join(__dirname, 'categories');
+  if (!fs.existsSync(categoriesDir)) {
+    fs.mkdirSync(categoriesDir, { recursive: true });
+  }
+  const allCategories = [...new Set(posts.map((p) => (p.category || 'OTHER').toUpperCase()))];
+  let categoryCount = 0;
+  for (const cat of allCategories) {
+    const slug = categorySlug(cat);
+    const html = buildCategoryPage(cat, posts);
+    fs.writeFileSync(path.join(categoriesDir, `${slug}.html`), html, 'utf-8');
+    categoryCount++;
+  }
+  console.log(`[generateSite] Generated ${categoryCount} category pages in categories/`);
 
   // Generate static pages
   fs.writeFileSync(path.join(__dirname, 'privacy.html'), buildPrivacyPage(), 'utf-8');
@@ -900,10 +1190,15 @@ function main() {
 
   // Generate sitemap.xml
   const now = new Date().toISOString().split('T')[0];
+  const categoryUrls = allCategories.map((cat) => ({
+    loc: `${SITE_URL}/categories/${categorySlug(cat)}.html`,
+    lastmod: now,
+  }));
   const staticUrls = [
     { loc: `${SITE_URL}/`, lastmod: now },
     { loc: `${SITE_URL}/about.html`, lastmod: now },
     { loc: `${SITE_URL}/privacy.html`, lastmod: now },
+    ...categoryUrls,
   ];
   const articleUrls = posts.map((post) => {
     const lastmod = post.pubDate

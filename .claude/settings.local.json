@@ -15,7 +15,20 @@
       "Bash(for f:*)",
       "Bash(do echo:*)",
       "Read(//c/Users/tyk12/AppData/Local/Temp/claude/C--Users-tyk12-ai-company/de543180-1e6d-4c12-a44b-c72b6b2757a9/tasks/**)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(unzip -o logs_63363495002.zip -d logs_63363495002)",
+      "Bash(cp \"AECニュースジャパンのデジタルバナー.png\" og-image.png)",
+      "Bash(cp \"抽象的な建物とAのロゴ.png\" favicon.png)",
+      "Bash(cp \"近未来的なオフィスビルのアイコン.png\" default-thumb.png)",
+      "WebFetch(domain:www.apptec.co.jp)",
+      "Bash(cp \"digital-grid-background-data.jpg\" hero-bg.jpg)",
+      "Bash(cp \"pngtree-futuristic-network-visualization-with-glowing-blue-nodes-and-lines-on-dark-image_20995880.webp\" default-thumb.webp)",
+      "Bash(cp \"pngtree-sleek-grid-of-dark-blue-hexagons-with-subtle-shading-and-texture-picture-image_16437918.jpg\" texture-hex.jpg)"
     ]
   }
 }

@@ -76,25 +76,27 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
   const jsonLdScript = jsonLd
     ? `\n  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`
     : '';
+  const truncatedDesc = desc && desc.length > 120 ? desc.substring(0, 119) + '…' : (desc || '');
   return `<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${escape(title)}</title>
-  <meta name="description" content="${escape(desc)}">
+  <meta name="description" content="${escape(truncatedDesc)}">
   <link rel="canonical" href="${escape(canonical)}">
+  <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large">
   <meta property="og:title" content="${escape(title)}">
-  <meta property="og:description" content="${escape(desc)}">
+  <meta property="og:description" content="${escape(truncatedDesc)}">
   <meta property="og:url" content="${escape(canonical)}">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
   <meta property="og:image" content="${SITE_URL}/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${SITE_URL}/assets/og-image.png">
-  <link rel="icon" type="image/png" href="${base}/assets/favicon.png">
-  <meta name="robots" content="index, follow">${jsonLdScript}
+  <link rel="icon" type="image/png" href="${base}/assets/favicon.png">${jsonLdScript}
   <!-- Google AdSense -->
   <!-- TODO: 20記事蓄積後に有効化 — ca-pub-XXXXXXXXXXXXXXXX を実際のパブリッシャーIDに差し替える -->
   <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
@@ -1264,18 +1266,20 @@ function main() {
   const categoryUrls = allCategories.map((cat) => ({
     loc: `${SITE_URL}/categories/${categorySlug(cat)}.html`,
     lastmod: now,
+    changefreq: 'weekly',
+    priority: '0.7',
   }));
   const staticUrls = [
-    { loc: `${SITE_URL}/`, lastmod: now },
-    { loc: `${SITE_URL}/about.html`, lastmod: now },
-    { loc: `${SITE_URL}/privacy.html`, lastmod: now },
+    { loc: `${SITE_URL}/`, lastmod: now, changefreq: 'daily', priority: '1.0' },
+    { loc: `${SITE_URL}/about.html`, lastmod: now, changefreq: 'monthly', priority: '0.5' },
+    { loc: `${SITE_URL}/privacy.html`, lastmod: now, changefreq: 'monthly', priority: '0.3' },
     ...categoryUrls,
   ];
   const articleUrls = posts.map((post) => {
     const lastmod = post.pubDate
       ? new Date(post.pubDate).toISOString().split('T')[0]
       : now;
-    return { loc: `${SITE_URL}/posts/${post.slug}.html`, lastmod };
+    return { loc: `${SITE_URL}/posts/${post.slug}.html`, lastmod, changefreq: 'monthly', priority: '0.8' };
   });
   const allUrls = [...staticUrls, ...articleUrls];
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -1283,6 +1287,8 @@ function main() {
 ${allUrls.map((u) => `  <url>
     <loc>${u.loc}</loc>
     <lastmod>${u.lastmod}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
   </url>`).join('\n')}
 </urlset>`;
   fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemapXml, 'utf-8');
@@ -1291,6 +1297,9 @@ ${allUrls.map((u) => `  <url>
   // Generate robots.txt
   const robotsTxt = `User-agent: *
 Allow: /
+Disallow: /assets/
+Crawl-delay: 10
+
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
   fs.writeFileSync(path.join(__dirname, 'robots.txt'), robotsTxt, 'utf-8');

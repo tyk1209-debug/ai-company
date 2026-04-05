@@ -85,4 +85,19 @@ module.exports = [
     url: "https://www.graphisoft.com/jp/feed",
     category: "BIM_ECOSYSTEM",
   },
+  {
+    name: "Vectorworks Blog",
+    url: "https://blog.vectorworks.net/rss.xml",
+    category: "BIM_ECOSYSTEM",
+  },
+  {
+    name: "Nemetschek Group",
+    url: "https://www.nemetschek.com/en/feed",
+    category: "BIM_ECOSYSTEM",
+  },
+  {
+    name: "NYKシステムズ（Rebro）",
+    url: "https://www.nyk-systems.co.jp/feed/",
+    category: "BIM_ECOSYSTEM",
+  },
 ];

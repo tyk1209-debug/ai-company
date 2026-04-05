@@ -13,29 +13,12 @@ if (require("fs").existsSync("./.env")) {
 const fs   = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-const { generateXPostBody } = require("./summarize.js");
-const { fetchArticleText }  = require("./fetchArticle.js");
+const { summarizeArticle } = require("./summarize.js");
 
 const POSTS_PATH = path.join(__dirname, "data", "posts.json");
 
-// ─────────────────────────────────────────────────────────────
-// ユーティリティ
-// ─────────────────────────────────────────────────────────────
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-async function getArticleBody(article) {
-  if (article.link) {
-    try {
-      const fetched = await fetchArticleText(article.link);
-      if (fetched && fetched.length > 200) return fetched;
-    } catch (_) {
-      // フォールバックへ
-    }
-  }
-  return (article.summary || "").slice(0, 1500);
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -54,50 +37,54 @@ async function main() {
 
   if (targets.length === 0) {
     console.log("[retroactiveJa] 全記事が既に日本語化済みです。");
-    return;
-  }
-
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.error("[retroactiveJa] ERROR: ANTHROPIC_API_KEY が設定されていません。");
-    process.exit(1);
-  }
-
-  let successCount = 0;
-  let failCount    = 0;
-
-  for (let i = 0; i < targets.length; i++) {
-    const article = targets[i];
-    console.log(`\n[retroactiveJa] (${i + 1}/${targets.length}) ${article.title?.slice(0, 60)}`);
-
-    const body = await getArticleBody(article);
-    console.log(`[retroactiveJa]   本文取得: ${body.length}文字`);
-
-    const result = await generateXPostBody(article, body);
-
-    if (result.titleJa && result.titleJa.trim() !== "") {
-      // posts 配列内の対象記事を更新
-      const idx = posts.findIndex((p) => p === article || (p.slug && p.slug === article.slug) || (p.link && p.link === article.link));
-      if (idx !== -1) {
-        posts[idx] = {
-          ...posts[idx],
-          titleJa: result.titleJa,
-          bodyJa:  result.bodyJa,
-        };
-        console.log(`[retroactiveJa]   titleJa: ${result.titleJa}`);
-        successCount++;
-      }
-    } else {
-      console.warn(`[retroactiveJa]   titleJa 生成失敗 — スキップ`);
-      failCount++;
+  } else {
+    // OAuth tokenをAPIキーとして使用（Claude Code環境向けフォールバック）
+    if (!process.env.ANTHROPIC_API_KEY && process.env.CLAUDE_CODE_OAUTH_TOKEN) {
+      process.env.ANTHROPIC_API_KEY = process.env.CLAUDE_CODE_OAUTH_TOKEN;
+      console.log("[retroactiveJa] CLAUDE_CODE_OAUTH_TOKEN を ANTHROPIC_API_KEY として使用します");
     }
 
-    // レートリミット対策: 最後の1件以外はウェイト
-    if (i < targets.length - 1) await sleep(500);
-  }
+    if (!process.env.ANTHROPIC_API_KEY) {
+      console.error("[retroactiveJa] ERROR: ANTHROPIC_API_KEY が設定されていません。");
+      process.exit(1);
+    }
 
-  // posts.json を上書き保存
-  fs.writeFileSync(POSTS_PATH, JSON.stringify(posts, null, 2), "utf-8");
-  console.log(`\n[retroactiveJa] posts.json 更新完了 (成功: ${successCount}, 失敗: ${failCount})`);
+    let successCount = 0;
+    let failCount    = 0;
+
+    for (let i = 0; i < targets.length; i++) {
+      const article = targets[i];
+      console.log(`\n[retroactiveJa] (${i + 1}/${targets.length}) ${article.title?.slice(0, 60)}`);
+
+      // summarizeArticle は本文取得・Claude API呼び出し・titleJa/bodyJa生成をすべて行う
+      const updated = await summarizeArticle(article);
+
+      if (updated.titleJa && updated.titleJa.trim() !== "") {
+        const idx = posts.findIndex(
+          (p) => (p.link && p.link === article.link) || (p.slug && p.slug === article.slug)
+        );
+        if (idx !== -1) {
+          posts[idx] = {
+            ...posts[idx],
+            titleJa: updated.titleJa,
+            bodyJa:  updated.bodyJa || "",
+          };
+          console.log(`[retroactiveJa]   titleJa: ${updated.titleJa}`);
+          successCount++;
+        }
+      } else {
+        console.warn(`[retroactiveJa]   titleJa 生成失敗 — スキップ`);
+        failCount++;
+      }
+
+      // レートリミット対策
+      if (i < targets.length - 1) await sleep(500);
+    }
+
+    // posts.json を上書き保存
+    fs.writeFileSync(POSTS_PATH, JSON.stringify(posts, null, 2), "utf-8");
+    console.log(`\n[retroactiveJa] posts.json 更新完了 (成功: ${successCount}, 失敗: ${failCount})`);
+  }
 
   // サイト再生成
   console.log("\n[retroactiveJa] generateSite.js を実行します...");
@@ -108,8 +95,6 @@ async function main() {
     console.error("[retroactiveJa] generateSite.js 実行エラー:", err.message);
     process.exit(1);
   }
-
-  console.log(`\n[retroactiveJa] 完了: ${successCount}件の記事を日本語化しました。`);
 }
 
 main().catch((err) => {

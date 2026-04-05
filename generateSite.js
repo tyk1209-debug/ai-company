@@ -425,6 +425,22 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       font-size: 0.9rem;
       line-height: 1.75;
     }
+    .ai-summary {
+      background: #f0f4ff;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.85;
+    }
+    .ai-summary p {
+      margin: 0;
+    }
+    .footer-article-count {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 0.5rem;
+    }
 
     /* ---- breadcrumb ---- */
     .breadcrumb {
@@ -622,7 +638,7 @@ function buildIndex(posts, totalCount = 0) {
       </div>
     </main>
   </div>` +
-    htmlFooter();
+    htmlFooter('.', articleCount);
 }
 
 // ---- article detail page ----------------------------------------------------
@@ -630,9 +646,11 @@ function buildIndex(posts, totalCount = 0) {
 function buildArticlePage(post) {
   const catLabel = categoryLabel(post.category);
   const date = formatDate(post.pubDate);
-  const bodyContent = post.postText
-    ? `<div class="ai-comment-label">AIによる専門家コメント</div><div class="post-text-box">${escape(post.postText)}</div>`
-    : `<p>${escape(post.summary || '')}</p>`;
+  const bodyContent = post.bodyJa
+    ? `<div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>${escape(post.bodyJa)}</p></div>`
+    : post.postText
+      ? `<div class="ai-comment-label">AIによる専門家コメント</div><div class="post-text-box">${escape(post.postText)}</div>`
+      : `<p>${escape(post.summary || '')}</p>`;
 
   const pageTitle = `${post.title} | ${SITE_NAME}`;
   const descText = excerpt(post.summary || post.postText || '', 120);
@@ -861,7 +879,7 @@ function main() {
   }
 
   // Generate index.html
-  fs.writeFileSync(path.join(__dirname, 'index.html'), buildIndex(posts), 'utf-8');
+  fs.writeFileSync(path.join(__dirname, 'index.html'), buildIndex(posts, posts.length), 'utf-8');
   console.log('[generateSite] Generated index.html');
 
   // Generate individual article pages

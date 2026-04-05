@@ -50,6 +50,7 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門家です�
 【出力形式】
 {
   "titleJa": "日本語の見出し（25〜40文字、読者が思わずクリックしたくなる表現）",
+  "bodyJa": "記事の要点を200〜300文字の日本語で解説。背景・内容・業界への影響を含む。",
   "xPost": "X投稿本文（140字以内）"
 }
 
@@ -59,6 +60,12 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門家です�
 - 専門用語はそのまま使ってよい（BIM、IFC、デジタルツイン等）
 - 体言止めOK
 
+【bodyJaのルール】
+- 導入・内容・影響の3部構成で書く
+- 専門用語（BIM、IFC、デジタルツイン等）はそのまま使用
+- ですます調で統一する
+- 200〜300文字を厳守する
+
 【xPostのルール】
 - 「何が重要か」「なぜ今注目すべきか」「現場への影響」のどれかを入れる
 - タイトルをそのまま訳した文章は禁止
@@ -67,7 +74,7 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門家です�
 
 async function generateXPostBody(article, articleBody) {
   const client = createClient();
-  if (!client) return { xPost: "", titleJa: "" };
+  if (!client) return { xPost: "", titleJa: "", bodyJa: "" };
 
   const prompt = `記事タイトル: ${article.title}
 
@@ -79,7 +86,7 @@ ${articleBody.slice(0, 2500)}
   try {
     const response = await client.messages.create({
       model:      "claude-haiku-4-5-20251001",
-      max_tokens: 400,
+      max_tokens: 700,
       system:     SYSTEM_PROMPT,
       messages:   [{ role: "user", content: prompt }],
     });
@@ -91,16 +98,17 @@ ${articleBody.slice(0, 2500)}
       .trim();
 
     const jsonMatch = raw.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) return { xPost: raw.slice(0, 140), titleJa: "" };
+    if (!jsonMatch) return { xPost: raw.slice(0, 140), titleJa: "", bodyJa: "" };
 
     const parsed = JSON.parse(jsonMatch[0]);
     return {
       xPost:   (parsed.xPost   || "").slice(0, 140),
       titleJa: (parsed.titleJa || "").slice(0, 60),
+      bodyJa:  (parsed.bodyJa  || "").slice(0, 400),
     };
   } catch (err) {
     console.error(`[summarize] Claude API エラー: ${err.message}`);
-    return { xPost: "", titleJa: "" };
+    return { xPost: "", titleJa: "", bodyJa: "" };
   }
 }
 
@@ -112,7 +120,7 @@ async function summarizeArticle(article) {
   const client = createClient();
   if (!client) {
     console.log("[summarize] ANTHROPIC_API_KEY 未設定 — スキップ");
-    return { ...article, xPostBody: "", japaneseSummary: "" };
+    return { ...article, xPostBody: "", japaneseSummary: "", bodyJa: "" };
   }
 
   console.log(`[summarize] 処理中: ${article.title?.slice(0, 50)}`);
@@ -121,10 +129,12 @@ async function summarizeArticle(article) {
   const result = await generateXPostBody(article, body);
   console.log(`[summarize] 投稿文生成: ${result.xPost.length > 0 ? "成功" : "空（失敗）"}`);
   console.log(`[summarize] 日本語タイトル: ${result.titleJa || "（生成失敗）"}`);
+  console.log(`[summarize] 日本語本文: ${result.bodyJa.length > 0 ? `${result.bodyJa.length}文字` : "（生成失敗）"}`);
 
   return {
     ...article,
     titleJa:         result.titleJa,
+    bodyJa:          result.bodyJa,
     xPostBody:       result.xPost,
     japaneseSummary: result.xPost, // 後方互換
   };
@@ -149,6 +159,7 @@ async function summarizeArticles(articles, options = {}) {
     ...a,
     xPostBody:       "",
     japaneseSummary: "",
+    bodyJa:          "",
   }));
 
   return [...results, ...restWithEmpty];

@@ -205,7 +205,7 @@ async function main() {
     if (approvedPosts[i]) recordPost(approvedPosts[i], { ...result, dryRun });
   });
 
-  // 9. 出力
+  // 11. 出力
   printSummary({ succeeded, failed, raw, deduped, selected });
   printTopArticles(selected);
   printPosts(posts);

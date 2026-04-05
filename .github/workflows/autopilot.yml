@@ -73,34 +73,35 @@ jobs:
         run: sudo apt-get install -y fonts-noto-cjk
 
       - name: Generate and upload video
-        run: node -e "
-          const { generateVideos } = require('./generateVideo.js');
-          const { uploadVideo } = require('./uploadYouTube.js');
-          const fs = require('fs');
-          const path = require('path');
+        run: |
+          node -e "
+            const { generateVideos } = require('./generateVideo.js');
+            const { uploadVideo } = require('./uploadYouTube.js');
+            const fs = require('fs');
+            const path = require('path');
 
-          async function run() {
-            const postsFile = path.join(__dirname, 'data', 'posts.json');
-            if (!fs.existsSync(postsFile)) {
-              console.log('posts.json が見つかりません — スキップ');
-              return;
+            async function run() {
+              const postsFile = path.join(__dirname, 'data', 'posts.json');
+              if (!fs.existsSync(postsFile)) {
+                console.log('posts.json not found - skip');
+                return;
+              }
+              const posts = JSON.parse(fs.readFileSync(postsFile, 'utf-8'));
+              if (!posts.length) { console.log('no posts'); return; }
+
+              const results = await generateVideos(posts, 1);
+              for (const r of results) {
+                await uploadVideo({
+                  videoPath:   r.videoPath,
+                  title:       r.title,
+                  description: (r.script && r.script.slides ? r.script.slides.map(function(s){ return s.body; }).join('\n') : ''),
+                  tags:        ['BIM', 'AEC'],
+                });
+              }
             }
-            const posts = JSON.parse(fs.readFileSync(postsFile, 'utf-8'));
-            if (!posts.length) { console.log('投稿候補なし'); return; }
 
-            const results = await generateVideos(posts, 1);
-            for (const r of results) {
-              await uploadVideo({
-                videoPath:   r.videoPath,
-                title:       r.title,
-                description: r.script?.slides?.map(s => s.body).join('\n') || '',
-                tags:        ['BIM', 'AEC', '建設DX'],
-              });
-            }
-          }
-
-          run().catch(e => { console.error(e.message); process.exit(1); });
-        "
+            run().catch(function(e){ console.error(e.message); process.exit(1); });
+          "
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_CLOUD_API_KEY: ${{ secrets.GOOGLE_CLOUD_API_KEY }}

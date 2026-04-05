@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEC News Japan | BIM・AEC・建設DXニュース</title>
+  <meta name="description" content="BIM・AEC・建設DXの最新ニュースをAIが日本語で解説">
+  <link rel="canonical" href="https://aec-news.com/">
+  <meta property="og:title" content="AEC News Japan | BIM・AEC・建設DXニュース">
+  <meta property="og:description" content="BIM・AEC・建設DXの最新ニュースをAIが日本語で解説">
+  <meta property="og:url" content="https://aec-news.com/">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a2744;
+      --navy-light: #243460;
+      --blue: #2563eb;
+      --blue-light: #3b82f6;
+      --text: #1e2939;
+      --text-muted: #5a6a7e;
+      --border: #dde3ec;
+      --bg: #f5f7fa;
+      --white: #ffffff;
+      --card-shadow: 0 1px 4px rgba(26,39,68,0.08);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+                   Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- header ---- */
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 0 1.5rem;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    .site-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .site-title a { color: var(--white); }
+    .site-tagline {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      margin-top: 0.15rem;
+    }
+    nav a {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.875rem;
+      margin-left: 1.25rem;
+    }
+    nav a:hover { color: var(--white); text-decoration: none; }
+
+    /* ---- hero ---- */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ---- layout ---- */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .main-content {
+      padding: 2.5rem 0 4rem;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      border-left: 4px solid var(--blue);
+      padding-left: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- article card ---- */
+    .article-list {
+      display: grid;
+      gap: 1.25rem;
+    }
+    .article-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--card-shadow);
+      transition: box-shadow 0.15s;
+    }
+    .article-card:hover { box-shadow: 0 4px 12px rgba(26,39,68,0.12); }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .badge {
+      background: var(--blue);
+      color: var(--white);
+      padding: 0.15rem 0.55rem;
+      border-radius: 3px;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 0.5rem;
+    }
+    .card-title a { color: var(--text); }
+    .card-title a:hover { color: var(--blue); text-decoration: none; }
+    .card-excerpt {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-footer {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+    }
+    .card-footer a { color: var(--text-muted); }
+    .read-more {
+      color: var(--blue) !important;
+      font-weight: 600;
+    }
+
+    /* ---- article detail ---- */
+    .article-detail {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem;
+      box-shadow: var(--card-shadow);
+    }
+    .article-detail h1 {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+    .article-detail .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-body {
+      font-size: 0.95rem;
+      line-height: 1.85;
+    }
+    .article-body p { margin-bottom: 1rem; }
+    .article-body pre {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+    .source-box {
+      margin-top: 2rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 4px 4px 0;
+      font-size: 0.875rem;
+    }
+    .source-box a { font-weight: 600; }
+
+    /* ---- post-text display ---- */
+    .post-text-box {
+      white-space: pre-wrap;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    /* ---- breadcrumb ---- */
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumb a { color: var(--text-muted); }
+
+    /* ---- static pages ---- */
+    .static-page {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem 2.5rem;
+      box-shadow: var(--card-shadow);
+    }
+    .static-page h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+    .static-page h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 1.75rem 0 0.75rem;
+    }
+    .static-page p, .static-page li { font-size: 0.9rem; line-height: 1.8; margin-bottom: 0.5rem; }
+    .static-page ul { padding-left: 1.4rem; }
+
+    /* ---- footer ---- */
+    .site-footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.7);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    .footer-nav { margin-bottom: 0.75rem; }
+    .footer-nav a { color: rgba(255,255,255,0.7); margin: 0 0.75rem; }
+    .footer-nav a:hover { color: var(--white); }
+
+    /* ---- pagination ---- */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+    .pagination a, .pagination span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      font-size: 0.875rem;
+      background: var(--white);
+      color: var(--text);
+    }
+    .pagination .active {
+      background: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* ---- responsive ---- */
+    @media (max-width: 640px) {
+      nav { display: none; }
+      .article-detail { padding: 1.25rem; }
+      .static-page { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <div class="site-title"><a href="/">AEC News Japan</a></div>
+        <div class="site-tagline">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>
+      </div>
+      <nav>
+        <a href="/">ホーム</a>
+        <a href="/about.html">運営者情報</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+      </nav>
+    </div>
+  </header>
+  <div class="hero">
+    <h1>BIM・AEC・建設DXの最新ニュース</h1>
+    <p>Autodesk、Bentley、IFC、デジタルツイン、建設テックの最新トレンドをAIが日本語で解説</p>
+  </div>
+  <div class="container">
+    <main class="main-content">
+      <h2 class="section-title">最新ニュース</h2>
+      <div class="article-list">
+        
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">BIMエコシステム</span>
+          <span>2026年1月27日</span>
+          <span>Autodesk AEC Blog</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/model-analytics-public-beta-what-happens-when-insight-is-embedded-not-added-a-ne.html">Model Analytics Public Beta: What Happens When Insight Is Embedded, Not Added? A New Era for Model Health in Autodesk Construction Cloud</a>
+        </h2>
+        <p class="card-excerpt">BIMエコシステムの最新情報👇 Model Analytics Public Beta: What Happens When Insight Is Embedded, Not Ad…（1/27） https://autodeskblog.…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/model-analytics-public-beta-what-happens-when-insight-is-embedded-not-added-a-ne.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">Revit</span>
+          <span>2026年4月1日</span>
+          <span>Autodesk AEC Blog</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/discover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-re.html">Discover New Revit Design Tips in Less Than 90 Seconds with Autodesk Learning Reels</a>
+        </h2>
+        <p class="card-excerpt">Revitユーザー注目の情報です Discover New Revit Design Tips in Less Than 90 Seconds with Autodesk L…（4/1） https://autodeskblog.wpeng…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/discover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-re.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">Revit</span>
+          <span>2026年1月15日</span>
+          <span>Autodesk AEC Blog</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/introducing-the-new-revit-add-on-release-for-content-catalog.html">Introducing the New Revit Add-On Release for Content Catalog</a>
+        </h2>
+        <p class="card-excerpt">Autodesk / Revit アップデート情報 Introducing the New Revit Add-On Release for Content Catalog（1/15） https://autodeskblog.wpengi…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/introducing-the-new-revit-add-on-release-for-content-catalog.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">BIMエコシステム</span>
+          <span>2026年4月3日</span>
+          <span>Autodesk AEC Blog</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/whats-new-in-civil-3d-2027-advancing-infrastructure-design-with-autodesk-assista.html">What’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk Assistant and Forma Data Management Essentials</a>
+        </h2>
+        <p class="card-excerpt">BIMエコシステムの最新情報👇 What’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk …（4/3） https://autodeskblog.…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/whats-new-in-civil-3d-2027-advancing-infrastructure-design-with-autodesk-assista.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">BIMエコシステム</span>
+          <span>2026年3月24日</span>
+          <span>Autodesk News</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/autodesk-construction-cloud-is-now-autodesk-forma.html">Autodesk Construction Cloud is now Autodesk Forma</a>
+        </h2>
+        <p class="card-excerpt">建設テックの最前線情報 Autodesk Construction Cloud is now Autodesk Forma（3/24） https://adsknews.autodesk.com/en/news/autodesk-const…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/autodesk-construction-cloud-is-now-autodesk-forma.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">BIMエコシステム</span>
+          <span>2026年1月7日</span>
+          <span>Autodesk AEC Blog</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/autodesk-at-the-2025-riba-stirling-prize-ceremony.html">Autodesk at the 2025 RIBA Stirling Prize Ceremony</a>
+        </h2>
+        <p class="card-excerpt">BIMエコシステムの最新情報👇 Autodesk at the 2025 RIBA Stirling Prize Ceremony（1/7） https://autodeskblog.wpengine.com/aec/2026/01/06…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/autodesk-at-the-2025-riba-stirling-prize-ceremony.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">AI_DX</span>
+          <span>2026年4月3日</span>
+          <span>Autodesk News</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">Autodesk Flow Studio launches Wonder 3D Gen AI model to help creators make 3D characters and objects faster and easier</a>
+        </h2>
+        <p class="card-excerpt">DX推進に役立つ情報です Autodesk Flow Studio launches Wonder 3D Gen AI model to help creators make 3D char…（4/3） https://adsknews.a…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">BIMエコシステム</span>
+          <span>2026年3月26日</span>
+          <span>Autodesk News</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">Preserving the past with digital innovation: Autodesk named a Fast Company Most Innovative Company for 2026</a>
+        </h2>
+        <p class="card-excerpt">BIMエコシステムの最新情報👇 Preserving the past with digital innovation: Autodesk named a Fast Company…（3/26） https://adsknews.auto…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">BIMエコシステム</span>
+          <span>2026年2月26日</span>
+          <span>Autodesk News</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/autodesk-construction-cloud-to-join-autodesk-forma-on-march-24.html">Autodesk Construction Cloud to join Autodesk Forma on March 24</a>
+        </h2>
+        <p class="card-excerpt">BIMエコシステムの最新情報👇 Autodesk Construction Cloud to join Autodesk Forma on March 24（2/26） https://adsknews.autodesk.com/en/n…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/autodesk-construction-cloud-to-join-autodesk-forma-on-march-24.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">BIMエコシステム</span>
+          <span>2026年2月13日</span>
+          <span>Autodesk News</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/expanding-fedramp-moderate-authorization-brings-connected-secure-future-to-autod.html">Expanding FedRAMP® Moderate Authorization brings connected, secure future to Autodesk Construction Cloud and Fusion federal customers</a>
+        </h2>
+        <p class="card-excerpt">建設テックの最前線情報 Expanding FedRAMP® Moderate Authorization brings connected, secure future to Au…（2/13） https://adsknews.auto…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/expanding-fedramp-moderate-authorization-brings-connected-secure-future-to-autod.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">IFC</span>
+          <span>2026年3月20日</span>
+          <span>buildingSMART International</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/key-outcomes-from-the-domain-leadership-conference-in-zurich.html">Key Outcomes from the Domain Leadership Conference in Zurich</a>
+        </h2>
+        <p class="card-excerpt">IFC・openBIM 標準化の最新情報 Key Outcomes from the Domain Leadership Conference in Zuri…（3/20） https://www.buildingsmart.org/key…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/key-outcomes-from-the-domain-leadership-conference-in-zurich.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">AI_DX</span>
+          <span>2026年4月3日</span>
+          <span>Construction Dive</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/autodesk-acquires-rhumbix-in-construction-data-push.html">Autodesk acquires Rhumbix in construction data push</a>
+        </h2>
+        <p class="card-excerpt">建設業界のAI活用事例です Autodesk acquires Rhumbix in construction data push（4/3） https://www.constructiondive.com/news/autodesk-ac…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/autodesk-acquires-rhumbix-in-construction-data-push.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">AI_DX</span>
+          <span>2026年4月4日</span>
+          <span>ArchDaily</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/choreographing-lagos-dele-adeyemo-on-dance-cosmology-and-spatial-practices.html">Choreographing Lagos: Dele Adeyemo on Dance, Cosmology, and Spatial Practices</a>
+        </h2>
+        <p class="card-excerpt">DX推進に役立つ情報です Choreographing Lagos: Dele Adeyemo on Dance, Cosmology, and Spatial Practices（4/4） https://www.archdaily.co…</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/choreographing-lagos-dele-adeyemo-on-dance-cosmology-and-spatial-practices.html">続きを読む &rarr;</a>
+        </div>
+      </article>
+      </div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-nav">
+      <a href="/">ホーム</a>
+      <a href="/about.html">運営者情報</a>
+      <a href="/privacy.html">プライバシーポリシー</a>
+    </div>
+    <div>&copy; 2026 AEC News Japan. All rights reserved.</div>
+  </footer>
+</body>
+</html>

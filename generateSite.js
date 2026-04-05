@@ -1,0 +1,659 @@
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
+const SITE_NAME = 'AEC News Japan';
+const SITE_DESC = 'BIM・AEC・建設DXの最新ニュースをAIが日本語で解説';
+const SITE_URL = 'https://aec-news.com';
+const CURRENT_YEAR = new Date().getFullYear();
+
+// ---- utility ----------------------------------------------------------------
+
+function slugify(str) {
+  return str
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .substring(0, 80);
+}
+
+function formatDate(dateStr) {
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return '';
+  return d.toLocaleDateString('ja-JP', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+function excerpt(text, maxLen) {
+  if (!text) return '';
+  const clean = text.replace(/\s+/g, ' ').trim();
+  if (clean.length <= maxLen) return clean;
+  return clean.substring(0, maxLen) + '…';
+}
+
+function categoryLabel(cat) {
+  const map = {
+    BIM_ECOSYSTEM: 'BIMエコシステム',
+    REVIT: 'Revit',
+    IFC: 'IFC',
+    DIGITAL_TWIN: 'デジタルツイン',
+    CONSTRUCTION_TECH: '建設テック',
+    AI: 'AI',
+    GIS: 'GIS',
+    SUSTAINABILITY: 'サステナビリティ',
+  };
+  return map[cat] || cat || '一般';
+}
+
+function escape(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// ---- shared HTML parts ------------------------------------------------------
+
+function htmlHead(title, desc, canonical) {
+  return `<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${escape(title)}</title>
+  <meta name="description" content="${escape(desc)}">
+  <link rel="canonical" href="${escape(canonical)}">
+  <meta property="og:title" content="${escape(title)}">
+  <meta property="og:description" content="${escape(desc)}">
+  <meta property="og:url" content="${escape(canonical)}">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a2744;
+      --navy-light: #243460;
+      --blue: #2563eb;
+      --blue-light: #3b82f6;
+      --text: #1e2939;
+      --text-muted: #5a6a7e;
+      --border: #dde3ec;
+      --bg: #f5f7fa;
+      --white: #ffffff;
+      --card-shadow: 0 1px 4px rgba(26,39,68,0.08);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+                   Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- header ---- */
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 0 1.5rem;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    .site-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .site-title a { color: var(--white); }
+    .site-tagline {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      margin-top: 0.15rem;
+    }
+    nav a {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.875rem;
+      margin-left: 1.25rem;
+    }
+    nav a:hover { color: var(--white); text-decoration: none; }
+
+    /* ---- hero ---- */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ---- layout ---- */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .main-content {
+      padding: 2.5rem 0 4rem;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      border-left: 4px solid var(--blue);
+      padding-left: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- article card ---- */
+    .article-list {
+      display: grid;
+      gap: 1.25rem;
+    }
+    .article-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--card-shadow);
+      transition: box-shadow 0.15s;
+    }
+    .article-card:hover { box-shadow: 0 4px 12px rgba(26,39,68,0.12); }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .badge {
+      background: var(--blue);
+      color: var(--white);
+      padding: 0.15rem 0.55rem;
+      border-radius: 3px;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 0.5rem;
+    }
+    .card-title a { color: var(--text); }
+    .card-title a:hover { color: var(--blue); text-decoration: none; }
+    .card-excerpt {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-footer {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+    }
+    .card-footer a { color: var(--text-muted); }
+    .read-more {
+      color: var(--blue) !important;
+      font-weight: 600;
+    }
+
+    /* ---- article detail ---- */
+    .article-detail {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem;
+      box-shadow: var(--card-shadow);
+    }
+    .article-detail h1 {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+    .article-detail .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-body {
+      font-size: 0.95rem;
+      line-height: 1.85;
+    }
+    .article-body p { margin-bottom: 1rem; }
+    .article-body pre {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+    .source-box {
+      margin-top: 2rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 4px 4px 0;
+      font-size: 0.875rem;
+    }
+    .source-box a { font-weight: 600; }
+
+    /* ---- post-text display ---- */
+    .post-text-box {
+      white-space: pre-wrap;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    /* ---- breadcrumb ---- */
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumb a { color: var(--text-muted); }
+
+    /* ---- static pages ---- */
+    .static-page {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem 2.5rem;
+      box-shadow: var(--card-shadow);
+    }
+    .static-page h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+    .static-page h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 1.75rem 0 0.75rem;
+    }
+    .static-page p, .static-page li { font-size: 0.9rem; line-height: 1.8; margin-bottom: 0.5rem; }
+    .static-page ul { padding-left: 1.4rem; }
+
+    /* ---- footer ---- */
+    .site-footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.7);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    .footer-nav { margin-bottom: 0.75rem; }
+    .footer-nav a { color: rgba(255,255,255,0.7); margin: 0 0.75rem; }
+    .footer-nav a:hover { color: var(--white); }
+
+    /* ---- pagination ---- */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+    .pagination a, .pagination span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      font-size: 0.875rem;
+      background: var(--white);
+      color: var(--text);
+    }
+    .pagination .active {
+      background: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* ---- responsive ---- */
+    @media (max-width: 640px) {
+      nav { display: none; }
+      .article-detail { padding: 1.25rem; }
+      .static-page { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>`;
+}
+
+function htmlHeader() {
+  return `
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <div class="site-title"><a href="/">${SITE_NAME}</a></div>
+        <div class="site-tagline">${SITE_DESC}</div>
+      </div>
+      <nav>
+        <a href="/">ホーム</a>
+        <a href="/about.html">運営者情報</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+      </nav>
+    </div>
+  </header>`;
+}
+
+function htmlFooter() {
+  return `
+  <footer class="site-footer">
+    <div class="footer-nav">
+      <a href="/">ホーム</a>
+      <a href="/about.html">運営者情報</a>
+      <a href="/privacy.html">プライバシーポリシー</a>
+    </div>
+    <div>&copy; ${CURRENT_YEAR} ${SITE_NAME}. All rights reserved.</div>
+  </footer>
+</body>
+</html>`;
+}
+
+// ---- index page -------------------------------------------------------------
+
+function buildIndex(posts) {
+  const recentPosts = posts.slice(0, 30);
+
+  const cards = recentPosts.map((post) => {
+    const slug = post.slug;
+    const catLabel = categoryLabel(post.category);
+    const date = formatDate(post.pubDate);
+    const snippetText = post.postText || post.summary || '';
+    const snip = excerpt(snippetText, 120);
+
+    return `
+      <article class="article-card">
+        <div class="card-meta">
+          <span class="badge">${escape(catLabel)}</span>
+          <span>${escape(date)}</span>
+          <span>${escape(post.source || '')}</span>
+        </div>
+        <h2 class="card-title">
+          <a href="/posts/${escape(slug)}.html">${escape(post.title)}</a>
+        </h2>
+        <p class="card-excerpt">${escape(snip)}</p>
+        <div class="card-footer">
+          <a class="read-more" href="/posts/${escape(slug)}.html">続きを読む &rarr;</a>
+        </div>
+      </article>`;
+  }).join('');
+
+  return htmlHead(
+    `${SITE_NAME} | BIM・AEC・建設DXニュース`,
+    SITE_DESC,
+    SITE_URL + '/'
+  ) +
+    htmlHeader() +
+    `
+  <div class="hero">
+    <h1>BIM・AEC・建設DXの最新ニュース</h1>
+    <p>Autodesk、Bentley、IFC、デジタルツイン、建設テックの最新トレンドをAIが日本語で解説</p>
+  </div>
+  <div class="container">
+    <main class="main-content">
+      <h2 class="section-title">最新ニュース</h2>
+      <div class="article-list">
+        ${cards}
+      </div>
+    </main>
+  </div>` +
+    htmlFooter();
+}
+
+// ---- article detail page ----------------------------------------------------
+
+function buildArticlePage(post) {
+  const catLabel = categoryLabel(post.category);
+  const date = formatDate(post.pubDate);
+  const bodyContent = post.postText
+    ? `<div class="post-text-box">${escape(post.postText)}</div>`
+    : `<p>${escape(post.summary || '')}</p>`;
+
+  const pageTitle = `${post.title} | ${SITE_NAME}`;
+  const descText = excerpt(post.summary || post.postText || '', 120);
+
+  return htmlHead(
+    pageTitle,
+    descText,
+    `${SITE_URL}/posts/${post.slug}.html`
+  ) +
+    htmlHeader() +
+    `
+  <div class="container">
+    <main class="main-content">
+      <nav class="breadcrumb">
+        <a href="/">ホーム</a> &rsaquo; <span>${escape(catLabel)}</span>
+      </nav>
+      <div class="article-detail">
+        <h1>${escape(post.title)}</h1>
+        <div class="meta">
+          <span class="badge">${escape(catLabel)}</span>
+          <span>${escape(date)}</span>
+          <span>出典: ${escape(post.source || '')}</span>
+        </div>
+        <div class="article-body">
+          ${bodyContent}
+        </div>
+        <div class="source-box">
+          元記事: <a href="${escape(post.link)}" target="_blank" rel="noopener noreferrer">${escape(post.link)}</a>
+        </div>
+      </div>
+    </main>
+  </div>` +
+    htmlFooter();
+}
+
+// ---- privacy policy page ----------------------------------------------------
+
+function buildPrivacyPage() {
+  return htmlHead(
+    `プライバシーポリシー | ${SITE_NAME}`,
+    `${SITE_NAME}のプライバシーポリシーです。`,
+    `${SITE_URL}/privacy.html`
+  ) +
+    htmlHeader() +
+    `
+  <div class="container">
+    <main class="main-content">
+      <div class="static-page">
+        <h1>プライバシーポリシー</h1>
+
+        <p>本プライバシーポリシーは、${SITE_NAME}（以下「当サイト」）における、ユーザーの個人情報の取扱いを定めるものです。</p>
+
+        <h2>1. 個人情報の収集について</h2>
+        <p>当サイトでは、お問い合わせフォーム等を通じてお名前・メールアドレス等の個人情報をご提供いただく場合があります。収集した個人情報は、お問い合わせへの回答以外の目的には使用いたしません。</p>
+
+        <h2>2. アクセス解析ツールについて</h2>
+        <p>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。GoogleアナリティクスはCookieを使用してデータを収集しますが、個人を特定する情報は含まれません。Cookieの無効化により収集を拒否することができます。詳細は<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Googleのポリシー</a>をご確認ください。</p>
+
+        <h2>3. 広告について</h2>
+        <p>当サイトでは、第三者配信の広告サービスを利用する場合があります。これらの広告配信事業者はCookieを使用してユーザーの興味に応じた広告を表示することがあります。</p>
+
+        <h2>4. Cookieについて</h2>
+        <p>当サイトでは、利便性の向上のためにCookieを使用する場合があります。ブラウザの設定からCookieを無効化することが可能ですが、一部の機能が利用できなくなる場合があります。</p>
+
+        <h2>5. 免責事項</h2>
+        <p>当サイトに掲載する情報の正確性には万全を期していますが、内容の完全性・正確性・有用性・安全性等について保証するものではありません。当サイトの情報を利用されたことによる損害については、一切責任を負いかねます。</p>
+
+        <h2>6. 著作権</h2>
+        <p>当サイトに掲載されているコンテンツ（文章・画像等）の著作権は、当サイトまたは各記事の出典元に帰属します。無断転載・複製は禁止いたします。</p>
+
+        <h2>7. プライバシーポリシーの変更</h2>
+        <p>当サイトは、必要に応じて本プライバシーポリシーを変更することがあります。重要な変更がある場合には、サイト上でお知らせします。</p>
+
+        <h2>8. お問い合わせ</h2>
+        <p>本ポリシーに関するお問い合わせは、運営者情報ページをご覧ください。</p>
+
+        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">最終更新日: ${CURRENT_YEAR}年4月</p>
+      </div>
+    </main>
+  </div>` +
+    htmlFooter();
+}
+
+// ---- about page -------------------------------------------------------------
+
+function buildAboutPage() {
+  return htmlHead(
+    `運営者情報 | ${SITE_NAME}`,
+    `${SITE_NAME}の運営者情報です。`,
+    `${SITE_URL}/about.html`
+  ) +
+    htmlHeader() +
+    `
+  <div class="container">
+    <main class="main-content">
+      <div class="static-page">
+        <h1>運営者情報</h1>
+
+        <h2>サイトについて</h2>
+        <p>${SITE_NAME}は、BIM（Building Information Modeling）・AEC（建築・エンジニアリング・建設）・建設DXに関する最新ニュースを、AIを活用して日本語でわかりやすく解説する専門メディアです。</p>
+
+        <h2>対象読者</h2>
+        <ul>
+          <li>BIM担当者・BIMマネージャー</li>
+          <li>建設会社・設計事務所のデジタル化推進担当者</li>
+          <li>AECテクノロジーに関心のある建設・不動産プロフェッショナル</li>
+          <li>AutodeskやBentleyなどのAECソフトウェアユーザー</li>
+        </ul>
+
+        <h2>掲載コンテンツ</h2>
+        <p>当サイトは海外のBIM・AEC関連ブログ・プレスリリース・技術記事をAIが収集・要約し、日本語で提供しています。各記事には元記事へのリンクを掲載しています。</p>
+
+        <h2>免責事項</h2>
+        <p>掲載情報は参考目的であり、内容の正確性・最新性を保証するものではありません。重要な意思決定の際は必ず元記事や一次情報をご確認ください。</p>
+
+        <h2>著作権・引用ポリシー</h2>
+        <p>当サイトの独自コンテンツの著作権は当サイトに帰属します。引用・転載の際は出典を明記の上、元記事へのリンクを設けてください。</p>
+
+        <h2>お問い合わせ</h2>
+        <p>当サイトへのお問い合わせ・記事に関するご意見は、<a href="https://x.com" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>のDMからお送りください。</p>
+
+        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">
+          &copy; ${CURRENT_YEAR} ${SITE_NAME}
+        </p>
+      </div>
+    </main>
+  </div>` +
+    htmlFooter();
+}
+
+// ---- main -------------------------------------------------------------------
+
+function main() {
+  const postsFile = path.join(__dirname, 'data', 'posts.json');
+
+  if (!fs.existsSync(postsFile)) {
+    console.error('[generateSite] data/posts.json not found — skipping site generation');
+    process.exit(0);
+  }
+
+  let posts;
+  try {
+    posts = JSON.parse(fs.readFileSync(postsFile, 'utf-8'));
+  } catch (err) {
+    console.error('[generateSite] Failed to parse posts.json:', err.message);
+    process.exit(1);
+  }
+
+  if (!Array.isArray(posts) || posts.length === 0) {
+    console.warn('[generateSite] No posts found — generating empty site');
+    posts = [];
+  }
+
+  // Assign slugs
+  const usedSlugs = new Map();
+  posts = posts.map((post) => {
+    let base = slugify(post.title || 'post');
+    if (!base) base = 'post';
+    let slug = base;
+    let counter = 1;
+    while (usedSlugs.has(slug)) {
+      slug = `${base}-${counter}`;
+      counter++;
+    }
+    usedSlugs.set(slug, true);
+    return { ...post, slug };
+  });
+
+  // Ensure posts/ directory exists
+  const postsDir = path.join(__dirname, 'posts');
+  if (!fs.existsSync(postsDir)) {
+    fs.mkdirSync(postsDir, { recursive: true });
+  }
+
+  // Generate index.html
+  fs.writeFileSync(path.join(__dirname, 'index.html'), buildIndex(posts), 'utf-8');
+  console.log('[generateSite] Generated index.html');
+
+  // Generate individual article pages
+  let articleCount = 0;
+  for (const post of posts) {
+    const html = buildArticlePage(post);
+    fs.writeFileSync(path.join(postsDir, `${post.slug}.html`), html, 'utf-8');
+    articleCount++;
+  }
+  console.log(`[generateSite] Generated ${articleCount} article pages in posts/`);
+
+  // Generate static pages
+  fs.writeFileSync(path.join(__dirname, 'privacy.html'), buildPrivacyPage(), 'utf-8');
+  console.log('[generateSite] Generated privacy.html');
+
+  fs.writeFileSync(path.join(__dirname, 'about.html'), buildAboutPage(), 'utf-8');
+  console.log('[generateSite] Generated about.html');
+
+  console.log('[generateSite] Done.');
+}
+
+main();

@@ -40,6 +40,17 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
+      - name: Generate website
+        run: node generateSite.js
+
+      - name: Commit and push website
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Actions"
+          git add index.html posts/ privacy.html about.html || true
+          git diff --staged --quiet || git commit -m "chore: update website [skip ci]"
+          git push
+
       - name: Upload pipeline artifacts
         if: always()
         uses: actions/upload-artifact@v4

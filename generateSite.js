@@ -145,7 +145,7 @@ function htmlHead(title, desc, canonical, base = '.') {
 
     /* ---- hero ---- */
     .hero {
-      background: url('./assets/og-image.png') center/cover no-repeat,
+      background: url('./assets/default-thumb.png') center/cover no-repeat,
                   linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
       color: var(--white);
       padding: 3rem 1.5rem;
@@ -227,6 +227,12 @@ function htmlHead(title, desc, canonical, base = '.') {
     }
     .card-title a { color: var(--text); }
     .card-title a:hover { color: var(--blue); text-decoration: none; }
+    .original-title {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+      font-style: italic;
+    }
     .card-excerpt {
       font-size: 0.875rem;
       color: var(--text-muted);
@@ -435,7 +441,7 @@ function buildIndex(posts) {
           <span>${escape(post.source || '')}</span>
         </div>
         <h2 class="card-title">
-          <a href="./posts/${escape(slug)}.html">${escape(post.title)}</a>
+          <a href="./posts/${escape(slug)}.html">${escape(post.titleJa || post.title)}</a>
         </h2>
         <p class="card-excerpt">${escape(snip)}</p>
         <div class="card-footer">
@@ -492,7 +498,8 @@ function buildArticlePage(post) {
         <a href="../">ホーム</a> &rsaquo; <span>${escape(catLabel)}</span>
       </nav>
       <div class="article-detail">
-        <h1>${escape(post.title)}</h1>
+        <h1>${escape(post.titleJa || post.title)}</h1>
+        ${post.titleJa ? `<p class="original-title">${escape(post.title)}</p>` : ''}
         <div class="meta">
           <span class="badge">${escape(catLabel)}</span>
           <span>${escape(date)}</span>

@@ -45,44 +45,62 @@ async function getArticleBody(article) {
 // ─────────────────────────────────────────────────────────────
 
 const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門家です。
-記事を読んで、X（旧Twitter）への投稿文を日本語で作成してください。
+記事を読んで、以下をJSON形式で返してください。
 
-【ルール】
-- URL・ハッシュタグを除いた本文を140字以内で書く
-- 「何が重要か」「なぜ今注目すべきか」「現場への影響」のどれかを必ず入れる
-- ニュースのタイトルをそのまま訳しただけの文章は禁止
-- 読んだ人が「これは見ておくべき」と思える視点を入れる
-- 体言止め・箇条書き禁止。自然な日本語の文章で書く
-- 投稿本文のみを返す（前置き・説明・ハッシュタグは不要）`;
+【出力形式】
+{
+  "titleJa": "日本語の見出し（25〜40文字、読者が思わずクリックしたくなる表現）",
+  "xPost": "X投稿本文（140字以内）"
+}
+
+【titleJaのルール】
+- ニュースの核心を一文で表す
+- 「〜が変わる」「〜の衝撃」「〜ついに登場」など引きのある表現を使う
+- 専門用語はそのまま使ってよい（BIM、IFC、デジタルツイン等）
+- 体言止めOK
+
+【xPostのルール】
+- 「何が重要か」「なぜ今注目すべきか」「現場への影響」のどれかを入れる
+- タイトルをそのまま訳した文章は禁止
+- 体言止め・箇条書き禁止。自然な日本語で書く
+- JSON以外は返さない`;
 
 async function generateXPostBody(article, articleBody) {
   const client = createClient();
-  if (!client) return "";
+  if (!client) return { xPost: "", titleJa: "" };
 
   const prompt = `記事タイトル: ${article.title}
 
 記事本文:
 ${articleBody.slice(0, 2500)}
 
-上記を読んで、X投稿文（140字以内）を作成してください。`;
+上記を読んで、JSONで返してください。`;
 
   try {
     const response = await client.messages.create({
       model:      "claude-haiku-4-5-20251001",
-      max_tokens: 300,
+      max_tokens: 400,
       system:     SYSTEM_PROMPT,
       messages:   [{ role: "user", content: prompt }],
     });
 
-    return response.content
+    const raw = response.content
       .filter((b) => b.type === "text")
       .map((b) => b.text)
       .join("")
-      .trim()
-      .slice(0, 140);
+      .trim();
+
+    const jsonMatch = raw.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) return { xPost: raw.slice(0, 140), titleJa: "" };
+
+    const parsed = JSON.parse(jsonMatch[0]);
+    return {
+      xPost:   (parsed.xPost   || "").slice(0, 140),
+      titleJa: (parsed.titleJa || "").slice(0, 60),
+    };
   } catch (err) {
     console.error(`[summarize] Claude API エラー: ${err.message}`);
-    return "";
+    return { xPost: "", titleJa: "" };
   }
 }
 
@@ -100,13 +118,15 @@ async function summarizeArticle(article) {
   console.log(`[summarize] 処理中: ${article.title?.slice(0, 50)}`);
   const body    = await getArticleBody(article);
   console.log(`[summarize] 記事本文取得: ${body.length}文字`);
-  const postBody = await generateXPostBody(article, body);
-  console.log(`[summarize] 投稿文生成: ${postBody.length > 0 ? "成功" : "空（失敗）"}`);
+  const result = await generateXPostBody(article, body);
+  console.log(`[summarize] 投稿文生成: ${result.xPost.length > 0 ? "成功" : "空（失敗）"}`);
+  console.log(`[summarize] 日本語タイトル: ${result.titleJa || "（生成失敗）"}`);
 
   return {
     ...article,
-    xPostBody:       postBody,
-    japaneseSummary: postBody, // 後方互換
+    titleJa:         result.titleJa,
+    xPostBody:       result.xPost,
+    japaneseSummary: result.xPost, // 後方互換
   };
 }
 

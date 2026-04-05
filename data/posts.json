@@ -2,7 +2,7 @@
   {
     "title": "今週のBIM・AEC注目ニュース（3月30日〜4月6日）",
     "titleJa": "今週のBIM・AEC注目ニュース（3月30日〜4月6日）",
-    "bodyJa": "今週は6件のBIM・AECニュースがありました。（ANTHROPIC_API_KEY が未設定のためまとめを生成できませんでした）",
+    "bodyJa": "今週は6件のBIM・AEC関連ニュースをお届けしました。各記事の詳細は上のリンクからご覧ください。",
     "category": "BIM_ECOSYSTEM",
     "pubDate": "2026-04-05T00:00:00.000Z",
     "slug": "weekly-2026-04-05",
@@ -30,7 +30,9 @@
     "score": 14,
     "freshnessScore": 0,
     "japaneseSummary": "",
-    "postText": "BIMエコシステムの最新情報👇\n\nModel Analytics Public Beta: What Happens When Insight Is Embedded, Not Ad…（1/27）\n\nhttps://autodeskblog.wpengine.com/aec/2026/01/27/model-analytics-public-beta\n\n#BIM #AEC #建設テック"
+    "postText": "BIMエコシステムの最新情報👇\n\nModel Analytics Public Beta: What Happens When Insight Is Embedded, Not Ad…（1/27）\n\nhttps://autodeskblog.wpengine.com/aec/2026/01/27/model-analytics-public-beta\n\n#BIM #AEC #建設テック",
+    "titleJa": "モデル健全性がついに可視化へ—Autodesk Model Analyticsが変える現場",
+    "bodyJa": "建築・土木業界では膨大なデータが存在しながら、有用な情報に変換できていません。ファイルサイズ増加、同期動作、バージョン不整合などの重要な指標が、Revitジャーナルやログに分散したままで、現場では対応に苦労しています。Autodesk Construction Cloud（ACC）の新機能「Model Analytics」は、モデル健全性を関連するシグナルを自動収集し、視覚化するツール。ファイル肥大化やRevitバージョンのズレなどの問題を早期発見でき、チーム全体の効率性と予測可能な納期達成に貢献します。"
   },
   {
     "title": "Discover New Revit Design Tips in Less Than 90 Seconds with Autodesk Learning Reels",
@@ -52,7 +54,9 @@
     "score": 13,
     "freshnessScore": 1,
     "japaneseSummary": "",
-    "postText": "Revitユーザー注目の情報です\n\nDiscover New Revit Design Tips in Less Than 90 Seconds with Autodesk L…（4/1）\n\nhttps://autodeskblog.wpengine.com/aec/2026/03/31/discover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-reels\n\n#Revit #BIM #Autodesk"
+    "postText": "Revitユーザー注目の情報です\n\nDiscover New Revit Design Tips in Less Than 90 Seconds with Autodesk L…（4/1）\n\nhttps://autodeskblog.wpengine.com/aec/2026/03/31/discover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-reels\n\n#Revit #BIM #Autodesk",
+    "titleJa": "90秒で学べるRevitの実践的スキル、Autodesk Learning Reelsがついに登場",
+    "bodyJa": "Autodeskが「Learning Reels」という90秒以下の超短編動画シリーズを展開しています。Revitなどの設計ソフトの実践的なワークフローと時短テクニックを、すぐに業務に活かせる形で提供するもので、鋼接続、公開設定、鉄筋分割などの具体的なテーマが用意されています。多くのユーザーが「短時間で実用的な知識を得たい」というニーズを抱えており、Learning ReelsはこれらをGame Changer的に解決。従来の体系的な学習コースの補完として機能し、さらに深い学習への入口となります。Autodeskはユーザーフィードバックを重視し、今後のコンテンツ拡充に反映させる予定です。"
   },
   {
     "title": "Introducing the New Revit Add-On Release for Content Catalog",
@@ -74,7 +78,9 @@
     "score": 12,
     "freshnessScore": 0,
     "japaneseSummary": "",
-    "postText": "Autodesk / Revit アップデート情報\n\nIntroducing the New Revit Add-On Release for Content Catalog（1/15）\n\nhttps://autodeskblog.wpengine.com/aec/2026/01/15/introducing-the-new-revit-add-on-release-for-content-catalog\n\n#Revit #BIM #Autodesk"
+    "postText": "Autodesk / Revit アップデート情報\n\nIntroducing the New Revit Add-On Release for Content Catalog（1/15）\n\nhttps://autodeskblog.wpengine.com/aec/2026/01/15/introducing-the-new-revit-add-on-release-for-content-catalog\n\n#Revit #BIM #Autodesk",
+    "titleJa": "RevitのContent Catalogが進化。クラウドモデルの自動接続で業務効率化",
+    "bodyJa": "Autodesk社がクラウドベースのデジタルアセット管理ツール「Content Catalog」の新版をリリースしました。最大の改善点は、Revitのクラウドモデルを開く際にAccurate Construction Cloud(ACC)アカウントを自動認識し、手動選択を不要にしたことです。これにより、ユーザーはアカウント選択による時間ロスやミスを削減できます。ローカルモデルは柔軟性を保つため手動選択のままです。さらに、バージョン更新通知機能やRevit・AutoCAD・Civil 3Dとの統合により、共通データ環境（CDE）での標準化と情報管理が強化されます。"
   },
   {
     "title": "What’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk Assistant and Forma Data Management Essentials",
@@ -96,7 +102,9 @@
     "score": 10,
     "freshnessScore": 2,
     "japaneseSummary": "",
-    "postText": "BIMエコシステムの最新情報👇\n\nWhat’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk …（4/3）\n\nhttps://autodeskblog.wpengine.com/aec/2026/04/02/whats-new-in-civil-3d-2027\n\n#BIM #AEC #建設テック"
+    "postText": "BIMエコシステムの最新情報👇\n\nWhat’s New in Civil 3D 2027: Advancing Infrastructure Design with Autodesk …（4/3）\n\nhttps://autodeskblog.wpengine.com/aec/2026/04/02/whats-new-in-civil-3d-2027\n\n#BIM #AEC #建設テック",
+    "titleJa": "Civil 3D 2027、AI助手と クラウド連携で インフラ設計が進化",
+    "bodyJa": "Autodesk Civil 3D 2027は、AI搭載のAutodesk AssistantとForma Data Management Essentialsを統合し、インフラ設計の効率化を実現します。Autodesk Assistantは会話型インターフェースを刷新し、図面要素の選択・情報集約・スタイル適用などの複雑なタスクをサポートする新技術プレビュー機能を搭載。Forma Data Management Essentialsはクラウドベースの集約環境として、プロジェクトデータの組織化、2D/3D表示、マークアップ機能を提供し、チーム間の情報共有を強化します。排水設計や平面線形、グレーディングワークフローの改善も加わり、設計評価と反復作業の効率が大幅に向上します。"
   },
   {
     "title": "Autodesk Construction Cloud is now Autodesk Forma",
@@ -119,7 +127,9 @@
     "score": 10,
     "freshnessScore": 0,
     "japaneseSummary": "",
-    "postText": "建設テックの最前線情報\n\nAutodesk Construction Cloud is now Autodesk Forma（3/24）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-construction-cloud-is-now-autodesk-forma\n\n#BIM #AEC #建設テック"
+    "postText": "建設テックの最前線情報\n\nAutodesk Construction Cloud is now Autodesk Forma（3/24）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-construction-cloud-is-now-autodesk-forma\n\n#BIM #AEC #建設テック",
+    "titleJa": "建設クラウドがFormaに統合、設計から運用まで一気通貫へ",
+    "bodyJa": "オートデスクが建設クラウド（ACC）をFormaに統合しました。これまで分断されていた計画・設計・施工・運用のワークフローを、クラウドベースのプラットフォームで一元管理する取り組みです。データ移行やワークフロー変更はなく、既存システムとの互換性を維持したまま、AI活用と共通データ基盤によりAECO業界の生産性向上を実現します。業界全体がデータドリブンな統合環境へ移行する重要なマイルストーンとなります。"
   },
   {
     "title": "Autodesk at the 2025 RIBA Stirling Prize Ceremony",
@@ -140,7 +150,9 @@
     "score": 7,
     "freshnessScore": 0,
     "japaneseSummary": "",
-    "postText": "BIMエコシステムの最新情報👇\n\nAutodesk at the 2025 RIBA Stirling Prize Ceremony（1/7）\n\nhttps://autodeskblog.wpengine.com/aec/2026/01/06/autodesk-at-the-2025-riba-stirling-prize-ceremony\n\n#BIM #AEC #建設テック"
+    "postText": "BIMエコシステムの最新情報👇\n\nAutodesk at the 2025 RIBA Stirling Prize Ceremony（1/7）\n\nhttps://autodeskblog.wpengine.com/aec/2026/01/06/autodesk-at-the-2025-riba-stirling-prize-ceremony\n\n#BIM #AEC #建設テック",
+    "titleJa": "建築の持続可能性が変わる、オートデスクがRIBA賞で推進する設計革新",
+    "bodyJa": "2025年10月16日、ロンドンで開催されたRIBA Stirling Prize授賞式にオートデスクが協賛しました。建築の卓越性と環境責任を評価する本賞では、Witherford Watson Mann Architectsの「Appleby Blue Almshouse」が受賞。オートデスクが提供する「Autodesk RIBA Sustainability Award」は、Hawkins Brownによる「Central Foundation Boys' School」に授与されました。同校プロジェクトは10年間の段階的改修を通じ、歴史的建築の保全と環境性能の大幅改善を実現。気候変動への対応と社会価値の向上を両立させる設計アプローチが評価されました。"
   },
   {
     "title": "Autodesk Flow Studio launches Wonder 3D Gen AI model to help creators make 3D characters and objects faster and easier",
@@ -161,7 +173,9 @@
     "score": 7,
     "freshnessScore": 2,
     "japaneseSummary": "",
-    "postText": "DX推進に役立つ情報です\n\nAutodesk Flow Studio launches Wonder 3D Gen AI model to help creators make 3D char…（4/3）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-characters-and-objects-faster-and-easier\n\n#AI #建設DX #DX"
+    "postText": "DX推進に役立つ情報です\n\nAutodesk Flow Studio launches Wonder 3D Gen AI model to help creators make 3D char…（4/3）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-characters-and-objects-faster-and-easier\n\n#AI #建設DX #DX",
+    "titleJa": "Autodesk、生成AI「Wonder 3D」で3D制作が変わる",
+    "bodyJa": "Autodeskは「Wonder 3D」という生成AIモデルをFlow Studioに統合しました。テキストから3D、画像から3Dへの変換に対応し、クリエイターが短時間で高品質な3Dアセットを生成できます。従来は複雑だった3D制作プロセスを大幅に簡略化し、ゲーム開発、映画制作、マーケティング、プロトタイピング分野で創作の敷居を下げます。テクニカルな負担を軽減しながら、クリエイティブコントロールを保つ設計により、プロフェッショナルから初心者まで幅広いクリエイターの生産性向上に貢献します。"
   },
   {
     "title": "Preserving the past with digital innovation: Autodesk named a Fast Company Most Innovative Company for 2026",
@@ -181,7 +195,9 @@
     "score": 6,
     "freshnessScore": 0,
     "japaneseSummary": "",
-    "postText": "BIMエコシステムの最新情報👇\n\nPreserving the past with digital innovation: Autodesk named a Fast Company…（3/26）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-named-fast-company-most-innovative-company-2026\n\n#BIM #AEC #建設テック"
+    "postText": "BIMエコシステムの最新情報👇\n\nPreserving the past with digital innovation: Autodesk named a Fast Company…（3/26）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-named-fast-company-most-innovative-company-2026\n\n#BIM #AEC #建設テック",
+    "titleJa": "歴史建造物の保存が変わる、Autodesk が革新企業として再認定",
+    "bodyJa": "Autodesk が Fast Company の「Most Innovative Companies 2026」にアーキテクチャ分野で2年連続選出されました。今年は歴史文化遺産の保全における デジタル技術の活用が評価されています。Notre-Dame 大聖堂やフランク・ロイド・ライト設計のFallingwater などの世界的文化遺産の復旧・保全に、3D BIM モデルやレーザースキャン、フォトグラメトリを活用。正確な記録と共有可能なデータ基盤により、複数企業の専門家が一元管理された情報から協働作業を実現し、歴史遺産を次世代へ守る新しい保全方法を確立しています。"
   },
   {
     "title": "Autodesk Construction Cloud to join Autodesk Forma on March 24",
@@ -201,7 +217,9 @@
     "score": 6,
     "freshnessScore": 0,
     "japaneseSummary": "",
-    "postText": "BIMエコシステムの最新情報👇\n\nAutodesk Construction Cloud to join Autodesk Forma on March 24（2/26）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-construction-cloud-to-join-forma\n\n#BIM #AEC #建設テック"
+    "postText": "BIMエコシステムの最新情報👇\n\nAutodesk Construction Cloud to join Autodesk Forma on March 24（2/26）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-construction-cloud-to-join-forma\n\n#BIM #AEC #建設テック",
+    "titleJa": "建設クラウドがFormaに統合、設計と施工が一つのプラットフォームに",
+    "bodyJa": "オートデスクは3月24日、建設クラウド「Autodesk Construction Cloud」を「Autodesk Forma」に統合します。設計から施工・運用までのプロジェクト全体を一つのクラウドプラットフォームで管理できる環境を実現します。既存のDocs、BIM Collaborate Pro、Buildなどは名称変更されますが、データ移行は不要で、ワークフロー・API・ライセンスは継続して利用可能です。この統合により、情報の断片化を削減し、より効率的な意思決定が可能になります。"
   },
   {
     "title": "Expanding FedRAMP® Moderate Authorization brings connected, secure future to Autodesk Construction Cloud and Fusion federal customers",
@@ -221,7 +239,9 @@
     "score": 6,
     "freshnessScore": 0,
     "japaneseSummary": "",
-    "postText": "建設テックの最前線情報\n\nExpanding FedRAMP® Moderate Authorization brings connected, secure future to Au…（2/13）\n\nhttps://adsknews.autodesk.com/en/news/fedramp-acc-fusion\n\n#BIM #AEC #建設テック"
+    "postText": "建設テックの最前線情報\n\nExpanding FedRAMP® Moderate Authorization brings connected, secure future to Au…（2/13）\n\nhttps://adsknews.autodesk.com/en/news/fedramp-acc-fusion\n\n#BIM #AEC #建設テック",
+    "titleJa": "オートデスク、FedRAMP認証拡大で米政府向けBIM・設計環境が進化",
+    "bodyJa": "オートデスクは、Autodesk Construction CloudとAutodesk Fusionに対するFedRAMP Moderate認証取得を目指すと発表しました。2024年に達成したAutodesk Docsとバージョンアップに続く拡大で、連邦機関と防衛関連企業向けに統合的な建設管理・製品設計機能を提供します。AWS GovCloudをインフラとし、ITAR対応やCMMC適合支援も含まれます。政府プロジェクトの情報サイロ解消と、デジタルワークフロー統一により、より効率的な計画・実行・協業を実現する重要な一歩です。"
   },
   {
     "title": "Key Outcomes from the Domain Leadership Conference in Zurich",
@@ -241,7 +261,9 @@
     "score": 6,
     "freshnessScore": 0,
     "japaneseSummary": "",
-    "postText": "IFC・openBIM 標準化の最新情報\n\nKey Outcomes from the Domain Leadership Conference in Zuri…（3/20）\n\nhttps://www.buildingsmart.org/key-outcomes-from-the-domain-leadership-conference-in-zurich\n\n#IFC #openBIM #buildingSMART"
+    "postText": "IFC・openBIM 標準化の最新情報\n\nKey Outcomes from the Domain Leadership Conference in Zuri…（3/20）\n\nhttps://www.buildingsmart.org/key-outcomes-from-the-domain-leadership-conference-in-zurich\n\n#IFC #openBIM #buildingSMART",
+    "titleJa": "buildingSMART国際会議、IFC 4.3とクロスドメイン連携で業界標準の未来を決定",
+    "bodyJa": "buildingSMART Internationalがチューリッヒで開催したドメインリーダーシップカンファレンスは、建設業界のデジタル化を推進する重要な転機となりました。会議ではIFC 4.3の継続開発、ドメイン間の協働強化、デジタル製品パスポート（DPP）の活用が主要議題となっています。openBIM標準の信頼性と相互運用性を確保しながら、複数の産業セクター間での知識交換を構造化することで、建設環境全体の統合ソリューション実現を目指します。"
   },
   {
     "title": "Autodesk acquires Rhumbix in construction data push",
@@ -261,7 +283,9 @@
     "score": 6,
     "freshnessScore": 2,
     "japaneseSummary": "",
-    "postText": "建設業界のAI活用事例です\n\nAutodesk acquires Rhumbix in construction data push（4/3）\n\nhttps://www.constructiondive.com/news/autodesk-acquires-rhumbix-construction-data/816526\n\n#AI #建設DX #DX"
+    "postText": "建設業界のAI活用事例です\n\nAutodesk acquires Rhumbix in construction data push（4/3）\n\nhttps://www.constructiondive.com/news/autodesk-acquires-rhumbix-construction-data/816526\n\n#AI #建設DX #DX",
+    "titleJa": "AutodeskがRhumbix買収、建設現場のデータ一元化が加速",
+    "bodyJa": "建設業界における深刻なデータサイロ問題に対応するため、Autodesk は建設現場のデータ収集・可視化を専門とするRhumbix を買収しました。Rhumbix は勤務時間管理、労務、給与管理にわたるジョブサイトデータの正確な収集を提供し、Turner Construction やDPR Construction など大手ゼネコンが導入しています。この買収により、Autodesk は企画・設計・実行に至るまで建設プロジェクト全体のプロセスを連携させるプラットフォームの実現を加速。建設業の構造的な課題であるデータ品質の向上とプロセス効率化が期待されます。"
   },
   {
     "title": "Choreographing Lagos: Dele Adeyemo on Dance, Cosmology, and Spatial Practices",
@@ -281,6 +305,8 @@
     "score": 6,
     "freshnessScore": 3,
     "japaneseSummary": "",
-    "postText": "DX推進に役立つ情報です\n\nChoreographing Lagos: Dele Adeyemo on Dance, Cosmology, and Spatial Practices（4/4）\n\nhttps://www.archdaily.com/1039851/choreographing-lagos-dele-adeyemo-on-dance-cosmology-and-spatial-practices\n\n#AI #建設DX #DX"
+    "postText": "DX推進に役立つ情報です\n\nChoreographing Lagos: Dele Adeyemo on Dance, Cosmology, and Spatial Practices（4/4）\n\nhttps://www.archdaily.com/1039851/choreographing-lagos-dele-adeyemo-on-dance-cosmology-and-spatial-practices\n\n#AI #建設DX #DX",
+    "titleJa": "ダンスと宇宙観で空間を再定義する—ラゴスの建築実践が変える",
+    "bodyJa": "スコットランド・ナイジェリア系建築家デレ・アデイェモが、ラゴスでの長年の研究をもとに、ダンスや精神性と建築を融合させた新しい空間実践を展開しています。資本主義以前の集団運動から生まれた空間知を探求し、黒人建築やポスト植民地的視点から、従来の建築思考の欠陥として見なされてきた実践に設計の洗練性を見いだします。ヨルバ文化の宇宙観と現代建築の融合は、脱植民地化と生態系再生への新しいアプローチを示しています。"
   }
 ]

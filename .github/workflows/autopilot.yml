@@ -217,11 +217,17 @@ jobs:
         run: node designReview.js
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      - name: レビュー結果をコミット
+
+      - name: デザイン改善を自動実装
+        run: node designImplement.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: レビュー・実装結果をコミット
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add DESIGN_REVIEW.md
-          git diff --staged --quiet || git commit -m "docs: 週次デザインレビュー $(date +'%Y-%m-%d')"
+          git add DESIGN_REVIEW.md generateSite.js index.html posts/ categories/ data/ || true
+          git diff --staged --quiet || git commit -m "feat: 週次デザインレビュー＆自動改善実装 $(date +'%Y-%m-%d')"
           git fetch origin main
           git push --force-with-lease

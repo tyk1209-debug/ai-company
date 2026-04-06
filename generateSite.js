@@ -256,6 +256,16 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       opacity: 0.95;
       margin-top: 0.25rem;
     }
+    .hero-badge strong { color: #93c5fd; font-weight: 700; }
+    .hero-stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+    .reading-time { color: var(--text-muted); font-size: 0.8rem; }
 
     /* ---- layout ---- */
     .container {
@@ -748,12 +758,13 @@ function buildIndex(posts, totalCount = 0) {
     const date = formatDate(post.pubDate);
     const snippetText = post.bodyJa || post.postText || post.summary || '';
     const snip = excerpt(snippetText, 120);
+    const readingMin = Math.max(1, Math.ceil((post.bodyJa || '').length / 500));
 
     return `
       <article class="article-card" data-category="${escape(catKey)}">
         <div class="card-meta">
           <span class="badge">${escape(catLabel)}</span>
-          <span class="card-meta-right"><span>${escape(post.source || '')}</span><span>${escape(date)}</span></span>
+          <span class="card-meta-right"><span>${escape(post.source || '')}</span><span>${escape(date)}</span><span class="reading-time">約${readingMin}分</span></span>
         </div>
         <h2 class="card-title">
           <a href="./posts/${escape(slug)}.html">${escape(post.titleJa || post.title)}</a>
@@ -866,7 +877,12 @@ function buildIndex(posts, totalCount = 0) {
   <div class="hero">
     <div class="hero-content">
       <h1>BIM・AEC・建設DXの最新ニュース</h1>
-      <span class="hero-badge">Revit・Archicad・IFC・デジタルツイン・建設テックの最新トレンドをAIが解説</span>
+      <span class="hero-badge">世界中のBIM・AECニュースを<strong>AIが毎日日本語で解説</strong> — Revit・Archicad・IFC・デジタルツイン</span>
+      <div class="hero-stats">
+        <span>📰 ${articleCount}件の専門記事</span>
+        <span>🤖 AI自動解説</span>
+        <span>🕐 毎日更新</span>
+      </div>
     </div>
   </div>` +
     categoryNavHtml +

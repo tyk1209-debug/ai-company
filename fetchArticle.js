@@ -11,7 +11,7 @@ const https = require("https");
 const http  = require("http");
 
 const FETCH_TIMEOUT_MS = 10000;
-const MAX_TEXT_LENGTH  = 3000; // Claudeに渡す最大文字数
+const MAX_TEXT_LENGTH  = 6000; // Claudeに渡す最大文字数
 
 // ─────────────────────────────────────────────────────────────
 // HTML → プレーンテキスト変換

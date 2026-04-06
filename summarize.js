@@ -92,7 +92,7 @@ async function generateXPostBody(article, articleBody) {
   const prompt = `記事タイトル: ${article.title}
 
 記事本文:
-${articleBody.slice(0, 2500)}
+${articleBody.slice(0, 5000)}
 
 上記を読んで、JSONで返してください。`;
 

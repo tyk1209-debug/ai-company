@@ -19,7 +19,7 @@
   <meta name="twitter:image" content="https://aec-news.com/assets/og-image.png">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="icon" type="image/png" href="../assets/favicon.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Can a small workstation handle big BIM?","description":"We explore where small systems shine, where their limitations lie, and when a traditional tower still makes more sense T…","datePublished":"2026-02-03T05:00:38.000Z","dateModified":"2026-02-03T05:00:38.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/can-a-small-workstation-handle-big-bim.html","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/can-a-small-workstation-handle-big-bim.html"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"小型ワークステーションは大規模BIMに対応できるか？性能の真実","description":"We explore where small systems shine, where their limitations lie, and when a traditional tower still makes more sense T…","datePublished":"2026-02-03T05:00:38.000Z","dateModified":"2026-02-03T05:00:38.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/can-a-small-workstation-handle-big-bim.html","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/can-a-small-workstation-handle-big-bim.html"}}</script>
   <!-- Google AdSense -->
   <!-- TODO: 20記事蓄積後に有効化 — ca-pub-XXXXXXXXXXXXXXXX を実際のパブリッシャーIDに差し替える -->
   <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
@@ -583,22 +583,23 @@
         <a href="../">ホーム</a> &rsaquo; <span>BIM全般</span>
       </nav>
       <div class="article-detail">
-        <h1>Can a small workstation handle big BIM?</h1>
-        
+        <h1>小型ワークステーションは大規模BIMに対応できるか？性能の真実</h1>
+        <p class="original-title">Can a small workstation handle big BIM?</p>
         <div class="meta">
           <span class="badge">BIM全般</span>
           <span>2026年2月3日</span>
           <span>出典: AEC Magazine</span>
         </div>
-        <p class="reading-time">約1分で読めます</p>
+        <p class="reading-time">約3分で読めます</p>
         <div class="article-body">
-          <div class="ai-comment-label">AIによる専門家コメント</div><div class="post-text-box">建設テックの最前線情報
-
-Can a small workstation handle big BIM?（2/3）
-
-https://aecmag.com/workstations/can-a-small-workstation-really-handle-big-bim-cad-and-viz
-
-#BIM #AEC #建設テック</div>
+          <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+<p>コンパクトなワークステーション（HP Z2 Mini、Lenovo ThinkStation P3 Ultra SFFなど）が急速に普及しています。デスク空間の節約と集約的なラック配置での運用効率化が評価される一方で、小型化による性能制約が懸念されており、BIM実務での実用性を正確に理解する必要があります。</p>
+<p>【内容】</p>
+<p>コンパクトワークステーションとタワー型では同じプロセッサを搭載できますが、電源供給と冷却能力に大きな差があります。例えばLenovo P3 Ultra SFFは330W電源で、Intel Core Ultra 9 285K（最大250W）を搭載しても、熱的制約により持続動作時は125W程度に抑制されます。一方、P3 Towerは1,100W電源と優れた冷却系により、同じプロセッサでも高い周波数を維持できます。ただしRevitやSolidWorksなどのCAD・BIM作業は通常1～2コアのみ使用するため、両機種の性能差は実質的に無視できます。GPU側も同様で、コンパクト機は70W程度のRTX Pro 2000クラスに限定されますが、最新のBlackwell世代では低電力化と機能統合により、従来の大型GPU との性能格差が大幅に縮小しています。</p>
+<p>【技術的ポイント】</p>
+<p>ピーク性能と持続性能の区別が重要です。CAD・BIM作業で顕在化するのはシングルスレッド性能で、コンパクト機でも充分な性能が得られます。問題は、レンダリングやシミュレーション時の全コア動作時に生じます。コンパクト機は電源容量と放熱設計の制約により、CPUのTurbo周波数を維持できず、持続的な多スレッド負荷で性能が大幅に低下します。また、GPU側ではTensorコア（AI演算）やRTコア（レイトレーシング）の世代進化により、低TDP GPUでの処理能力が飛躍的に向上しています。</p>
+<p>【業界への影響】</p>
+<p>BIM実務の大多数はRevitモデリングなど単一～軽度のマルチスレッド作業であり、コンパクトワークステーションで問題なく対応可能です。オフィス拡張時やリモートワーク環境での利用、ラック集約型のセントラルワークステーション戦略では、コンパクト機が有力選択肢となります。一方、大規模シミュレーションやフォトリアル・レンダリングが頻繁に発生するプロジェクトでは、従来のタワー型が依然として必要です。企業のBIM運用方針やプロジェクト特性に応じた適切な機種選択が、TCO削減と生産性向上の鍵となります。</p></div>
         </div>
         <div class="source-box">
           元記事: <a href="https://aecmag.com/workstations/can-a-small-workstation-really-handle-big-bim-cad-and-viz" target="_blank" rel="noopener noreferrer">https://aecmag.com/workstations/can-a-small-workstation-really-handle-big-bim-cad-and-viz</a>
@@ -608,7 +609,7 @@ https://aecmag.com/workstations/can-a-small-workstation-really-handle-big-bim-ca
           <a href="https://www.amazon.co.jp/s?k=BIM+建築+設計&amp;tag=aecnewsjapan-22" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 BIM導入・活用ガイド を Amazonで見る →</a>
         </div>
         <div style="margin-top:1.5rem;">
-          <a class="share-btn" href="https://twitter.com/intent/tweet?text=Can%20a%20small%20workstation%20handle%20big%20BIM%3F&url=https%3A%2F%2Faec-news.com%2Fposts%2Fcan-a-small-workstation-handle-big-bim.html" target="_blank" rel="noopener noreferrer">X でシェアする</a>
+          <a class="share-btn" href="https://twitter.com/intent/tweet?text=%E5%B0%8F%E5%9E%8B%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AF%E5%A4%A7%E8%A6%8F%E6%A8%A1BIM%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B%EF%BC%9F%E6%80%A7%E8%83%BD%E3%81%AE%E7%9C%9F%E5%AE%9F&url=https%3A%2F%2Faec-news.com%2Fposts%2Fcan-a-small-workstation-handle-big-bim.html" target="_blank" rel="noopener noreferrer">X でシェアする</a>
         </div>
       </div>
       
@@ -616,15 +617,15 @@ https://aecmag.com/workstations/can-a-small-workstation-really-handle-big-bim-ca
         <h2 class="related-title">関連記事</h2>
         <ul class="related-list">
           <li class="related-item">
-            <a href="../posts/embodied-carbon-calcs-for-bim-objects.html">Embodied carbon calcs for BIM objects</a>
+            <a href="../posts/embodied-carbon-calcs-for-bim-objects.html">BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開</a>
             <span class="related-date">2026年4月1日</span>
           </li>
           <li class="related-item">
-            <a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">Preserving the past with digital innovation: Autodesk named a Fast Company Most Innovative Company for 2026</a>
+            <a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダムからフォーリングウォーターまで、BIM×デジタルツインで文化遺産保存の新時代へ</a>
             <span class="related-date">2026年3月26日</span>
           </li>
           <li class="related-item">
-            <a href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">Autodesk Construction Cloud is now Autodesk Forma</a>
+            <a href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">Autodesk Construction Cloud改名、Formaへ統合。設計から施工まで一元化へ</a>
             <span class="related-date">2026年3月24日</span>
           </li>
         </ul>

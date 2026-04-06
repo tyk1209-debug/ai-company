@@ -5,10 +5,15 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-18T09:25:14.000Z",
     "summary": "Users of Vectorworks, Revit and Archicad given access to Maxon’s “cinematic rendering technology” The post Maxon launches RedShift for Archviz appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.896Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "ARCHICAD",
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "revit",
@@ -24,11 +29,16 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-07T07:22:16.000Z",
     "summary": "With AI, could solver-driven design tools radically reshape our industry in as little as five years? The post The agentic future of BIM appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.896Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
       "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
     ],
     "keywordHits": [
       "bim",
@@ -45,11 +55,15 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-25T17:18:25.000Z",
     "summary": "With design automation, AI, and data-driven approaches set to reshape AEC, NXT BLD has never felt more important The post NXT BLD 2026: a decade of looking around corners appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec",
       "design automation"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
     ],
     "keywordHits": [
       "aec",
@@ -66,11 +80,16 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:36.000Z",
     "summary": "We dive deep into the future of AI in AEC - exploring the rise of agentic BIM and lots more The post AEC Magazine March / April 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
       "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
     ],
     "keywordHits": [
       "bim",
@@ -87,10 +106,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-18T16:56:45.000Z",
     "summary": "What World Labs investment means for AEC design workflows The post Autodesk’s $200m bet on spatial AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
     ],
     "keywordHits": [
       "aec",
@@ -107,10 +130,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-03T14:51:09.000Z",
     "summary": "UK construction technology company Qflow provides real-time material tracking and management software The post Autodesk invests £2M in construction material tracking firm appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
     ],
     "keywordHits": [
       "aec",
@@ -126,10 +153,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-01-23T11:29:22.000Z",
     "summary": "Models can be brought into Rhino, via the Cityweft platform, with support for Revit and SketchUp coming soon The post Cityweft adds 3D building data for England appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "revit",
@@ -144,11 +175,16 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-05T08:00:45.000Z",
     "summary": "Even the fastest GPU can stall if it runs out of memory. CAD, BIM visualisation, and AI workflows often demand more than you think, and it all adds up when multi-tasking, writes Greg Corke The post Why GPU memory matters for CAD, viz and AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.851Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
       "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
     ],
     "keywordHits": [
       "bim",
@@ -165,10 +201,13 @@
     "source": "ArchDaily",
     "pubDate": "2026-04-06T00:00:00.000Z",
     "summary": "\"Built on the former site of Tianjin First Machine Tool Factory, Jin 1 PARK revitalizes existing resources by introducing diverse business formats while preserving industrial heritage and continuing the area's industrial spirit. It has transformed into a dynamic hub for emerging industries and a new hotspot for cultural tourism. This initiative not only preserves the city's memory but also injects contemporary vitality, serving as a vivid example of Tianjin's connotative development driving the renewal of its old urban areas.\" — Tianjin Daily.",
-    "fetchedAt": "2026-04-06T06:20:19.992Z",
+    "fetchedAt": "2026-04-06T06:39:21.471Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
+    ],
+    "allCategories": [
+      "REVIT"
     ],
     "keywordHits": [
       "revit"
@@ -182,10 +221,14 @@
     "source": "BIMゲート",
     "pubDate": "2026-02-18T02:49:52.000Z",
     "summary": "オブジェクトの呼称と種類 RevitにおけるBIMオブジェクトは、一般に「ファミリ（※注1）」と呼ばれます。ファミリは、BIMモデルを構成する情報オブジェクトであり、形状・属性情報・振る舞いを併せ持つ点が特徴です。 Re […]",
-    "fetchedAt": "2026-04-06T06:20:20.684Z",
+    "fetchedAt": "2026-04-06T06:39:22.947Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "revit",
@@ -200,10 +243,14 @@
     "source": "BIMゲート",
     "pubDate": "2026-02-18T02:46:33.000Z",
     "summary": "オブジェクトの呼称と種類 GLOOBEのオブジェクトは大きく分けて3種類に分類されます。まず、【専用オブジェクト（.glm）】と呼ばれる構造体や仕上げ、手摺といった建築要素に特化した専用属性を保有したオブジェクトです。 […]",
-    "fetchedAt": "2026-04-06T06:20:20.684Z",
+    "fetchedAt": "2026-04-06T06:39:22.947Z",
     "category": "GLOOBE",
     "categoryHits": [
       "gloobe"
+    ],
+    "allCategories": [
+      "GLOOBE",
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "gloobe",
@@ -218,10 +265,13 @@
     "source": "Autodesk News",
     "pubDate": "2026-03-24T14:56:49.000Z",
     "summary": "Autodesk Forma connects design and construction workflows across the AECO lifecycle.",
-    "fetchedAt": "2026-04-06T06:20:20.106Z",
+    "fetchedAt": "2026-04-06T06:39:22.377Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "construction cloud"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "autodesk",
@@ -237,11 +287,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-01T08:58:11.000Z",
     "summary": "NBS partners with Circular Ecology to launch practical guide for construction professionals The post Embodied carbon calcs for BIM objects appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.896Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "bim",
@@ -256,11 +309,16 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:44.000Z",
     "summary": "AI could consolidate AEC firms, reshape design practice and elevate full-stack designers, transforming BIM into an intelligent, integrated decision hub The post AI, design, and re-shaping the AEC industry appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
       "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
     ],
     "keywordHits": [
       "bim",
@@ -276,10 +334,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T06:00:14.000Z",
     "summary": "How Autodesk’s EULA shift reshaped the AI training debate The post Rewriting the rules appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
     ],
     "keywordHits": [
       "aec",
@@ -295,10 +357,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-05T07:00:07.000Z",
     "summary": "Amy Bunszel, EVP of AEC solutions, Autodesk, on what she expects to see from AI in 2026 The post AI in AEC: why better decisions matter more than faster tools appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
     ],
     "keywordHits": [
       "aec",
@@ -314,10 +380,13 @@
     "source": "Autodesk News",
     "pubDate": "2026-04-02T20:12:53.000Z",
     "summary": "New model in Flow Studio enables text and image to 3D workflows",
-    "fetchedAt": "2026-04-06T06:20:20.106Z",
+    "fetchedAt": "2026-04-06T06:39:22.377Z",
     "category": "AI_DX",
     "categoryHits": [
       "ai"
+    ],
+    "allCategories": [
+      "AI_DX"
     ],
     "keywordHits": [
       "autodesk",
@@ -333,10 +402,13 @@
     "source": "Autodesk News",
     "pubDate": "2026-03-26T14:56:40.000Z",
     "summary": "Autodesk recognized in Fast Company’s 2026 Most Innovative Companies list for advancing historic and cultural preservation through BIM, reality capture, and cloud-based collaboration.",
-    "fetchedAt": "2026-04-06T06:20:20.106Z",
+    "fetchedAt": "2026-04-06T06:39:22.377Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "bim",
@@ -351,10 +423,13 @@
     "source": "Autodesk News",
     "pubDate": "2026-02-25T15:57:16.000Z",
     "summary": "Autodesk Construction Cloud becomes part of Autodesk Forma on March 24.",
-    "fetchedAt": "2026-04-06T06:20:20.106Z",
+    "fetchedAt": "2026-04-06T06:39:22.377Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "construction cloud"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "autodesk",
@@ -369,10 +444,13 @@
     "source": "Autodesk News",
     "pubDate": "2026-02-12T15:58:44.000Z",
     "summary": "Bringing FedRAMP Moderate Authorization to Autodesk Construction Cloud and Fusion.",
-    "fetchedAt": "2026-04-06T06:20:20.106Z",
+    "fetchedAt": "2026-04-06T06:39:22.377Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "construction cloud"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "autodesk",
@@ -387,10 +465,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:01.000Z",
     "summary": "Allplan is charting a measured path where openness, data sovereignty, and automation underpin its design-to-build strategy The post Design-to-build in the age of AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
     ],
     "keywordHits": [
       "aec",
@@ -406,11 +488,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:13.000Z",
     "summary": "From modelling tool to intelligence layer that continuously validates models The post Rethinking the BIM platform appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "bim",
@@ -425,12 +510,15 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-20T10:02:15.000Z",
     "summary": "On-site reality capture analysis data pushed directly into the BIM collaboration platform The post Hexagon Multivista connects to Revizto appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
       "aec",
       "bim collaboration"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "bim",
@@ -445,11 +533,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-03T05:00:07.000Z",
     "summary": "This tower handles CAD, BIM, and viz tasks efficiently while staying price-conscious The post Review: CyberPowerPC Intel Core U7WS Workstation appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "bim",
@@ -464,11 +555,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-03T05:00:38.000Z",
     "summary": "We explore where small systems shine, where their limitations lie, and when a traditional tower still makes more sense The post Can a small workstation handle big BIM? appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "bim",
@@ -483,11 +577,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-03T05:00:32.000Z",
     "summary": "Our top picks — from lightweight 14-inch models to take CAD and BIM on the road to 18-inch powerhouses The post Best enterprise workstation laptops 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "bim",
@@ -502,10 +599,14 @@
     "source": "AEC Magazine",
     "pubDate": "2026-01-23T10:30:15.000Z",
     "summary": "Uses AI and automation to help firms get the most out of their established CMap processes The post CMap introduces CMap intelligence appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.850Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
     ],
     "keywordHits": [
       "aec",
@@ -521,11 +622,15 @@
     "source": "AEC Magazine",
     "pubDate": "2026-01-20T16:08:33.000Z",
     "summary": "Deal will push agentic AI deeper into construction workflows The post Procore acquires Datagrid appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-06T06:20:23.897Z",
+    "fetchedAt": "2026-04-06T06:39:24.851Z",
     "category": "AI_DX",
     "categoryHits": [
       "ai",
       "agent"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
     ],
     "keywordHits": [
       "aec",

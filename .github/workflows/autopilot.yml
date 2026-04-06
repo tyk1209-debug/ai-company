@@ -18,6 +18,8 @@ jobs:
   run-news-pipeline:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -137,6 +139,8 @@ jobs:
   weekly-digest:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    permissions:
+      contents: write
     if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 1'
 
     steps:
@@ -185,6 +189,8 @@ jobs:
 
   design-review:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     if: github.event_name == 'schedule' && github.event.schedule == '0 1 * * 1'
     steps:
       - uses: actions/checkout@v4

@@ -28,10 +28,14 @@ function sleep(ms) {
 async function main() {
   const posts = JSON.parse(fs.readFileSync(POSTS_PATH, "utf-8"));
 
-  // titleJa が空またはない記事を抽出（週次まとめ等は既存なのでスキップ）
-  const targets = posts.filter(
-    (p) => !p.titleJa || p.titleJa.trim() === ""
-  );
+  // titleJa が空、または bodyJa が薄い（400文字未満）記事を抽出
+  // 週次まとめ（slugが"weekly-"で始まる）はスキップ
+  const targets = posts.filter((p) => {
+    if (p.slug && p.slug.startsWith("weekly-")) return false;
+    const missingTitle = !p.titleJa || p.titleJa.trim() === "";
+    const thinBody = !p.bodyJa || p.bodyJa.length < 400;
+    return missingTitle || thinBody;
+  });
 
   console.log(`[retroactiveJa] 対象記事数: ${targets.length} / 全${posts.length}件`);
 
@@ -70,6 +74,7 @@ async function main() {
             bodyJa:  updated.bodyJa || "",
           };
           console.log(`[retroactiveJa]   titleJa: ${updated.titleJa}`);
+          console.log(`[retroactiveJa]   bodyJa: ${(updated.bodyJa || "").length}文字`);
           successCount++;
         }
       } else {

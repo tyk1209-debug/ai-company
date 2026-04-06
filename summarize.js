@@ -70,15 +70,17 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者�
 - 体言止めOK
 
 【bodyJaのルール】（relevant: true のときのみ）— サイト掲載用の深い解説記事
-- 以下の4部構成で書く:
-  1. 【背景】なぜこのニュースが生まれたか、業界の文脈（100〜150文字）
-  2. 【内容】何が発表・実現されたか、具体的な機能・数値・仕様（150〜200文字）
-  3. 【技術的ポイント】BIM/AEC専門家が注目すべき技術的詳細（100〜150文字）
-  4. 【業界への影響】現場・プロジェクト・業界全体にどう影響するか（150〜200文字）
+⚠️ 必ず500文字以上800文字以下で書くこと。これより短い場合は不合格です。
+- 以下の4部構成で書く（各部の文字数を必ず守ること）:
+  1. 【背景】なぜこのニュースが生まれたか、業界の文脈（最低100文字）
+  2. 【内容】何が発表・実現されたか、具体的な機能・数値・仕様（最低150文字）
+  3. 【技術的ポイント】BIM/AEC専門家が注目すべき技術的詳細（最低100文字）
+  4. 【業界への影響】現場・プロジェクト・業界全体にどう影響するか（最低150文字）
+- 各部は必ず具体的な説明を含める。「〜が期待されます」のような曖昧な表現だけで終わらせない
 - 専門用語（BIM、IFC、デジタルツイン、LOD等）はそのまま使用
 - ですます調で統一する
-- 合計500〜800文字を厳守する
-- 各部に改行を入れて読みやすくする
+- 合計500〜800文字を絶対厳守する（400文字以下は禁止）
+- 各部の見出し（【背景】等）を含めて改行を入れて読みやすくする
 
 【xPostのルール】（relevant: true のときのみ）— X（Twitter）用のコンパクトな引きつけ投稿
 - 冒頭に建設・設計関連の絵文字を必ず1つ入れる（🏗️🔧📐💡🖥️🏢📊🔩⚙️など）
@@ -105,7 +107,7 @@ ${articleBody.slice(0, 5000)}
   try {
     const response = await client.messages.create({
       model:      "claude-haiku-4-5-20251001",
-      max_tokens: 1800,
+      max_tokens: 3000,
       system:     SYSTEM_PROMPT,
       messages:   [{ role: "user", content: prompt }],
     });
@@ -124,7 +126,7 @@ ${articleBody.slice(0, 5000)}
       relevant: parsed.relevant !== false, // 明示的にfalseの場合のみ除外
       xPost:   (parsed.xPost   || "").slice(0, 210),
       titleJa: (parsed.titleJa || "").slice(0, 60),
-      bodyJa:  (parsed.bodyJa  || "").slice(0, 1500),
+      bodyJa:  (parsed.bodyJa  || "").slice(0, 3000),
     };
   } catch (err) {
     console.error(`[summarize] Claude API エラー: ${err.message}`);

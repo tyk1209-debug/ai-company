@@ -161,8 +161,9 @@ function detectCategory(text) {
   }
 
   return {
-    category:     best || "OTHER",
-    categoryHits: scores[best]?.hits || [],
+    category:      best || "OTHER",
+    categoryHits:  scores[best]?.hits || [],
+    allCategories: Object.keys(scores),
   };
 }
 
@@ -189,13 +190,14 @@ function scoreArticle(article) {
   const text = getSearchText(article);
 
   const { score, keywordHits }     = calcKeywordScore(text);
-  const { category, categoryHits } = detectCategory(text);
+  const { category, categoryHits, allCategories } = detectCategory(text);
   const freshnessScore             = calcFreshnessScore(article.pubDate);
 
   return {
     ...article,
     category,
     categoryHits,
+    allCategories,
     keywordHits,
     score:          score + freshnessScore,
     freshnessScore,

@@ -100,7 +100,11 @@ function formatPubDate(isoDate) {
  * @returns {string} 投稿文
  */
 function generatePost(article) {
-  const hashtags = CATEGORY_HASHTAGS[article.category] || CATEGORY_HASHTAGS.OTHER;
+  const baseHashtags = CATEGORY_HASHTAGS[article.category] || CATEGORY_HASHTAGS.OTHER;
+  const extraHashtags = (article.allCategories || [])
+    .filter(c => c !== article.category && CATEGORY_HASHTAGS[c])
+    .flatMap(c => CATEGORY_HASHTAGS[c]);
+  const hashtags = [...new Set([...baseHashtags, ...extraHashtags])];
   const hashStr  = hashtags.join(" ");
 
   // Claude生成の本文があればそちらを優先

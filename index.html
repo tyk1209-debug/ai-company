@@ -482,6 +482,30 @@
     .static-page p, .static-page li { font-size: 0.9rem; line-height: 1.8; margin-bottom: 0.5rem; }
     .static-page ul { padding-left: 1.4rem; }
 
+    /* ---- CTA block ---- */
+    .cta-block {
+      background:
+        linear-gradient(135deg, rgba(10,22,40,0.88) 0%, rgba(15,42,74,0.85) 100%),
+        url('./assets/cta-bg.png') center/cover no-repeat;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .cta-block-inner { max-width: 640px; margin: 0 auto; }
+    .cta-block-title { font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem; line-height: 1.35; }
+    .cta-block-desc { font-size: 0.95rem; color: rgba(255,255,255,0.72); margin-bottom: 1.75rem; line-height: 1.7; }
+    .cta-block-btn {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .cta-block-btn:hover { background: #1d4ed8; transform: translateY(-1px); text-decoration: none; }
+
     /* ---- footer ---- */
     .site-footer {
       background: #0a1628;
@@ -763,7 +787,7 @@
         <div class="featured-grid">
           
       <article class="featured-card featured-main">
-        <div class="featured-thumb" style="background:linear-gradient(135deg, #2d1b69 0%, #8b5cf6 100%)">
+        <div class="featured-thumb" style="background: linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(139,92,246,0.55) 100%), url('./assets/blue-ai-digital-cube.jpg') center/cover no-repeat;">
           <span class="badge">AI/DX</span>
         </div>
         <div class="featured-body">
@@ -779,7 +803,7 @@
         </div>
       </article>
       <article class="featured-card">
-        <div class="featured-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="featured-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <span class="badge">BIM全般</span>
         </div>
         <div class="featured-body">
@@ -795,7 +819,7 @@
         </div>
       </article>
       <article class="featured-card">
-        <div class="featured-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="featured-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <span class="badge">BIM全般</span>
         </div>
         <div class="featured-body">
@@ -815,7 +839,7 @@
         <div class="article-list">
           
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -834,7 +858,7 @@
         </div>
       </article>
       <article class="article-card" data-category="REVIT">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(14,165,233,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">Revit</span></div>
         </div>
         <div class="card-body">
@@ -853,7 +877,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_AI">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #2d1b69 0%, #7c3aed 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(124,58,237,0.55) 100%), url('./assets/csm_KI_Bau_2a4ab20acc.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM×AI</span></div>
         </div>
         <div class="card-body">
@@ -872,7 +896,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_AI">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #2d1b69 0%, #7c3aed 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(124,58,237,0.55) 100%), url('./assets/csm_KI_Bau_2a4ab20acc.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM×AI</span></div>
         </div>
         <div class="card-body">
@@ -891,7 +915,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_AI">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #2d1b69 0%, #7c3aed 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(124,58,237,0.55) 100%), url('./assets/csm_KI_Bau_2a4ab20acc.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM×AI</span></div>
         </div>
         <div class="card-body">
@@ -910,7 +934,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -929,7 +953,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -948,7 +972,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -967,7 +991,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -986,7 +1010,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1005,7 +1029,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1024,7 +1048,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1043,7 +1067,7 @@
         </div>
       </article>
       <article class="article-card" data-category="REVIT">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(14,165,233,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">Revit</span></div>
         </div>
         <div class="card-body">
@@ -1062,7 +1086,7 @@
         </div>
       </article>
       <article class="article-card" data-category="GLOOBE">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a3a2a 0%, #059669 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, #1a3a2a 0%, #059669 100%), url('./assets/Getting-real-about-technology-part-1.webp') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">GLOOBE</span></div>
         </div>
         <div class="card-body">
@@ -1081,7 +1105,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1100,7 +1124,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_AI">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #2d1b69 0%, #7c3aed 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(124,58,237,0.55) 100%), url('./assets/csm_KI_Bau_2a4ab20acc.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM×AI</span></div>
         </div>
         <div class="card-body">
@@ -1119,7 +1143,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1138,7 +1162,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1157,7 +1181,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1176,7 +1200,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1195,7 +1219,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1214,7 +1238,7 @@
         </div>
       </article>
       <article class="article-card" data-category="REVIT">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(14,165,233,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">Revit</span></div>
         </div>
         <div class="card-body">
@@ -1233,7 +1257,7 @@
         </div>
       </article>
       <article class="article-card" data-category="BIM_ECOSYSTEM">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1252,7 +1276,7 @@
         </div>
       </article>
       <article class="article-card" data-category="AI_DX">
-        <div class="card-thumb" style="background:linear-gradient(135deg, #2d1b69 0%, #8b5cf6 100%)">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(139,92,246,0.55) 100%), url('./assets/blue-ai-digital-cube.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">AI/DX</span></div>
         </div>
         <div class="card-body">
@@ -1313,6 +1337,15 @@
     </aside>
     </div>
   </div>
+  <section class="cta-block">
+    <div class="cta-block-inner">
+      <div class="cta-block-text">
+        <h2 class="cta-block-title">BIM・AECの最前線を、毎日チェック</h2>
+        <p class="cta-block-desc">世界中の専門ニュースをAIが日本語で編集。Revit・Archicad・IFC・建設DXの動向を無料でお届けします。</p>
+        <a class="cta-block-btn" href="./about.html">このサイトについて →</a>
+      </div>
+    </div>
+  </section>
   <footer class="site-footer">
     <div class="footer-nav">
       <a href="./">ホーム</a>

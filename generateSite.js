@@ -560,6 +560,30 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     .static-page p, .static-page li { font-size: 0.9rem; line-height: 1.8; margin-bottom: 0.5rem; }
     .static-page ul { padding-left: 1.4rem; }
 
+    /* ---- CTA block ---- */
+    .cta-block {
+      background:
+        linear-gradient(135deg, rgba(10,22,40,0.88) 0%, rgba(15,42,74,0.85) 100%),
+        url('./assets/cta-bg.png') center/cover no-repeat;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .cta-block-inner { max-width: 640px; margin: 0 auto; }
+    .cta-block-title { font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem; line-height: 1.35; }
+    .cta-block-desc { font-size: 0.95rem; color: rgba(255,255,255,0.72); margin-bottom: 1.75rem; line-height: 1.7; }
+    .cta-block-btn {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .cta-block-btn:hover { background: #1d4ed8; transform: translateY(-1px); text-decoration: none; }
+
     /* ---- footer ---- */
     .site-footer {
       background: #0a1628;
@@ -856,20 +880,43 @@ function buildSidebar(posts, base = '.') {
 
 // ---- index page -------------------------------------------------------------
 
-const THUMB_GRADIENTS = {
-  REVIT: 'linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 100%)',
-  ARCHICAD: 'linear-gradient(135deg, #143a2a 0%, #10b981 100%)',
-  BIM_AI: 'linear-gradient(135deg, #2d1b69 0%, #7c3aed 100%)',
-  AI_DX: 'linear-gradient(135deg, #2d1b69 0%, #8b5cf6 100%)',
-  AI: 'linear-gradient(135deg, #2d1b69 0%, #a78bfa 100%)',
-  IFC: 'linear-gradient(135deg, #1e3a5f 0%, #06b6d4 100%)',
-  GLOOBE: 'linear-gradient(135deg, #1a3a2a 0%, #059669 100%)',
-  DIGITAL_TWIN: 'linear-gradient(135deg, #0f2942 0%, #3b82f6 100%)',
-  CONSTRUCTION_TECH: 'linear-gradient(135deg, #3a1a1a 0%, #ef4444 100%)',
-  GIS: 'linear-gradient(135deg, #1a2a3a 0%, #0284c7 100%)',
-  SUSTAINABILITY: 'linear-gradient(135deg, #0a3020 0%, #16a34a 100%)',
-  BIM_ECOSYSTEM: 'linear-gradient(135deg, #1a2a4a 0%, #3b82f6 100%)',
+// カテゴリ別サムネイル画像マップ（画像があれば優先、なければグラデ）
+const THUMB_IMAGES = {
+  REVIT: './assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg',
+  BIM_ECOSYSTEM: './assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg',
+  BIM_AI: './assets/csm_KI_Bau_2a4ab20acc.jpg',
+  CONSTRUCTION_TECH: './assets/csm_KI_Bau_2a4ab20acc.jpg',
+  AI_DX: './assets/blue-ai-digital-cube.jpg',
+  AI: './assets/blue-ai-digital-cube.jpg',
+  DIGITAL_TWIN: './assets/Arups__Digital_Twins_of_Water_Cube_Pilot_PMlBC2aLE.jpeg',
+  IFC: './assets/blueprint3_smart_cities_Adobe_rt.jpg',
+  GIS: './assets/blueprint3_smart_cities_Adobe_rt.jpg',
 };
+
+const THUMB_GRADIENTS = {
+  REVIT: 'linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(14,165,233,0.55) 100%)',
+  ARCHICAD: 'linear-gradient(135deg, #143a2a 0%, #10b981 100%)',
+  BIM_AI: 'linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(124,58,237,0.55) 100%)',
+  AI_DX: 'linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(139,92,246,0.55) 100%)',
+  AI: 'linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(167,139,250,0.55) 100%)',
+  IFC: 'linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(6,182,212,0.55) 100%)',
+  GLOOBE: 'linear-gradient(135deg, #1a3a2a 0%, #059669 100%)',
+  DIGITAL_TWIN: 'linear-gradient(135deg, rgba(15,41,66,0.45) 0%, rgba(59,130,246,0.45) 100%)',
+  CONSTRUCTION_TECH: 'linear-gradient(135deg, rgba(45,27,105,0.45) 0%, rgba(124,58,237,0.45) 100%)',
+  GIS: 'linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(2,132,199,0.55) 100%)',
+  SUSTAINABILITY: 'linear-gradient(135deg, #0a3020 0%, #16a34a 100%)',
+  BIM_ECOSYSTEM: 'linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%)',
+};
+
+function thumbStyle(catKey) {
+  const img = THUMB_IMAGES[catKey];
+  const grad = THUMB_GRADIENTS[catKey] || 'linear-gradient(135deg, rgba(30,58,95,0.7) 0%, rgba(37,99,235,0.7) 100%)';
+  if (img) {
+    return `background: ${grad}, url('${img}') center/cover no-repeat;`;
+  }
+  // プレースホルダー画像
+  return `background: ${grad}, url('./assets/Getting-real-about-technology-part-1.webp') center/cover no-repeat;`;
+}
 
 function buildIndex(posts, totalCount = 0) {
   const recentPosts = posts.slice(0, 30);
@@ -897,12 +944,12 @@ function buildIndex(posts, totalCount = 0) {
   // 注目記事: posts 0-2 as featured cards (magazine layout)
   const featuredCards = posts.slice(0, 3).map((post, i) => {
     const catKey = (post.category || 'OTHER').toUpperCase();
-    const thumbStyle = THUMB_GRADIENTS[catKey] || 'linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)';
+    const ts = thumbStyle(catKey);
     const isMain = i === 0;
     const snip = excerpt(post.bodyJa || post.postText || post.summary || '', 90);
     return `
       <article class="featured-card${isMain ? ' featured-main' : ''}">
-        <div class="featured-thumb" style="background:${thumbStyle}">
+        <div class="featured-thumb" style="${ts}">
           <span class="badge">${escape(categoryLabel(post.category))}</span>
         </div>
         <div class="featured-body">
@@ -929,11 +976,11 @@ function buildIndex(posts, totalCount = 0) {
     const date = formatDate(post.pubDate);
     const snippetText = post.bodyJa || post.postText || post.summary || '';
     const snip = excerpt(snippetText, 100);
-    const thumbStyle = THUMB_GRADIENTS[catKey] || 'linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)';
+    const ts2 = thumbStyle(catKey);
 
     return `
       <article class="article-card" data-category="${escape(catKey)}">
-        <div class="card-thumb" style="background:${thumbStyle}">
+        <div class="card-thumb" style="${ts2}">
           <div class="card-thumb-badge"><span class="badge">${escape(catLabel)}</span></div>
         </div>
         <div class="card-body">
@@ -1049,7 +1096,16 @@ function buildIndex(posts, totalCount = 0) {
       </main>
       ${buildSidebar(posts, '.')}
     </div>
-  </div>` +
+  </div>
+  <section class="cta-block">
+    <div class="cta-block-inner">
+      <div class="cta-block-text">
+        <h2 class="cta-block-title">BIM・AECの最前線を、毎日チェック</h2>
+        <p class="cta-block-desc">世界中の専門ニュースをAIが日本語で編集。Revit・Archicad・IFC・建設DXの動向を無料でお届けします。</p>
+        <a class="cta-block-btn" href="./about.html">このサイトについて →</a>
+      </div>
+    </div>
+  </section>` +
     htmlFooter('.', articleCount);
 }
 
@@ -1322,11 +1378,11 @@ function buildCategoryPage(category, posts) {
     const date = formatDate(post.pubDate);
     const snippetText = post.bodyJa || post.postText || post.summary || '';
     const snip = excerpt(snippetText, 100);
-    const thumbStyle = THUMB_GRADIENTS[catKey] || 'linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)';
+    const ts3 = thumbStyle(catKey);
 
     return `
       <article class="article-card">
-        <div class="card-thumb" style="background:${thumbStyle}">
+        <div class="card-thumb" style="${ts3}">
           <div class="card-thumb-badge"><span class="badge">${escape(catLabel)}</span></div>
         </div>
         <div class="card-body">

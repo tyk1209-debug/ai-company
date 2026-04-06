@@ -199,7 +199,44 @@ async function postArticles(articles, options = {}) {
   return { posted, skipped, results };
 }
 
-module.exports = { postTweet, postArticles };
+/**
+ * イベント情報をXに投稿する
+ * @param {object} event - events.json の1エントリ
+ * @param {object} [options={}]
+ * @returns {Promise<{success: boolean, id?: string, error?: string}>}
+ */
+async function postEvent(event, options = {}) {
+  const { dryRun = true } = options;
+
+  const SITE_EVENTS_URL = `${SITE_BASE_URL}/events.html`;
+
+  // 開催日テキスト
+  let dateText = '';
+  if (event.date) {
+    const d = new Date(event.date);
+    if (!isNaN(d.getTime())) {
+      dateText = d.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+  }
+
+  const locationText = event.location ? `📍${event.location}` : '';
+  const dateStr      = dateText ? `📅${dateText}` : '';
+
+  const text = [
+    `🏗️ イベント情報`,
+    ``,
+    event.title,
+    ``,
+    [dateStr, locationText].filter(Boolean).join(' '),
+    ``,
+    `詳細→ ${event.url || SITE_EVENTS_URL}`,
+    `#BIM #AEC #建設DX`,
+  ].join('\n');
+
+  return postTweet(text, { dryRun });
+}
+
+module.exports = { postTweet, postArticles, postEvent };
 
 // ─────────────────────────────────────────────────────────────
 // テスト用コード（直接実行時のみ動作）

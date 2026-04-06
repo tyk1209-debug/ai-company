@@ -58,11 +58,41 @@ jobs:
       - name: Generate website
         run: node generateSite.js
 
+      - name: Collect events
+        run: node collectEvents.js
+
+      - name: Post events to X
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const { postEvent } = require('./postToX.js');
+          const evFile = path.join(__dirname, 'data', 'events.json');
+          if (!fs.existsSync(evFile)) process.exit(0);
+          const events = JSON.parse(fs.readFileSync(evFile, 'utf-8'));
+          const targets = events.filter(ev => !ev.postedToX);
+          if (!targets.length) { console.log('[events] 投稿済みイベントのみ'); process.exit(0); }
+          (async () => {
+            const ev = targets[0];
+            const r = await postEvent(ev, { dryRun: false });
+            if (r.success) {
+              ev.postedToX = true;
+              fs.writeFileSync(evFile, JSON.stringify(events, null, 2));
+              console.log('[events] 投稿完了:', ev.title);
+            }
+          })();
+          "
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+
       - name: Commit and push website
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Actions"
-          git add index.html posts/ privacy.html about.html sitemap.xml robots.txt categories/
+          git add index.html posts/ privacy.html about.html events.html sitemap.xml robots.txt categories/
           git add -f data/ || true
           git diff --staged --quiet || git commit -m "chore: update website [skip ci]"
           git fetch origin main

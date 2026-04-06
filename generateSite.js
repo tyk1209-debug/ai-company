@@ -664,6 +664,7 @@ function htmlHeader(base = '.') {
       </div>
       <nav>
         <a href="${base}/">ホーム</a>
+        <a href="${base}/events.html">イベント</a>
         <a href="${base}/about.html">運営者情報</a>
         <a href="${base}/privacy.html">プライバシーポリシー</a>
       </nav>
@@ -679,6 +680,7 @@ function htmlFooter(base = '.', articleCount = 0) {
   <footer class="site-footer">
     <div class="footer-nav">
       <a href="${base}/">ホーム</a>
+      <a href="${base}/events.html">イベント</a>
       <a href="${base}/about.html">運営者情報</a>
       <a href="${base}/privacy.html">プライバシーポリシー</a>
       <a href="https://x.com/aec_news_jp" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
@@ -1212,6 +1214,106 @@ function buildCategoryPage(category, posts) {
     htmlFooter('..', catPosts.length);
 }
 
+// ---- events page ------------------------------------------------------------
+
+function buildEventsPage(events) {
+  const now = Date.now();
+
+  // 今後 + 日付不明を「開催予定」、過去を「開催済み」に分類
+  const upcoming = events.filter((ev) => {
+    if (!ev.date) return true;
+    const d = new Date(ev.date).getTime();
+    return isNaN(d) || d >= now;
+  });
+  const past = events.filter((ev) => {
+    if (!ev.date) return false;
+    const d = new Date(ev.date).getTime();
+    return !isNaN(d) && d < now;
+  });
+
+  function formatEventDate(ev) {
+    if (!ev.date) return '日程未定';
+    const d = new Date(ev.date);
+    if (isNaN(d.getTime())) return '日程未定';
+    const dateStr = d.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
+    if (ev.dateEnd) {
+      const de = new Date(ev.dateEnd);
+      if (!isNaN(de.getTime())) {
+        return dateStr + ' 〜 ' + de.toLocaleDateString('ja-JP', { month: 'long', day: 'numeric' });
+      }
+    }
+    return dateStr;
+  }
+
+  function eventCard(ev) {
+    const dateLabel = formatEventDate(ev);
+    const location  = escape(ev.location || '');
+    const source    = escape(ev.source || '');
+    const desc      = ev.description ? `<p class="event-desc">${escape(ev.description)}</p>` : '';
+    return `
+        <article class="event-card">
+          <div class="event-meta">
+            <span class="event-date">📅 ${escape(dateLabel)}</span>
+            ${location ? `<span class="event-location">📍 ${location}</span>` : ''}
+            <span class="event-source">${source}</span>
+          </div>
+          <h2 class="event-title">
+            <a href="${escape(ev.url)}" target="_blank" rel="noopener noreferrer">${escape(ev.title)}</a>
+          </h2>
+          ${desc}
+          <a class="event-link" href="${escape(ev.url)}" target="_blank" rel="noopener noreferrer">詳細・登録 →</a>
+        </article>`;
+  }
+
+  const upcomingHtml = upcoming.length > 0
+    ? upcoming.map(eventCard).join('')
+    : '<p class="event-empty">現在、開催予定のイベント情報はありません。</p>';
+
+  const pastHtml = past.length > 0
+    ? past.map(eventCard).join('')
+    : '';
+
+  const pastSection = past.length > 0
+    ? `<h2 class="events-section-title">開催済み</h2><div class="event-list past">${pastHtml}</div>`
+    : '';
+
+  const eventStyles = `
+    .events-hero { background: var(--navy); color: var(--white); padding: 2.5rem 1.5rem; text-align: center; }
+    .events-hero h1 { font-size: 1.75rem; font-weight: 700; }
+    .events-hero p { opacity: 0.75; margin-top: 0.5rem; font-size: 0.95rem; }
+    .events-main { max-width: 820px; margin: 2.5rem auto; padding: 0 1.5rem 4rem; }
+    .events-section-title { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; border-left: 4px solid var(--blue); padding-left: 0.75rem; }
+    .event-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .event-card { background: var(--white); border-radius: 10px; padding: 1.4rem 1.6rem; box-shadow: var(--card-shadow); border: 1px solid var(--border); }
+    .event-list.past .event-card { opacity: 0.6; }
+    .event-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
+    .event-date { font-weight: 600; color: var(--blue); }
+    .event-title { font-size: 1.05rem; font-weight: 700; line-height: 1.5; margin-bottom: 0.5rem; }
+    .event-title a { color: var(--text); }
+    .event-title a:hover { color: var(--blue); text-decoration: none; }
+    .event-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.75rem; }
+    .event-link { font-size: 0.85rem; font-weight: 600; color: var(--blue); }
+    .event-empty { color: var(--text-muted); font-size: 0.95rem; padding: 2rem 0; }`;
+
+  return htmlHead(
+    `イベント情報 | ${SITE_NAME}`,
+    'BIM・AEC・建設DX関連の日本開催イベント・セミナー情報',
+    `${SITE_URL}/events.html`
+  ).replace('</style>', eventStyles + '\n  </style>') +
+    htmlHeader('.') +
+    `
+  <div class="events-hero">
+    <h1>イベント情報</h1>
+    <p>BIM・AEC・建設DX関連の日本開催イベント・セミナー</p>
+  </div>
+  <div class="events-main">
+    <h2 class="events-section-title">開催予定</h2>
+    <div class="event-list">${upcomingHtml}</div>
+    ${pastSection}
+  </div>` +
+    htmlFooter('.');
+}
+
 // ---- main -------------------------------------------------------------------
 
 function main() {
@@ -1311,6 +1413,15 @@ function main() {
   fs.writeFileSync(path.join(__dirname, 'about.html'), buildAboutPage(), 'utf-8');
   console.log('[generateSite] Generated about.html');
 
+  // Generate events.html
+  const eventsFile = path.join(__dirname, 'data', 'events.json');
+  let events = [];
+  if (fs.existsSync(eventsFile)) {
+    try { events = JSON.parse(fs.readFileSync(eventsFile, 'utf-8')); } catch { events = []; }
+  }
+  fs.writeFileSync(path.join(__dirname, 'events.html'), buildEventsPage(events), 'utf-8');
+  console.log(`[generateSite] Generated events.html (${events.length}件)`);
+
   // Generate sitemap.xml
   const now = new Date().toISOString().split('T')[0];
   const categoryUrls = allCategories.map((cat) => ({
@@ -1321,6 +1432,7 @@ function main() {
   }));
   const staticUrls = [
     { loc: `${SITE_URL}/`, lastmod: now, changefreq: 'daily', priority: '1.0' },
+    { loc: `${SITE_URL}/events.html`, lastmod: now, changefreq: 'weekly', priority: '0.8' },
     { loc: `${SITE_URL}/about.html`, lastmod: now, changefreq: 'monthly', priority: '0.5' },
     { loc: `${SITE_URL}/privacy.html`, lastmod: now, changefreq: 'monthly', priority: '0.3' },
     ...categoryUrls,

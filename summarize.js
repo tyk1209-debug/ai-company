@@ -52,7 +52,7 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者�
   "relevant": true,
   "titleJa": "日本語の見出し（25〜40文字、読者が思わずクリックしたくなる表現）",
   "bodyJa": "記事の要点を200〜300文字の日本語で解説。背景・内容・業界への影響を含む。",
-  "xPost": "X投稿本文（100字以内。絵文字と本文のみ。URLやハッシュタグは含めない）"
+  "xPost": "X投稿本文（200字以内。絵文字と本文のみ。URLやハッシュタグは含めない）"
 }
 
 【relevantの判定ルール】
@@ -82,7 +82,7 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者�
 - 「〜です」「〜ます」の単調な語尾を避け、問いかけや驚きの表現を入れる
 - 体言止め・箇条書き禁止。自然な日本語で書く
 - URLやハッシュタグは含めない（後でワークフローが付与する）
-- 100字以内を厳守する
+- 200字以内を厳守する
 - JSON以外は返さない`;
 
 async function generateXPostBody(article, articleBody) {
@@ -161,9 +161,9 @@ function getHashtags(category) {
 function appendHashtags(xPost, hashtags) {
   const suffix = " " + hashtags;
   const combined = xPost + suffix;
-  if ([...combined].length <= 140) return combined;
+  if ([...combined].length <= 230) return combined;
   // 超過する場合は本文を切り詰めてハッシュタグを付与
-  const maxBodyLen = 140 - [...suffix].length;
+  const maxBodyLen = 230 - [...suffix].length;
   return [...xPost].slice(0, maxBodyLen).join("") + suffix;
 }
 

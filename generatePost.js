@@ -109,8 +109,6 @@ function generatePost(article) {
       article.xPostBody,
       "",
       article.link,
-      "",
-      hashStr,
     ].join("\n");
   }
 

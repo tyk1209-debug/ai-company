@@ -10,6 +10,16 @@
     "isWeekly": true
   },
   {
+    "title": "The agentic future of BIM",
+    "titleJa": "AI時代のBIM革命——ファイルベース設計ツールの終焉が近い",
+    "bodyJa": "BIM業界で技術競争が加速中。AIに対応した次世代ツールは、Revitを超える「OS」への進化を目指しています。人間の設計意図を機械が自動実行するsolver-driven designの概念が登場し、既存のファイルベースBIMツールを根本から再構築する可能性が議論されています。設計・施工・運用を一気通貫するAIエージェント型プラットフォームへの移行が、今後5年で建設業を変えるかもしれません。",
+    "category": "BIM_ECOSYSTEM",
+    "pubDate": "2026-04-06T00:00:00.000Z",
+    "slug": "the-agentic-future-of-bim",
+    "source": "AEC Magazine",
+    "link": "https://aecmag.com/bim/the-agentic-future-of-bim/"
+  },
+  {
     "title": "Model Analytics Public Beta: What Happens When Insight Is Embedded, Not Added? A New Era for Model Health in Autodesk Construction Cloud",
     "link": "https://autodeskblog.wpengine.com/aec/2026/01/27/model-analytics-public-beta",
     "source": "Autodesk AEC Blog",
@@ -286,27 +296,5 @@
     "postText": "建設業界のAI活用事例です\n\nAutodesk acquires Rhumbix in construction data push（4/3）\n\nhttps://www.constructiondive.com/news/autodesk-acquires-rhumbix-construction-data/816526\n\n#AI #建設DX #DX",
     "titleJa": "AutodeskがRhumbix買収、建設現場のデータ一元化が加速",
     "bodyJa": "建設業界における深刻なデータサイロ問題に対応するため、Autodesk は建設現場のデータ収集・可視化を専門とするRhumbix を買収しました。Rhumbix は勤務時間管理、労務、給与管理にわたるジョブサイトデータの正確な収集を提供し、Turner Construction やDPR Construction など大手ゼネコンが導入しています。この買収により、Autodesk は企画・設計・実行に至るまで建設プロジェクト全体のプロセスを連携させるプラットフォームの実現を加速。建設業の構造的な課題であるデータ品質の向上とプロセス効率化が期待されます。"
-  },
-  {
-    "title": "Choreographing Lagos: Dele Adeyemo on Dance, Cosmology, and Spatial Practices",
-    "link": "https://www.archdaily.com/1039851/choreographing-lagos-dele-adeyemo-on-dance-cosmology-and-spatial-practices",
-    "source": "ArchDaily",
-    "pubDate": "2026-04-04T07:30:00.000Z",
-    "summary": "Having thrown a stone today, Eshu kills a bird of yesterday. The Yoruba proverb tells both a story of reparation and of ancestrality by joyfully bending spacetime conventions and accessing subjects from the past with present actions. The saying offers a poetic entry point to broader West African traditions and to the practice of Scottish-Nigerian artist and architect Dele Adeyemo. Named one of the winners of the ArchDaily 2025 Next Practices Awards, Adeyemo's work brings together ecology, spirituality, dance, and territory, examining how embodied cultural practices can generate alternative spatial possibilities within and against the architecture of racial capitalism.",
-    "fetchedAt": "2026-04-05T05:28:52.130Z",
-    "category": "AI_DX",
-    "categoryHits": [
-      "ai"
-    ],
-    "keywordHits": [
-      "api",
-      "ai"
-    ],
-    "score": 6,
-    "freshnessScore": 3,
-    "japaneseSummary": "",
-    "postText": "DX推進に役立つ情報です\n\nChoreographing Lagos: Dele Adeyemo on Dance, Cosmology, and Spatial Practices（4/4）\n\nhttps://www.archdaily.com/1039851/choreographing-lagos-dele-adeyemo-on-dance-cosmology-and-spatial-practices\n\n#AI #建設DX #DX",
-    "titleJa": "ダンスと宇宙観で空間を再定義する—ラゴスの建築実践が変える",
-    "bodyJa": "スコットランド・ナイジェリア系建築家デレ・アデイェモが、ラゴスでの長年の研究をもとに、ダンスや精神性と建築を融合させた新しい空間実践を展開しています。資本主義以前の集団運動から生まれた空間知を探求し、黒人建築やポスト植民地的視点から、従来の建築思考の欠陥として見なされてきた実践に設計の洗練性を見いだします。ヨルバ文化の宇宙観と現代建築の融合は、脱植民地化と生態系再生への新しいアプローチを示しています。"
   }
 ]

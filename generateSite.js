@@ -877,7 +877,7 @@ function buildIndex(posts, totalCount = 0) {
   <div class="hero">
     <div class="hero-content">
       <h1>BIM・AEC・建設DXの最新ニュース</h1>
-      <span class="hero-badge">世界中のBIM・AECニュースを<strong>AIが毎日日本語で解説</strong> — Revit・Archicad・IFC・デジタルツイン</span>
+      <span class="hero-badge">世界中のBIM・AECニュースを<strong>AIが毎日日本語で解説</strong></span>
       <div class="hero-stats">
         <span>📰 ${articleCount}件の専門記事</span>
         <span>🤖 AI自動解説</span>

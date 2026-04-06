@@ -19,12 +19,6 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/categories/revit.html</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://aec-news.com/categories/ai-dx.html</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -32,6 +26,12 @@
   </url>
   <url>
     <loc>https://aec-news.com/categories/bim-ecosystem.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/categories/revit.html</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -47,12 +47,6 @@
     <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/posts/jinyi-landmark-cm-design.html</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aec-news.com/posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html</loc>

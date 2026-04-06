@@ -1235,6 +1235,14 @@ function main() {
     posts = [];
   }
 
+  // titleJaが空の記事（日本語化できなかった＝BIM無関係と判定済み）をサイト表示から除外
+  const before = posts.length;
+  posts = posts.filter((p) => p.titleJa && p.titleJa.trim() !== '');
+  const excluded = before - posts.length;
+  if (excluded > 0) {
+    console.log(`[generateSite] titleJa未設定の記事を除外: ${excluded}件`);
+  }
+
   // Assign slugs — respect pre-set slugs (e.g. weekly-YYYY-MM-DD)
   const usedSlugs = new Map();
   posts = posts.map((post) => {

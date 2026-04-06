@@ -186,12 +186,29 @@ async function main() {
   const posts = applyAffiliateLinks(generatePosts(passed));
   saveJson("posts.json", posts);
 
-  // 8. X投稿準備（レビューなし・全件自動投稿）
+  // 8. X投稿準備（投稿済み記事を除外）
   const dryRun = process.env.DRY_RUN !== "false";
-  const approvedPosts = posts;
 
-  // 9. X投稿
-  const postResult = await postArticles(approvedPosts, { dryRun, limit: 3 });
+  // analytics.json から投稿済みリンクを取得してスキップ
+  const analyticsFile = path.join(DATA_DIR, "analytics.json");
+  const analyticsData = fs.existsSync(analyticsFile)
+    ? JSON.parse(fs.readFileSync(analyticsFile, "utf8"))
+    : { posts: [] };
+  const postedLinks = new Set(
+    analyticsData.posts
+      .filter((p) => p.success && !p.dryRun)
+      .map((p) => p.link)
+  );
+  const approvedPosts = posts.filter((p) => !postedLinks.has(p.link));
+
+  if (approvedPosts.length === 0) {
+    console.log("\n[X投稿] 新規投稿対象なし（全件投稿済み）");
+    return;
+  }
+  console.log(`\n[X投稿] 未投稿記事: ${approvedPosts.length}件（投稿済みスキップ: ${posts.length - approvedPosts.length}件）`);
+
+  // 9. X投稿（1run=最大1件に制限して重複投稿を防ぐ）
+  const postResult = await postArticles(approvedPosts, { dryRun, limit: 1 });
 
   // 10. 投稿結果を analytics に記録
   postResult.results.forEach((result, i) => {

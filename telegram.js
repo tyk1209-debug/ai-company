@@ -15,7 +15,7 @@ const https = require("https");
 const TOKEN   = process.env.TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
-const REVIEW_TIMEOUT_MS = 30 * 60 * 1000; // 30分
+const REVIEW_TIMEOUT_MS = 5 * 60 * 1000; // 5分
 
 // ─────────────────────────────────────────────────────────────
 // Telegram API 低レベル呼び出し
@@ -194,18 +194,18 @@ async function reviewPosts(posts) {
   lines.push("<code>2 修正: バージョンは2026</code>  フィードバック付き修正");
   lines.push("<code>3 NG</code>  却下");
   lines.push("<code>all</code>  全件承認 / <code>skip</code>  全件スキップ");
-  lines.push("\n⏰ 30分以内に返信がない場合はスキップ");
+  lines.push("\n⏰ 5分以内に返信がない場合は自動承認して投稿");
 
   await sendMessage(lines.join("\n"));
-  console.log("[Telegram] レビュー依頼を送信しました。30分以内に返信してください...");
+  console.log("[Telegram] レビュー依頼を送信しました。5分以内に返信がない場合は自動承認します...");
 
   // ── 返信待機 ──
   const replyText = await waitForReply();
 
   if (!replyText) {
-    await sendMessage("⏰ タイムアウト: 今回の投稿はスキップされました");
-    console.log("[Telegram] タイムアウト — 投稿スキップ");
-    return { approved: [], feedback: [] };
+    await sendMessage("⏰ タイムアウト: 返信がなかったため全件自動承認して投稿します");
+    console.log("[Telegram] タイムアウト — 全件自動承認");
+    return { approved: posts, feedback: [] };
   }
 
   const verdicts = parseReply(replyText, posts.length);

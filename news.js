@@ -24,7 +24,6 @@ const { postArticles }       = require("./postToX.js");
 const { summarizeArticles }  = require("./summarize.js");
 const { recordPost }         = require("./analytics.js");
 const { checkArticles }      = require("./hallucination-checker.js");
-const { sendMessage } = require("./telegram.js");
 
 const DATA_DIR           = path.join(__dirname, "data");
 const MIN_SCORE_SELECTED = 6;   // 投稿候補にする最低スコア

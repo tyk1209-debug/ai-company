@@ -50,6 +50,56 @@
       "dryRun": true,
       "success": true,
       "xPostId": "dry-run"
+    },
+    {
+      "id": "2041038620816240940",
+      "postedAt": "2026-04-06T06:22:42.843Z",
+      "title": "Maxon launches RedShift for Archviz",
+      "link": "https://aecmag.com/visualisation/maxon-launches-redshift-for-archviz",
+      "category": "REVIT",
+      "score": 13,
+      "keywordHits": [
+        "revit",
+        "archicad",
+        "aec"
+      ],
+      "dryRun": false,
+      "success": true,
+      "xPostId": "2041038620816240940"
+    },
+    {
+      "id": "1775456562843",
+      "postedAt": "2026-04-06T06:22:42.843Z",
+      "title": "The agentic future of BIM",
+      "link": "https://aecmag.com/bim/the-agentic-future-of-bim",
+      "category": "BIM_AI",
+      "score": 8,
+      "keywordHits": [
+        "bim",
+        "aec",
+        "ai",
+        "agent"
+      ],
+      "dryRun": false,
+      "success": false,
+      "xPostId": null
+    },
+    {
+      "id": "1775456562844",
+      "postedAt": "2026-04-06T06:22:42.844Z",
+      "title": "NXT BLD 2026: a decade of looking around corners",
+      "link": "https://aecmag.com/nxt-bld/nxt-bld-2026-a-decade-of-looking-around-corners",
+      "category": "BIM_ECOSYSTEM",
+      "score": 8,
+      "keywordHits": [
+        "aec",
+        "design automation",
+        "automation",
+        "ai"
+      ],
+      "dryRun": false,
+      "success": false,
+      "xPostId": null
     }
   ]
 }

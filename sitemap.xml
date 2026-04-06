@@ -19,7 +19,7 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/categories/bim-ecosystem.html</loc>
+    <loc>https://aec-news.com/categories/revit.html</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -31,38 +31,26 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/categories/revit.html</loc>
+    <loc>https://aec-news.com/categories/bim-ecosystem.html</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/categories/ifc.html</loc>
+    <loc>https://aec-news.com/categories/bim-ai.html</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/weekly-2026-04-06.html</loc>
+    <loc>https://aec-news.com/categories/gloobe.html</loc>
     <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/the-agentic-future-of-bim.html</loc>
+    <loc>https://aec-news.com/posts/jinyi-landmark-cm-design.html</loc>
     <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/posts/weekly-2026-04-05.html</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/posts/autodesk-acquires-rhumbix-in-construction-data-push.html</loc>
-    <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -73,13 +61,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/whats-new-in-civil-3d-2027-advancing-infrastructure-design-with-autodesk-assista.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/posts/discover-new-revit-design-tips-in-less-than-90-seconds-with-autodesk-learning-re.html</loc>
+    <loc>https://aec-news.com/posts/embodied-carbon-calcs-for-bim-objects.html</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -97,8 +79,50 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/key-outcomes-from-the-domain-leadership-conference-in-zurich.html</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://aec-news.com/posts/maxon-launches-redshift-for-archviz.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/the-agentic-future-of-bim.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/ai-design-and-re-shaping-the-aec-industry.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/aec-magazine-march-april-2026.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/rethinking-the-bim-platform.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/design-to-build-in-the-age-of-ai.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/rewriting-the-rules.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/nxt-bld-2026-a-decade-of-looking-around-corners.html</loc>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -109,26 +133,86 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aec-news.com/posts/hexagon-multivista-connects-to-revizto.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/autodesks-200m-bet-on-spatial-ai.html</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/revitbim.html</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/gloobebim.html</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aec-news.com/posts/expanding-fedramp-moderate-authorization-brings-connected-secure-future-to-autod.html</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/model-analytics-public-beta-what-happens-when-insight-is-embedded-not-added-a-ne.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://aec-news.com/posts/why-gpu-memory-matters-for-cad-viz-and-ai.html</loc>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/introducing-the-new-revit-add-on-release-for-content-catalog.html</loc>
-    <lastmod>2026-01-15</lastmod>
+    <loc>https://aec-news.com/posts/ai-in-aec-why-better-decisions-matter-more-than-faster-tools.html</loc>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/autodesk-at-the-2025-riba-stirling-prize-ceremony.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <loc>https://aec-news.com/posts/autodesk-invests-2m-in-construction-material-tracking-firm.html</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/can-a-small-workstation-handle-big-bim.html</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/best-enterprise-workstation-laptops-2026.html</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/review-cyberpowerpc-intel-core-u7ws-workstation.html</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/cityweft-adds-3d-building-data-for-england.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/cmap-introduces-cmap-intelligence.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/procore-acquires-datagrid.html</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -51,7 +51,7 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者�
 {
   "relevant": true,
   "titleJa": "日本語の見出し（25〜40文字、読者が思わずクリックしたくなる表現）",
-  "bodyJa": "記事の要点を200〜300文字の日本語で解説。背景・内容・業界への影響を含む。",
+  "bodyJa": "サイト掲載用の詳細記事（500〜800文字）",
   "xPost": "X投稿本文（200字以内。絵文字と本文のみ。URLやハッシュタグは含めない）"
 }
 
@@ -69,20 +69,26 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者�
 - 専門用語はそのまま使ってよい（BIM、IFC、デジタルツイン等）
 - 体言止めOK
 
-【bodyJaのルール】（relevant: true のときのみ）
-- 導入・内容・影響の3部構成で書く
-- 専門用語（BIM、IFC、デジタルツイン等）はそのまま使用
+【bodyJaのルール】（relevant: true のときのみ）— サイト掲載用の深い解説記事
+- 以下の4部構成で書く:
+  1. 【背景】なぜこのニュースが生まれたか、業界の文脈（100〜150文字）
+  2. 【内容】何が発表・実現されたか、具体的な機能・数値・仕様（150〜200文字）
+  3. 【技術的ポイント】BIM/AEC専門家が注目すべき技術的詳細（100〜150文字）
+  4. 【業界への影響】現場・プロジェクト・業界全体にどう影響するか（150〜200文字）
+- 専門用語（BIM、IFC、デジタルツイン、LOD等）はそのまま使用
 - ですます調で統一する
-- 200〜300文字を厳守する
+- 合計500〜800文字を厳守する
+- 各部に改行を入れて読みやすくする
 
-【xPostのルール】（relevant: true のときのみ）
+【xPostのルール】（relevant: true のときのみ）— X（Twitter）用のコンパクトな引きつけ投稿
 - 冒頭に建設・設計関連の絵文字を必ず1つ入れる（🏗️🔧📐💡🖥️🏢📊🔩⚙️など）
-- 「何が重要か」「なぜ今注目すべきか」「現場への影響」のどれかを入れる
+- 「このニュースの一番重要な点」を1〜2文で表現する
+- 読んだ人が「詳しく知りたい」と思うような引きになる表現を使う
 - タイトルをそのまま訳した文章は禁止
-- 「〜です」「〜ます」の単調な語尾を避け、問いかけや驚きの表現を入れる
+- 驚き・問いかけ・インパクトのある表現を優先する
 - 体言止め・箇条書き禁止。自然な日本語で書く
 - URLやハッシュタグは含めない（後でワークフローが付与する）
-- 200字以内を厳守する
+- 200字以内を目安に、できるだけ内容を充実させる（短くしすぎない）
 - JSON以外は返さない`;
 
 async function generateXPostBody(article, articleBody) {
@@ -99,7 +105,7 @@ ${articleBody.slice(0, 5000)}
   try {
     const response = await client.messages.create({
       model:      "claude-haiku-4-5-20251001",
-      max_tokens: 700,
+      max_tokens: 1800,
       system:     SYSTEM_PROMPT,
       messages:   [{ role: "user", content: prompt }],
     });
@@ -116,9 +122,9 @@ ${articleBody.slice(0, 5000)}
     const parsed = JSON.parse(jsonMatch[0]);
     return {
       relevant: parsed.relevant !== false, // 明示的にfalseの場合のみ除外
-      xPost:   (parsed.xPost   || "").slice(0, 100),
+      xPost:   (parsed.xPost   || "").slice(0, 210),
       titleJa: (parsed.titleJa || "").slice(0, 60),
-      bodyJa:  (parsed.bodyJa  || "").slice(0, 400),
+      bodyJa:  (parsed.bodyJa  || "").slice(0, 1500),
     };
   } catch (err) {
     console.error(`[summarize] Claude API エラー: ${err.message}`);
@@ -161,9 +167,10 @@ function getHashtags(category) {
 function appendHashtags(xPost, hashtags) {
   const suffix = " " + hashtags;
   const combined = xPost + suffix;
-  if ([...combined].length <= 230) return combined;
+  // URL(23字)+改行(1字)=24字を差し引いた256字が実質上限
+  if ([...combined].length <= 256) return combined;
   // 超過する場合は本文を切り詰めてハッシュタグを付与
-  const maxBodyLen = 230 - [...suffix].length;
+  const maxBodyLen = 256 - [...suffix].length;
   return [...xPost].slice(0, maxBodyLen).join("") + suffix;
 }
 

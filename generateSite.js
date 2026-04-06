@@ -911,8 +911,11 @@ function buildArticlePage(post, allPosts) {
   const date = formatDate(post.pubDate);
   const bodyText = post.bodyJa || post.postText || post.summary || '';
   const readingMinutes = Math.max(1, Math.ceil(bodyText.length / 500));
+  const bodyJaParagraphs = post.bodyJa
+    ? post.bodyJa.split(/\n+/).filter(s => s.trim()).map(s => `<p>${escape(s.trim())}</p>`).join('\n')
+    : '';
   const bodyContent = post.bodyJa
-    ? `<div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>${escape(post.bodyJa)}</p></div>`
+    ? `<div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary">${bodyJaParagraphs}</div>`
     : post.postText
       ? `<div class="ai-comment-label">AIによる専門家コメント</div><div class="post-text-box">${escape(post.postText)}</div>`
       : `<p>${escape(post.summary || '')}</p>`;

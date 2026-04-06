@@ -65,7 +65,8 @@ async function fetchBuildingSmartEvents() {
     const block = match[1];
     const title       = decodeEntities(extractTag(block, 'title'));
     const link        = decodeEntities(extractTag(block, 'link'));
-    const description = stripHtml(decodeEntities(extractTag(block, 'description')));
+    const description = stripHtml(decodeEntities(extractTag(block, 'description')))
+      .replace(/The post .+? appeared first on .+?\s*\.?\s*$/, '').trim();
     const pubDate     = extractTag(block, 'pubDate');
 
     // Japan/Tokyo 関連のみ

@@ -42,7 +42,7 @@ function categoryLabel(cat) {
   const map = {
     BIM_ECOSYSTEM: 'BIM全般',
     REVIT: 'Revit',
-    ARCHICAD: 'ArchiCAD',
+    ARCHICAD: 'Archicad',
     IFC: 'IFC',
     DIGITAL_TWIN: 'デジタルツイン',
     CONSTRUCTION_TECH: '建設テック',
@@ -726,7 +726,7 @@ function buildSidebar(posts, base = '.') {
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">このサイトについて</div>
-        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新情報をAIが日本語で解説する専門メディアです。Revit・ArchiCAD・Vectorworksなど主要BIMソフトから建設テック全般の最新動向をお届けします。</p>
+        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新情報をAIが日本語で解説する専門メディアです。Revit・Archicad・Vectorworksなど主要BIMソフトから建設テック全般の最新動向をお届けします。</p>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
@@ -788,7 +788,7 @@ function buildIndex(posts, totalCount = 0) {
       <div class="category-nav" id="categoryNav">
         <button class="cat-tab active" data-filter="ALL">すべて</button>
         <button class="cat-tab" data-filter="REVIT">Revit</button>
-        <button class="cat-tab" data-filter="ARCHICAD">ArchiCAD</button>
+        <button class="cat-tab" data-filter="ARCHICAD">Archicad</button>
         <button class="cat-tab" data-filter="BIM_ECOSYSTEM">BIM全般</button>
         <button class="cat-tab" data-filter="AI_DX,BIM_AI,AI">AI/DX</button>
         <button class="cat-tab" data-filter="IFC">IFC</button>
@@ -866,7 +866,7 @@ function buildIndex(posts, totalCount = 0) {
   <div class="hero">
     <div class="hero-content">
       <h1>BIM・AEC・建設DXの最新ニュース</h1>
-      <span class="hero-badge">Revit・ArchiCAD・IFC・デジタルツイン・建設テックの最新トレンドをAIが解説</span>
+      <span class="hero-badge">Revit・Archicad・IFC・デジタルツイン・建設テックの最新トレンドをAIが解説</span>
     </div>
   </div>` +
     categoryNavHtml +
@@ -1114,7 +1114,7 @@ function buildAboutPage() {
           <li>BIM担当者・BIMマネージャー</li>
           <li>建設会社・設計事務所のデジタル化推進担当者</li>
           <li>AECテクノロジーに関心のある建設・不動産プロフェッショナル</li>
-          <li>Autodesk Revit・ArchiCAD・Vectorworks・Rebroユーザー</li>
+          <li>Autodesk Revit・Archicad・Vectorworks・Rebroユーザー</li>
         </ul>
 
         <h2>掲載コンテンツ</h2>

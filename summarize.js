@@ -56,7 +56,7 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者�
 }
 
 【relevantの判定ルール】
-- BIM・AEC・建設DX・設計ソフト（Revit/ArchiCAD/IFC等）・建設テックに直接関係する場合は true
+- BIM・AEC・建設DX・設計ソフト（Revit/Archicad/IFC等）・建設テックに直接関係する場合は true
 - 以下のいずれかに該当する場合は false（titleJa/bodyJa/xPostは空文字でよい）:
   - 建築の文化・歴史・芸術・哲学・社会論（ダンス、宇宙観、植民地主義等）
   - 一般的なAI話題でBIM/建設現場との接続が皆無
@@ -132,7 +132,7 @@ ${articleBody.slice(0, 2500)}
 
 const CATEGORY_HASHTAGS = {
   REVIT:         "#Revit #BIM",
-  ARCHICAD:      "#ArchiCAD #BIM",
+  ARCHICAD:      "#Archicad #BIM",
   BIM_ECOSYSTEM: "#BIM #建設DX",
   BIM_AI:        "#BIM #建設DX",
   IFC:           "#IFC #BIM",

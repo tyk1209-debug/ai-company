@@ -116,9 +116,9 @@ const SITE_AFFILIATE_LINKS = [
     category: 'REVIT',
   },
   {
-    keywords: ['ArchiCAD', 'アーキキャド', 'Graphisoft'],
-    title: 'ArchiCAD完全ガイド',
-    url: `https://www.amazon.co.jp/s?k=ArchiCAD&tag=${AFFILIATE_TAG}`,
+    keywords: ['Archicad', 'アーキキャド', 'Graphisoft'],
+    title: 'Archicad完全ガイド',
+    url: `https://www.amazon.co.jp/s?k=Archicad&tag=${AFFILIATE_TAG}`,
     category: 'BIM_ECOSYSTEM',
   },
   {

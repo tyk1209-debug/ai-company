@@ -24,7 +24,7 @@ const { postArticles }       = require("./postToX.js");
 const { summarizeArticles }  = require("./summarize.js");
 const { recordPost }         = require("./analytics.js");
 const { checkArticles }      = require("./hallucination-checker.js");
-const { reviewPosts, sendMessage } = require("./telegram.js");
+const { sendMessage } = require("./telegram.js");
 
 const DATA_DIR           = path.join(__dirname, "data");
 const MIN_SCORE_SELECTED = 6;   // 投稿候補にする最低スコア
@@ -187,34 +187,9 @@ async function main() {
   const posts = applyAffiliateLinks(generatePosts(passed));
   saveJson("posts.json", posts);
 
-  // 8. Telegramレビュー（設定済みの場合のみ。未設定なら全件投稿）
+  // 8. X投稿準備（レビューなし・全件自動投稿）
   const dryRun = process.env.DRY_RUN !== "false";
-  let approvedPosts = posts;
-
-  if (process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID && !dryRun) {
-    const { approved, feedback } = await reviewPosts(posts);
-
-    // フィードバック付き記事をClaudeで修正再生成
-    const fixed = [];
-    for (const { post, text } of feedback) {
-      console.log(`[Telegram] フィードバック修正中: "${text}"`);
-      const fixedSummary = await require("./summarize.js").summarizeWithFeedback(post, text);
-      const fixedPost = applyAffiliateLinks(generatePosts([fixedSummary]))[0];
-      fixed.push(fixedPost);
-
-      if (process.env.TELEGRAM_BOT_TOKEN) {
-        await sendMessage(
-          `🔧 <b>修正済み投稿</b>\n\n${fixedPost.postText}\n\n承認する場合はこのまま投稿されます`
-        );
-      }
-    }
-
-    approvedPosts = [...approved, ...fixed];
-  } else if (dryRun) {
-    console.log("[DRY RUN] Telegramレビューはスキップ（ドライランモード）");
-  } else {
-    console.log("[Telegram] 環境変数未設定 — レビューなしで全件投稿");
-  }
+  const approvedPosts = posts;
 
   // 9. X投稿
   const postResult = await postArticles(approvedPosts, { dryRun, limit: 3 });

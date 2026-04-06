@@ -53,6 +53,7 @@ jobs:
           git config user.name "GitHub Actions"
           git add index.html posts/ privacy.html about.html sitemap.xml robots.txt categories/ || true
           git diff --staged --quiet || git commit -m "chore: update website [skip ci]"
+          git pull --rebase origin main
           git push
 
       - name: Notify Telegram on success
@@ -162,6 +163,7 @@ jobs:
           git config user.name "GitHub Actions"
           git add index.html posts/ data/posts.json || true
           git diff --staged --quiet || git commit -m "feat: add weekly BIM/AEC digest [skip ci]"
+          git pull --rebase origin main
           git push
 
       - name: Notify Telegram weekly digest

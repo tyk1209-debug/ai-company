@@ -73,23 +73,17 @@
 
     /* ---- header ---- */
     .site-header { background: var(--navy); color: var(--white); padding: 0 1.5rem; }
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem 0;
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0.75rem 0; }
+    .header-logo-link {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      text-decoration: none;
     }
-    .logo-wrapper { display: flex; align-items: center; }
-    .logo-img { height: 28px; width: auto; display: block; flex-shrink: 0; }
-    .site-title { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.02em; }
-    .site-title a { color: var(--white); }
-    .site-tagline { font-size: 0.72rem; opacity: 0.6; margin-top: 0.1rem; }
-    nav { display: flex; align-items: center; flex-wrap: nowrap; white-space: nowrap; }
-    nav a { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin-left: 1.5rem; transition: color 0.15s; }
-    nav a:hover { color: var(--white); text-decoration: none; }
+    .header-logo-link:hover { text-decoration: none; opacity: 0.85; }
+    .logo-img { height: 26px; width: auto; display: block; flex-shrink: 0; }
+    .header-site-name {
+      font-size: 1rem; font-weight: 800; color: var(--white);
+      letter-spacing: 0.08em;
+    }
 
     /* ---- hero ---- */
     .hero {
@@ -701,6 +695,14 @@
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="./" class="header-logo-link">
+        <img src="./assets/logo.svg" alt="AEC News Japan" class="logo-img">
+        <span class="header-site-name">AEC NEWS JAPAN</span>
+      </a>
+    </div>
+  </header>
   <div class="container">
     <main class="main-content">
       <div class="static-page">

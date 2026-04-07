@@ -152,23 +152,17 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
 
     /* ---- header ---- */
     .site-header { background: var(--navy); color: var(--white); padding: 0 1.5rem; }
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem 0;
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0.75rem 0; }
+    .header-logo-link {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      text-decoration: none;
     }
-    .logo-wrapper { display: flex; align-items: center; }
-    .logo-img { height: 28px; width: auto; display: block; flex-shrink: 0; }
-    .site-title { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.02em; }
-    .site-title a { color: var(--white); }
-    .site-tagline { font-size: 0.72rem; opacity: 0.6; margin-top: 0.1rem; }
-    nav { display: flex; align-items: center; flex-wrap: nowrap; white-space: nowrap; }
-    nav a { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin-left: 1.5rem; transition: color 0.15s; }
-    nav a:hover { color: var(--white); text-decoration: none; }
+    .header-logo-link:hover { text-decoration: none; opacity: 0.85; }
+    .logo-img { height: 26px; width: auto; display: block; flex-shrink: 0; }
+    .header-site-name {
+      font-size: 1rem; font-weight: 800; color: var(--white);
+      letter-spacing: 0.08em;
+    }
 
     /* ---- hero ---- */
     .hero {
@@ -786,18 +780,10 @@ function htmlHeader(base = '.') {
   return `
   <header class="site-header">
     <div class="header-inner">
-      <div>
-        <div class="logo-wrapper">
-          <a href="${base}/"><img src="${base}/assets/logo.svg" alt="${SITE_NAME}" class="logo-img"></a>
-        </div>
-        <div class="site-tagline">${SITE_DESC}</div>
-      </div>
-      <nav>
-        <a href="${base}/">ホーム</a>
-        <a href="${base}/events.html">イベント</a>
-        <a href="${base}/about.html" class="nav-hide-sp">運営者情報</a>
-        <a href="${base}/privacy.html" class="nav-hide-sp">プライバシーポリシー</a>
-      </nav>
+      <a href="${base}/" class="header-logo-link">
+        <img src="${base}/assets/logo.svg" alt="${SITE_NAME}" class="logo-img">
+        <span class="header-site-name">AEC NEWS JAPAN</span>
+      </a>
     </div>
   </header>`;
 }
@@ -1088,6 +1074,7 @@ function buildIndex(posts, totalCount = 0) {
     '.',
     websiteJsonLd
   ) +
+    htmlHeader() +
     `
   <section class="hero">
     <div class="hero-inner">
@@ -1202,6 +1189,7 @@ function buildArticlePage(post, allPosts) {
     '..',
     newsArticleJsonLd
   ) +
+    htmlHeader('..') +
     `
   <div class="container">
     <main class="main-content">
@@ -1301,6 +1289,7 @@ function buildPrivacyPage() {
     `${SITE_NAME}のプライバシーポリシーです。`,
     `${SITE_URL}/privacy.html`
   ) +
+    htmlHeader() +
     `
   <div class="container">
     <main class="main-content">
@@ -1348,6 +1337,7 @@ function buildAboutPage() {
     `${SITE_NAME}の運営者情報です。`,
     `${SITE_URL}/about.html`
   ) +
+    htmlHeader() +
     `
   <div class="container">
     <main class="main-content">
@@ -1432,6 +1422,7 @@ function buildCategoryPage(category, posts) {
     : '';
 
   return htmlHead(pageTitle, pageDesc, canonicalUrl, '..') +
+    htmlHeader('..') +
     `
   <div class="container">
     <main class="main-content">
@@ -1534,6 +1525,7 @@ function buildEventsPage(events) {
     'BIM・AEC・建設DX関連の日本開催イベント・セミナー情報',
     `${SITE_URL}/events.html`
   ).replace('</style>', eventStyles + '\n  </style>') +
+    htmlHeader('.') +
     `
   <div class="events-hero">
     <h1>イベント情報</h1>

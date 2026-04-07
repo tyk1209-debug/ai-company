@@ -123,10 +123,26 @@ function escape(str) {
 
 // ---- shared HTML parts ------------------------------------------------------
 
-function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
-  const jsonLdScript = jsonLd
-    ? `\n  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`
-    : '';
+function htmlHead(title, desc, canonical, base = '.', jsonLd = null, options = {}) {
+  const schemas = Array.isArray(jsonLd) ? jsonLd.filter(Boolean) : (jsonLd ? [jsonLd] : []);
+  const jsonLdScript = schemas
+    .map((schema) => `\n  <script type="application/ld+json">${JSON.stringify(schema)}</script>`)
+    .join('');
+  const metaDesc = desc && desc.length > 140 ? desc.substring(0, 139) + '...' : (desc || SITE_DESC);
+  const ogType = options.ogType || 'website';
+  const imageUrl = options.image || `${SITE_URL}/assets/og-image.png`;
+  const robots = options.robots || 'index, follow, max-snippet:150, max-image-preview:large';
+  const articleMeta = [
+    options.articlePublishedTime
+      ? `  <meta property="article:published_time" content="${escape(options.articlePublishedTime)}">`
+      : '',
+    options.articleModifiedTime
+      ? `  <meta property="article:modified_time" content="${escape(options.articleModifiedTime)}">`
+      : '',
+    options.articleSection
+      ? `  <meta property="article:section" content="${escape(options.articleSection)}">`
+      : '',
+  ].filter(Boolean).join('\n');
   const truncatedDesc = desc && desc.length > 120 ? desc.substring(0, 119) + '…' : (desc || '');
   return `<!DOCTYPE html>
 <html lang="ja">
@@ -134,20 +150,24 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${escape(title)}</title>
-  <meta name="description" content="${escape(truncatedDesc)}">
+  <meta name="description" content="${escape(metaDesc)}">
   <link rel="canonical" href="${escape(canonical)}">
-  <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large">
+  <meta name="robots" content="${escape(robots)}">
+  <meta name="author" content="AEC News Japan 編集部">
   <meta property="og:title" content="${escape(title)}">
-  <meta property="og:description" content="${escape(truncatedDesc)}">
+  <meta property="og:description" content="${escape(metaDesc)}">
   <meta property="og:url" content="${escape(canonical)}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="${escape(ogType)}">
+  <meta property="og:site_name" content="${SITE_NAME}">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="${SITE_URL}/assets/og-image.png">
+  <meta property="og:image" content="${imageUrl}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="${SITE_URL}/assets/og-image.png">
-  <link rel="icon" type="image/svg+xml" href="${base}/assets/favicon.svg">
+  <meta name="twitter:title" content="${escape(title)}">
+  <meta name="twitter:description" content="${escape(metaDesc)}">
+  <meta name="twitter:image" content="${imageUrl}">
+${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" href="${base}/assets/favicon.svg">
   <link rel="icon" type="image/png" href="${base}/assets/favicon.png">${jsonLdScript}
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
@@ -1238,6 +1258,60 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
 <body>`;
 }
 
+function organizationJsonLd() {
+  return {
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL + '/',
+    logo: `${SITE_URL}/assets/logo-mark.png`,
+  };
+}
+
+function webPageJsonLd(name, description, url) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name,
+    description,
+    url,
+    inLanguage: 'ja',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: SITE_NAME,
+      url: SITE_URL + '/',
+    },
+  };
+}
+
+function collectionPageJsonLd(name, description, url) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name,
+    description,
+    url,
+    inLanguage: 'ja',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: SITE_NAME,
+      url: SITE_URL + '/',
+    },
+  };
+}
+
+function breadcrumbJsonLd(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
 function htmlHeader(base = '.') {
   return `
   <header class="site-header">
@@ -1489,12 +1563,13 @@ function buildIndex(posts, totalCount = 0) {
     description: SITE_DESC,
     url: SITE_URL + '/',
     inLanguage: 'ja',
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL + '/',
-    },
+    publisher: organizationJsonLd(),
   };
+  const homePageJsonLd = webPageJsonLd(
+    `${SITE_NAME} | BIM・AEC・建設DXニュース`,
+    SITE_DESC,
+    SITE_URL + '/'
+  );
 
   const categoryNavHtml = `
   <div class="category-nav-wrapper">
@@ -1539,7 +1614,7 @@ function buildIndex(posts, totalCount = 0) {
     SITE_DESC,
     SITE_URL + '/',
     '.',
-    websiteJsonLd
+    [websiteJsonLd, homePageJsonLd]
   ) +
     htmlHeader() +
     `
@@ -1755,11 +1830,29 @@ function buildArticlePage(post, allPosts) {
     dateModified: isoDate,
     inLanguage: 'ja',
     url: shareUrl,
-    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL + '/' },
+    articleSection: catLabel,
+    publisher: organizationJsonLd(),
     mainEntityOfPage: { '@type': 'WebPage', '@id': shareUrl },
   };
+  const articleBreadcrumbJsonLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: catLabel, url: `${SITE_URL}/categories/${catSlugStr}.html` },
+    { name: post.titleJa || post.title, url: shareUrl },
+  ]);
 
-  return htmlHead(pageTitle, descText, shareUrl, '..', newsArticleJsonLd) +
+  return htmlHead(
+    pageTitle,
+    descText,
+    shareUrl,
+    '..',
+    [newsArticleJsonLd, articleBreadcrumbJsonLd],
+    {
+      ogType: 'article',
+      articlePublishedTime: isoDate,
+      articleModifiedTime: isoDate,
+      articleSection: catLabel,
+    }
+  ) +
     htmlHeader('..') +
     `
   <div class="article-hero" style="background: ${heroBg};">
@@ -1985,6 +2078,11 @@ function buildCategoryPage(category, posts) {
   const pageTitle = `${label}の記事一覧 | ${SITE_NAME}`;
   const pageDesc = `BIM・AEC・建設DXに関する${label}カテゴリの最新ニュース一覧です。`;
   const canonicalUrl = `${SITE_URL}/categories/${categorySlug(category)}.html`;
+  const categoryJsonLd = collectionPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: label, url: canonicalUrl },
+  ]);
 
   const emptyMsg = catPosts.length === 0
     ? '<p style="color:var(--text-muted);padding:2rem 0;">このカテゴリの記事はまだありません。</p>'
@@ -1995,7 +2093,7 @@ function buildCategoryPage(category, posts) {
   const catGrad2 = THUMB_GRADIENTS[catKey2] || 'linear-gradient(135deg, rgba(30,58,95,0.65) 0%, rgba(37,99,235,0.65) 100%)';
   const catHeroBg = `linear-gradient(135deg, rgba(10,22,40,0.80) 0%, rgba(10,22,40,0.72) 100%), ${catGrad2}, url('${catImg2}') center/cover no-repeat`;
 
-  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..') +
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [categoryJsonLd, breadcrumbLd]) +
     htmlHeader('..') +
     `
   <div class="cat-hero" style="background: ${catHeroBg};">
@@ -2107,6 +2205,210 @@ function buildEventsPage(events) {
     'BIM・AEC・建設DX関連の日本開催イベント・セミナー情報',
     `${SITE_URL}/events.html`
   ).replace('</style>', eventStyles + '\n  </style>') +
+    htmlHeader('.') +
+    `
+  <div class="events-hero">
+    <h1>イベント情報</h1>
+    <p>BIM・AEC・建設DX関連の日本開催イベント・セミナー</p>
+  </div>
+  <div class="events-main">
+    <h2 class="events-section-title">開催予定</h2>
+    <div class="event-list">${upcomingHtml}</div>
+    ${pastSection}
+  </div>` +
+    htmlFooter('.');
+}
+
+// ---- SEO/static page overrides ----------------------------------------------
+
+function buildPrivacyPage() {
+  const pageTitle = `プライバシーポリシー | ${SITE_NAME}`;
+  const pageDesc = `${SITE_NAME}のプライバシーポリシー、広告・Cookie・アクセス解析の取り扱いについて説明しています。`;
+  const canonicalUrl = `${SITE_URL}/privacy.html`;
+  const privacyJsonLd = webPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: 'プライバシーポリシー', url: canonicalUrl },
+  ]);
+
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [privacyJsonLd, breadcrumbLd]) +
+    htmlHeader() +
+    `
+  <div class="container">
+    <main class="main-content">
+      <div class="static-page">
+        <h1>プライバシーポリシー</h1>
+        <p>本ポリシーは、${SITE_NAME}（以下「当サイト」）における、ユーザー情報の取扱いを定めるものです。</p>
+
+        <h2>1. 個人情報の収集について</h2>
+        <p>当サイトでは、お問い合わせフォームを通じて、お名前やメールアドレスなどの情報をご提供いただく場合があります。取得した情報は、お問い合わせへの対応以外の目的では利用しません。</p>
+
+        <h2>2. アクセス解析ツールについて</h2>
+        <p>当サイトでは、Googleが提供するアクセス解析ツール「Google Analytics」を利用しています。Google AnalyticsはCookieを使用してトラフィックデータを収集しますが、個人を特定する情報は含みません。詳しくは <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Googleのポリシー</a> をご確認ください。</p>
+
+        <h2>3. 広告・アフィリエイトについて</h2>
+        <p>当サイトでは、第三者配信の広告サービスを利用する場合があります。また、記事内やカテゴリページでアフィリエイトリンクを掲載することがあります。広告または提携リンクを含む場合は、その旨が分かるように表示します。</p>
+        <p>Amazonのアソシエイトとして、${SITE_NAME}は適格販売により収入を得ています。</p>
+
+        <h2>4. Cookieについて</h2>
+        <p>当サイトでは、利便性向上や広告配信の最適化のためにCookieを使用する場合があります。ブラウザ設定からCookieを無効化することも可能ですが、一部の機能が正常に動作しない場合があります。</p>
+
+        <h2>5. 免責事項</h2>
+        <p>当サイトは、掲載情報の正確性や最新性に十分配慮していますが、その完全性を保証するものではありません。導入判断や購買判断を行う際は、必ず公式情報や一次情報をご確認ください。</p>
+
+        <h2>6. 著作権について</h2>
+        <p>当サイトに掲載している文章・画像等の著作権は、当サイトまたは正当な権利者に帰属します。無断転載・複製はご遠慮ください。</p>
+
+        <h2>7. ポリシーの変更</h2>
+        <p>本ポリシーは、法令改正や運営上の必要に応じて変更する場合があります。重要な変更がある場合は、サイト上でお知らせします。</p>
+
+        <h2>8. お問い合わせ</h2>
+        <p>本ポリシーに関するお問い合わせは、<a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>よりご連絡ください。</p>
+
+        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">最終更新日: 2026年4月7日</p>
+      </div>
+    </main>
+  </div>` +
+    htmlFooter();
+}
+
+function buildAboutPage() {
+  const pageTitle = `運営者情報 | ${SITE_NAME}`;
+  const pageDesc = `${SITE_NAME}の編集方針、AI利用ポリシー、広告方針、お問い合わせ先をまとめています。`;
+  const canonicalUrl = `${SITE_URL}/about.html`;
+  const aboutJsonLd = webPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: '運営者情報', url: canonicalUrl },
+  ]);
+
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [aboutJsonLd, breadcrumbLd]) +
+    htmlHeader() +
+    `
+  <div class="container">
+    <main class="main-content">
+      <div class="static-page">
+        <h1>運営者情報</h1>
+
+        <h2>このサイトについて</h2>
+        <p>${SITE_NAME}は、BIM・AEC・建設DXに関する国内外のニュースや製品情報を、日本語で整理・解説する専門メディアです。世界の動向を追いながら、日本の実務にどう影響するかを短時間で把握できる構成を目指しています。</p>
+
+        <h2>対象領域</h2>
+        <ul>
+          <li>BIM、設計、施工、FMに関する実務ニュース</li>
+          <li>建設DX、AI、デジタルツイン、CDEなどの関連技術</li>
+          <li>Revit、Archicad、GLOOBE、IFCなどの製品・規格動向</li>
+          <li>海外・国内の業界発表、技術記事、プレスリリース</li>
+        </ul>
+
+        <h2>編集方針</h2>
+        <p>当サイトは、単なる翻訳ではなく、日本のBIM・AEC実務にとって重要かどうかを基準に記事を編集しています。特に「何が起きたか」「なぜ重要か」「日本の実務にどう影響するか」を重視し、読者が短時間で判断材料を得られる構成を目指しています。</p>
+
+        <h2>AI利用ポリシー</h2>
+        <p>当サイトでは、記事候補の収集、要約草案、日本語化の一部にAIを活用しています。ただし、公開内容には一次情報へのリンクを明示し、専門メディアとしての可読性と妥当性を重視して整形しています。重要な判断や導入検討の際は、必ず元記事・公式発表・製品情報をご確認ください。</p>
+
+        <h2>広告・アフィリエイト方針</h2>
+        <p>当サイトでは、読者にとって関連性が高いと判断した書籍や機材を紹介するために、広告やアフィリエイトリンクを使用する場合があります。紹介先の選定は編集方針に基づいて行い、広告であることが分かるように表示します。</p>
+        <p>Amazonのアソシエイトとして、${SITE_NAME}は適格販売により収入を得ています。</p>
+
+        <h2>免責事項</h2>
+        <p>掲載情報の正確性には十分配慮していますが、完全性・最新性を保証するものではありません。最終的な判断は、必ず一次情報や公式情報を確認したうえで行ってください。</p>
+
+        <h2>お問い合わせ</h2>
+        <p>掲載内容や運営に関するご連絡は、<a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">Googleフォームのお問い合わせ窓口</a>よりお願いいたします。</p>
+        <p><a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:0.75rem; background:var(--blue); color:#fff; padding:0.75rem 1.25rem; border-radius:6px; font-weight:700; text-decoration:none;">お問い合わせフォームを開く</a></p>
+
+        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">最終更新日: 2026年4月7日</p>
+      </div>
+    </main>
+  </div>` +
+    htmlFooter();
+}
+
+function buildEventsPage(events) {
+  const now = Date.now();
+  const upcoming = events.filter((ev) => {
+    if (!ev.date) return true;
+    const d = new Date(ev.date).getTime();
+    return isNaN(d) || d >= now;
+  });
+  const past = events.filter((ev) => {
+    if (!ev.date) return false;
+    const d = new Date(ev.date).getTime();
+    return !isNaN(d) && d < now;
+  });
+
+  function formatEventDate(ev) {
+    if (!ev.date) return '日程未定';
+    const d = new Date(ev.date);
+    if (isNaN(d.getTime())) return '日程未定';
+    const dateStr = d.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
+    if (ev.dateEnd) {
+      const de = new Date(ev.dateEnd);
+      if (!isNaN(de.getTime())) {
+        return `${dateStr} - ${de.toLocaleDateString('ja-JP', { month: 'long', day: 'numeric' })}`;
+      }
+    }
+    return dateStr;
+  }
+
+  function eventCard(ev) {
+    const dateLabel = formatEventDate(ev);
+    const location = escape(ev.location || '');
+    const source = escape(ev.source || '');
+    const desc = ev.description ? `<p class="event-desc">${escape(ev.description)}</p>` : '';
+    return `
+        <article class="event-card">
+          <div class="event-meta">
+            <span class="event-date">開催日: ${escape(dateLabel)}</span>
+            ${location ? `<span class="event-location">会場: ${location}</span>` : ''}
+            ${source ? `<span class="event-source">主催: ${source}</span>` : ''}
+          </div>
+          <h2 class="event-title">
+            <a href="${escape(ev.url)}" target="_blank" rel="noopener noreferrer">${escape(ev.title)}</a>
+          </h2>
+          ${desc}
+          <a class="event-link" href="${escape(ev.url)}" target="_blank" rel="noopener noreferrer">詳細・登録を見る</a>
+        </article>`;
+  }
+
+  const upcomingHtml = upcoming.length > 0
+    ? upcoming.map(eventCard).join('')
+    : '<p class="event-empty">現在、掲載中の開催予定イベントはありません。</p>';
+
+  const pastHtml = past.length > 0 ? past.map(eventCard).join('') : '';
+  const pastSection = past.length > 0
+    ? `<h2 class="events-section-title">開催済み</h2><div class="event-list past">${pastHtml}</div>`
+    : '';
+
+  const eventStyles = `
+    .events-hero { background: var(--navy); color: var(--white); padding: 2.5rem 1.5rem; text-align: center; }
+    .events-hero h1 { font-size: 1.75rem; font-weight: 700; }
+    .events-hero p { opacity: 0.75; margin-top: 0.5rem; font-size: 0.95rem; }
+    .events-main { max-width: 820px; margin: 2.5rem auto; padding: 0 1.5rem 4rem; }
+    .events-section-title { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; border-left: 4px solid var(--blue); padding-left: 0.75rem; }
+    .event-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .event-card { background: var(--white); border-radius: 10px; padding: 1.4rem 1.6rem; box-shadow: var(--card-shadow); border: 1px solid var(--border); }
+    .event-list.past .event-card { opacity: 0.6; }
+    .event-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
+    .event-date { font-weight: 600; color: var(--blue); }
+    .event-title { font-size: 1.05rem; font-weight: 700; line-height: 1.5; margin-bottom: 0.5rem; }
+    .event-title a { color: var(--text); }
+    .event-title a:hover { color: var(--blue); text-decoration: none; }
+    .event-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.75rem; }
+    .event-link { font-size: 0.85rem; font-weight: 600; color: var(--blue); }
+    .event-empty { color: var(--text-muted); font-size: 0.95rem; padding: 2rem 0; }`;
+
+  const pageTitle = `イベント情報 | ${SITE_NAME}`;
+  const pageDesc = 'BIM・AEC・建設DX関連の日本開催イベント・セミナー情報をまとめています。';
+  const canonicalUrl = `${SITE_URL}/events.html`;
+  const eventsJsonLd = collectionPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: 'イベント情報', url: canonicalUrl },
+  ]);
+
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [eventsJsonLd, breadcrumbLd]).replace('</style>', eventStyles + '\n  </style>') +
     htmlHeader('.') +
     `
   <div class="events-hero">

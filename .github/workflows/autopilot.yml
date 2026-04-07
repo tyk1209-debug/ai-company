@@ -2,15 +2,10 @@ name: AI News Autopilot
 
 on:
   schedule:
-    # 毎日 07:00 JST (22:00 UTC 前日)
     - cron: '0 22 * * *'
-    # 毎日 12:00 JST (03:00 UTC)
     - cron: '0 3 * * *'
-    # 毎日 20:00 JST (11:00 UTC)
     - cron: '0 11 * * *'
-    # 毎週月曜 09:00 JST (00:00 UTC)
     - cron: '0 0 * * 1'
-    # 毎週月曜 10:00 JST (01:00 UTC) デザインレビュー
     - cron: '0 1 * * 1'
   workflow_dispatch:
 
@@ -20,7 +15,6 @@ jobs:
     timeout-minutes: 35
     permissions:
       contents: write
-    # 同時実行を防ぎ、先に起動したジョブが終わるまで待機する
     concurrency:
       group: site-deploy
       cancel-in-progress: false
@@ -42,10 +36,6 @@ jobs:
         run: node news.js
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           DRY_RUN: 'false'
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -60,33 +50,6 @@ jobs:
 
       - name: Collect events
         run: node collectEvents.js
-
-      - name: Post events to X
-        run: |
-          node -e "
-          const fs = require('fs');
-          const path = require('path');
-          const { postEvent } = require('./postToX.js');
-          const evFile = path.join(__dirname, 'data', 'events.json');
-          if (!fs.existsSync(evFile)) process.exit(0);
-          const events = JSON.parse(fs.readFileSync(evFile, 'utf-8'));
-          const targets = events.filter(ev => !ev.postedToX);
-          if (!targets.length) { console.log('[events] 投稿済みイベントのみ'); process.exit(0); }
-          (async () => {
-            const ev = targets[0];
-            const r = await postEvent(ev, { dryRun: false });
-            if (r.success) {
-              ev.postedToX = true;
-              fs.writeFileSync(evFile, JSON.stringify(events, null, 2));
-              console.log('[events] 投稿完了:', ev.title);
-            }
-          })();
-          "
-        env:
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
 
       - name: Commit and push website
         run: |
@@ -114,7 +77,7 @@ jobs:
           const fs = require('fs');
           let count = 0;
           try { count = JSON.parse(fs.readFileSync('data/posts.json','utf-8')).length; } catch(e) {}
-          const text = 'AEC News Japan - 自動投稿完了\n' + time + '\n累計記事数: ' + count + '件\nhttps://tyk1209-debug.github.io/ai-company/';
+          const text = 'AEC News Japan - 自動更新完了\n' + time + '\n候補記事数: ' + count + '件\nhttps://tyk1209-debug.github.io/ai-company/';
           const body = JSON.stringify({ chat_id: chatId, text });
           const req = https.request({ hostname:'api.telegram.org', path:'/bot'+token+'/sendMessage', method:'POST', headers:{'Content-Type':'application/json','Content-Length':Buffer.byteLength(body)} });
           req.write(body); req.end();
@@ -182,7 +145,6 @@ jobs:
     permissions:
       contents: write
     if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 1'
-    # run-news-pipelineと同じconcurrencyグループで直列化
     concurrency:
       group: site-deploy
       cancel-in-progress: false
@@ -226,7 +188,7 @@ jobs:
           const token = process.env.TELEGRAM_BOT_TOKEN;
           const chatId = process.env.TELEGRAM_CHAT_ID;
           if (!token || !chatId) process.exit(0);
-          const text = 'AEC News Japan - 週次まとめ記事を生成しました\nhttps://tyk1209-debug.github.io/ai-company/';
+          const text = 'AEC News Japan - 週次まとめを更新しました\nhttps://tyk1209-debug.github.io/ai-company/';
           const body = JSON.stringify({ chat_id: chatId, text });
           const req = https.request({ hostname:'api.telegram.org', path:'/bot'+token+'/sendMessage', method:'POST', headers:{'Content-Type':'application/json','Content-Length':Buffer.byteLength(body)} });
           req.write(body); req.end();
@@ -243,21 +205,21 @@ jobs:
         with:
           node-version: '24'
       - run: npm ci
-      - name: デザインレビュー実行
+      - name: Run design review
         run: node designReview.js
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      - name: デザイン改善を自動実装
+      - name: Apply design improvements
         run: node designImplement.js
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      - name: レビュー・実装結果をコミット
+      - name: Commit design review changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add DESIGN_REVIEW.md generateSite.js index.html posts/ categories/ data/ || true
-          git diff --staged --quiet || git commit -m "feat: 週次デザインレビュー＆自動改善実装 $(date +'%Y-%m-%d')"
+          git diff --staged --quiet || git commit -m "feat: apply weekly design review $(date +'%Y-%m-%d')"
           git fetch origin main
           git push --force-with-lease

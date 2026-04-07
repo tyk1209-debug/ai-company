@@ -100,10 +100,6 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
   <link rel="icon" type="image/png" href="${base}/assets/favicon.png">${jsonLdScript}
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
-  <!-- Google Search Console verification -->
-  <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
-  <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
-  <!-- Google Analytics 4 -->
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQXDS1Z41Y"></script>
   <script>
@@ -2115,6 +2111,18 @@ function main() {
   const postsDir = path.join(__dirname, 'posts');
   if (!fs.existsSync(postsDir)) {
     fs.mkdirSync(postsDir, { recursive: true });
+  }
+  const expectedPostFiles = new Set(posts.map((post) => `${post.slug}.html`));
+  const existingPostFiles = fs.readdirSync(postsDir).filter((name) => name.endsWith('.html'));
+  let removedPostCount = 0;
+  for (const filename of existingPostFiles) {
+    if (!expectedPostFiles.has(filename)) {
+      fs.unlinkSync(path.join(postsDir, filename));
+      removedPostCount++;
+    }
+  }
+  if (removedPostCount > 0) {
+    console.log(`[generateSite] Removed ${removedPostCount} stale article pages from posts/`);
   }
 
   // Generate index.html

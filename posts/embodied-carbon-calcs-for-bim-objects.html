@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIMで埋蔵炭素をどう扱う？BIMオブジェクト単位のLCA実務をNBS新ガイドから読む | AEC News Japan</title>
-  <meta name="description" content="【TL;DR】 BIMオブジェクトに炭素データを持たせると、設計初期から材料比較と脱炭素判断ができます。 従来のLCAは設計後半の別計算になりやすく、意思決定に間に合わないことが多いです。 Revit・Archicad・IFCと組み合わせる…">
+  <title>BIMオブジェクトに炭素データを組み込む——設計段階での環境判断を実現 | AEC News Japan</title>
+  <meta name="description" content="【背景】 建設業界は2050年のネットゼロ達成に向けて、設計段階での炭素削減が急務となっています。しかし現在、具体化されていない段階の設計では、部材・製品の上流工程（Module A1-A5：製造から輸送）で排出される体化炭素（Embodi…">
   <link rel="canonical" href="https://aec-news.com/posts/embodied-carbon-calcs-for-bim-objects.html">
   <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large">
   <meta name="author" content="AEC News Japan 編集部">
-  <meta property="og:title" content="BIMで埋蔵炭素をどう扱う？BIMオブジェクト単位のLCA実務をNBS新ガイドから読む | AEC News Japan">
-  <meta property="og:description" content="【TL;DR】 BIMオブジェクトに炭素データを持たせると、設計初期から材料比較と脱炭素判断ができます。 従来のLCAは設計後半の別計算になりやすく、意思決定に間に合わないことが多いです。 Revit・Archicad・IFCと組み合わせる…">
+  <meta property="og:title" content="BIMオブジェクトに炭素データを組み込む——設計段階での環境判断を実現 | AEC News Japan">
+  <meta property="og:description" content="【背景】 建設業界は2050年のネットゼロ達成に向けて、設計段階での炭素削減が急務となっています。しかし現在、具体化されていない段階の設計では、部材・製品の上流工程（Module A1-A5：製造から輸送）で排出される体化炭素（Embodi…">
   <meta property="og:url" content="https://aec-news.com/posts/embodied-carbon-calcs-for-bim-objects.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AEC News Japan">
@@ -18,8 +18,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BIMで埋蔵炭素をどう扱う？BIMオブジェクト単位のLCA実務をNBS新ガイドから読む | AEC News Japan">
-  <meta name="twitter:description" content="【TL;DR】 BIMオブジェクトに炭素データを持たせると、設計初期から材料比較と脱炭素判断ができます。 従来のLCAは設計後半の別計算になりやすく、意思決定に間に合わないことが多いです。 Revit・Archicad・IFCと組み合わせる…">
+  <meta name="twitter:title" content="BIMオブジェクトに炭素データを組み込む——設計段階での環境判断を実現 | AEC News Japan">
+  <meta name="twitter:description" content="【背景】 建設業界は2050年のネットゼロ達成に向けて、設計段階での炭素削減が急務となっています。しかし現在、具体化されていない段階の設計では、部材・製品の上流工程（Module A1-A5：製造から輸送）で排出される体化炭素（Embodi…">
   <meta name="twitter:image" content="https://aec-news.com/assets/og-image.png">
   <meta property="article:published_time" content="2026-04-01T08:58:11.000Z">
   <meta property="article:modified_time" content="2026-04-01T08:58:11.000Z">
@@ -27,8 +27,8 @@
   <link rel="icon" type="image/svg+xml" href="https://aec-news.com/favicon.svg">
   <link rel="icon" type="image/png" sizes="48x48" href="https://aec-news.com/favicon.png">
   <link rel="apple-touch-icon" href="https://aec-news.com/favicon.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"BIMで埋蔵炭素をどう扱う？BIMオブジェクト単位のLCA実務をNBS新ガイドから読む","description":"【TL;DR】 BIMオブジェクトに炭素データを持たせると、設計初期から材料比較と脱炭素判断ができます。 従来のLCAは設計後半の別計算になりやすく、意思決定に間に合わないことが多いです。 Revit・Archicad・IFCと組み合わせる…","datePublished":"2026-04-01T08:58:11.000Z","dateModified":"2026-04-01T08:58:11.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/embodied-carbon-calcs-for-bim-objects.html","articleSection":"BIM全般","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/","logo":"https://aec-news.com/assets/logo-mark.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/embodied-carbon-calcs-for-bim-objects.html"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://aec-news.com/"},{"@type":"ListItem","position":2,"name":"BIM全般","item":"https://aec-news.com/categories/bim-ecosystem.html"},{"@type":"ListItem","position":3,"name":"BIMで埋蔵炭素をどう扱う？BIMオブジェクト単位のLCA実務をNBS新ガイドから読む","item":"https://aec-news.com/posts/embodied-carbon-calcs-for-bim-objects.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"BIMオブジェクトに炭素データを組み込む——設計段階での環境判断を実現","description":"【背景】 建設業界は2050年のネットゼロ達成に向けて、設計段階での炭素削減が急務となっています。しかし現在、具体化されていない段階の設計では、部材・製品の上流工程（Module A1-A5：製造から輸送）で排出される体化炭素（Embodi…","datePublished":"2026-04-01T08:58:11.000Z","dateModified":"2026-04-01T08:58:11.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/embodied-carbon-calcs-for-bim-objects.html","articleSection":"BIM全般","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/","logo":"https://aec-news.com/assets/logo-mark.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/embodied-carbon-calcs-for-bim-objects.html"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://aec-news.com/"},{"@type":"ListItem","position":2,"name":"BIM全般","item":"https://aec-news.com/categories/bim-ecosystem.html"},{"@type":"ListItem","position":3,"name":"BIMオブジェクトに炭素データを組み込む——設計段階での環境判断を実現","item":"https://aec-news.com/posts/embodied-carbon-calcs-for-bim-objects.html"}]}</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
   <!-- Google Analytics 4 -->
@@ -1616,18 +1616,18 @@
         <span class="article-hero-tag article-hero-tag--cat">BIM全般</span>
         <span class="article-hero-tag article-hero-tag--source">AEC Magazine</span>
       </div>
-      <h1 class="article-hero-title">BIMで埋蔵炭素をどう扱う？BIMオブジェクト単位のLCA実務をNBS新ガイドから読む</h1>
-      <p class="article-hero-summary">BIMオブジェクトに炭素データを持たせると、設計初期から材料比較と脱炭素判断ができます。</p>
+      <h1 class="article-hero-title">BIMオブジェクトに炭素データを組み込む——設計段階での環境判断を実現</h1>
+      <p class="article-hero-summary">建設業界は2050年のネットゼロ達成に向けて、設計段階での炭素削減が急務となっています。しかし現在、具体化されていない段階の設計では、部材・製品の上流工程（Module A1-A5：製造から輸送）で排出される体化炭素（Embodied Carbon）のデータが…</p>
       <div class="article-hero-meta">
         <span>📅 2026年4月1日</span>
         <span class="article-hero-meta-sep">·</span>
-        <span>⏱ 約4分</span>
+        <span>⏱ 約2分</span>
         <span class="article-hero-meta-sep">·</span>
         <span>出典: AEC Magazine</span>
       </div>
       <div class="article-hero-actions">
         <a class="article-hero-btn article-hero-btn--primary" href="https://aecmag.com/sustainability/embodied-carbon-calcs-for-bim-objects" target="_blank" rel="noopener noreferrer">原文を読む →</a>
-        <a class="article-hero-btn article-hero-btn--share" href="https://twitter.com/intent/tweet?text=BIM%E3%81%A7%E5%9F%8B%E8%94%B5%E7%82%AD%E7%B4%A0%E3%82%92%E3%81%A9%E3%81%86%E6%89%B1%E3%81%86%EF%BC%9FBIM%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E5%8D%98%E4%BD%8D%E3%81%AELCA%E5%AE%9F%E5%8B%99%E3%82%92NBS%E6%96%B0%E3%82%AC%E3%82%A4%E3%83%89%E3%81%8B%E3%82%89%E8%AA%AD%E3%82%80&url=https%3A%2F%2Faec-news.com%2Fposts%2Fembodied-carbon-calcs-for-bim-objects.html" target="_blank" rel="noopener noreferrer">𝕏 シェア</a>
+        <a class="article-hero-btn article-hero-btn--share" href="https://twitter.com/intent/tweet?text=BIM%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AB%E7%82%AD%E7%B4%A0%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E7%B5%84%E3%81%BF%E8%BE%BC%E3%82%80%E2%80%94%E2%80%94%E8%A8%AD%E8%A8%88%E6%AE%B5%E9%9A%8E%E3%81%A7%E3%81%AE%E7%92%B0%E5%A2%83%E5%88%A4%E6%96%AD%E3%82%92%E5%AE%9F%E7%8F%BE&url=https%3A%2F%2Faec-news.com%2Fposts%2Fembodied-carbon-calcs-for-bim-objects.html" target="_blank" rel="noopener noreferrer">𝕏 シェア</a>
       </div>
     </div>
   </div>
@@ -1637,22 +1637,12 @@
         <div class="article-body-wrap">
           <div class="ai-body-label">AI による日本語解説</div>
           <div class="article-body">
-            <h2 class="article-section-h2"><span>概要</span></h2><p>NBSとCircular Ecologyが公開したガイドは、BIMオブジェクト単位で埋蔵炭素を計算する実務フレームワークを示したものです。ポイントは、炭素計算を設計の最後に行う別作業として扱うのではなく、BIMモデルの属性として前倒しで扱うことです。設計事務所やゼネコンのBIM/DX担当にとって重要なのは、LCAを専門部門だけの仕事にせず、設計判断の中へ戻せる可能性が見えてきたことです。</p><h2 class="article-section-h2"><span>なぜ重要か</span></h2><p>脱炭素対応では、材料を決めた後に炭素を集計しても手遅れになりやすいです。壁、床、断熱、開口部などのBIMオブジェクトに炭素係数の考え方を持たせれば、設計比較の段階で『どの案が低炭素か』を判断できます。ベンダーごとに別ツールでLCAを回すだけでは、BIMが意思決定ツールになりません。BIM上で比較できること自体が、今後の競争力になります。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建設業界は2050年のネットゼロ達成に向けて、設計段階での炭素削減が急務となっています。しかし現在、具体化されていない段階の設計では、部材・製品の上流工程（Module A1-A5：製造から輸送）で排出される体化炭素（Embodied Carbon）のデータが分散・標準化されておらず、設計者が炭素を考慮した選択を行いにくいのが課題となっていました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>NBS（Hubexoの仕様・製品情報プラットフォーム）と環境サステナビリティ企業Circular Ecologyが、「NBS Guide: Embodied Carbon Calculations」を発表しました。このガイドは、BS EN 15804に準拠した上流工程の炭素値（Module A1-A5）をBIMオブジェクトレベルで直接埋め込む実践的フレームワークを提供します。4つのBIMオブジェクトタイプに対応しており、断熱材や煉瓦などの「レイヤー化されたアイテム」、キャビティ壁などの「レイヤー化されたアセンブリ」、洗面台やラジエーターなどの「アイテム」、鉄筋コンクリートなどの「複合アセンブリ」が対象です。各タイプごとに、数量に排出係数を乗じる計算方法や材料密度などの重要因子を詳細に示しています。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
-      <a class="mid-related-link" href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダム大聖堂の再建を支えたBIM、文化遺産保存にデジタル革新が不可欠に</a>
+      <a class="mid-related-link" href="../posts/autodesk-strengthens-bridge-between-revit-and-forma.html">RevitがFormaと直結、クラウド設計データの自動移行が実現</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>比較表：従来LCA vs BIM</span></h2>
-    <div class="article-comparison-table-wrap">
-      <table class="article-comparison-table">
-        <thead>
-          <tr><th>項目</th><th>従来LCA</th><th>BIMベースのLCA</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>計算のタイミング</td><td>基本設計後半から実施設計以降になりやすい</td><td>基本計画から比較しやすい</td></tr><tr><td>データの持ち方</td><td>Excelや別ソフトに分散しやすい</td><td>BIMオブジェクトの属性として持ちやすい</td></tr><tr><td>設計変更への追従</td><td>手計算や再集計が多い</td><td>モデル更新に合わせて見直ししやすい</td></tr><tr><td>関係者共有</td><td>設計者と環境担当の間で閉じやすい</td><td>設計・施工・発注者で議論しやすい</td></tr><tr><td>意思決定への使い方</td><td>報告用途に寄りやすい</td><td>案比較や材料選定に使いやすい</td></tr>
-        </tbody>
-      </table>
-    </div><h2 class="article-section-h2"><span>Revit / Archicad / IFCとの関係</span></h2><p>RevitやArchicadは、炭素情報を扱うBIMモデルの器になります。重要なのは、どちらのソフトを使うかより、材料・厚み・数量・分類を一貫したルールで持てるかです。IFCはその情報を他ツールへ受け渡す際の中立フォーマットとして重要で、LCAツールやCDEへつなぐ前提になります。つまり、RevitとArchicadは入力・設計の現場、IFCは連携の橋渡しという役割で見ると整理しやすいです。</p><h2 class="article-section-h2"><span>実務でどう使うか</span></h2><p>設計では、外壁仕様、断熱材、躯体構成などの比較検討に使えます。施工では、代替材の検討やVE時に『コストだけでなく炭素も見る』判断軸を追加できます。発注者対応では、環境配慮方針やZEB・ESG文脈の説明材料として使いやすくなります。BIM/DX担当がやるべきことは、まずオブジェクト分類、数量の取り方、材料属性、係数の参照元を整理することです。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この動きが広がると、BIMは図面や干渉チェックだけでなく、環境性能の意思決定基盤として評価されるようになります。今後は『BIMを使っているか』より、『BIMで炭素比較までできるか』が問われやすくなります。設計事務所では提案力、ゼネコンでは調達・施工検討の質、発注者では説明責任の質に差が出ます。</p><h2 class="article-section-h2"><span>実務への影響</span></h2><p>現場レベルでは、材料変更時の影響確認、環境資料の作成、社内レビューの精度が上がります。一方で、属性ルールが曖昧なままでは数値が揃わず、LCAがBIMに乗っても使えません。BIMマネージャーやDX担当が、分類ルールと受け渡しルールを先に整える必要があります。</p><h2 class="article-section-h2"><span>つまずくポイント</span></h2><p>炭素係数の出典がバラバラになること、BIMオブジェクトの分類が社内で統一されていないこと、設計変更時にどこまで再計算するか決まっていないことが典型的なつまずきです。</p><h2 class="article-section-h2"><span>なぜ独学では難しいか</span></h2><p>LCAは環境評価の知識だけでなく、BIMオブジェクト、数量算出、属性設計、IFC連携まで絡みます。ソフト操作だけでは足りず、設計・施工・データ標準の理解が必要なので、断片的な記事だけでは実務に落とし込みにくいテーマです。</p><h2 class="article-section-h2"><span>学習方法</span></h2><p>まずBIMのデータ構造とオブジェクト分類を理解し、その次にLCAの基本用語、さらにRevitやArchicadでの属性管理、最後にIFCやCDEを含む連携方法を学ぶ順番が現実的です。BIM基礎とマネジメントの両方を押さえると、実案件へつなげやすくなります。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>このガイドは複雑な規格原理をBIMワークフローに実装可能な実践的方法論へと翻訳しています。ジオメトリ主導のアプローチにより、既存のRevitやArchiCADなどのBIMツール内で、透明性が高く一貫性のある炭素データを生成できます。これにより、プロジェクト間の比較検証が容易になり、製品・部材選定時の炭素影響評価が定量化されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>設計初期段階から炭素データに基づく判断が可能になることで、プロジェクトの炭素足跡を大幅に削減するチャンスが生まれます。Hubexoの持続可能性責任者Dr Lee Jones氏は「炭素データなしで行われた設計判断は環境影響低減の機会喪失」と指摘。本ガイドにより、設計者は初日から知情的な炭素選択が可能になり、建設セクター全体のネットゼロ転換を加速させることが期待されます。既存BIMワークフローとの親和性の高さが、業界全体への普及を促進する鍵となるでしょう。</p>
           </div>
         </div>
         
@@ -1730,7 +1720,7 @@
         <span class="article-editorial-icon">💡</span>
         <span class="article-editorial-title">AEC News Japan 編集部の見解</span>
       </div>
-      <div class="article-editorial-text"><p>この動きが広がると、BIMは図面や干渉チェックだけでなく、環境性能の意思決定基盤として評価されるようになります。今後は『BIMを使っているか』より、『BIMで炭素比較までできるか』が問われやすくなります。設計事務所では提案力、ゼネコンでは調達・施工検討の質、発注者では説明責任の質に差が出ます。</p></div>
+      <div class="article-editorial-text"><p>設計初期段階から炭素データに基づく判断が可能になることで、プロジェクトの炭素足跡を大幅に削減するチャンスが生まれます。Hubexoの持続可能性責任者Dr Lee Jones氏は「炭素データなしで行われた設計判断は環境影響低減の機会喪失」と指摘。本ガイドにより、設計者は初日から知情的な炭素選択が可能になり、建設セクター全体のネットゼロ転換を加速させることが期待されます。既存BIMワークフローとの親和性の高さが、業界全体への普及を促進する鍵となるでしょう。</p></div>
     </div>
         <div class="article-source-card">
           <span class="article-source-card-label">元記事・出典</span>
@@ -1742,11 +1732,11 @@
         <div class="article-tags-row">
           <span class="article-tags-label">タグ:</span>
           <a class="article-tag" href="../categories/bim-ecosystem.html">BIM全般</a>
-          <span class="article-tag">LCA</span><span class="article-tag">埋蔵炭素</span><span class="article-tag">BIMオブジェクト</span><span class="article-tag">Revit</span><span class="article-tag">Archicad</span><span class="article-tag">IFC</span>
+          
           <span class="article-tag article-tag--source">AEC Magazine</span>
         </div>
         <div class="article-share-footer">
-          <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=BIM%E3%81%A7%E5%9F%8B%E8%94%B5%E7%82%AD%E7%B4%A0%E3%82%92%E3%81%A9%E3%81%86%E6%89%B1%E3%81%86%EF%BC%9FBIM%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E5%8D%98%E4%BD%8D%E3%81%AELCA%E5%AE%9F%E5%8B%99%E3%82%92NBS%E6%96%B0%E3%82%AC%E3%82%A4%E3%83%89%E3%81%8B%E3%82%89%E8%AA%AD%E3%82%80&url=https%3A%2F%2Faec-news.com%2Fposts%2Fembodied-carbon-calcs-for-bim-objects.html" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
+          <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=BIM%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AB%E7%82%AD%E7%B4%A0%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E7%B5%84%E3%81%BF%E8%BE%BC%E3%82%80%E2%80%94%E2%80%94%E8%A8%AD%E8%A8%88%E6%AE%B5%E9%9A%8E%E3%81%A7%E3%81%AE%E7%92%B0%E5%A2%83%E5%88%A4%E6%96%AD%E3%82%92%E5%AE%9F%E7%8F%BE&url=https%3A%2F%2Faec-news.com%2Fposts%2Fembodied-carbon-calcs-for-bim-objects.html" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
           <a class="back-btn" href="../">← 記事一覧に戻る</a>
         </div>
         <div class="article-rail">
@@ -1755,17 +1745,17 @@
         <h2 class="section-title" style="margin-top:0;">関連記事</h2>
         <div class="article-related-grid">
       <article class="article-related-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(14,165,233,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
-          <div class="card-thumb-badge"><span class="badge">Revit</span></div>
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(124,58,237,0.55) 100%), url('../assets/csm_KI_Bau_2a4ab20acc.jpg') center/cover no-repeat;">
+          <div class="card-thumb-badge"><span class="badge">BIM×AI</span></div>
         </div>
         <div class="card-body">
           <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/maxon-launches-redshift-for-archviz.html">Maxon、建築ビジュアライゼーション向けRedShift プラグイン発表──Revit・Archicad・Vector</a>
+            <a href="../posts/aec-magazine-march-april-2026.html">エージェント型BIMの衝撃―AIが5年で設計業界を根底から変える</a>
           </h3>
-          <p class="card-excerpt">【背景】建築業界でBIMツール内での高品質ビジュアライゼーションへのニーズが急速に高まっています。従来、architects と interior design…</p>
+          <p class="card-excerpt">【背景】 AEC業界におけるAI活用は、画像生成やチャットボットの段階から次の進化へ移行しています。従来のAIツールは設計支援の周辺領域に留まっていましたが、今…</p>
           <div class="card-footer">
-            <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年3月18日</span></div>
-            <a class="card-read-more" href="../posts/maxon-launches-redshift-for-archviz.html">続きを読む →</a>
+            <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年3月3日</span></div>
+            <a class="card-read-more" href="../posts/aec-magazine-march-april-2026.html">続きを読む →</a>
           </div>
         </div>
       </article>
@@ -1775,12 +1765,12 @@
         </div>
         <div class="card-body">
           <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/why-gpu-memory-matters-for-cad-viz-and-ai.html">GPU メモリ不足が致命傷に。CAD・BIM・AI ワークフローの隠れた落とし穴</a>
+            <a href="../posts/ai-design-and-re-shaping-the-aec-industry.html">AIがAEC業界を再編成へ、BIMが意思決定ハブに進化する転機</a>
           </h3>
-          <p class="card-excerpt">【背景】CAD、BIM、ビジュアライゼーション、AI ワークフローの高度化に伴い、GPU メモリの重要性が急速に高まっています。一般的には GPU の処理性能（…</p>
+          <p class="card-excerpt">【背景】 AEC業界は現在、計画・設計・エンジニアリング・施工・運用の各段階に特化した企業が孤立した状態で存在する、極度に分断された価値チェーンが特徴です。この…</p>
           <div class="card-footer">
-            <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年2月5日</span></div>
-            <a class="card-read-more" href="../posts/why-gpu-memory-matters-for-cad-viz-and-ai.html">続きを読む →</a>
+            <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年3月3日</span></div>
+            <a class="card-read-more" href="../posts/ai-design-and-re-shaping-the-aec-industry.html">続きを読む →</a>
           </div>
         </div>
       </article></div>
@@ -1795,9 +1785,24 @@
         </div>
         <div class="card-body">
           <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダム大聖堂の再建を支えたBIM、文化遺産保存にデジタル革新が不可欠に</a>
+            <a href="../posts/autodesk-strengthens-bridge-between-revit-and-forma.html">RevitがFormaと直結、クラウド設計データの自動移行が実現</a>
           </h3>
-          <p class="card-excerpt">【背景】 世界の文化遺産は気候変動や老朽化、自然災害の脅威にさらされています。従来の修復工法だけでは対応が困難となり、精密な記録、調整計画、デジタル保存が求めら…</p>
+          <p class="card-excerpt">【背景】 Autodeskは、BIM環境とクラウドベースの設計プラットフォーム間のデータ連携を強化する必要に迫られていました。従来、RevitユーザーがForm…</p>
+          <div class="card-footer">
+            <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年4月7日</span></div>
+            <a class="card-read-more" href="../posts/autodesk-strengthens-bridge-between-revit-and-forma.html">続きを読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="article-related-card">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+          <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title" style="font-size:0.95rem;">
+            <a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">デジタル遺産保護がAutodesk革新企業に認定、Notre-Dame再建の成功がモデル化</a>
+          </h3>
+          <p class="card-excerpt">【背景】 世界の文化遺産は気候変動、老朽化、自然災害といった多くの脅威にさらされています。従来の修復手法だけでは対応しきれない現状があり、精密な記録、デジタル化…</p>
           <div class="card-footer">
             <div class="card-meta-info"><span>Autodesk News</span><span class="card-meta-sep">·</span><span>2026年3月26日</span></div>
             <a class="card-read-more" href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">続きを読む →</a>
@@ -1810,27 +1815,12 @@
         </div>
         <div class="card-body">
           <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">Autodesk Construction Cloud が Autodesk Forma へ統合――設計・施工の一貫性が</a>
+            <a href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">建設クラウド統合へ、AutodeskがAccをFormaに統一</a>
           </h3>
-          <p class="card-excerpt">【背景】 Autodeskは設計から施工、運用まで建築ライフサイクル全体を統一されたクラウド環境で管理する戦略を推進してきました。従来、建築・エンジニアリング業…</p>
+          <p class="card-excerpt">【背景】 Autodeskは設計・建設・運用を単一プラットフォームで統合するビジョンを推進してきました。従来、設計ツール（Revit等）と建設管理クラウド（Au…</p>
           <div class="card-footer">
             <div class="card-meta-info"><span>Autodesk News</span><span class="card-meta-sep">·</span><span>2026年3月24日</span></div>
             <a class="card-read-more" href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">続きを読む →</a>
-          </div>
-        </div>
-      </article>
-      <article class="article-related-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
-          <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/graphisoft-bluebeam-webinar-jp.html">Graphisoft、Bluebeam活用ウェビナーを公開――Archicad連携でPDFレビューとBIM運用を接続</a>
-          </h3>
-          <p class="card-excerpt">背景: Bluebeamは建築・設計・施工の現場で広く使われるPDFベースのレビュー基盤です。一方で、日本の実務ではBIMモデルと図面レビューが別々に運用される…</p>
-          <div class="card-footer">
-            <div class="card-meta-info"><span>Graphisoft</span><span class="card-meta-sep">·</span><span>2026年3月21日</span></div>
-            <a class="card-read-more" href="../posts/graphisoft-bluebeam-webinar-jp.html">続きを読む →</a>
           </div>
         </div>
       </article></div>
@@ -1843,34 +1833,34 @@
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">人気記事</div>
         <ul class="sidebar-popular-list"><li>
+      <a href="../posts/autodesk-strengthens-bridge-between-revit-and-forma.html">
+        <span class="sidebar-rank">1</span>RevitがFormaと直結、クラウド設計データの自動移行が実現
+      </a>
+    </li><li>
+      <a href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">
+        <span class="sidebar-rank">2</span>Autodesk「Forma Building Design」登場、スキーマティック設計からRevitへシームレスに
+      </a>
+    </li><li>
+      <a href="../posts/archicad.html">
+        <span class="sidebar-rank">3</span>Archicadのキーノート機能で詳細注記を自動化、一元管理が実現
+      </a>
+    </li><li>
+      <a href="../posts/graphisoft-tech.html">
+        <span class="sidebar-rank">4</span>Archicad図面表現の実践スキル、東京4月開催セミナー
+      </a>
+    </li><li>
       <a href="../posts/ai.html">
-        <span class="sidebar-rank">1</span>AIが設計を「逆算型」に変える、BIM時代の次のインパクト
-      </a>
-    </li><li>
-      <a href="../posts/trimble-to-acquire-document-crunch-in-latest-contech-ma.html">
-        <span class="sidebar-rank">2</span>Trimble、AI契約分析企業Document Crunchを買収——建設テック統合加速
-      </a>
-    </li><li>
-      <a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">
-        <span class="sidebar-rank">3</span>Autodesk、Wonder 3D AIで「テキストから3Dへ」を実現——制作スピード革新へ
-      </a>
-    </li><li>
-      <a href="../posts/embodied-carbon-calcs-for-bim-objects.html">
-        <span class="sidebar-rank">4</span>BIMで埋蔵炭素をどう扱う？BIMオブジェクト単位のLCA実務をNBS新ガイドから読む
-      </a>
-    </li><li>
-      <a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">
-        <span class="sidebar-rank">5</span>ノートルダム大聖堂の再建を支えたBIM、文化遺産保存にデジタル革新が不可欠に
+        <span class="sidebar-rank">5</span>AI設計ツールが変える建築実務、BIMとの融合で逆算型プロセスへ
       </a>
     </li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">カテゴリ</div>
-        <ul class="sidebar-category-list"><li><a href="../categories/bim-ecosystem.html">BIM全般</a><span class="sidebar-category-count">18</span></li><li><a href="../categories/bim-ai.html">BIM×AI</a><span class="sidebar-category-count">5</span></li><li><a href="../categories/revit.html">Revit</a><span class="sidebar-category-count">3</span></li><li><a href="../categories/ai-dx.html">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../categories/other.html">AEC</a><span class="sidebar-category-count">1</span></li><li><a href="../categories/gloobe.html">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
+        <ul class="sidebar-category-list"><li><a href="../categories/bim-ecosystem.html">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../categories/archicad.html">Archicad</a><span class="sidebar-category-count">14</span></li><li><a href="../categories/bim-ai.html">BIM×AI</a><span class="sidebar-category-count">5</span></li><li><a href="../categories/revit.html">Revit</a><span class="sidebar-category-count">4</span></li><li><a href="../categories/ai-dx.html">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../categories/gloobe.html">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
-        <ul class="sidebar-recent-list"><li><a href="../posts/ai.html">AIが設計を「逆算型」に変える、BIM時代の次のインパクト</a></li><li><a href="../posts/trimble-to-acquire-document-crunch-in-latest-contech-ma.html">Trimble、AI契約分析企業Document Crunchを買収——建設テック統合加速</a></li><li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">Autodesk、Wonder 3D AIで「テキストから3Dへ」を実現——制作スピード革新へ</a></li><li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">BIMで埋蔵炭素をどう扱う？BIMオブジェクト単位のLCA実務をNBS新ガイドから読む</a></li><li><a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダム大聖堂の再建を支えたBIM、文化遺産保存にデジタル革新が不可欠に</a></li></ul>
+        <ul class="sidebar-recent-list"><li><a href="../posts/autodesk-strengthens-bridge-between-revit-and-forma.html">RevitがFormaと直結、クラウド設計データの自動移行が実現</a></li><li><a href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">Autodesk「Forma Building Design」登場、スキーマティック設計からRevitへシームレスに</a></li><li><a href="../posts/archicad.html">Archicadのキーノート機能で詳細注記を自動化、一元管理が実現</a></li><li><a href="../posts/graphisoft-tech.html">Archicad図面表現の実践スキル、東京4月開催セミナー</a></li><li><a href="../posts/ai.html">AI設計ツールが変える建築実務、BIMとの融合で逆算型プロセスへ</a></li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">このサイトについて</div>

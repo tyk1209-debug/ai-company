@@ -110,34 +110,46 @@ const AFFILIATE_TAG = process.env.AMAZON_ASSOCIATE_TAG || 'aecnewsjapan-22';
 
 const SITE_AFFILIATE_LINKS = [
   {
-    keywords: ['Revit', 'revit', 'オートデスク'],
-    title: 'Autodesk Revit公式ガイド',
-    url: `https://www.amazon.co.jp/s?k=Revit+BIM&tag=${AFFILIATE_TAG}`,
+    keywords: ['Revit', 'revit', 'ファミリ', 'オートデスク'],
+    title: 'はじめてのAutodesk Revit＆Revit LT [Revit/Revit LT 2026対応]',
+    description: 'Revitの基本操作や考え方を体系的に押さえたい読者向けの入門書です。',
+    url: 'https://amzn.to/3QpB1Ja',
     category: 'REVIT',
   },
   {
     keywords: ['Archicad', 'アーキキャド', 'Graphisoft'],
-    title: 'Archicad完全ガイド',
-    url: `https://www.amazon.co.jp/s?k=Archicad&tag=${AFFILIATE_TAG}`,
+    title: 'Archicad28ではじめるBIM設計入門[基本・実施設計編]',
+    description: 'ArchicadでBIM設計を始めたい読者向けの実務入門書です。',
+    url: 'https://amzn.to/4tCIdjL',
     category: 'BIM_ECOSYSTEM',
   },
   {
-    keywords: ['BIM', 'ビム', '建設DX', 'デジタルツイン'],
-    title: 'BIM導入・活用ガイド',
-    url: `https://www.amazon.co.jp/s?k=BIM+建築+設計&tag=${AFFILIATE_TAG}`,
+    keywords: ['GLOOBE', '福井コンピュータ'],
+    title: 'GLOOBE ArchitectではじめるBIM活用入門',
+    description: 'GLOOBEを使ったBIM活用の流れをつかみたい読者向けの一冊です。',
+    url: 'https://amzn.to/3PQRhD2',
+    category: 'GLOOBE',
+  },
+  {
+    keywords: ['ドローン', 'レーザ測量', '点群', '測量'],
+    title: '基本から学ぶ 測量技術者のための ドローンによる写真測量とレーザ測量',
+    description: '現場計測や3Dデータ取得の基礎を学びたい読者向けの書籍です。',
+    url: 'https://amzn.to/4veruET',
     category: 'BIM_ECOSYSTEM',
   },
   {
-    keywords: ['IFC', '建築情報', 'データ連携'],
-    title: 'BIM/IFC関連書籍',
-    url: `https://www.amazon.co.jp/s?k=BIM+IFC+建築&tag=${AFFILIATE_TAG}`,
-    category: 'IFC',
+    keywords: ['ファシリティマネジメント', 'FM', '維持管理'],
+    title: 'ファシリティマネジメントのためのBIM要件定義',
+    description: 'BIMの運用段階やFM視点の要件整理を深めたい読者向けです。',
+    url: 'https://amzn.to/4cg9ZLX',
+    category: 'BIM_ECOSYSTEM',
   },
   {
-    keywords: ['Vectorworks', 'ベクターワークス'],
-    title: 'Vectorworks実践ガイド',
-    url: `https://www.amazon.co.jp/s?k=Vectorworks&tag=${AFFILIATE_TAG}`,
-    category: 'BIM_ECOSYSTEM',
+    keywords: ['建設DX', 'AI', 'DX', 'ゼネコン', '業務改革'],
+    title: 'ゼネコン5.0: SDGs、DX時代の建設業の経営戦略',
+    description: '建設業のDXや経営変革を俯瞰したい読者向けの書籍です。',
+    url: 'https://amzn.to/4tAYxl5',
+    category: 'AI_DX',
   },
 ];
 
@@ -147,12 +159,17 @@ const SITE_AFFILIATE_LINKS = [
  * @returns {Array<{ title: string, url: string }>}
  */
 function getAffiliateLinks(post) {
-  const text = `${post.title || ''} ${post.titleJa || ''} ${post.postText || ''}`;
+  const text = `${post.title || ''} ${post.titleJa || ''} ${post.postText || ''} ${post.bodyJa || ''}`;
   const matched = SITE_AFFILIATE_LINKS.filter(link =>
     link.keywords.some(kw => text.includes(kw))
   );
-  // マッチしなければデフォルト（BIM全般）
-  return matched.length > 0 ? matched.slice(0, 2) : [SITE_AFFILIATE_LINKS[2]];
+  if (matched.length > 0) {
+    return matched.slice(0, 2);
+  }
+
+  const category = (post.category || 'OTHER').toUpperCase();
+  const categoryMatches = SITE_AFFILIATE_LINKS.filter(link => link.category === category);
+  return categoryMatches.slice(0, 2);
 }
 
 module.exports = { getAffiliateLink, appendAffiliateLink, applyAffiliateLinks, getAffiliateLinks };

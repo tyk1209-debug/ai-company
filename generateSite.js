@@ -421,6 +421,22 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       flex-direction: column;
     }
     .article-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); cursor: pointer; }
+    .article-card--lead {
+      border-color: #bfdbfe;
+      box-shadow: 0 14px 34px rgba(37,99,235,0.12), 0 4px 12px rgba(15,23,42,0.06);
+    }
+    .article-card--lead .card-thumb { height: 150px; }
+    .article-card--lead .card-title { font-size: 1.14rem; }
+    .article-card-kicker {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.55rem;
+    }
     .card-thumb {
       height: 120px;
       background: linear-gradient(135deg, var(--navy-mid) 0%, var(--blue) 100%);
@@ -739,10 +755,11 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
     /* ---- article layout ---- */
     .article-layout {
       display: grid;
-      grid-template-columns: 1fr 260px;
-      gap: 2.5rem;
+      grid-template-columns: minmax(0, 780px) 280px;
+      gap: 2.75rem;
       align-items: start;
       padding: 2.5rem 0 5rem;
+      justify-content: space-between;
     }
     .article-main { min-width: 0; }
 
@@ -794,10 +811,17 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2rem 2.5rem;
+      padding: 2.25rem 2.75rem;
       box-shadow: var(--shadow-sm);
       margin-bottom: 1.5rem;
     }
+    .article-body {
+      max-width: 68ch;
+      font-size: 1.03rem;
+      line-height: 2.05;
+      color: #1f2937;
+    }
+    .article-body p { margin-bottom: 1.15rem; }
     .ai-body-label {
       display: inline-flex;
       align-items: center;
@@ -814,17 +838,79 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       background: rgba(37,99,235,0.05);
     }
     .article-section-h2 {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 700;
       color: var(--navy);
-      margin: 2.25rem 0 1rem;
-      padding: 0.6rem 1rem;
-      background: #f1f5f9;
+      margin: 2.5rem 0 1rem;
+      padding: 0.7rem 1rem;
+      background: #f8fafc;
       border-left: 4px solid var(--blue);
-      border-radius: 0 6px 6px 0;
+      border-radius: 0 8px 8px 0;
     }
     .article-section-h2:first-child { margin-top: 0; }
     .article-section-h2 span { font-size: inherit; }
+
+    .article-insight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .article-insight-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.15rem 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-insight-card--summary {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border-color: rgba(96,165,250,0.18);
+    }
+    .article-insight-card--summary .article-insight-title,
+    .article-insight-card--summary .article-insight-text { color: #fff; }
+    .article-insight-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.7rem;
+    }
+    .article-insight-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.55rem;
+      line-height: 1.5;
+    }
+    .article-insight-text {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+    .article-insight-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .article-insight-list li {
+      display: flex;
+      gap: 0.55rem;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.86);
+    }
+    .article-insight-bullet {
+      color: #93c5fd;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
 
     /* ---- mid-article related card ---- */
     .mid-related-card {
@@ -947,13 +1033,14 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       font-weight: 500;
     }
     .article-tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 0.2rem 0.65rem;
-      border-radius: 4px;
-      background: #e2e8f0;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: #e8eef8;
       color: var(--text);
       text-decoration: none;
+      border: 1px solid #d7e2f0;
     }
     .article-tag:hover { background: var(--blue); color: #fff; text-decoration: none; }
     .article-tag--source {
@@ -989,6 +1076,102 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
     .share-btn-large:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
     .back-btn { font-size: 0.875rem; color: var(--text-muted); }
     .back-btn:hover { color: var(--blue); }
+
+    .article-rail {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .article-related-group { margin-top: 0.25rem; }
+    .article-related-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .article-related-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .article-related-card .card-thumb { height: 110px; }
+    .article-related-card .card-body { padding: 1rem 1.1rem 1.05rem; }
+
+    .reference-books {
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+      border: 1px solid #dbe7f4;
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .reference-books-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--blue);
+      margin-bottom: 0.65rem;
+    }
+    .reference-books-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.45rem;
+    }
+    .reference-books-desc {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .reference-books-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+    }
+    .reference-book-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      border: 1px solid #e4ecf5;
+      border-radius: 10px;
+      padding: 0.95rem 1rem;
+      background: #fff;
+    }
+    .reference-book-meta { min-width: 0; }
+    .reference-book-name {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+      line-height: 1.55;
+    }
+    .reference-book-copy {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+    .reference-book-link {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .reference-book-link:hover { background: #1d4ed8; text-decoration: none; color: #fff; }
 
     /* ---- sidebar follow widget ---- */
     .sidebar-follow {
@@ -1242,9 +1425,11 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       .content-with-sidebar { grid-template-columns: 1fr; }
       .sidebar { position: static; top: 0; }
       .article-layout { grid-template-columns: 1fr; padding: 1.5rem 0 3rem; }
-      .article-body-wrap { padding: 1.25rem 1.5rem; }
+      .article-body-wrap { padding: 1.4rem 1.6rem; }
       .article-hero-actions { gap: 0.5rem; }
       .article-keypoints { padding: 1.25rem; }
+      .article-insight-grid { grid-template-columns: 1fr; }
+      .article-related-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .article-list { grid-template-columns: 1fr; }
@@ -1254,6 +1439,13 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       .article-detail { padding: 1.5rem; }
       .static-page { padding: 1.25rem; }
       .site-tagline { display: none; }
+      .article-body-wrap { padding: 1.2rem 1.1rem; }
+      .article-body { font-size: 0.98rem; line-height: 1.95; }
+      .article-section-h2 { margin: 2rem 0 0.85rem; padding: 0.65rem 0.9rem; }
+      .article-tags-row { gap: 0.6rem; }
+      .article-tag { width: auto; min-height: 44px; display: inline-flex; align-items: center; }
+      .reference-book-item { flex-direction: column; }
+      .reference-book-link { width: 100%; }
     }
     @media (max-width: 480px) {
       nav a { font-size: 0.75rem; margin-left: 0.6rem; }
@@ -1530,7 +1722,7 @@ function buildIndex(posts, totalCount = 0) {
   // 最新ニュース: posts 3+ (no duplication with featured)
   const latestPosts = posts.slice(3, 27);
 
-  const cards = latestPosts.map((post) => {
+  const cards = latestPosts.map((post, index) => {
     const slug = post.slug;
     const catLabel = categoryLabel(post.category);
     const catKey = (post.category || 'OTHER').toUpperCase();
@@ -1540,11 +1732,12 @@ function buildIndex(posts, totalCount = 0) {
     const ts2 = thumbStyle(catKey);
 
     return `
-      <article class="article-card" data-category="${escape(catKey)}">
+      <article class="article-card${index === 0 ? ' article-card--lead' : ''}" data-category="${escape(catKey)}">
         <div class="card-thumb" style="${ts2}">
           <div class="card-thumb-badge"><span class="badge">${escape(catLabel)}</span></div>
         </div>
         <div class="card-body">
+          ${index === 0 ? '<div class="article-card-kicker">Important</div>' : ''}
           <h2 class="card-title">
             <a href="./posts/${escape(slug)}.html">${escape(post.titleJa || post.title)}</a>
           </h2>
@@ -1693,6 +1886,50 @@ function parseBodySections(bodyJa) {
   return sections;
 }
 
+function getSectionInsight(sections, labels) {
+  const section = sections.find((s) =>
+    s.label && s.paragraphs.length > 0 && labels.some((label) => s.label.includes(label))
+  );
+  if (!section) return null;
+  return {
+    label: section.label,
+    text: section.paragraphs.join(' '),
+  };
+}
+
+function tokenizeForRelated(text) {
+  return String(text || '')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .split(/\s+/)
+    .filter((token) => token && token.length >= 2);
+}
+
+function buildArticleCards(items, base = '..') {
+  if (!items || items.length === 0) return '';
+  return items.map((p) => {
+    const catKey = (p.category || 'OTHER').toUpperCase();
+    const ts = thumbStyle(catKey, base);
+    const snip = excerpt(p.bodyJa || p.postText || p.summary || '', 80);
+    return `
+      <article class="article-related-card">
+        <div class="card-thumb" style="${ts}">
+          <div class="card-thumb-badge"><span class="badge">${escape(categoryLabel(p.category))}</span></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title" style="font-size:0.95rem;">
+            <a href="${base}/posts/${escape(p.slug)}.html">${escape(p.titleJa || p.title)}</a>
+          </h3>
+          <p class="card-excerpt">${escape(snip)}</p>
+          <div class="card-footer">
+            <div class="card-meta-info"><span>${escape(p.source || '')}</span><span class="card-meta-sep">·</span><span>${escape(formatDate(p.pubDate))}</span></div>
+            <a class="card-read-more" href="${base}/posts/${escape(p.slug)}.html">続きを読む →</a>
+          </div>
+        </div>
+      </article>`;
+  }).join('');
+}
+
 // ---- article detail page ----------------------------------------------------
 
 function buildRelatedArticles(post, allPosts, sectionTitle = '関連記事') {
@@ -1701,32 +1938,59 @@ function buildRelatedArticles(post, allPosts, sectionTitle = '関連記事') {
     .filter((p) => p.slug !== post.slug && p.category === post.category)
     .slice(0, 3);
   if (related.length === 0) return '';
-  const cards = related.map((p) => {
-    const catKey = (p.category || 'OTHER').toUpperCase();
-    const ts = thumbStyle(catKey, '..');
-    const snip = excerpt(p.bodyJa || p.postText || p.summary || '', 80);
-    return `
-      <article class="article-card">
-        <div class="card-thumb" style="${ts}">
-          <div class="card-thumb-badge"><span class="badge">${escape(categoryLabel(p.category))}</span></div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/${escape(p.slug)}.html">${escape(p.titleJa || p.title)}</a>
-          </h3>
-          <p class="card-excerpt">${escape(snip)}</p>
-          <div class="card-footer">
-            <div class="card-meta-info"><span>${escape(p.source || '')}</span><span class="card-meta-sep">·</span><span>${escape(formatDate(p.pubDate))}</span></div>
-            <a class="card-read-more" href="../posts/${escape(p.slug)}.html">続きを読む →</a>
-          </div>
-        </div>
-      </article>`;
-  }).join('');
   return `
-      <div class="related-articles">
-        <h2 class="section-title" style="margin-top:2.5rem;">${escape(sectionTitle)}</h2>
-        <div class="article-list">${cards}</div>
+      <div class="article-related-group">
+        <h2 class="section-title" style="margin-top:0;">${escape(sectionTitle)}</h2>
+        <div class="article-related-grid">${buildArticleCards(related, '..')}</div>
       </div>`;
+}
+
+function buildContextualRelatedArticles(post, allPosts) {
+  if (!allPosts || allPosts.length === 0) return '';
+  const sourceTokens = new Set(tokenizeForRelated(`${post.titleJa || ''} ${post.title || ''} ${post.summary || ''}`));
+  const scored = allPosts
+    .filter((p) => p.slug !== post.slug)
+    .map((p) => {
+      const tokens = tokenizeForRelated(`${p.titleJa || ''} ${p.title || ''} ${p.summary || ''}`);
+      let score = 0;
+      for (const token of tokens) {
+        if (sourceTokens.has(token)) score += 1;
+      }
+      if ((p.category || '').toUpperCase() === (post.category || '').toUpperCase()) score -= 3;
+      return { post: p, score };
+    })
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 2)
+    .map((item) => item.post);
+
+  if (scored.length === 0) return '';
+  return `
+      <div class="article-related-group">
+        <h2 class="section-title" style="margin-top:0;">関連記事</h2>
+        <div class="article-related-grid">${buildArticleCards(scored, '..')}</div>
+      </div>`;
+}
+
+function buildInsightCard(eyebrow, title, content, variant = '') {
+  if (!content) return '';
+  const className = variant ? `article-insight-card article-insight-card--${variant}` : 'article-insight-card';
+  if (Array.isArray(content)) {
+    return `
+      <section class="${className}">
+        <div class="article-insight-eyebrow">${escape(eyebrow)}</div>
+        <h2 class="article-insight-title">${escape(title)}</h2>
+        <ul class="article-insight-list">
+          ${content.map((item) => `<li><span class="article-insight-bullet">•</span><span>${escape(item)}</span></li>`).join('')}
+        </ul>
+      </section>`;
+  }
+  return `
+    <section class="${className}">
+      <div class="article-insight-eyebrow">${escape(eyebrow)}</div>
+      <h2 class="article-insight-title">${escape(title)}</h2>
+      <p class="article-insight-text">${escape(content)}</p>
+    </section>`;
 }
 
 function buildArticlePage(post, allPosts) {
@@ -1758,6 +2022,10 @@ function buildArticlePage(post, allPosts) {
   const editorialText = editSection && editSection.paragraphs.length > 0
     ? editSection.paragraphs.join('\n')
     : '';
+  const practicalInsight = getSectionInsight(sections, ['実務への影響', '実務', '導入', '活用', '日本への影響'])
+    || (editSection ? { label: editSection.label || '実務', text: editSection.paragraphs.join(' ') } : null);
+  const industryInsight = getSectionInsight(sections, ['業界への影響', '市場への影響', '業界', '市場'])
+    || (sections.length > 0 ? { label: sections[sections.length - 1].label || '影響', text: sections[sections.length - 1].paragraphs.join(' ') } : null);
 
   // ---- body HTML ----
   const midPost = allPosts.find(p => p.slug !== post.slug && p.category === post.category);
@@ -1788,10 +2056,22 @@ function buildArticlePage(post, allPosts) {
   // ---- affiliate ----
   const affiliates = getAffiliateLinks(post);
   const affiliateHtml = affiliates.length > 0 ? `
-    <div class="affiliate-box">
-      <p>※ 本記事に関連する書籍・学習リソース（広告）</p>
-      ${affiliates.map(a => `<a href="${escape(a.url)}" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 ${escape(a.title)} を Amazonで見る →</a>`).join('')}
-    </div>` : '';
+    <section class="reference-books">
+      <div class="reference-books-label">Reference Books</div>
+      <h2 class="reference-books-title">この記事を深く理解するための参考書籍</h2>
+      <p class="reference-books-desc">記事テーマと関連性の高い書籍だけを選んでいます。基礎理解や実務での整理に役立つものを中心に掲載しています。</p>
+      <div class="reference-books-list">
+        ${affiliates.map(a => `
+          <div class="reference-book-item">
+            <div class="reference-book-meta">
+              <div class="reference-book-name">${escape(a.title)}</div>
+              <div class="reference-book-copy">${escape(a.description || '関連テーマをさらに理解したい読者向けの参考書籍です。')}</div>
+            </div>
+            <a href="${escape(a.url)}" target="_blank" rel="noopener sponsored" class="reference-book-link">Amazonで見る</a>
+          </div>
+        `).join('')}
+      </div>
+    </section>` : '';
 
   // ---- key points card ----
   const keypointsHtml = keyPoints.length > 0 ? `
@@ -1811,6 +2091,12 @@ function buildArticlePage(post, allPosts) {
       </div>
       <div class="article-editorial-text">${editorialText.split('\n').filter(s => s.trim()).map(p => `<p>${escape(p)}</p>`).join('')}</div>
     </div>` : '';
+
+  const insightCardsHtml = [
+    buildInsightCard('Key Points', '要点まとめ', keyPoints.slice(0, 3).map((kp) => `${kp.label}: ${kp.text}`), 'summary'),
+    buildInsightCard('Industry Impact', '業界への影響', industryInsight ? industryInsight.text : ''),
+    buildInsightCard('Practical Impact', '実務への影響', practicalInsight ? practicalInsight.text : ''),
+  ].filter(Boolean).join('');
 
   // ---- hero summary ----
   const heroSummaryText = post.summary
@@ -1888,6 +2174,7 @@ function buildArticlePage(post, allPosts) {
   <div class="container">
     <div class="article-layout">
       <main class="article-main">
+        ${insightCardsHtml ? `<div class="article-insight-grid">${insightCardsHtml}</div>` : ''}
         ${keypointsHtml}
         <div class="article-body-wrap">
           <div class="ai-body-label">AI による日本語解説</div>
@@ -1913,7 +2200,10 @@ function buildArticlePage(post, allPosts) {
           <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
           <a class="back-btn" href="../">← 記事一覧に戻る</a>
         </div>
-        ${buildRelatedArticles(post, allPosts, '次に読むべき記事')}
+        <div class="article-rail">
+          ${buildContextualRelatedArticles(post, allPosts)}
+          ${buildRelatedArticles(post, allPosts, '同カテゴリの関連記事')}
+        </div>
       </main>
       ${buildSidebar(allPosts, '..')}
     </div>
@@ -2050,7 +2340,7 @@ function buildCategoryPage(category, posts) {
   const catPosts = posts.filter((p) => (p.category || 'OTHER').toUpperCase() === category.toUpperCase());
   const recommendedBooks = buildRecommendedBooks(category.toUpperCase());
 
-  const cards = catPosts.map((post) => {
+  const cards = catPosts.map((post, index) => {
     const slug = post.slug;
     const catLabel = categoryLabel(post.category);
     const catKey = (post.category || 'OTHER').toUpperCase();
@@ -2060,11 +2350,12 @@ function buildCategoryPage(category, posts) {
     const ts3 = thumbStyle(catKey, '..');
 
     return `
-      <article class="article-card">
+      <article class="article-card${index === 0 ? ' article-card--lead' : ''}">
         <div class="card-thumb" style="${ts3}">
           <div class="card-thumb-badge"><span class="badge">${escape(catLabel)}</span></div>
         </div>
         <div class="card-body">
+          ${index === 0 ? '<div class="article-card-kicker">Featured</div>' : ''}
           <h2 class="card-title">
             <a href="../posts/${escape(slug)}.html">${escape(post.titleJa || post.title)}</a>
           </h2>

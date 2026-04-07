@@ -275,6 +275,22 @@
       flex-direction: column;
     }
     .article-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); cursor: pointer; }
+    .article-card--lead {
+      border-color: #bfdbfe;
+      box-shadow: 0 14px 34px rgba(37,99,235,0.12), 0 4px 12px rgba(15,23,42,0.06);
+    }
+    .article-card--lead .card-thumb { height: 150px; }
+    .article-card--lead .card-title { font-size: 1.14rem; }
+    .article-card-kicker {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.55rem;
+    }
     .card-thumb {
       height: 120px;
       background: linear-gradient(135deg, var(--navy-mid) 0%, var(--blue) 100%);
@@ -593,10 +609,11 @@
     /* ---- article layout ---- */
     .article-layout {
       display: grid;
-      grid-template-columns: 1fr 260px;
-      gap: 2.5rem;
+      grid-template-columns: minmax(0, 780px) 280px;
+      gap: 2.75rem;
       align-items: start;
       padding: 2.5rem 0 5rem;
+      justify-content: space-between;
     }
     .article-main { min-width: 0; }
 
@@ -648,10 +665,17 @@
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2rem 2.5rem;
+      padding: 2.25rem 2.75rem;
       box-shadow: var(--shadow-sm);
       margin-bottom: 1.5rem;
     }
+    .article-body {
+      max-width: 68ch;
+      font-size: 1.03rem;
+      line-height: 2.05;
+      color: #1f2937;
+    }
+    .article-body p { margin-bottom: 1.15rem; }
     .ai-body-label {
       display: inline-flex;
       align-items: center;
@@ -668,17 +692,79 @@
       background: rgba(37,99,235,0.05);
     }
     .article-section-h2 {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 700;
       color: var(--navy);
-      margin: 2.25rem 0 1rem;
-      padding: 0.6rem 1rem;
-      background: #f1f5f9;
+      margin: 2.5rem 0 1rem;
+      padding: 0.7rem 1rem;
+      background: #f8fafc;
       border-left: 4px solid var(--blue);
-      border-radius: 0 6px 6px 0;
+      border-radius: 0 8px 8px 0;
     }
     .article-section-h2:first-child { margin-top: 0; }
     .article-section-h2 span { font-size: inherit; }
+
+    .article-insight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .article-insight-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.15rem 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-insight-card--summary {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border-color: rgba(96,165,250,0.18);
+    }
+    .article-insight-card--summary .article-insight-title,
+    .article-insight-card--summary .article-insight-text { color: #fff; }
+    .article-insight-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.7rem;
+    }
+    .article-insight-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.55rem;
+      line-height: 1.5;
+    }
+    .article-insight-text {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+    .article-insight-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .article-insight-list li {
+      display: flex;
+      gap: 0.55rem;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.86);
+    }
+    .article-insight-bullet {
+      color: #93c5fd;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
 
     /* ---- mid-article related card ---- */
     .mid-related-card {
@@ -801,13 +887,14 @@
       font-weight: 500;
     }
     .article-tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 0.2rem 0.65rem;
-      border-radius: 4px;
-      background: #e2e8f0;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: #e8eef8;
       color: var(--text);
       text-decoration: none;
+      border: 1px solid #d7e2f0;
     }
     .article-tag:hover { background: var(--blue); color: #fff; text-decoration: none; }
     .article-tag--source {
@@ -843,6 +930,102 @@
     .share-btn-large:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
     .back-btn { font-size: 0.875rem; color: var(--text-muted); }
     .back-btn:hover { color: var(--blue); }
+
+    .article-rail {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .article-related-group { margin-top: 0.25rem; }
+    .article-related-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .article-related-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .article-related-card .card-thumb { height: 110px; }
+    .article-related-card .card-body { padding: 1rem 1.1rem 1.05rem; }
+
+    .reference-books {
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+      border: 1px solid #dbe7f4;
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .reference-books-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--blue);
+      margin-bottom: 0.65rem;
+    }
+    .reference-books-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.45rem;
+    }
+    .reference-books-desc {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .reference-books-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+    }
+    .reference-book-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      border: 1px solid #e4ecf5;
+      border-radius: 10px;
+      padding: 0.95rem 1rem;
+      background: #fff;
+    }
+    .reference-book-meta { min-width: 0; }
+    .reference-book-name {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+      line-height: 1.55;
+    }
+    .reference-book-copy {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+    .reference-book-link {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .reference-book-link:hover { background: #1d4ed8; text-decoration: none; color: #fff; }
 
     /* ---- sidebar follow widget ---- */
     .sidebar-follow {
@@ -1096,9 +1279,11 @@
       .content-with-sidebar { grid-template-columns: 1fr; }
       .sidebar { position: static; top: 0; }
       .article-layout { grid-template-columns: 1fr; padding: 1.5rem 0 3rem; }
-      .article-body-wrap { padding: 1.25rem 1.5rem; }
+      .article-body-wrap { padding: 1.4rem 1.6rem; }
       .article-hero-actions { gap: 0.5rem; }
       .article-keypoints { padding: 1.25rem; }
+      .article-insight-grid { grid-template-columns: 1fr; }
+      .article-related-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .article-list { grid-template-columns: 1fr; }
@@ -1108,6 +1293,13 @@
       .article-detail { padding: 1.5rem; }
       .static-page { padding: 1.25rem; }
       .site-tagline { display: none; }
+      .article-body-wrap { padding: 1.2rem 1.1rem; }
+      .article-body { font-size: 0.98rem; line-height: 1.95; }
+      .article-section-h2 { margin: 2rem 0 0.85rem; padding: 0.65rem 0.9rem; }
+      .article-tags-row { gap: 0.6rem; }
+      .article-tag { width: auto; min-height: 44px; display: inline-flex; align-items: center; }
+      .reference-book-item { flex-direction: column; }
+      .reference-book-link { width: 100%; }
     }
     @media (max-width: 480px) {
       nav a { font-size: 0.75rem; margin-left: 0.6rem; }
@@ -1150,6 +1342,24 @@
   <div class="container">
     <div class="article-layout">
       <main class="article-main">
+        <div class="article-insight-grid">
+      <section class="article-insight-card article-insight-card--summary">
+        <div class="article-insight-eyebrow">Key Points</div>
+        <h2 class="article-insight-title">要点まとめ</h2>
+        <ul class="article-insight-list">
+          <li><span class="article-insight-bullet">•</span><span>背景: 建築・設計現場でCADやBIMモデルを扱う業務は、高い処理能力を要求します。</span></li><li><span class="article-insight-bullet">•</span><span>内容: HP ZBook Ultra G1a（14インチ）は、AMD Ryzen AI Max+ Pro 395搭載で、統合型Radeon 8060S GPUが最大96GBのシステムメモリを活用できる独自アーキテクチャを採用しています。</span></li><li><span class="article-insight-bullet">•</span><span>技術的ポイント: これら3機種の最大の違いは、メモリアーキテクチャとGPU戦略です。</span></li>
+        </ul>
+      </section>
+    <section class="article-insight-card">
+      <div class="article-insight-eyebrow">Industry Impact</div>
+      <h2 class="article-insight-title">業界への影響</h2>
+      <p class="article-insight-text">14インチ程度の軽量ワークステーションで実務的なCAD・BIM作業が完結すれば、現場での設計変更対応や施主との協議がより迅速になります。特にIFC形式による複数ソフト間の連携や、ドローンデータとBIMモデルの統合といったデジタルツイン構築の現場検証が容易になるでしょう。小型で高性能なマシンの普及は、オンサイト設計や遠隔協業モデルの浸透を加速させ、建設DX推進の重要なハードウェア基盤となります。</p>
+    </section>
+    <section class="article-insight-card">
+      <div class="article-insight-eyebrow">Practical Impact</div>
+      <h2 class="article-insight-title">実務への影響</h2>
+      <p class="article-insight-text">14インチ程度の軽量ワークステーションで実務的なCAD・BIM作業が完結すれば、現場での設計変更対応や施主との協議がより迅速になります。特にIFC形式による複数ソフト間の連携や、ドローンデータとBIMモデルの統合といったデジタルツイン構築の現場検証が容易になるでしょう。小型で高性能なマシンの普及は、オンサイト設計や遠隔協業モデルの浸透を加速させ、建設DX推進の重要なハードウェア基盤となります。</p>
+    </section></div>
         
     <div class="article-keypoints">
       <div class="article-keypoints-title">この記事の要点</div>
@@ -1177,10 +1387,30 @@
       <div class="article-editorial-text"><p>14インチ程度の軽量ワークステーションで実務的なCAD・BIM作業が完結すれば、現場での設計変更対応や施主との協議がより迅速になります。特にIFC形式による複数ソフト間の連携や、ドローンデータとBIMモデルの統合といったデジタルツイン構築の現場検証が容易になるでしょう。小型で高性能なマシンの普及は、オンサイト設計や遠隔協業モデルの浸透を加速させ、建設DX推進の重要なハードウェア基盤となります。</p></div>
     </div>
         
-    <div class="affiliate-box">
-      <p>※ 本記事に関連する書籍・学習リソース（広告）</p>
-      <a href="https://www.amazon.co.jp/s?k=BIM+建築+設計&amp;tag=aecnewsjapan-22" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 BIM導入・活用ガイド を Amazonで見る →</a>
-    </div>
+    <section class="reference-books">
+      <div class="reference-books-label">Reference Books</div>
+      <h2 class="reference-books-title">この記事を深く理解するための参考書籍</h2>
+      <p class="reference-books-desc">記事テーマと関連性の高い書籍だけを選んでいます。基礎理解や実務での整理に役立つものを中心に掲載しています。</p>
+      <div class="reference-books-list">
+        
+          <div class="reference-book-item">
+            <div class="reference-book-meta">
+              <div class="reference-book-name">基本から学ぶ 測量技術者のための ドローンによる写真測量とレーザ測量</div>
+              <div class="reference-book-copy">現場計測や3Dデータ取得の基礎を学びたい読者向けの書籍です。</div>
+            </div>
+            <a href="https://amzn.to/4veruET" target="_blank" rel="noopener sponsored" class="reference-book-link">Amazonで見る</a>
+          </div>
+        
+          <div class="reference-book-item">
+            <div class="reference-book-meta">
+              <div class="reference-book-name">ゼネコン5.0: SDGs、DX時代の建設業の経営戦略</div>
+              <div class="reference-book-copy">建設業のDXや経営変革を俯瞰したい読者向けの書籍です。</div>
+            </div>
+            <a href="https://amzn.to/4tAYxl5" target="_blank" rel="noopener sponsored" class="reference-book-link">Amazonで見る</a>
+          </div>
+        
+      </div>
+    </section>
         <div class="article-source-card">
           <span class="article-source-card-label">元記事・出典</span>
           <div class="article-source-card-info">
@@ -1197,11 +1427,47 @@
           <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=2026%E5%B9%B4%E6%9C%80%E6%96%B0%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%81%B8%E3%81%B6%E3%81%AA%E3%82%89%EF%BC%9FCAD%E3%83%BBBIM%E5%90%91%E3%81%91%E3%83%8E%E3%83%BC%E3%83%88%E5%9E%8B3%E6%A9%9F%E7%A8%AE%E3%82%92%E5%BE%B9%E5%BA%95%E6%AF%94%E8%BC%83&url=https%3A%2F%2Faec-news.com%2Fposts%2Fbest-enterprise-workstation-laptops-2026.html" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
           <a class="back-btn" href="../">← 記事一覧に戻る</a>
         </div>
-        
-      <div class="related-articles">
-        <h2 class="section-title" style="margin-top:2.5rem;">次に読むべき記事</h2>
-        <div class="article-list">
-      <article class="article-card">
+        <div class="article-rail">
+          
+      <div class="article-related-group">
+        <h2 class="section-title" style="margin-top:0;">関連記事</h2>
+        <div class="article-related-grid">
+      <article class="article-related-card">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(124,58,237,0.55) 100%), url('../assets/csm_KI_Bau_2a4ab20acc.jpg') center/cover no-repeat;">
+          <div class="card-thumb-badge"><span class="badge">BIM×AI</span></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title" style="font-size:0.95rem;">
+            <a href="../posts/aec-magazine-march-april-2026.html">エージェント型BIMの衝撃——AIが建築設計を5年で変える</a>
+          </h3>
+          <p class="card-excerpt">【背景】 AEC業界におけるAI活用は、画像生成やチャットボットの段階を超え、より深い構造的変化へ向かっています。AEC Magazineの2026年3月/4月…</p>
+          <div class="card-footer">
+            <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年3月3日</span></div>
+            <a class="card-read-more" href="../posts/aec-magazine-march-april-2026.html">続きを読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="article-related-card">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(45,27,105,0.55) 0%, rgba(124,58,237,0.55) 100%), url('../assets/csm_KI_Bau_2a4ab20acc.jpg') center/cover no-repeat;">
+          <div class="card-thumb-badge"><span class="badge">BIM×AI</span></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title" style="font-size:0.95rem;">
+            <a href="../posts/why-gpu-memory-matters-for-cad-viz-and-ai.html">GPU メモリ不足が設計を止める――CAD・BIM・AI の隠れた落とし穴</a>
+          </h3>
+          <p class="card-excerpt">【背景】 GPUの性能というと、コア数やクロック速度、レイトレーシング性能に目が向きがちです。しかし、CAD・BIM・ビジュアライゼーション・AI ワークフロー…</p>
+          <div class="card-footer">
+            <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年2月5日</span></div>
+            <a class="card-read-more" href="../posts/why-gpu-memory-matters-for-cad-viz-and-ai.html">続きを読む →</a>
+          </div>
+        </div>
+      </article></div>
+      </div>
+          
+      <div class="article-related-group">
+        <h2 class="section-title" style="margin-top:0;">同カテゴリの関連記事</h2>
+        <div class="article-related-grid">
+      <article class="article-related-card">
         <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
@@ -1216,7 +1482,7 @@
           </div>
         </div>
       </article>
-      <article class="article-card">
+      <article class="article-related-card">
         <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
@@ -1231,7 +1497,7 @@
           </div>
         </div>
       </article>
-      <article class="article-card">
+      <article class="article-related-card">
         <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
@@ -1247,6 +1513,7 @@
         </div>
       </article></div>
       </div>
+        </div>
       </main>
       
     <aside class="sidebar">

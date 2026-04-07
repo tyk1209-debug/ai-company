@@ -2694,8 +2694,8 @@ function buildExplainerPage(guide, posts) {
     </div>
   </div>
   <div class="container">
-    <div class="article-layout">
-      <main class="article-main">
+    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
+      <main>
         <section class="guide-intro">
           ${guide.oneLine ? `<div class="reference-books-label">一言でいうと</div><h2 class="reference-books-title">${escape(guide.oneLine)}</h2>` : '<div class="reference-books-label">概要</div><h2 class="reference-books-title">まず押さえるべき結論</h2>'}
           ${guide.oneLine ? `<p class="reference-books-desc">${escape(guide.overview)}</p>` : `<p class="reference-books-desc">${escape(guide.overview)}</p>`}

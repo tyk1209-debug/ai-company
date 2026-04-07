@@ -172,8 +172,9 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null, options = {
   <meta name="twitter:title" content="${escape(title)}">
   <meta name="twitter:description" content="${escape(metaDesc)}">
   <meta name="twitter:image" content="${imageUrl}">
-${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" href="${base}/assets/favicon.svg">
-  <link rel="icon" type="image/png" href="${base}/assets/favicon.png">${jsonLdScript}
+${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" href="${SITE_URL}/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="${SITE_URL}/favicon.png">
+  <link rel="apple-touch-icon" href="${SITE_URL}/favicon.png">${jsonLdScript}
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
   <!-- Google Analytics 4 -->

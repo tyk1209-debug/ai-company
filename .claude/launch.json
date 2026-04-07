@@ -2,6 +2,13 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "aec-news-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3333", "."],
+      "port": 3333,
+      "description": "静的サイトプレビュー"
+    },
+    {
       "name": "ニュース収集（ドライラン）",
       "runtimeExecutable": "node",
       "runtimeArgs": ["news.js"],

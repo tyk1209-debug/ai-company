@@ -99,8 +99,7 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
   <link rel="icon" type="image/svg+xml" href="${base}/assets/favicon.svg">
   <link rel="icon" type="image/png" href="${base}/assets/favicon.png">${jsonLdScript}
   <!-- Google AdSense -->
-  <!-- TODO: 20記事蓄積後に有効化 — ca-pub-XXXXXXXXXXXXXXXX を実際のパブリッシャーIDに差し替える -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
   <!-- Google Search Console verification -->
   <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
   <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
@@ -126,10 +125,10 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       --text-muted: #6b7280;
       --text-light: #9ca3af;
       --border: #e8edf4;
-      --bg: #f8fafc;
+      --bg: #f1f5f9;
       --white: #ffffff;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
-      --shadow-hover: 0 10px 28px rgba(0,0,0,0.1), 0 4px 10px rgba(37,99,235,0.08);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-hover: 0 14px 36px rgba(0,0,0,0.13), 0 4px 12px rgba(37,99,235,0.1);
       --radius: 12px;
       --radius-sm: 6px;
     }
@@ -267,10 +266,10 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     }
     .hero-main:hover { background: rgba(255,255,255,0.13); border-color: rgba(96,165,250,0.55); text-decoration: none; }
     .hero-main-cat { font-size: 0.7rem; font-weight: 700; color: #60a5fa; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.5rem; }
-    .hero-main-title { font-size: 1.05rem; font-weight: 800; color: #fff; line-height: 1.4; margin-bottom: 0.5rem; }
+    .hero-main-title { font-size: 1.25rem; font-weight: 800; color: #fff; line-height: 1.4; margin-bottom: 0.5rem; }
     .hero-main-excerpt {
       font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 0.5rem;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
     }
     .hero-main-meta { font-size: 0.7rem; color: rgba(255,255,255,0.4); }
     /* hero right - sub articles (small 2-col) */
@@ -345,7 +344,7 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     .article-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
     .article-card {
       background: var(--white);
-      border: 1px solid var(--border);
+      border: 1px solid #e2e8f0;
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow-sm);
@@ -353,7 +352,7 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       display: flex;
       flex-direction: column;
     }
-    .article-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); cursor: pointer; }
+    .article-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); cursor: pointer; }
     .card-thumb {
       height: 120px;
       background: linear-gradient(135deg, var(--navy-mid) 0%, var(--blue) 100%);
@@ -407,6 +406,16 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     .card-meta-sep { color: var(--border); }
     .card-footer-row { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
     .read-more { color: var(--blue) !important; font-weight: 600; font-size: 0.82rem; }
+    .hero-main-cta { font-size: 0.8rem; font-weight: 700; color: #60a5fa; margin-top: 0.75rem; letter-spacing: 0.03em; }
+    .card-read-more {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+      transition: color 0.15s;
+      white-space: nowrap;
+    }
+    .card-read-more:hover { color: #1d4ed8; text-decoration: none; }
 
     /* ---- share button ---- */
     .share-btn {
@@ -874,6 +883,21 @@ function buildSidebar(posts, base = '.') {
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
         <ul class="sidebar-recent-list">${recentItems}</ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">カテゴリ別おすすめ</div>
+        <ul class="sidebar-recent-list">${(() => {
+          const seenCats = new Set();
+          return posts.filter(p => {
+            const cat = p.category || 'OTHER';
+            if (seenCats.has(cat)) return false;
+            seenCats.add(cat);
+            return true;
+          }).slice(0, 5).map(p => `
+            <li><a href="${base}/posts/${escape(p.slug)}.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">${escape(categoryLabel(p.category))}</span>${escape(p.titleJa || p.title)}
+            </a></li>`).join('');
+        })()}</ul>
       </div>${weeklyWidget}
     </aside>`;
 }
@@ -930,6 +954,7 @@ function buildIndex(posts, totalCount = 0) {
         <div class="hero-main-title">${escape(heroMain.titleJa || heroMain.title)}</div>
         <div class="hero-main-excerpt">${escape(excerpt(heroMain.bodyJa || heroMain.postText || heroMain.summary || '', 85))}</div>
         <div class="hero-main-meta">${escape(heroMain.source || '')} · ${escape(formatDate(heroMain.pubDate))}</div>
+        <div class="hero-main-cta">続きを読む →</div>
       </a>` : '';
   const heroSubsHtml = `
       <div class="hero-subs">
@@ -994,6 +1019,7 @@ function buildIndex(posts, totalCount = 0) {
               <span class="card-meta-sep">·</span>
               <span>${escape(date)}</span>
             </div>
+            <a class="card-read-more" href="./posts/${escape(slug)}.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(SITE_URL + '/posts/' + slug + '.html')}" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>

@@ -21,8 +21,7 @@
   <link rel="icon" type="image/png" href="../assets/favicon.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"イングランド全域の3D建物データがBIM/CADに統合、LiDARで正確な高さ情報を実装","description":"Models can be brought into Rhino, via the Cityweft platform, with support for Revit and SketchUp coming soon The post Ci…","datePublished":"2026-01-23T11:29:22.000Z","dateModified":"2026-01-23T11:29:22.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/cityweft-adds-3d-building-data-for-england.html","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/cityweft-adds-3d-building-data-for-england.html"}}</script>
   <!-- Google AdSense -->
-  <!-- TODO: 20記事蓄積後に有効化 — ca-pub-XXXXXXXXXXXXXXXX を実際のパブリッシャーIDに差し替える -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
   <!-- Google Search Console verification -->
   <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
   <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
@@ -48,10 +47,10 @@
       --text-muted: #6b7280;
       --text-light: #9ca3af;
       --border: #e8edf4;
-      --bg: #f8fafc;
+      --bg: #f1f5f9;
       --white: #ffffff;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
-      --shadow-hover: 0 10px 28px rgba(0,0,0,0.1), 0 4px 10px rgba(37,99,235,0.08);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-hover: 0 14px 36px rgba(0,0,0,0.13), 0 4px 12px rgba(37,99,235,0.1);
       --radius: 12px;
       --radius-sm: 6px;
     }
@@ -189,10 +188,10 @@
     }
     .hero-main:hover { background: rgba(255,255,255,0.13); border-color: rgba(96,165,250,0.55); text-decoration: none; }
     .hero-main-cat { font-size: 0.7rem; font-weight: 700; color: #60a5fa; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.5rem; }
-    .hero-main-title { font-size: 1.05rem; font-weight: 800; color: #fff; line-height: 1.4; margin-bottom: 0.5rem; }
+    .hero-main-title { font-size: 1.25rem; font-weight: 800; color: #fff; line-height: 1.4; margin-bottom: 0.5rem; }
     .hero-main-excerpt {
       font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 0.5rem;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
     }
     .hero-main-meta { font-size: 0.7rem; color: rgba(255,255,255,0.4); }
     /* hero right - sub articles (small 2-col) */
@@ -267,7 +266,7 @@
     .article-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
     .article-card {
       background: var(--white);
-      border: 1px solid var(--border);
+      border: 1px solid #e2e8f0;
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow-sm);
@@ -275,7 +274,7 @@
       display: flex;
       flex-direction: column;
     }
-    .article-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); cursor: pointer; }
+    .article-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); cursor: pointer; }
     .card-thumb {
       height: 120px;
       background: linear-gradient(135deg, var(--navy-mid) 0%, var(--blue) 100%);
@@ -329,6 +328,16 @@
     .card-meta-sep { color: var(--border); }
     .card-footer-row { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
     .read-more { color: var(--blue) !important; font-weight: 600; font-size: 0.82rem; }
+    .hero-main-cta { font-size: 0.8rem; font-weight: 700; color: #60a5fa; margin-top: 0.75rem; letter-spacing: 0.03em; }
+    .card-read-more {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+      transition: color 0.15s;
+      white-space: nowrap;
+    }
+    .card-read-more:hover { color: #1d4ed8; text-decoration: none; }
 
     /* ---- share button ---- */
     .share-btn {

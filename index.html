@@ -21,8 +21,7 @@
   <link rel="icon" type="image/png" href="./assets/favicon.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AEC News Japan","description":"BIM・AEC・建設DXの最新ニュースをAIが日本語で解説","url":"https://aec-news.com/","inLanguage":"ja","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/"}}</script>
   <!-- Google AdSense -->
-  <!-- TODO: 20記事蓄積後に有効化 — ca-pub-XXXXXXXXXXXXXXXX を実際のパブリッシャーIDに差し替える -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
   <!-- Google Search Console verification -->
   <!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXX"> -->
   <!-- TODO: Uncomment and replace XXXXXXXXXXXXXXXX with your Search Console verification token -->
@@ -48,10 +47,10 @@
       --text-muted: #6b7280;
       --text-light: #9ca3af;
       --border: #e8edf4;
-      --bg: #f8fafc;
+      --bg: #f1f5f9;
       --white: #ffffff;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
-      --shadow-hover: 0 10px 28px rgba(0,0,0,0.1), 0 4px 10px rgba(37,99,235,0.08);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-hover: 0 14px 36px rgba(0,0,0,0.13), 0 4px 12px rgba(37,99,235,0.1);
       --radius: 12px;
       --radius-sm: 6px;
     }
@@ -189,10 +188,10 @@
     }
     .hero-main:hover { background: rgba(255,255,255,0.13); border-color: rgba(96,165,250,0.55); text-decoration: none; }
     .hero-main-cat { font-size: 0.7rem; font-weight: 700; color: #60a5fa; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.5rem; }
-    .hero-main-title { font-size: 1.05rem; font-weight: 800; color: #fff; line-height: 1.4; margin-bottom: 0.5rem; }
+    .hero-main-title { font-size: 1.25rem; font-weight: 800; color: #fff; line-height: 1.4; margin-bottom: 0.5rem; }
     .hero-main-excerpt {
       font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 0.5rem;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
     }
     .hero-main-meta { font-size: 0.7rem; color: rgba(255,255,255,0.4); }
     /* hero right - sub articles (small 2-col) */
@@ -267,7 +266,7 @@
     .article-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
     .article-card {
       background: var(--white);
-      border: 1px solid var(--border);
+      border: 1px solid #e2e8f0;
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow-sm);
@@ -275,7 +274,7 @@
       display: flex;
       flex-direction: column;
     }
-    .article-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); cursor: pointer; }
+    .article-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); cursor: pointer; }
     .card-thumb {
       height: 120px;
       background: linear-gradient(135deg, var(--navy-mid) 0%, var(--blue) 100%);
@@ -329,6 +328,16 @@
     .card-meta-sep { color: var(--border); }
     .card-footer-row { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
     .read-more { color: var(--blue) !important; font-weight: 600; font-size: 0.82rem; }
+    .hero-main-cta { font-size: 0.8rem; font-weight: 700; color: #60a5fa; margin-top: 0.75rem; letter-spacing: 0.03em; }
+    .card-read-more {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+      transition: color 0.15s;
+      white-space: nowrap;
+    }
+    .card-read-more:hover { color: #1d4ed8; text-decoration: none; }
 
     /* ---- share button ---- */
     .share-btn {
@@ -726,6 +735,7 @@
         <div class="hero-main-title">Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新</div>
         <div class="hero-main-excerpt">【背景】 3D資産の制作は従来、高度な技術スキルと膨大な手作業を要する複雑なプロセスでした。ゲーム開発、映画制作、VFXなど多くの業界で、制作チームは納期短縮と品質向上の…</div>
         <div class="hero-main-meta">Autodesk News · 2026年4月3日</div>
+        <div class="hero-main-cta">続きを読む →</div>
       </a>
         
       <div class="hero-subs">
@@ -853,6 +863,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年3月24日</span>
             </div>
+            <a class="card-read-more" href="./posts/autodesk-construction-cloud-is-now-autodesk-forma.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=Autodesk%20Construction%20Cloud%E6%94%B9%E5%90%8D%E3%80%81Forma%E3%81%B8%E7%B5%B1%E5%90%88%E3%80%82%E8%A8%AD%E8%A8%88%E3%81%8B%E3%82%89%E6%96%BD%E5%B7%A5%E3%81%BE%E3%81%A7%E4%B8%80%E5%85%83%E5%8C%96%E3%81%B8&url=https%3A%2F%2Faec-news.com%2Fposts%2Fautodesk-construction-cloud-is-now-autodesk-forma.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -872,6 +883,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年3月18日</span>
             </div>
+            <a class="card-read-more" href="./posts/maxon-launches-redshift-for-archviz.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=Maxon%E3%80%8CRedShift%20for%20Archviz%E3%80%8D%E3%80%81Revit%E3%83%BBArchicad%E3%83%BBVectorworks%E3%81%A7%E5%AE%9F%E8%A3%85%E3%81%B8&url=https%3A%2F%2Faec-news.com%2Fposts%2Fmaxon-launches-redshift-for-archviz.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -891,6 +903,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年3月7日</span>
             </div>
+            <a class="card-read-more" href="./posts/the-agentic-future-of-bim.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=AI%20%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%8CBIM%E3%82%92%E9%9D%A9%E5%91%BD%E3%81%99%E3%82%8B%E3%80%815%E5%B9%B4%E3%81%A7%E6%A5%AD%E7%95%8C%E6%BF%80%E5%A4%89%E3%81%AE%E5%8F%AF%E8%83%BD%E6%80%A7&url=https%3A%2F%2Faec-news.com%2Fposts%2Fthe-agentic-future-of-bim.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -910,6 +923,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年3月3日</span>
             </div>
+            <a class="card-read-more" href="./posts/ai-design-and-re-shaping-the-aec-industry.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=AI%E3%81%8CAEC%E6%A5%AD%E7%95%8C%E3%82%92%E5%86%8D%E7%B7%A8%E6%88%90%E3%81%99%E3%82%8B%E2%80%94BIM%E3%81%AF%E3%80%8C%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AA%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E6%B1%BA%E5%AE%9A%E5%9F%BA%E7%9B%A4%E3%80%8D%E3%81%B8%E9%80%B2%E5%8C%96&url=https%3A%2F%2Faec-news.com%2Fposts%2Fai-design-and-re-shaping-the-aec-industry.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -929,6 +943,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年3月3日</span>
             </div>
+            <a class="card-read-more" href="./posts/aec-magazine-march-april-2026.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E5%9E%8BBIM%E3%81%AE%E8%A1%9D%E6%92%83%E2%80%94%E2%80%94AI%E3%81%8C%E5%BB%BA%E7%AF%89%E8%A8%AD%E8%A8%88%E3%82%925%E5%B9%B4%E3%81%A7%E5%A4%89%E3%81%88%E3%82%8B&url=https%3A%2F%2Faec-news.com%2Fposts%2Faec-magazine-march-april-2026.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -948,6 +963,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年3月3日</span>
             </div>
+            <a class="card-read-more" href="./posts/rethinking-the-bim-platform.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=BIM%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AE%E5%A4%A7%E8%BB%A2%E6%8F%9B%E3%80%81AI%E3%81%8C%E6%89%8B%E4%BD%9C%E6%A5%AD%E3%81%AE%E6%A4%9C%E8%A8%BC%E3%82%92%E8%87%AA%E5%8B%95%E5%8C%96%E3%81%B8&url=https%3A%2F%2Faec-news.com%2Fposts%2Frethinking-the-bim-platform.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -967,6 +983,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年3月3日</span>
             </div>
+            <a class="card-read-more" href="./posts/design-to-build-in-the-age-of-ai.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=AI%E3%81%AE%E6%99%82%E4%BB%A3%E3%80%81BIM%E3%81%AF%E3%81%A9%E3%81%86%E5%A4%89%E3%82%8F%E3%82%8B%E3%81%8B%E2%80%94Allplan%E3%81%8C%E7%A4%BA%E3%81%99%E3%80%8C%E8%A8%AD%E8%A8%88%E3%81%8B%E3%82%89%E6%96%BD%E5%B7%A5%E3%80%8D%E3%81%B8%E3%81%AE%E9%80%B2%E5%8C%96&url=https%3A%2F%2Faec-news.com%2Fposts%2Fdesign-to-build-in-the-age-of-ai.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -986,6 +1003,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年3月3日</span>
             </div>
+            <a class="card-read-more" href="./posts/rewriting-the-rules.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=AI%E8%A8%93%E7%B7%B4%E7%A6%81%E6%AD%A2%E6%9D%A1%E9%A0%85%E3%81%8B%E3%82%89%E8%BB%A2%E6%A9%9F%E3%81%B8%E2%94%80Autodesk%E3%81%8CEULA%E6%94%B9%E5%AE%9A%E3%80%81%E6%A5%AD%E7%95%8C%E3%81%AE%E5%8F%8D%E7%99%BA%E5%8F%97%E3%81%91%E3%81%A6&url=https%3A%2F%2Faec-news.com%2Fposts%2Frewriting-the-rules.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1005,6 +1023,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月26日</span>
             </div>
+            <a class="card-read-more" href="./posts/nxt-bld-2026-a-decade-of-looking-around-corners.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=AI%E3%81%8C%E5%BB%BA%E8%A8%AD%E6%A5%AD%E7%95%8C%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B2026%E5%B9%B4%E3%80%81NXT%20BLD%E3%81%8C10%E5%B9%B4%E3%81%B6%E3%82%8A%E3%81%AE%E5%A4%A7%E8%BB%A2%E6%8F%9B%E3%82%92%E5%AE%A3%E8%A8%80&url=https%3A%2F%2Faec-news.com%2Fposts%2Fnxt-bld-2026-a-decade-of-looking-around-corners.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1024,6 +1043,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月26日</span>
             </div>
+            <a class="card-read-more" href="./posts/autodesk-construction-cloud-to-join-autodesk-forma-on-march-24.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=Autodesk%20Construction%20Cloud%E3%81%8CForma%E3%81%AB%E7%B5%B1%E5%90%88%E3%80%81%E8%A8%AD%E8%A8%88%E3%83%BB%E6%96%BD%E5%B7%A5%E3%81%AE%E4%B8%80%E5%85%83%E5%8C%96%E3%81%8C3%E6%9C%8824%E6%97%A5%E3%81%AB%E5%A7%8B%E5%8B%95&url=https%3A%2F%2Faec-news.com%2Fposts%2Fautodesk-construction-cloud-to-join-autodesk-forma-on-march-24.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1043,6 +1063,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月20日</span>
             </div>
+            <a class="card-read-more" href="./posts/hexagon-multivista-connects-to-revizto.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=Hexagon%20Multivist%E3%81%8CRevizto%E3%81%A8%E9%80%A3%E6%90%BA%E3%80%81%E7%8F%BE%E5%A0%B4%E3%82%B9%E3%82%AD%E3%83%A3%E3%83%B3%E6%A4%9C%E5%87%BA%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8CBIM%E3%81%AB%E8%87%AA%E5%8B%95%E7%B5%B1%E5%90%88&url=https%3A%2F%2Faec-news.com%2Fposts%2Fhexagon-multivista-connects-to-revizto.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1062,6 +1083,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月19日</span>
             </div>
+            <a class="card-read-more" href="./posts/autodesks-200m-bet-on-spatial-ai.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=Autodesk%E3%80%81spatial%20AI%E3%81%AB200%E5%84%84%E5%86%86%E6%8A%95%E8%B3%87%E2%80%943D%E7%94%9F%E6%88%90%E3%81%8C%E5%BB%BA%E8%A8%AD%E8%A8%AD%E8%A8%88%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B&url=https%3A%2F%2Faec-news.com%2Fposts%2Fautodesks-200m-bet-on-spatial-ai.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1081,6 +1103,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月18日</span>
             </div>
+            <a class="card-read-more" href="./posts/revitbim.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=Revit%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%81%AE%E9%9A%8E%E5%B1%A4%E6%A7%8B%E9%80%A0%E3%82%92%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AA%AC%EF%BC%9A%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%81%8B%E3%82%89%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%BE%E3%81%A7%E3%81%AE%E5%AE%9F%E5%8B%99%E3%82%AC%E3%82%A4%E3%83%89&url=https%3A%2F%2Faec-news.com%2Fposts%2Frevitbim.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1100,6 +1123,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月18日</span>
             </div>
+            <a class="card-read-more" href="./posts/gloobebim.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=GLOOBE%E3%81%AEBIM%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%883%E7%A8%AE%E9%A1%9E%E3%80%81%E6%B3%95%E8%A6%8F%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%8B%E3%82%89%E9%AB%98%E7%B2%BE%E5%BA%A6%E3%83%91%E3%83%BC%E3%82%B9%E3%81%BE%E3%81%A7&url=https%3A%2F%2Faec-news.com%2Fposts%2Fgloobebim.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1119,6 +1143,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月13日</span>
             </div>
+            <a class="card-read-more" href="./posts/expanding-fedramp-moderate-authorization-brings-connected-secure-future-to-autod.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=Autodesk%E3%80%81%E6%94%BF%E5%BA%9C%E5%90%91%E3%81%91BIM%E3%83%BB%E5%BB%BA%E8%A8%AD%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%81%8CFedRAMP%E8%AA%8D%E8%A8%BC%E5%8F%96%E5%BE%97%E3%81%B8&url=https%3A%2F%2Faec-news.com%2Fposts%2Fexpanding-fedramp-moderate-authorization-brings-connected-secure-future-to-autod.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1138,6 +1163,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月5日</span>
             </div>
+            <a class="card-read-more" href="./posts/why-gpu-memory-matters-for-cad-viz-and-ai.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=GPU%20%E3%83%A1%E3%83%A2%E3%83%AA%E4%B8%8D%E8%B6%B3%E3%81%8C%E8%A8%AD%E8%A8%88%E3%82%92%E6%AD%A2%E3%82%81%E3%82%8B%E2%80%95%E2%80%95CAD%E3%83%BBBIM%E3%83%BBAI%20%E3%81%AE%E9%9A%A0%E3%82%8C%E3%81%9F%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4&url=https%3A%2F%2Faec-news.com%2Fposts%2Fwhy-gpu-memory-matters-for-cad-viz-and-ai.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1157,6 +1183,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月5日</span>
             </div>
+            <a class="card-read-more" href="./posts/ai-in-aec-why-better-decisions-matter-more-than-faster-tools.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=%E9%80%9F%E5%BA%A6%E3%82%88%E3%82%8A%E6%B1%BA%E5%AE%9A%E3%81%AE%E8%B3%AA%E3%81%8C%E5%8B%9D%E3%81%A4%E3%80%822026%E5%B9%B4%E3%81%AEAEC%E6%A5%AD%E7%95%8C%E3%81%8CAI%E3%81%AB%E6%B1%82%E3%82%81%E3%82%8B%E6%9C%AC%E5%BD%93%E3%81%AE%E4%BE%A1%E5%80%A4&url=https%3A%2F%2Faec-news.com%2Fposts%2Fai-in-aec-why-better-decisions-matter-more-than-faster-tools.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1176,6 +1203,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月3日</span>
             </div>
+            <a class="card-read-more" href="./posts/autodesk-invests-2m-in-construction-material-tracking-firm.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=%E3%82%AA%E3%83%BC%E3%83%88%E3%83%87%E3%82%B9%E3%82%AF%E3%80%81%E5%BB%BA%E8%A8%AD%E8%B3%87%E6%9D%90%E8%BF%BD%E8%B7%A1%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%AB%C2%A32M%E6%8A%95%E8%B3%87%E2%80%94BIM%E3%81%A8%E3%82%B5%E3%82%A4%E3%83%88%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%9E%8D%E5%90%88%E3%81%B8&url=https%3A%2F%2Faec-news.com%2Fposts%2Fautodesk-invests-2m-in-construction-material-tracking-firm.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1195,6 +1223,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月3日</span>
             </div>
+            <a class="card-read-more" href="./posts/can-a-small-workstation-handle-big-bim.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=%E5%B0%8F%E5%9E%8B%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AF%E5%A4%A7%E8%A6%8F%E6%A8%A1BIM%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B%EF%BC%9F%E6%80%A7%E8%83%BD%E3%81%AE%E7%9C%9F%E5%AE%9F&url=https%3A%2F%2Faec-news.com%2Fposts%2Fcan-a-small-workstation-handle-big-bim.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1214,6 +1243,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月3日</span>
             </div>
+            <a class="card-read-more" href="./posts/best-enterprise-workstation-laptops-2026.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=2026%E5%B9%B4%E6%9C%80%E6%96%B0%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%81%B8%E3%81%B6%E3%81%AA%E3%82%89%EF%BC%9FCAD%E3%83%BBBIM%E5%90%91%E3%81%91%E3%83%8E%E3%83%BC%E3%83%88%E5%9E%8B3%E6%A9%9F%E7%A8%AE%E3%82%92%E5%BE%B9%E5%BA%95%E6%AF%94%E8%BC%83&url=https%3A%2F%2Faec-news.com%2Fposts%2Fbest-enterprise-workstation-laptops-2026.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1233,6 +1263,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年2月3日</span>
             </div>
+            <a class="card-read-more" href="./posts/review-cyberpowerpc-intel-core-u7ws-workstation.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=CAD%E3%83%BBBIM%E5%90%91%E3%81%91%E6%96%B0%E5%9E%8B%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%81%E3%82%B3%E3%82%B9%E3%83%91%E9%87%8D%E8%A6%96%E3%81%AE%E7%8F%BE%E5%AE%9F%E7%9A%84%E3%82%B9%E3%83%9A%E3%83%83%E3%82%AF&url=https%3A%2F%2Faec-news.com%2Fposts%2Freview-cyberpowerpc-intel-core-u7ws-workstation.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1252,6 +1283,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年1月23日</span>
             </div>
+            <a class="card-read-more" href="./posts/cityweft-adds-3d-building-data-for-england.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E5%85%A8%E5%9F%9F%E3%81%AE3D%E5%BB%BA%E7%89%A9%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8CBIM%2FCAD%E3%81%AB%E7%B5%B1%E5%90%88%E3%80%81LiDAR%E3%81%A7%E6%AD%A3%E7%A2%BA%E3%81%AA%E9%AB%98%E3%81%95%E6%83%85%E5%A0%B1%E3%82%92%E5%AE%9F%E8%A3%85&url=https%3A%2F%2Faec-news.com%2Fposts%2Fcityweft-adds-3d-building-data-for-england.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1271,6 +1303,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年1月23日</span>
             </div>
+            <a class="card-read-more" href="./posts/cmap-introduces-cmap-intelligence.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=CMap%E3%81%8CAI%E7%B5%B1%E5%90%88%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E7%99%BA%E8%A1%A8%E3%80%81%E6%97%A2%E5%AD%98%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%B8%E3%81%AE%E7%9B%B4%E6%8E%A5%E7%B5%84%E8%BE%BC%E3%81%A7%E8%A8%AD%E8%A8%88%E7%8F%BE%E5%A0%B4%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B&url=https%3A%2F%2Faec-news.com%2Fposts%2Fcmap-introduces-cmap-intelligence.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1290,6 +1323,7 @@
               <span class="card-meta-sep">·</span>
               <span>2026年1月21日</span>
             </div>
+            <a class="card-read-more" href="./posts/procore-acquires-datagrid.html">続きを読む →</a>
             <a class="share-btn" href="https://twitter.com/intent/tweet?text=Procore%E3%80%81%E3%83%87%E3%83%BC%E3%82%BF%E9%80%A3%E6%90%BAAI%E4%BC%81%E6%A5%ADDatagrid%E3%82%92%E8%B2%B7%E5%8F%8E%E2%80%94%E5%BB%BA%E8%A8%AD%E6%A5%AD%E5%90%91%E3%81%91%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88AI%E3%81%B8%E3%82%B7%E3%83%95%E3%83%88&url=https%3A%2F%2Faec-news.com%2Fposts%2Fprocore-acquires-datagrid.html" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
@@ -1333,6 +1367,25 @@
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
         <ul class="sidebar-recent-list"><li><a href="./posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新</a></li><li><a href="./posts/embodied-carbon-calcs-for-bim-objects.html">BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開</a></li><li><a href="./posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダムからフォーリングウォーターまで、BIM×デジタルツインで文化遺産保存の新時代へ</a></li><li><a href="./posts/autodesk-construction-cloud-is-now-autodesk-forma.html">Autodesk Construction Cloud改名、Formaへ統合。設計から施工まで一元化へ</a></li><li><a href="./posts/maxon-launches-redshift-for-archviz.html">Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ</a></li></ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">カテゴリ別おすすめ</div>
+        <ul class="sidebar-recent-list">
+            <li><a href="./posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">AI/DX</span>Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新
+            </a></li>
+            <li><a href="./posts/embodied-carbon-calcs-for-bim-objects.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">BIM全般</span>BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開
+            </a></li>
+            <li><a href="./posts/maxon-launches-redshift-for-archviz.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">Revit</span>Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ
+            </a></li>
+            <li><a href="./posts/the-agentic-future-of-bim.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">BIM×AI</span>AI エージェントがBIMを革命する、5年で業界激変の可能性
+            </a></li>
+            <li><a href="./posts/gloobebim.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">GLOOBE</span>GLOOBEのBIMオブジェクト3種類、法規チェックから高精度パースまで
+            </a></li></ul>
       </div>
     </aside>
     </div>

@@ -93,7 +93,7 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者�
 - 200字以内を目安に、できるだけ内容を充実させる（短くしすぎない）
 - JSON以外は返さない`;
 
-async function generateXPostBody(article, articleBody) {
+async function generateXPostBody(article, articleBody, feedbackText = "") {
   const client = createClient();
   if (!client) return { xPost: "", titleJa: "", bodyJa: "" };
 
@@ -102,7 +102,8 @@ async function generateXPostBody(article, articleBody) {
 記事本文:
 ${articleBody.slice(0, 5000)}
 
-上記を読んで、JSONで返してください。`;
+上記を読んで、JSONで返してください。
+${feedbackText ? `\n【追加修正指示】\n${feedbackText}` : ""}`;
 
   try {
     const response = await client.messages.create({
@@ -132,6 +133,43 @@ ${articleBody.slice(0, 5000)}
     console.error(`[summarize] Claude API エラー: ${err.message}`);
     return { relevant: true, xPost: "", titleJa: "", bodyJa: "" };
   }
+}
+
+const REQUIRED_BODY_SECTIONS = ["【背景】", "【内容】", "【技術的ポイント】", "【業界への影響】"];
+const MOJIBAKE_PATTERN = /[�]|縲|繝|窶|�/;
+
+function validateGeneratedContent(result) {
+  const issues = [];
+  const titleJa = (result.titleJa || "").trim();
+  const bodyJa = (result.bodyJa || "").trim();
+  const xPost = (result.xPost || "").trim();
+
+  if (!titleJa) issues.push("titleJa が空です");
+  if (!bodyJa) issues.push("bodyJa が空です");
+  if (!xPost) issues.push("xPost が空です");
+
+  if (MOJIBAKE_PATTERN.test(titleJa) || MOJIBAKE_PATTERN.test(bodyJa) || MOJIBAKE_PATTERN.test(xPost)) {
+    issues.push("文字化けの疑いがある文字列が含まれています");
+  }
+
+  if (titleJa.length > 60) {
+    issues.push("titleJa が長すぎます");
+  }
+
+  if (bodyJa.length < 500) {
+    issues.push("bodyJa が 500 文字未満です");
+  }
+
+  for (const section of REQUIRED_BODY_SECTIONS) {
+    if (!bodyJa.includes(section)) {
+      issues.push(`${section} が不足しています`);
+    }
+  }
+
+  return {
+    valid: issues.length === 0,
+    issues,
+  };
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -190,11 +228,28 @@ async function summarizeArticle(article) {
   console.log(`[summarize] 処理中: ${article.title?.slice(0, 50)}`);
   const body    = await getArticleBody(article);
   console.log(`[summarize] 記事本文取得: ${body.length}文字`);
-  const result = await generateXPostBody(article, body);
+  let result = await generateXPostBody(article, body);
 
   // 適切性チェック: relevant=false の場合は除外フラグを立てて早期リターン
   if (result.relevant === false) {
     console.log(`[summarize] ⛔ 不適切と判定 — 除外: ${article.title?.slice(0, 60)}`);
+    return { ...article, relevant: false, xPostBody: "", japaneseSummary: "", bodyJa: "", titleJa: "" };
+  }
+
+  let quality = validateGeneratedContent(result);
+  if (!quality.valid) {
+    console.log(`[summarize] 品質再生成: ${quality.issues.join(" / ")}`);
+    result = await generateXPostBody(
+      article,
+      body,
+      `以下の問題を修正してください: ${quality.issues.join("、")}。
+titleJa / bodyJa / xPost を自然な日本語で作り直し、特に bodyJa は4部構成と500文字以上を厳守してください。`
+    );
+    quality = validateGeneratedContent(result);
+  }
+
+  if (!quality.valid) {
+    console.log(`[summarize] ⛔ 品質基準未達で除外: ${article.title?.slice(0, 60)}`);
     return { ...article, relevant: false, xPostBody: "", japaneseSummary: "", bodyJa: "", titleJa: "" };
   }
 

@@ -9,6 +9,22 @@ const SITE_DESC = 'BIM・AEC・建設DXの最新ニュースをAIが日本語で
 const SITE_URL = 'https://aec-news.com';
 const CONTACT_FORM_URL = 'https://forms.gle/kF7Jf8PErq6S15tu5';
 const CURRENT_YEAR = new Date().getFullYear();
+const RECOMMENDED_BOOKS = {
+  REVIT: [
+    {
+      title: 'はじめてのAutodesk Revit＆Revit LT [Revit/Revit LT 2026対応]',
+      description: 'Revit 2026 / Revit LT 2026に対応した入門書です。これから操作を学ぶ方や、基本を整理し直したい方に向いています。',
+      url: 'https://amzn.to/3QpB1Ja',
+    },
+  ],
+  BIM_ECOSYSTEM: [
+    {
+      title: 'Archicad28ではじめるBIM設計入門[基本・実施設計編]',
+      description: 'ArchicadでBIM設計を始めたい方向けの入門書です。基本設計から実施設計までの流れを押さえやすい一冊です。',
+      url: 'https://amzn.to/4tCIdjL',
+    },
+  ],
+};
 
 // ---- utility ----------------------------------------------------------------
 
@@ -1221,6 +1237,21 @@ function htmlFooter(base = '.', articleCount = 0) {
 
 // ---- sidebar ----------------------------------------------------------------
 
+function buildRecommendedBooks(categoryKey) {
+  const books = RECOMMENDED_BOOKS[categoryKey] || [];
+  if (books.length === 0) return '';
+
+  const items = books.map((book) => `
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">おすすめ書籍</div>
+        <p class="sidebar-about" style="margin-bottom:0.75rem; color: var(--text); font-weight:700;">${escape(book.title)}</p>
+        <p class="sidebar-about" style="margin-bottom:0.85rem;">${escape(book.description)}</p>
+        <a class="sidebar-follow-btn" href="${escape(book.url)}" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
+      </div>`).join('');
+
+  return items;
+}
+
 function buildSidebar(posts, base = '.') {
   // Category counts
   const catCounts = {};
@@ -1884,6 +1915,7 @@ function buildAboutPage() {
 function buildCategoryPage(category, posts) {
   const label = categoryLabel(category);
   const catPosts = posts.filter((p) => (p.category || 'OTHER').toUpperCase() === category.toUpperCase());
+  const recommendedBooks = buildRecommendedBooks(category.toUpperCase());
 
   const cards = catPosts.map((post) => {
     const slug = post.slug;
@@ -1949,7 +1981,7 @@ function buildCategoryPage(category, posts) {
           ${cards}
         </div>
       </main>
-      ${buildSidebar(posts, '..')}
+      ${recommendedBooks}${buildSidebar(posts, '..')}
     </div>
   </div>` +
     htmlFooter('..', catPosts.length);

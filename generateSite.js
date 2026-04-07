@@ -782,7 +782,6 @@ function htmlHeader(base = '.') {
     <div class="header-inner">
       <a href="${base}/" class="header-logo-link">
         <img src="${base}/assets/logo.svg" alt="${SITE_NAME}" class="logo-img">
-        <span class="header-site-name">AEC NEWS JAPAN</span>
       </a>
     </div>
   </header>`;

@@ -365,6 +365,235 @@ const EXPLAINER_GUIDES = [
       },
     ],
   },
+  {
+    slug: 'ifc',
+    title: 'IFCとは',
+    category: 'IFC',
+    description: 'IFCの基本、openBIMとの関係、Revit・Archicadとの関係、実務で必要になる理由を整理した解説です。',
+    heroSummary: 'IFCは、BIMデータを特定ソフトに閉じずに受け渡すための共通言語です。',
+    oneLine: 'IFCは、BIMモデルを他社や他ソフトでも読める形で受け渡すための中立データ標準です。',
+    overview: 'IFCはIndustry Foundation Classesの略で、buildingSMARTが策定するオープンなBIMデータ標準です。3D形状だけでなく、部材、空間、属性、階層関係などを一定ルールで表現できるため、RevitやArchicadのような異なるBIMソフト間で情報をやり取りする基盤になります。',
+    industryImpact: 'IFCが使えるかどうかで、BIMは社内効率化ツールにも業界基盤にもなります。設計・施工・発注者の間でソフトが異なってもデータをつなぎやすくなり、特定ベンダー依存を減らせるため、BIMの成熟度に直結します。',
+    practicalImpact: '実務では、設計モデルを施工や発注者へ渡すときの再入力や手戻りを減らしやすくなります。逆にIFCを理解せずにBIMを進めると、モデルはあるのに他社で使えない、受け渡しのたびに作り直す、といった問題が起きやすいです。',
+    features: [
+      'BIMデータを特定ソフトに閉じずに受け渡しやすくする',
+      '形状だけでなく属性や空間情報も扱える',
+      'openBIMを実務で成立させる代表的な中核技術である',
+    ],
+    differences: [
+      'BIMは情報付きモデルを使う考え方で、IFCはそのデータを中立形式で渡すための標準です。',
+      'openBIMは運用の考え方で、IFCはそれを支える代表的な技術です。',
+      'RevitやArchicadはBIMツールであり、IFCそのものではありません。',
+    ],
+    fit: [
+      '複数ソフトをまたいでBIM連携をしたい設計事務所',
+      '施工や発注者へのデータ受け渡しを整えたいゼネコン担当者',
+      'openBIMや中立データ要件に対応したい実務者',
+    ],
+    practicalUse: [
+      '設計から施工へのモデル受け渡し',
+      '発注者要件に基づく中立データ納品',
+      '他ソフトやチェックツール、FMツールとの連携',
+    ],
+    difficulty: 'IFCは単なる保存形式ではなく、何をどの属性で、どの粒度で渡すかまで考える必要があります。書き出せることと、使える形で渡せることは別です。',
+    stumblingPoints: [
+      'IFCを書き出せば終わりだと考えやすい',
+      '受け取り側の使い方を想定せずに出力してしまう',
+      '属性や分類の整理が不足し、再利用しにくいデータになる',
+    ],
+    selfStudyWhyHard: '独学ではIFCの用語は理解できても、どの契約・工程・受け渡し場面で必要になるかが見えにくいです。ソフト操作だけでなく、BIM運用と合わせて理解しないと実務で使える知識になりません。',
+    learningMethod: 'まずBIMとopenBIMの全体像を理解し、そのうえでIFCが何を表現する標準なのかを押さえるのが近道です。次にRevitやArchicadでの入出力や要件定義へ進むと、実務に結びつきやすくなります。',
+    extraSections: [
+      {
+        title: 'なぜ重要なのか',
+        body: 'IFCが重要なのは、BIMデータを特定ベンダーに閉じないためです。設計者はRevit、協力会社はArchicad、施工側は別ツールという状況は珍しくありません。IFCが弱いと、データ受け渡しのたびに再入力や手戻りが発生し、BIMの価値が大きく下がります。',
+      },
+      {
+        title: '日本で普及が遅れている理由',
+        body: '日本では、まず社内導入を優先し、他社連携や納品要件まで設計していないケースが多いです。また、案件ごとに運用が異なり、属性や分類の標準化が弱いため、IFCを出しても実務で再利用しにくい場面が少なくありません。',
+      },
+      {
+        title: 'Revit / Archicadとの関係',
+        body: 'RevitもArchicadもIFC入出力に対応していますが、自動的にopenBIM運用が成立するわけではありません。重要なのは、どの属性をどの粒度で出すか、受け取り側がどう使うかまで含めて設計することです。',
+      },
+    ],
+    guideLinks: [
+      { slug: 'openbim', text: 'openBIMとの関係を整理したい方はこちら' },
+      { slug: 'bim', text: 'BIM全体の考え方を整理したい方はこちら' },
+      { slug: 'archicad', text: 'Archicadとの関係を知りたい方はこちら' },
+    ],
+    booksIntro: 'IFCは断片的な解説だけだと理解しにくく、BIM全体や運用設計と合わせて学ぶ方が実務に結びつきます。中立データの意味や受け渡し設計を体系的に理解するための書籍が役立ちます。',
+    books: [
+      {
+        audience: 'openBIM向け',
+        title: 'ファシリティマネジメントのためのBIM要件定義',
+        description: 'データ受け渡しや運用要件を整理したい実務者向けです。IFCやopenBIMを業務へ落とし込みやすくなります。',
+        url: 'https://amzn.to/4cg9ZLX',
+      },
+      {
+        audience: 'BIM基礎向け',
+        title: 'Archicad28ではじめるBIM設計入門[基本・実施設計編]',
+        description: 'BIM設計の流れとモデルベース業務の前提を押さえたい人向けです。IFCを学ぶ前提知識を整理しやすい一冊です。',
+        url: 'https://amzn.to/4tCIdjL',
+      },
+    ],
+  },
+  {
+    slug: 'bim-ai',
+    title: 'BIM×AIとは',
+    category: 'BIM_AI',
+    description: 'BIM×AIの概要、現実的な活用例、海外と日本の差、今どこまで使えるかを実務ベースで整理した解説です。',
+    heroSummary: 'BIM×AIの価値は、設計者を置き換えることではなく、確認・比較・判断材料づくりを速くすることにあります。',
+    oneLine: 'BIM×AIは、BIMに蓄積された構造化データを使って、確認、予測、比較、整理を支援する実務補助の考え方です。',
+    overview: 'BIMモデルには、形状だけでなく部材、数量、属性、工程、空間情報が入っています。AIはこうした構造化データと相性が良く、干渉確認、コスト比較、施工検討、情報整理のような領域で実務支援に使われ始めています。ただし、全面自動化ではなく、限定業務の補助として使うのが現実的です。',
+    industryImpact: 'BIM×AIが進むと、BIMは作図・モデリング基盤から、判断支援基盤へ広がります。一方で、BIMデータ標準化が進んでいる組織と、まだデータ整備が弱い組織の差は広がりやすくなります。',
+    practicalImpact: '実務では、干渉の優先順位付け、設計変更時の影響確認、概算コスト比較、施工手順比較などで効果が出やすいです。逆に、BIM運用が未整備なままAIだけ導入しても、期待した成果は出にくいです。',
+    features: [
+      'BIMの構造化データを使って確認・予測・比較を補助できる',
+      '自動化よりも判断材料づくりで価値が出やすい',
+      'BIM標準化が進んでいるほど実務効果が高くなりやすい',
+    ],
+    differences: [
+      'BIMは情報付きモデルを扱う基盤で、AIはその情報を分析・整理・予測する補助役です。',
+      'BIM×AIは単体の流行ワードではなく、BIM運用が整って初めて実務効果が出やすい領域です。',
+      '未来の完全自動設計より、今は確認・比較・整理の支援で考える方が現実的です。',
+    ],
+    fit: [
+      'BIMデータを蓄積している設計事務所やゼネコン',
+      '干渉確認や施工検討の効率を上げたいBIM/DX担当者',
+      'AI導入を誇張ではなく実務観点で見極めたい人',
+    ],
+    practicalUse: [
+      '自動モデリングの補助や既存建物データ化の支援',
+      '干渉チェック結果の整理と優先順位付け',
+      '概算コスト比較や施工シミュレーション案の比較',
+    ],
+    difficulty: 'BIM×AIは、BIMの前提知識とAIの前提知識の両方が必要です。どちらか片方だけでは、使いどころを誤りやすくなります。',
+    stumblingPoints: [
+      'AIを入れれば設計や施工が自動化されると期待しすぎる',
+      'BIMデータ整備が不十分なままAI活用を始めてしまう',
+      '何をAIに任せ、何を人が判断するか整理できていない',
+    ],
+    selfStudyWhyHard: '独学だと、AIの一般論は分かってもBIM実務への適用が見えにくく、逆にBIMだけ学んでいてもAIの限界が見えにくいです。BIM基礎とAI基礎をつないで理解する必要があります。',
+    learningMethod: 'まずBIMの基本とデータ構造を理解し、その後にAIが得意なことと苦手なことを押さえるのが効率的です。そのうえで、干渉チェック、コスト予測、施工検討など用途別に整理すると実務に落とし込みやすくなります。',
+    extraSections: [
+      {
+        title: '具体的な活用例',
+        body: '現時点で現実的なのは、自動モデリングの補助、干渉チェック結果の整理、概算コストの比較、施工手順案の比較です。設計や施工を完全自動化する段階ではなく、確認と比較を速くする用途が中心です。',
+      },
+      {
+        title: '海外と日本の差',
+        body: '海外の方がBIMデータ標準化やクラウド基盤整備が進んでおり、BIM×AIの実証や製品化も先行しています。日本では、AI導入以前にBIMデータ運用が整っていない会社も多く、まず標準化が必要なケースが少なくありません。',
+      },
+      {
+        title: '現実的に使えるレベルか',
+        body: '部分的には十分使える一方で、全面自動化を期待する段階ではありません。現実的には、干渉確認、比較検討、情報整理、施工案の比較など、補助的な使い方で成果が出やすいです。',
+      },
+    ],
+    guideLinks: [
+      { slug: 'bim', text: 'BIM基礎を整理したい方はこちら' },
+      { slug: 'revit', text: 'Revit実務の前提を整理したい方はこちら' },
+      { slug: 'archicad', text: 'Archicad実務の前提を整理したい方はこちら' },
+    ],
+    booksIntro: 'BIM×AIは、BIMの基礎知識とAIの基礎知識の両方が必要です。単発のツール紹介だけでは実務適用を判断しにくいため、前提知識を体系で押さえられる書籍が役立ちます。',
+    books: [
+      {
+        audience: 'BIM基礎向け',
+        title: 'はじめてのAutodesk Revit＆Revit LT [Revit/Revit LT 2026対応]',
+        description: 'BIMモデルの考え方と実務の入口を整理したい人向けです。BIM×AIを理解する前提知識として有効です。',
+        url: 'https://amzn.to/3QpB1Ja',
+      },
+      {
+        audience: 'BIM基礎向け',
+        title: 'Archicad28ではじめるBIM設計入門[基本・実施設計編]',
+        description: '設計フローの中でBIMをどう使うかを整理したい人向けです。AI活用の前提になるBIM実務感をつかみやすいです。',
+        url: 'https://amzn.to/4tCIdjL',
+      },
+      {
+        audience: 'AI/DX基礎向け',
+        title: 'ゼネコン5.0: SDGs、DX時代の建設業の経営戦略',
+        description: '建設DXの文脈でAI活用を考えたい担当者向けです。純粋なAI技術書ではありませんが、実務導入の視点を持ちやすくなります。',
+        url: 'https://amzn.to/4tAYxl5',
+      },
+    ],
+  },
+  {
+    slug: 'cde',
+    title: 'CDEとは',
+    category: 'BIM_ECOSYSTEM',
+    description: 'CDEの基本、なぜ必要か、BIMとの関係、ACCなどとの関係、導入効果を実務目線で整理した解説です。',
+    heroSummary: 'CDEは、設計・施工・発注者が同じ情報を同じ前提で管理するための共通データ環境です。',
+    oneLine: 'CDEは、図面、BIMモデル、承認履歴、変更履歴を共通ルールで扱うための情報運用基盤です。',
+    overview: 'CDEはCommon Data Environmentの略で、建設プロジェクトで使う図面、BIMモデル、仕様書、承認履歴、検査記録、RFI、変更履歴などを共通ルールで管理するための基盤です。単なるオンラインストレージではなく、どの情報が最新版か、誰が何を正として扱うかを明確にする仕組みです。',
+    industryImpact: 'CDEが定着すると、建設DXは単発のツール導入から、情報運用の変革へ進みます。BIM、図面、承認、現場記録がつながることで、設計・施工・発注者の間の情報解釈差を減らしやすくなります。',
+    practicalImpact: '実務では、最新版の迷子、古い図面での施工、承認履歴の不明瞭さ、モデルとPDFの整合ズレを減らしやすくなります。逆にCDEがないと、ファイルはあるのにプロジェクトが回らない状態になりがちです。',
+    features: [
+      '最新版管理、権限管理、承認履歴管理を一つの基盤で扱える',
+      'BIMモデルと文書を別管理にせず、同じ前提で扱いやすい',
+      '設計・施工・発注者の情報共有ルールを可視化しやすい',
+    ],
+    differences: [
+      'オンラインストレージがファイル保管中心なのに対し、CDEは情報運用ルールまで含みます。',
+      'BIMが情報を作る側だとすれば、CDEはその情報を運用する側です。',
+      'Autodesk Construction Cloudは代表的なCDE系製品の一つであり、CDEそのものの定義ではありません。',
+    ],
+    fit: [
+      '最新版管理や承認履歴管理を改善したい設計事務所',
+      '協力会社を含めた情報共有を整えたいゼネコン担当者',
+      '発注者との情報受け渡しを透明化したい実務者',
+    ],
+    practicalUse: [
+      '設計変更時の図面・モデル・仕様書の整合管理',
+      '施工段階での承認済み情報の共有と是正履歴管理',
+      '発注者への報告や引き渡し情報の整理',
+    ],
+    difficulty: 'CDEはソフト導入だけでは成立しません。命名ルール、承認フロー、アクセス権、更新責任、受け渡し条件まで設計する必要があるため、運用設計が難しい領域です。',
+    stumblingPoints: [
+      'ストレージ導入をCDE導入だと考えてしまう',
+      '命名ルールや承認フローが決まっていない',
+      '現場運用に合わず、結局メール共有へ戻ってしまう',
+    ],
+    selfStudyWhyHard: '独学では製品機能は理解できても、自社案件にどう運用設計を落とすかが見えにくいです。CDEはソフト操作ではなく、設計・施工・発注者の実務フローを横断して考える必要があります。',
+    learningMethod: 'まずBIMと情報管理の全体像を理解し、その後にCDEが必要になる理由を手戻りや承認の観点で押さえるのが効率的です。製品比較は最後に行い、先に運用ルールを考える方が失敗しにくいです。',
+    extraSections: [
+      {
+        title: 'なぜ必要か',
+        body: '建設プロジェクトは、設計、施工、発注者、協力会社で参照情報が分断されやすいのが現実です。CDEがないと、古い図面で施工が進む、承認履歴が追えない、PDFとBIMモデルがずれる、といった問題が起きやすくなります。',
+      },
+      {
+        title: 'BIMとの関係',
+        body: 'BIMは情報付きモデルを作る考え方で、CDEはそのモデルや関連文書を関係者間で正しく共有・管理する仕組みです。BIMだけ導入しても、CDEが弱いと実務では運用しにくい状態が残ります。',
+      },
+      {
+        title: 'Autodesk Construction Cloudなどとの関係',
+        body: 'Autodesk Construction Cloudは代表的なCDE系プラットフォームの一つです。ただし、製品を入れるだけではCDEになりません。命名ルール、承認フロー、更新責任、共有権限まで整えて初めてCDEとして機能します。',
+      },
+      {
+        title: '導入すると何が変わるか',
+        body: '設計では最新版管理と変更伝達が安定し、施工では承認済み情報へのアクセスや是正履歴管理がしやすくなります。発注者側でも、承認済み情報や引き渡し情報を整理しやすくなり、プロジェクト全体の透明性が上がります。',
+      },
+    ],
+    guideLinks: [
+      { slug: 'bim', text: 'BIMの基本を整理したい方はこちら' },
+      { slug: 'ifc', text: 'IFCやデータ受け渡しとの関係を知りたい方はこちら' },
+      { slug: 'bim-manager', text: 'BIMマネージャーの役割を知りたい方はこちら' },
+    ],
+    booksIntro: 'CDEは単なるクラウドツールの話ではなく、BIM運用、情報管理、発注者要件まで含めた理解が必要です。断片的な製品知識だけでは実務に落とし込みにくいため、全体像を整理できる書籍が役立ちます。',
+    books: [
+      {
+        audience: '建設DX向け',
+        title: 'ゼネコン5.0: SDGs、DX時代の建設業の経営戦略',
+        description: '建設DXを経営と業務変革の視点で整理したい人向けです。CDEを単体ツールではなく業務基盤として考えやすくなります。',
+        url: 'https://amzn.to/4tAYxl5',
+      },
+      {
+        audience: 'BIMマネジメント向け',
+        title: 'ファシリティマネジメントのためのBIM要件定義',
+        description: 'BIMデータをどう整理し、どう引き渡し、どう使うかを考えるのに向いています。CDE理解にもつながる一冊です。',
+        url: 'https://amzn.to/4cg9ZLX',
+      },
+    ],
+  },
 ];
 
 const EXPLAINER_GUIDE_MAP = Object.fromEntries(EXPLAINER_GUIDES.map((guide) => [guide.slug, guide]));
@@ -2191,14 +2420,19 @@ function inferRelevantGuides(post) {
 
   if (category === 'REVIT' || haystack.includes('revit')) add('revit');
   if (category === 'ARCHICAD' || haystack.includes('archicad')) add('archicad');
-  if (category === 'IFC' || haystack.includes('ifc') || haystack.includes('openbim') || haystack.includes('open bim')) add('openbim');
+  if (category === 'IFC' || haystack.includes('ifc')) add('ifc');
+  if (haystack.includes('openbim') || haystack.includes('open bim')) add('openbim');
+  if (haystack.includes('cde') || haystack.includes('common data environment') || haystack.includes('construction cloud') || haystack.includes('autodesk construction cloud') || haystack.includes('共通データ環境')) add('cde');
+  if (category === 'BIM_AI' || haystack.includes('bim ai') || haystack.includes('ai') || haystack.includes('人工知能')) add('bim-ai');
 
   if (category === 'BIM_ECOSYSTEM') {
     add('openbim');
+    add('cde');
     add('archicad');
   }
 
   if (category === 'BIM_AI' || category === 'AI_DX' || category === 'AI') {
+    add('bim-ai');
     add('revit');
     add('archicad');
   }

@@ -816,9 +816,11 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     }
     .article-editorial-text {
       font-size: 0.9rem;
-      line-height: 1.8;
+      line-height: 1.85;
       color: #78350f;
     }
+    .article-editorial-text p { margin: 0 0 0.75rem; }
+    .article-editorial-text p:last-child { margin-bottom: 0; }
 
     /* ---- source card ---- */
     .article-source-card {
@@ -1604,8 +1606,10 @@ function buildArticlePage(post, allPosts) {
   const keyPoints = sections
     .filter(s => s.label && s.paragraphs.length > 0)
     .map(s => {
+      // 最初の文（。区切り）を完全に表示。ない場合は最初の段落全体
       const firstSent = s.paragraphs[0].split('。')[0];
-      return { label: s.label, text: firstSent.length > 55 ? firstSent.substring(0, 55) + '…' : firstSent };
+      const text = firstSent.length > 0 ? firstSent + '。' : s.paragraphs[0];
+      return { label: s.label, text };
     })
     .slice(0, 5);
 
@@ -1613,8 +1617,9 @@ function buildArticlePage(post, allPosts) {
   const editLabels = ['日本への影響', '日本市場', '日本', '見解', 'まとめ', '考察', '影響'];
   const editSection = sections.find(s => s.label && editLabels.some(l => s.label.includes(l)) && s.paragraphs.length > 0)
     || (sections.length > 1 ? sections[sections.length - 1] : null);
+  // セクションの全段落を表示（途切れ防止）
   const editorialText = editSection && editSection.paragraphs.length > 0
-    ? editSection.paragraphs[0].substring(0, 220) + (editSection.paragraphs[0].length > 220 ? '…' : '')
+    ? editSection.paragraphs.join('\n')
     : '';
 
   // ---- body HTML ----
@@ -1667,7 +1672,7 @@ function buildArticlePage(post, allPosts) {
         <span class="article-editorial-icon">💡</span>
         <span class="article-editorial-title">AEC News Japan 編集部の見解</span>
       </div>
-      <p class="article-editorial-text">${escape(editorialText)}</p>
+      <div class="article-editorial-text">${editorialText.split('\n').filter(s => s.trim()).map(p => `<p>${escape(p)}</p>`).join('')}</div>
     </div>` : '';
 
   // ---- hero summary ----

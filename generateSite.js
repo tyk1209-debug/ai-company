@@ -38,6 +38,11 @@ const RECOMMENDED_BOOKS = {
       description: '維持管理やFMの視点からBIM要件を整理したい方向けの一冊です。運用段階まで含めたBIM活用を考える読者に向いています。',
       url: 'https://amzn.to/4cg9ZLX',
     },
+    {
+      title: 'Meta Quest 3（512GB）',
+      description: '3Dモデルのレビューや空間体験、VR活用の検証に向いたデバイスです。BIMやデジタルツインの可視化を試したい読者に向いています。',
+      url: 'https://amzn.to/41jGEuQ',
+    },
   ],
   AI_DX: [
     {

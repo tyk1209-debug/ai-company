@@ -7,6 +7,7 @@ const { getAffiliateLinks } = require('./affiliateLinks.js');
 const SITE_NAME = 'AEC News Japan';
 const SITE_DESC = 'BIM・AEC・建設DXの最新ニュースをAIが日本語で解説';
 const SITE_URL = 'https://aec-news.com';
+const CONTACT_FORM_URL = 'https://forms.gle/kF7Jf8PErq6S15tu5';
 const CURRENT_YEAR = new Date().getFullYear();
 
 // ---- utility ----------------------------------------------------------------
@@ -1811,7 +1812,7 @@ function buildPrivacyPage() {
         <p>当サイトは、必要に応じて本プライバシーポリシーを変更することがあります。重要な変更がある場合には、サイト上でお知らせします。</p>
 
         <h2>8. お問い合わせ</h2>
-        <p>本ポリシーに関するお問い合わせは、運営者情報ページをご覧ください。</p>
+        <p>本ポリシーに関するお問い合わせは、<a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>よりご連絡ください。</p>
 
         <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">最終更新日: ${CURRENT_YEAR}年4月</p>
       </div>
@@ -1856,7 +1857,8 @@ function buildAboutPage() {
         <p>当サイトの独自コンテンツの著作権は当サイトに帰属します。引用・転載の際は出典を明記の上、元記事へのリンクを設けてください。</p>
 
         <h2>お問い合わせ</h2>
-        <p>当サイトへのお問い合わせ・記事に関するご意見は、準備中の連絡窓口をご利用ください。連絡先は今後このページで案内します。</p>
+        <p>当サイトへのお問い合わせ・記事に関するご意見は、<a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">Googleフォームのお問い合わせ窓口</a>よりお送りください。</p>
+        <p><a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:0.75rem; background:var(--blue); color:#fff; padding:0.75rem 1.25rem; border-radius:6px; font-weight:700; text-decoration:none;">お問い合わせフォームを開く</a></p>
 
         <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">
           &copy; ${CURRENT_YEAR} ${SITE_NAME}

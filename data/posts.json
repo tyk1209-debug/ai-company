@@ -1,5 +1,43 @@
 [
   {
+    "title": "Archicad連携が導く、BIMと図面ベースのワークフロー革新 Bluebeam活用ウェビナー",
+    "link": "https://www.graphisoft.com/jp/events/bluebeam-webinar-jp",
+    "source": "Graphisoft",
+    "pubDate": "2026-03-21T00:00:00.000Z",
+    "summary": "Graphisoft JapanがBluebeam活用ウェビナーを公開。Archicad連携を軸に、BIMモデルとPDFレビューをつなぐ実務ワークフローを紹介している。",
+    "fetchedAt": "2026-04-07T12:30:00.000Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "archicad",
+      "bim"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "bim",
+      "bluebeam",
+      "pdf",
+      "workflow"
+    ],
+    "score": 8,
+    "freshnessScore": 1,
+    "relevant": true,
+    "titleJa": "Graphisoft、Bluebeam活用ウェビナーを公開――Archicad連携でPDFレビューとBIM運用を接続",
+    "bodyJa": "背景:\nBluebeamは建築・設計・施工の現場で広く使われるPDFベースのレビュー基盤です。一方で、日本の実務ではBIMモデルと図面レビューが別々に運用されることが多く、設計変更や指摘事項がモデル側へ戻りにくい課題がありました。Graphisoft Japanはこのギャップを埋めるテーマとして、Archicad連携を軸にしたBluebeam活用ウェビナーを紹介しています。\n\n内容:\nウェビナーの主題は、ArchicadとBluebeamを組み合わせることで、BIMモデルで設計した内容を図面レビューや関係者確認のフローへどうつなぐかにあります。ページ上では、Bluebeamが実務にどのような価値をもたらすのか、そしてGraphisoftがどのようなサポートやワークフロー提案を行うのかを分かりやすく説明するとしています。単なる製品紹介ではなく、BIMと図面ベース業務の橋渡しをどう設計するかが主眼です。\n\n技術的ポイント:\n重要なのは、BIMソフトの中だけで完結しないレビュー基盤をどう整えるかです。設計部門ではArchicad上のモデルが正でも、社内承認、協力会社とのレビュー、施工段階の確認ではPDFが依然として主役になる場面が多くあります。Bluebeam連携は、その現実を前提に、BIMデータを図面ベースのチェックやコメント運用へ落とし込む実務設計として意味があります。CDEほど大掛かりな基盤導入の前段として、レビューの標準化を進めやすい点も示唆されています。\n\n業界への影響:\nこのテーマは、BIM導入の成否がモデリング能力だけでなく、レビューと合意形成の運用設計に左右されることを改めて示しています。日本市場ではBIMモデルを作れても、確認・承認・施工連携がPDF中心のまま分断されるケースが少なくありません。GraphisoftがBluebeamを組み合わせて提案することで、BIMと図面運用を対立させずにつなぐ流れが強まりそうです。\n\n実務への影響:\n設計事務所では、Archicadで作成したモデルをもとにした図面確認と指摘整理を標準化しやすくなります。ゼネコンや施工側では、PDFレビューで出たコメントをBIM運用へどう戻すかを整理するきっかけになります。発注者を含む合意形成でも、モデルを直接扱わない関係者と情報共有しやすくなるため、BIM導入初期の実務負荷を下げやすいテーマです。",
+    "xPostBody": "",
+    "japaneseSummary": "Graphisoft JapanがBluebeam活用ウェビナーを公開。Archicad連携を軸に、BIMモデルとPDFレビューをつなぐ実務ワークフローを紹介している。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "Graphisoftのイベントページ本文に基づき要点を整理。製品機能の断定は避け、ワークフロー上の意味に絞っている。"
+    },
+    "postText": "",
+    "slug": "graphisoft-bluebeam-webinar-jp"
+  },
+  {
     "title": "Maxon launches RedShift for Archviz",
     "link": "https://aecmag.com/visualisation/maxon-launches-redshift-for-archviz",
     "source": "AEC Magazine",

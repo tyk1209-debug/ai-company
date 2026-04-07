@@ -145,6 +145,13 @@ const SITE_AFFILIATE_LINKS = [
     category: 'BIM_ECOSYSTEM',
   },
   {
+    keywords: ['LCA', '埋蔵炭素', 'エンボディドカーボン', 'embodied carbon', '脱炭素', '炭素', '環境性能', 'IFC'],
+    title: 'ファシリティマネジメントのためのBIM要件定義',
+    description: 'BIMデータをどう整理し、運用や要件定義につなげるかを体系的に押さえたい読者向けです。',
+    url: 'https://amzn.to/4cg9ZLX',
+    category: 'BIM_ECOSYSTEM',
+  },
+  {
     keywords: ['建設DX', 'AI', 'DX', 'ゼネコン', '業務改革'],
     title: 'ゼネコン5.0: SDGs、DX時代の建設業の経営戦略',
     description: '建設業のDXや経営変革を俯瞰したい読者向けの書籍です。',

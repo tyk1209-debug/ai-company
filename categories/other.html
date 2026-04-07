@@ -700,6 +700,43 @@
     }
     .article-section-h2:first-child { margin-top: 0; }
     .article-section-h2 span { font-size: inherit; }
+    .article-tldr {
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+      border: 1px solid #dbe7f4;
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-tldr-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .article-tldr-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.65rem;
+      align-items: start;
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+    .article-tldr-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-top: 0.1rem;
+    }
 
     .article-insight-grid {
       display: grid;
@@ -761,6 +798,60 @@
       color: #93c5fd;
       font-weight: 700;
       flex-shrink: 0;
+    }
+    .article-figure-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.85rem;
+      margin: 0.25rem 0 1.25rem;
+    }
+    .article-figure-card {
+      border: 1px solid #dbe7f4;
+      border-radius: 12px;
+      background: #f8fbff;
+      padding: 1rem;
+    }
+    .article-figure-title {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 0.4rem;
+    }
+    .article-figure-text {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text);
+    }
+    .article-comparison-table-wrap {
+      overflow-x: auto;
+      margin-bottom: 1.15rem;
+    }
+    .article-comparison-table {
+      width: 100%;
+      min-width: 640px;
+      border-collapse: collapse;
+      border: 1px solid #dbe7f4;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .article-comparison-table th,
+    .article-comparison-table td {
+      padding: 0.8rem 0.9rem;
+      border-bottom: 1px solid #e5edf6;
+      border-right: 1px solid #e5edf6;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      text-align: left;
+      vertical-align: top;
+    }
+    .article-comparison-table th:last-child,
+    .article-comparison-table td:last-child { border-right: 0; }
+    .article-comparison-table tr:last-child td { border-bottom: 0; }
+    .article-comparison-table th {
+      background: #eff6ff;
+      color: var(--navy);
+      font-weight: 700;
     }
 
     /* ---- mid-article related card ---- */
@@ -1442,6 +1533,7 @@
       .article-hero-actions { gap: 0.5rem; }
       .article-keypoints { padding: 1.25rem; }
       .article-insight-grid { grid-template-columns: 1fr; }
+      .article-comparison-table { min-width: 100%; }
       .article-related-grid { grid-template-columns: 1fr; }
       .guide-grid { grid-template-columns: 1fr; }
       .guide-books-grid { grid-template-columns: 1fr; }
@@ -1572,7 +1664,7 @@
       </a>
     </li><li>
       <a href="../posts/embodied-carbon-calcs-for-bim-objects.html">
-        <span class="sidebar-rank">4</span>BIMオブジェクトに炭素データを埋め込む時代へ、NBS新ガイドが実装方法を明示
+        <span class="sidebar-rank">4</span>BIMで埋蔵炭素をどう扱う？BIMオブジェクト単位のLCA実務をNBS新ガイドから読む
       </a>
     </li><li>
       <a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">
@@ -1586,7 +1678,7 @@
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
-        <ul class="sidebar-recent-list"><li><a href="../posts/ai.html">AIが設計を「逆算型」に変える、BIM時代の次のインパクト</a></li><li><a href="../posts/trimble-to-acquire-document-crunch-in-latest-contech-ma.html">Trimble、AI契約分析企業Document Crunchを買収——建設テック統合加速</a></li><li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">Autodesk、Wonder 3D AIで「テキストから3Dへ」を実現——制作スピード革新へ</a></li><li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">BIMオブジェクトに炭素データを埋め込む時代へ、NBS新ガイドが実装方法を明示</a></li><li><a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダム大聖堂の再建を支えたBIM、文化遺産保存にデジタル革新が不可欠に</a></li></ul>
+        <ul class="sidebar-recent-list"><li><a href="../posts/ai.html">AIが設計を「逆算型」に変える、BIM時代の次のインパクト</a></li><li><a href="../posts/trimble-to-acquire-document-crunch-in-latest-contech-ma.html">Trimble、AI契約分析企業Document Crunchを買収——建設テック統合加速</a></li><li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">Autodesk、Wonder 3D AIで「テキストから3Dへ」を実現——制作スピード革新へ</a></li><li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">BIMで埋蔵炭素をどう扱う？BIMオブジェクト単位のLCA実務をNBS新ガイドから読む</a></li><li><a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダム大聖堂の再建を支えたBIM、文化遺産保存にデジタル革新が不可欠に</a></li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">このサイトについて</div>

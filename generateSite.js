@@ -1409,6 +1409,43 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
     }
     .article-section-h2:first-child { margin-top: 0; }
     .article-section-h2 span { font-size: inherit; }
+    .article-tldr {
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+      border: 1px solid #dbe7f4;
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-tldr-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .article-tldr-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.65rem;
+      align-items: start;
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+    .article-tldr-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-top: 0.1rem;
+    }
 
     .article-insight-grid {
       display: grid;
@@ -1470,6 +1507,60 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       color: #93c5fd;
       font-weight: 700;
       flex-shrink: 0;
+    }
+    .article-figure-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.85rem;
+      margin: 0.25rem 0 1.25rem;
+    }
+    .article-figure-card {
+      border: 1px solid #dbe7f4;
+      border-radius: 12px;
+      background: #f8fbff;
+      padding: 1rem;
+    }
+    .article-figure-title {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 0.4rem;
+    }
+    .article-figure-text {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text);
+    }
+    .article-comparison-table-wrap {
+      overflow-x: auto;
+      margin-bottom: 1.15rem;
+    }
+    .article-comparison-table {
+      width: 100%;
+      min-width: 640px;
+      border-collapse: collapse;
+      border: 1px solid #dbe7f4;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .article-comparison-table th,
+    .article-comparison-table td {
+      padding: 0.8rem 0.9rem;
+      border-bottom: 1px solid #e5edf6;
+      border-right: 1px solid #e5edf6;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      text-align: left;
+      vertical-align: top;
+    }
+    .article-comparison-table th:last-child,
+    .article-comparison-table td:last-child { border-right: 0; }
+    .article-comparison-table tr:last-child td { border-bottom: 0; }
+    .article-comparison-table th {
+      background: #eff6ff;
+      color: var(--navy);
+      font-weight: 700;
     }
 
     /* ---- mid-article related card ---- */
@@ -2151,6 +2242,7 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       .article-hero-actions { gap: 0.5rem; }
       .article-keypoints { padding: 1.25rem; }
       .article-insight-grid { grid-template-columns: 1fr; }
+      .article-comparison-table { min-width: 100%; }
       .article-related-grid { grid-template-columns: 1fr; }
       .guide-grid { grid-template-columns: 1fr; }
       .guide-books-grid { grid-template-columns: 1fr; }
@@ -2893,12 +2985,20 @@ function parseBodySections(bodyJa) {
     const trimmed = line.trim();
     const soloM = /^【([^】]+)】$/.exec(trimmed);
     const inlineM = /^【([^】]+)】(.+)$/.exec(trimmed);
+    const soloColonM = /^([^：:]{1,40})[：:]$/.exec(trimmed);
+    const inlineColonM = /^([^：:]{1,40})[：:](.+)$/.exec(trimmed);
     if (soloM) {
       if (current.label || current.paragraphs.length > 0) sections.push(current);
       current = { label: soloM[1], paragraphs: [] };
     } else if (inlineM) {
       if (current.label || current.paragraphs.length > 0) sections.push(current);
       current = { label: inlineM[1], paragraphs: [inlineM[2].trim()] };
+    } else if (soloColonM) {
+      if (current.label || current.paragraphs.length > 0) sections.push(current);
+      current = { label: soloColonM[1].trim(), paragraphs: [] };
+    } else if (inlineColonM) {
+      if (current.label || current.paragraphs.length > 0) sections.push(current);
+      current = { label: inlineColonM[1].trim(), paragraphs: [inlineColonM[2].trim()] };
     } else {
       current.paragraphs.push(trimmed);
     }
@@ -2923,6 +3023,70 @@ function normalizeInsightText(text) {
     .replace(/\s+/g, ' ')
     .replace(/[。、，．,.]/g, '')
     .trim();
+}
+
+function excerptInsightText(text, maxLength = 96) {
+  const normalized = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!normalized) return '';
+  const firstSentence = normalized.split('。')[0].trim();
+  const candidate = firstSentence || normalized;
+  return excerpt(candidate, maxLength);
+}
+
+function getSectionByLabels(sections, labels) {
+  return sections.find((s) =>
+    s.label && s.paragraphs.length > 0 && labels.some((label) => s.label.includes(label))
+  ) || null;
+}
+
+function isTableParagraphs(paragraphs) {
+  const rows = paragraphs.filter((line) => /^\|.+\|$/.test(line.trim()));
+  return rows.length >= 2;
+}
+
+function renderComparisonTable(paragraphs) {
+  const rows = paragraphs
+    .filter((line) => /^\|.+\|$/.test(line.trim()))
+    .map((line) => line.trim().split('|').slice(1, -1).map((cell) => cell.trim()));
+  if (rows.length < 2) {
+    return paragraphs.map((p) => `<p>${escape(p)}</p>`).join('\n');
+  }
+  const header = rows[0];
+  const secondRow = rows[1] || [];
+  const separatorRow = secondRow.length > 0
+    && secondRow.every((cell) => /^:?-{2,}:?$/.test(cell.replace(/\s+/g, '')));
+  const bodyRows = separatorRow ? rows.slice(2) : rows.slice(1);
+  return `
+    <div class="article-comparison-table-wrap">
+      <table class="article-comparison-table">
+        <thead>
+          <tr>${header.map((cell) => `<th>${escape(cell)}</th>`).join('')}</tr>
+        </thead>
+        <tbody>
+          ${bodyRows.map((row) => `<tr>${row.map((cell) => `<td>${escape(cell)}</td>`).join('')}</tr>`).join('')}
+        </tbody>
+      </table>
+    </div>`;
+}
+
+function renderFigureSection(paragraphs) {
+  const items = paragraphs
+    .map((line) => {
+      const parts = line.split(/[：:]/);
+      if (parts.length < 2) return null;
+      const title = parts.shift().trim();
+      const text = parts.join('：').trim();
+      return title && text ? { title, text } : null;
+    })
+    .filter(Boolean);
+  if (items.length === 0) {
+    return paragraphs.map((p) => `<p>${escape(p)}</p>`).join('\n');
+  }
+  return `<div class="article-figure-grid">${items.map((item) => `
+    <div class="article-figure-card">
+      <div class="article-figure-title">${escape(item.title)}</div>
+      <div class="article-figure-text">${escape(item.text)}</div>
+    </div>`).join('')}</div>`;
 }
 
 function tokenizeForRelated(text) {
@@ -3030,10 +3194,11 @@ function buildArticlePage(post, allPosts) {
 
   // ---- structured sections ----
   const sections = parseBodySections(post.bodyJa);
+  const tldrSection = getSectionByLabels(sections, ['TL;DR', 'TLDR', '3行要約']);
 
   // ---- key points from sections ----
   const keyPoints = sections
-    .filter(s => s.label && s.paragraphs.length > 0)
+    .filter(s => s.label && s.paragraphs.length > 0 && s !== tldrSection)
     .map(s => {
       // 最初の文（。区切り）を完全に表示。ない場合は最初の段落全体
       const firstSent = s.paragraphs[0].split('。')[0];
@@ -3050,8 +3215,8 @@ function buildArticlePage(post, allPosts) {
   const editorialText = editSection && editSection.paragraphs.length > 0
     ? editSection.paragraphs.join('\n')
     : '';
-  const explicitPracticalInsight = getSectionInsight(sections, ['実務への影響', '実務', '導入', '活用']);
-  const industryInsight = getSectionInsight(sections, ['業界への影響', '市場への影響', '業界', '市場'])
+  const explicitPracticalInsight = getSectionInsight(sections, ['実務でどう使うか', '実務への影響', '実務', '導入', '活用']);
+  const industryInsight = getSectionInsight(sections, ['なぜ重要か', '業界への影響', '市場への影響', '業界', '市場'])
     || (sections.length > 0 ? { label: sections[sections.length - 1].label || '影響', text: sections[sections.length - 1].paragraphs.join(' ') } : null);
   const practicalInsight = explicitPracticalInsight
     || (!industryInsight && editSection ? { label: editSection.label || '実務', text: editSection.paragraphs.join(' ') } : null);
@@ -3059,6 +3224,9 @@ function buildArticlePage(post, allPosts) {
     && normalizeInsightText(practicalInsight.text) === normalizeInsightText(industryInsight.text)
       ? null
       : practicalInsight;
+  const tldrItems = (tldrSection && tldrSection.paragraphs.length > 0
+    ? tldrSection.paragraphs
+    : keyPoints.slice(0, 3).map((kp) => `${kp.label}: ${kp.text}`)).slice(0, 3);
 
   // ---- body HTML ----
   const midPost = allPosts.find(p => p.slug !== post.slug && p.category === post.category);
@@ -3073,10 +3241,17 @@ function buildArticlePage(post, allPosts) {
   if (post.bodyJa) {
     let sIdx = 0;
     for (const sec of sections) {
+      if (sec === tldrSection) continue;
       if (sec.label) {
         bodyHtml += `<h2 class="article-section-h2"><span>${escape(sec.label)}</span></h2>`;
       }
-      bodyHtml += sec.paragraphs.map(p => `<p>${escape(p)}</p>`).join('\n');
+      if (isTableParagraphs(sec.paragraphs)) {
+        bodyHtml += renderComparisonTable(sec.paragraphs);
+      } else if (sec.label && /図解|分類/.test(sec.label)) {
+        bodyHtml += renderFigureSection(sec.paragraphs);
+      } else {
+        bodyHtml += sec.paragraphs.map(p => `<p>${escape(p)}</p>`).join('\n');
+      }
       sIdx++;
       if (sIdx === 2 && midCardHtml) bodyHtml += midCardHtml;
     }
@@ -3118,21 +3293,32 @@ function buildArticlePage(post, allPosts) {
       <div class="article-editorial-text">${editorialText.split('\n').filter(s => s.trim()).map(p => `<p>${escape(p)}</p>`).join('')}</div>
     </div>` : '';
 
+  const tldrHtml = tldrItems.length > 0 ? `
+    <section class="article-tldr">
+      <div class="reference-books-label">TL;DR</div>
+      <h2 class="reference-books-title">3行でわかる要点</h2>
+      <ul class="article-tldr-list">
+        ${tldrItems.map((item, index) => `
+          <li class="article-tldr-item">
+            <span class="article-tldr-num">${index + 1}</span>
+            <span>${escape(item)}</span>
+          </li>`).join('')}
+      </ul>
+    </section>` : '';
+
   const insightCardsHtml = [
     buildInsightCard('要点', '要点まとめ', keyPoints.slice(0, 3).map((kp) => `${kp.label}: ${kp.text}`), 'summary'),
-    buildInsightCard('業界インパクト', '業界への影響', industryInsight ? industryInsight.text : ''),
-    buildInsightCard('実務インパクト', '実務への影響', distinctPracticalInsight ? distinctPracticalInsight.text : ''),
+    buildInsightCard('重要性', 'なぜ重要か', industryInsight ? excerptInsightText(industryInsight.text) : ''),
+    buildInsightCard('実務', '実務でどう使うか', distinctPracticalInsight ? excerptInsightText(distinctPracticalInsight.text) : ''),
   ].filter(Boolean).join('');
 
   // ---- hero summary ----
-  const heroSummaryText = post.summary
-    ? excerpt(post.summary, 130)
-    : sections.length > 0 && sections[0].paragraphs.length > 0
+  const heroSummaryText = sections.length > 0 && sections[0].paragraphs.length > 0
       ? excerpt(sections[0].paragraphs[0], 130)
-      : '';
+      : excerpt(bodyText || post.summary || '', 130);
 
   const pageTitle = `${post.titleJa || post.title} | ${SITE_NAME}`;
-  const descText = excerpt(post.summary || post.postText || bodyText, 120);
+  const descText = excerpt(bodyText || post.summary || '', 120);
   const heroImg = (THUMB_IMAGES[catKey] || './assets/Getting-real-about-technology-part-1.webp').replace('./assets/', '../assets/');
   const heroBg = `linear-gradient(135deg, rgba(10,22,40,0.87) 0%, rgba(15,42,74,0.83) 100%), url('${heroImg}') center/cover no-repeat`;
   const catSlugStr = categorySlug(post.category || 'OTHER');
@@ -3200,6 +3386,7 @@ function buildArticlePage(post, allPosts) {
   <div class="container">
     <div class="article-layout">
       <main class="article-main">
+        ${tldrHtml}
         ${insightCardsHtml ? `<div class="article-insight-grid">${insightCardsHtml}</div>` : ''}
         <div class="article-body-wrap">
           <div class="ai-body-label">AI による日本語解説</div>
@@ -3208,8 +3395,8 @@ function buildArticlePage(post, allPosts) {
           </div>
         </div>
         ${learningGuidesHtml}
-        ${editorialHtml}
         ${affiliateHtml}
+        ${editorialHtml}
         <div class="article-source-card">
           <span class="article-source-card-label">元記事・出典</span>
           <div class="article-source-card-info">
@@ -3220,6 +3407,7 @@ function buildArticlePage(post, allPosts) {
         <div class="article-tags-row">
           <span class="article-tags-label">タグ:</span>
           <a class="article-tag" href="../categories/${catSlugStr}.html">${escape(catLabel)}</a>
+          ${(post.tags || []).map((tag) => `<span class="article-tag">${escape(tag)}</span>`).join('')}
           ${post.source ? `<span class="article-tag article-tag--source">${escape(post.source)}</span>` : ''}
         </div>
         <div class="article-share-footer">

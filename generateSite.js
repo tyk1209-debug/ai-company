@@ -1209,7 +1209,6 @@ function htmlFooter(base = '.', articleCount = 0) {
       <a href="${base}/events.html">イベント</a>
       <a href="${base}/about.html">運営者情報</a>
       <a href="${base}/privacy.html">プライバシーポリシー</a>
-      <a href="https://x.com/aec_news_jp" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>
     ${countLine}
@@ -1281,11 +1280,6 @@ function buildSidebar(posts, base = '.') {
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">カテゴリ</div>
         <ul class="sidebar-category-list">${catItems}</ul>
-      </div>
-      <div class="sidebar-widget sidebar-follow">
-        <div class="sidebar-follow-title">𝕏 フォローする</div>
-        <p class="sidebar-follow-desc">BIM・AEC最新情報をXでも発信中。いち早くニュースをキャッチ。</p>
-        <a class="sidebar-follow-btn" href="https://x.com/aecnewsjapan" target="_blank" rel="noopener noreferrer">𝕏 フォロー</a>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
@@ -1862,7 +1856,7 @@ function buildAboutPage() {
         <p>当サイトの独自コンテンツの著作権は当サイトに帰属します。引用・転載の際は出典を明記の上、元記事へのリンクを設けてください。</p>
 
         <h2>お問い合わせ</h2>
-        <p>当サイトへのお問い合わせ・記事に関するご意見は、<a href="https://x.com" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>のDMからお送りください。</p>
+        <p>当サイトへのお問い合わせ・記事に関するご意見は、準備中の連絡窓口をご利用ください。連絡先は今後このページで案内します。</p>
 
         <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">
           &copy; ${CURRENT_YEAR} ${SITE_NAME}
@@ -2144,6 +2138,18 @@ function main() {
     fs.mkdirSync(categoriesDir, { recursive: true });
   }
   const allCategories = [...new Set(posts.map((p) => (p.category || 'OTHER').toUpperCase()))];
+  const expectedCategoryFiles = new Set(allCategories.map((cat) => `${categorySlug(cat)}.html`));
+  const existingCategoryFiles = fs.readdirSync(categoriesDir).filter((name) => name.endsWith('.html'));
+  let removedCategoryCount = 0;
+  for (const filename of existingCategoryFiles) {
+    if (!expectedCategoryFiles.has(filename)) {
+      fs.unlinkSync(path.join(categoriesDir, filename));
+      removedCategoryCount++;
+    }
+  }
+  if (removedCategoryCount > 0) {
+    console.log(`[generateSite] Removed ${removedCategoryCount} stale category pages from categories/`);
+  }
   let categoryCount = 0;
   for (const cat of allCategories) {
     const slug = categorySlug(cat);

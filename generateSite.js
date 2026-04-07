@@ -40,6 +40,11 @@ const RECOMMENDED_BOOKS = {
       description: '建設業のDX、SDGs、経営変革を俯瞰した一冊です。建設会社のデジタル化や事業戦略に関心のある読者に向いています。',
       url: 'https://amzn.to/4tAYxl5',
     },
+    {
+      title: 'ロジクール MX MASTER 3S Bluetooth Edition',
+      description: '長時間のリサーチや資料作成、複数アプリをまたぐ実務に向いた高機能マウスです。BIM・建設DXの情報収集や日々の制作環境を整えたい読者に向いています。',
+      url: 'https://amzn.to/4dyYBNu',
+    },
   ],
   GLOOBE: [
     {

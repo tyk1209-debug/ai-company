@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>イベント情報 | AEC News Japan</title>
-  <meta name="description" content="BIM・AEC・建設DX関連の日本開催イベント・セミナー情報をまとめています。">
-  <link rel="canonical" href="https://aec-news.com/events.html">
+  <title>BIMとは | AEC News Japan</title>
+  <meta name="description" content="BIMの基本、CADとの違い、実務での使われ方、学習の壁を整理した基礎解説です。">
+  <link rel="canonical" href="https://aec-news.com/guides/bim.html">
   <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large">
   <meta name="author" content="AEC News Japan 編集部">
-  <meta property="og:title" content="イベント情報 | AEC News Japan">
-  <meta property="og:description" content="BIM・AEC・建設DX関連の日本開催イベント・セミナー情報をまとめています。">
-  <meta property="og:url" content="https://aec-news.com/events.html">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="BIMとは | AEC News Japan">
+  <meta property="og:description" content="BIMの基本、CADとの違い、実務での使われ方、学習の壁を整理した基礎解説です。">
+  <meta property="og:url" content="https://aec-news.com/guides/bim.html">
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="AEC News Japan">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:image" content="https://aec-news.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="イベント情報 | AEC News Japan">
-  <meta name="twitter:description" content="BIM・AEC・建設DX関連の日本開催イベント・セミナー情報をまとめています。">
+  <meta name="twitter:title" content="BIMとは | AEC News Japan">
+  <meta name="twitter:description" content="BIMの基本、CADとの違い、実務での使われ方、学習の壁を整理した基礎解説です。">
   <meta name="twitter:image" content="https://aec-news.com/assets/og-image.png">
+  <meta property="article:section" content="基礎解説">
   <link rel="icon" type="image/svg+xml" href="https://aec-news.com/favicon.svg">
   <link rel="icon" type="image/png" sizes="48x48" href="https://aec-news.com/favicon.png">
   <link rel="apple-touch-icon" href="https://aec-news.com/favicon.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"イベント情報 | AEC News Japan","description":"BIM・AEC・建設DX関連の日本開催イベント・セミナー情報をまとめています。","url":"https://aec-news.com/events.html","inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"AEC News Japan","url":"https://aec-news.com/"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://aec-news.com/"},{"@type":"ListItem","position":2,"name":"イベント情報","item":"https://aec-news.com/events.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"BIMとは | AEC News Japan","description":"BIMの基本、CADとの違い、実務での使われ方、学習の壁を整理した基礎解説です。","url":"https://aec-news.com/guides/bim.html","inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"AEC News Japan","url":"https://aec-news.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://aec-news.com/"},{"@type":"ListItem","position":2,"name":"基礎解説","item":"https://aec-news.com/#guides"},{"@type":"ListItem","position":3,"name":"BIMとは","item":"https://aec-news.com/guides/bim.html"}]}</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
   <!-- Google Analytics 4 -->
@@ -1481,60 +1482,175 @@
       nav a { font-size: 0.75rem; margin-left: 0.6rem; }
       .hero-stats { gap: 1.25rem; }
     }
-  
-    .events-hero { background: var(--navy); color: var(--white); padding: 2.5rem 1.5rem; text-align: center; }
-    .events-hero h1 { font-size: 1.75rem; font-weight: 700; }
-    .events-hero p { opacity: 0.75; margin-top: 0.5rem; font-size: 0.95rem; }
-    .events-main { max-width: 820px; margin: 2.5rem auto; padding: 0 1.5rem 4rem; }
-    .events-section-title { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; border-left: 4px solid var(--blue); padding-left: 0.75rem; }
-    .event-list { display: flex; flex-direction: column; gap: 1.25rem; }
-    .event-card { background: var(--white); border-radius: 10px; padding: 1.4rem 1.6rem; box-shadow: var(--card-shadow); border: 1px solid var(--border); }
-    .event-list.past .event-card { opacity: 0.6; }
-    .event-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
-    .event-date { font-weight: 600; color: var(--blue); }
-    .event-title { font-size: 1.05rem; font-weight: 700; line-height: 1.5; margin-bottom: 0.5rem; }
-    .event-title a { color: var(--text); }
-    .event-title a:hover { color: var(--blue); text-decoration: none; }
-    .event-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.75rem; }
-    .event-link { font-size: 0.85rem; font-weight: 600; color: var(--blue); }
-    .event-empty { color: var(--text-muted); font-size: 0.95rem; padding: 2rem 0; }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a href="./" class="header-logo-link">
-        <img src="./assets/logo.svg" alt="AEC News Japan" class="logo-img">
+      <a href="../" class="header-logo-link">
+        <img src="../assets/logo.svg" alt="AEC News Japan" class="logo-img">
       </a>
     </div>
   </header>
-  <div class="events-hero">
-    <h1>イベント情報</h1>
-    <p>BIM・AEC・建設DX関連の日本開催イベント・セミナー</p>
+  <div class="article-hero" style="background:background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+    <div class="article-hero-inner">
+      <div class="article-hero-breadcrumb"><a href="../">ホーム</a><span class="article-hero-meta-sep">·</span><span>基礎解説</span></div>
+      <h1 class="article-hero-title">BIMとは</h1>
+      <p class="article-hero-summary">BIMは3Dモデル作成ツールそのものではなく、設計・施工・運用をつなぐ情報基盤です。</p>
+      <div class="article-hero-actions">
+        <a class="article-hero-btn article-hero-btn--primary" href="../#guides">基礎解説一覧を見る</a>
+      </div>
+    </div>
   </div>
-  <div class="events-main">
-    <h2 class="events-section-title">開催予定</h2>
-    <div class="event-list">
-        <article class="event-card">
-          <div class="event-meta">
-            <span class="event-date">開催日: 2026年10月6日</span>
-            <span class="event-location">会場: 東京</span>
-            <span class="event-source">主催: buildingSMART International</span>
-          </div>
-          <h2 class="event-title">
-            <a href="https://www.buildingsmart.org/event/buildingsmart-international-summit-tokyo-2026/" target="_blank" rel="noopener noreferrer">buildingSMART International Summit – Tokyo 2026</a>
-          </h2>
-          <p class="event-desc">Registration will open soon.</p>
-          <a class="event-link" href="https://www.buildingsmart.org/event/buildingsmart-international-summit-tokyo-2026/" target="_blank" rel="noopener noreferrer">詳細・登録を見る</a>
-        </article></div>
-    
+  <div class="container">
+    <div class="article-layout">
+      <main class="article-main">
+        <section class="guide-intro">
+          <div class="reference-books-label">概要</div>
+          <h2 class="reference-books-title">まず押さえるべき結論</h2>
+          <p class="reference-books-desc">BIMはBuilding Information Modelingの略で、建物を図面ではなく情報付きのデジタルモデルとして扱う考え方です。形状だけでなく、部材名、仕様、数量、工期、維持管理情報まで扱えるため、設計・施工・運用で同じ情報を共有しやすくなります。</p>
+        </section>
+        <section class="guide-section">
+          <h2>特徴</h2>
+          <ul><li>図面ではなく「情報付きモデル」を中心に仕事を進められる</li><li>数量拾い、干渉確認、施工検討、維持管理までデータをつなげやすい</li><li>関係者が同じ前提で意思決定しやすく、手戻りを減らしやすい</li></ul>
+        </section>
+        <section class="guide-section">
+          <h2>他との違い</h2>
+          <ul><li>CADは図面を正確に描くことが中心ですが、BIMは図面の元になる情報モデルを管理する考え方です。</li><li>RevitやArchicadはBIMを実践するための代表的なソフトで、BIMそのものと同義ではありません。</li><li>openBIMは、BIMを特定ベンダーだけに閉じずに運用するための考え方です。</li></ul>
+          <div class="guide-links"><a href="../guides/revit.html">Revitについて詳しくはこちら</a><a href="../guides/archicad.html">Archicadについて詳しくはこちら</a><a href="../guides/openbim.html">openBIMについて詳しくはこちら</a></div>
+        </section>
+        <section class="guide-section">
+          <h2>向いている人</h2>
+          <ul><li>これからBIM導入を検討する設計事務所</li><li>ゼネコンのBIM推進・DX担当</li><li>設計と施工の情報連携を整えたい実務者</li></ul>
+        </section>
+        <section class="guide-section">
+          <h2>実務での使われ方</h2>
+          <ul><li>基本設計では、ボリュームやゾーニング、概算数量の検討に使われます。</li><li>実施設計では、干渉確認、図面整合、仕様整理の基盤として使われます。</li><li>施工段階では、施工図、数量、工程、出来形、引き渡し情報との連携に使われます。</li></ul>
+        </section>
+        <section class="guide-section">
+          <h2>学習の難しさ</h2>
+          <p>BIM自体の概念は難しくありませんが、設計ルール、属性設計、モデルの粒度、部門間の役割分担まで理解しないと実務で機能しません。ソフト操作だけを覚えても定着しにくいのが学習の難しさです。</p>
+        </section>
+        <section class="guide-section">
+          <h2>つまずくポイント</h2>
+          <ul><li>3Dで描ければBIMだと誤解しやすい</li><li>どの情報をいつ入れるかのルール設計で止まりやすい</li><li>設計・施工・維持管理で必要な情報粒度が違い、運用設計が曖昧になりやすい</li></ul>
+        </section>
+        <section class="guide-section">
+          <h2>なぜ独学では難しいか</h2>
+          <p>独学だと、モデリング操作は学べても「どの段階で、誰が、何の情報を入れるべきか」が見えにくいのが問題です。BIMはソフトの使い方ではなく、業務設計とセットで理解しないと成果につながりません。</p>
+        </section>
+        <section class="guide-section">
+          <h2>学習方法</h2>
+          <p>最初は概念を整理できる入門書で全体像をつかみ、その後に自社業務へ置き換えて考えるのが効率的です。特に要件定義や運用設計の視点は、書籍で体系的に押さえる方が早いです。</p>
+        </section>
+        
+    <section class="guide-books">
+      <div class="reference-books-label">おすすめ書籍</div>
+      <h2 class="reference-books-title">この記事を理解するためのおすすめ書籍</h2>
+      <p class="reference-books-desc">IFCやBIMの概念は断片的な記事だけでは理解しにくいため、全体像を体系的に学べる書籍を紹介します。売り込みではなく、学習の順番を作るための導線です。</p>
+      <div class="guide-books-grid">
+        
+          <article class="guide-book-card">
+            <div class="guide-book-audience">初心者向け</div>
+            <div class="guide-book-title">Archicad28ではじめるBIM設計入門[基本・実施設計編]</div>
+            <p class="guide-book-desc">BIM設計の流れをつかみたい人向けの入門書です。ソフト固有の説明だけでなく、BIM設計の考え方を把握しやすい一冊です。</p>
+            <a class="guide-book-link" href="https://amzn.to/4tCIdjL" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
+          </article>
+        
+          <article class="guide-book-card">
+            <div class="guide-book-audience">実務者向け</div>
+            <div class="guide-book-title">ファシリティマネジメントのためのBIM要件定義</div>
+            <p class="guide-book-desc">BIMを導入した後の運用や要件定義を整理したい読者向けです。BIMを業務基盤として考える視点を補えます。</p>
+            <a class="guide-book-link" href="https://amzn.to/4cg9ZLX" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
+          </article>
+        
+      </div>
+    </section>
+        <div class="article-related-group">
+          <h2 class="section-title" style="margin-top:0;">あわせて読みたい基礎解説</h2>
+          <div class="guide-grid">
+    <article class="guide-card">
+      <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(14,165,233,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb-badge"><span class="badge">Revit</span></div>
+      </div>
+      <div class="guide-card-body">
+        <div class="guide-card-kicker">関連解説</div>
+        <h3 class="guide-card-title"><a href="../guides/revit.html">Revitとは</a></h3>
+        <p class="guide-card-excerpt">Revitの役割、BIMでの位置づけ、Archicadとの違い、学び方を整理した基礎解説です。</p>
+        <a class="guide-card-link" href="../guides/revit.html">詳しく読む →</a>
+      </div>
+    </article>
+    <article class="guide-card">
+      <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
+      </div>
+      <div class="guide-card-body">
+        <div class="guide-card-kicker">関連解説</div>
+        <h3 class="guide-card-title"><a href="../guides/archicad.html">Archicadとは</a></h3>
+        <p class="guide-card-excerpt">Archicadの特徴、Revitとの違い、設計実務での使われ方、学び方を整理した基礎解説です。</p>
+        <a class="guide-card-link" href="../guides/archicad.html">詳しく読む →</a>
+      </div>
+    </article>
+    <article class="guide-card">
+      <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(6,182,212,0.55) 100%), url('../assets/blueprint3_smart_cities_Adobe_rt.jpg') center/cover no-repeat;">
+        <div class="card-thumb-badge"><span class="badge">IFC</span></div>
+      </div>
+      <div class="guide-card-body">
+        <div class="guide-card-kicker">関連解説</div>
+        <h3 class="guide-card-title"><a href="../guides/openbim.html">openBIMとは</a></h3>
+        <p class="guide-card-excerpt">openBIMの意味、IFCとの関係、実務で必要になる場面、学び方を整理した基礎解説です。</p>
+        <a class="guide-card-link" href="../guides/openbim.html">詳しく読む →</a>
+      </div>
+    </article></div>
+        </div>
+      </main>
+      
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">人気記事</div>
+        <ul class="sidebar-popular-list"><li>
+      <a href="../posts/ai.html">
+        <span class="sidebar-rank">1</span>AIが設計を「逆算型」に変える、BIM時代の次のインパクト
+      </a>
+    </li><li>
+      <a href="../posts/trimble-to-acquire-document-crunch-in-latest-contech-ma.html">
+        <span class="sidebar-rank">2</span>Trimble、AI契約分析企業Document Crunchを買収——建設テック統合加速
+      </a>
+    </li><li>
+      <a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">
+        <span class="sidebar-rank">3</span>Autodesk、Wonder 3D AIで「テキストから3Dへ」を実現——制作スピード革新へ
+      </a>
+    </li><li>
+      <a href="../posts/embodied-carbon-calcs-for-bim-objects.html">
+        <span class="sidebar-rank">4</span>BIMオブジェクトに炭素データを埋め込む時代へ、NBS新ガイドが実装方法を明示
+      </a>
+    </li><li>
+      <a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">
+        <span class="sidebar-rank">5</span>ノートルダム大聖堂の再建を支えたBIM、文化遺産保存にデジタル革新が不可欠に
+      </a>
+    </li></ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">カテゴリ</div>
+        <ul class="sidebar-category-list"><li><a href="../categories/bim-ecosystem.html">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../categories/bim-ai.html">BIM×AI</a><span class="sidebar-category-count">5</span></li><li><a href="../categories/revit.html">Revit</a><span class="sidebar-category-count">3</span></li><li><a href="../categories/ai-dx.html">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../categories/other.html">AEC</a><span class="sidebar-category-count">1</span></li><li><a href="../categories/gloobe.html">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">最新記事</div>
+        <ul class="sidebar-recent-list"><li><a href="../posts/ai.html">AIが設計を「逆算型」に変える、BIM時代の次のインパクト</a></li><li><a href="../posts/trimble-to-acquire-document-crunch-in-latest-contech-ma.html">Trimble、AI契約分析企業Document Crunchを買収——建設テック統合加速</a></li><li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">Autodesk、Wonder 3D AIで「テキストから3Dへ」を実現——制作スピード革新へ</a></li><li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">BIMオブジェクトに炭素データを埋め込む時代へ、NBS新ガイドが実装方法を明示</a></li><li><a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダム大聖堂の再建を支えたBIM、文化遺産保存にデジタル革新が不可欠に</a></li></ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">このサイトについて</div>
+        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXの最新情報をAIが日本語で解説する専門メディアです。</p>
+      </div>
+    </aside>
+    </div>
   </div>
   <footer class="site-footer">
     <div class="footer-nav">
-      <a href="./">ホーム</a>
-      <a href="./events.html">イベント</a>
-      <a href="./about.html">運営者情報</a>
-      <a href="./privacy.html">プライバシーポリシー</a>
+      <a href="../">ホーム</a>
+      <a href="../events.html">イベント</a>
+      <a href="../about.html">運営者情報</a>
+      <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>
     

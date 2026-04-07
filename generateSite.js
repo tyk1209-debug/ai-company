@@ -65,6 +65,231 @@ const RECOMMENDED_BOOKS = {
   ],
 };
 
+const EXPLAINER_GUIDES = [
+  {
+    slug: 'bim',
+    title: 'BIMとは',
+    category: 'BIM_ECOSYSTEM',
+    description: 'BIMの基本、CADとの違い、実務での使われ方、学習の壁を整理した基礎解説です。',
+    heroSummary: 'BIMは3Dモデル作成ツールそのものではなく、設計・施工・運用をつなぐ情報基盤です。',
+    overview: 'BIMはBuilding Information Modelingの略で、建物を図面ではなく情報付きのデジタルモデルとして扱う考え方です。形状だけでなく、部材名、仕様、数量、工期、維持管理情報まで扱えるため、設計・施工・運用で同じ情報を共有しやすくなります。',
+    features: [
+      '図面ではなく「情報付きモデル」を中心に仕事を進められる',
+      '数量拾い、干渉確認、施工検討、維持管理までデータをつなげやすい',
+      '関係者が同じ前提で意思決定しやすく、手戻りを減らしやすい',
+    ],
+    differences: [
+      'CADは図面を正確に描くことが中心ですが、BIMは図面の元になる情報モデルを管理する考え方です。',
+      'RevitやArchicadはBIMを実践するための代表的なソフトで、BIMそのものと同義ではありません。',
+      'openBIMは、BIMを特定ベンダーだけに閉じずに運用するための考え方です。',
+    ],
+    fit: [
+      'これからBIM導入を検討する設計事務所',
+      'ゼネコンのBIM推進・DX担当',
+      '設計と施工の情報連携を整えたい実務者',
+    ],
+    practicalUse: [
+      '基本設計では、ボリュームやゾーニング、概算数量の検討に使われます。',
+      '実施設計では、干渉確認、図面整合、仕様整理の基盤として使われます。',
+      '施工段階では、施工図、数量、工程、出来形、引き渡し情報との連携に使われます。',
+    ],
+    difficulty: 'BIM自体の概念は難しくありませんが、設計ルール、属性設計、モデルの粒度、部門間の役割分担まで理解しないと実務で機能しません。ソフト操作だけを覚えても定着しにくいのが学習の難しさです。',
+    stumblingPoints: [
+      '3Dで描ければBIMだと誤解しやすい',
+      'どの情報をいつ入れるかのルール設計で止まりやすい',
+      '設計・施工・維持管理で必要な情報粒度が違い、運用設計が曖昧になりやすい',
+    ],
+    selfStudyWhyHard: '独学だと、モデリング操作は学べても「どの段階で、誰が、何の情報を入れるべきか」が見えにくいのが問題です。BIMはソフトの使い方ではなく、業務設計とセットで理解しないと成果につながりません。',
+    learningMethod: '最初は概念を整理できる入門書で全体像をつかみ、その後に自社業務へ置き換えて考えるのが効率的です。特に要件定義や運用設計の視点は、書籍で体系的に押さえる方が早いです。',
+    guideLinks: [
+      { slug: 'revit', text: 'Revitについて詳しくはこちら' },
+      { slug: 'archicad', text: 'Archicadについて詳しくはこちら' },
+      { slug: 'openbim', text: 'openBIMについて詳しくはこちら' },
+    ],
+    books: [
+      {
+        audience: '初心者向け',
+        title: 'Archicad28ではじめるBIM設計入門[基本・実施設計編]',
+        description: 'BIM設計の流れをつかみたい人向けの入門書です。ソフト固有の説明だけでなく、BIM設計の考え方を把握しやすい一冊です。',
+        url: 'https://amzn.to/4tCIdjL',
+      },
+      {
+        audience: '実務者向け',
+        title: 'ファシリティマネジメントのためのBIM要件定義',
+        description: 'BIMを導入した後の運用や要件定義を整理したい読者向けです。BIMを業務基盤として考える視点を補えます。',
+        url: 'https://amzn.to/4cg9ZLX',
+      },
+    ],
+  },
+  {
+    slug: 'revit',
+    title: 'Revitとは',
+    category: 'REVIT',
+    description: 'Revitの役割、BIMでの位置づけ、Archicadとの違い、学び方を整理した基礎解説です。',
+    heroSummary: 'RevitはAutodeskのBIMオーサリングツールで、設計から施工連携まで広く使われています。',
+    overview: 'RevitはAutodeskが提供するBIMソフトで、建築・構造・設備を同一モデル上で扱いやすいのが特徴です。国内外で導入実績が多く、設計事務所だけでなくゼネコン、施工会社、設備会社でも採用されています。',
+    features: [
+      '建築・構造・設備を同一プラットフォーム上で調整しやすい',
+      'Autodesk製品群やACCとの連携が強く、施工フェーズにつなぎやすい',
+      'テンプレート、ファミリ、外部情報が多く、組織導入しやすい',
+    ],
+    differences: [
+      'Archicadが建築設計者の操作感やモデリング体験を重視しやすいのに対し、Revitは多職種連携と標準化に強みがあります。',
+      'Revitはファミリやテンプレートの設計が実務効率を大きく左右します。',
+      'openBIMの観点では、IFC連携やデータ受け渡しの設計も重要になります。',
+    ],
+    fit: [
+      '設計と施工をまたぐBIM体制を作りたい会社',
+      '設備や構造を含む総合調整が多いプロジェクト担当者',
+      'Autodesk製品群を中心に運用している組織',
+    ],
+    practicalUse: [
+      '意匠・構造・設備モデルの統合と干渉確認',
+      '図面とモデルの整合、ファミリ管理、数量拾い',
+      'ACCや施工側ツールとの連携による施工準備',
+    ],
+    difficulty: '操作そのものより、ファミリ、テンプレート、ビュー管理、ワークシェア、属性ルールの理解が必要になるため、初心者は「描けるのに業務では回らない」状態になりやすいです。',
+    stumblingPoints: [
+      'ファミリ作成で止まりやすい',
+      'ビュー・シート・フィルタ管理が複雑になりやすい',
+      'モデル運用ルールがないまま始めると、すぐに整合が崩れやすい',
+    ],
+    selfStudyWhyHard: '独学では画面操作は覚えられても、テンプレート設計や組織運用の勘所がつかみにくいです。特に実務では、建築だけでなく設備・構造・施工との接続まで考える必要があります。',
+    learningMethod: 'まずは入門書でRevitの基本概念と標準操作を押さえ、その後に実案件を意識したテンプレート・ファミリ・図面化の練習に移るのが自然です。基礎を飛ばすと後で修正コストが大きくなります。',
+    guideLinks: [
+      { slug: 'archicad', text: 'Archicadとの違いを知りたい方はこちら' },
+      { slug: 'bim', text: 'BIM全体の考え方を整理したい方はこちら' },
+      { slug: 'openbim', text: 'openBIMとの関係を知りたい方はこちら' },
+    ],
+    books: [
+      {
+        audience: '初心者向け',
+        title: 'はじめてのAutodesk Revit＆Revit LT [Revit/Revit LT 2026対応]',
+        description: 'Revitの基本操作と考え方を最初に押さえたい人向けです。独学の最初の一冊として使いやすい構成です。',
+        url: 'https://amzn.to/3QpB1Ja',
+      },
+      {
+        audience: '実務者向け',
+        title: 'ファシリティマネジメントのためのBIM要件定義',
+        description: 'モデルを作るだけでなく、運用や要件整理まで考えたい実務者向けです。Revitを業務基盤へつなぐ視点を補えます。',
+        url: 'https://amzn.to/4cg9ZLX',
+      },
+    ],
+  },
+  {
+    slug: 'archicad',
+    title: 'Archicadとは',
+    category: 'BIM_ECOSYSTEM',
+    description: 'Archicadの特徴、Revitとの違い、設計実務での使われ方、学び方を整理した基礎解説です。',
+    heroSummary: 'Archicadは建築設計との相性が良いBIMソフトで、初期計画から実施設計まで一貫して使われています。',
+    overview: 'ArchicadはGraphisoftが提供するBIMソフトで、建築設計者が直感的に扱いやすいモデリング体験と、openBIMへの親和性を強みとしています。意匠設計を中心に、早い段階からモデルで検討したい組織と相性が良いツールです。',
+    features: [
+      '建築設計者が扱いやすいモデリング操作と表現性',
+      '初期計画から実施設計まで設計思考を止めにくい',
+      'openBIMとの相性が比較的良く、外部連携を考えやすい',
+    ],
+    differences: [
+      'Revitが多職種統合と標準化に強いのに対し、Archicadは設計者の思考を止めにくい操作感が強みです。',
+      'Archicadは設計初期からモデルを使いやすい一方で、組織標準や施工連携の設計は別途詰める必要があります。',
+      'openBIMを重視する場合は、IFCの扱い方を理解しておくと効果が大きいです。',
+    ],
+    fit: [
+      '意匠設計を中心にBIMを定着させたい設計事務所',
+      '初期計画段階からモデルで検討したいチーム',
+      'ベンダーロックを避けつつ設計を進めたい実務者',
+    ],
+    practicalUse: [
+      '基本設計から実施設計までのモデルベース設計',
+      'プレゼン、図面、数量、BIM連携の土台作り',
+      'IFCを使った他ツール連携やデータ受け渡し',
+    ],
+    difficulty: '操作の入り口は比較的わかりやすい一方で、属性設計、ライブラリ管理、IFC設定、チーム運用まで理解しないと実務効率が頭打ちになります。',
+    stumblingPoints: [
+      'ライブラリと属性の整理で混乱しやすい',
+      'IFC書き出しや他ソフト連携の設定で止まりやすい',
+      '設計者個人の操作に寄りすぎると組織標準化しにくい',
+    ],
+    selfStudyWhyHard: '独学ではモデリングは進んでも、属性管理や連携設定の意味が見えにくいです。特に組織導入では、個人最適ではなくチームで回る運用を最初から考える必要があります。',
+    learningMethod: 'まずは設計フローに沿った入門書で全体をつかみ、その後にテンプレート、属性、IFC設定を実務視点で学ぶのが効率的です。Revitとの違いも早めに理解しておくと判断しやすくなります。',
+    guideLinks: [
+      { slug: 'revit', text: 'Revitとの違いを整理したい方はこちら' },
+      { slug: 'bim', text: 'BIM全体の考え方を整理したい方はこちら' },
+      { slug: 'openbim', text: 'openBIMについて詳しくはこちら' },
+    ],
+    books: [
+      {
+        audience: '初心者向け',
+        title: 'Archicad28ではじめるBIM設計入門[基本・実施設計編]',
+        description: 'ArchicadでBIM設計を始めたい人向けの定番入門書です。設計フローに沿って学びやすい構成です。',
+        url: 'https://amzn.to/4tCIdjL',
+      },
+      {
+        audience: '実務者向け',
+        title: 'ファシリティマネジメントのためのBIM要件定義',
+        description: '設計だけでなく、運用や要件整理まで視野に入れたい実務者向けです。BIMの受け渡し設計にも役立ちます。',
+        url: 'https://amzn.to/4cg9ZLX',
+      },
+    ],
+  },
+  {
+    slug: 'openbim',
+    title: 'openBIMとは',
+    category: 'IFC',
+    description: 'openBIMの意味、IFCとの関係、実務で必要になる場面、学び方を整理した基礎解説です。',
+    heroSummary: 'openBIMは、特定ソフトに閉じずにBIMデータを連携・運用するための考え方です。',
+    overview: 'openBIMは、buildingSMARTが推進するオープンな標準を使って、異なるソフトや組織の間でもBIMデータをやり取りしやすくする考え方です。特定ベンダーだけに依存しない運用を目指す際に重要になります。',
+    features: [
+      '異なるソフト間でもデータをやり取りしやすい',
+      '将来のツール変更や発注者要件の変化に対応しやすい',
+      'データの所有権や運用継続性を確保しやすい',
+    ],
+    differences: [
+      'BIMは情報付きモデルを使う考え方で、openBIMはそのBIMをオープンに運用するための考え方です。',
+      'RevitやArchicadはBIMツールであり、openBIMはソフト名ではありません。',
+      'IFCはopenBIMを支える代表的なデータ標準で、openBIMそのものと完全に同義ではありません。',
+    ],
+    fit: [
+      '発注者要件でIFCや中立データを求められる組織',
+      '複数ソフトをまたいでBIM連携をしたいチーム',
+      '長期運用や維持管理まで含めてBIMを考える担当者',
+    ],
+    practicalUse: [
+      '設計者・施工者・発注者の間での中立データ受け渡し',
+      'ソフト変更時のデータ継続性の確保',
+      '維持管理やFMへの引き渡し基盤の整備',
+    ],
+    difficulty: 'openBIMは概念だけ理解しても不十分で、IFC、属性、分類、要件定義、検証フローまで含めて設計する必要があります。実務に落とすにはBIM運用そのものの理解が必要です。',
+    stumblingPoints: [
+      'IFCを書き出せば終わりだと誤解しやすい',
+      'どの属性をどこまで揃えるかの要件定義で止まりやすい',
+      '受け取り側の検証方法まで決めないと運用が形骸化しやすい',
+    ],
+    selfStudyWhyHard: '独学だと、IFCや標準の言葉は理解できても、実際にどの契約・どの工程で必要になるかが見えにくいです。openBIMはデータ形式の勉強だけでなく、業務設計とセットで学ぶ必要があります。',
+    learningMethod: '最初にBIM全体とopenBIMの役割を整理し、その後に要件定義や受け渡し設計の事例を学ぶのが近道です。書籍で全体像を押さえると、ソフト依存の知識だけに偏りにくくなります。',
+    guideLinks: [
+      { slug: 'bim', text: 'BIM全体の考え方を整理したい方はこちら' },
+      { slug: 'revit', text: 'Revitとの関係を知りたい方はこちら' },
+      { slug: 'archicad', text: 'Archicadとの関係を知りたい方はこちら' },
+    ],
+    books: [
+      {
+        audience: '初心者向け',
+        title: 'Archicad28ではじめるBIM設計入門[基本・実施設計編]',
+        description: 'openBIMの前提となるBIM設計の流れをつかみたい人向けです。モデルベース設計の理解を固められます。',
+        url: 'https://amzn.to/4tCIdjL',
+      },
+      {
+        audience: '実務者向け',
+        title: 'ファシリティマネジメントのためのBIM要件定義',
+        description: 'データ受け渡しや運用要件を考えたい実務者向けです。openBIMの議論を実務へ落とし込みやすくなります。',
+        url: 'https://amzn.to/4cg9ZLX',
+      },
+    ],
+  },
+];
+
+const EXPLAINER_GUIDE_MAP = Object.fromEntries(EXPLAINER_GUIDES.map((guide) => [guide.slug, guide]));
+
 // ---- utility ----------------------------------------------------------------
 
 function slugify(str) {
@@ -1088,6 +1313,162 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1rem;
     }
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .guide-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .guide-card-body {
+      padding: 1.1rem 1.15rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      min-height: 100%;
+    }
+    .guide-card-kicker {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--blue);
+      text-transform: uppercase;
+    }
+    .guide-card-title {
+      font-size: 1.05rem;
+      line-height: 1.45;
+      color: var(--navy);
+      margin: 0;
+    }
+    .guide-card-excerpt {
+      font-size: 0.93rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    .guide-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+      margin-top: auto;
+    }
+    .guide-card-link:hover { text-decoration: none; }
+    .guide-intro {
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+      border: 1px solid #dbe7f4;
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .guide-section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .guide-section h2 {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+    .guide-section p {
+      margin: 0;
+      color: var(--text);
+      line-height: 1.95;
+    }
+    .guide-section ul {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: var(--text);
+    }
+    .guide-section li + li { margin-top: 0.55rem; }
+    .guide-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.9rem;
+    }
+    .guide-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      background: var(--blue-pale);
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .guide-links a:hover { text-decoration: none; background: rgba(37,99,235,0.13); }
+    .guide-books {
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+      border: 1px solid #dbe7f4;
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .guide-books-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+    .guide-book-card {
+      border: 1px solid #e4ecf5;
+      border-radius: 10px;
+      background: #fff;
+      padding: 1rem;
+    }
+    .guide-book-audience {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      background: var(--blue-pale);
+      color: var(--blue);
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+    }
+    .guide-book-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.45rem;
+    }
+    .guide-book-desc {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+    .guide-book-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .guide-book-link:hover { text-decoration: none; opacity: 0.9; }
     .article-related-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -1436,6 +1817,8 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       .article-keypoints { padding: 1.25rem; }
       .article-insight-grid { grid-template-columns: 1fr; }
       .article-related-grid { grid-template-columns: 1fr; }
+      .guide-grid { grid-template-columns: 1fr; }
+      .guide-books-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .article-list { grid-template-columns: 1fr; }
@@ -1691,9 +2074,188 @@ function thumbStyle(catKey, base = '.') {
   return `background: ${grad}, url('${base}/assets/Getting-real-about-technology-part-1.webp') center/cover no-repeat;`;
 }
 
+function guideUrl(slug, base = '.') {
+  return `${base}/guides/${slug}.html`;
+}
+
+function buildGuideCard(guide, base = '.', kicker = '基礎解説') {
+  return `
+    <article class="guide-card">
+      <div class="card-thumb" style="${thumbStyle(guide.category, base)}">
+        <div class="card-thumb-badge"><span class="badge">${escape(categoryLabel(guide.category))}</span></div>
+      </div>
+      <div class="guide-card-body">
+        <div class="guide-card-kicker">${escape(kicker)}</div>
+        <h3 class="guide-card-title"><a href="${guideUrl(guide.slug, base)}">${escape(guide.title)}</a></h3>
+        <p class="guide-card-excerpt">${escape(guide.description)}</p>
+        <a class="guide-card-link" href="${guideUrl(guide.slug, base)}">詳しく読む →</a>
+      </div>
+    </article>`;
+}
+
+function buildGuideGrid(guides, base = '.', kicker = '基礎解説') {
+  if (!guides || guides.length === 0) return '';
+  return `<div class="guide-grid">${guides.map((guide) => buildGuideCard(guide, base, kicker)).join('')}</div>`;
+}
+
+function inferRelevantGuides(post) {
+  const haystack = `${post.title || ''} ${post.titleJa || ''} ${post.summary || ''} ${post.bodyJa || ''}`.toLowerCase();
+  const category = (post.category || 'OTHER').toUpperCase();
+  const picks = [];
+
+  const add = (slug) => {
+    const guide = EXPLAINER_GUIDE_MAP[slug];
+    if (guide && !picks.find((item) => item.slug === slug)) picks.push(guide);
+  };
+
+  add('bim');
+
+  if (category === 'REVIT' || haystack.includes('revit')) add('revit');
+  if (category === 'ARCHICAD' || haystack.includes('archicad')) add('archicad');
+  if (category === 'IFC' || haystack.includes('ifc') || haystack.includes('openbim') || haystack.includes('open bim')) add('openbim');
+
+  if (category === 'BIM_ECOSYSTEM') {
+    add('openbim');
+    add('archicad');
+  }
+
+  if (category === 'BIM_AI' || category === 'AI_DX' || category === 'AI') {
+    add('revit');
+    add('archicad');
+  }
+
+  if (picks.length === 1) add('openbim');
+  return picks.slice(0, 3);
+}
+
+function buildLearningGuidesSection(post) {
+  const guides = inferRelevantGuides(post);
+  if (guides.length === 0) return '';
+  return `
+    <section class="guide-intro">
+      <div class="reference-books-label">理解を深める</div>
+      <h2 class="reference-books-title">この内容を理解するならこちら</h2>
+      <p class="reference-books-desc">ニュースだけではつかみにくい前提知識を、基礎解説でまとめています。まず概念を押さえてから読むと、記事の意味が追いやすくなります。</p>
+      ${buildGuideGrid(guides, '..', '基礎解説')}
+    </section>`;
+}
+
+function buildExplainerBooks(guide) {
+  if (!guide.books || guide.books.length === 0) return '';
+  return `
+    <section class="guide-books">
+      <div class="reference-books-label">おすすめ書籍</div>
+      <h2 class="reference-books-title">この記事を理解するためのおすすめ書籍</h2>
+      <p class="reference-books-desc">IFCやBIMの概念は断片的な記事だけでは理解しにくいため、全体像を体系的に学べる書籍を紹介します。売り込みではなく、学習の順番を作るための導線です。</p>
+      <div class="guide-books-grid">
+        ${guide.books.map((book) => `
+          <article class="guide-book-card">
+            <div class="guide-book-audience">${escape(book.audience)}</div>
+            <div class="guide-book-title">${escape(book.title)}</div>
+            <p class="guide-book-desc">${escape(book.description)}</p>
+            <a class="guide-book-link" href="${escape(book.url)}" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
+          </article>
+        `).join('')}
+      </div>
+    </section>`;
+}
+
+function buildExplainerPage(guide, posts) {
+  const pageTitle = `${guide.title} | ${SITE_NAME}`;
+  const pageDesc = guide.description;
+  const canonicalUrl = `${SITE_URL}/guides/${guide.slug}.html`;
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: '基礎解説', url: `${SITE_URL}/#guides` },
+    { name: guide.title, url: canonicalUrl },
+  ]);
+  const pageLd = webPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const relatedGuides = guide.guideLinks
+    .map((item) => EXPLAINER_GUIDE_MAP[item.slug])
+    .filter(Boolean);
+
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [pageLd, breadcrumbLd], {
+    ogType: 'article',
+    articleSection: '基礎解説',
+  }) +
+    htmlHeader('..') +
+    `
+  <div class="article-hero" style="background:${thumbStyle(guide.category, '..')}">
+    <div class="article-hero-inner">
+      <div class="article-hero-breadcrumb"><a href="../">ホーム</a><span class="article-hero-meta-sep">·</span><span>基礎解説</span></div>
+      <h1 class="article-hero-title">${escape(guide.title)}</h1>
+      <p class="article-hero-summary">${escape(guide.heroSummary)}</p>
+      <div class="article-hero-actions">
+        <a class="article-hero-btn article-hero-btn--primary" href="../#guides">基礎解説一覧を見る</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="article-layout">
+      <main class="article-main">
+        <section class="guide-intro">
+          <div class="reference-books-label">概要</div>
+          <h2 class="reference-books-title">まず押さえるべき結論</h2>
+          <p class="reference-books-desc">${escape(guide.overview)}</p>
+        </section>
+        <section class="guide-section">
+          <h2>特徴</h2>
+          <ul>${guide.features.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
+        </section>
+        <section class="guide-section">
+          <h2>他との違い</h2>
+          <ul>${guide.differences.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
+          <div class="guide-links">${guide.guideLinks.map((item) => `<a href="${guideUrl(item.slug, '..')}">${escape(item.text)}</a>`).join('')}</div>
+        </section>
+        <section class="guide-section">
+          <h2>向いている人</h2>
+          <ul>${guide.fit.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
+        </section>
+        <section class="guide-section">
+          <h2>実務での使われ方</h2>
+          <ul>${guide.practicalUse.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
+        </section>
+        <section class="guide-section">
+          <h2>学習の難しさ</h2>
+          <p>${escape(guide.difficulty)}</p>
+        </section>
+        <section class="guide-section">
+          <h2>つまずくポイント</h2>
+          <ul>${guide.stumblingPoints.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
+        </section>
+        <section class="guide-section">
+          <h2>なぜ独学では難しいか</h2>
+          <p>${escape(guide.selfStudyWhyHard)}</p>
+        </section>
+        <section class="guide-section">
+          <h2>学習方法</h2>
+          <p>${escape(guide.learningMethod)}</p>
+        </section>
+        ${buildExplainerBooks(guide)}
+        <div class="article-related-group">
+          <h2 class="section-title" style="margin-top:0;">あわせて読みたい基礎解説</h2>
+          ${buildGuideGrid(relatedGuides, '..', '関連解説')}
+        </div>
+      </main>
+      ${buildSidebar(posts, '..')}
+    </div>
+  </div>` +
+    htmlFooter('..');
+}
+
 function buildIndex(posts, totalCount = 0) {
   const recentPosts = posts.slice(0, 30);
   const articleCount = totalCount || posts.length;
+  const guideSectionHtml = `
+    <section id="guides" style="margin-bottom:2rem;">
+      <h2 class="section-title">基礎解説</h2>
+      <div class="guide-intro" style="margin-bottom:1rem;">
+        <div class="reference-books-label">読む → 理解する</div>
+        <h2 class="reference-books-title">ニュースを読む前に押さえたい基礎解説</h2>
+        <p class="reference-books-desc">BIM、Revit、Archicad、openBIMの基本を先に整理しておくと、ニュースの意味や実務への影響を判断しやすくなります。</p>
+      </div>
+      ${buildGuideGrid(EXPLAINER_GUIDES, '.', '基礎解説')}
+    </section>`;
 
   // Hero: post[0] as main, posts[1-2] as subs
   const heroMain = posts[0];
@@ -1862,6 +2424,7 @@ function buildIndex(posts, totalCount = 0) {
   <div class="container">
     <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
       <main>
+        ${guideSectionHtml}
         <h2 class="section-title">最新ニュース</h2>
         <div class="article-list">
           ${cards}
@@ -2106,6 +2669,7 @@ function buildArticlePage(post, allPosts) {
         `).join('')}
       </div>
     </section>` : '';
+  const learningGuidesHtml = buildLearningGuidesSection(post);
 
   // ---- editorial card ----
   const editorialHtml = editorialText ? `
@@ -2206,6 +2770,7 @@ function buildArticlePage(post, allPosts) {
             ${bodyHtml}
           </div>
         </div>
+        ${learningGuidesHtml}
         ${editorialHtml}
         ${affiliateHtml}
         <div class="article-source-card">
@@ -2833,6 +3398,31 @@ function main() {
   }
   console.log(`[generateSite] Generated ${articleCount} article pages in posts/`);
 
+  // Generate explainer guide pages
+  const guidesDir = path.join(__dirname, 'guides');
+  if (!fs.existsSync(guidesDir)) {
+    fs.mkdirSync(guidesDir, { recursive: true });
+  }
+  const expectedGuideFiles = new Set(EXPLAINER_GUIDES.map((guide) => `${guide.slug}.html`));
+  const existingGuideFiles = fs.readdirSync(guidesDir).filter((name) => name.endsWith('.html'));
+  let removedGuideCount = 0;
+  for (const filename of existingGuideFiles) {
+    if (!expectedGuideFiles.has(filename)) {
+      fs.unlinkSync(path.join(guidesDir, filename));
+      removedGuideCount++;
+    }
+  }
+  if (removedGuideCount > 0) {
+    console.log(`[generateSite] Removed ${removedGuideCount} stale guide pages from guides/`);
+  }
+  let guideCount = 0;
+  for (const guide of EXPLAINER_GUIDES) {
+    const html = buildExplainerPage(guide, posts);
+    fs.writeFileSync(path.join(guidesDir, `${guide.slug}.html`), html, 'utf-8');
+    guideCount++;
+  }
+  console.log(`[generateSite] Generated ${guideCount} explainer pages in guides/`);
+
   // Generate category pages
   const categoriesDir = path.join(__dirname, 'categories');
   if (!fs.existsSync(categoriesDir)) {
@@ -2897,7 +3487,13 @@ function main() {
       : now;
     return { loc: `${SITE_URL}/posts/${post.slug}.html`, lastmod, changefreq: 'monthly', priority: '0.8' };
   });
-  const allUrls = [...staticUrls, ...articleUrls];
+  const guideUrls = EXPLAINER_GUIDES.map((guide) => ({
+    loc: `${SITE_URL}/guides/${guide.slug}.html`,
+    lastmod: now,
+    changefreq: 'monthly',
+    priority: '0.7',
+  }));
+  const allUrls = [...staticUrls, ...guideUrls, ...articleUrls];
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allUrls.map((u) => `  <url>

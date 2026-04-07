@@ -942,6 +942,162 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1rem;
     }
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .guide-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .guide-card-body {
+      padding: 1.1rem 1.15rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      min-height: 100%;
+    }
+    .guide-card-kicker {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--blue);
+      text-transform: uppercase;
+    }
+    .guide-card-title {
+      font-size: 1.05rem;
+      line-height: 1.45;
+      color: var(--navy);
+      margin: 0;
+    }
+    .guide-card-excerpt {
+      font-size: 0.93rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    .guide-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+      margin-top: auto;
+    }
+    .guide-card-link:hover { text-decoration: none; }
+    .guide-intro {
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+      border: 1px solid #dbe7f4;
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .guide-section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .guide-section h2 {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+    .guide-section p {
+      margin: 0;
+      color: var(--text);
+      line-height: 1.95;
+    }
+    .guide-section ul {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: var(--text);
+    }
+    .guide-section li + li { margin-top: 0.55rem; }
+    .guide-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.9rem;
+    }
+    .guide-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      background: var(--blue-pale);
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .guide-links a:hover { text-decoration: none; background: rgba(37,99,235,0.13); }
+    .guide-books {
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+      border: 1px solid #dbe7f4;
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .guide-books-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+    .guide-book-card {
+      border: 1px solid #e4ecf5;
+      border-radius: 10px;
+      background: #fff;
+      padding: 1rem;
+    }
+    .guide-book-audience {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      background: var(--blue-pale);
+      color: var(--blue);
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+    }
+    .guide-book-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.45rem;
+    }
+    .guide-book-desc {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+    .guide-book-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .guide-book-link:hover { text-decoration: none; opacity: 0.9; }
     .article-related-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -1290,6 +1446,8 @@
       .article-keypoints { padding: 1.25rem; }
       .article-insight-grid { grid-template-columns: 1fr; }
       .article-related-grid { grid-template-columns: 1fr; }
+      .guide-grid { grid-template-columns: 1fr; }
+      .guide-books-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .article-list { grid-template-columns: 1fr; }
@@ -1387,6 +1545,46 @@
     </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Redshift は GPU ベースのレンダリングエンジンで、リアルタイム性能と高品質を両立させています。プラグイン化により、BIM モデルの構造を保持したままレンダリングパイプラインに統合され、モデル修正時の再エクスポート作業が不要になります。さらにワンクリックでCinema 4Dに送出でき、より高度な lighting や flythrough、simulation が必要な場合はシームレスに移行できる設計になっています。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>このプラグイン展開により、建築ビジュアライゼーションの制作スピードが大幅に短縮されます。設計段階での意思決定が迅速化し、クライアントプレゼンテーション資料の品質が映画レベルに引き上げられることで、提案競争力が向上します。特に architectural visualization specialist に依存しない環境が実現され、建築実務者による自律的な高品質ビジュアル制作が可能になれば、業界の生産性向上に大きく貢献することになるでしょう。</p>
           </div>
         </div>
+        
+    <section class="guide-intro">
+      <div class="reference-books-label">理解を深める</div>
+      <h2 class="reference-books-title">この内容を理解するならこちら</h2>
+      <p class="reference-books-desc">ニュースだけではつかみにくい前提知識を、基礎解説でまとめています。まず概念を押さえてから読むと、記事の意味が追いやすくなります。</p>
+      <div class="guide-grid">
+    <article class="guide-card">
+      <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
+      </div>
+      <div class="guide-card-body">
+        <div class="guide-card-kicker">基礎解説</div>
+        <h3 class="guide-card-title"><a href="../guides/bim.html">BIMとは</a></h3>
+        <p class="guide-card-excerpt">BIMの基本、CADとの違い、実務での使われ方、学習の壁を整理した基礎解説です。</p>
+        <a class="guide-card-link" href="../guides/bim.html">詳しく読む →</a>
+      </div>
+    </article>
+    <article class="guide-card">
+      <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(14,165,233,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb-badge"><span class="badge">Revit</span></div>
+      </div>
+      <div class="guide-card-body">
+        <div class="guide-card-kicker">基礎解説</div>
+        <h3 class="guide-card-title"><a href="../guides/revit.html">Revitとは</a></h3>
+        <p class="guide-card-excerpt">Revitの役割、BIMでの位置づけ、Archicadとの違い、学び方を整理した基礎解説です。</p>
+        <a class="guide-card-link" href="../guides/revit.html">詳しく読む →</a>
+      </div>
+    </article>
+    <article class="guide-card">
+      <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
+      </div>
+      <div class="guide-card-body">
+        <div class="guide-card-kicker">基礎解説</div>
+        <h3 class="guide-card-title"><a href="../guides/archicad.html">Archicadとは</a></h3>
+        <p class="guide-card-excerpt">Archicadの特徴、Revitとの違い、設計実務での使われ方、学び方を整理した基礎解説です。</p>
+        <a class="guide-card-link" href="../guides/archicad.html">詳しく読む →</a>
+      </div>
+    </article></div>
+    </section>
         
     <div class="article-editorial">
       <div class="article-editorial-header">

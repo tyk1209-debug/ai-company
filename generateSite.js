@@ -2406,6 +2406,37 @@ function buildGuideGrid(guides, base = '.', kicker = '基礎解説') {
   return `<div class="guide-grid">${guides.map((guide) => buildGuideCard(guide, base, kicker)).join('')}</div>`;
 }
 
+function selectGuidesForCategory(categoryKey) {
+  const category = (categoryKey || 'OTHER').toUpperCase();
+  if (category === 'REVIT') {
+    return ['revit', 'bim', 'bim-manager'].map((slug) => EXPLAINER_GUIDE_MAP[slug]).filter(Boolean);
+  }
+  if (category === 'IFC') {
+    return ['ifc', 'openbim', 'cde'].map((slug) => EXPLAINER_GUIDE_MAP[slug]).filter(Boolean);
+  }
+  if (category === 'BIM_AI' || category === 'AI_DX' || category === 'AI') {
+    return ['bim-ai', 'bim', 'bim-manager'].map((slug) => EXPLAINER_GUIDE_MAP[slug]).filter(Boolean);
+  }
+  if (category === 'BIM_ECOSYSTEM' || category === 'ARCHICAD' || category === 'GLOOBE') {
+    return ['bim', 'archicad', 'cde', 'bim-manager'].map((slug) => EXPLAINER_GUIDE_MAP[slug]).filter(Boolean);
+  }
+  return ['bim', 'openbim', 'bim-manager'].map((slug) => EXPLAINER_GUIDE_MAP[slug]).filter(Boolean);
+}
+
+function buildCategoryLearningSection(categoryKey) {
+  const guides = selectGuidesForCategory(categoryKey).slice(0, 3);
+  if (guides.length === 0) return '';
+  return `
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">基礎解説</div>
+        <p class="sidebar-about" style="margin-bottom:0.85rem;">このカテゴリを理解する前提知識を先に整理できます。ニュースを読む前の導入として使いやすい記事をまとめています。</p>
+        <ul class="sidebar-recent-list">
+          ${guides.map((guide) => `<li><a href="../guides/${escape(guide.slug)}.html">${escape(guide.title)}</a></li>`).join('')}
+        </ul>
+        <a class="sidebar-follow-btn" href="../guides/index.html" style="margin-top:0.9rem;">基礎解説をもっと見る</a>
+      </div>`;
+}
+
 function inferRelevantGuides(post) {
   const haystack = `${post.title || ''} ${post.titleJa || ''} ${post.summary || ''} ${post.bodyJa || ''}`.toLowerCase();
   const category = (post.category || 'OTHER').toUpperCase();
@@ -2479,7 +2510,7 @@ function buildExplainerPage(guide, posts) {
   const canonicalUrl = `${SITE_URL}/guides/${guide.slug}.html`;
   const breadcrumbLd = breadcrumbJsonLd([
     { name: 'ホーム', url: `${SITE_URL}/` },
-    { name: '基礎解説', url: `${SITE_URL}/#guides` },
+    { name: '基礎解説', url: `${SITE_URL}/guides/index.html` },
     { name: guide.title, url: canonicalUrl },
   ]);
   const pageLd = webPageJsonLd(pageTitle, pageDesc, canonicalUrl);
@@ -2570,9 +2601,48 @@ function buildExplainerPage(guide, posts) {
     htmlFooter('..');
 }
 
+function buildGuidesIndexPage(posts) {
+  const pageTitle = `基礎解説 | ${SITE_NAME}`;
+  const pageDesc = 'BIM、Revit、Archicad、IFC、openBIM、CDE、BIM×AI、BIMマネージャーの基礎を整理した解説記事一覧です。';
+  const canonicalUrl = `${SITE_URL}/guides/index.html`;
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: '基礎解説', url: canonicalUrl },
+  ]);
+  const pageLd = collectionPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [pageLd, breadcrumbLd]) +
+    htmlHeader('..') +
+    `
+  <div class="cat-hero" style="background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(15,42,74,0.88) 100%), url('../assets/blue-ai-digital-cube.jpg') center/cover no-repeat;">
+    <div class="cat-hero-inner">
+      <nav class="cat-hero-breadcrumb">
+        <a href="../">ホーム</a> · <span>基礎解説</span>
+      </nav>
+      <h1 class="cat-hero-title">基礎解説</h1>
+      <p class="cat-hero-count">${EXPLAINER_GUIDES.length}本の解説記事</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
+      <main>
+        <div class="guide-intro" style="margin-bottom:1.25rem;">
+          <div class="reference-books-label">読む → 理解する</div>
+          <h2 class="reference-books-title">ニュースを読む前提知識をまとめたハブ</h2>
+          <p class="reference-books-desc">最新ニュースの理解に必要な基礎知識をテーマ別に整理しています。BIM基礎、ソフト理解、データ連携、情報管理、AI活用、役割理解までを実務目線でつなげています。</p>
+        </div>
+        ${buildGuideGrid(EXPLAINER_GUIDES, '..', '基礎解説')}
+      </main>
+      ${buildSidebar(posts, '..')}
+    </div>
+  </div>` +
+    htmlFooter('..', EXPLAINER_GUIDES.length);
+}
+
 function buildIndex(posts, totalCount = 0) {
   const recentPosts = posts.slice(0, 30);
   const articleCount = totalCount || posts.length;
+  const topGuides = EXPLAINER_GUIDES.slice(0, 4);
   const guideSectionHtml = `
     <section id="guides" style="margin-bottom:2rem;">
       <h2 class="section-title">基礎解説</h2>
@@ -2581,7 +2651,10 @@ function buildIndex(posts, totalCount = 0) {
         <h2 class="reference-books-title">ニュースを読む前に押さえたい基礎解説</h2>
         <p class="reference-books-desc">BIM、Revit、Archicad、openBIMの基本を先に整理しておくと、ニュースの意味や実務への影響を判断しやすくなります。</p>
       </div>
-      ${buildGuideGrid(EXPLAINER_GUIDES, '.', '基礎解説')}
+      ${buildGuideGrid(topGuides, '.', '基礎解説')}
+      <div style="margin-top:1rem;">
+        <a class="cta-block-btn" href="./guides/index.html">基礎解説をすべて見る</a>
+      </div>
     </section>`;
 
   // Hero: post[0] as main, posts[1-2] as subs
@@ -3254,6 +3327,7 @@ function buildAboutPage() {
 function buildCategoryPage(category, posts) {
   const label = categoryLabel(category);
   const catPosts = posts.filter((p) => (p.category || 'OTHER').toUpperCase() === category.toUpperCase());
+  const categoryLearning = buildCategoryLearningSection(category.toUpperCase());
   const recommendedBooks = buildRecommendedBooks(category.toUpperCase());
 
   const cards = catPosts.map((post, index) => {
@@ -3326,7 +3400,7 @@ function buildCategoryPage(category, posts) {
           ${cards}
         </div>
       </main>
-      ${recommendedBooks}${buildSidebar(posts, '..')}
+      ${categoryLearning}${recommendedBooks}${buildSidebar(posts, '..')}
     </div>
   </div>` +
     htmlFooter('..', catPosts.length);
@@ -3730,7 +3804,7 @@ function main() {
   if (!fs.existsSync(guidesDir)) {
     fs.mkdirSync(guidesDir, { recursive: true });
   }
-  const expectedGuideFiles = new Set(EXPLAINER_GUIDES.map((guide) => `${guide.slug}.html`));
+  const expectedGuideFiles = new Set(['index.html', ...EXPLAINER_GUIDES.map((guide) => `${guide.slug}.html`)]);
   const existingGuideFiles = fs.readdirSync(guidesDir).filter((name) => name.endsWith('.html'));
   let removedGuideCount = 0;
   for (const filename of existingGuideFiles) {
@@ -3748,6 +3822,7 @@ function main() {
     fs.writeFileSync(path.join(guidesDir, `${guide.slug}.html`), html, 'utf-8');
     guideCount++;
   }
+  fs.writeFileSync(path.join(guidesDir, 'index.html'), buildGuidesIndexPage(posts), 'utf-8');
   console.log(`[generateSite] Generated ${guideCount} explainer pages in guides/`);
 
   // Generate category pages
@@ -3803,6 +3878,7 @@ function main() {
   }));
   const staticUrls = [
     { loc: `${SITE_URL}/`, lastmod: now, changefreq: 'daily', priority: '1.0' },
+    { loc: `${SITE_URL}/guides/index.html`, lastmod: now, changefreq: 'weekly', priority: '0.9' },
     { loc: `${SITE_URL}/events.html`, lastmod: now, changefreq: 'weekly', priority: '0.8' },
     { loc: `${SITE_URL}/about.html`, lastmod: now, changefreq: 'monthly', priority: '0.5' },
     { loc: `${SITE_URL}/privacy.html`, lastmod: now, changefreq: 'monthly', priority: '0.3' },

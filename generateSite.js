@@ -3323,24 +3323,6 @@ function buildArticlePage(post, allPosts) {
       <div class="article-editorial-text">${editorialText.split('\n').filter(s => s.trim()).map(p => `<p>${escape(p)}</p>`).join('')}</div>
     </div>` : '';
 
-  const tldrHtml = tldrItems.length > 0 ? `
-    <section class="article-tldr">
-      <div class="reference-books-label">TL;DR</div>
-      <h2 class="reference-books-title">3行でわかる要点</h2>
-      <ul class="article-tldr-list">
-        ${tldrItems.map((item, index) => `
-          <li class="article-tldr-item">
-            <span class="article-tldr-num">${index + 1}</span>
-            <span>${escape(item)}</span>
-          </li>`).join('')}
-      </ul>
-    </section>` : '';
-
-  const insightCardsHtml = [
-    buildInsightCard('要点', '要点まとめ', keyPoints.slice(0, 3).map((kp) => `${kp.label}: ${kp.text}`), 'summary'),
-    buildInsightCard('重要性', 'なぜ重要か', industryInsight ? excerptInsightText(industryInsight.text) : ''),
-    buildInsightCard('実務', '実務でどう使うか', distinctPracticalInsight ? excerptInsightText(distinctPracticalInsight.text) : ''),
-  ].filter(Boolean).join('');
 
   // ---- hero summary ----
   const heroSummaryText = sections.length > 0 && sections[0].paragraphs.length > 0
@@ -3416,8 +3398,6 @@ function buildArticlePage(post, allPosts) {
   <div class="container">
     <div class="article-layout">
       <main class="article-main">
-        ${tldrHtml}
-        ${insightCardsHtml ? `<div class="article-insight-grid">${insightCardsHtml}</div>` : ''}
         <div class="article-body-wrap">
           <div class="ai-body-label">AI による日本語解説</div>
           <div class="article-body">

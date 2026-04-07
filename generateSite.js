@@ -133,6 +133,7 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       --radius-sm: 6px;
     }
 
+    html, body { overflow-x: hidden; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
                    Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
@@ -767,11 +768,13 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       .article-list { grid-template-columns: 1fr; }
       .hero-subs { grid-template-columns: 1fr; }
       nav a { margin-left: 0.75rem; font-size: 0.78rem; }
+      nav a.nav-hide-sp { display: none; }
       .article-detail { padding: 1.5rem; }
       .static-page { padding: 1.25rem; }
+      .site-tagline { display: none; }
     }
     @media (max-width: 480px) {
-      nav a { font-size: 0.72rem; margin-left: 0.5rem; }
+      nav a { font-size: 0.75rem; margin-left: 0.6rem; }
       .hero-stats { gap: 1.25rem; }
     }
   </style>
@@ -792,8 +795,8 @@ function htmlHeader(base = '.') {
       <nav>
         <a href="${base}/">ホーム</a>
         <a href="${base}/events.html">イベント</a>
-        <a href="${base}/about.html">運営者情報</a>
-        <a href="${base}/privacy.html">プライバシーポリシー</a>
+        <a href="${base}/about.html" class="nav-hide-sp">運営者情報</a>
+        <a href="${base}/privacy.html" class="nav-hide-sp">プライバシーポリシー</a>
       </nav>
     </div>
   </header>`;

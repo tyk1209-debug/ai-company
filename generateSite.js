@@ -28,12 +28,24 @@ const RECOMMENDED_BOOKS = {
       description: 'ドローン写真測量とレーザ測量の基礎を学びたい方向けの一冊です。現場DXや3D計測に関心のある読者に向いています。',
       url: 'https://amzn.to/4veruET',
     },
+    {
+      title: 'ファシリティマネジメントのためのBIM要件定義',
+      description: '維持管理やFMの視点からBIM要件を整理したい方向けの一冊です。運用段階まで含めたBIM活用を考える読者に向いています。',
+      url: 'https://amzn.to/4cg9ZLX',
+    },
   ],
   AI_DX: [
     {
       title: 'ゼネコン5.0: SDGs、DX時代の建設業の経営戦略',
       description: '建設業のDX、SDGs、経営変革を俯瞰した一冊です。建設会社のデジタル化や事業戦略に関心のある読者に向いています。',
       url: 'https://amzn.to/4tAYxl5',
+    },
+  ],
+  GLOOBE: [
+    {
+      title: '企画設計からモデリング・確認申請図面までこれ一冊！ GLOOBE ArchitectではじめるBIM活用入門',
+      description: 'GLOOBE ArchitectでBIM活用を始めたい方向けの実務入門書です。企画設計から確認申請図面まで一連の流れを学べます。',
+      url: 'https://amzn.to/3PQRhD2',
     },
   ],
 };

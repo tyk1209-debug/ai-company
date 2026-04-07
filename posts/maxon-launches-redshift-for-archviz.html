@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Maxon launches RedShift for Archviz</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>建築ビジュアライゼーション市場では、高品質なレンダリング技術へのニーズが急速に高まっています。これまで建築家やインテリアデザイナーは、BIMオーサリングツール内での簡易的なプレビューと、高度なビジュアル表現のために別のソフトウェアへの切り替えを余儀なくされていました。このワークフロー分断が、設計フェーズでのビジュアルフィードバックを遅延させ、クライアント提案の効率化を阻害してきました。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>Maxonは、ハリウッドの映像制作で広く使用されている「RedShift」レンダリングエンジンを、Vectorworks・Revit・Archicadにネイティブプラグインとして統合する「RedShift for Archviz」を商用リリースしました。Vectorworksは即座に利用可能、Revitはベータリリースされており、Archicadは2026年内にベータ提供予定です。プラグインは、リアルタイムプレビュー機能を提供し、照明・マテリアル・環境効果の変更を即座に確認できます。太陽の位置や時間帯の調整、雲の被覆制御、高品質な家具・植物・キャラクターアセットの配置も可能です。物理的に正確なマテリアル（ポーリッシュコンクリート、ブラッシュメタル、ガラス、木材、テキスタイル）にも対応しています。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>RedShift for Archvizはネイティブプラグイン化により、BIMモデルのデータロスなく直接レンダリングできます。高度なビジュアル要求に対しては、ワンクリックでCinema 4Dへのシーン転送が可能で、フライスルーやシミュレーション処理をシームレスに実行できる点が特筆です。これにより、LOD（詳細度）を保ちながら、デザイン決定フェーズと最終プレゼンテーション用途の両立が実現します。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>本プラグイン統合は、BIMワークフロー内でのビジュアル意思決定の迅速化をもたらします。建築家は設計検討の段階から「映画並みの」クオリティのレンダリングを参照でき、クライアント提案資料の作成時間を大幅短縮できます。現場での材料・採光検証もデジタル環境で先行実施可能になり、プロジェクト全体の効率向上が見込まれます。また、大量のビジュアルワークを抱える建築事務所にとって、Cinema 4D等への外部依存を削減し、内製化による競争力強化の道が開かれます。</p></div>
           </div>
           <div class="source-box">

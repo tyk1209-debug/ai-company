@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: GLOOBEのBIMオブジェクトについて</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>GLOOBEは国内建設設計業界で急速に普及しているBIM環境の一つです。他のBIMソフト（RevitやArchicad）と同様に、BIMモデルの質と運用効率は「どのようなオブジェクト」を使用するかで大きく左右されます。GLOOBEは3種類のオブジェクト体系を整備することで、法規チェックから設計検討、高精度な視覚表現まで、プロジェクトの各段階に対応する戦略を取っています。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>GLOOBEのオブジェクトは、専用オブジェクト（.glm）、汎用3Dオブジェクト（.glm）、カタログ部品（.xv3/svg）の3種類に分類されます。専用オブジェクトは、構造体・仕上げ・手摺といった建築要素に特化した属性を保有し、法規LVSチェックや自動集計に対応します。汎用3Dオブジェクトは、立体形状作成ツールで自由に形成でき、床の間セットやドアノブなど社内標準品として再利用可能です。カタログ部品は、「Archi Master」（無料汎用部品）と「3Dカタログ」（有料メーカー部品）から選択でき、2025年12月時点で200社以上、5,300を超える建材・住宅機器がダウンロード可能です。テクスチャー・照明・反射属性が設定済みのため、V-styleレンダリング（オプション）で高精度パースやパノラマ画像を即座に生成できます。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>汎用3Dオブジェクトの大きな特徴は、RevitファミリやSketchUPで作成した3D形状をそのまま読み込める互換性です。Revitネストファミリのような複雑な入れ子設定は不要で、作成難易度が低く直感的な操作が実現されています。一方、カタログ部品はXVL形式で、基本的にユーザー作成は不可ですが、3Dカタログのメーカー住設はパーツ・面材のカスタマイズに対応し、ショールーム感覚での簡易BIMオブジェクト作成が可能です。GLOOBEはRevitネイティブデータ（.rvt）の読み込みにも対応し、属性情報の多くが連携可能なため、ソフトウェア間の共存性を高めています。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>専用オブジェクトの法規LVS連携は、設計段階での法規適合性確認を自動化し、確認申請業務を大幅に効率化します。汎用オブジェクトの再利用性と社内標準化機能により、設計部門全体の生産性向上が期待できます。カタログ部品の充実（DATA STATIONで160,000以上）は、メーカー仕様の正確なBIMモデル構築を可能にし、施工・調達段階での情報精度向上に直結します。特にRevit連携の強化は、BIM確認申請や施工連携といった次世代プロセスの実装に向け、ソフトウェア間の相互運用性が業界標準として定着する道を切り開いています。</p></div>
           </div>
           <div class="source-box">

@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Can a small workstation handle big BIM?</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>コンパクトなワークステーション（HP Z2 Mini、Lenovo ThinkStation P3 Ultra SFFなど）が急速に普及しています。デスク空間の節約と集約的なラック配置での運用効率化が評価される一方で、小型化による性能制約が懸念されており、BIM実務での実用性を正確に理解する必要があります。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>コンパクトワークステーションとタワー型では同じプロセッサを搭載できますが、電源供給と冷却能力に大きな差があります。例えばLenovo P3 Ultra SFFは330W電源で、Intel Core Ultra 9 285K（最大250W）を搭載しても、熱的制約により持続動作時は125W程度に抑制されます。一方、P3 Towerは1,100W電源と優れた冷却系により、同じプロセッサでも高い周波数を維持できます。ただしRevitやSolidWorksなどのCAD・BIM作業は通常1～2コアのみ使用するため、両機種の性能差は実質的に無視できます。GPU側も同様で、コンパクト機は70W程度のRTX Pro 2000クラスに限定されますが、最新のBlackwell世代では低電力化と機能統合により、従来の大型GPU との性能格差が大幅に縮小しています。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>ピーク性能と持続性能の区別が重要です。CAD・BIM作業で顕在化するのはシングルスレッド性能で、コンパクト機でも充分な性能が得られます。問題は、レンダリングやシミュレーション時の全コア動作時に生じます。コンパクト機は電源容量と放熱設計の制約により、CPUのTurbo周波数を維持できず、持続的な多スレッド負荷で性能が大幅に低下します。また、GPU側ではTensorコア（AI演算）やRTコア（レイトレーシング）の世代進化により、低TDP GPUでの処理能力が飛躍的に向上しています。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>BIM実務の大多数はRevitモデリングなど単一～軽度のマルチスレッド作業であり、コンパクトワークステーションで問題なく対応可能です。オフィス拡張時やリモートワーク環境での利用、ラック集約型のセントラルワークステーション戦略では、コンパクト機が有力選択肢となります。一方、大規模シミュレーションやフォトリアル・レンダリングが頻繁に発生するプロジェクトでは、従来のタワー型が依然として必要です。企業のBIM運用方針やプロジェクト特性に応じた適切な機種選択が、TCO削減と生産性向上の鍵となります。</p></div>
           </div>
           <div class="source-box">

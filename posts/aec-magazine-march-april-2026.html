@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: AEC Magazine March / April 2026</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>AEC業界におけるAI活用は、画像生成やチャットボットの段階を超え、より深い構造的変化へ向かっています。AEC Magazineの2026年3月/4月号は、この転換点を「エージェント型BIM」として特集し、AIが設計プロセス全体をいかに再編成するかを論じています。従来のCADやBIMツールは情報管理に主眼を置いていましたが、新しいアプローチでは、AIが自律的に判断・実行する「エージェント」として機能します。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>本号の核となるコンセプトは「Building State」（建築状態）を中心に据えた「オーケストレーション」です。複数のAIエージェントがリアルタイムで統合された建築データベースの周囲で協調動作し、設計決定の最適化を自動化します。特に注目されるのは「ソルバー駆動型設計ツール」で、これが5年以内に業界を根本的に変える可能性があると指摘。同時に、建築の価値は「両極端（マッシング・ビジュアライゼーション）ではなく中間領域にある」という論点も提示し、AIが自動化できない創造的判断領域の重要性を強調しています。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>エージェント型BIMの技術的基盤は、データレイテンシーの削減と「認知の圧縮」にあります。従来のワークフローでは、複数チーム間の情報伝達に時間がかかり、意思決定が遅延していました。新しいアプローチでは、AECスペシャリストの専門知識をAIが学習・スケール化し、リアルタイムで構造的提案や規制チェックを実行。IFCなどのオープンスタンダード形式での「Building State」の維持により、異なるツール間のシームレスな統合が可能になります。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>この転換は設計プロジェクトの効率化にとどまりません。記事では「AECファームの統合」「設計実務の再構成」「フルスタックデザイナーの台頭」を予想しており、これまで分断していた領域（構造・MEP・コスト管理など）をBIMが「インテリジェント・統合意思決定ハブ」へと昇華させます。2026年のNXT BLD（業界カンファレンス）開催背景も、デザイン自動化やデータドリブンアプローチが急速に成熟する中での業界適応の必要性を示しています。</p></div>
           </div>
           <div class="source-box">

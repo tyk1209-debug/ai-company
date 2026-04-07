@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Best enterprise workstation laptops 2026</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>建築・設計現場でCADやBIMモデルを扱う業務は、高い処理能力を要求します。従来、こうしたワークロードには15インチ以上の大型ノートパソコンが必須でした。しかし2026年、AMD「Strix Halo」やIntel「Arrow Lake」といった新世代プロセッサの登場により、小型軽量ながらデスクトップレベルの性能を備えたモバイルワークステーションが相次いで投入されています。建設現場や現地調査での利用ニーズが高まる中、ポータビリティと性能のバランスがより重要になってきました。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>HP ZBook Ultra G1a（14インチ）は、AMD Ryzen AI Max+ Pro 395搭載で、統合型Radeon 8060S GPUが最大96GBのシステムメモリを活用できる独自アーキテクチャを採用しています。重量1.57kg、厚さ18.1mmで、V-Ray やKeyShot など主要なビジュアライゼーションツールがAMD対応を進めており、メモリボトルネック解消が大きな利点です。一方、Lenovo ThinkPad P14s Gen 6 AMD（14インチ）は、単一ファン冷却で1.39kgの軽さを実現しながら、CADやBIM作業では十分な性能を発揮します。Lenovo ThinkPad P16 Gen 3（16インチ）は、Intel Core Ultra 200HX（最大24コア、5.5GHz）とNvidia RTX Pro 5000 Blackwell（24GB）を搭載し、最上位の処理能力を備えています。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>これら3機種の最大の違いは、メモリアーキテクチャとGPU戦略です。ZBook Ultra のUnified Memory Architecture は、従来の離散GPU搭載機のように固定VRAMに縛られず、柔軟にシステムメモリを活用できます。これはIFC変換やLODの高いBIMモデル処理で顕著な効果を発揮します。一方、Intel + Nvidia構成のThinkPad P16 Gen 3は、180W電源という制約がある点が注目です。RTX Pro 5000 Blackwell単体で最大175W消費するため、ピークパフォーマンスでは若干の制約がある可能性があります。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>14インチ程度の軽量ワークステーションで実務的なCAD・BIM作業が完結すれば、現場での設計変更対応や施主との協議がより迅速になります。特にIFC形式による複数ソフト間の連携や、ドローンデータとBIMモデルの統合といったデジタルツイン構築の現場検証が容易になるでしょう。小型で高性能なマシンの普及は、オンサイト設計や遠隔協業モデルの浸透を加速させ、建設DX推進の重要なハードウェア基盤となります。</p></div>
           </div>
           <div class="source-box">

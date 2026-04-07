@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,10 +836,10 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Procore acquires Datagrid</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】建設業界はERP、会計管理、ドキュメント管理、現場ツールなど複数のシステムが断片化した状態で運用されており、データサイロが業務効率を阻害してきました。Procoreはこれまで自社プラットフォーム内でAI機能を段階的に追加してきましたが、業界全体の相互運用性課題を根本的に解決するには不十分でした。</p>
-<p>【内容】Procoreがデータ接続と自動ワークフロー実行に特化したバーティカルAIプラットフォーム「Datagrid」を買収しました。Datagridは単なるテキスト要約や質問応答型のチャットボットではなく、ERP、クラウドストレージ、ドキュメントリポジトリ、プロジェクトプラットフォームなど複数のデータソースを接続し、AI推論で複数ステップのプロセスを自動化します。具体的には申請書レビュー、RFI（情報照会請求）起案、ドキュメント分類、システム横断検索など、従来は手作業が必要だった業務を自動実行します。重要な点として、Datagridはベンダー限定ではなく、Procoreおよび非Procore顧客の両方に提供される計画です。</p>
-<p>【技術的ポイント】Datagridの中核はマルチシステム対応の「ディープサーチ」とオーケストレーションエンジンです。従来のBIM関連AIは単一ベンダアーキテクチャに限定されていましたが、Datagridは建設業界の典型的なポイントソリューン混在環境で機能するよう設計されています。Datagrid CEOのThiago da Costaが「AIは会話するのではなく実行する」という哲学を掲げており、現在のコパイロット型AIとは異なり、ワークフロー自動トリガー、システム間のデータ移動、最小限の人間介入で手続き的ループを閉じるエージェント型AIに近い実装を目指しています。</p>
-<p>【業界への影響】この買収によってProcoreは「記録のシステム」から「インテリジェンスのシステム」へのシフトを加速させます。複数ツール間の接続組織を自動化することで、建設業界が数十年追い求めてきた相互運用性の課題に実質的な解決策を提供する可能性があります。Datagridを相対的にオープンに保つか、プロプライエタリ機能として統合するかの選択はベンダー主導のデータロックイン問題を再現するリスクもありますが、成功すればProcoreは建設テックスタック全体のAIブローカーとしてポジショニングでき、業界全体の効率化に大きな影響を与えることになります。</p></div>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div><p>建設業界はERP、会計管理、ドキュメント管理、現場ツールなど複数のシステムが断片化した状態で運用されており、データサイロが業務効率を阻害してきました。Procoreはこれまで自社プラットフォーム内でAI機能を段階的に追加してきましたが、業界全体の相互運用性課題を根本的に解決するには不十分でした。</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div><p>Procoreがデータ接続と自動ワークフロー実行に特化したバーティカルAIプラットフォーム「Datagrid」を買収しました。Datagridは単なるテキスト要約や質問応答型のチャットボットではなく、ERP、クラウドストレージ、ドキュメントリポジトリ、プロジェクトプラットフォームなど複数のデータソースを接続し、AI推論で複数ステップのプロセスを自動化します。具体的には申請書レビュー、RFI（情報照会請求）起案、ドキュメント分類、システム横断検索など、従来は手作業が必要だった業務を自動実行します。重要な点として、Datagridはベンダー限定ではなく、Procoreおよび非Procore顧客の両方に提供される計画です。</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div><p>Datagridの中核はマルチシステム対応の「ディープサーチ」とオーケストレーションエンジンです。従来のBIM関連AIは単一ベンダアーキテクチャに限定されていましたが、Datagridは建設業界の典型的なポイントソリューン混在環境で機能するよう設計されています。Datagrid CEOのThiago da Costaが「AIは会話するのではなく実行する」という哲学を掲げており、現在のコパイロット型AIとは異なり、ワークフロー自動トリガー、システム間のデータ移動、最小限の人間介入で手続き的ループを閉じるエージェント型AIに近い実装を目指しています。</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div><p>この買収によってProcoreは「記録のシステム」から「インテリジェンスのシステム」へのシフトを加速させます。複数ツール間の接続組織を自動化することで、建設業界が数十年追い求めてきた相互運用性の課題に実質的な解決策を提供する可能性があります。Datagridを相対的にオープンに保つか、プロプライエタリ機能として統合するかの選択はベンダー主導のデータロックイン問題を再現するリスクもありますが、成功すればProcoreは建設テックスタック全体のAIブローカーとしてポジショニングでき、業界全体の効率化に大きな影響を与えることになります。</p></div>
           </div>
           <div class="source-box">
             元記事: <a href="https://aecmag.com/construction/procore-acquires-datagrid" target="_blank" rel="noopener noreferrer">https://aecmag.com/construction/procore-acquires-datagrid</a>

@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Rewriting the rules</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>2025年10月、AEC Magazineが公開した「Contract Killers」記事は、AECソフトウェアのエンドユーザーライセンス契約（EULA）における問題のある条項を指摘しました。特にAutodeskの利用規約には、ユーザーが自社データを用いたAIモデル訓練を禁止する条文が含まれていました。この条項は実は2018年5月から存在していましたが、生成AIの実用化に伴い業界の注目を集めるようになったのです。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>問題となった条項は「ユーザーがAutodeskの出力を用いて独自のAIモデルを訓練することを禁止する」という広範な規定でした。これにより、BIMモデルやRevit出力を使用した機械学習プロジェクトが技術的に契約違反となる可能性がありました。Nathan Millerによる詳細な分析がLinkedInで拡散されると、計算設計とBIMコミュニティで大きな議論が巻き起こりました。数多くの企業が内部AI プロジェクトを一時停止し、法務部が条項を解釈するまで事業をスコープダウンする事態に陥りました。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>Autodeskは当初、この条項の意図は自社製品のリバースエンジニアリングと競合他社形成を防ぐことにあると主張していました。しかし法的に重要なのは「内部意図」ではなく「文言の通り」です。条項の可読性と法的有効性のギャップが深刻化していました。2025年12月8日、Autodeskは利用規約とAutodesk Platform Services（APS）の条件を実質的に改定し、「エージェント自動化」対応と位置付けました。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>この改定は単なる法務対応ではなく、AIを活用した建設業界の革新を正当化する転機となります。設計企業が独自の予測コストツール開発やモデリングエラー検出分類器の構築、機械学習スクリプト実装を合法的に進められるようになりました。業界全体としては、ベンダーのライセンス条項があいまいなままでは技術活用が進まないという重要な教訓を得ました。今後、他のAECソフト企業にも同様の改定の圧力がかかるでしょう。</p></div>
           </div>
           <div class="source-box">

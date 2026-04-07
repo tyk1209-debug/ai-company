@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Hexagon Multivista connects to Revizto</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>建設プロジェクトでは、現場スキャンから得られる実測データと設計モデルの乖離を検出することが品質管理の重要な課題です。これまで、レーザースキャンやドローン撮影による偏差検出は独立したレポート作成に留まり、BIM調整環境に手動で再入力するという非効率なワークフローが続いていました。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>Hexagon MultivistのAnalyze偏差検出サービスとRevizto BIM協業プラットフォームの統合により、現場スキャンデータから検出されたずれや不適合がReviztoのイシューログに直接プッシュされるようになります。ユーザーはAnalyzeで個別またはグループ化された偏差を選択し、ワンアクションでReviztoの課題管理環境に送信可能。MEP設備の誤配置、構造体の寸法超過、竣工面との不適合といった、標準的な現場巡回では発見できない問題も、スキャンデータ対モデル比較により検出され、他のクラッシュ検出結果やモデル調整タスクと共存する3D環境内で追跡できます。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>この統合は、フェデレーテッドデザインモデルに対するリアリティキャプチャ（点群・写真）の自動比較プロセスをBIM協業層と融合させるもので、IFC互換性を背景とした相互運用性の実装例です。検出された偏差はReviztoの標準的な割り当て・ステータス追跡・通知機能を継承し、ライブ3Dコンテキスト内でネイティブなタスク管理と統一されます。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>この統合により、現場検証から設計調整アクションまでのリードタイムが大幅に短縮されます。複雑な大型プロジェクト（Hinkley Point Cなどのメガプロジェクト）では、日次スキャンデータが自動的にBIM調整ループに流入するため、品質リスク検出の応答速度が飛躍的に向上。また、Reviztoがオープンな第三者データ受け入れ戦略を採っていることで、複数ベンダー環境を使う組織にとっても統合された协業基盤が実現されます。</p></div>
           </div>
           <div class="source-box">

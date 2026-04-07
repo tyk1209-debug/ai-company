@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Rethinking the BIM platform</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>BIMプラットフォームは過去数十年間、デジタル製図環境として位置づけられてきました。しかし業界の実態は大きく異なります。BIM専門家の大半は壁を描く作業ではなく、オブジェクトの分類、パラメータ設定、標準準拠性の確認、学科間の連携調整、数量の一貫性確保など、手作業による反復的な検証作業に膨大な時間を費やしています。これらの作業は精神的に疲弊し、人的ミスが発生しやすいため、業界全体で改善が求められていました。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>Qonicが提案するのは、BIMプラットフォーム自体が継続的に自己評価する「知的システム」への進化です。従来の「モデル作成→検査→修正」という事後対応型のサイクルから、リアルタイムの自動検証へ転換します。具体的には、作成中のモデルに対して、組立体の矛盾を自動認識し、疑わしい数量を事前にフラグ、手動トリガーなしに継続的な調整チェック、標準準拠性をリアルタイム評価するという4つの機能を実装。これにより、問題が顕在化してからの対応ではなく、発生前の予防的検出が可能になります。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>BIMデータは通常のテキストや画像と根本的に異なります。パイプは単なる円筒形ではなく、システムの一部、機器との接続、構造との相互作用、メタデータを保有する多次元的な存在です。Qonicは「空間符号化技術」を採用し、幾何形状を機械可読な表現に変換し、隣接性、方向、文脈を捉えています。自動分類技術では、従来の手作業プロセスに代わり、幾何解釈と文脈理解を組み合わせることで、より高速かつ信頼性の高い分類を実現しています。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>BIMのAI導入は建設業界に根本的な変化をもたらします。建設業ではシステムの透明性が必須であり、Qonicはブラックボックス型AIを避け、AIが生成した構造化スクリプト（データ照会、ルール適用、クラッシュ検出、パラメータ修正など）により、すべてのロジックを可視化・追跡可能にしました。これにより、予算、安全性、法令遵守、契約義務に関わる判断が説明可能になります。また、PDF出力という静的な過去の遺産を脱却し、動的な情報活用へシフトすることで、プロジェクト管理全体の効率化が期待できます。</p></div>
           </div>
           <div class="source-box">

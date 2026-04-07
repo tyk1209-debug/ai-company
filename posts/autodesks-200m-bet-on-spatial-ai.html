@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Autodesk’s $200m bet on spatial AI</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>建設・設計業界でAI活用が急速に進む中、Autodeskが注目するのは単なるテキスト生成ではなく「物理世界を理解するAI」です。従来のLLMは文書作成や仕様書作成で効果的でしたが、建築や橋梁、複雑な産業機器の設計には空間推論、構造認識、時系列での反復能力が不可欠。この課題解決のため、Autodeskは2024年11月にWorld Labsに2億ドルの戦略投資を実行しました。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>World LabsはスタンフォードのAI研究者フェイ=フェイ・リー博士が共同創業した企業で、1億ドル規模の資金ラウンドにはNvidiaやAMDも参加しています。同社の主力製品「Marble」は、単一画像やビデオ、テキストプロンプトから空間的に一貫性のある高忠実度の対話的3D環境を生成します。技術基盤はニューラルラディアンスフィールド（NeRF）と生成型3Dモデリングで、創業者陣は計算機ビジョン、NeRF研究、ニューラルレンダリングの第一人者たちです。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>Marblebが実現する能力は、AEC業界が長年求めていた「空間的推論と物理的可能性の両立」です。従来のAI生成技術は平面画像やテキスト説明に留まりましたが、本技術は幾何学、物理則、材料特性を考慮した「永続的で物理的に妥当な3D環境」を構築。Autodeskはすでにneural CADやプロダクト内AI機能を開発していますが、世界トップ級の研究機関とのアドバイザリー関係は定性的に異なる投資姿勢を示しています。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>この投資は基礎技術への長期的なベットであり、spatial AIが今すぐ実務ワークフローに統合されることを意味しません。しかし、建築家や構造エンジニア、設計者にとって、Marbleの対話的3D生成がやがて設計プロセスを本質的に拡張する可能性は高い。特にBIM環境での初期設計フェーズ、複雑な空間関係の検証、施工性の判断において、空間推論能力を持つAIの活用が現実化すれば、設計生産性と創造性の両立が進むと予想されます。</p></div>
           </div>
           <div class="source-box">

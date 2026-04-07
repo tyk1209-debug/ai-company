@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: AI in AEC: why better decisions matter more than faster tools</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>これまでAEC業界のAI活用は、ドキュメント自動化や調整の加速、反復作業の削減など「効率化」に集中してきました。しかし、建築・エンジニアリング業界は今、より複雑で高性能な建物やインフラを、より少ない人員、厳しい予算、高まる持続可能性要求のもとで納める必要に直面しています。オーナーと社会は、実装後も長期的にパフォーマンスを発揮し、設計と実現の間にズレのないプロジェクトを期待します。Autodeskのエグゼクティブ・バイス・プレジデント、Amy Bunszel氏は、2026年以降のAIの価値は「速さ」ではなく、プロジェクト全体を通じた「より良い意思決定と創造性の解放」にあると指摘しています。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>初期段階の意思決定が最終的なプロジェクト成果を大きく左右する時代へシフトしています。従来は仮の判断とされていた敷地戦略、マッシング仮定、工程仮定が、後の段階で修正する余地がほぼなくなるほどの制約下で実行されるようになりました。AIは敷地条件、環境要因、システムパフォーマンス、施工性などのプロジェクトデータに適用され、意思決定が確定する前に選択肢のトレードオフを検証できます。2026年に期待されるのは、AIが初期デザイン探索から詳細な建物定義まで、意図の連続性を保ちながら進化させる支援です。これは概念設計と技術定義の間にある引き継ぎプロセスを革新し、空間的判断、システムロジック、パフォーマンス期待値を一貫性のある形で詳細化していきます。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>データ連続性がAIの信頼性を支える基盤になります。建築家、エンジニア、建設業者が同一のプロジェクトデータから共有分析・シミュレーションを日常的に実施できる環境が求められます。エネルギー使用量、材料影響、工程スケジューリング、気候リスク露出などを早期段階で継続的に評価でき、施工性と スケジュール配慮が設計段階から組み込まれるようになります。IFC等の相互運用性スタンダードと連動したプロジェクトデータ基盤が、マルチディシプリン間の透明性を実現するための必須インフラです。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>後工程への問題先送りが減少し、プロジェクト後期の大規模設計修正や軌道修正が削減されます。初期段階の設計意図が共有データに基づいき検証された仮定で立案されていれば、それが施工可能性と運用性のある実現可能な解決策に直結する信頼が生まれます。チーム横断的な意思決定プロセスの統合により、従来は部門別に引き継がれていた課題が早期段階で解決され、より迅速で堅牢なプロジェクト納入が可能になります。</p></div>
           </div>
           <div class="source-box">

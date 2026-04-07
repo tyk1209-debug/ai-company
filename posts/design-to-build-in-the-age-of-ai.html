@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Design-to-build in the age of AI</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>AIが実験段階から運用段階へ移行する中で、建設・設計ソフトウェア企業はデータ主権、モデルの法的責任、クラウドアーキテクチャ、プラットフォーム戦略といった問題で厳しい検証にさらされています。こうした業界の転換期において、構造設計から出発したAllplanは、「オープン性」「データ主権」「統制されたAI採用」を軸に、デザインから施工までを統合するプラットフォームへの進化を続けています。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>AllplanのCEOスニール・パンディタ氏によれば、同社は三つの重要な転機を経験しました。第一がopenBIMへの早期コミット。これにより同社は単なる機能としてではなく、相互運用性を戦略的原則として位置付けました。第二が構造解析・設計ツール（Sciaやfrilo）との統合。これにより設計と検証の境界が崩れ、継続的な設計ループの一部となりました。第三が詳細設計、製造、施工ワークフロー（Precast、SDS2、Manufacton）への展開。これにより幾何学情報だけでなく、設計意図が製造・施工現場まで忠実に流通する環境が実現しました。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>Allplanが注視しているのは、単なるBIM交換ではなく「セマンティック・リッチネス」と双方向ワークフローです。IFCなどの中立フォーマットで幾何情報をやり取りするだけでは、現代プロジェクトの複雑なニーズに応えられません。むしろ設計意図をモデルに組み込み、それが施工段階、製造段階でも保持・拡張される必要があります。AIはこの情報流通の自動化と品質保証に活用される方向です。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>このアプローチは構造設計から施工・製造まで一貫したデータフロー文化を業界に促します。従来のように各段階で情報が失われたり改変されたりする非効率が減少し、変更管理や品質トレーサビリティが向上します。また、公共案件で要求される透明性とニュートラリティを保ちながらも、ベンダーロックインを避ける道が示されたことで、発注者側の選択肢も拡大します。ただしセマンティック交換の実装はまだ発展途上であり、業界全体での標準化の推進が課題です。</p></div>
           </div>
           <div class="source-box">

@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Cityweft adds 3D building data for England</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>建築設計やまちづくり計画において、周辺建物の正確な3次元情報を早期段階で把握することは、都市スケールでの検討や環境解析に不可欠です。しかし従来は推定データや古い情報に頼ることが多く、リアルな敷地状況の反映に課題がありました。英国ではDEFRA（環境・食糧・農村地域省）が2022～2025年にかけて高精度LiDAR測量を実施し、膨大な建物高さデータを取得していました。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>CityweftはこのLiDARベースの建物高さデータセットをWeb上のプラットフォームに統合し、ロンドン、マンチェスター、バーミンガム、グラスゴー、ブリストルなど主要都市をカバーしました。ユーザーはRhinoプラグイン経由でモデルをエクスポート可能で、RevitおよびSketchUP対応も近日中に実装予定です。データはCityweft APIを通じてもアクセス可能で、初期段階のマッシング検討、可行性調査、計画提案、ステークホルダー説明資料、コンペ案作成などに活用できます。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>LiDAR由来のデータは従来の高さ推定値より格段に精密で、建物の複雑な形状や屋根形態まで正確に捉えます。Web プラットフォームを介した配信とCAD/BIMソフトとの直接連携（プラグイン化）により、設計ワークフロー中にシームレスに周辺コンテキストを参照できます。APIアクセスにより、データドリブンな設計自動化ツール開発も可能になります。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>都市設計やサイトマッシング検討の精度が飛躍的に向上し、日射解析や視認性検討などの環境シミュレーション精度も高まります。リアルなサイトコンテキストを持つ提案ビジュアルは、クライアントやステークホルダーの意思決定を加速させます。BIM導入の進むUK市場では、このような公開データベースとCAD/BIMの統合が標準化の流れとなり、他国での同様の取り組みも加速する可能性があります。</p></div>
           </div>
           <div class="source-box">

@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Why GPU memory matters for CAD, viz and AI</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>GPUの性能というと、コア数やクロック速度、レイトレーシング性能に目が向きがちです。しかし、CAD・BIM・ビジュアライゼーション・AI ワークフローにおいて、実際のボトルネックはしばしば GPU メモリ容量です。業界が扱うモデルの複雑度が増し、リアルタイムレンダリングや AI 処理が日常化する中、メモリ不足による処理停止は深刻な生産性低下につながっています。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>GPU メモリは幾何学データ、テクスチャ、ライティング情報を保存する領域です。メモリが満杯になると、システム RAM へのページングが始まり、処理速度が劇的に低下します。CAD・BIM では 8GB の GPU でも基本的な作業は可能ですが、4K 表示やリアルビューモード有効化で負荷が増します。一方、Twinmotion・Unreal Engine などのビジュアライゼーション環境では、高解像度テクスチャ、動的シャドウ、複雑な植生が合わさると 20GB 以上のメモリを消費します。小規模住宅プロジェクトで 4～6GB 、大規模都市シーンで 20GB 超という差が生じます。さらに AI 画像生成（Stable Diffusion・Flux）では、さらに深刻な メモリ飢餓 状態が発生します。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>プロフェッショナル GPU（RTX A1000～RTX Pro 4000 Blackwell）が 16GB～24GB のメモリを搭載する理由は、フレームレートの「崖落ち」を防ぐためです。メモリ不足時、リアルタイム表示は 60FPS から 1～2FPS へと急落し、操作不可能になります。レンダリング時はさらに悪化し、警告なく処理が重くなり、やがてクラッシュします。将来的に CAD・BIM がモダン Graphics API を採用し、レイトレーシングが標準化すれば、8GB は限界に達するでしょう。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>設計現場では、GPU メモリ容量の選定が単なる仕様選択ではなく、プロジェクト納期に直結する経営判断になります。メモリ不足による クラッシュ や レンダリング失敗 は、クライアント対応の遅延やリework を招きます。特にビジュアライゼーション・AI 統合ワークフロー導入時には、従来の 8GB では不十分です。今後、設計企業は GPU メモリ容量を「今の案件に合わせる」から「将来の拡張に備える」戦略へシフトせざるを得なくなります。</p></div>
           </div>
           <div class="source-box">

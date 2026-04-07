@@ -456,8 +456,8 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -515,12 +515,19 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -532,15 +539,29 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -1252,7 +1273,19 @@ function buildArticlePage(post, allPosts) {
   const bodyText = post.bodyJa || post.postText || post.summary || '';
   const readingMinutes = Math.max(1, Math.ceil(bodyText.length / 500));
   const bodyJaParagraphs = post.bodyJa
-    ? post.bodyJa.split(/\n+/).filter(s => s.trim()).map(s => `<p>${escape(s.trim())}</p>`).join('\n')
+    ? post.bodyJa.split(/\n+/).filter(s => s.trim()).map(s => {
+        const trimmed = s.trim();
+        // 【XXX】だけの行 → セクション見出し
+        if (/^【[^】]+】$/.test(trimmed)) {
+          return `<div class="ai-section-header"><span class="ai-section-label">${escape(trimmed)}</span></div>`;
+        }
+        // 【XXX】テキスト が同じ行にある場合
+        const m = trimmed.match(/^(【[^】]+】)(.+)$/);
+        if (m) {
+          return `<div class="ai-section-header"><span class="ai-section-label">${escape(m[1])}</span></div><p>${escape(m[2].trim())}</p>`;
+        }
+        return `<p>${escape(trimmed)}</p>`;
+      }).join('\n')
     : '';
   const bodyContent = post.bodyJa
     ? `<div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary">${bodyJaParagraphs}</div>`

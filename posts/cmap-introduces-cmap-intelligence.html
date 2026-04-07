@@ -378,8 +378,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -437,12 +437,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -454,15 +461,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -815,13 +836,13 @@
         <div class="article-detail">
           <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: CMap introduces CMap intelligence</p>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
 <p>AEC業界では、AI導入の必要性が認識される一方で、既存の設計・プロジェクト管理プロセスとの統合に課題を抱える企業が多くいます。多くのツールがAIを単体機能として提供する傾向がある中、CMapはこうした課題に対して、既に定着している業務プロセスに直接AIを埋め込むアプローチを採用しました。</p>
-<p>【内容】</p>
+<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
 <p>CMapは「CMap intelligence」を発表しました。これは営業、納期管理、オペレーション、財務、管理部門など、プロフェッショナルサービス企業の中核機能に対応した複数の「インテリジェンスエージェント」を含みます。特にOperations Agentは、確立されたワークフロー内でリアルタイムの運用インサイトを提供し、キャパシティ管理、リソース配分、納期管理を支援します。また、Model Context Protocol（MCP）を使用することで、CMapと他のサードパーティシステムを社内LLMに安全に接続し、クロスプラットフォームでの豊かなインサイト生成が可能になります。</p>
-<p>【技術的ポイント】</p>
+<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
 <p>CMap intelligenceの特徴は、スタンドアロンのAIツールではなく、既存プロセスへの統合に力点を置いている点です。Model Context Protocolの採用により、異なるシステム間での統合が標準化され、エンタープライズセキュリティを保ちながら、複数プラットフォーム間のデータ連携が実現します。これにより、BIM・CAD・プロジェクト管理システム間での統合的な意思決定支援が可能になります。</p>
-<p>【業界への影響】</p>
+<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
 <p>設計・建設企業は、新しいAIツールの導入に伴う業務フロー変更のコストを削減できます。既存のCMapプロセスに統合されたAIは、チームが慣れたインターフェース内で動作するため、ユーザー教育の負担も軽減されます。CEOのJon Steadは「企業は単なるAIではなく、明確な価値提供を求めている」とコメントしており、今後のロードマップでは各CMapコア製品にAI機能が段階的に統合される予定です。これにより、プロジェクト管理から納期予測まで、意思決定の質が向上することが期待されます。</p></div>
           </div>
           <div class="source-box">

@@ -1088,7 +1088,6 @@ function buildIndex(posts, totalCount = 0) {
     '.',
     websiteJsonLd
   ) +
-    htmlHeader() +
     `
   <section class="hero">
     <div class="hero-inner">
@@ -1203,7 +1202,6 @@ function buildArticlePage(post, allPosts) {
     '..',
     newsArticleJsonLd
   ) +
-    htmlHeader('..') +
     `
   <div class="container">
     <main class="main-content">
@@ -1303,7 +1301,6 @@ function buildPrivacyPage() {
     `${SITE_NAME}のプライバシーポリシーです。`,
     `${SITE_URL}/privacy.html`
   ) +
-    htmlHeader() +
     `
   <div class="container">
     <main class="main-content">
@@ -1351,7 +1348,6 @@ function buildAboutPage() {
     `${SITE_NAME}の運営者情報です。`,
     `${SITE_URL}/about.html`
   ) +
-    htmlHeader() +
     `
   <div class="container">
     <main class="main-content">
@@ -1436,7 +1432,6 @@ function buildCategoryPage(category, posts) {
     : '';
 
   return htmlHead(pageTitle, pageDesc, canonicalUrl, '..') +
-    htmlHeader('..') +
     `
   <div class="container">
     <main class="main-content">
@@ -1539,7 +1534,6 @@ function buildEventsPage(events) {
     'BIM・AEC・建設DX関連の日本開催イベント・セミナー情報',
     `${SITE_URL}/events.html`
   ).replace('</style>', eventStyles + '\n  </style>') +
-    htmlHeader('.') +
     `
   <div class="events-hero">
     <h1>イベント情報</h1>

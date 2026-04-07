@@ -1111,11 +1111,7 @@ function buildIndex(posts, totalCount = 0) {
   <div class="container">
     <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
       <main>
-        <h2 class="section-title">注目記事</h2>
-        <div class="featured-grid">
-          ${featuredCards}
-        </div>
-        <h2 class="section-title latest-section-title">最新ニュース</h2>
+        <h2 class="section-title">最新ニュース</h2>
         <div class="article-list">
           ${cards}
         </div>

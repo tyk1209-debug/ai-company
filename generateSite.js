@@ -551,6 +551,96 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     }
     .breadcrumb a { color: var(--text-muted); }
 
+    /* ---- article hero ---- */
+    .article-hero {
+      color: var(--white);
+      padding: 3rem 1.5rem 2.5rem;
+    }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .article-hero-breadcrumb {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1rem;
+    }
+    .article-hero-breadcrumb a { color: rgba(255,255,255,0.5); }
+    .article-hero-breadcrumb a:hover { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .article-hero-badge {
+      display: inline-block;
+      background: rgba(37,99,235,0.3);
+      border: 1px solid rgba(96,165,250,0.4);
+      color: #93c5fd;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 0.2rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+    .article-hero-title {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 800;
+      line-height: 1.35;
+      color: #fff;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+    .article-hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.58);
+    }
+    .article-hero-meta-sep { color: rgba(255,255,255,0.25); }
+
+    /* ---- article share row ---- */
+    .article-share-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .share-btn-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #1d9bf0;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.55rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .share-btn-large:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
+    .back-btn { font-size: 0.875rem; color: var(--text-muted); }
+    .back-btn:hover { color: var(--blue); }
+
+    /* ---- category hero ---- */
+    .cat-hero {
+      color: var(--white);
+      padding: 2.5rem 1.5rem;
+    }
+    .cat-hero-inner { max-width: 1200px; margin: 0 auto; }
+    .cat-hero-breadcrumb {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.75rem;
+    }
+    .cat-hero-breadcrumb a { color: rgba(255,255,255,0.5); }
+    .cat-hero-breadcrumb a:hover { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .cat-hero-title {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .cat-hero-count { font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+
     /* ---- static pages ---- */
     .static-page {
       background: var(--white);
@@ -920,14 +1010,14 @@ const THUMB_GRADIENTS = {
   BIM_ECOSYSTEM: 'linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%)',
 };
 
-function thumbStyle(catKey) {
+function thumbStyle(catKey, base = '.') {
   const img = THUMB_IMAGES[catKey];
   const grad = THUMB_GRADIENTS[catKey] || 'linear-gradient(135deg, rgba(30,58,95,0.7) 0%, rgba(37,99,235,0.7) 100%)';
   if (img) {
-    return `background: ${grad}, url('${img}') center/cover no-repeat;`;
+    return `background: ${grad}, url('${img.replace('./assets/', base + '/assets/')}') center/cover no-repeat;`;
   }
   // プレースホルダー画像
-  return `background: ${grad}, url('./assets/Getting-real-about-technology-part-1.webp') center/cover no-repeat;`;
+  return `background: ${grad}, url('${base}/assets/Getting-real-about-technology-part-1.webp') center/cover no-repeat;`;
 }
 
 function buildIndex(posts, totalCount = 0) {
@@ -1127,21 +1217,37 @@ function buildRelatedArticles(post, allPosts) {
     .filter((p) => p.slug !== post.slug && p.category === post.category)
     .slice(0, 3);
   if (related.length === 0) return '';
-  const items = related.map((p) => `
-          <li class="related-item">
+  const cards = related.map((p) => {
+    const catKey = (p.category || 'OTHER').toUpperCase();
+    const ts = thumbStyle(catKey, '..');
+    const snip = excerpt(p.bodyJa || p.postText || p.summary || '', 80);
+    return `
+      <article class="article-card">
+        <div class="card-thumb" style="${ts}">
+          <div class="card-thumb-badge"><span class="badge">${escape(categoryLabel(p.category))}</span></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title" style="font-size:0.95rem;">
             <a href="../posts/${escape(p.slug)}.html">${escape(p.titleJa || p.title)}</a>
-            <span class="related-date">${escape(formatDate(p.pubDate))}</span>
-          </li>`).join('');
+          </h3>
+          <p class="card-excerpt">${escape(snip)}</p>
+          <div class="card-footer">
+            <div class="card-meta-info"><span>${escape(p.source || '')}</span><span class="card-meta-sep">·</span><span>${escape(formatDate(p.pubDate))}</span></div>
+            <a class="card-read-more" href="../posts/${escape(p.slug)}.html">続きを読む →</a>
+          </div>
+        </div>
+      </article>`;
+  }).join('');
   return `
       <div class="related-articles">
-        <h2 class="related-title">関連記事</h2>
-        <ul class="related-list">${items}
-        </ul>
+        <h2 class="section-title" style="margin-top:2.5rem;">関連記事</h2>
+        <div class="article-list">${cards}</div>
       </div>`;
 }
 
 function buildArticlePage(post, allPosts) {
   const catLabel = categoryLabel(post.category);
+  const catKey = (post.category || 'OTHER').toUpperCase();
   const date = formatDate(post.pubDate);
   const bodyText = post.bodyJa || post.postText || post.summary || '';
   const readingMinutes = Math.max(1, Math.ceil(bodyText.length / 500));
@@ -1181,6 +1287,9 @@ function buildArticlePage(post, allPosts) {
     },
   };
 
+  const heroImg = (THUMB_IMAGES[catKey] || './assets/Getting-real-about-technology-part-1.webp').replace('./assets/', '../assets/');
+  const heroBg = `linear-gradient(135deg, rgba(10,22,40,0.84) 0%, rgba(15,42,74,0.80) 100%), url('${heroImg}') center/cover no-repeat`;
+
   return htmlHead(
     pageTitle,
     descText,
@@ -1190,75 +1299,51 @@ function buildArticlePage(post, allPosts) {
   ) +
     htmlHeader('..') +
     `
-  <div class="container">
-    <main class="main-content">
-      <nav class="breadcrumb">
-        <a href="../">ホーム</a> &rsaquo; <span>${escape(catLabel)}</span>
+  <div class="article-hero" style="background: ${heroBg};">
+    <div class="article-hero-inner">
+      <nav class="article-hero-breadcrumb">
+        <a href="../">ホーム</a> › <span>${escape(catLabel)}</span>
       </nav>
-      <div class="article-detail">
-        <h1>${escape(post.titleJa || post.title)}</h1>
-        ${post.titleJa ? `<p class="original-title">${escape(post.title)}</p>` : ''}
-        <div class="meta">
-          <span class="badge">${escape(catLabel)}</span>
-          <span>${escape(date)}</span>
-          <span>出典: ${escape(post.source || '')}</span>
-        </div>
-        <p class="reading-time">約${readingMinutes}分で読めます</p>
-        <div class="article-body">
-          ${bodyContent}
-        </div>
-        <div class="source-box">
-          元記事: <a href="${escape(post.link)}" target="_blank" rel="noopener noreferrer">${escape(post.link)}</a>
-        </div>
-        ${(() => {
-          const affiliates = getAffiliateLinks(post);
-          const links = affiliates.map(a => `
-          <a href="${escape(a.url)}" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 ${escape(a.title)} を Amazonで見る →</a>`).join('');
-          return `<div class="affiliate-box">
-          <p>※ 本記事に関連する書籍・学習リソース（広告）</p>${links}
-        </div>`;
-        })()}
-        <div style="margin-top:1.5rem;">
-          <a class="share-btn" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(SITE_URL + '/posts/' + post.slug + '.html')}" target="_blank" rel="noopener noreferrer">X でシェアする</a>
-        </div>
+      <div class="article-hero-badge">${escape(catLabel)}</div>
+      <h1 class="article-hero-title">${escape(post.titleJa || post.title)}</h1>
+      <div class="article-hero-meta">
+        <span>📅 ${escape(date)}</span>
+        <span class="article-hero-meta-sep">·</span>
+        <span>出典: ${escape(post.source || '')}</span>
+        <span class="article-hero-meta-sep">·</span>
+        <span>約${readingMinutes}分で読めます</span>
       </div>
-      ${buildRelatedArticles(post, allPosts)}
-    </main>
+    </div>
   </div>
-  <style>
-    .related-articles {
-      margin-top: 2rem;
-    }
-    .related-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--navy);
-      border-left: 4px solid var(--blue);
-      padding-left: 0.75rem;
-      margin-bottom: 1rem;
-    }
-    .related-list {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      gap: 0.75rem;
-    }
-    .related-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--blue-light);
-      border-radius: 6px;
-      padding: 0.75rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.875rem;
-    }
-    .related-item a { color: var(--text); font-weight: 600; }
-    .related-item a:hover { color: var(--blue); text-decoration: none; }
-    .related-date { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; }
-  </style>
+  <div class="container">
+    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
+      <main>
+        <div class="article-detail">
+          ${post.titleJa ? `<p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: ${escape(post.title)}</p>` : ''}
+          <div class="article-body">
+            ${bodyContent}
+          </div>
+          <div class="source-box">
+            元記事: <a href="${escape(post.link)}" target="_blank" rel="noopener noreferrer">${escape(post.link)}</a>
+          </div>
+          ${(() => {
+            const affiliates = getAffiliateLinks(post);
+            const links = affiliates.map(a => `
+            <a href="${escape(a.url)}" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 ${escape(a.title)} を Amazonで見る →</a>`).join('');
+            return `<div class="affiliate-box">
+            <p>※ 本記事に関連する書籍・学習リソース（広告）</p>${links}
+          </div>`;
+          })()}
+          <div class="article-share-row">
+            <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(SITE_URL + '/posts/' + post.slug + '.html')}" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
+            <a class="back-btn" href="../">← 記事一覧に戻る</a>
+          </div>
+        </div>
+        ${buildRelatedArticles(post, allPosts)}
+      </main>
+      ${buildSidebar(allPosts, '..')}
+    </div>
+  </div>
   <script>
     (function() {
       var fired = false;
@@ -1388,7 +1473,7 @@ function buildCategoryPage(category, posts) {
     const date = formatDate(post.pubDate);
     const snippetText = post.bodyJa || post.postText || post.summary || '';
     const snip = excerpt(snippetText, 100);
-    const ts3 = thumbStyle(catKey);
+    const ts3 = thumbStyle(catKey, '..');
 
     return `
       <article class="article-card">
@@ -1420,20 +1505,33 @@ function buildCategoryPage(category, posts) {
     ? '<p style="color:var(--text-muted);padding:2rem 0;">このカテゴリの記事はまだありません。</p>'
     : '';
 
+  const catKey2 = category.toUpperCase();
+  const catImg2 = (THUMB_IMAGES[catKey2] || './assets/Getting-real-about-technology-part-1.webp').replace('./assets/', '../assets/');
+  const catGrad2 = THUMB_GRADIENTS[catKey2] || 'linear-gradient(135deg, rgba(30,58,95,0.65) 0%, rgba(37,99,235,0.65) 100%)';
+  const catHeroBg = `linear-gradient(135deg, rgba(10,22,40,0.80) 0%, rgba(10,22,40,0.72) 100%), ${catGrad2}, url('${catImg2}') center/cover no-repeat`;
+
   return htmlHead(pageTitle, pageDesc, canonicalUrl, '..') +
     htmlHeader('..') +
     `
-  <div class="container">
-    <main class="main-content">
-      <nav class="breadcrumb">
-        <a href="../">ホーム</a> &rsaquo; <span>${escape(label)}</span>
+  <div class="cat-hero" style="background: ${catHeroBg};">
+    <div class="cat-hero-inner">
+      <nav class="cat-hero-breadcrumb">
+        <a href="../">ホーム</a> › <span>${escape(label)}</span>
       </nav>
-      <h2 class="section-title">${escape(label)} の記事一覧（${catPosts.length}件）</h2>
-      ${emptyMsg}
-      <div class="article-list">
-        ${cards}
-      </div>
-    </main>
+      <h1 class="cat-hero-title">${escape(label)}</h1>
+      <p class="cat-hero-count">${catPosts.length}件の記事</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
+      <main>
+        ${emptyMsg}
+        <div class="article-list">
+          ${cards}
+        </div>
+      </main>
+      ${buildSidebar(posts, '..')}
+    </div>
   </div>` +
     htmlFooter('..', catPosts.length);
 }

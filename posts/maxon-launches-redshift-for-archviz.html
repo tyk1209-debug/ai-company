@@ -473,6 +473,96 @@
     }
     .breadcrumb a { color: var(--text-muted); }
 
+    /* ---- article hero ---- */
+    .article-hero {
+      color: var(--white);
+      padding: 3rem 1.5rem 2.5rem;
+    }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .article-hero-breadcrumb {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1rem;
+    }
+    .article-hero-breadcrumb a { color: rgba(255,255,255,0.5); }
+    .article-hero-breadcrumb a:hover { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .article-hero-badge {
+      display: inline-block;
+      background: rgba(37,99,235,0.3);
+      border: 1px solid rgba(96,165,250,0.4);
+      color: #93c5fd;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 0.2rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+    .article-hero-title {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 800;
+      line-height: 1.35;
+      color: #fff;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+    .article-hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.58);
+    }
+    .article-hero-meta-sep { color: rgba(255,255,255,0.25); }
+
+    /* ---- article share row ---- */
+    .article-share-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .share-btn-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #1d9bf0;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.55rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .share-btn-large:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
+    .back-btn { font-size: 0.875rem; color: var(--text-muted); }
+    .back-btn:hover { color: var(--blue); }
+
+    /* ---- category hero ---- */
+    .cat-hero {
+      color: var(--white);
+      padding: 2.5rem 1.5rem;
+    }
+    .cat-hero-inner { max-width: 1200px; margin: 0 auto; }
+    .cat-hero-breadcrumb {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.75rem;
+    }
+    .cat-hero-breadcrumb a { color: rgba(255,255,255,0.5); }
+    .cat-hero-breadcrumb a:hover { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .cat-hero-title {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .cat-hero-count { font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+
     /* ---- static pages ---- */
     .static-page {
       background: var(--white);
@@ -703,22 +793,29 @@
       </a>
     </div>
   </header>
-  <div class="container">
-    <main class="main-content">
-      <nav class="breadcrumb">
-        <a href="../">ホーム</a> &rsaquo; <span>Revit</span>
+  <div class="article-hero" style="background: linear-gradient(135deg, rgba(10,22,40,0.84) 0%, rgba(15,42,74,0.80) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+    <div class="article-hero-inner">
+      <nav class="article-hero-breadcrumb">
+        <a href="../">ホーム</a> › <span>Revit</span>
       </nav>
-      <div class="article-detail">
-        <h1>Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ</h1>
-        <p class="original-title">Maxon launches RedShift for Archviz</p>
-        <div class="meta">
-          <span class="badge">Revit</span>
-          <span>2026年3月18日</span>
-          <span>出典: AEC Magazine</span>
-        </div>
-        <p class="reading-time">約3分で読めます</p>
-        <div class="article-body">
-          <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
+      <div class="article-hero-badge">Revit</div>
+      <h1 class="article-hero-title">Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ</h1>
+      <div class="article-hero-meta">
+        <span>📅 2026年3月18日</span>
+        <span class="article-hero-meta-sep">·</span>
+        <span>出典: AEC Magazine</span>
+        <span class="article-hero-meta-sep">·</span>
+        <span>約3分で読めます</span>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
+      <main>
+        <div class="article-detail">
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Maxon launches RedShift for Archviz</p>
+          <div class="article-body">
+            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><p>【背景】</p>
 <p>建築ビジュアライゼーション市場では、高品質なレンダリング技術へのニーズが急速に高まっています。これまで建築家やインテリアデザイナーは、BIMオーサリングツール内での簡易的なプレビューと、高度なビジュアル表現のために別のソフトウェアへの切り替えを余儀なくされていました。このワークフロー分断が、設計フェーズでのビジュアルフィードバックを遅延させ、クライアント提案の効率化を阻害してきました。</p>
 <p>【内容】</p>
 <p>Maxonは、ハリウッドの映像制作で広く使用されている「RedShift」レンダリングエンジンを、Vectorworks・Revit・Archicadにネイティブプラグインとして統合する「RedShift for Archviz」を商用リリースしました。Vectorworksは即座に利用可能、Revitはベータリリースされており、Archicadは2026年内にベータ提供予定です。プラグインは、リアルタイムプレビュー機能を提供し、照明・マテリアル・環境効果の変更を即座に確認できます。太陽の位置や時間帯の調整、雲の被覆制御、高品質な家具・植物・キャラクターアセットの配置も可能です。物理的に正確なマテリアル（ポーリッシュコンクリート、ブラッシュメタル、ガラス、木材、テキスタイル）にも対応しています。</p>
@@ -726,69 +823,116 @@
 <p>RedShift for Archvizはネイティブプラグイン化により、BIMモデルのデータロスなく直接レンダリングできます。高度なビジュアル要求に対しては、ワンクリックでCinema 4Dへのシーン転送が可能で、フライスルーやシミュレーション処理をシームレスに実行できる点が特筆です。これにより、LOD（詳細度）を保ちながら、デザイン決定フェーズと最終プレゼンテーション用途の両立が実現します。</p>
 <p>【業界への影響】</p>
 <p>本プラグイン統合は、BIMワークフロー内でのビジュアル意思決定の迅速化をもたらします。建築家は設計検討の段階から「映画並みの」クオリティのレンダリングを参照でき、クライアント提案資料の作成時間を大幅短縮できます。現場での材料・採光検証もデジタル環境で先行実施可能になり、プロジェクト全体の効率向上が見込まれます。また、大量のビジュアルワークを抱える建築事務所にとって、Cinema 4D等への外部依存を削減し、内製化による競争力強化の道が開かれます。</p></div>
+          </div>
+          <div class="source-box">
+            元記事: <a href="https://aecmag.com/visualisation/maxon-launches-redshift-for-archviz" target="_blank" rel="noopener noreferrer">https://aecmag.com/visualisation/maxon-launches-redshift-for-archviz</a>
+          </div>
+          <div class="affiliate-box">
+            <p>※ 本記事に関連する書籍・学習リソース（広告）</p>
+            <a href="https://www.amazon.co.jp/s?k=Revit+BIM&amp;tag=aecnewsjapan-22" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 Autodesk Revit公式ガイド を Amazonで見る →</a>
+            <a href="https://www.amazon.co.jp/s?k=Archicad&amp;tag=aecnewsjapan-22" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 Archicad完全ガイド を Amazonで見る →</a>
+          </div>
+          <div class="article-share-row">
+            <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=Maxon%E3%80%8CRedShift%20for%20Archviz%E3%80%8D%E3%80%81Revit%E3%83%BBArchicad%E3%83%BBVectorworks%E3%81%A7%E5%AE%9F%E8%A3%85%E3%81%B8&url=https%3A%2F%2Faec-news.com%2Fposts%2Fmaxon-launches-redshift-for-archviz.html" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
+            <a class="back-btn" href="../">← 記事一覧に戻る</a>
+          </div>
         </div>
-        <div class="source-box">
-          元記事: <a href="https://aecmag.com/visualisation/maxon-launches-redshift-for-archviz" target="_blank" rel="noopener noreferrer">https://aecmag.com/visualisation/maxon-launches-redshift-for-archviz</a>
-        </div>
-        <div class="affiliate-box">
-          <p>※ 本記事に関連する書籍・学習リソース（広告）</p>
-          <a href="https://www.amazon.co.jp/s?k=Revit+BIM&amp;tag=aecnewsjapan-22" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 Autodesk Revit公式ガイド を Amazonで見る →</a>
-          <a href="https://www.amazon.co.jp/s?k=Archicad&amp;tag=aecnewsjapan-22" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 Archicad完全ガイド を Amazonで見る →</a>
-        </div>
-        <div style="margin-top:1.5rem;">
-          <a class="share-btn" href="https://twitter.com/intent/tweet?text=Maxon%E3%80%8CRedShift%20for%20Archviz%E3%80%8D%E3%80%81Revit%E3%83%BBArchicad%E3%83%BBVectorworks%E3%81%A7%E5%AE%9F%E8%A3%85%E3%81%B8&url=https%3A%2F%2Faec-news.com%2Fposts%2Fmaxon-launches-redshift-for-archviz.html" target="_blank" rel="noopener noreferrer">X でシェアする</a>
-        </div>
-      </div>
-      
+        
       <div class="related-articles">
-        <h2 class="related-title">関連記事</h2>
-        <ul class="related-list">
-          <li class="related-item">
+        <h2 class="section-title" style="margin-top:2.5rem;">関連記事</h2>
+        <div class="article-list">
+      <article class="article-card">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(14,165,233,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+          <div class="card-thumb-badge"><span class="badge">Revit</span></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title" style="font-size:0.95rem;">
             <a href="../posts/revitbim.html">Revitファミリの階層構造を完全解説：カテゴリからインスタンスまでの実務ガイド</a>
-            <span class="related-date">2026年2月18日</span>
-          </li>
-          <li class="related-item">
+          </h3>
+          <p class="card-excerpt">【背景】 RevitによるBIM実装が建設業界で急速に広がる中、ファミリの正確な理解がモデルの品質と運用効率を左右する重要な要素として認識されています。多くのユ…</p>
+          <div class="card-footer">
+            <div class="card-meta-info"><span>BIMゲート</span><span class="card-meta-sep">·</span><span>2026年2月18日</span></div>
+            <a class="card-read-more" href="../posts/revitbim.html">続きを読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(14,165,233,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+          <div class="card-thumb-badge"><span class="badge">Revit</span></div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title" style="font-size:0.95rem;">
             <a href="../posts/cityweft-adds-3d-building-data-for-england.html">イングランド全域の3D建物データがBIM/CADに統合、LiDARで正確な高さ情報を実装</a>
-            <span class="related-date">2026年1月23日</span>
-          </li>
-        </ul>
+          </h3>
+          <p class="card-excerpt">【背景】 建築設計やまちづくり計画において、周辺建物の正確な3次元情報を早期段階で把握することは、都市スケールでの検討や環境解析に不可欠です。しかし従来は推定デ…</p>
+          <div class="card-footer">
+            <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年1月23日</span></div>
+            <a class="card-read-more" href="../posts/cityweft-adds-3d-building-data-for-england.html">続きを読む →</a>
+          </div>
+        </div>
+      </article></div>
       </div>
-    </main>
+      </main>
+      
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">人気記事</div>
+        <ul class="sidebar-popular-list"><li>
+      <a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">
+        <span class="sidebar-rank">1</span>Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新
+      </a>
+    </li><li>
+      <a href="../posts/embodied-carbon-calcs-for-bim-objects.html">
+        <span class="sidebar-rank">2</span>BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開
+      </a>
+    </li><li>
+      <a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">
+        <span class="sidebar-rank">3</span>ノートルダムからフォーリングウォーターまで、BIM×デジタルツインで文化遺産保存の新時代へ
+      </a>
+    </li><li>
+      <a href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">
+        <span class="sidebar-rank">4</span>Autodesk Construction Cloud改名、Formaへ統合。設計から施工まで一元化へ
+      </a>
+    </li><li>
+      <a href="../posts/maxon-launches-redshift-for-archviz.html">
+        <span class="sidebar-rank">5</span>Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ
+      </a>
+    </li></ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">カテゴリ一覧</div>
+        <ul class="sidebar-category-list"><li><a href="../">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../">BIM×AI</a><span class="sidebar-category-count">4</span></li><li><a href="../">Revit</a><span class="sidebar-category-count">3</span></li><li><a href="../">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">このサイトについて</div>
+        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新情報をAIが日本語で解説する専門メディアです。Revit・Archicad・Vectorworksなど主要BIMソフトから建設テック全般の最新動向をお届けします。</p>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">最新記事</div>
+        <ul class="sidebar-recent-list"><li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新</a></li><li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開</a></li><li><a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダムからフォーリングウォーターまで、BIM×デジタルツインで文化遺産保存の新時代へ</a></li><li><a href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">Autodesk Construction Cloud改名、Formaへ統合。設計から施工まで一元化へ</a></li><li><a href="../posts/maxon-launches-redshift-for-archviz.html">Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ</a></li></ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">カテゴリ別おすすめ</div>
+        <ul class="sidebar-recent-list">
+            <li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">AI/DX</span>Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新
+            </a></li>
+            <li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">BIM全般</span>BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開
+            </a></li>
+            <li><a href="../posts/maxon-launches-redshift-for-archviz.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">Revit</span>Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ
+            </a></li>
+            <li><a href="../posts/the-agentic-future-of-bim.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">BIM×AI</span>AI エージェントがBIMを革命する、5年で業界激変の可能性
+            </a></li>
+            <li><a href="../posts/gloobebim.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">GLOOBE</span>GLOOBEのBIMオブジェクト3種類、法規チェックから高精度パースまで
+            </a></li></ul>
+      </div>
+    </aside>
+    </div>
   </div>
-  <style>
-    .related-articles {
-      margin-top: 2rem;
-    }
-    .related-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--navy);
-      border-left: 4px solid var(--blue);
-      padding-left: 0.75rem;
-      margin-bottom: 1rem;
-    }
-    .related-list {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      gap: 0.75rem;
-    }
-    .related-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--blue-light);
-      border-radius: 6px;
-      padding: 0.75rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.875rem;
-    }
-    .related-item a { color: var(--text); font-weight: 600; }
-    .related-item a:hover { color: var(--blue); text-decoration: none; }
-    .related-date { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; }
-  </style>
   <script>
     (function() {
       var fired = false;

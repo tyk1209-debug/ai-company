@@ -472,6 +472,96 @@
     }
     .breadcrumb a { color: var(--text-muted); }
 
+    /* ---- article hero ---- */
+    .article-hero {
+      color: var(--white);
+      padding: 3rem 1.5rem 2.5rem;
+    }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .article-hero-breadcrumb {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1rem;
+    }
+    .article-hero-breadcrumb a { color: rgba(255,255,255,0.5); }
+    .article-hero-breadcrumb a:hover { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .article-hero-badge {
+      display: inline-block;
+      background: rgba(37,99,235,0.3);
+      border: 1px solid rgba(96,165,250,0.4);
+      color: #93c5fd;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 0.2rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+    .article-hero-title {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 800;
+      line-height: 1.35;
+      color: #fff;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+    .article-hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.58);
+    }
+    .article-hero-meta-sep { color: rgba(255,255,255,0.25); }
+
+    /* ---- article share row ---- */
+    .article-share-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .share-btn-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #1d9bf0;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.55rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .share-btn-large:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
+    .back-btn { font-size: 0.875rem; color: var(--text-muted); }
+    .back-btn:hover { color: var(--blue); }
+
+    /* ---- category hero ---- */
+    .cat-hero {
+      color: var(--white);
+      padding: 2.5rem 1.5rem;
+    }
+    .cat-hero-inner { max-width: 1200px; margin: 0 auto; }
+    .cat-hero-breadcrumb {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.75rem;
+    }
+    .cat-hero-breadcrumb a { color: rgba(255,255,255,0.5); }
+    .cat-hero-breadcrumb a:hover { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .cat-hero-title {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .cat-hero-count { font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+
     /* ---- static pages ---- */
     .static-page {
       background: var(--white);
@@ -702,17 +792,23 @@
       </a>
     </div>
   </header>
-  <div class="container">
-    <main class="main-content">
-      <nav class="breadcrumb">
-        <a href="../">ホーム</a> &rsaquo; <span>BIM全般</span>
+  <div class="cat-hero" style="background: linear-gradient(135deg, rgba(10,22,40,0.80) 0%, rgba(10,22,40,0.72) 100%), linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+    <div class="cat-hero-inner">
+      <nav class="cat-hero-breadcrumb">
+        <a href="../">ホーム</a> › <span>BIM全般</span>
       </nav>
-      <h2 class="section-title">BIM全般 の記事一覧（17件）</h2>
-      
-      <div class="article-list">
+      <h1 class="cat-hero-title">BIM全般</h1>
+      <p class="cat-hero-count">17件の記事</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
+      <main>
         
+        <div class="article-list">
+          
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -731,7 +827,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -750,7 +846,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -769,7 +865,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -788,7 +884,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -807,7 +903,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -826,7 +922,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -845,7 +941,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -864,7 +960,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -883,7 +979,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -902,7 +998,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -921,7 +1017,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -940,7 +1036,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -959,7 +1055,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -978,7 +1074,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -997,7 +1093,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1016,7 +1112,7 @@
         </div>
       </article>
       <article class="article-card">
-        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('./assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+        <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
           <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
         </div>
         <div class="card-body">
@@ -1034,8 +1130,67 @@
           </div>
         </div>
       </article>
+        </div>
+      </main>
+      
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">人気記事</div>
+        <ul class="sidebar-popular-list"><li>
+      <a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">
+        <span class="sidebar-rank">1</span>Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新
+      </a>
+    </li><li>
+      <a href="../posts/embodied-carbon-calcs-for-bim-objects.html">
+        <span class="sidebar-rank">2</span>BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開
+      </a>
+    </li><li>
+      <a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">
+        <span class="sidebar-rank">3</span>ノートルダムからフォーリングウォーターまで、BIM×デジタルツインで文化遺産保存の新時代へ
+      </a>
+    </li><li>
+      <a href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">
+        <span class="sidebar-rank">4</span>Autodesk Construction Cloud改名、Formaへ統合。設計から施工まで一元化へ
+      </a>
+    </li><li>
+      <a href="../posts/maxon-launches-redshift-for-archviz.html">
+        <span class="sidebar-rank">5</span>Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ
+      </a>
+    </li></ul>
       </div>
-    </main>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">カテゴリ一覧</div>
+        <ul class="sidebar-category-list"><li><a href="../">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../">BIM×AI</a><span class="sidebar-category-count">4</span></li><li><a href="../">Revit</a><span class="sidebar-category-count">3</span></li><li><a href="../">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">このサイトについて</div>
+        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新情報をAIが日本語で解説する専門メディアです。Revit・Archicad・Vectorworksなど主要BIMソフトから建設テック全般の最新動向をお届けします。</p>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">最新記事</div>
+        <ul class="sidebar-recent-list"><li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新</a></li><li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開</a></li><li><a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダムからフォーリングウォーターまで、BIM×デジタルツインで文化遺産保存の新時代へ</a></li><li><a href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">Autodesk Construction Cloud改名、Formaへ統合。設計から施工まで一元化へ</a></li><li><a href="../posts/maxon-launches-redshift-for-archviz.html">Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ</a></li></ul>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">カテゴリ別おすすめ</div>
+        <ul class="sidebar-recent-list">
+            <li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">AI/DX</span>Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新
+            </a></li>
+            <li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">BIM全般</span>BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開
+            </a></li>
+            <li><a href="../posts/maxon-launches-redshift-for-archviz.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">Revit</span>Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ
+            </a></li>
+            <li><a href="../posts/the-agentic-future-of-bim.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">BIM×AI</span>AI エージェントがBIMを革命する、5年で業界激変の可能性
+            </a></li>
+            <li><a href="../posts/gloobebim.html">
+              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">GLOOBE</span>GLOOBEのBIMオブジェクト3種類、法規チェックから高精度パースまで
+            </a></li></ul>
+      </div>
+    </aside>
+    </div>
   </div>
   <footer class="site-footer">
     <div class="footer-nav">

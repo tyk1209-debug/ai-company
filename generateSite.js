@@ -575,53 +575,327 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     /* ---- article hero ---- */
     .article-hero {
       color: var(--white);
-      padding: 3rem 1.5rem 2.5rem;
+      padding: 3.5rem 1.5rem 3rem;
     }
-    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .article-hero-inner { max-width: 820px; margin: 0 auto; }
     .article-hero-breadcrumb {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 1rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1.25rem;
     }
-    .article-hero-breadcrumb a { color: rgba(255,255,255,0.5); }
-    .article-hero-breadcrumb a:hover { color: rgba(255,255,255,0.85); text-decoration: none; }
-    .article-hero-badge {
-      display: inline-block;
-      background: rgba(37,99,235,0.3);
-      border: 1px solid rgba(96,165,250,0.4);
-      color: #93c5fd;
+    .article-hero-breadcrumb a { color: rgba(255,255,255,0.45); }
+    .article-hero-breadcrumb a:hover { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .article-hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .article-hero-tag {
+      display: inline-flex;
+      align-items: center;
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.06em;
-      padding: 0.2rem 0.75rem;
+      padding: 0.22rem 0.85rem;
       border-radius: 20px;
-      margin-bottom: 1rem;
+    }
+    .article-hero-tag--cat {
+      background: rgba(37,99,235,0.28);
+      border: 1px solid rgba(96,165,250,0.4);
+      color: #93c5fd;
+    }
+    .article-hero-tag--source {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.65);
     }
     .article-hero-title {
-      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
       font-weight: 800;
-      line-height: 1.35;
+      line-height: 1.38;
       color: #fff;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
       letter-spacing: -0.01em;
+    }
+    .article-hero-summary {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      max-width: 620px;
     }
     .article-hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem 1rem;
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.58);
+      gap: 0.35rem 1.1rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.52);
+      margin-bottom: 1.75rem;
+      align-items: center;
     }
-    .article-hero-meta-sep { color: rgba(255,255,255,0.25); }
+    .article-hero-meta-sep { color: rgba(255,255,255,0.2); }
+    .article-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .article-hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .article-hero-btn--primary {
+      background: var(--blue);
+      color: #fff;
+    }
+    .article-hero-btn--primary:hover { background: #1d4ed8; color: #fff; text-decoration: none; }
+    .article-hero-btn--share {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.85);
+    }
+    .article-hero-btn--share:hover { background: rgba(255,255,255,0.18); color: #fff; text-decoration: none; }
 
-    /* ---- article share row ---- */
-    .article-share-row {
+    /* ---- article layout ---- */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 2.5rem;
+      align-items: start;
+      padding: 2.5rem 0 5rem;
+    }
+    .article-main { min-width: 0; }
+
+    /* ---- key points card ---- */
+    .article-keypoints {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border: 1px solid rgba(96,165,250,0.2);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .article-keypoints-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #60a5fa;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .article-keypoints-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .article-keypoints-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    .kp-label {
+      flex-shrink: 0;
+      background: rgba(37,99,235,0.35);
+      border: 1px solid rgba(96,165,250,0.3);
+      color: #93c5fd;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.1rem 0.55rem;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .kp-text { color: rgba(255,255,255,0.8); }
+
+    /* ---- article body wrap ---- */
+    .article-body-wrap {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 2.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.5rem;
+    }
+    .ai-body-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+      padding: 0.22rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.22);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.05);
+    }
+    .article-section-h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 2.25rem 0 1rem;
+      padding: 0.6rem 1rem;
+      background: #f1f5f9;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 6px 6px 0;
+    }
+    .article-section-h2:first-child { margin-top: 0; }
+    .article-section-h2 span { font-size: inherit; }
+
+    /* ---- mid-article related card ---- */
+    .mid-related-card {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--blue-pale);
+      border: 1px solid rgba(37,99,235,0.15);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 0.9rem 1.1rem;
+      margin: 1.75rem 0;
+    }
+    .mid-related-label {
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .mid-related-link {
+      flex: 1;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .mid-related-link:hover { color: var(--blue); }
+    .mid-related-cat {
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    /* ---- editorial card ---- */
+    .article-editorial {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1px solid #fde68a;
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .article-editorial-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    .article-editorial-icon { font-size: 1rem; }
+    .article-editorial-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #92400e;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .article-editorial-text {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #78350f;
+    }
+
+    /* ---- source card ---- */
+    .article-source-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .article-source-card-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      white-space: nowrap;
+    }
+    .article-source-card-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+    .article-source-card-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .article-source-card-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    /* ---- tags row ---- */
+    .article-tags-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .article-tags-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .article-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      background: #e2e8f0;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .article-tag:hover { background: var(--blue); color: #fff; text-decoration: none; }
+    .article-tag--source {
+      background: #f1f5f9;
+      color: var(--text-muted);
+      cursor: default;
+    }
+
+    /* ---- share footer ---- */
+    .article-share-footer {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 0;
       border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
       flex-wrap: wrap;
     }
     .share-btn-large {
@@ -640,6 +914,30 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
     .share-btn-large:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
     .back-btn { font-size: 0.875rem; color: var(--text-muted); }
     .back-btn:hover { color: var(--blue); }
+
+    /* ---- sidebar follow widget ---- */
+    .sidebar-follow {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .sidebar-follow-title { font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+    .sidebar-follow-desc { font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-bottom: 1rem; line-height: 1.5; }
+    .sidebar-follow-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #000;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.5rem 1.1rem;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .sidebar-follow-btn:hover { background: #333; text-decoration: none; color: #fff; }
 
     /* ---- category hero ---- */
     .cat-hero {
@@ -868,6 +1166,10 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null) {
       .featured-main { grid-row: auto; }
       .content-with-sidebar { grid-template-columns: 1fr; }
       .sidebar { position: static; top: 0; }
+      .article-layout { grid-template-columns: 1fr; padding: 1.5rem 0 3rem; }
+      .article-body-wrap { padding: 1.25rem 1.5rem; }
+      .article-hero-actions { gap: 0.5rem; }
+      .article-keypoints { padding: 1.25rem; }
     }
     @media (max-width: 640px) {
       .article-list { grid-template-columns: 1fr; }
@@ -928,10 +1230,17 @@ function buildSidebar(posts, base = '.') {
     const label = categoryLabel(p.category);
     catCounts[label] = (catCounts[label] || 0) + 1;
   }
-  const catItems = Object.entries(catCounts)
-    .sort((a, b) => b[1] - a[1])
-    .map(([label, count]) =>
-      `<li><a href="${base}/">${escape(label)}</a><span class="sidebar-category-count">${count}</span></li>`
+  const catData = {};
+  for (const p of posts) {
+    const key = (p.category || 'OTHER').toUpperCase();
+    const label = categoryLabel(p.category);
+    if (!catData[key]) catData[key] = { label, count: 0 };
+    catData[key].count++;
+  }
+  const catItems = Object.entries(catData)
+    .sort((a, b) => b[1].count - a[1].count)
+    .map(([key, { label, count }]) =>
+      `<li><a href="${base}/categories/${categorySlug(key)}.html">${escape(label)}</a><span class="sidebar-category-count">${count}</span></li>`
     ).join('');
 
   // Recent 5 posts
@@ -972,31 +1281,21 @@ function buildSidebar(posts, base = '.') {
         <ul class="sidebar-popular-list">${popularItems}</ul>
       </div>
       <div class="sidebar-widget">
-        <div class="sidebar-widget-title">カテゴリ一覧</div>
+        <div class="sidebar-widget-title">カテゴリ</div>
         <ul class="sidebar-category-list">${catItems}</ul>
       </div>
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">このサイトについて</div>
-        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新情報をAIが日本語で解説する専門メディアです。Revit・Archicad・Vectorworksなど主要BIMソフトから建設テック全般の最新動向をお届けします。</p>
+      <div class="sidebar-widget sidebar-follow">
+        <div class="sidebar-follow-title">𝕏 フォローする</div>
+        <p class="sidebar-follow-desc">BIM・AEC最新情報をXでも発信中。いち早くニュースをキャッチ。</p>
+        <a class="sidebar-follow-btn" href="https://x.com/aecnewsjapan" target="_blank" rel="noopener noreferrer">𝕏 フォロー</a>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
         <ul class="sidebar-recent-list">${recentItems}</ul>
       </div>
       <div class="sidebar-widget">
-        <div class="sidebar-widget-title">カテゴリ別おすすめ</div>
-        <ul class="sidebar-recent-list">${(() => {
-          const seenCats = new Set();
-          return posts.filter(p => {
-            const cat = p.category || 'OTHER';
-            if (seenCats.has(cat)) return false;
-            seenCats.add(cat);
-            return true;
-          }).slice(0, 5).map(p => `
-            <li><a href="${base}/posts/${escape(p.slug)}.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">${escape(categoryLabel(p.category))}</span>${escape(p.titleJa || p.title)}
-            </a></li>`).join('');
-        })()}</ul>
+        <div class="sidebar-widget-title">このサイトについて</div>
+        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXの最新情報をAIが日本語で解説する専門メディアです。</p>
       </div>${weeklyWidget}
     </aside>`;
 }
@@ -1230,9 +1529,34 @@ function buildIndex(posts, totalCount = 0) {
     htmlFooter('.', articleCount);
 }
 
+// ---- parse bodyJa into structured sections -----------------------------------
+
+function parseBodySections(bodyJa) {
+  if (!bodyJa) return [];
+  const lines = bodyJa.split(/\n+/).filter(s => s.trim());
+  const sections = [];
+  let current = { label: null, paragraphs: [] };
+  for (const line of lines) {
+    const trimmed = line.trim();
+    const soloM = /^【([^】]+)】$/.exec(trimmed);
+    const inlineM = /^【([^】]+)】(.+)$/.exec(trimmed);
+    if (soloM) {
+      if (current.label || current.paragraphs.length > 0) sections.push(current);
+      current = { label: soloM[1], paragraphs: [] };
+    } else if (inlineM) {
+      if (current.label || current.paragraphs.length > 0) sections.push(current);
+      current = { label: inlineM[1], paragraphs: [inlineM[2].trim()] };
+    } else {
+      current.paragraphs.push(trimmed);
+    }
+  }
+  if (current.label || current.paragraphs.length > 0) sections.push(current);
+  return sections;
+}
+
 // ---- article detail page ----------------------------------------------------
 
-function buildRelatedArticles(post, allPosts) {
+function buildRelatedArticles(post, allPosts, sectionTitle = '関連記事') {
   if (!allPosts || allPosts.length === 0) return '';
   const related = allPosts
     .filter((p) => p.slug !== post.slug && p.category === post.category)
@@ -1261,7 +1585,7 @@ function buildRelatedArticles(post, allPosts) {
   }).join('');
   return `
       <div class="related-articles">
-        <h2 class="section-title" style="margin-top:2.5rem;">関連記事</h2>
+        <h2 class="section-title" style="margin-top:2.5rem;">${escape(sectionTitle)}</h2>
         <div class="article-list">${cards}</div>
       </div>`;
 }
@@ -1272,34 +1596,95 @@ function buildArticlePage(post, allPosts) {
   const date = formatDate(post.pubDate);
   const bodyText = post.bodyJa || post.postText || post.summary || '';
   const readingMinutes = Math.max(1, Math.ceil(bodyText.length / 500));
-  const bodyJaParagraphs = post.bodyJa
-    ? post.bodyJa.split(/\n+/).filter(s => s.trim()).map(s => {
-        const trimmed = s.trim();
-        // 【XXX】だけの行 → セクション見出し
-        if (/^【[^】]+】$/.test(trimmed)) {
-          return `<div class="ai-section-header"><span class="ai-section-label">${escape(trimmed)}</span></div>`;
-        }
-        // 【XXX】テキスト が同じ行にある場合
-        const m = trimmed.match(/^(【[^】]+】)(.+)$/);
-        if (m) {
-          return `<div class="ai-section-header"><span class="ai-section-label">${escape(m[1])}</span></div><p>${escape(m[2].trim())}</p>`;
-        }
-        return `<p>${escape(trimmed)}</p>`;
-      }).join('\n')
+
+  // ---- structured sections ----
+  const sections = parseBodySections(post.bodyJa);
+
+  // ---- key points from sections ----
+  const keyPoints = sections
+    .filter(s => s.label && s.paragraphs.length > 0)
+    .map(s => {
+      const firstSent = s.paragraphs[0].split('。')[0];
+      return { label: s.label, text: firstSent.length > 55 ? firstSent.substring(0, 55) + '…' : firstSent };
+    })
+    .slice(0, 5);
+
+  // ---- editorial section (日本への影響 or last section) ----
+  const editLabels = ['日本への影響', '日本市場', '日本', '見解', 'まとめ', '考察', '影響'];
+  const editSection = sections.find(s => s.label && editLabels.some(l => s.label.includes(l)) && s.paragraphs.length > 0)
+    || (sections.length > 1 ? sections[sections.length - 1] : null);
+  const editorialText = editSection && editSection.paragraphs.length > 0
+    ? editSection.paragraphs[0].substring(0, 220) + (editSection.paragraphs[0].length > 220 ? '…' : '')
     : '';
-  const bodyContent = post.bodyJa
-    ? `<div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary">${bodyJaParagraphs}</div>`
-    : post.postText
-      ? `<div class="ai-comment-label">AIによる専門家コメント</div><div class="post-text-box">${escape(post.postText)}</div>`
-      : `<p>${escape(post.summary || '')}</p>`;
 
-  const pageTitle = `${post.title} | ${SITE_NAME}`;
-  const descText = excerpt(post.summary || post.postText || '', 120);
+  // ---- body HTML ----
+  const midPost = allPosts.find(p => p.slug !== post.slug && p.category === post.category);
+  const midCardHtml = midPost ? `
+    <div class="mid-related-card">
+      <span class="mid-related-label">関連記事</span>
+      <a class="mid-related-link" href="../posts/${escape(midPost.slug)}.html">${escape(midPost.titleJa || midPost.title)}</a>
+      <span class="mid-related-cat">${escape(categoryLabel(midPost.category))}</span>
+    </div>` : '';
 
-  const isoDate = post.pubDate
-    ? new Date(post.pubDate).toISOString()
-    : new Date().toISOString();
+  let bodyHtml = '';
+  if (post.bodyJa) {
+    let sIdx = 0;
+    for (const sec of sections) {
+      if (sec.label) {
+        bodyHtml += `<h2 class="article-section-h2"><span>${escape(sec.label)}</span></h2>`;
+      }
+      bodyHtml += sec.paragraphs.map(p => `<p>${escape(p)}</p>`).join('\n');
+      sIdx++;
+      if (sIdx === 2 && midCardHtml) bodyHtml += midCardHtml;
+    }
+  } else if (post.postText) {
+    bodyHtml = `<div class="ai-body-text" style="white-space:pre-wrap;font-size:1rem;line-height:2;">${escape(post.postText)}</div>`;
+  } else {
+    bodyHtml = `<p>${escape(post.summary || '')}</p>`;
+  }
 
+  // ---- affiliate ----
+  const affiliates = getAffiliateLinks(post);
+  const affiliateHtml = affiliates.length > 0 ? `
+    <div class="affiliate-box">
+      <p>※ 本記事に関連する書籍・学習リソース（広告）</p>
+      ${affiliates.map(a => `<a href="${escape(a.url)}" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 ${escape(a.title)} を Amazonで見る →</a>`).join('')}
+    </div>` : '';
+
+  // ---- key points card ----
+  const keypointsHtml = keyPoints.length > 0 ? `
+    <div class="article-keypoints">
+      <div class="article-keypoints-title">この記事の要点</div>
+      <ul class="article-keypoints-list">
+        ${keyPoints.map(kp => `<li><span class="kp-label">${escape(kp.label)}</span><span class="kp-text">${escape(kp.text)}</span></li>`).join('')}
+      </ul>
+    </div>` : '';
+
+  // ---- editorial card ----
+  const editorialHtml = editorialText ? `
+    <div class="article-editorial">
+      <div class="article-editorial-header">
+        <span class="article-editorial-icon">💡</span>
+        <span class="article-editorial-title">AEC News Japan 編集部の見解</span>
+      </div>
+      <p class="article-editorial-text">${escape(editorialText)}</p>
+    </div>` : '';
+
+  // ---- hero summary ----
+  const heroSummaryText = post.summary
+    ? excerpt(post.summary, 130)
+    : sections.length > 0 && sections[0].paragraphs.length > 0
+      ? excerpt(sections[0].paragraphs[0], 130)
+      : '';
+
+  const pageTitle = `${post.titleJa || post.title} | ${SITE_NAME}`;
+  const descText = excerpt(post.summary || post.postText || bodyText, 120);
+  const heroImg = (THUMB_IMAGES[catKey] || './assets/Getting-real-about-technology-part-1.webp').replace('./assets/', '../assets/');
+  const heroBg = `linear-gradient(135deg, rgba(10,22,40,0.87) 0%, rgba(15,42,74,0.83) 100%), url('${heroImg}') center/cover no-repeat`;
+  const catSlugStr = categorySlug(post.category || 'OTHER');
+  const shareUrl = SITE_URL + '/posts/' + post.slug + '.html';
+
+  const isoDate = post.pubDate ? new Date(post.pubDate).toISOString() : new Date().toISOString();
   const newsArticleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
@@ -1308,71 +1693,67 @@ function buildArticlePage(post, allPosts) {
     datePublished: isoDate,
     dateModified: isoDate,
     inLanguage: 'ja',
-    url: `${SITE_URL}/posts/${post.slug}.html`,
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL + '/',
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `${SITE_URL}/posts/${post.slug}.html`,
-    },
+    url: shareUrl,
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL + '/' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': shareUrl },
   };
 
-  const heroImg = (THUMB_IMAGES[catKey] || './assets/Getting-real-about-technology-part-1.webp').replace('./assets/', '../assets/');
-  const heroBg = `linear-gradient(135deg, rgba(10,22,40,0.84) 0%, rgba(15,42,74,0.80) 100%), url('${heroImg}') center/cover no-repeat`;
-
-  return htmlHead(
-    pageTitle,
-    descText,
-    `${SITE_URL}/posts/${post.slug}.html`,
-    '..',
-    newsArticleJsonLd
-  ) +
+  return htmlHead(pageTitle, descText, shareUrl, '..', newsArticleJsonLd) +
     htmlHeader('..') +
     `
   <div class="article-hero" style="background: ${heroBg};">
     <div class="article-hero-inner">
       <nav class="article-hero-breadcrumb">
-        <a href="../">ホーム</a> › <span>${escape(catLabel)}</span>
+        <a href="../">ホーム</a> › <a href="../categories/${catSlugStr}.html">${escape(catLabel)}</a>
       </nav>
-      <div class="article-hero-badge">${escape(catLabel)}</div>
+      <div class="article-hero-tags">
+        <span class="article-hero-tag article-hero-tag--cat">${escape(catLabel)}</span>
+        ${post.source ? `<span class="article-hero-tag article-hero-tag--source">${escape(post.source)}</span>` : ''}
+      </div>
       <h1 class="article-hero-title">${escape(post.titleJa || post.title)}</h1>
+      ${heroSummaryText ? `<p class="article-hero-summary">${escape(heroSummaryText)}</p>` : ''}
       <div class="article-hero-meta">
         <span>📅 ${escape(date)}</span>
         <span class="article-hero-meta-sep">·</span>
-        <span>出典: ${escape(post.source || '')}</span>
+        <span>⏱ 約${readingMinutes}分</span>
         <span class="article-hero-meta-sep">·</span>
-        <span>約${readingMinutes}分で読めます</span>
+        <span>出典: ${escape(post.source || '')}</span>
+      </div>
+      <div class="article-hero-actions">
+        <a class="article-hero-btn article-hero-btn--primary" href="${escape(post.link)}" target="_blank" rel="noopener noreferrer">原文を読む →</a>
+        <a class="article-hero-btn article-hero-btn--share" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener noreferrer">𝕏 シェア</a>
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
-      <main>
-        <div class="article-detail">
-          ${post.titleJa ? `<p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: ${escape(post.title)}</p>` : ''}
+    <div class="article-layout">
+      <main class="article-main">
+        ${keypointsHtml}
+        <div class="article-body-wrap">
+          <div class="ai-body-label">AI による日本語解説</div>
           <div class="article-body">
-            ${bodyContent}
-          </div>
-          <div class="source-box">
-            元記事: <a href="${escape(post.link)}" target="_blank" rel="noopener noreferrer">${escape(post.link)}</a>
-          </div>
-          ${(() => {
-            const affiliates = getAffiliateLinks(post);
-            const links = affiliates.map(a => `
-            <a href="${escape(a.url)}" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 ${escape(a.title)} を Amazonで見る →</a>`).join('');
-            return `<div class="affiliate-box">
-            <p>※ 本記事に関連する書籍・学習リソース（広告）</p>${links}
-          </div>`;
-          })()}
-          <div class="article-share-row">
-            <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(SITE_URL + '/posts/' + post.slug + '.html')}" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
-            <a class="back-btn" href="../">← 記事一覧に戻る</a>
+            ${bodyHtml}
           </div>
         </div>
-        ${buildRelatedArticles(post, allPosts)}
+        ${editorialHtml}
+        ${affiliateHtml}
+        <div class="article-source-card">
+          <span class="article-source-card-label">元記事・出典</span>
+          <div class="article-source-card-info">
+            <span class="article-source-card-name">${escape(post.source || '不明')}</span>
+            <a href="${escape(post.link)}" target="_blank" rel="noopener noreferrer" class="article-source-card-link">原文を読む →</a>
+          </div>
+        </div>
+        <div class="article-tags-row">
+          <span class="article-tags-label">タグ:</span>
+          <a class="article-tag" href="../categories/${catSlugStr}.html">${escape(catLabel)}</a>
+          ${post.source ? `<span class="article-tag article-tag--source">${escape(post.source)}</span>` : ''}
+        </div>
+        <div class="article-share-footer">
+          <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
+          <a class="back-btn" href="../">← 記事一覧に戻る</a>
+        </div>
+        ${buildRelatedArticles(post, allPosts, '次に読むべき記事')}
       </main>
       ${buildSidebar(allPosts, '..')}
     </div>
@@ -1386,9 +1767,7 @@ function buildArticlePage(post, allPosts) {
         var total = document.documentElement.scrollHeight;
         if (total > 0 && scrolled / total >= 0.5) {
           fired = true;
-          if (typeof gtag === 'function') {
-            gtag('event', 'scroll_50', { event_category: 'engagement' });
-          }
+          if (typeof gtag === 'function') gtag('event', 'scroll_50', { event_category: 'engagement' });
           window.removeEventListener('scroll', onScroll);
         }
       }

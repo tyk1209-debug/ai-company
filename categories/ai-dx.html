@@ -377,8 +377,8 @@
       border-bottom: 1px solid var(--border);
       align-items: center;
     }
-    .article-body { font-size: 0.95rem; line-height: 1.85; }
-    .article-body p { margin-bottom: 1rem; }
+    .article-body { font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 1.2rem; }
     .article-body pre {
       background: var(--bg);
       border: 1px solid var(--border);
@@ -436,12 +436,19 @@
 
     /* ---- post-text display ---- */
     .ai-comment-label {
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
     }
     .post-text-box {
       white-space: pre-wrap;
@@ -453,15 +460,29 @@
       line-height: 1.75;
     }
     .ai-summary {
-      background: #f0f4ff;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.85;
+      background: transparent;
+      border-left: none;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 2;
     }
-    .ai-summary p { margin: 0 0 0.75rem; }
+    .ai-summary p { margin: 0 0 1.2rem; color: var(--text); }
     .ai-summary p:last-child { margin-bottom: 0; }
+    .ai-section-header {
+      margin: 2rem 0 0.75rem;
+    }
+    .ai-section-header:first-child { margin-top: 0; }
+    .ai-section-label {
+      display: inline-flex;
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.85rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
     .footer-article-count { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
 
     /* ---- breadcrumb ---- */
@@ -475,53 +496,327 @@
     /* ---- article hero ---- */
     .article-hero {
       color: var(--white);
-      padding: 3rem 1.5rem 2.5rem;
+      padding: 3.5rem 1.5rem 3rem;
     }
-    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .article-hero-inner { max-width: 820px; margin: 0 auto; }
     .article-hero-breadcrumb {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 1rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1.25rem;
     }
-    .article-hero-breadcrumb a { color: rgba(255,255,255,0.5); }
-    .article-hero-breadcrumb a:hover { color: rgba(255,255,255,0.85); text-decoration: none; }
-    .article-hero-badge {
-      display: inline-block;
-      background: rgba(37,99,235,0.3);
-      border: 1px solid rgba(96,165,250,0.4);
-      color: #93c5fd;
+    .article-hero-breadcrumb a { color: rgba(255,255,255,0.45); }
+    .article-hero-breadcrumb a:hover { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .article-hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .article-hero-tag {
+      display: inline-flex;
+      align-items: center;
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.06em;
-      padding: 0.2rem 0.75rem;
+      padding: 0.22rem 0.85rem;
       border-radius: 20px;
-      margin-bottom: 1rem;
+    }
+    .article-hero-tag--cat {
+      background: rgba(37,99,235,0.28);
+      border: 1px solid rgba(96,165,250,0.4);
+      color: #93c5fd;
+    }
+    .article-hero-tag--source {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.65);
     }
     .article-hero-title {
-      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
       font-weight: 800;
-      line-height: 1.35;
+      line-height: 1.38;
       color: #fff;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
       letter-spacing: -0.01em;
+    }
+    .article-hero-summary {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      max-width: 620px;
     }
     .article-hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem 1rem;
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.58);
+      gap: 0.35rem 1.1rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.52);
+      margin-bottom: 1.75rem;
+      align-items: center;
     }
-    .article-hero-meta-sep { color: rgba(255,255,255,0.25); }
+    .article-hero-meta-sep { color: rgba(255,255,255,0.2); }
+    .article-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .article-hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .article-hero-btn--primary {
+      background: var(--blue);
+      color: #fff;
+    }
+    .article-hero-btn--primary:hover { background: #1d4ed8; color: #fff; text-decoration: none; }
+    .article-hero-btn--share {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.85);
+    }
+    .article-hero-btn--share:hover { background: rgba(255,255,255,0.18); color: #fff; text-decoration: none; }
 
-    /* ---- article share row ---- */
-    .article-share-row {
+    /* ---- article layout ---- */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 2.5rem;
+      align-items: start;
+      padding: 2.5rem 0 5rem;
+    }
+    .article-main { min-width: 0; }
+
+    /* ---- key points card ---- */
+    .article-keypoints {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border: 1px solid rgba(96,165,250,0.2);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .article-keypoints-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #60a5fa;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .article-keypoints-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .article-keypoints-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    .kp-label {
+      flex-shrink: 0;
+      background: rgba(37,99,235,0.35);
+      border: 1px solid rgba(96,165,250,0.3);
+      color: #93c5fd;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.1rem 0.55rem;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .kp-text { color: rgba(255,255,255,0.8); }
+
+    /* ---- article body wrap ---- */
+    .article-body-wrap {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 2.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.5rem;
+    }
+    .ai-body-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+      padding: 0.22rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.22);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.05);
+    }
+    .article-section-h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 2.25rem 0 1rem;
+      padding: 0.6rem 1rem;
+      background: #f1f5f9;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 6px 6px 0;
+    }
+    .article-section-h2:first-child { margin-top: 0; }
+    .article-section-h2 span { font-size: inherit; }
+
+    /* ---- mid-article related card ---- */
+    .mid-related-card {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--blue-pale);
+      border: 1px solid rgba(37,99,235,0.15);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 0.9rem 1.1rem;
+      margin: 1.75rem 0;
+    }
+    .mid-related-label {
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .mid-related-link {
+      flex: 1;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .mid-related-link:hover { color: var(--blue); }
+    .mid-related-cat {
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    /* ---- editorial card ---- */
+    .article-editorial {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1px solid #fde68a;
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .article-editorial-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    .article-editorial-icon { font-size: 1rem; }
+    .article-editorial-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #92400e;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .article-editorial-text {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #78350f;
+    }
+
+    /* ---- source card ---- */
+    .article-source-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .article-source-card-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      white-space: nowrap;
+    }
+    .article-source-card-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+    .article-source-card-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .article-source-card-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    /* ---- tags row ---- */
+    .article-tags-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .article-tags-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .article-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      background: #e2e8f0;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .article-tag:hover { background: var(--blue); color: #fff; text-decoration: none; }
+    .article-tag--source {
+      background: #f1f5f9;
+      color: var(--text-muted);
+      cursor: default;
+    }
+
+    /* ---- share footer ---- */
+    .article-share-footer {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 0;
       border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
       flex-wrap: wrap;
     }
     .share-btn-large {
@@ -540,6 +835,30 @@
     .share-btn-large:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
     .back-btn { font-size: 0.875rem; color: var(--text-muted); }
     .back-btn:hover { color: var(--blue); }
+
+    /* ---- sidebar follow widget ---- */
+    .sidebar-follow {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .sidebar-follow-title { font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+    .sidebar-follow-desc { font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-bottom: 1rem; line-height: 1.5; }
+    .sidebar-follow-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #000;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.5rem 1.1rem;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .sidebar-follow-btn:hover { background: #333; text-decoration: none; color: #fff; }
 
     /* ---- category hero ---- */
     .cat-hero {
@@ -768,6 +1087,10 @@
       .featured-main { grid-row: auto; }
       .content-with-sidebar { grid-template-columns: 1fr; }
       .sidebar { position: static; top: 0; }
+      .article-layout { grid-template-columns: 1fr; padding: 1.5rem 0 3rem; }
+      .article-body-wrap { padding: 1.25rem 1.5rem; }
+      .article-hero-actions { gap: 0.5rem; }
+      .article-keypoints { padding: 1.25rem; }
     }
     @media (max-width: 640px) {
       .article-list { grid-template-columns: 1fr; }
@@ -874,35 +1197,21 @@
     </li></ul>
       </div>
       <div class="sidebar-widget">
-        <div class="sidebar-widget-title">カテゴリ一覧</div>
-        <ul class="sidebar-category-list"><li><a href="../">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../">BIM×AI</a><span class="sidebar-category-count">4</span></li><li><a href="../">Revit</a><span class="sidebar-category-count">3</span></li><li><a href="../">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
+        <div class="sidebar-widget-title">カテゴリ</div>
+        <ul class="sidebar-category-list"><li><a href="../categories/bim-ecosystem.html">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../categories/bim-ai.html">BIM×AI</a><span class="sidebar-category-count">4</span></li><li><a href="../categories/revit.html">Revit</a><span class="sidebar-category-count">3</span></li><li><a href="../categories/ai-dx.html">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../categories/gloobe.html">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
       </div>
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">このサイトについて</div>
-        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新情報をAIが日本語で解説する専門メディアです。Revit・Archicad・Vectorworksなど主要BIMソフトから建設テック全般の最新動向をお届けします。</p>
+      <div class="sidebar-widget sidebar-follow">
+        <div class="sidebar-follow-title">𝕏 フォローする</div>
+        <p class="sidebar-follow-desc">BIM・AEC最新情報をXでも発信中。いち早くニュースをキャッチ。</p>
+        <a class="sidebar-follow-btn" href="https://x.com/aecnewsjapan" target="_blank" rel="noopener noreferrer">𝕏 フォロー</a>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
         <ul class="sidebar-recent-list"><li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新</a></li><li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開</a></li><li><a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダムからフォーリングウォーターまで、BIM×デジタルツインで文化遺産保存の新時代へ</a></li><li><a href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">Autodesk Construction Cloud改名、Formaへ統合。設計から施工まで一元化へ</a></li><li><a href="../posts/maxon-launches-redshift-for-archviz.html">Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ</a></li></ul>
       </div>
       <div class="sidebar-widget">
-        <div class="sidebar-widget-title">カテゴリ別おすすめ</div>
-        <ul class="sidebar-recent-list">
-            <li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">AI/DX</span>Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新
-            </a></li>
-            <li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">BIM全般</span>BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開
-            </a></li>
-            <li><a href="../posts/maxon-launches-redshift-for-archviz.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">Revit</span>Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ
-            </a></li>
-            <li><a href="../posts/the-agentic-future-of-bim.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">BIM×AI</span>AI エージェントがBIMを革命する、5年で業界激変の可能性
-            </a></li>
-            <li><a href="../posts/gloobebim.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">GLOOBE</span>GLOOBEのBIMオブジェクト3種類、法規チェックから高精度パースまで
-            </a></li></ul>
+        <div class="sidebar-widget-title">このサイトについて</div>
+        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXの最新情報をAIが日本語で解説する専門メディアです。</p>
       </div>
     </aside>
     </div>

@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hexagon Multivista connects to Revizto | AEC News Japan</title>
+  <title>Hexagon MultivistがReviztoと連携、現場スキャン検出データがBIMに自動統合 | AEC News Japan</title>
   <meta name="description" content="On-site reality capture analysis data pushed directly into the BIM collaboration platform The post Hexagon Multivista c…">
   <link rel="canonical" href="https://aec-news.com/posts/hexagon-multivista-connects-to-revizto.html">
   <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large">
-  <meta property="og:title" content="Hexagon Multivista connects to Revizto | AEC News Japan">
+  <meta property="og:title" content="Hexagon MultivistがReviztoと連携、現場スキャン検出データがBIMに自動統合 | AEC News Japan">
   <meta property="og:description" content="On-site reality capture analysis data pushed directly into the BIM collaboration platform The post Hexagon Multivista c…">
   <meta property="og:url" content="https://aec-news.com/posts/hexagon-multivista-connects-to-revizto.html">
   <meta property="og:type" content="website">
@@ -497,53 +497,327 @@
     /* ---- article hero ---- */
     .article-hero {
       color: var(--white);
-      padding: 3rem 1.5rem 2.5rem;
+      padding: 3.5rem 1.5rem 3rem;
     }
-    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .article-hero-inner { max-width: 820px; margin: 0 auto; }
     .article-hero-breadcrumb {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 1rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1.25rem;
     }
-    .article-hero-breadcrumb a { color: rgba(255,255,255,0.5); }
-    .article-hero-breadcrumb a:hover { color: rgba(255,255,255,0.85); text-decoration: none; }
-    .article-hero-badge {
-      display: inline-block;
-      background: rgba(37,99,235,0.3);
-      border: 1px solid rgba(96,165,250,0.4);
-      color: #93c5fd;
+    .article-hero-breadcrumb a { color: rgba(255,255,255,0.45); }
+    .article-hero-breadcrumb a:hover { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .article-hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .article-hero-tag {
+      display: inline-flex;
+      align-items: center;
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.06em;
-      padding: 0.2rem 0.75rem;
+      padding: 0.22rem 0.85rem;
       border-radius: 20px;
-      margin-bottom: 1rem;
+    }
+    .article-hero-tag--cat {
+      background: rgba(37,99,235,0.28);
+      border: 1px solid rgba(96,165,250,0.4);
+      color: #93c5fd;
+    }
+    .article-hero-tag--source {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.65);
     }
     .article-hero-title {
-      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
       font-weight: 800;
-      line-height: 1.35;
+      line-height: 1.38;
       color: #fff;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
       letter-spacing: -0.01em;
+    }
+    .article-hero-summary {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      max-width: 620px;
     }
     .article-hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem 1rem;
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.58);
+      gap: 0.35rem 1.1rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.52);
+      margin-bottom: 1.75rem;
+      align-items: center;
     }
-    .article-hero-meta-sep { color: rgba(255,255,255,0.25); }
+    .article-hero-meta-sep { color: rgba(255,255,255,0.2); }
+    .article-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .article-hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .article-hero-btn--primary {
+      background: var(--blue);
+      color: #fff;
+    }
+    .article-hero-btn--primary:hover { background: #1d4ed8; color: #fff; text-decoration: none; }
+    .article-hero-btn--share {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.85);
+    }
+    .article-hero-btn--share:hover { background: rgba(255,255,255,0.18); color: #fff; text-decoration: none; }
 
-    /* ---- article share row ---- */
-    .article-share-row {
+    /* ---- article layout ---- */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 2.5rem;
+      align-items: start;
+      padding: 2.5rem 0 5rem;
+    }
+    .article-main { min-width: 0; }
+
+    /* ---- key points card ---- */
+    .article-keypoints {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border: 1px solid rgba(96,165,250,0.2);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .article-keypoints-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #60a5fa;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .article-keypoints-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .article-keypoints-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    .kp-label {
+      flex-shrink: 0;
+      background: rgba(37,99,235,0.35);
+      border: 1px solid rgba(96,165,250,0.3);
+      color: #93c5fd;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.1rem 0.55rem;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .kp-text { color: rgba(255,255,255,0.8); }
+
+    /* ---- article body wrap ---- */
+    .article-body-wrap {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 2.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.5rem;
+    }
+    .ai-body-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+      padding: 0.22rem 0.75rem;
+      border: 1px solid rgba(37,99,235,0.22);
+      border-radius: 20px;
+      background: rgba(37,99,235,0.05);
+    }
+    .article-section-h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 2.25rem 0 1rem;
+      padding: 0.6rem 1rem;
+      background: #f1f5f9;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 6px 6px 0;
+    }
+    .article-section-h2:first-child { margin-top: 0; }
+    .article-section-h2 span { font-size: inherit; }
+
+    /* ---- mid-article related card ---- */
+    .mid-related-card {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--blue-pale);
+      border: 1px solid rgba(37,99,235,0.15);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 0.9rem 1.1rem;
+      margin: 1.75rem 0;
+    }
+    .mid-related-label {
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .mid-related-link {
+      flex: 1;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .mid-related-link:hover { color: var(--blue); }
+    .mid-related-cat {
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    /* ---- editorial card ---- */
+    .article-editorial {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1px solid #fde68a;
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .article-editorial-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    .article-editorial-icon { font-size: 1rem; }
+    .article-editorial-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #92400e;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .article-editorial-text {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #78350f;
+    }
+
+    /* ---- source card ---- */
+    .article-source-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .article-source-card-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      white-space: nowrap;
+    }
+    .article-source-card-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+    .article-source-card-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .article-source-card-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    /* ---- tags row ---- */
+    .article-tags-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .article-tags-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .article-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      background: #e2e8f0;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .article-tag:hover { background: var(--blue); color: #fff; text-decoration: none; }
+    .article-tag--source {
+      background: #f1f5f9;
+      color: var(--text-muted);
+      cursor: default;
+    }
+
+    /* ---- share footer ---- */
+    .article-share-footer {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 0;
       border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
       flex-wrap: wrap;
     }
     .share-btn-large {
@@ -562,6 +836,30 @@
     .share-btn-large:hover { background: #1a8cd8; text-decoration: none; color: #fff; }
     .back-btn { font-size: 0.875rem; color: var(--text-muted); }
     .back-btn:hover { color: var(--blue); }
+
+    /* ---- sidebar follow widget ---- */
+    .sidebar-follow {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .sidebar-follow-title { font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+    .sidebar-follow-desc { font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-bottom: 1rem; line-height: 1.5; }
+    .sidebar-follow-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #000;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.5rem 1.1rem;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .sidebar-follow-btn:hover { background: #333; text-decoration: none; color: #fff; }
 
     /* ---- category hero ---- */
     .cat-hero {
@@ -790,6 +1088,10 @@
       .featured-main { grid-row: auto; }
       .content-with-sidebar { grid-template-columns: 1fr; }
       .sidebar { position: static; top: 0; }
+      .article-layout { grid-template-columns: 1fr; padding: 1.5rem 0 3rem; }
+      .article-body-wrap { padding: 1.25rem 1.5rem; }
+      .article-hero-actions { gap: 0.5rem; }
+      .article-keypoints { padding: 1.25rem; }
     }
     @media (max-width: 640px) {
       .article-list { grid-template-columns: 1fr; }
@@ -814,52 +1116,83 @@
       </a>
     </div>
   </header>
-  <div class="article-hero" style="background: linear-gradient(135deg, rgba(10,22,40,0.84) 0%, rgba(15,42,74,0.80) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
+  <div class="article-hero" style="background: linear-gradient(135deg, rgba(10,22,40,0.87) 0%, rgba(15,42,74,0.83) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
     <div class="article-hero-inner">
       <nav class="article-hero-breadcrumb">
-        <a href="../">ホーム</a> › <span>BIM全般</span>
+        <a href="../">ホーム</a> › <a href="../categories/bim-ecosystem.html">BIM全般</a>
       </nav>
-      <div class="article-hero-badge">BIM全般</div>
+      <div class="article-hero-tags">
+        <span class="article-hero-tag article-hero-tag--cat">BIM全般</span>
+        <span class="article-hero-tag article-hero-tag--source">AEC Magazine</span>
+      </div>
       <h1 class="article-hero-title">Hexagon MultivistがReviztoと連携、現場スキャン検出データがBIMに自動統合</h1>
+      <p class="article-hero-summary">On-site reality capture analysis data pushed directly into the BIM collaboration platform The post Hexagon Multivista connects to …</p>
       <div class="article-hero-meta">
         <span>📅 2026年2月20日</span>
         <span class="article-hero-meta-sep">·</span>
-        <span>出典: AEC Magazine</span>
+        <span>⏱ 約2分</span>
         <span class="article-hero-meta-sep">·</span>
-        <span>約2分で読めます</span>
+        <span>出典: AEC Magazine</span>
+      </div>
+      <div class="article-hero-actions">
+        <a class="article-hero-btn article-hero-btn--primary" href="https://aecmag.com/reality-capture-modelling/hexagon-multivista-connects-to-revizto" target="_blank" rel="noopener noreferrer">原文を読む →</a>
+        <a class="article-hero-btn article-hero-btn--share" href="https://twitter.com/intent/tweet?text=Hexagon%20Multivist%E3%81%8CRevizto%E3%81%A8%E9%80%A3%E6%90%BA%E3%80%81%E7%8F%BE%E5%A0%B4%E3%82%B9%E3%82%AD%E3%83%A3%E3%83%B3%E6%A4%9C%E5%87%BA%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8CBIM%E3%81%AB%E8%87%AA%E5%8B%95%E7%B5%B1%E5%90%88&url=https%3A%2F%2Faec-news.com%2Fposts%2Fhexagon-multivista-connects-to-revizto.html" target="_blank" rel="noopener noreferrer">𝕏 シェア</a>
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
-      <main>
-        <div class="article-detail">
-          <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">原題: Hexagon Multivista connects to Revizto</p>
+    <div class="article-layout">
+      <main class="article-main">
+        
+    <div class="article-keypoints">
+      <div class="article-keypoints-title">この記事の要点</div>
+      <ul class="article-keypoints-list">
+        <li><span class="kp-label">背景</span><span class="kp-text">建設プロジェクトでは、現場スキャンから得られる実測データと設計モデルの乖離を検出することが品質管理の重要な課題…</span></li><li><span class="kp-label">内容</span><span class="kp-text">Hexagon MultivistのAnalyze偏差検出サービスとRevizto BIM協業プラットフォーム…</span></li><li><span class="kp-label">技術的ポイント</span><span class="kp-text">この統合は、フェデレーテッドデザインモデルに対するリアリティキャプチャ（点群・写真）の自動比較プロセスをBIM…</span></li><li><span class="kp-label">業界への影響</span><span class="kp-text">この統合により、現場検証から設計調整アクションまでのリードタイムが大幅に短縮されます</span></li>
+      </ul>
+    </div>
+        <div class="article-body-wrap">
+          <div class="ai-body-label">AI による日本語解説</div>
           <div class="article-body">
-            <div class="ai-comment-label">AIによる日本語解説</div><div class="ai-summary"><div class="ai-section-header"><span class="ai-section-label">【背景】</span></div>
-<p>建設プロジェクトでは、現場スキャンから得られる実測データと設計モデルの乖離を検出することが品質管理の重要な課題です。これまで、レーザースキャンやドローン撮影による偏差検出は独立したレポート作成に留まり、BIM調整環境に手動で再入力するという非効率なワークフローが続いていました。</p>
-<div class="ai-section-header"><span class="ai-section-label">【内容】</span></div>
-<p>Hexagon MultivistのAnalyze偏差検出サービスとRevizto BIM協業プラットフォームの統合により、現場スキャンデータから検出されたずれや不適合がReviztoのイシューログに直接プッシュされるようになります。ユーザーはAnalyzeで個別またはグループ化された偏差を選択し、ワンアクションでReviztoの課題管理環境に送信可能。MEP設備の誤配置、構造体の寸法超過、竣工面との不適合といった、標準的な現場巡回では発見できない問題も、スキャンデータ対モデル比較により検出され、他のクラッシュ検出結果やモデル調整タスクと共存する3D環境内で追跡できます。</p>
-<div class="ai-section-header"><span class="ai-section-label">【技術的ポイント】</span></div>
-<p>この統合は、フェデレーテッドデザインモデルに対するリアリティキャプチャ（点群・写真）の自動比較プロセスをBIM協業層と融合させるもので、IFC互換性を背景とした相互運用性の実装例です。検出された偏差はReviztoの標準的な割り当て・ステータス追跡・通知機能を継承し、ライブ3Dコンテキスト内でネイティブなタスク管理と統一されます。</p>
-<div class="ai-section-header"><span class="ai-section-label">【業界への影響】</span></div>
-<p>この統合により、現場検証から設計調整アクションまでのリードタイムが大幅に短縮されます。複雑な大型プロジェクト（Hinkley Point Cなどのメガプロジェクト）では、日次スキャンデータが自動的にBIM調整ループに流入するため、品質リスク検出の応答速度が飛躍的に向上。また、Reviztoがオープンな第三者データ受け入れ戦略を採っていることで、複数ベンダー環境を使う組織にとっても統合された协業基盤が実現されます。</p></div>
-          </div>
-          <div class="source-box">
-            元記事: <a href="https://aecmag.com/reality-capture-modelling/hexagon-multivista-connects-to-revizto" target="_blank" rel="noopener noreferrer">https://aecmag.com/reality-capture-modelling/hexagon-multivista-connects-to-revizto</a>
-          </div>
-          <div class="affiliate-box">
-            <p>※ 本記事に関連する書籍・学習リソース（広告）</p>
-            <a href="https://www.amazon.co.jp/s?k=BIM+建築+設計&amp;tag=aecnewsjapan-22" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 BIM導入・活用ガイド を Amazonで見る →</a>
-          </div>
-          <div class="article-share-row">
-            <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=Hexagon%20Multivist%E3%81%8CRevizto%E3%81%A8%E9%80%A3%E6%90%BA%E3%80%81%E7%8F%BE%E5%A0%B4%E3%82%B9%E3%82%AD%E3%83%A3%E3%83%B3%E6%A4%9C%E5%87%BA%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8CBIM%E3%81%AB%E8%87%AA%E5%8B%95%E7%B5%B1%E5%90%88&url=https%3A%2F%2Faec-news.com%2Fposts%2Fhexagon-multivista-connects-to-revizto.html" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
-            <a class="back-btn" href="../">← 記事一覧に戻る</a>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建設プロジェクトでは、現場スキャンから得られる実測データと設計モデルの乖離を検出することが品質管理の重要な課題です。これまで、レーザースキャンやドローン撮影による偏差検出は独立したレポート作成に留まり、BIM調整環境に手動で再入力するという非効率なワークフローが続いていました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Hexagon MultivistのAnalyze偏差検出サービスとRevizto BIM協業プラットフォームの統合により、現場スキャンデータから検出されたずれや不適合がReviztoのイシューログに直接プッシュされるようになります。ユーザーはAnalyzeで個別またはグループ化された偏差を選択し、ワンアクションでReviztoの課題管理環境に送信可能。MEP設備の誤配置、構造体の寸法超過、竣工面との不適合といった、標準的な現場巡回では発見できない問題も、スキャンデータ対モデル比較により検出され、他のクラッシュ検出結果やモデル調整タスクと共存する3D環境内で追跡できます。</p>
+    <div class="mid-related-card">
+      <span class="mid-related-label">関連記事</span>
+      <a class="mid-related-link" href="../posts/embodied-carbon-calcs-for-bim-objects.html">BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開</a>
+      <span class="mid-related-cat">BIM全般</span>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>この統合は、フェデレーテッドデザインモデルに対するリアリティキャプチャ（点群・写真）の自動比較プロセスをBIM協業層と融合させるもので、IFC互換性を背景とした相互運用性の実装例です。検出された偏差はReviztoの標準的な割り当て・ステータス追跡・通知機能を継承し、ライブ3Dコンテキスト内でネイティブなタスク管理と統一されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この統合により、現場検証から設計調整アクションまでのリードタイムが大幅に短縮されます。複雑な大型プロジェクト（Hinkley Point Cなどのメガプロジェクト）では、日次スキャンデータが自動的にBIM調整ループに流入するため、品質リスク検出の応答速度が飛躍的に向上。また、Reviztoがオープンな第三者データ受け入れ戦略を採っていることで、複数ベンダー環境を使う組織にとっても統合された协業基盤が実現されます。</p>
           </div>
         </div>
         
+    <div class="article-editorial">
+      <div class="article-editorial-header">
+        <span class="article-editorial-icon">💡</span>
+        <span class="article-editorial-title">AEC News Japan 編集部の見解</span>
+      </div>
+      <p class="article-editorial-text">この統合により、現場検証から設計調整アクションまでのリードタイムが大幅に短縮されます。複雑な大型プロジェクト（Hinkley Point Cなどのメガプロジェクト）では、日次スキャンデータが自動的にBIM調整ループに流入するため、品質リスク検出の応答速度が飛躍的に向上。また、Reviztoがオープンな第三者データ受け入れ戦略を採っていることで、複数ベンダー環境を使う組織にとっても統合された协業基盤が実現されます。</p>
+    </div>
+        
+    <div class="affiliate-box">
+      <p>※ 本記事に関連する書籍・学習リソース（広告）</p>
+      <a href="https://www.amazon.co.jp/s?k=BIM+建築+設計&amp;tag=aecnewsjapan-22" target="_blank" rel="noopener sponsored" class="affiliate-link">📚 BIM導入・活用ガイド を Amazonで見る →</a>
+    </div>
+        <div class="article-source-card">
+          <span class="article-source-card-label">元記事・出典</span>
+          <div class="article-source-card-info">
+            <span class="article-source-card-name">AEC Magazine</span>
+            <a href="https://aecmag.com/reality-capture-modelling/hexagon-multivista-connects-to-revizto" target="_blank" rel="noopener noreferrer" class="article-source-card-link">原文を読む →</a>
+          </div>
+        </div>
+        <div class="article-tags-row">
+          <span class="article-tags-label">タグ:</span>
+          <a class="article-tag" href="../categories/bim-ecosystem.html">BIM全般</a>
+          <span class="article-tag article-tag--source">AEC Magazine</span>
+        </div>
+        <div class="article-share-footer">
+          <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=Hexagon%20Multivist%E3%81%8CRevizto%E3%81%A8%E9%80%A3%E6%90%BA%E3%80%81%E7%8F%BE%E5%A0%B4%E3%82%B9%E3%82%AD%E3%83%A3%E3%83%B3%E6%A4%9C%E5%87%BA%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8CBIM%E3%81%AB%E8%87%AA%E5%8B%95%E7%B5%B1%E5%90%88&url=https%3A%2F%2Faec-news.com%2Fposts%2Fhexagon-multivista-connects-to-revizto.html" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
+          <a class="back-btn" href="../">← 記事一覧に戻る</a>
+        </div>
+        
       <div class="related-articles">
-        <h2 class="section-title" style="margin-top:2.5rem;">関連記事</h2>
+        <h2 class="section-title" style="margin-top:2.5rem;">次に読むべき記事</h2>
         <div class="article-list">
       <article class="article-card">
         <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg') center/cover no-repeat;">
@@ -935,35 +1268,21 @@
     </li></ul>
       </div>
       <div class="sidebar-widget">
-        <div class="sidebar-widget-title">カテゴリ一覧</div>
-        <ul class="sidebar-category-list"><li><a href="../">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../">BIM×AI</a><span class="sidebar-category-count">4</span></li><li><a href="../">Revit</a><span class="sidebar-category-count">3</span></li><li><a href="../">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
+        <div class="sidebar-widget-title">カテゴリ</div>
+        <ul class="sidebar-category-list"><li><a href="../categories/bim-ecosystem.html">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../categories/bim-ai.html">BIM×AI</a><span class="sidebar-category-count">4</span></li><li><a href="../categories/revit.html">Revit</a><span class="sidebar-category-count">3</span></li><li><a href="../categories/ai-dx.html">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../categories/gloobe.html">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
       </div>
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">このサイトについて</div>
-        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXに関する最新情報をAIが日本語で解説する専門メディアです。Revit・Archicad・Vectorworksなど主要BIMソフトから建設テック全般の最新動向をお届けします。</p>
+      <div class="sidebar-widget sidebar-follow">
+        <div class="sidebar-follow-title">𝕏 フォローする</div>
+        <p class="sidebar-follow-desc">BIM・AEC最新情報をXでも発信中。いち早くニュースをキャッチ。</p>
+        <a class="sidebar-follow-btn" href="https://x.com/aecnewsjapan" target="_blank" rel="noopener noreferrer">𝕏 フォロー</a>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
         <ul class="sidebar-recent-list"><li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新</a></li><li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開</a></li><li><a href="../posts/preserving-the-past-with-digital-innovation-autodesk-named-a-fast-company-most-i.html">ノートルダムからフォーリングウォーターまで、BIM×デジタルツインで文化遺産保存の新時代へ</a></li><li><a href="../posts/autodesk-construction-cloud-is-now-autodesk-forma.html">Autodesk Construction Cloud改名、Formaへ統合。設計から施工まで一元化へ</a></li><li><a href="../posts/maxon-launches-redshift-for-archviz.html">Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ</a></li></ul>
       </div>
       <div class="sidebar-widget">
-        <div class="sidebar-widget-title">カテゴリ別おすすめ</div>
-        <ul class="sidebar-recent-list">
-            <li><a href="../posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">AI/DX</span>Autodesk、テキスト→3D生成AIモデル「Wonder 3D」で制作工程を革新
-            </a></li>
-            <li><a href="../posts/embodied-carbon-calcs-for-bim-objects.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">BIM全般</span>BIMオブジェクトに炭素データを組み込む、NBS が実装ガイド公開
-            </a></li>
-            <li><a href="../posts/maxon-launches-redshift-for-archviz.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">Revit</span>Maxon「RedShift for Archviz」、Revit・Archicad・Vectorworksで実装へ
-            </a></li>
-            <li><a href="../posts/the-agentic-future-of-bim.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">BIM×AI</span>AI エージェントがBIMを革命する、5年で業界激変の可能性
-            </a></li>
-            <li><a href="../posts/gloobebim.html">
-              <span class="badge" style="margin-right:0.4rem;font-size:0.65rem;">GLOOBE</span>GLOOBEのBIMオブジェクト3種類、法規チェックから高精度パースまで
-            </a></li></ul>
+        <div class="sidebar-widget-title">このサイトについて</div>
+        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXの最新情報をAIが日本語で解説する専門メディアです。</p>
       </div>
     </aside>
     </div>
@@ -977,9 +1296,7 @@
         var total = document.documentElement.scrollHeight;
         if (total > 0 && scrolled / total >= 0.5) {
           fired = true;
-          if (typeof gtag === 'function') {
-            gtag('event', 'scroll_50', { event_category: 'engagement' });
-          }
+          if (typeof gtag === 'function') gtag('event', 'scroll_50', { event_category: 'engagement' });
           window.removeEventListener('scroll', onScroll);
         }
       }

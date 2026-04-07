@@ -980,6 +980,12 @@
       font-size: 0.88rem;
       line-height: 1.8;
       color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+    .reference-books-note {
+      font-size: 0.75rem;
+      line-height: 1.7;
+      color: var(--text-light);
       margin-bottom: 1rem;
     }
     .reference-books-list {
@@ -1296,6 +1302,21 @@
       .article-body-wrap { padding: 1.2rem 1.1rem; }
       .article-body { font-size: 0.98rem; line-height: 1.95; }
       .article-section-h2 { margin: 2rem 0 0.85rem; padding: 0.65rem 0.9rem; }
+      .mid-related-card { flex-direction: column; align-items: flex-start; }
+      .article-hero-actions { flex-direction: column; }
+      .article-hero-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+      }
+      .article-share-footer { flex-direction: column; align-items: stretch; }
+      .share-btn-large, .back-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+      }
       .article-tags-row { gap: 0.6rem; }
       .article-tag { width: auto; min-height: 44px; display: inline-flex; align-items: center; }
       .reference-book-item { flex-direction: column; }
@@ -1344,29 +1365,17 @@
       <main class="article-main">
         <div class="article-insight-grid">
       <section class="article-insight-card article-insight-card--summary">
-        <div class="article-insight-eyebrow">Key Points</div>
+        <div class="article-insight-eyebrow">要点</div>
         <h2 class="article-insight-title">要点まとめ</h2>
         <ul class="article-insight-list">
           <li><span class="article-insight-bullet">•</span><span>背景: AEC業界におけるAIの活用は、画像生成やチャットボットの段階から本質的な転換期を迎えています。</span></li><li><span class="article-insight-bullet">•</span><span>内容: 本特集では、AIが単なる補助ツールではなく、建築設計プロセス全体を再構成するインテリジェント・デザイン・パートナーとして機能する未来を描いています。</span></li><li><span class="article-insight-bullet">•</span><span>技術的ポイント: この転換の核心は、データレイテンシーの削減と認知処理の圧縮（cognition collapse）にあります。</span></li>
         </ul>
       </section>
     <section class="article-insight-card">
-      <div class="article-insight-eyebrow">Industry Impact</div>
+      <div class="article-insight-eyebrow">業界インパクト</div>
       <h2 class="article-insight-title">業界への影響</h2>
       <p class="article-insight-text">こうした変化は、AEC企業の統合加速、設計プラクティスの根本的な再構築、そしてフルスタック・デザイナーの台頭をもたらすと予想されています。単一の専門分野に特化した人材よりも、BIM、設計最適化、データ戦略を統合できるプロフェッショナルの需要が急速に高まるでしょう。NXT BLD 2026のようなイベントが業界の方向性を示す重要性も増していきます。</p>
-    </section>
-    <section class="article-insight-card">
-      <div class="article-insight-eyebrow">Practical Impact</div>
-      <h2 class="article-insight-title">実務への影響</h2>
-      <p class="article-insight-text">こうした変化は、AEC企業の統合加速、設計プラクティスの根本的な再構築、そしてフルスタック・デザイナーの台頭をもたらすと予想されています。単一の専門分野に特化した人材よりも、BIM、設計最適化、データ戦略を統合できるプロフェッショナルの需要が急速に高まるでしょう。NXT BLD 2026のようなイベントが業界の方向性を示す重要性も増していきます。</p>
     </section></div>
-        
-    <div class="article-keypoints">
-      <div class="article-keypoints-title">この記事の要点</div>
-      <ul class="article-keypoints-list">
-        <li><span class="kp-label">背景</span><span class="kp-text">AEC業界におけるAIの活用は、画像生成やチャットボットの段階から本質的な転換期を迎えています。</span></li><li><span class="kp-label">内容</span><span class="kp-text">本特集では、AIが単なる補助ツールではなく、建築設計プロセス全体を再構成するインテリジェント・デザイン・パートナーとして機能する未来を描いています。</span></li><li><span class="kp-label">技術的ポイント</span><span class="kp-text">この転換の核心は、データレイテンシーの削減と認知処理の圧縮（cognition collapse）にあります。</span></li><li><span class="kp-label">業界への影響</span><span class="kp-text">こうした変化は、AEC企業の統合加速、設計プラクティスの根本的な再構築、そしてフルスタック・デザイナーの台頭をもたらすと予想されています。</span></li>
-      </ul>
-    </div>
         <div class="article-body-wrap">
           <div class="ai-body-label">AI による日本語解説</div>
           <div class="article-body">
@@ -1388,9 +1397,10 @@
     </div>
         
     <section class="reference-books">
-      <div class="reference-books-label">Reference Books</div>
+      <div class="reference-books-label">参考書籍（広告）</div>
       <h2 class="reference-books-title">この記事を深く理解するための参考書籍</h2>
-      <p class="reference-books-desc">記事テーマと関連性の高い書籍だけを選んでいます。基礎理解や実務での整理に役立つものを中心に掲載しています。</p>
+      <p class="reference-books-desc">記事テーマとの関連性を基準に、理解を深めやすい書籍だけを掲載しています。実務の整理や社内共有に使いやすいものを優先しています。</p>
+      <p class="reference-books-note">編集部が文脈との相性を見て選定した参考書籍です。リンクにはアフィリエイトを含みます。</p>
       <div class="reference-books-list">
         
           <div class="reference-book-item">
@@ -1469,7 +1479,7 @@
           </h3>
           <p class="card-excerpt">【背景】 ドラフターからCADへ、そして現在はBIMへと移行が進む建築設計の道具。次に来るのはAIを搭載した設計ツールです。国内外で100社を超えるスタートアッ…</p>
           <div class="card-footer">
-            <div class="card-meta-info"><span>日経クロステック</span><span class="card-meta-sep">·</span><span>2026年4月6日</span></div>
+            <div class="card-meta-info"><span>日経クロステック</span><span class="card-meta-sep">·</span><span>2026年4月7日</span></div>
             <a class="card-read-more" href="../posts/ai.html">続きを読む →</a>
           </div>
         </div>

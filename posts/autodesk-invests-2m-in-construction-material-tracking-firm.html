@@ -980,6 +980,12 @@
       font-size: 0.88rem;
       line-height: 1.8;
       color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+    .reference-books-note {
+      font-size: 0.75rem;
+      line-height: 1.7;
+      color: var(--text-light);
       margin-bottom: 1rem;
     }
     .reference-books-list {
@@ -1296,6 +1302,21 @@
       .article-body-wrap { padding: 1.2rem 1.1rem; }
       .article-body { font-size: 0.98rem; line-height: 1.95; }
       .article-section-h2 { margin: 2rem 0 0.85rem; padding: 0.65rem 0.9rem; }
+      .mid-related-card { flex-direction: column; align-items: flex-start; }
+      .article-hero-actions { flex-direction: column; }
+      .article-hero-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+      }
+      .article-share-footer { flex-direction: column; align-items: stretch; }
+      .share-btn-large, .back-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+      }
       .article-tags-row { gap: 0.6rem; }
       .article-tag { width: auto; min-height: 44px; display: inline-flex; align-items: center; }
       .reference-book-item { flex-direction: column; }
@@ -1344,29 +1365,17 @@
       <main class="article-main">
         <div class="article-insight-grid">
       <section class="article-insight-card article-insight-card--summary">
-        <div class="article-insight-eyebrow">Key Points</div>
+        <div class="article-insight-eyebrow">要点</div>
         <h2 class="article-insight-title">要点まとめ</h2>
         <ul class="article-insight-list">
           <li><span class="article-insight-bullet">•</span><span>背景: 建設業界では、資材の納入・返却・廃棄に関する可視化の不足が、プロジェクト遅延やコスト超過につながる大きな課題となっています。</span></li><li><span class="article-insight-bullet">•</span><span>内容: AutodesknはUKの建設テック企業Qflowに£2百万を投資し、既存のQflow・Autodesk Construction Cloud統合を拡張します。</span></li><li><span class="article-insight-bullet">•</span><span>技術的ポイント: この統合により、Autodesk Construction Cloudを通じてBIMモデル内の仕様資材とサイト実装資材を紐付け、差分検出が可能になります。</span></li>
         </ul>
       </section>
     <section class="article-insight-card">
-      <div class="article-insight-eyebrow">Industry Impact</div>
+      <div class="article-insight-eyebrow">業界インパクト</div>
       <h2 class="article-insight-title">業界への影響</h2>
       <p class="article-insight-text">プロジェクト管理チームは納入遅延や品質不適合を早期に検出し、コスト超過と工期遅延を防止できます。また、廃棄物と炭素排出の量的把握により、ESG報告と低炭素建設が実現可能に。Qflowは既に£7百万の総資金調達を達成し、業界標準化への道を開いています。このトレンドは他のBIMベンダーも資材追跡機能の統合を加速させ、建設DXの次フェーズへ移行させるでしょう。</p>
-    </section>
-    <section class="article-insight-card">
-      <div class="article-insight-eyebrow">Practical Impact</div>
-      <h2 class="article-insight-title">実務への影響</h2>
-      <p class="article-insight-text">プロジェクト管理チームは納入遅延や品質不適合を早期に検出し、コスト超過と工期遅延を防止できます。また、廃棄物と炭素排出の量的把握により、ESG報告と低炭素建設が実現可能に。Qflowは既に£7百万の総資金調達を達成し、業界標準化への道を開いています。このトレンドは他のBIMベンダーも資材追跡機能の統合を加速させ、建設DXの次フェーズへ移行させるでしょう。</p>
     </section></div>
-        
-    <div class="article-keypoints">
-      <div class="article-keypoints-title">この記事の要点</div>
-      <ul class="article-keypoints-list">
-        <li><span class="kp-label">背景</span><span class="kp-text">建設業界では、資材の納入・返却・廃棄に関する可視化の不足が、プロジェクト遅延やコスト超過につながる大きな課題となっています。</span></li><li><span class="kp-label">内容</span><span class="kp-text">AutodesknはUKの建設テック企業Qflowに£2百万を投資し、既存のQflow・Autodesk Construction Cloud統合を拡張します。</span></li><li><span class="kp-label">技術的ポイント</span><span class="kp-text">この統合により、Autodesk Construction Cloudを通じてBIMモデル内の仕様資材とサイト実装資材を紐付け、差分検出が可能になります。</span></li><li><span class="kp-label">業界への影響</span><span class="kp-text">プロジェクト管理チームは納入遅延や品質不適合を早期に検出し、コスト超過と工期遅延を防止できます。</span></li>
-      </ul>
-    </div>
         <div class="article-body-wrap">
           <div class="ai-body-label">AI による日本語解説</div>
           <div class="article-body">
@@ -1388,9 +1397,10 @@
     </div>
         
     <section class="reference-books">
-      <div class="reference-books-label">Reference Books</div>
+      <div class="reference-books-label">参考書籍（広告）</div>
       <h2 class="reference-books-title">この記事を深く理解するための参考書籍</h2>
-      <p class="reference-books-desc">記事テーマと関連性の高い書籍だけを選んでいます。基礎理解や実務での整理に役立つものを中心に掲載しています。</p>
+      <p class="reference-books-desc">記事テーマとの関連性を基準に、理解を深めやすい書籍だけを掲載しています。実務の整理や社内共有に使いやすいものを優先しています。</p>
+      <p class="reference-books-note">編集部が文脈との相性を見て選定した参考書籍です。リンクにはアフィリエイトを含みます。</p>
       <div class="reference-books-list">
         
           <div class="reference-book-item">

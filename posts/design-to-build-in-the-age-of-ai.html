@@ -980,6 +980,12 @@
       font-size: 0.88rem;
       line-height: 1.8;
       color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+    .reference-books-note {
+      font-size: 0.75rem;
+      line-height: 1.7;
+      color: var(--text-light);
       margin-bottom: 1rem;
     }
     .reference-books-list {
@@ -1296,6 +1302,21 @@
       .article-body-wrap { padding: 1.2rem 1.1rem; }
       .article-body { font-size: 0.98rem; line-height: 1.95; }
       .article-section-h2 { margin: 2rem 0 0.85rem; padding: 0.65rem 0.9rem; }
+      .mid-related-card { flex-direction: column; align-items: flex-start; }
+      .article-hero-actions { flex-direction: column; }
+      .article-hero-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+      }
+      .article-share-footer { flex-direction: column; align-items: stretch; }
+      .share-btn-large, .back-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+      }
       .article-tags-row { gap: 0.6rem; }
       .article-tag { width: auto; min-height: 44px; display: inline-flex; align-items: center; }
       .reference-book-item { flex-direction: column; }
@@ -1344,29 +1365,17 @@
       <main class="article-main">
         <div class="article-insight-grid">
       <section class="article-insight-card article-insight-card--summary">
-        <div class="article-insight-eyebrow">Key Points</div>
+        <div class="article-insight-eyebrow">要点</div>
         <h2 class="article-insight-title">要点まとめ</h2>
         <ul class="article-insight-list">
           <li><span class="article-insight-bullet">•</span><span>背景: AIが実運用段階へ移行する中、建築・土木・設備（AECO）業界の設計ソフトウェア企業は、データ主権、モデル責任、クラウド戦略といった経営レベルの課題に直面しています。</span></li><li><span class="article-insight-bullet">•</span><span>内容: Allplanは従来、構造設計と精密詳細設計で知られていましたが、近年は単一の設計ツールから「設計～施工プラットフォーム」への進化を遂行してきました。</span></li><li><span class="article-insight-bullet">•</span><span>技術的ポイント: Alplanの戦略の核は、IFCフォーマットに基づくオープンBIMと、設計～製造～施工の各段階でのデータ一貫性の確保です。</span></li>
         </ul>
       </section>
     <section class="article-insight-card">
-      <div class="article-insight-eyebrow">Industry Impact</div>
+      <div class="article-insight-eyebrow">業界インパクト</div>
       <h2 class="article-insight-title">業界への影響</h2>
       <p class="article-insight-text">このアプローチは、設計と施工の分断を解消し、変更・品質管理・納期の最適化を可能にします。特に公共事業やインフラプロジェクトでは、複数ツール間の相互運用性が不可欠であり、openBIMの徹底がベンダーロックイン回避と調達の透明性をもたらします。同時に、ラウンドトリップ・ワークフロー（設計から施工情報を取得して再び設計へフィードバック）の実装により、BIMモデルは静的な表現から動的な情報資産へと進化します。これは大手ゼネコンや設計事務所の生産性向上と、リスク低減をもたらす重要な転換点となるでしょう。</p>
-    </section>
-    <section class="article-insight-card">
-      <div class="article-insight-eyebrow">Practical Impact</div>
-      <h2 class="article-insight-title">実務への影響</h2>
-      <p class="article-insight-text">このアプローチは、設計と施工の分断を解消し、変更・品質管理・納期の最適化を可能にします。特に公共事業やインフラプロジェクトでは、複数ツール間の相互運用性が不可欠であり、openBIMの徹底がベンダーロックイン回避と調達の透明性をもたらします。同時に、ラウンドトリップ・ワークフロー（設計から施工情報を取得して再び設計へフィードバック）の実装により、BIMモデルは静的な表現から動的な情報資産へと進化します。これは大手ゼネコンや設計事務所の生産性向上と、リスク低減をもたらす重要な転換点となるでしょう。</p>
     </section></div>
-        
-    <div class="article-keypoints">
-      <div class="article-keypoints-title">この記事の要点</div>
-      <ul class="article-keypoints-list">
-        <li><span class="kp-label">背景</span><span class="kp-text">AIが実運用段階へ移行する中、建築・土木・設備（AECO）業界の設計ソフトウェア企業は、データ主権、モデル責任、クラウド戦略といった経営レベルの課題に直面しています。</span></li><li><span class="kp-label">内容</span><span class="kp-text">Allplanは従来、構造設計と精密詳細設計で知られていましたが、近年は単一の設計ツールから「設計～施工プラットフォーム」への進化を遂行してきました。</span></li><li><span class="kp-label">技術的ポイント</span><span class="kp-text">Alplanの戦略の核は、IFCフォーマットに基づくオープンBIMと、設計～製造～施工の各段階でのデータ一貫性の確保です。</span></li><li><span class="kp-label">業界への影響</span><span class="kp-text">このアプローチは、設計と施工の分断を解消し、変更・品質管理・納期の最適化を可能にします。</span></li>
-      </ul>
-    </div>
         <div class="article-body-wrap">
           <div class="ai-body-label">AI による日本語解説</div>
           <div class="article-body">
@@ -1388,9 +1397,10 @@
     </div>
         
     <section class="reference-books">
-      <div class="reference-books-label">Reference Books</div>
+      <div class="reference-books-label">参考書籍（広告）</div>
       <h2 class="reference-books-title">この記事を深く理解するための参考書籍</h2>
-      <p class="reference-books-desc">記事テーマと関連性の高い書籍だけを選んでいます。基礎理解や実務での整理に役立つものを中心に掲載しています。</p>
+      <p class="reference-books-desc">記事テーマとの関連性を基準に、理解を深めやすい書籍だけを掲載しています。実務の整理や社内共有に使いやすいものを優先しています。</p>
+      <p class="reference-books-note">編集部が文脈との相性を見て選定した参考書籍です。リンクにはアフィリエイトを含みます。</p>
       <div class="reference-books-list">
         
           <div class="reference-book-item">

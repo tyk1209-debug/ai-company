@@ -1126,6 +1126,12 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       font-size: 0.88rem;
       line-height: 1.8;
       color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+    .reference-books-note {
+      font-size: 0.75rem;
+      line-height: 1.7;
+      color: var(--text-light);
       margin-bottom: 1rem;
     }
     .reference-books-list {
@@ -1442,6 +1448,21 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       .article-body-wrap { padding: 1.2rem 1.1rem; }
       .article-body { font-size: 0.98rem; line-height: 1.95; }
       .article-section-h2 { margin: 2rem 0 0.85rem; padding: 0.65rem 0.9rem; }
+      .mid-related-card { flex-direction: column; align-items: flex-start; }
+      .article-hero-actions { flex-direction: column; }
+      .article-hero-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+      }
+      .article-share-footer { flex-direction: column; align-items: stretch; }
+      .share-btn-large, .back-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+      }
       .article-tags-row { gap: 0.6rem; }
       .article-tag { width: auto; min-height: 44px; display: inline-flex; align-items: center; }
       .reference-book-item { flex-direction: column; }
@@ -1737,7 +1758,7 @@ function buildIndex(posts, totalCount = 0) {
           <div class="card-thumb-badge"><span class="badge">${escape(catLabel)}</span></div>
         </div>
         <div class="card-body">
-          ${index === 0 ? '<div class="article-card-kicker">Important</div>' : ''}
+          ${index === 0 ? '<div class="article-card-kicker">注目</div>' : ''}
           <h2 class="card-title">
             <a href="./posts/${escape(slug)}.html">${escape(post.titleJa || post.title)}</a>
           </h2>
@@ -1897,6 +1918,13 @@ function getSectionInsight(sections, labels) {
   };
 }
 
+function normalizeInsightText(text) {
+  return String(text || '')
+    .replace(/\s+/g, ' ')
+    .replace(/[。、，．,.]/g, '')
+    .trim();
+}
+
 function tokenizeForRelated(text) {
   return String(text || '')
     .toLowerCase()
@@ -2022,10 +2050,15 @@ function buildArticlePage(post, allPosts) {
   const editorialText = editSection && editSection.paragraphs.length > 0
     ? editSection.paragraphs.join('\n')
     : '';
-  const practicalInsight = getSectionInsight(sections, ['実務への影響', '実務', '導入', '活用', '日本への影響'])
-    || (editSection ? { label: editSection.label || '実務', text: editSection.paragraphs.join(' ') } : null);
+  const explicitPracticalInsight = getSectionInsight(sections, ['実務への影響', '実務', '導入', '活用']);
   const industryInsight = getSectionInsight(sections, ['業界への影響', '市場への影響', '業界', '市場'])
     || (sections.length > 0 ? { label: sections[sections.length - 1].label || '影響', text: sections[sections.length - 1].paragraphs.join(' ') } : null);
+  const practicalInsight = explicitPracticalInsight
+    || (!industryInsight && editSection ? { label: editSection.label || '実務', text: editSection.paragraphs.join(' ') } : null);
+  const distinctPracticalInsight = practicalInsight && industryInsight
+    && normalizeInsightText(practicalInsight.text) === normalizeInsightText(industryInsight.text)
+      ? null
+      : practicalInsight;
 
   // ---- body HTML ----
   const midPost = allPosts.find(p => p.slug !== post.slug && p.category === post.category);
@@ -2057,9 +2090,10 @@ function buildArticlePage(post, allPosts) {
   const affiliates = getAffiliateLinks(post);
   const affiliateHtml = affiliates.length > 0 ? `
     <section class="reference-books">
-      <div class="reference-books-label">Reference Books</div>
+      <div class="reference-books-label">参考書籍（広告）</div>
       <h2 class="reference-books-title">この記事を深く理解するための参考書籍</h2>
-      <p class="reference-books-desc">記事テーマと関連性の高い書籍だけを選んでいます。基礎理解や実務での整理に役立つものを中心に掲載しています。</p>
+      <p class="reference-books-desc">記事テーマとの関連性を基準に、理解を深めやすい書籍だけを掲載しています。実務の整理や社内共有に使いやすいものを優先しています。</p>
+      <p class="reference-books-note">編集部が文脈との相性を見て選定した参考書籍です。リンクにはアフィリエイトを含みます。</p>
       <div class="reference-books-list">
         ${affiliates.map(a => `
           <div class="reference-book-item">
@@ -2073,15 +2107,6 @@ function buildArticlePage(post, allPosts) {
       </div>
     </section>` : '';
 
-  // ---- key points card ----
-  const keypointsHtml = keyPoints.length > 0 ? `
-    <div class="article-keypoints">
-      <div class="article-keypoints-title">この記事の要点</div>
-      <ul class="article-keypoints-list">
-        ${keyPoints.map(kp => `<li><span class="kp-label">${escape(kp.label)}</span><span class="kp-text">${escape(kp.text)}</span></li>`).join('')}
-      </ul>
-    </div>` : '';
-
   // ---- editorial card ----
   const editorialHtml = editorialText ? `
     <div class="article-editorial">
@@ -2093,9 +2118,9 @@ function buildArticlePage(post, allPosts) {
     </div>` : '';
 
   const insightCardsHtml = [
-    buildInsightCard('Key Points', '要点まとめ', keyPoints.slice(0, 3).map((kp) => `${kp.label}: ${kp.text}`), 'summary'),
-    buildInsightCard('Industry Impact', '業界への影響', industryInsight ? industryInsight.text : ''),
-    buildInsightCard('Practical Impact', '実務への影響', practicalInsight ? practicalInsight.text : ''),
+    buildInsightCard('要点', '要点まとめ', keyPoints.slice(0, 3).map((kp) => `${kp.label}: ${kp.text}`), 'summary'),
+    buildInsightCard('業界インパクト', '業界への影響', industryInsight ? industryInsight.text : ''),
+    buildInsightCard('実務インパクト', '実務への影響', distinctPracticalInsight ? distinctPracticalInsight.text : ''),
   ].filter(Boolean).join('');
 
   // ---- hero summary ----
@@ -2175,7 +2200,6 @@ function buildArticlePage(post, allPosts) {
     <div class="article-layout">
       <main class="article-main">
         ${insightCardsHtml ? `<div class="article-insight-grid">${insightCardsHtml}</div>` : ''}
-        ${keypointsHtml}
         <div class="article-body-wrap">
           <div class="ai-body-label">AI による日本語解説</div>
           <div class="article-body">
@@ -2355,7 +2379,7 @@ function buildCategoryPage(category, posts) {
           <div class="card-thumb-badge"><span class="badge">${escape(catLabel)}</span></div>
         </div>
         <div class="card-body">
-          ${index === 0 ? '<div class="article-card-kicker">Featured</div>' : ''}
+          ${index === 0 ? '<div class="article-card-kicker">注目</div>' : ''}
           <h2 class="card-title">
             <a href="../posts/${escape(slug)}.html">${escape(post.titleJa || post.title)}</a>
           </h2>

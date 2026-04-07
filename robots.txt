@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
 Crawl-delay: 10
 
 Sitemap: https://aec-news.com/sitemap.xml

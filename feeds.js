@@ -20,6 +20,11 @@ module.exports = [
     name: "Graphisoft Blog",
     url: "https://blog.graphisoft.com/feed/",
   },
+  {
+    name: "Graphisoft Insights Japan",
+    url: "https://community.graphisoft.com/rss/board?board.id=gs-insights-jp",
+    category: "BIM_ECOSYSTEM",
+  },
 
   // ── openBIM / buildingSMART 系 ────────────────────────────
   {

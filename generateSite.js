@@ -55,6 +55,33 @@ const RECOMMENDED_BOOKS = {
       description: '長時間のリサーチや資料作成、複数アプリをまたぐ実務に向いた高機能マウスです。BIM・建設DXの情報収集や日々の制作環境を整えたい読者に向いています。',
       url: 'https://amzn.to/4dyYBNu',
     },
+    {
+      title: 'Core i7 13700F / RTX4070 / メモリ32GB / SSD 1TB デスクトップPC',
+      description: 'BIM、可視化、軽めのAIワークロードまで視野に入れた実務向け構成です。社内検証や制作環境をまとめて整えたい読者に向いています。',
+      url: 'https://amzn.to/4cfUpjf',
+    },
+    {
+      title: 'LG ウルトラワイドモニター 34WR50QK-B 34インチ / 3440×1440',
+      description: '図面、BIMモデル、資料を横並びで見たい方向けのウルトラワイドモニターです。設計レビューや情報整理の作業効率を上げたい読者に向いています。',
+      url: 'https://amzn.to/4twaMPC',
+    },
+    {
+      title: 'Herman Miller セイルチェア',
+      description: '長時間のモデリングやレビュー、資料作成が続く実務環境を整えたい方向けの定番チェアです。制作環境全体の快適性を重視する読者に向いています。',
+      url: 'https://amzn.to/47NR4Xk',
+    },
+  ],
+  OTHER: [
+    {
+      title: 'Core i7 12700F / RTX4070 / メモリ32GB / SSD 1TB デスクトップPC',
+      description: 'BIMやレンダリング、日常的なAI活用までを1台でこなしたい方向けのデスクトップ構成です。ワークステーション導入を比較中の読者に向いています。',
+      url: 'https://amzn.to/41QMXWS',
+    },
+    {
+      title: 'NVIDIA GeForce RTX 4090 24GB Founders Edition',
+      description: 'GPUメモリが重要になるレンダリングや可視化、重めの生成AI処理を見据える方向けのハイエンドGPUです。VRAM重視で環境を組みたい読者に向いています。',
+      url: 'https://amzn.to/4bV2GKz',
+    },
   ],
   GLOOBE: [
     {

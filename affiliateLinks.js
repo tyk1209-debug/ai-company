@@ -151,6 +151,55 @@ const SITE_AFFILIATE_LINKS = [
     url: 'https://amzn.to/4tAYxl5',
     category: 'AI_DX',
   },
+  {
+    keywords: ['ワークステーション', 'workstation', 'デスクトップ', 'desktop', 'RTX4070', 'RTX 4070', 'Core i7', 'BTO'],
+    title: 'Core i7 13700F / RTX4070 / メモリ32GB / SSD 1TB デスクトップPC',
+    description: 'BIM、レンダリング、軽めのAI処理までを1台で進めたい方向けの実務向け構成です。',
+    url: 'https://amzn.to/4cfUpjf',
+    category: 'OTHER',
+  },
+  {
+    keywords: ['ワークステーション', 'workstation', '第12世代', '12700F', 'RTX4070', 'RTX 4070', 'デスクトップ'],
+    title: '第12世代 Core i7 12700F / RTX4070 / メモリ32GB / SSD 1TB デスクトップPC',
+    description: 'BIMや可視化の作業環境を比較検討したい方向けのデスクトップ構成です。',
+    url: 'https://amzn.to/41QMXWS',
+    category: 'OTHER',
+  },
+  {
+    keywords: ['Cobratype', '13700KF', 'RTX4070', 'RTX 4070', 'ゲーミングPC', 'デスクトップ'],
+    title: 'Cobratype Elevate (Intel i7-13700KF | RTX 4070)',
+    description: 'GPU性能を重視してBIM、可視化、AIの作業環境を整えたい方向けのデスクトップPCです。',
+    url: 'https://amzn.to/4dyLQ5o',
+    category: 'OTHER',
+  },
+  {
+    keywords: ['RTX4090', 'RTX 4090', 'GeForce RTX 4090', 'GPU', 'VRAM', 'GPUメモリ', '可視化', 'レンダリング', 'viz'],
+    title: 'NVIDIA GeForce RTX 4090 24GB Founders Edition',
+    description: 'GPUメモリが重要になるレンダリングや生成AI処理を見据える方向けのハイエンドGPUです。',
+    url: 'https://amzn.to/4bV2GKz',
+    category: 'OTHER',
+  },
+  {
+    keywords: ['ウルトラワイド', 'ultrawide', 'モニター', 'monitor', '3440x1440', 'UWQHD', 'CAD', '図面', '可視化'],
+    title: '34インチ 曲面ウルトラワイドモニター UWQHD 3440x1440',
+    description: '図面、BIMモデル、資料を横並びで扱いたい方向けのウルトラワイドモニターです。',
+    url: 'https://amzn.to/4sZAJaD',
+    category: 'OTHER',
+  },
+  {
+    keywords: ['LG', 'ウルトラワイド', 'UltraWide', 'モニター', 'monitor', '3440×1440', '3440x1440', '画面', '表示環境'],
+    title: 'LG ウルトラワイドモニター 34WR50QK-B 34インチ / 3440×1440',
+    description: 'BIM、表計算、ブラウザ、資料を同時に見ながら進めたい方向けの実務向けモニターです。',
+    url: 'https://amzn.to/4twaMPC',
+    category: 'AI_DX',
+  },
+  {
+    keywords: ['チェア', 'chair', 'Herman Miller', 'ハーマンミラー', '作業環境', '長時間', '生産性', 'ergonomics'],
+    title: 'Herman Miller セイルチェア',
+    description: '長時間のモデリングやレビュー作業が続く環境を整えたい方向けの定番チェアです。',
+    url: 'https://amzn.to/47NR4Xk',
+    category: 'AI_DX',
+  },
 ];
 
 /**
@@ -160,9 +209,15 @@ const SITE_AFFILIATE_LINKS = [
  */
 function getAffiliateLinks(post) {
   const text = `${post.title || ''} ${post.titleJa || ''} ${post.postText || ''} ${post.bodyJa || ''}`;
-  const matched = SITE_AFFILIATE_LINKS.filter(link =>
-    link.keywords.some(kw => text.includes(kw))
-  );
+  const matched = SITE_AFFILIATE_LINKS
+    .map((link, index) => ({
+      link,
+      index,
+      score: link.keywords.reduce((count, kw) => count + (text.includes(kw) ? 1 : 0), 0),
+    }))
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score || a.index - b.index)
+    .map((item) => item.link);
   if (matched.length > 0) {
     return matched.slice(0, 2);
   }

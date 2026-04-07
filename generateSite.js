@@ -2260,17 +2260,23 @@ function buildRecommendedBooks(categoryKey) {
   if (books.length === 0) return '';
 
   const items = books.map((book) => `
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">おすすめアイテム</div>
-        <p class="sidebar-about" style="margin-bottom:0.75rem; color: var(--text); font-weight:700;">${escape(book.title)}</p>
-        <p class="sidebar-about" style="margin-bottom:0.85rem;">${escape(book.description)}</p>
-        <a class="sidebar-follow-btn" href="${escape(book.url)}" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
-      </div>`).join('');
+          <article style="padding:0.9rem 0; border-top:1px solid rgba(15, 23, 42, 0.08);">
+            <p class="sidebar-about" style="margin-bottom:0.45rem; color: var(--text); font-weight:700;">${escape(book.title)}</p>
+            <p class="sidebar-about" style="margin-bottom:0.75rem;">${escape(book.description)}</p>
+            <a class="sidebar-follow-btn" href="${escape(book.url)}" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
+          </article>`).join('');
 
-  return items;
+  return `
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">参考アイテム</div>
+        <p class="sidebar-about" style="margin-bottom:0.9rem;">このカテゴリの理解や実務整理に役立つ書籍・ツールをまとめています。ニュースや基礎解説を読んだあとに、必要なものだけ選べる導線です。</p>
+        <div style="display:flex; flex-direction:column;">
+          ${items}
+        </div>
+      </div>`;
 }
 
-function buildSidebar(posts, base = '.') {
+function buildSidebar(posts, base = '.', extraWidgets = '') {
   // Category counts
   const catCounts = {};
   for (const p of posts) {
@@ -2323,6 +2329,7 @@ function buildSidebar(posts, base = '.') {
 
   return `
     <aside class="sidebar">
+      ${extraWidgets}
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">人気記事</div>
         <ul class="sidebar-popular-list">${popularItems}</ul>
@@ -2481,6 +2488,9 @@ function buildLearningGuidesSection(post) {
       <h2 class="reference-books-title">この内容を理解するならこちら</h2>
       <p class="reference-books-desc">ニュースだけではつかみにくい前提知識を、基礎解説でまとめています。まず概念を押さえてから読むと、記事の意味が追いやすくなります。</p>
       ${buildGuideGrid(guides, '..', '基礎解説')}
+      <div style="margin-top:1rem;">
+        <a class="cta-block-btn" href="../guides/index.html">基礎解説を一覧で見る</a>
+      </div>
     </section>`;
 }
 
@@ -2649,7 +2659,7 @@ function buildIndex(posts, totalCount = 0) {
       <div class="guide-intro" style="margin-bottom:1rem;">
         <div class="reference-books-label">読む → 理解する</div>
         <h2 class="reference-books-title">ニュースを読む前に押さえたい基礎解説</h2>
-        <p class="reference-books-desc">BIM、Revit、Archicad、openBIMの基本を先に整理しておくと、ニュースの意味や実務への影響を判断しやすくなります。</p>
+        <p class="reference-books-desc">BIM、Revit、Archicad、IFC、CDE、BIM×AIなど、実務で前提になるテーマを先に整理しておくと、ニュースの意味や実務への影響を判断しやすくなります。</p>
       </div>
       ${buildGuideGrid(topGuides, '.', '基礎解説')}
       <div style="margin-top:1rem;">
@@ -3053,10 +3063,10 @@ function buildArticlePage(post, allPosts) {
   const affiliates = getAffiliateLinks(post);
   const affiliateHtml = affiliates.length > 0 ? `
     <section class="reference-books">
-      <div class="reference-books-label">参考アイテム（広告）</div>
-      <h2 class="reference-books-title">この記事を深く理解するための参考アイテム</h2>
-      <p class="reference-books-desc">記事テーマとの関連性を基準に、理解を深めやすい書籍や実務アイテムだけを掲載しています。実務の整理や検証、社内共有に役立つものを優先しています。</p>
-      <p class="reference-books-note">編集部が文脈との相性を見て選定した参考アイテムです。リンクにはアフィリエイトを含みます。</p>
+      <div class="reference-books-label">理解を深める（広告）</div>
+      <h2 class="reference-books-title">この内容を深く理解するための参考アイテム</h2>
+      <p class="reference-books-desc">基礎解説で概要を押さえたあとに、理解を一段深めやすい書籍や実務アイテムだけを掲載しています。記事テーマとの関連性を優先し、社内共有や検証に使いやすいものを選んでいます。</p>
+      <p class="reference-books-note">編集部が記事文脈との相性を見て選定した参考アイテムです。リンクにはアフィリエイトを含みます。</p>
       <div class="reference-books-list">
         ${affiliates.map(a => `
           <div class="reference-book-item">
@@ -3400,7 +3410,7 @@ function buildCategoryPage(category, posts) {
           ${cards}
         </div>
       </main>
-      ${categoryLearning}${recommendedBooks}${buildSidebar(posts, '..')}
+      ${buildSidebar(posts, '..', `${categoryLearning}${recommendedBooks}`)}
     </div>
   </div>` +
     htmlFooter('..', catPosts.length);

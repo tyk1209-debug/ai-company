@@ -286,6 +286,85 @@ const EXPLAINER_GUIDES = [
       },
     ],
   },
+  {
+    slug: 'bim-manager',
+    title: 'BIMマネージャーとは',
+    category: 'BIM_ECOSYSTEM',
+    description: 'BIMマネージャーの役割、必要スキル、年収レンジ、キャリア価値を整理した実務向け解説です。',
+    heroSummary: 'BIMマネージャーは、BIMソフトを使う人ではなく、BIMを案件と組織で機能させる人です。',
+    oneLine: 'BIMマネージャーは、BIMモデルを作る担当ではなく、BIM運用を設計・施工・発注者の間で成立させる実務責任者です。',
+    overview: 'BIMマネージャーは、BIMモデルを作る担当者ではなく、BIM運用を成立させる実務責任者です。設計・施工・発注者の情報連携を整理し、ルール、標準、受け渡し条件を決めて、BIMを組織の仕組みとして回す役割を担います。',
+    industryImpact: 'BIMマネージャーが増えると、BIMは担当者依存の作図ツールから、組織の情報基盤へ変わります。設計・施工・発注者の間で情報運用を統一できる人材がいることで、BIM導入の成熟度が上がり、案件ごとの属人的な運用から脱却しやすくなります。',
+    practicalImpact: '実務では、命名ルール、属性ルール、IFC受け渡し、CDE運用、承認フローが安定しやすくなります。結果として、モデルはあるが運用できない状態を減らし、設計変更時の混乱や施工側との認識ずれを抑えやすくなります。',
+    features: [
+      'BIMソフト操作より、運用設計と標準化の責任が大きい',
+      '設計・施工・発注者の間をつなぐ調整役として機能する',
+      '案件対応だけでなく、組織のBIM定着とDX推進に関わる',
+    ],
+    differences: [
+      'BIMオペレーターがモデル作成を担うのに対し、BIMマネージャーはモデル運用の仕組みを担います。',
+      'BIMコーディネーターが案件内の調整に寄るのに対し、BIMマネージャーは標準化や組織運用まで見ることが多いです。',
+      '情報システム担当と違い、設計・施工実務に近い判断が必要です。',
+    ],
+    fit: [
+      '設計事務所でBIMを案件単位から組織運用へ広げたい人',
+      'ゼネコンでBIM推進やDX推進を担う人',
+      'ソフト操作だけでなく、標準化や情報連携に強くなりたい実務者',
+    ],
+    practicalUse: [
+      '命名ルール、属性ルール、テンプレート、受け渡し条件の整備',
+      'IFCやopenBIMの運用設計、CDEの共有ルール設計',
+      '設計・施工・発注者の調整、承認フロー、変更管理の整理',
+    ],
+    difficulty: 'BIMマネージャーは単一ソフトの習得で完結しません。BIMソフト理解、IFC/openBIM、CDE、プロジェクト管理、関係者調整まで必要になるため、知識領域が広いのが難しさです。',
+    stumblingPoints: [
+      'ソフト操作ができれば十分だと考えやすい',
+      'IFCやCDEを後回しにしてしまい、運用設計が弱くなる',
+      '標準化より案件対応を優先し、組織に知見が残らない',
+    ],
+    selfStudyWhyHard: '独学では、RevitやArchicadの操作は学べても、IFC/openBIM、CDE、発注者要件、施工連携まで横断して理解するのが難しいです。BIMマネージャーは操作職ではなく、運用設計職に近いため、知識を体系で学ぶ必要があります。',
+    learningMethod: 'まずBIMの基本概念を押さえ、次に主要ツールの違い、IFC/openBIM、CDE、プロジェクト管理の順で学ぶのが効率的です。そのうえで実案件の運用設計に触れると、役割の全体像が見えやすくなります。',
+    extraSections: [
+      {
+        title: '日本と海外の違い',
+        body: '海外ではBIMマネージャーが独立職種として定義され、設計事務所、施工会社、BIMコンサルティング会社で専任化が進んでいます。一方、日本では設計担当やBIM担当の兼務が多く、役割や権限が曖昧になりやすいのが実情です。日本市場では、今後この役割を専任で担える人材の価値が上がりやすいと考えられます。',
+      },
+      {
+        title: '年収レンジ',
+        body: '日本市場では、BIM担当やBIMコーディネーター寄りで500万〜700万円前後、案件横断や標準化まで担うBIMマネージャー層で700万〜1000万円前後、組織戦略やDX推進まで担う上位層では1000万円以上もあり得ます。会社規模や役割範囲で差は大きいですが、ソフト操作だけでなく運用設計まで担える人材は評価されやすいです。',
+      },
+      {
+        title: 'キャリアとしての魅力',
+        body: 'BIMマネージャーは、設計、施工、DX、情報管理の交点に立てる職種です。現場理解を持ちながら標準化や組織変革に関われるため、将来的にDX推進、技術統括、BIM戦略などへ広がりやすいキャリアです。',
+      },
+    ],
+    guideLinks: [
+      { slug: 'bim', text: 'BIM全体の考え方を整理したい方はこちら' },
+      { slug: 'openbim', text: 'IFCやopenBIMとの関係を知りたい方はこちら' },
+      { slug: 'revit', text: 'Revit実務の前提を整理したい方はこちら' },
+    ],
+    booksIntro: 'BIMマネージャーは単一ソフトの習得ではなく、BIM運用全体を体系的に理解することが重要です。断片的な知識だけでは役割を果たしにくいため、運用設計まで含めて学べる書籍が役立ちます。',
+    books: [
+      {
+        audience: 'BIMマネジメント向け',
+        title: 'ファシリティマネジメントのためのBIM要件定義',
+        description: 'BIMをどう運用し、どう引き渡し、どう使うかを整理したい人向けです。BIMマネージャー視点に近い一冊です。',
+        url: 'https://amzn.to/4cg9ZLX',
+      },
+      {
+        audience: 'BIM実務向け',
+        title: 'はじめてのAutodesk Revit＆Revit LT [Revit/Revit LT 2026対応]',
+        description: 'BIMの実務入口をRevitベースで理解したい人向けです。運用の前提となるモデル理解を固めやすいです。',
+        url: 'https://amzn.to/3QpB1Ja',
+      },
+      {
+        audience: 'BIM実務向け',
+        title: 'Archicad28ではじめるBIM設計入門[基本・実施設計編]',
+        description: '設計フローに沿ってBIMを実務へ落とし込みたい人向けです。ソフト理解と運用理解をつなぎやすい一冊です。',
+        url: 'https://amzn.to/4tCIdjL',
+      },
+    ],
+  },
 ];
 
 const EXPLAINER_GUIDE_MAP = Object.fromEntries(EXPLAINER_GUIDES.map((guide) => [guide.slug, guide]));
@@ -2146,7 +2225,7 @@ function buildExplainerBooks(guide) {
     <section class="guide-books">
       <div class="reference-books-label">おすすめ書籍</div>
       <h2 class="reference-books-title">この記事を理解するためのおすすめ書籍</h2>
-      <p class="reference-books-desc">IFCやBIMの概念は断片的な記事だけでは理解しにくいため、全体像を体系的に学べる書籍を紹介します。売り込みではなく、学習の順番を作るための導線です。</p>
+      <p class="reference-books-desc">${escape(guide.booksIntro || '概念や運用設計は断片的な記事だけでは理解しにくいため、全体像を体系的に学べる書籍を紹介します。売り込みではなく、学習の順番を作るための導線です。')}</p>
       <div class="guide-books-grid">
         ${guide.books.map((book) => `
           <article class="guide-book-card">
@@ -2194,10 +2273,19 @@ function buildExplainerPage(guide, posts) {
     <div class="article-layout">
       <main class="article-main">
         <section class="guide-intro">
-          <div class="reference-books-label">概要</div>
-          <h2 class="reference-books-title">まず押さえるべき結論</h2>
-          <p class="reference-books-desc">${escape(guide.overview)}</p>
+          ${guide.oneLine ? `<div class="reference-books-label">一言でいうと</div><h2 class="reference-books-title">${escape(guide.oneLine)}</h2>` : '<div class="reference-books-label">概要</div><h2 class="reference-books-title">まず押さえるべき結論</h2>'}
+          ${guide.oneLine ? `<p class="reference-books-desc">${escape(guide.overview)}</p>` : `<p class="reference-books-desc">${escape(guide.overview)}</p>`}
         </section>
+        ${guide.industryImpact ? `
+        <section class="guide-section">
+          <h2>業界への影響</h2>
+          <p>${escape(guide.industryImpact)}</p>
+        </section>` : ''}
+        ${guide.practicalImpact ? `
+        <section class="guide-section">
+          <h2>実務への影響</h2>
+          <p>${escape(guide.practicalImpact)}</p>
+        </section>` : ''}
         <section class="guide-section">
           <h2>特徴</h2>
           <ul>${guide.features.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
@@ -2231,6 +2319,11 @@ function buildExplainerPage(guide, posts) {
           <h2>学習方法</h2>
           <p>${escape(guide.learningMethod)}</p>
         </section>
+        ${(guide.extraSections || []).map((section) => `
+        <section class="guide-section">
+          <h2>${escape(section.title)}</h2>
+          <p>${escape(section.body)}</p>
+        </section>`).join('')}
         ${buildExplainerBooks(guide)}
         <div class="article-related-group">
           <h2 class="section-title" style="margin-top:0;">あわせて読みたい基礎解説</h2>

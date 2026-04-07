@@ -1570,7 +1570,7 @@ function buildRecommendedBooks(categoryKey) {
 
   const items = books.map((book) => `
       <div class="sidebar-widget">
-        <div class="sidebar-widget-title">おすすめ書籍</div>
+        <div class="sidebar-widget-title">おすすめアイテム</div>
         <p class="sidebar-about" style="margin-bottom:0.75rem; color: var(--text); font-weight:700;">${escape(book.title)}</p>
         <p class="sidebar-about" style="margin-bottom:0.85rem;">${escape(book.description)}</p>
         <a class="sidebar-follow-btn" href="${escape(book.url)}" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
@@ -2090,10 +2090,10 @@ function buildArticlePage(post, allPosts) {
   const affiliates = getAffiliateLinks(post);
   const affiliateHtml = affiliates.length > 0 ? `
     <section class="reference-books">
-      <div class="reference-books-label">参考書籍（広告）</div>
-      <h2 class="reference-books-title">この記事を深く理解するための参考書籍</h2>
-      <p class="reference-books-desc">記事テーマとの関連性を基準に、理解を深めやすい書籍だけを掲載しています。実務の整理や社内共有に使いやすいものを優先しています。</p>
-      <p class="reference-books-note">編集部が文脈との相性を見て選定した参考書籍です。リンクにはアフィリエイトを含みます。</p>
+      <div class="reference-books-label">参考アイテム（広告）</div>
+      <h2 class="reference-books-title">この記事を深く理解するための参考アイテム</h2>
+      <p class="reference-books-desc">記事テーマとの関連性を基準に、理解を深めやすい書籍や実務アイテムだけを掲載しています。実務の整理や検証、社内共有に役立つものを優先しています。</p>
+      <p class="reference-books-note">編集部が文脈との相性を見て選定した参考アイテムです。リンクにはアフィリエイトを含みます。</p>
       <div class="reference-books-list">
         ${affiliates.map(a => `
           <div class="reference-book-item">

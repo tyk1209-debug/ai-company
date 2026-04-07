@@ -23,6 +23,18 @@ const RECOMMENDED_BOOKS = {
       description: 'ArchicadでBIM設計を始めたい方向けの入門書です。基本設計から実施設計までの流れを押さえやすい一冊です。',
       url: 'https://amzn.to/4tCIdjL',
     },
+    {
+      title: '基本から学ぶ 測量技術者のための ドローンによる写真測量とレーザ測量',
+      description: 'ドローン写真測量とレーザ測量の基礎を学びたい方向けの一冊です。現場DXや3D計測に関心のある読者に向いています。',
+      url: 'https://amzn.to/4veruET',
+    },
+  ],
+  AI_DX: [
+    {
+      title: 'ゼネコン5.0: SDGs、DX時代の建設業の経営戦略',
+      description: '建設業のDX、SDGs、経営変革を俯瞰した一冊です。建設会社のデジタル化や事業戦略に関心のある読者に向いています。',
+      url: 'https://amzn.to/4tAYxl5',
+    },
   ],
 };
 

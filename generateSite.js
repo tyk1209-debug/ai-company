@@ -2508,6 +2508,15 @@ function thumbStyle(catKey, base = '.') {
   return `background: ${grad}, url('${base}/assets/Getting-real-about-technology-part-1.webp') center/cover no-repeat;`;
 }
 
+function heroThumbStyle(catKey, base = '.') {
+  const img = THUMB_IMAGES[catKey];
+  const grad = 'linear-gradient(135deg, rgba(7,15,30,0.82) 0%, rgba(15,42,74,0.78) 52%, rgba(12,32,60,0.84) 100%)';
+  if (img) {
+    return `background: ${grad}, url('${img.replace('./assets/', base + '/assets/')}') center/cover no-repeat;`;
+  }
+  return `background: ${grad}, url('${base}/assets/Getting-real-about-technology-part-1.webp') center/cover no-repeat;`;
+}
+
 function guideUrl(slug, base = '.') {
   return `${base}/guides/${slug}.html`;
 }
@@ -2653,7 +2662,7 @@ function buildExplainerPage(guide, posts) {
   }) +
     htmlHeader('..') +
     `
-  <div class="article-hero" style="background:${thumbStyle(guide.category, '..')}">
+  <div class="article-hero" style="${heroThumbStyle(guide.category, '..')}">
     <div class="article-hero-inner">
       <div class="article-hero-breadcrumb"><a href="../">ホーム</a><span class="article-hero-meta-sep">·</span><span>基礎解説</span></div>
       <h1 class="article-hero-title">${escape(guide.title)}</h1>

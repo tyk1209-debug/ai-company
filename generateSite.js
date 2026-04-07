@@ -16,6 +16,11 @@ const RECOMMENDED_BOOKS = {
       description: 'Revit 2026 / Revit LT 2026に対応した入門書です。これから操作を学ぶ方や、基本を整理し直したい方に向いています。',
       url: 'https://amzn.to/3QpB1Ja',
     },
+    {
+      title: '3Dconnexion 3D CAD マウス SpaceMouse Wireless',
+      description: '3D CADやBIMの視点操作を快適にしたい方向けの定番デバイスです。Revitや3Dモデルの閲覧・調整を効率化したい読者に向いています。',
+      url: 'https://amzn.to/4cukegM',
+    },
   ],
   BIM_ECOSYSTEM: [
     {

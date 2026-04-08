@@ -2536,6 +2536,7 @@ function buildSidebar(posts, base = '.', extraWidgets = '') {
 // カテゴリ別サムネイル画像マップ（画像があれば優先、なければグラデ）
 const THUMB_IMAGES = {
   REVIT: './assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg',
+  ARCHICAD: './assets/Archicad用.png',
   BIM_ECOSYSTEM: './assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg',
   BIM_AI: './assets/csm_KI_Bau_2a4ab20acc.jpg',
   CONSTRUCTION_TECH: './assets/csm_KI_Bau_2a4ab20acc.jpg',
@@ -2561,9 +2562,32 @@ const THUMB_GRADIENTS = {
   BIM_ECOSYSTEM: 'linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%)',
 };
 
-function thumbStyle(catKey, base = '.') {
-  const img = THUMB_IMAGES[catKey];
-  const grad = THUMB_GRADIENTS[catKey] || 'linear-gradient(135deg, rgba(30,58,95,0.7) 0%, rgba(37,99,235,0.7) 100%)';
+function resolveVisualKey(catKey, item = null) {
+  const fallback = (catKey || 'OTHER').toUpperCase();
+  const haystack = [
+    item?.slug,
+    item?.title,
+    item?.titleJa,
+    item?.source,
+    ...(item?.tags || []),
+  ].filter(Boolean).join(' ').toLowerCase();
+
+  if (
+    fallback === 'ARCHICAD' ||
+    haystack.includes('archicad') ||
+    haystack.includes('graphisoft') ||
+    haystack.includes('bimx')
+  ) {
+    return 'ARCHICAD';
+  }
+
+  return fallback;
+}
+
+function thumbStyle(catKey, base = '.', item = null) {
+  const visualKey = resolveVisualKey(catKey, item);
+  const img = THUMB_IMAGES[visualKey];
+  const grad = THUMB_GRADIENTS[visualKey] || 'linear-gradient(135deg, rgba(30,58,95,0.7) 0%, rgba(37,99,235,0.7) 100%)';
   if (img) {
     return `background: ${grad}, url('${img.replace('./assets/', base + '/assets/')}') center/cover no-repeat;`;
   }
@@ -2571,8 +2595,9 @@ function thumbStyle(catKey, base = '.') {
   return `background: ${grad}, url('${base}/assets/Getting-real-about-technology-part-1.webp') center/cover no-repeat;`;
 }
 
-function heroThumbStyle(catKey, base = '.') {
-  const img = THUMB_IMAGES[catKey];
+function heroThumbStyle(catKey, base = '.', item = null) {
+  const visualKey = resolveVisualKey(catKey, item);
+  const img = THUMB_IMAGES[visualKey];
   const grad = 'linear-gradient(135deg, rgba(7,15,30,0.82) 0%, rgba(15,42,74,0.78) 52%, rgba(12,32,60,0.84) 100%)';
   if (img) {
     return `background: ${grad}, url('${img.replace('./assets/', base + '/assets/')}') center/cover no-repeat;`;
@@ -2587,7 +2612,7 @@ function guideUrl(slug, base = '.') {
 function buildGuideCard(guide, base = '.', kicker = '基礎解説') {
   return `
     <article class="guide-card">
-      <div class="card-thumb" style="${thumbStyle(guide.category, base)}">
+      <div class="card-thumb" style="${thumbStyle(guide.category, base, guide)}">
         <div class="card-thumb-badge"><span class="badge">${escape(categoryLabel(guide.category))}</span></div>
       </div>
       <div class="guide-card-body">
@@ -2765,7 +2790,7 @@ function buildExplainerPage(guide, posts) {
   }) +
     htmlHeader('..') +
     `
-  <div class="article-hero" style="${heroThumbStyle(guide.category, '..')}">
+  <div class="article-hero" style="${heroThumbStyle(guide.category, '..', guide)}">
     <div class="article-hero-inner">
       <div class="article-hero-breadcrumb"><a href="../">ホーム</a><span class="article-hero-meta-sep">·</span><span>基礎解説</span></div>
       <h1 class="article-hero-title">${escape(guide.title)}</h1>
@@ -2932,7 +2957,7 @@ function buildIndex(posts, totalCount = 0) {
   // 注目記事: posts 0-2 as featured cards (magazine layout)
   const featuredCards = posts.slice(0, 3).map((post, i) => {
     const catKey = (post.category || 'OTHER').toUpperCase();
-    const ts = thumbStyle(catKey);
+    const ts = thumbStyle(catKey, '.', post);
     const isMain = i === 0;
     const snip = excerpt(post.bodyJa || post.postText || post.summary || '', 90);
     return `
@@ -2964,7 +2989,7 @@ function buildIndex(posts, totalCount = 0) {
     const date = formatDate(post.pubDate);
     const snippetText = post.bodyJa || post.postText || post.summary || '';
     const snip = excerpt(snippetText, 100);
-    const ts2 = thumbStyle(catKey);
+    const ts2 = thumbStyle(catKey, '.', post);
 
     return `
       <article class="article-card${index === 0 ? ' article-card--lead' : ''}" data-category="${escape(catKey)}">
@@ -3243,7 +3268,7 @@ function buildArticleCards(items, base = '..') {
   if (!items || items.length === 0) return '';
   return items.map((p) => {
     const catKey = (p.category || 'OTHER').toUpperCase();
-    const ts = thumbStyle(catKey, base);
+    const ts = thumbStyle(catKey, base, p);
     const snip = excerpt(p.bodyJa || p.postText || p.summary || '', 80);
     return `
       <article class="article-related-card">
@@ -3443,7 +3468,8 @@ function buildArticlePage(post, allPosts) {
 
   const pageTitle = `${post.titleJa || post.title} | ${SITE_NAME}`;
   const descText = excerpt(bodyText || post.summary || '', 120);
-  const heroImg = (THUMB_IMAGES[catKey] || './assets/Getting-real-about-technology-part-1.webp').replace('./assets/', '../assets/');
+  const heroVisualKey = resolveVisualKey(catKey, post);
+  const heroImg = (THUMB_IMAGES[heroVisualKey] || './assets/Getting-real-about-technology-part-1.webp').replace('./assets/', '../assets/');
   const heroBg = `linear-gradient(135deg, rgba(10,22,40,0.87) 0%, rgba(15,42,74,0.83) 100%), url('${heroImg}') center/cover no-repeat`;
   const catSlugStr = categorySlug(post.category || 'OTHER');
   const shareUrl = SITE_URL + '/posts/' + post.slug + '.html';
@@ -3692,7 +3718,7 @@ function buildCategoryPage(category, posts) {
     const date = formatDate(post.pubDate);
     const snippetText = post.bodyJa || post.postText || post.summary || '';
     const snip = excerpt(snippetText, 100);
-    const ts3 = thumbStyle(catKey, '..');
+    const ts3 = thumbStyle(catKey, '..', post);
 
     return `
       <article class="article-card${index === 0 ? ' article-card--lead' : ''}">
@@ -3747,8 +3773,9 @@ function buildCategoryPage(category, posts) {
     : '';
 
   const catKey2 = category.toUpperCase();
-  const catImg2 = (THUMB_IMAGES[catKey2] || './assets/Getting-real-about-technology-part-1.webp').replace('./assets/', '../assets/');
-  const catGrad2 = THUMB_GRADIENTS[catKey2] || 'linear-gradient(135deg, rgba(30,58,95,0.65) 0%, rgba(37,99,235,0.65) 100%)';
+  const categoryVisualKey = resolveVisualKey(catKey2, { title: label });
+  const catImg2 = (THUMB_IMAGES[categoryVisualKey] || './assets/Getting-real-about-technology-part-1.webp').replace('./assets/', '../assets/');
+  const catGrad2 = THUMB_GRADIENTS[categoryVisualKey] || 'linear-gradient(135deg, rgba(30,58,95,0.65) 0%, rgba(37,99,235,0.65) 100%)';
   const catHeroBg = `linear-gradient(135deg, rgba(10,22,40,0.80) 0%, rgba(10,22,40,0.72) 100%), ${catGrad2}, url('${catImg2}') center/cover no-repeat`;
 
   return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [categoryJsonLd, breadcrumbLd, itemListLd], {

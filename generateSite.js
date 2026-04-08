@@ -1003,7 +1003,7 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       margin-bottom: 0.55rem;
     }
     .card-thumb {
-      height: 120px;
+      height: 150px;
       background: linear-gradient(135deg, var(--navy-mid) 0%, var(--blue) 100%);
       position: relative;
       flex-shrink: 0;

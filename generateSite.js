@@ -1349,7 +1349,6 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       margin-bottom: 1.5rem;
       letter-spacing: 0.02em;
     }
-    .section-title--compact { margin-bottom: 0.35rem; }
 
     /* ---- article card ---- */
     .article-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
@@ -3291,7 +3290,7 @@ function buildIndex(posts, totalCount = 0) {
   const topGuides = EXPLAINER_GUIDES.slice(0, 4);
   const guideSectionHtml = `
     <section id="guides" style="margin-bottom:2rem;">
-      <h2 class="section-title section-title--compact">基礎解説</h2>
+      <h2 class="section-title">基礎解説</h2>
       <div class="guide-intro" style="margin-bottom:1rem;">
         <h2 class="reference-books-title">ニュースを読む前に押さえたい基礎解説</h2>
         <p class="reference-books-desc">BIM、Revit、Archicad、IFC、CDE、BIM×AIなど、実務で前提になるテーマを先に整理しておくと、ニュースの意味や実務への影響を判断しやすくなります。</p>

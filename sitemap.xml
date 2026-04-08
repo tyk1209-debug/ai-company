@@ -31,13 +31,13 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/categories/archicad.html</loc>
+    <loc>https://aec-news.com/categories/bim-ecosystem.html</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/categories/bim-ecosystem.html</loc>
+    <loc>https://aec-news.com/categories/archicad.html</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -113,6 +113,24 @@
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/arcol-helps-sera-architects-boost-collaboration.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/puget-systems-expands-server-portfolio.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/from-data-to-digital-twins-japans-plateau-project-offers-open-access-models-of-m.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aec-news.com/posts/2026-1.html</loc>

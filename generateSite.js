@@ -206,7 +206,7 @@ const EXPLAINER_GUIDES = [
   {
     slug: 'archicad',
     title: 'Archicadとは',
-    category: 'BIM_ECOSYSTEM',
+    category: 'ARCHICAD',
     description: 'Archicadの特徴、Revitとの違い、設計実務での使われ方、学び方を整理した基礎解説です。',
     heroSummary: 'Archicadは建築設計との相性が良いBIMソフトで、初期計画から実施設計まで一貫して使われています。',
     overview: 'ArchicadはGraphisoftが提供するBIMソフトで、建築設計者が直感的に扱いやすいモデリング体験と、openBIMへの親和性を強みとしています。意匠設計を中心に、早い段階からモデルで検討したい組織と相性が良いツールです。',

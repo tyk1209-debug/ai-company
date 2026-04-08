@@ -2492,16 +2492,13 @@ function buildHomeSidebarWidgets(base = '.') {
         </div>
       </div>`;
 
-  return `${learningWidget}${referenceWidget}`;
+  return {
+    afterCategories: learningWidget,
+    afterRecent: referenceWidget,
+  };
 }
 
 function buildSidebar(posts, base = '.', extraWidgets = '') {
-  // Category counts
-  const catCounts = {};
-  for (const p of posts) {
-    const label = categoryLabel(p.category);
-    catCounts[label] = (catCounts[label] || 0) + 1;
-  }
   const catData = {};
   for (const p of posts) {
     const key = (p.category || 'OTHER').toUpperCase();
@@ -2546,9 +2543,16 @@ function buildSidebar(posts, base = '.', extraWidgets = '') {
     </li>`
   ).join('');
 
+  const widgets = typeof extraWidgets === 'string'
+    ? { beforePopular: extraWidgets }
+    : (extraWidgets || {});
+  const beforePopular = widgets.beforePopular || '';
+  const afterCategories = widgets.afterCategories ? `\n      ${widgets.afterCategories}` : '';
+  const afterRecent = widgets.afterRecent ? `\n      ${widgets.afterRecent}` : '';
+
   return `
     <aside class="sidebar">
-      ${extraWidgets}
+      ${beforePopular}
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">人気記事</div>
         <ul class="sidebar-popular-list">${popularItems}</ul>
@@ -2556,11 +2560,11 @@ function buildSidebar(posts, base = '.', extraWidgets = '') {
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">カテゴリ</div>
         <ul class="sidebar-category-list">${catItems}</ul>
-      </div>
+      </div>${afterCategories}
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
         <ul class="sidebar-recent-list">${recentItems}</ul>
-      </div>
+      </div>${afterRecent}
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">このサイトについて</div>
         <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXの最新情報をAIが日本語で解説する専門メディアです。</p>

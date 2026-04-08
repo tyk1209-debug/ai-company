@@ -3284,136 +3284,19 @@ function buildGuidesIndexPage(posts) {
     htmlFooter('..', EXPLAINER_GUIDES.length);
 }
 
-function buildIndex(posts, totalCount = 0) {
-  const recentPosts = posts.slice(0, 30);
-  const articleCount = totalCount || posts.length;
-  const topGuides = EXPLAINER_GUIDES.slice(0, 4);
-  const guideSectionHtml = `
-    <section id="guides" style="margin-bottom:2rem;">
-      <h2 class="section-title">基礎解説</h2>
-      <div class="guide-intro" style="margin-bottom:1rem;">
-        <h2 class="reference-books-title">ニュースを読む前に押さえたい基礎解説</h2>
-        <p class="reference-books-desc">BIM、Revit、Archicad、IFC、CDE、BIM×AIなど、実務で前提になるテーマを先に整理しておくと、ニュースの意味や実務への影響を判断しやすくなります。</p>
-      </div>
-      ${buildGuideGrid(topGuides, '.', '基礎解説')}
-      <div style="margin-top:1rem;">
-        <a class="cta-block-btn" href="./guides/index.html">基礎解説をすべて見る</a>
-      </div>
-    </section>`;
+const HOME_FEATURED_POSTS = 3;
+const HOME_ARTICLES_PER_PAGE = 24;
 
-  // Hero: post[0] as main, posts[1-2] as subs
-  const heroMain = posts[0];
-  const heroMainHtml = heroMain ? `
-      <a class="hero-main" href="./posts/${escape(heroMain.slug)}.html">
-        <div class="hero-main-cat">${escape(categoryLabel(heroMain.category))}</div>
-        <div class="hero-main-title">${escape(heroMain.titleJa || heroMain.title)}</div>
-        <div class="hero-main-excerpt">${escape(excerpt(heroMain.bodyJa || heroMain.postText || heroMain.summary || '', 85))}</div>
-        <div class="hero-main-meta">${escape(heroMain.source || '')} · ${escape(formatDate(heroMain.pubDate))}</div>
-        <div class="hero-main-cta">続きを読む →</div>
-      </a>` : '';
-  const heroSubsHtml = `
-      <div class="hero-subs">
-        ${posts.slice(1, 3).map(post => `
-        <a class="hero-sub" href="./posts/${escape(post.slug)}.html">
-          <div class="hero-sub-cat">${escape(categoryLabel(post.category))}</div>
-          <div class="hero-sub-title">${escape(post.titleJa || post.title)}</div>
-          <div class="hero-sub-meta">${escape(post.source || '')} · ${escape(formatDate(post.pubDate))}</div>
-        </a>`).join('')}
-      </div>`;
+function homeArchiveUrl(pageNumber) {
+  return pageNumber <= 1 ? `${SITE_URL}/` : `${SITE_URL}/page/${pageNumber}/`;
+}
 
-  // 注目記事: posts 0-2 as featured cards (magazine layout)
-  const featuredCards = posts.slice(0, 3).map((post, i) => {
-    const catKey = (post.category || 'OTHER').toUpperCase();
-    const ts = thumbStyle(catKey, '.', post);
-    const isMain = i === 0;
-    const snip = excerpt(post.bodyJa || post.postText || post.summary || '', 90);
-    return `
-      <article class="featured-card${isMain ? ' featured-main' : ''}">
-        <div class="featured-thumb" style="${ts}">
-          <span class="badge">${escape(categoryLabel(post.category))}</span>
-        </div>
-        <div class="featured-body">
-          <h3 class="featured-title">
-            <a href="./posts/${escape(post.slug)}.html">${escape(post.titleJa || post.title)}</a>
-          </h3>
-          ${isMain ? `<p class="featured-excerpt">${escape(snip)}</p>` : ''}
-          <div class="featured-meta">
-            <span>${escape(post.source || '')}</span>
-            <span class="card-meta-sep">·</span>
-            <span>${escape(formatDate(post.pubDate))}</span>
-          </div>
-        </div>
-      </article>`;
-  }).join('');
+function homeArchiveHref(pageNumber) {
+  return pageNumber <= 1 ? '/' : `/page/${pageNumber}/`;
+}
 
-  // 最新ニュース: posts 3+ (no duplication with featured)
-  const latestPosts = posts.slice(3, 27);
-
-  const cards = latestPosts.map((post, index) => {
-    const slug = post.slug;
-    const catLabel = categoryLabel(post.category);
-    const catKey = (post.category || 'OTHER').toUpperCase();
-    const date = formatDate(post.pubDate);
-    const snippetText = post.bodyJa || post.postText || post.summary || '';
-    const snip = excerpt(snippetText, 100);
-    const ts2 = thumbStyle(catKey, '.', post);
-
-    return `
-      <article class="article-card${index === 0 ? ' article-card--lead' : ''}" data-category="${escape(catKey)}">
-        <div class="card-thumb" style="${ts2}">
-          <div class="card-thumb-badge"><span class="badge">${escape(catLabel)}</span></div>
-        </div>
-        <div class="card-body">
-          ${index === 0 ? '<div class="article-card-kicker">注目</div>' : ''}
-          <h2 class="card-title">
-            <a href="./posts/${escape(slug)}.html">${escape(post.titleJa || post.title)}</a>
-          </h2>
-          <p class="card-excerpt">${escape(snip)}</p>
-          <div class="card-footer">
-            <div class="card-meta-info">
-              <span>${escape(post.source || '')}</span>
-              <span class="card-meta-sep">·</span>
-              <span>${escape(date)}</span>
-            </div>
-            <a class="card-read-more" href="./posts/${escape(slug)}.html">続きを読む →</a>
-            <a class="share-btn" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(SITE_URL + '/posts/' + slug + '.html')}" target="_blank" rel="noopener noreferrer">X</a>
-          </div>
-        </div>
-      </article>`;
-  }).join('');
-
-  const websiteJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: SITE_NAME,
-    description: SITE_DESC,
-    url: SITE_URL + '/',
-    inLanguage: 'ja',
-    publisher: organizationJsonLd(),
-  };
-  const homePageJsonLd = webPageJsonLd(
-    `${SITE_NAME} | BIM・AEC・建設DXニュース`,
-    SITE_DESC,
-    SITE_URL + '/'
-  );
-  const homeNewsItemListLd = itemListJsonLd(
-    `${SITE_NAME} 注目ニュース`,
-    `${SITE_URL}/`,
-    posts.slice(0, 10).map((post) => ({
-      name: post.titleJa || post.title,
-      url: `${SITE_URL}/posts/${post.slug}.html`,
-    }))
-  );
-  const homeGuideItemListLd = itemListJsonLd(
-    `${SITE_NAME} 基礎解説`,
-    `${SITE_URL}/guides/index.html`,
-    topGuides.map((guide) => ({
-      name: guide.title,
-      url: `${SITE_URL}/guides/${guide.slug}.html`,
-    }))
-  );
-
-  const categoryNavHtml = `
+function buildHomeCategoryNav() {
+  return `
   <div class="category-nav-wrapper">
     <div class="category-nav-inner">
       <div class="category-nav" id="categoryNav">
@@ -3450,6 +3333,208 @@ function buildIndex(posts, totalCount = 0) {
       });
     })();
   </script>`;
+}
+
+function buildHomeArticleCards(posts, base = '.') {
+  return posts.map((post, index) => {
+    const slug = post.slug;
+    const catLabel = categoryLabel(post.category);
+    const catKey = (post.category || 'OTHER').toUpperCase();
+    const date = formatDate(post.pubDate);
+    const snippetText = post.bodyJa || post.postText || post.summary || '';
+    const snip = excerpt(snippetText, 100);
+    const thumb = thumbStyle(catKey, base, post);
+
+    return `
+      <article class="article-card${index === 0 ? ' article-card--lead' : ''}" data-category="${escape(catKey)}">
+        <div class="card-thumb" style="${thumb}">
+          <div class="card-thumb-badge"><span class="badge">${escape(catLabel)}</span></div>
+        </div>
+        <div class="card-body">
+          ${index === 0 ? '<div class="article-card-kicker">注目</div>' : ''}
+          <h2 class="card-title">
+            <a href="${base}/posts/${escape(slug)}.html">${escape(post.titleJa || post.title)}</a>
+          </h2>
+          <p class="card-excerpt">${escape(snip)}</p>
+          <div class="card-footer">
+            <div class="card-meta-info">
+              <span>${escape(post.source || '')}</span>
+              <span class="card-meta-sep">·</span>
+              <span>${escape(date)}</span>
+            </div>
+            <a class="card-read-more" href="${base}/posts/${escape(slug)}.html">続きを読む →</a>
+            <a class="share-btn" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(SITE_URL + '/posts/' + slug + '.html')}" target="_blank" rel="noopener noreferrer">X</a>
+          </div>
+        </div>
+      </article>`;
+  }).join('');
+}
+
+function buildArchivePagination(currentPage, totalPages) {
+  if (totalPages <= 1) return '';
+
+  const pageNumbers = [];
+  for (let page = 1; page <= totalPages; page++) {
+    if (page === 1 || page === totalPages || Math.abs(page - currentPage) <= 1) {
+      pageNumbers.push(page);
+    }
+  }
+
+  const items = [];
+  if (currentPage > 1) {
+    items.push(`<a href="${homeArchiveHref(currentPage - 1)}" aria-label="前のページ">‹</a>`);
+  }
+
+  let lastPage = 0;
+  for (const page of pageNumbers) {
+    if (lastPage && page - lastPage > 1) {
+      items.push('<span>…</span>');
+    }
+    if (page === currentPage) {
+      items.push(`<span class="active">${page}</span>`);
+    } else {
+      items.push(`<a href="${homeArchiveHref(page)}">${page}</a>`);
+    }
+    lastPage = page;
+  }
+
+  if (currentPage < totalPages) {
+    items.push(`<a href="${homeArchiveHref(currentPage + 1)}" aria-label="次のページ">›</a>`);
+  }
+
+  return `
+        <nav class="pagination" aria-label="記事一覧のページ送り">
+          ${items.join('')}
+        </nav>`;
+}
+
+function buildHomeArchivePage(pagePosts, allPosts, currentPage, totalPages) {
+  const base = '../..';
+  const articleCount = allPosts.length;
+  const pageTitle = `${SITE_NAME} | ニュース一覧 ${currentPage}ページ目`;
+  const pageDesc = `AEC News Japan の過去ニュース一覧です。${currentPage}ページ目で、トップページに表示しきれない記事を新しい順に辿れます。`;
+  const canonicalUrl = homeArchiveUrl(currentPage);
+  const pageJsonLd = collectionPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: `ニュース一覧 ${currentPage}ページ目`, url: canonicalUrl },
+  ]);
+  const itemListLd = itemListJsonLd(
+    `${SITE_NAME} ニュース一覧 ${currentPage}ページ目`,
+    canonicalUrl,
+    pagePosts.slice(0, 20).map((post) => ({
+      name: post.titleJa || post.title,
+      url: `${SITE_URL}/posts/${post.slug}.html`,
+    }))
+  );
+  const cards = buildHomeArticleCards(pagePosts, base);
+  const paginationHtml = buildArchivePagination(currentPage, totalPages);
+
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, base, [pageJsonLd, breadcrumbLd, itemListLd], {
+    keywords: ['BIM', 'AEC', '建設DX', 'ニュース一覧', 'Revit', 'Archicad', 'IFC', `ニュース一覧 ${currentPage}ページ目`],
+  }) +
+    htmlHeader(base) +
+    buildHomeCategoryNav() +
+    `
+  <div class="container">
+    <div class="content-with-sidebar" style="padding: 1.35rem 0 4rem;">
+      <main>
+        <div class="guide-intro" style="margin-bottom:1.25rem;">
+          <h1 class="reference-books-title">ニュース一覧</h1>
+          <p class="reference-books-desc">トップページに表示しきれない過去の記事を、新しい順に一覧できます。${currentPage} / ${totalPages} ページです。</p>
+        </div>
+        <div class="article-list">
+          ${cards}
+        </div>
+        ${paginationHtml}
+      </main>
+      ${buildSidebar(allPosts, base, buildHomeSidebarWidgets(base))}
+    </div>
+  </div>
+  <section class="cta-block">
+    <div class="cta-block-inner">
+      <div class="cta-block-text">
+        <h2 class="cta-block-title">BIM・AEC の最新動向を、毎日チェック</h2>
+        <p class="cta-block-desc">世界中の専門ニュースをAIが日本語で編集。Revit・Archicad・IFC・建設DXの動向を無料で追えます。</p>
+        <a class="cta-block-btn" href="${base}/about.html">このサイトについて →</a>
+      </div>
+    </div>
+  </section>` +
+    htmlFooter(base, articleCount);
+}
+
+function buildIndex(posts, totalCount = 0) {
+  const articleCount = totalCount || posts.length;
+  const topGuides = EXPLAINER_GUIDES.slice(0, 4);
+  const archivePosts = posts.slice(HOME_FEATURED_POSTS);
+  const totalPages = Math.max(1, Math.ceil(archivePosts.length / HOME_ARTICLES_PER_PAGE));
+  const guideSectionHtml = `
+    <section id="guides" style="margin-bottom:2rem;">
+      <h2 class="section-title">基礎解説</h2>
+      <div class="guide-intro" style="margin-bottom:1rem;">
+        <h2 class="reference-books-title">ニュースを読む前に押さえたい基礎解説</h2>
+        <p class="reference-books-desc">BIM、Revit、Archicad、IFC、CDE、BIM×AIなど、実務で前提になるテーマを先に整理しておくと、ニュースの意味や実務への影響を判断しやすくなります。</p>
+      </div>
+      ${buildGuideGrid(topGuides, '.', '基礎解説')}
+      <div style="margin-top:1rem;">
+        <a class="cta-block-btn" href="./guides/index.html">基礎解説をすべて見る</a>
+      </div>
+    </section>`;
+
+  // Hero: post[0] as main, posts[1-2] as subs
+  const heroMain = posts[0];
+  const heroMainHtml = heroMain ? `
+      <a class="hero-main" href="./posts/${escape(heroMain.slug)}.html">
+        <div class="hero-main-cat">${escape(categoryLabel(heroMain.category))}</div>
+        <div class="hero-main-title">${escape(heroMain.titleJa || heroMain.title)}</div>
+        <div class="hero-main-excerpt">${escape(excerpt(heroMain.bodyJa || heroMain.postText || heroMain.summary || '', 85))}</div>
+        <div class="hero-main-meta">${escape(heroMain.source || '')} · ${escape(formatDate(heroMain.pubDate))}</div>
+        <div class="hero-main-cta">続きを読む →</div>
+      </a>` : '';
+  const heroSubsHtml = `
+      <div class="hero-subs">
+        ${posts.slice(1, 3).map(post => `
+        <a class="hero-sub" href="./posts/${escape(post.slug)}.html">
+          <div class="hero-sub-cat">${escape(categoryLabel(post.category))}</div>
+          <div class="hero-sub-title">${escape(post.titleJa || post.title)}</div>
+          <div class="hero-sub-meta">${escape(post.source || '')} · ${escape(formatDate(post.pubDate))}</div>
+        </a>`).join('')}
+      </div>`;
+
+  const latestPosts = archivePosts.slice(0, HOME_ARTICLES_PER_PAGE);
+  const cards = buildHomeArticleCards(latestPosts, '.');
+  const paginationHtml = buildArchivePagination(1, totalPages);
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    description: SITE_DESC,
+    url: SITE_URL + '/',
+    inLanguage: 'ja',
+    publisher: organizationJsonLd(),
+  };
+  const homePageJsonLd = webPageJsonLd(
+    `${SITE_NAME} | BIM・AEC・建設DXニュース`,
+    SITE_DESC,
+    SITE_URL + '/'
+  );
+  const homeNewsItemListLd = itemListJsonLd(
+    `${SITE_NAME} 注目ニュース`,
+    `${SITE_URL}/`,
+    posts.slice(0, 10).map((post) => ({
+      name: post.titleJa || post.title,
+      url: `${SITE_URL}/posts/${post.slug}.html`,
+    }))
+  );
+  const homeGuideItemListLd = itemListJsonLd(
+    `${SITE_NAME} 基礎解説`,
+    `${SITE_URL}/guides/index.html`,
+    topGuides.map((guide) => ({
+      name: guide.title,
+      url: `${SITE_URL}/guides/${guide.slug}.html`,
+    }))
+  );
 
   return htmlHead(
     `${SITE_NAME} | BIM・AEC・建設DXニュース`,
@@ -3482,7 +3567,7 @@ function buildIndex(posts, totalCount = 0) {
       </div>
     </div>
   </section>` +
-    categoryNavHtml +
+    buildHomeCategoryNav() +
     `
   <div class="container">
     <div class="content-with-sidebar" style="padding: 1.35rem 0 4rem;">
@@ -3492,6 +3577,7 @@ function buildIndex(posts, totalCount = 0) {
         <div class="article-list">
           ${cards}
         </div>
+        ${paginationHtml}
       </main>
       ${buildSidebar(posts, '.', buildHomeSidebarWidgets('.'))}
     </div>
@@ -4541,6 +4627,9 @@ function main() {
     return db - da;
   });
 
+  const archivePosts = posts.slice(HOME_FEATURED_POSTS);
+  const homeArchivePageCount = Math.max(1, Math.ceil(archivePosts.length / HOME_ARTICLES_PER_PAGE));
+
   // Ensure posts/ directory exists
   const postsDir = path.join(__dirname, 'posts');
   if (!fs.existsSync(postsDir)) {
@@ -4561,7 +4650,35 @@ function main() {
 
   // Generate index.html
   fs.writeFileSync(path.join(__dirname, 'index.html'), buildIndex(posts, posts.length), 'utf-8');
-  console.log('[generateSite] Generated index.html');
+  const pageDir = path.join(__dirname, 'page');
+  if (!fs.existsSync(pageDir)) {
+    fs.mkdirSync(pageDir, { recursive: true });
+  }
+  const expectedArchiveDirs = new Set(
+    Array.from({ length: Math.max(0, homeArchivePageCount - 1) }, (_, index) => String(index + 2))
+  );
+  const existingArchiveDirs = fs.readdirSync(pageDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && /^\d+$/.test(entry.name))
+    .map((entry) => entry.name);
+  for (const dirName of existingArchiveDirs) {
+    if (!expectedArchiveDirs.has(dirName)) {
+      fs.rmSync(path.join(pageDir, dirName), { recursive: true, force: true });
+    }
+  }
+  for (let pageNumber = 2; pageNumber <= homeArchivePageCount; pageNumber++) {
+    const pagePosts = archivePosts.slice(
+      (pageNumber - 2) * HOME_ARTICLES_PER_PAGE + HOME_ARTICLES_PER_PAGE,
+      (pageNumber - 1) * HOME_ARTICLES_PER_PAGE + HOME_ARTICLES_PER_PAGE
+    );
+    const targetDir = path.join(pageDir, String(pageNumber));
+    fs.mkdirSync(targetDir, { recursive: true });
+    fs.writeFileSync(
+      path.join(targetDir, 'index.html'),
+      buildHomeArchivePage(pagePosts, posts, pageNumber, homeArchivePageCount),
+      'utf-8'
+    );
+  }
+  console.log(`[generateSite] Generated index.html${homeArchivePageCount > 1 ? ` + ${homeArchivePageCount - 1} archive pages` : ''}`);
 
   // Generate individual article pages
   let articleCount = 0;
@@ -4643,6 +4760,12 @@ function main() {
 
   // Generate sitemap.xml
   const now = new Date().toISOString().split('T')[0];
+  const paginatedHomeUrls = Array.from({ length: Math.max(0, homeArchivePageCount - 1) }, (_, index) => ({
+    loc: homeArchiveUrl(index + 2),
+    lastmod: now,
+    changefreq: 'weekly',
+    priority: '0.6',
+  }));
   const categoryUrls = allCategories.map((cat) => ({
     loc: `${SITE_URL}/categories/${categorySlug(cat)}.html`,
     lastmod: now,
@@ -4653,6 +4776,7 @@ function main() {
     { loc: `${SITE_URL}/`, lastmod: now, changefreq: 'daily', priority: '1.0' },
     { loc: `${SITE_URL}/guides/index.html`, lastmod: now, changefreq: 'weekly', priority: '0.9' },
     { loc: `${SITE_URL}/events.html`, lastmod: now, changefreq: 'weekly', priority: '0.8' },
+    ...paginatedHomeUrls,
     ...categoryUrls,
   ];
   const articleUrls = posts.map((post) => {

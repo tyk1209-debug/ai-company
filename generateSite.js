@@ -2910,7 +2910,6 @@ function buildGuidesIndexPage(posts) {
     <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
       <main>
         <div class="guide-intro" style="margin-bottom:1.25rem;">
-          <div class="reference-books-label">読む → 理解する</div>
           <h2 class="reference-books-title">ニュースを読む前提知識をまとめたハブ</h2>
           <p class="reference-books-desc">最新ニュースの理解に必要な基礎知識をテーマ別に整理しています。BIM基礎、ソフト理解、データ連携、情報管理、AI活用、役割理解までを実務目線でつなげています。</p>
         </div>
@@ -2930,7 +2929,6 @@ function buildIndex(posts, totalCount = 0) {
     <section id="guides" style="margin-bottom:2rem;">
       <h2 class="section-title">基礎解説</h2>
       <div class="guide-intro" style="margin-bottom:1rem;">
-        <div class="reference-books-label">読む → 理解する</div>
         <h2 class="reference-books-title">ニュースを読む前に押さえたい基礎解説</h2>
         <p class="reference-books-desc">BIM、Revit、Archicad、IFC、CDE、BIM×AIなど、実務で前提になるテーマを先に整理しておくと、ニュースの意味や実務への影響を判断しやすくなります。</p>
       </div>

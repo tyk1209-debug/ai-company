@@ -2590,7 +2590,7 @@ function thumbStyle(catKey, base = '.', item = null) {
   const grad = THUMB_GRADIENTS[visualKey] || 'linear-gradient(135deg, rgba(30,58,95,0.7) 0%, rgba(37,99,235,0.7) 100%)';
   if (img) {
     if (visualKey === 'ARCHICAD') {
-      return `background: url('${img.replace('./assets/', base + '/assets/')}') center/cover no-repeat;`;
+      return `background: url('${img.replace('./assets/', base + '/assets/')}') top center/cover no-repeat;`;
     }
     return `background: ${grad}, url('${img.replace('./assets/', base + '/assets/')}') center/cover no-repeat;`;
   }
@@ -2604,7 +2604,7 @@ function heroThumbStyle(catKey, base = '.', item = null) {
   const grad = 'linear-gradient(135deg, rgba(7,15,30,0.82) 0%, rgba(15,42,74,0.78) 52%, rgba(12,32,60,0.84) 100%)';
   if (img) {
     if (visualKey === 'ARCHICAD') {
-      return `background: linear-gradient(135deg, rgba(7,15,30,0.42) 0%, rgba(15,42,74,0.36) 52%, rgba(12,32,60,0.44) 100%), url('${img.replace('./assets/', base + '/assets/')}') center/cover no-repeat;`;
+      return `background: linear-gradient(135deg, rgba(7,15,30,0.42) 0%, rgba(15,42,74,0.36) 52%, rgba(12,32,60,0.44) 100%), url('${img.replace('./assets/', base + '/assets/')}') top center/cover no-repeat;`;
     }
     return `background: ${grad}, url('${img.replace('./assets/', base + '/assets/')}') center/cover no-repeat;`;
   }

@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CDEとは | AEC News Japan</title>
-  <meta name="description" content="CDEの基本、なぜ必要か、BIMとの関係、ACCなどとの関係、導入効果を実務目線で整理した解説です。">
+  <meta name="description" content="CDEの基本、オンラインストレージとの違い、BIMやIFCとの関係、導入時に決めるべきことを実務目線で整理した解説です。">
   <meta name="keywords" content="CDEとは, BIM_ECOSYSTEM, BIM, BIMの基本を整理したい方はこちら, IFCやデータ受け渡しとの関係を知りたい方はこちら, BIMマネージャーの役割を知りたい方はこちら">
   <link rel="canonical" href="https://aec-news.com/guides/cde.html">
   <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large">
   <meta name="author" content="AEC News Japan 編集部">
   <meta property="og:title" content="CDEとは | AEC News Japan">
-  <meta property="og:description" content="CDEの基本、なぜ必要か、BIMとの関係、ACCなどとの関係、導入効果を実務目線で整理した解説です。">
+  <meta property="og:description" content="CDEの基本、オンラインストレージとの違い、BIMやIFCとの関係、導入時に決めるべきことを実務目線で整理した解説です。">
   <meta property="og:url" content="https://aec-news.com/guides/cde.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AEC News Japan">
@@ -20,15 +20,15 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CDEとは | AEC News Japan">
-  <meta name="twitter:description" content="CDEの基本、なぜ必要か、BIMとの関係、ACCなどとの関係、導入効果を実務目線で整理した解説です。">
+  <meta name="twitter:description" content="CDEの基本、オンラインストレージとの違い、BIMやIFCとの関係、導入時に決めるべきことを実務目線で整理した解説です。">
   <meta name="twitter:image" content="https://aec-news.com/assets/og-image.png">
   <meta property="article:section" content="基礎解説">
   <link rel="icon" type="image/svg+xml" href="https://aec-news.com/favicon.svg">
   <link rel="icon" type="image/png" sizes="48x48" href="https://aec-news.com/favicon.png">
   <link rel="apple-touch-icon" href="https://aec-news.com/favicon.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"CDEとは | AEC News Japan","description":"CDEの基本、なぜ必要か、BIMとの関係、ACCなどとの関係、導入効果を実務目線で整理した解説です。","url":"https://aec-news.com/guides/cde.html","inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"AEC News Japan","url":"https://aec-news.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"CDEとは | AEC News Japan","description":"CDEの基本、オンラインストレージとの違い、BIMやIFCとの関係、導入時に決めるべきことを実務目線で整理した解説です。","url":"https://aec-news.com/guides/cde.html","inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"AEC News Japan","url":"https://aec-news.com/"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://aec-news.com/"},{"@type":"ListItem","position":2,"name":"基礎解説","item":"https://aec-news.com/guides/index.html"},{"@type":"ListItem","position":3,"name":"CDEとは","item":"https://aec-news.com/guides/cde.html"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"CDEを一言でいうと？","acceptedAnswer":{"@type":"Answer","text":"CDEは、図面、BIMモデル、承認履歴、変更履歴を共通ルールで扱うための情報運用基盤です。"}},{"@type":"Question","name":"CDEは実務でどう使われる？","acceptedAnswer":{"@type":"Answer","text":"設計変更時の図面・モデル・仕様書の整合管理 施工段階での承認済み情報の共有と是正履歴管理 発注者への報告や引き渡し情報の整理"}},{"@type":"Question","name":"CDEはなぜ独学で難しい？","acceptedAnswer":{"@type":"Answer","text":"独学では製品機能は理解できても、自社案件にどう運用設計を落とすかが見えにくいです。CDEはソフト操作ではなく、設計・施工・発注者の実務フローを横断して考える必要があります。"}},{"@type":"Question","name":"CDEを学ぶには？","acceptedAnswer":{"@type":"Answer","text":"まずBIMと情報管理の全体像を理解し、その後にCDEが必要になる理由を手戻りや承認の観点で押さえるのが効率的です。製品比較は最後に行い、先に運用ルールを考える方が失敗しにくいです。"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"CDEを一言でいうと？","acceptedAnswer":{"@type":"Answer","text":"CDEは、図面、BIMモデル、承認履歴、変更履歴を「誰が正本として扱うか」まで含めて管理する情報運用基盤です。"}},{"@type":"Question","name":"CDEは実務でどう使われる？","acceptedAnswer":{"@type":"Answer","text":"設計変更時の図面・モデル・仕様書の整合管理 施工段階での承認済み情報の共有と是正履歴管理 発注者への報告や引き渡し情報の整理"}},{"@type":"Question","name":"CDEを学ぶには？","acceptedAnswer":{"@type":"Answer","text":"まずBIMと情報管理の全体像を理解し、その後にCDEが必要になる理由を手戻りや承認の観点で押さえるのが効率的です。製品比較は最後に行い、先に運用ルールを考える方が失敗しにくいです。"}}]}</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
   <!-- Google Analytics 4 -->
@@ -1668,7 +1668,7 @@
     <div class="article-hero-inner">
       <div class="article-hero-breadcrumb"><a href="../">ホーム</a><span class="article-hero-meta-sep">·</span><span>基礎解説</span></div>
       <h1 class="article-hero-title">CDEとは</h1>
-      <p class="article-hero-summary">CDEは、設計・施工・発注者が同じ情報を同じ前提で管理するための共通データ環境です。</p>
+      <p class="article-hero-summary">CDEは、設計・施工・発注者が同じ情報を同じ前提で扱うための共通データ環境です。</p>
       <div class="article-hero-actions">
         <a class="article-hero-btn article-hero-btn--primary" href="../#guides">基礎解説一覧を見る</a>
       </div>
@@ -1678,90 +1678,96 @@
     <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
       <main>
         <section class="guide-intro">
-          <div class="reference-books-label">一言でいうと</div><h2 class="reference-books-title">CDEは、図面、BIMモデル、承認履歴、変更履歴を共通ルールで扱うための情報運用基盤です。</h2>
-          <p class="reference-books-desc">CDEはCommon Data Environmentの略で、建設プロジェクトで使う図面、BIMモデル、仕様書、承認履歴、検査記録、RFI、変更履歴などを共通ルールで管理するための基盤です。単なるオンラインストレージではなく、どの情報が最新版か、誰が何を正として扱うかを明確にする仕組みです。</p>
+          <div class="reference-books-label">一言でいうと</div><h2 class="reference-books-title">CDEは、図面、BIMモデル、承認履歴、変更履歴を「誰が正本として扱うか」まで含めて管理する情報運用基盤です。</h2>
+          <p class="reference-books-desc">CDEはCommon Data Environmentの略で、建設プロジェクトで使う図面、BIMモデル、仕様書、承認履歴、検査記録、RFI、変更履歴などを共通ルールで管理するための基盤です。単なるオンラインストレージではなく、どの情報が最新版か、誰が何を正として扱うか、どの承認を経て共有するかを明確にする仕組みです。</p>
         </section>
         
-        <section class="guide-section">
-          <h2>業界への影響</h2>
-          <p>CDEが定着すると、建設DXは単発のツール導入から、情報運用の変革へ進みます。BIM、図面、承認、現場記録がつながることで、設計・施工・発注者の間の情報解釈差を減らしやすくなります。</p>
-        </section>
+    <section class="guide-section">
+      <h2>CDEが解決する問題</h2>
+      <p>建設プロジェクトでは、図面、BIMモデル、仕様書、議事録、承認済み資料が別々に流通しがちです。CDEがないと、最新版の迷子、古い図面による施工、承認履歴の不透明さが起きやすくなります。</p>
+      
+      
+    </section>
+    <section class="guide-section">
+      <h2>BIM / IFC / openBIMとの関係</h2>
+      <p>BIMは情報を作る側、IFCやopenBIMは情報を受け渡す側の考え方、CDEはそれらの情報を正しく共有・管理する側の仕組みです。BIMだけ導入しても、CDEが弱いと実務では運用しにくい状態が残ります。</p>
+      
+      
+    </section>
+    <section class="guide-section">
+      <h2>導入時に先に決めるべきこと</h2>
+      
+      <ul><li>何を正本とするか</li><li>誰が更新し、誰が承認し、誰が参照するか</li><li>命名ルール、版管理、ステータス管理をどうするか</li><li>BIMモデル、PDF、RFI、検査記録をどこまで一元管理するか</li></ul>
+      
+    </section>
+    <section class="guide-section">
+      <h2>失敗しやすい導入パターン</h2>
+      
+      <ul><li>製品を入れただけでCDEになったと考えてしまう</li><li>承認フローや責任分担が曖昧なまま運用を始める</li><li>現場の使い方を考えず、本社ルールだけで設計してしまう</li><li>BIMと文書を別運用にしたまま、整合確認を人力に頼り続ける</li></ul>
+      
+    </section>
+    <section class="guide-section">
+      <h2>日本国内で候補に挙がりやすい代表的なCDE</h2>
+      <p>日本国内では案件種別によって候補が変わりますが、建築BIM寄り、インフラ寄り、大規模プロセス管理寄りで名前が挙がりやすい製品はいくつかあります。大事なのは知名度だけで選ぶことではなく、自社の承認フローや受け渡し設計と噛み合うかを見ることです。</p>
+      <ul><li>Autodesk Docs / Autodesk Forma Data Management系: 建築系やRevit系の案件で候補に挙がりやすく、図面・モデル・承認・指摘管理をまとめやすい</li><li>Oracle Aconex: 大規模案件や関係者が多い案件で候補に挙がりやすく、文書管理、プロセス管理、監査証跡の強さが特徴</li><li>Bentley ProjectWise: 土木・インフラ寄りで候補に挙がりやすく、設計・建設データ管理やモデル中心のワークフローに強い</li><li>Trimble Connect: IFCやopenBIMを含む複数ツール連携を意識する案件で候補に挙がりやすく、共有の軽さと横断的なコラボレーションが強み</li><li>Catenda Hub: openBIMやIFCを重視する案件で候補に挙がりやすく、使いやすさ、BCFベースの課題管理、オープン標準との親和性が特徴</li></ul>
+      
+    </section>
+    <section class="guide-section">
+      <h2>製品選定より先に考えること</h2>
+      <p>Autodesk Construction Cloudのような代表的なCDE系製品はありますが、製品名から入ると失敗しやすいです。先に自社の承認、発行、共有、更新責任のルールを整理し、その要件に合う製品を選ぶ順番の方が機能しやすくなります。</p>
+      
+      <div class="guide-links"><a href="../guides/ifc.html">IFCやデータ受け渡しの前提を整理したい方はこちら</a><a href="../guides/bim-manager.html">運用設計を担う役割を整理したい方はこちら</a><a href="../guides/bim.html">BIM全体の考え方を整理したい方はこちら</a></div>
+    </section>
         
-        <section class="guide-section">
-          <h2>実務への影響</h2>
-          <p>実務では、最新版の迷子、古い図面での施工、承認履歴の不明瞭さ、モデルとPDFの整合ズレを減らしやすくなります。逆にCDEがないと、ファイルはあるのにプロジェクトが回らない状態になりがちです。</p>
-        </section>
-        <section class="guide-section">
-          <h2>特徴</h2>
-          <ul><li>最新版管理、権限管理、承認履歴管理を一つの基盤で扱える</li><li>BIMモデルと文書を別管理にせず、同じ前提で扱いやすい</li><li>設計・施工・発注者の情報共有ルールを可視化しやすい</li></ul>
-        </section>
-        <section class="guide-section">
-          <h2>他との違い</h2>
-          <ul><li>オンラインストレージがファイル保管中心なのに対し、CDEは情報運用ルールまで含みます。</li><li>BIMが情報を作る側だとすれば、CDEはその情報を運用する側です。</li><li>Autodesk Construction Cloudは代表的なCDE系製品の一つであり、CDEそのものの定義ではありません。</li></ul>
-          <div class="guide-links"><a href="../guides/bim.html">BIMの基本を整理したい方はこちら</a><a href="../guides/ifc.html">IFCやデータ受け渡しとの関係を知りたい方はこちら</a><a href="../guides/bim-manager.html">BIMマネージャーの役割を知りたい方はこちら</a></div>
-        </section>
-        <section class="guide-section">
-          <h2>向いている人</h2>
-          <ul><li>最新版管理や承認履歴管理を改善したい設計事務所</li><li>協力会社を含めた情報共有を整えたいゼネコン担当者</li><li>発注者との情報受け渡しを透明化したい実務者</li></ul>
-        </section>
-        <section class="guide-section">
-          <h2>実務での使われ方</h2>
-          <ul><li>設計変更時の図面・モデル・仕様書の整合管理</li><li>施工段階での承認済み情報の共有と是正履歴管理</li><li>発注者への報告や引き渡し情報の整理</li></ul>
-        </section>
-        <section class="guide-section">
-          <h2>学習の難しさ</h2>
-          <p>CDEはソフト導入だけでは成立しません。命名ルール、承認フロー、アクセス権、更新責任、受け渡し条件まで設計する必要があるため、運用設計が難しい領域です。</p>
-        </section>
-        <section class="guide-section">
-          <h2>つまずくポイント</h2>
-          <ul><li>ストレージ導入をCDE導入だと考えてしまう</li><li>命名ルールや承認フローが決まっていない</li><li>現場運用に合わず、結局メール共有へ戻ってしまう</li></ul>
-        </section>
+    <section class="guide-section">
+      <h2>オンラインストレージとの違い</h2>
+      <p>CDEはファイルを置く場所ではなく、情報運用のルールまで含んだ仕組みです。</p>
+      <div class="guide-compare-wrap">
+        <table class="guide-compare-table">
+          <thead>
+            <tr><th>観点</th><th>オンラインストレージ</th><th>CDE</th></tr>
+          </thead>
+          <tbody>
+            
+              <tr><td>主な目的</td><td>ファイル保管と共有</td><td>正本管理、承認、変更履歴を含む情報運用</td></tr>
+            
+              <tr><td>最新版管理</td><td>人の運用に依存しやすい</td><td>正本・承認・発行の流れを設計しやすい</td></tr>
+            
+              <tr><td>BIMとの関係</td><td>BIMモデルも一ファイルとして扱いがち</td><td>BIMモデルと関連文書を同じ前提で管理しやすい</td></tr>
+            
+              <tr><td>責任の明確化</td><td>誰が何を正とするか曖昧になりやすい</td><td>更新責任、承認責任、閲覧権限を整理しやすい</td></tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
         
-        <section class="guide-section">
-          <h2>なぜ独学では難しいか</h2>
-          <p>独学では製品機能は理解できても、自社案件にどう運用設計を落とすかが見えにくいです。CDEはソフト操作ではなく、設計・施工・発注者の実務フローを横断して考える必要があります。</p>
-        </section>
-        <section class="guide-section">
-          <h2>学習方法</h2>
-          <p>まずBIMと情報管理の全体像を理解し、その後にCDEが必要になる理由を手戻りや承認の観点で押さえるのが効率的です。製品比較は最後に行い、先に運用ルールを考える方が失敗しにくいです。</p>
-        </section>
-        
-        
-        <section class="guide-section">
-          <h2>なぜ必要か</h2>
-          <p>建設プロジェクトは、設計、施工、発注者、協力会社で参照情報が分断されやすいのが現実です。CDEがないと、古い図面で施工が進む、承認履歴が追えない、PDFとBIMモデルがずれる、といった問題が起きやすくなります。</p>
-          
-        </section>
-        <section class="guide-section">
-          <h2>BIMとの関係</h2>
-          <p>BIMは情報付きモデルを作る考え方で、CDEはそのモデルや関連文書を関係者間で正しく共有・管理する仕組みです。BIMだけ導入しても、CDEが弱いと実務では運用しにくい状態が残ります。</p>
-          
-        </section>
-        <section class="guide-section">
-          <h2>Autodesk Construction Cloudなどとの関係</h2>
-          <p>Autodesk Construction Cloudは代表的なCDE系プラットフォームの一つです。ただし、製品を入れるだけではCDEになりません。命名ルール、承認フロー、更新責任、共有権限まで整えて初めてCDEとして機能します。</p>
-          
-        </section>
-        <section class="guide-section">
-          <h2>導入すると何が変わるか</h2>
-          <p>設計では最新版管理と変更伝達が安定し、施工では承認済み情報へのアクセスや是正履歴管理がしやすくなります。発注者側でも、承認済み情報や引き渡し情報を整理しやすくなり、プロジェクト全体の透明性が上がります。</p>
-          
-        </section>
+    <section class="guide-section">
+      <h2>導入すると何が変わるか</h2>
+      <p>設計では最新版管理と変更伝達が安定し、施工では承認済み情報へのアクセスや是正履歴管理がしやすくなります。発注者側でも、承認済み情報や引き渡し情報を整理しやすくなり、プロジェクト全体の透明性が上がります。</p>
+      
+      
+    </section>
+    <section class="guide-section">
+      <h2>代表製品の公式ページ</h2>
+      
+      
+      
+          <ul class="guide-source-list">
+            <li><a href="https://www.autodesk.com/jp/products/autodesk-docs/overview" target="_blank" rel="noopener noreferrer">Autodesk Docs / Autodesk Forma Data Management | Autodesk</a></li><li><a href="https://www.oracle.com/jp/construction-engineering/aconex/" target="_blank" rel="noopener noreferrer">Oracle Aconex | Oracle 日本</a></li><li><a href="https://ja.bentley.com/software/projectwise/" target="_blank" rel="noopener noreferrer">ProjectWise | Bentley Systems</a></li><li><a href="https://geospatial.trimble.com/en/products/software/cloud-software" target="_blank" rel="noopener noreferrer">Trimble Connect | Trimble</a></li><li><a href="https://catenda.com/jp/bim-solutions-open-standards/catenda-hub-common-data-environment/" target="_blank" rel="noopener noreferrer">Catenda Hub | Catenda 日本</a></li>
+          </ul>
+    </section>
         
     <section class="guide-section">
       <h2>よくある質問</h2>
       
         <div style="padding:0.85rem 0; border-top:1px solid #e5edf6;">
           <h3 style="font-size:0.98rem; color:var(--navy); margin-bottom:0.4rem;">CDEを一言でいうと？</h3>
-          <p>CDEは、図面、BIMモデル、承認履歴、変更履歴を共通ルールで扱うための情報運用基盤です。</p>
+          <p>CDEは、図面、BIMモデル、承認履歴、変更履歴を「誰が正本として扱うか」まで含めて管理する情報運用基盤です。</p>
         </div>
         <div style="padding:0.85rem 0; border-top:1px solid #e5edf6;">
           <h3 style="font-size:0.98rem; color:var(--navy); margin-bottom:0.4rem;">CDEは実務でどう使われる？</h3>
           <p>設計変更時の図面・モデル・仕様書の整合管理 施工段階での承認済み情報の共有と是正履歴管理 発注者への報告や引き渡し情報の整理</p>
-        </div>
-        <div style="padding:0.85rem 0; border-top:1px solid #e5edf6;">
-          <h3 style="font-size:0.98rem; color:var(--navy); margin-bottom:0.4rem;">CDEはなぜ独学で難しい？</h3>
-          <p>独学では製品機能は理解できても、自社案件にどう運用設計を落とすかが見えにくいです。CDEはソフト操作ではなく、設計・施工・発注者の実務フローを横断して考える必要があります。</p>
         </div>
         <div style="padding:0.85rem 0; border-top:1px solid #e5edf6;">
           <h3 style="font-size:0.98rem; color:var(--navy); margin-bottom:0.4rem;">CDEを学ぶには？</h3>
@@ -1810,7 +1816,7 @@
       </div>
       <div class="guide-card-body">
         <h3 class="guide-card-title"><a href="../guides/ifc.html">IFCとは</a></h3>
-        <p class="guide-card-excerpt">IFCの基本、openBIMとの関係、Revit・Archicadとの関係、実務で必要になる理由を整理した解説です。</p>
+        <p class="guide-card-excerpt">IFCの基本、openBIMとの関係、Revit・Archicadとの向き合い方、実務で詰まりやすいポイントを整理した解説です。</p>
         <a class="guide-card-link" href="../guides/ifc.html">詳しく読む →</a>
       </div>
     </article>
@@ -1820,7 +1826,7 @@
       </div>
       <div class="guide-card-body">
         <h3 class="guide-card-title"><a href="../guides/bim-manager.html">BIMマネージャーとは</a></h3>
-        <p class="guide-card-excerpt">BIMマネージャーの役割、必要スキル、年収レンジ、キャリア価値を整理した実務向け解説です。</p>
+        <p class="guide-card-excerpt">BIMマネージャーの役割、BIMコーディネーターとの違い、必要スキル、キャリア価値を整理した実務向け解説です。</p>
         <a class="guide-card-link" href="../guides/bim-manager.html">詳しく読む →</a>
       </div>
     </article></div>
@@ -1832,34 +1838,34 @@
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">人気記事</div>
         <ul class="sidebar-popular-list"><li>
+      <a href="../posts/arcol-helps-sera-architects-boost-collaboration.html">
+        <span class="sidebar-rank">1</span>SERA Architects、Arcolでマスタープラン設計の革新。リアルタイム協働がクライアント提案を変える
+      </a>
+    </li><li>
+      <a href="../posts/puget-systems-expands-server-portfolio.html">
+        <span class="sidebar-rank">2</span>AI・レンダリング対応サーバーの衝撃、BIM処理が加速する
+      </a>
+    </li><li>
+      <a href="../posts/from-data-to-digital-twins-japans-plateau-project-offers-open-access-models-of-m.html">
+        <span class="sidebar-rank">3</span>250都市以上のデジタルツイン公開へ――日本のPLATEAUプロジェクトが変える都市モデリング
+      </a>
+    </li><li>
       <a href="../posts/2026-1.html">
-        <span class="sidebar-rank">1</span>Archicad 30ベータ開始迫る、7月から10月の単一フェーズテスト体制へ
+        <span class="sidebar-rank">4</span>Archicad 30ベータプログラム2026、4月中旬受付開始——7月から10月の連続テスト体制へ
       </a>
     </li><li>
       <a href="../posts/bimx-webprobimcloud.html">
-        <span class="sidebar-rank">2</span>BIMx Web版ついにPro機能搭載、断面機能と表示制御が統合へ
-      </a>
-    </li><li>
-      <a href="../posts/autodesk-strengthens-bridge-between-revit-and-forma.html">
-        <span class="sidebar-rank">3</span>RevitがFormaと深く統合、クラウド設計データの直接移行が可能に
-      </a>
-    </li><li>
-      <a href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">
-        <span class="sidebar-rank">4</span>Autodesk、スキーマティック設計を一新する「Forma Building Design」と Revit クラウド統
-      </a>
-    </li><li>
-      <a href="../posts/archicad.html">
-        <span class="sidebar-rank">5</span>Archicadのキーノートで詳細注記を自動化、一元管理で図面整合性を確保
+        <span class="sidebar-rank">5</span>BIMx Web版ついにPro機能搭載、3D表示制御とカットプレーン機能が利用可能に
       </a>
     </li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">カテゴリ</div>
-        <ul class="sidebar-category-list"><li><a href="../categories/bim-ecosystem.html">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../categories/archicad.html">Archicad</a><span class="sidebar-category-count">15</span></li><li><a href="../categories/bim-ai.html">BIM×AI</a><span class="sidebar-category-count">5</span></li><li><a href="../categories/revit.html">Revit</a><span class="sidebar-category-count">4</span></li><li><a href="../categories/ai-dx.html">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../categories/gloobe.html">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
+        <ul class="sidebar-category-list"><li><a href="../categories/bim-ecosystem.html">BIM全般</a><span class="sidebar-category-count">20</span></li><li><a href="../categories/archicad.html">Archicad</a><span class="sidebar-category-count">15</span></li><li><a href="../categories/bim-ai.html">BIM×AI</a><span class="sidebar-category-count">5</span></li><li><a href="../categories/revit.html">Revit</a><span class="sidebar-category-count">4</span></li><li><a href="../categories/ai-dx.html">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../categories/gloobe.html">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
-        <ul class="sidebar-recent-list"><li><a href="../posts/2026-1.html">Archicad 30ベータ開始迫る、7月から10月の単一フェーズテスト体制へ</a></li><li><a href="../posts/bimx-webprobimcloud.html">BIMx Web版ついにPro機能搭載、断面機能と表示制御が統合へ</a></li><li><a href="../posts/autodesk-strengthens-bridge-between-revit-and-forma.html">RevitがFormaと深く統合、クラウド設計データの直接移行が可能に</a></li><li><a href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">Autodesk、スキーマティック設計を一新する「Forma Building Design」と Revit クラウド統</a></li><li><a href="../posts/archicad.html">Archicadのキーノートで詳細注記を自動化、一元管理で図面整合性を確保</a></li></ul>
+        <ul class="sidebar-recent-list"><li><a href="../posts/arcol-helps-sera-architects-boost-collaboration.html">SERA Architects、Arcolでマスタープラン設計の革新。リアルタイム協働がクライアント提案を変える</a></li><li><a href="../posts/puget-systems-expands-server-portfolio.html">AI・レンダリング対応サーバーの衝撃、BIM処理が加速する</a></li><li><a href="../posts/from-data-to-digital-twins-japans-plateau-project-offers-open-access-models-of-m.html">250都市以上のデジタルツイン公開へ――日本のPLATEAUプロジェクトが変える都市モデリング</a></li><li><a href="../posts/2026-1.html">Archicad 30ベータプログラム2026、4月中旬受付開始——7月から10月の連続テスト体制へ</a></li><li><a href="../posts/bimx-webprobimcloud.html">BIMx Web版ついにPro機能搭載、3D表示制御とカットプレーン機能が利用可能に</a></li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">このサイトについて</div>

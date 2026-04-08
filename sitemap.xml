@@ -19,18 +19,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/about.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/privacy.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
     <loc>https://aec-news.com/categories/bim-ecosystem.html</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>

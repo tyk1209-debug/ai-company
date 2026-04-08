@@ -329,9 +329,10 @@ const EXPLAINER_GUIDES = [
     slug: 'openbim',
     title: 'openBIMとは',
     category: 'IFC',
-    description: 'openBIMの意味、IFCとの関係、実務で必要になる場面、学び方を整理した基礎解説です。',
-    heroSummary: 'openBIMは、特定ソフトに閉じずにBIMデータを連携・運用するための考え方です。',
-    overview: 'openBIMは、buildingSMARTが推進するオープンな標準を使って、異なるソフトや組織の間でもBIMデータをやり取りしやすくする考え方です。特定ベンダーだけに依存しない運用を目指す際に重要になります。',
+    description: 'openBIMの意味、IFCとの違い、Revit・Archicadとの関係、実務でどこまで考えるべきかを整理した基礎解説です。',
+    heroSummary: 'openBIMは、BIMデータを特定ベンダーに閉じず、複数のソフトや組織をまたいで使える状態を目指す運用思想です。',
+    oneLine: 'openBIMは、BIMをソフト単体の閉じた運用ではなく、複数ツールと複数組織で生かすための考え方です。',
+    overview: 'openBIMはbuildingSMARTが推進する考え方で、IFCのような中立フォーマットや共通ルールを使いながら、異なるソフト・会社・工程の間でもBIMデータを受け渡しやすくすることを目指します。大切なのは「別ソフトでも開けること」だけでなく、「何の目的で、どの属性を、どの粒度で渡すか」まで事前に決めることです。',
     features: [
       '異なるソフト間でもデータをやり取りしやすい',
       '将来のツール変更や発注者要件の変化に対応しやすい',
@@ -358,12 +359,69 @@ const EXPLAINER_GUIDES = [
       'どの属性をどこまで揃えるかの要件定義で止まりやすい',
       '受け取り側の検証方法まで決めないと運用が形骸化しやすい',
     ],
-    selfStudyWhyHard: '独学だと、IFCや標準の言葉は理解できても、実際にどの契約・どの工程で必要になるかが見えにくいです。openBIMはデータ形式の勉強だけでなく、業務設計とセットで学ぶ必要があります。',
-    learningMethod: '最初にBIM全体とopenBIMの役割を整理し、その後に要件定義や受け渡し設計の事例を学ぶのが近道です。書籍で全体像を押さえると、ソフト依存の知識だけに偏りにくくなります。',
+    selfStudyWhyHard: '',
+    learningMethod: 'まずBIM、IFC、openBIMの役割を切り分けて理解し、そのうえで「誰に何を渡したいのか」という実務目的から逆算して学ぶのが近道です。ソフト操作だけでなく、属性、分類、受け渡し条件、検証方法まで一緒に整理すると理解が深まりやすいです。',
+    contentSections: [
+      {
+        title: 'openBIMが必要になる理由',
+        body: '建設プロジェクトでは、設計者、構造設計者、設備設計者、施工会社、発注者が同じソフトを使っているとは限りません。そこで重要になるのが、特定ツールの内部形式ではなく、中立的な考え方でBIMデータを受け渡すことです。openBIMは、その前提を共有するための思想です。',
+        items: [
+          '設計側と施工側で使うソフトが違っても、同じプロジェクト情報をつなぎやすくする',
+          '将来ソフトを乗り換える場合でも、データ資産を全て捨てずに済む可能性を高める',
+          '発注者要件や納品要件が変わっても、ベンダー依存を抑えて対応しやすくする',
+        ],
+      },
+      {
+        title: 'IFCとどう違うか',
+        body: 'IFCはopenBIMを支える代表的な中立フォーマットですが、openBIMそのものではありません。IFCはデータ形式、openBIMはそのデータ形式をどう運用に生かすかまで含んだ考え方です。',
+        items: [
+          'IFC: どのような形でモデルや属性を受け渡すかという技術的な器',
+          'openBIM: どの場面で、誰に、何を、どう検証して渡すかまで含む運用の考え方',
+          'BIMソフト: RevitやArchicadのように実際にモデルを作るためのツール',
+        ],
+      },
+      {
+        title: 'Revit / ArchicadとopenBIMの関係',
+        body: '先に整理した通り、Archicadは直感的な操作性やモデリングの自由度に加えて、openBIMを重く受け止めた思想が強みとして語られやすいソフトです。一方Revitは、外れ値を許しにくいシステマチックな構造で標準化しやすい反面、openBIMを実務で成立させるには、属性設計やIFC出力の設計を意識的に行う必要があります。どちらが優れているかではなく、どちらの運用思想で案件を回すかが重要です。',
+      },
+      {
+        title: '実務で最初に決めること',
+        body: 'openBIMは「とりあえずIFCを書き出す」ではほとんど機能しません。先に受け渡し設計を決めておく必要があります。',
+        items: [
+          'どの工程で、誰に、何の目的でモデルを渡すのか',
+          '受け渡し時に必要な属性、分類、命名ルールをどこまで揃えるのか',
+          '受け取り側で何を確認し、何を再利用するのか',
+          'ビューアや検証手順をどこまで標準化するのか',
+        ],
+      },
+      {
+        title: '誤解されやすいポイント',
+        items: [
+          'IFCを書き出せることと、相手が実務で再利用できることは別です',
+          'openBIMはソフトの思想だけで成立せず、要件定義と運用ルールが必要です',
+          'ベンダーロックを避けることが目的化すると、逆に運用負荷だけが増えることがあります',
+        ],
+        links: [
+          { slug: 'ifc', text: 'IFCの意味を先に整理したい方はこちら' },
+          { slug: 'archicad', text: 'ArchicadとopenBIMの相性を整理したい方はこちら' },
+          { slug: 'revit', text: 'RevitでopenBIMを考える前提を整理したい方はこちら' },
+        ],
+      },
+    ],
     guideLinks: [
       { slug: 'bim', text: 'BIM全体の考え方を整理したい方はこちら' },
       { slug: 'revit', text: 'Revitとの関係を知りたい方はこちら' },
       { slug: 'archicad', text: 'Archicadとの関係を知りたい方はこちら' },
+    ],
+    extraFaqs: [
+      {
+        question: 'openBIMとIFCは同じ意味？',
+        answer: '同じではありません。IFCは中立的なデータ形式で、openBIMはそのIFCなどを使ってどう運用するかまで含んだ考え方です。',
+      },
+      {
+        question: 'openBIMならソフト差を気にしなくていい？',
+        answer: '気にしなくてよいわけではありません。RevitとArchicadではモデルの作り方や属性設計の思想が違うため、受け渡し条件を決めずに進めると差異が表面化しやすいです。',
+      },
     ],
     books: [
       {
@@ -384,10 +442,10 @@ const EXPLAINER_GUIDES = [
     slug: 'bim-manager',
     title: 'BIMマネージャーとは',
     category: 'BIM_ECOSYSTEM',
-    description: 'BIMマネージャーの役割、必要スキル、年収レンジ、キャリア価値を整理した実務向け解説です。',
-    heroSummary: 'BIMマネージャーは、BIMソフトを使う人ではなく、BIMを案件と組織で機能させる人です。',
-    oneLine: 'BIMマネージャーは、BIMモデルを作る担当ではなく、BIM運用を設計・施工・発注者の間で成立させる実務責任者です。',
-    overview: 'BIMマネージャーは、BIMモデルを作る担当者ではなく、BIM運用を成立させる実務責任者です。設計・施工・発注者の情報連携を整理し、ルール、標準、受け渡し条件を決めて、BIMを組織の仕組みとして回す役割を担います。',
+    description: 'BIMマネージャーの役割、BIMコーディネーターとの違い、必要スキル、キャリア価値を整理した実務向け解説です。',
+    heroSummary: 'BIMマネージャーは、モデルを描く中心人物というより、BIMが案件と組織で回る仕組みを設計する人です。',
+    oneLine: 'BIMマネージャーは、BIM運用のルール、責任分担、受け渡し条件を整え、案件と組織の両方でBIMを成立させる役割です。',
+    overview: 'BIMマネージャーは、BIMソフトの操作担当ではなく、BIM運用を仕組みとして成立させる実務責任者です。テンプレートや属性ルール、IFC受け渡し、CDE運用、承認フロー、役割分担まで含めて整え、モデルがあるだけで終わらない状態をつくります。',
     industryImpact: 'BIMマネージャーが増えると、BIMは担当者依存の作図ツールから、組織の情報基盤へ変わります。設計・施工・発注者の間で情報運用を統一できる人材がいることで、BIM導入の成熟度が上がり、案件ごとの属人的な運用から脱却しやすくなります。',
     practicalImpact: '実務では、命名ルール、属性ルール、IFC受け渡し、CDE運用、承認フローが安定しやすくなります。結果として、モデルはあるが運用できない状態を減らし、設計変更時の混乱や施工側との認識ずれを抑えやすくなります。',
     features: [
@@ -416,12 +474,61 @@ const EXPLAINER_GUIDES = [
       'IFCやCDEを後回しにしてしまい、運用設計が弱くなる',
       '標準化より案件対応を優先し、組織に知見が残らない',
     ],
-    selfStudyWhyHard: '独学では、RevitやArchicadの操作は学べても、IFC/openBIM、CDE、発注者要件、施工連携まで横断して理解するのが難しいです。BIMマネージャーは操作職ではなく、運用設計職に近いため、知識を体系で学ぶ必要があります。',
-    learningMethod: 'まずBIMの基本概念を押さえ、次に主要ツールの違い、IFC/openBIM、CDE、プロジェクト管理の順で学ぶのが効率的です。そのうえで実案件の運用設計に触れると、役割の全体像が見えやすくなります。',
+    selfStudyWhyHard: '',
+    learningMethod: 'まずBIMソフトの基本を押さえ、その次にIFC/openBIM、CDE、受け渡し条件、承認フローといった運用側の知識へ広げるのが効率的です。最後に実案件での役割分担や標準化の考え方を学ぶと、BIMマネージャーの仕事像が立体的に見えやすくなります。',
+    comparisonTable: {
+      title: '近い役割との違い',
+      intro: 'BIMマネージャーは、BIMオペレーターやBIMコーディネーターと重なる部分はありますが、見る範囲が少し違います。',
+      headers: ['観点', 'BIMマネージャー', 'BIMコーディネーター', 'BIMオペレーター'],
+      rows: [
+        ['主な役割', '運用ルール、標準化、受け渡し条件、責任分担の設計', '案件内の調整、モデル整合、会議体の運営', 'モデル作成、図面化、ファミリ整備などの実作業'],
+        ['見る範囲', '案件横断または組織横断', '個別案件が中心', '担当モデルや担当図面が中心'],
+        ['求められる強み', '標準化、調整、要件定義、説明責任', '関係者調整、整合確認、進行管理', 'ソフト操作、作図、モデリングの精度'],
+        ['成果の出し方', '運用が回り続ける仕組みを作る', '案件内の衝突やズレを減らす', 'モデルや図面を正確に作る'],
+      ],
+    },
+    contentSections: [
+      {
+        title: 'BIMマネージャーの仕事',
+        body: 'BIMマネージャーの中心業務は、モデル作成そのものより、運用設計です。誰がどのモデルを持つか、どこまで属性を揃えるか、どの段階でIFCやCDEを使うか、どの承認を経て共有するかを決めます。',
+        items: [
+          'テンプレート、命名、属性、分類の標準化',
+          '設計・施工・発注者の間での受け渡し条件の整理',
+          '会議体、承認フロー、変更管理の設計',
+          '案件で得た知見を組織標準へ戻すこと',
+        ],
+      },
+      {
+        title: '価値が出る場面',
+        body: 'BIMマネージャーの価値は、モデルが複数人・複数社・複数工程をまたぐときに強く出ます。個人作業の延長ではなく、情報の衝突や責任境界が問題になる局面で効きます。',
+        items: [
+          '意匠・構造・設備の整合を継続的に保ちたい案件',
+          'ゼネコン、設計事務所、協力会社が混在する案件',
+          '社内でBIMを案件対応から組織運用へ広げたい段階',
+        ],
+      },
+      {
+        title: 'Revit / Archicad時代のBIMマネージャー像',
+        body: 'Revitのように外れ値を許しにくいシステマチックなソフトを使う場合は、テンプレートや責任分担を強く設計する力がより重要になります。Archicadのように直感的な操作性やモデリングの自由度、openBIMへの姿勢を強みとする環境では、その自由度をチーム運用でどう揃えるかが重要です。どちらのソフトでも、BIMマネージャーは「ソフト選定後の運用設計」を担う役割です。',
+      },
+      {
+        title: '必要スキル',
+        items: [
+          'BIMソフトの基本理解: RevitやArchicadで何ができて何が難しいかを説明できること',
+          'IFC / openBIM / CDEの理解: データ受け渡しと情報共有の前提を設計できること',
+          'プロジェクト管理: 役割分担、承認、変更管理を整理できること',
+          '説明力と調整力: 現場、設計、発注者に同じ前提を伝えられること',
+        ],
+      },
+      {
+        title: 'キャリアとして見たときの強み',
+        body: 'BIMマネージャーは、ソフト技能だけではなく、標準化、DX、情報管理、組織変革まで接続できるのが強みです。単なるBIM担当で終わらず、技術統括やDX推進へ広がりやすいのが魅力です。',
+      },
+    ],
     extraSections: [
       {
-        title: '日本と海外の違い',
-        body: '海外ではBIMマネージャーが独立職種として定義され、設計事務所、施工会社、BIMコンサルティング会社で専任化が進んでいます。一方、日本では設計担当やBIM担当の兼務が多く、役割や権限が曖昧になりやすいのが実情です。日本市場では、今後この役割を専任で担える人材の価値が上がりやすいと考えられます。',
+        title: '日本で役割が曖昧になりやすい理由',
+        body: '日本では、BIMマネージャーが独立職種として完全に定着している会社はまだ多くありません。設計担当、BIM担当、DX担当、施工支援担当が兼務していることも多く、役割や権限が曖昧になりやすいのが実情です。そのため、ソフト操作ができる人がそのままBIMマネージャー扱いされることもありますが、本来は運用設計と標準化まで担えるかが差になります。',
       },
       {
         title: '年収レンジ',
@@ -463,10 +570,10 @@ const EXPLAINER_GUIDES = [
     slug: 'ifc',
     title: 'IFCとは',
     category: 'IFC',
-    description: 'IFCの基本、openBIMとの関係、Revit・Archicadとの関係、実務で必要になる理由を整理した解説です。',
-    heroSummary: 'IFCは、BIMデータを特定ソフトに閉じずに受け渡すための共通言語です。',
-    oneLine: 'IFCは、BIMモデルを他社や他ソフトでも読める形で受け渡すための中立データ標準です。',
-    overview: 'IFCはIndustry Foundation Classesの略で、buildingSMARTが策定するオープンなBIMデータ標準です。3D形状だけでなく、部材、空間、属性、階層関係などを一定ルールで表現できるため、RevitやArchicadのような異なるBIMソフト間で情報をやり取りする基盤になります。',
+    description: 'IFCの基本、openBIMとの関係、Revit・Archicadとの向き合い方、実務で詰まりやすいポイントを整理した解説です。',
+    heroSummary: 'IFCは、BIMデータを特定ソフトの内部形式に閉じず、他社や他ツールへ渡すための共通言語です。',
+    oneLine: 'IFCは、BIMモデルを別ソフトや別会社でも再利用しやすくするための中立データ標準です。',
+    overview: 'IFCはIndustry Foundation Classesの略で、buildingSMARTが策定するオープンなBIMデータ標準です。形状だけでなく、部材、空間、属性、階層関係などを一定ルールで表現できるため、RevitやArchicadのような異なるBIMソフト間で情報を受け渡す土台になります。重要なのは「書き出せるか」ではなく、「相手の用途に合う形で出せるか」です。',
     industryImpact: 'IFCが使えるかどうかで、BIMは社内効率化ツールにも業界基盤にもなります。設計・施工・発注者の間でソフトが異なってもデータをつなぎやすくなり、特定ベンダー依存を減らせるため、BIMの成熟度に直結します。',
     practicalImpact: '実務では、設計モデルを施工や発注者へ渡すときの再入力や手戻りを減らしやすくなります。逆にIFCを理解せずにBIMを進めると、モデルはあるのに他社で使えない、受け渡しのたびに作り直す、といった問題が起きやすいです。',
     features: [
@@ -495,20 +602,64 @@ const EXPLAINER_GUIDES = [
       '受け取り側の使い方を想定せずに出力してしまう',
       '属性や分類の整理が不足し、再利用しにくいデータになる',
     ],
-    selfStudyWhyHard: '独学ではIFCの用語は理解できても、どの契約・工程・受け渡し場面で必要になるかが見えにくいです。ソフト操作だけでなく、BIM運用と合わせて理解しないと実務で使える知識になりません。',
-    learningMethod: 'まずBIMとopenBIMの全体像を理解し、そのうえでIFCが何を表現する標準なのかを押さえるのが近道です。次にRevitやArchicadでの入出力や要件定義へ進むと、実務に結びつきやすくなります。',
+    selfStudyWhyHard: '',
+    learningMethod: 'まずBIMとopenBIMの全体像を整理し、そのうえでIFCが何を表現できるのか、逆に何が自動では揃わないのかを理解するのが近道です。次にRevitやArchicadでの入出力条件、必要属性、受け取り側のチェック観点へ進むと実務に結びつきやすくなります。',
+    contentSections: [
+      {
+        title: 'IFCで受け渡すもの',
+        body: 'IFCは単なる3D形状ファイルではありません。部材の種類、空間、階層、属性、分類などを一定のルールで持たせて受け渡すための形式です。',
+        items: [
+          '壁、床、柱、梁、開口などの要素情報',
+          '部屋やゾーン、階層構成などの空間情報',
+          '部材に付随する属性やプロパティセット',
+          '分類や識別情報など、他システム連携の手がかり',
+        ],
+      },
+      {
+        title: 'IFCが必要になる場面',
+        body: 'IFCが必要になるのは、ソフトが違う相手にモデルを渡す場面だけではありません。受け取り側の利用目的が自社と違うときにこそ重要になります。',
+        items: [
+          '設計モデルを施工会社や協力会社へ渡すとき',
+          '発注者要件に基づいて中立データ納品が必要なとき',
+          'FMやチェックツール、別系統のプラットフォームとつなぐとき',
+        ],
+      },
+      {
+        title: 'Revit / Archicad / openBIMとの関係',
+        body: 'ArchicadはopenBIMを重く受け止めた思想が強みとして語られやすく、IFCを前提にした議論とも親和性があります。Revitは外れ値を許しにくいシステマチックな構造が強みですが、その強みをIFC受け渡しに生かすには、属性設計や出力条件を明示的に整える必要があります。つまり、どちらのソフトでもIFCは使えますが、思想と運用設計の置き方が少し違います。',
+      },
+      {
+        title: 'IFCがうまくいかない典型',
+        items: [
+          '相手の利用目的を決めずに、とりあえず書き出してしまう',
+          '必要属性や分類が揃っていないまま受け渡す',
+          '受け取り側のビューアや検証方法を事前に決めていない',
+          'モデルの粒度や責任範囲が曖昧で、何を信用してよいか分からなくなる',
+        ],
+      },
+      {
+        title: '実務で先に確認すべきこと',
+        items: [
+          '誰が受け取り、何に使うのか',
+          '最低限必要な属性、分類、LODの前提は何か',
+          '受け渡し前にどのような検証を行うか',
+          '再入力や手修正が発生した場合、どこまで許容するか',
+        ],
+        links: [
+          { slug: 'openbim', text: 'openBIMの考え方を整理したい方はこちら' },
+          { slug: 'archicad', text: 'ArchicadとIFCの相性を整理したい方はこちら' },
+          { slug: 'revit', text: 'Revit実務の前提を整理したい方はこちら' },
+        ],
+      },
+    ],
     extraSections: [
       {
-        title: 'なぜ重要なのか',
-        body: 'IFCが重要なのは、BIMデータを特定ベンダーに閉じないためです。設計者はRevit、協力会社はArchicad、施工側は別ツールという状況は珍しくありません。IFCが弱いと、データ受け渡しのたびに再入力や手戻りが発生し、BIMの価値が大きく下がります。',
+        title: '日本で普及が遅れやすい理由',
+        body: '日本では、まず社内のBIM導入や作図効率化を優先し、他社連携や中立データ納品まで設計していないケースが少なくありません。また、案件ごとに属性や分類の運用がばらつきやすく、IFCを出しても再利用しにくい状況になりやすいのが実情です。',
       },
       {
-        title: '日本で普及が遅れている理由',
-        body: '日本では、まず社内導入を優先し、他社連携や納品要件まで設計していないケースが多いです。また、案件ごとに運用が異なり、属性や分類の標準化が弱いため、IFCを出しても実務で再利用しにくい場面が少なくありません。',
-      },
-      {
-        title: 'Revit / Archicadとの関係',
-        body: 'RevitもArchicadもIFC入出力に対応していますが、自動的にopenBIM運用が成立するわけではありません。重要なのは、どの属性をどの粒度で出すか、受け取り側がどう使うかまで含めて設計することです。',
+        title: '重要なのは書き出しより受け渡し設計',
+        body: 'RevitもArchicadもIFC入出力には対応していますが、自動的にopenBIM運用が成立するわけではありません。重要なのは、どの属性をどの粒度で出すか、受け取り側がどう確認し、どう再利用するかまで含めて設計することです。',
       },
     ],
     guideLinks: [
@@ -536,10 +687,10 @@ const EXPLAINER_GUIDES = [
     slug: 'bim-ai',
     title: 'BIM×AIとは',
     category: 'BIM_AI',
-    description: 'BIM×AIの概要、現実的な活用例、海外と日本の差、今どこまで使えるかを実務ベースで整理した解説です。',
-    heroSummary: 'BIM×AIの価値は、設計者を置き換えることではなく、確認・比較・判断材料づくりを速くすることにあります。',
+    description: 'BIM×AIの現在地、現実的な活用領域、Revit・Archicadとの関係、導入前に整えるべきことを実務ベースで整理した解説です。',
+    heroSummary: 'BIM×AIの価値は、設計者や施工担当者を置き換えることではなく、比較・確認・判断材料づくりを速くすることにあります。',
     oneLine: 'BIM×AIは、BIMに蓄積された構造化データを使って、確認、予測、比較、整理を支援する実務補助の考え方です。',
-    overview: 'BIMモデルには、形状だけでなく部材、数量、属性、工程、空間情報が入っています。AIはこうした構造化データと相性が良く、干渉確認、コスト比較、施工検討、情報整理のような領域で実務支援に使われ始めています。ただし、全面自動化ではなく、限定業務の補助として使うのが現実的です。',
+    overview: 'BIMモデルには、形状だけでなく部材、数量、属性、工程、空間情報が入っています。AIはこうした構造化データと相性が良く、干渉確認、コスト比較、施工検討、情報整理のような領域で実務支援に使われ始めています。ただし、いま主流なのは限定された業務の補助であり、全面自動化ではありません。',
     industryImpact: 'BIM×AIが進むと、BIMは作図・モデリング基盤から、判断支援基盤へ広がります。一方で、BIMデータ標準化が進んでいる組織と、まだデータ整備が弱い組織の差は広がりやすくなります。',
     practicalImpact: '実務では、干渉の優先順位付け、設計変更時の影響確認、概算コスト比較、施工手順比較などで効果が出やすいです。逆に、BIM運用が未整備なままAIだけ導入しても、期待した成果は出にくいです。',
     features: [
@@ -568,20 +719,55 @@ const EXPLAINER_GUIDES = [
       'BIMデータ整備が不十分なままAI活用を始めてしまう',
       '何をAIに任せ、何を人が判断するか整理できていない',
     ],
-    selfStudyWhyHard: '独学だと、AIの一般論は分かってもBIM実務への適用が見えにくく、逆にBIMだけ学んでいてもAIの限界が見えにくいです。BIM基礎とAI基礎をつないで理解する必要があります。',
+    selfStudyWhyHard: '',
     learningMethod: 'まずBIMの基本とデータ構造を理解し、その後にAIが得意なことと苦手なことを押さえるのが効率的です。そのうえで、干渉チェック、コスト予測、施工検討など用途別に整理すると実務に落とし込みやすくなります。',
-    extraSections: [
+    comparisonTable: {
+      title: 'BIM×AIで現実的にできること',
+      intro: '実務では「何でも自動化」より、限定された判断支援や整理業務から考える方が現実的です。',
+      headers: ['領域', 'いま価値が出やすいこと', '期待しすぎやすいこと'],
+      rows: [
+        ['モデリング', '既存データからの補助的なモデル化、ルールベース生成の支援', '複雑な設計意図まで完全自動で反映すること'],
+        ['干渉確認', '結果の整理、優先順位付け、報告補助', '干渉の意味や責任分担までAIだけで確定すること'],
+        ['コスト・数量', '概算比較、変更影響の整理', '設計条件を無視した高精度な見積りの自動化'],
+        ['施工検討', '案の比較、シミュレーション補助', '現場条件を全て理解した自律的な最適施工計画'],
+      ],
+    },
+    contentSections: [
       {
-        title: '具体的な活用例',
-        body: '現時点で現実的なのは、自動モデリングの補助、干渉チェック結果の整理、概算コストの比較、施工手順案の比較です。設計や施工を完全自動化する段階ではなく、確認と比較を速くする用途が中心です。',
+        title: 'BIM×AIの現在地',
+        body: 'いまのBIM×AIは、設計や施工を丸ごと自動化する段階ではありません。価値が出やすいのは、比較、整理、優先順位付け、影響確認のような「人の判断を速くする」領域です。',
       },
+      {
+        title: 'Revit / Archicad / openBIMとの関係',
+        body: 'Revitのように外れ値を許しにくいシステマチックな構造は、属性や命名の標準化が進んでいればAI活用の入力を整えやすい面があります。一方、Archicadのような直感的な操作性やモデリングの自由度、openBIMを重く受け止めた思想は、設計初期の試行錯誤や外部連携を考えるうえで強みになります。どちらがAI向きかというより、どれだけ属性とルールを整えたBIM運用ができているかが決定的です。',
+      },
+      {
+        title: '導入前に整えるべきこと',
+        items: [
+          '命名、分類、属性のばらつきを減らすこと',
+          'どの業務で何分短縮したいか、何を改善したいかを明確にすること',
+          'AIに任せる範囲と、人が最終判断する範囲を決めること',
+          '元データの品質確認と、誤判定時の運用フローを決めること',
+        ],
+      },
+      {
+        title: '今すぐ価値が出やすい業務',
+        items: [
+          '干渉チェック結果の整理と優先順位付け',
+          '概算コストや数量変化の比較',
+          '施工案や手順案の比較支援',
+          '既存資料やBIM周辺文書の要約・整理',
+        ],
+      },
+      {
+        title: '期待値の置き方',
+        body: 'BIM×AIは、BIM運用が整っている会社ほど効果が出やすく、整っていない会社ほど期待外れになりやすい領域です。AIだけを入れても成果は出にくく、BIM標準化を進めるきっかけとして使うのが現実的です。',
+      },
+    ],
+    extraSections: [
       {
         title: '海外と日本の差',
         body: '海外の方がBIMデータ標準化やクラウド基盤整備が進んでおり、BIM×AIの実証や製品化も先行しています。日本では、AI導入以前にBIMデータ運用が整っていない会社も多く、まず標準化が必要なケースが少なくありません。',
-      },
-      {
-        title: '現実的に使えるレベルか',
-        body: '部分的には十分使える一方で、全面自動化を期待する段階ではありません。現実的には、干渉確認、比較検討、情報整理、施工案の比較など、補助的な使い方で成果が出やすいです。',
       },
     ],
     guideLinks: [
@@ -615,10 +801,10 @@ const EXPLAINER_GUIDES = [
     slug: 'cde',
     title: 'CDEとは',
     category: 'BIM_ECOSYSTEM',
-    description: 'CDEの基本、なぜ必要か、BIMとの関係、ACCなどとの関係、導入効果を実務目線で整理した解説です。',
-    heroSummary: 'CDEは、設計・施工・発注者が同じ情報を同じ前提で管理するための共通データ環境です。',
-    oneLine: 'CDEは、図面、BIMモデル、承認履歴、変更履歴を共通ルールで扱うための情報運用基盤です。',
-    overview: 'CDEはCommon Data Environmentの略で、建設プロジェクトで使う図面、BIMモデル、仕様書、承認履歴、検査記録、RFI、変更履歴などを共通ルールで管理するための基盤です。単なるオンラインストレージではなく、どの情報が最新版か、誰が何を正として扱うかを明確にする仕組みです。',
+    description: 'CDEの基本、オンラインストレージとの違い、BIMやIFCとの関係、導入時に決めるべきことを実務目線で整理した解説です。',
+    heroSummary: 'CDEは、設計・施工・発注者が同じ情報を同じ前提で扱うための共通データ環境です。',
+    oneLine: 'CDEは、図面、BIMモデル、承認履歴、変更履歴を「誰が正本として扱うか」まで含めて管理する情報運用基盤です。',
+    overview: 'CDEはCommon Data Environmentの略で、建設プロジェクトで使う図面、BIMモデル、仕様書、承認履歴、検査記録、RFI、変更履歴などを共通ルールで管理するための基盤です。単なるオンラインストレージではなく、どの情報が最新版か、誰が何を正として扱うか、どの承認を経て共有するかを明確にする仕組みです。',
     industryImpact: 'CDEが定着すると、建設DXは単発のツール導入から、情報運用の変革へ進みます。BIM、図面、承認、現場記録がつながることで、設計・施工・発注者の間の情報解釈差を減らしやすくなります。',
     practicalImpact: '実務では、最新版の迷子、古い図面での施工、承認履歴の不明瞭さ、モデルとPDFの整合ズレを減らしやすくなります。逆にCDEがないと、ファイルはあるのにプロジェクトが回らない状態になりがちです。',
     features: [
@@ -647,24 +833,81 @@ const EXPLAINER_GUIDES = [
       '命名ルールや承認フローが決まっていない',
       '現場運用に合わず、結局メール共有へ戻ってしまう',
     ],
-    selfStudyWhyHard: '独学では製品機能は理解できても、自社案件にどう運用設計を落とすかが見えにくいです。CDEはソフト操作ではなく、設計・施工・発注者の実務フローを横断して考える必要があります。',
+    selfStudyWhyHard: '',
     learningMethod: 'まずBIMと情報管理の全体像を理解し、その後にCDEが必要になる理由を手戻りや承認の観点で押さえるのが効率的です。製品比較は最後に行い、先に運用ルールを考える方が失敗しにくいです。',
+    comparisonTable: {
+      title: 'オンラインストレージとの違い',
+      intro: 'CDEはファイルを置く場所ではなく、情報運用のルールまで含んだ仕組みです。',
+      headers: ['観点', 'オンラインストレージ', 'CDE'],
+      rows: [
+        ['主な目的', 'ファイル保管と共有', '正本管理、承認、変更履歴を含む情報運用'],
+        ['最新版管理', '人の運用に依存しやすい', '正本・承認・発行の流れを設計しやすい'],
+        ['BIMとの関係', 'BIMモデルも一ファイルとして扱いがち', 'BIMモデルと関連文書を同じ前提で管理しやすい'],
+        ['責任の明確化', '誰が何を正とするか曖昧になりやすい', '更新責任、承認責任、閲覧権限を整理しやすい'],
+      ],
+    },
+    contentSections: [
+      {
+        title: 'CDEが解決する問題',
+        body: '建設プロジェクトでは、図面、BIMモデル、仕様書、議事録、承認済み資料が別々に流通しがちです。CDEがないと、最新版の迷子、古い図面による施工、承認履歴の不透明さが起きやすくなります。',
+      },
+      {
+        title: 'BIM / IFC / openBIMとの関係',
+        body: 'BIMは情報を作る側、IFCやopenBIMは情報を受け渡す側の考え方、CDEはそれらの情報を正しく共有・管理する側の仕組みです。BIMだけ導入しても、CDEが弱いと実務では運用しにくい状態が残ります。',
+      },
+      {
+        title: '導入時に先に決めるべきこと',
+        items: [
+          '何を正本とするか',
+          '誰が更新し、誰が承認し、誰が参照するか',
+          '命名ルール、版管理、ステータス管理をどうするか',
+          'BIMモデル、PDF、RFI、検査記録をどこまで一元管理するか',
+        ],
+      },
+      {
+        title: '失敗しやすい導入パターン',
+        items: [
+          '製品を入れただけでCDEになったと考えてしまう',
+          '承認フローや責任分担が曖昧なまま運用を始める',
+          '現場の使い方を考えず、本社ルールだけで設計してしまう',
+          'BIMと文書を別運用にしたまま、整合確認を人力に頼り続ける',
+        ],
+      },
+      {
+        title: '日本国内で候補に挙がりやすい代表的なCDE',
+        body: '日本国内では案件種別によって候補が変わりますが、建築BIM寄り、インフラ寄り、大規模プロセス管理寄りで名前が挙がりやすい製品はいくつかあります。大事なのは知名度だけで選ぶことではなく、自社の承認フローや受け渡し設計と噛み合うかを見ることです。',
+        items: [
+          'Autodesk Docs / Autodesk Forma Data Management系: 建築系やRevit系の案件で候補に挙がりやすく、図面・モデル・承認・指摘管理をまとめやすい',
+          'Oracle Aconex: 大規模案件や関係者が多い案件で候補に挙がりやすく、文書管理、プロセス管理、監査証跡の強さが特徴',
+          'Bentley ProjectWise: 土木・インフラ寄りで候補に挙がりやすく、設計・建設データ管理やモデル中心のワークフローに強い',
+          'Trimble Connect: IFCやopenBIMを含む複数ツール連携を意識する案件で候補に挙がりやすく、共有の軽さと横断的なコラボレーションが強み',
+          'Catenda Hub: openBIMやIFCを重視する案件で候補に挙がりやすく、使いやすさ、BCFベースの課題管理、オープン標準との親和性が特徴',
+        ],
+      },
+      {
+        title: '製品選定より先に考えること',
+        body: 'Autodesk Construction Cloudのような代表的なCDE系製品はありますが、製品名から入ると失敗しやすいです。先に自社の承認、発行、共有、更新責任のルールを整理し、その要件に合う製品を選ぶ順番の方が機能しやすくなります。',
+        links: [
+          { slug: 'ifc', text: 'IFCやデータ受け渡しの前提を整理したい方はこちら' },
+          { slug: 'bim-manager', text: '運用設計を担う役割を整理したい方はこちら' },
+          { slug: 'bim', text: 'BIM全体の考え方を整理したい方はこちら' },
+        ],
+      },
+    ],
     extraSections: [
-      {
-        title: 'なぜ必要か',
-        body: '建設プロジェクトは、設計、施工、発注者、協力会社で参照情報が分断されやすいのが現実です。CDEがないと、古い図面で施工が進む、承認履歴が追えない、PDFとBIMモデルがずれる、といった問題が起きやすくなります。',
-      },
-      {
-        title: 'BIMとの関係',
-        body: 'BIMは情報付きモデルを作る考え方で、CDEはそのモデルや関連文書を関係者間で正しく共有・管理する仕組みです。BIMだけ導入しても、CDEが弱いと実務では運用しにくい状態が残ります。',
-      },
-      {
-        title: 'Autodesk Construction Cloudなどとの関係',
-        body: 'Autodesk Construction Cloudは代表的なCDE系プラットフォームの一つです。ただし、製品を入れるだけではCDEになりません。命名ルール、承認フロー、更新責任、共有権限まで整えて初めてCDEとして機能します。',
-      },
       {
         title: '導入すると何が変わるか',
         body: '設計では最新版管理と変更伝達が安定し、施工では承認済み情報へのアクセスや是正履歴管理がしやすくなります。発注者側でも、承認済み情報や引き渡し情報を整理しやすくなり、プロジェクト全体の透明性が上がります。',
+      },
+      {
+        title: '代表製品の公式ページ',
+        links: [
+          { url: 'https://www.autodesk.com/jp/products/autodesk-docs/overview', label: 'Autodesk Docs / Autodesk Forma Data Management | Autodesk' },
+          { url: 'https://www.oracle.com/jp/construction-engineering/aconex/', label: 'Oracle Aconex | Oracle 日本' },
+          { url: 'https://ja.bentley.com/software/projectwise/', label: 'ProjectWise | Bentley Systems' },
+          { url: 'https://geospatial.trimble.com/en/products/software/cloud-software', label: 'Trimble Connect | Trimble' },
+          { url: 'https://catenda.com/jp/bim-solutions-open-standards/catenda-hub-common-data-environment/', label: 'Catenda Hub | Catenda 日本' },
+        ],
       },
     ],
     guideLinks: [
@@ -2922,21 +3165,56 @@ function buildGuideComparisonTable(guide) {
     </section>`;
 }
 
-function buildGuideExtraSections(guide) {
-  return (guide.extraSections || []).map((section) => {
-    const links = Array.isArray(section.links) && section.links.length > 0
+function buildGuideSectionBlock(section, options = {}) {
+  if (!section || !section.title) return '';
+  const body = Array.isArray(section.body)
+    ? section.body.map((paragraph) => `<p>${escape(paragraph)}</p>`).join('')
+    : (section.body ? `<p>${escape(section.body)}</p>` : '');
+  const items = Array.isArray(section.items) && section.items.length > 0
+    ? `<ul>${section.items.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>`
+    : '';
+  const links = Array.isArray(section.links) && section.links.length > 0
+    ? (options.sourceLinks
       ? `
           <ul class="guide-source-list">
             ${section.links.map((link) => `<li><a href="${escape(link.url)}" target="_blank" rel="noopener noreferrer">${escape(link.label || link.url)}</a></li>`).join('')}
           </ul>`
-      : '';
-    return `
-        <section class="guide-section">
-          <h2>${escape(section.title)}</h2>
-          <p>${escape(section.body)}</p>
-          ${links}
-        </section>`;
-  }).join('');
+      : `<div class="guide-links">${section.links.map((link) => {
+        const href = link.url ? escape(link.url) : guideUrl(link.slug, '..');
+        const label = escape(link.text || link.label || href);
+        const attrs = link.url ? ' target="_blank" rel="noopener noreferrer"' : '';
+        return `<a href="${href}"${attrs}>${label}</a>`;
+      }).join('')}</div>`)
+    : '';
+  return `
+    <section class="guide-section">
+      <h2>${escape(section.title)}</h2>
+      ${body}
+      ${items}
+      ${links}
+    </section>`;
+}
+
+function buildGuideMainSections(guide) {
+  if (Array.isArray(guide.contentSections) && guide.contentSections.length > 0) {
+    return guide.contentSections.map((section) => buildGuideSectionBlock(section)).join('');
+  }
+  const sections = [];
+  if (guide.industryImpact) sections.push({ title: '業界への影響', body: guide.industryImpact });
+  if (guide.practicalImpact) sections.push({ title: '実務への影響', body: guide.practicalImpact });
+  sections.push({ title: '特徴', items: guide.features || [] });
+  sections.push({ title: '他との違い', items: guide.differences || [], links: guide.guideLinks || [] });
+  sections.push({ title: '向いている人', items: guide.fit || [] });
+  sections.push({ title: '実務での使われ方', items: guide.practicalUse || [] });
+  sections.push({ title: '学習の難しさ', body: guide.difficulty });
+  sections.push({ title: 'つまずくポイント', items: guide.stumblingPoints || [] });
+  if (guide.selfStudyWhyHard) sections.push({ title: 'なぜ独学では難しいか', body: guide.selfStudyWhyHard });
+  if (guide.learningMethod) sections.push({ title: '学習方法', body: guide.learningMethod });
+  return sections.map((section) => buildGuideSectionBlock(section)).join('');
+}
+
+function buildGuideExtraSections(guide) {
+  return (guide.extraSections || []).map((section) => buildGuideSectionBlock(section, { sourceLinks: true })).join('');
 }
 
 function buildGuideFaqItems(guide) {
@@ -3019,50 +3297,7 @@ function buildExplainerPage(guide, posts) {
           ${guide.oneLine ? `<div class="reference-books-label">一言でいうと</div><h2 class="reference-books-title">${escape(guide.oneLine)}</h2>` : '<div class="reference-books-label">概要</div><h2 class="reference-books-title">まず押さえるべき結論</h2>'}
           ${guide.oneLine ? `<p class="reference-books-desc">${escape(guide.overview)}</p>` : `<p class="reference-books-desc">${escape(guide.overview)}</p>`}
         </section>
-        ${guide.industryImpact ? `
-        <section class="guide-section">
-          <h2>業界への影響</h2>
-          <p>${escape(guide.industryImpact)}</p>
-        </section>` : ''}
-        ${guide.practicalImpact ? `
-        <section class="guide-section">
-          <h2>実務への影響</h2>
-          <p>${escape(guide.practicalImpact)}</p>
-        </section>` : ''}
-        <section class="guide-section">
-          <h2>特徴</h2>
-          <ul>${guide.features.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
-        </section>
-        <section class="guide-section">
-          <h2>他との違い</h2>
-          <ul>${guide.differences.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
-          <div class="guide-links">${guide.guideLinks.map((item) => `<a href="${guideUrl(item.slug, '..')}">${escape(item.text)}</a>`).join('')}</div>
-        </section>
-        <section class="guide-section">
-          <h2>向いている人</h2>
-          <ul>${guide.fit.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
-        </section>
-        <section class="guide-section">
-          <h2>実務での使われ方</h2>
-          <ul>${guide.practicalUse.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
-        </section>
-        <section class="guide-section">
-          <h2>学習の難しさ</h2>
-          <p>${escape(guide.difficulty)}</p>
-        </section>
-        <section class="guide-section">
-          <h2>つまずくポイント</h2>
-          <ul>${guide.stumblingPoints.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
-        </section>
-        ${guide.selfStudyWhyHard ? `
-        <section class="guide-section">
-          <h2>なぜ独学では難しいか</h2>
-          <p>${escape(guide.selfStudyWhyHard)}</p>
-        </section>` : ''}
-        <section class="guide-section">
-          <h2>学習方法</h2>
-          <p>${escape(guide.learningMethod)}</p>
-        </section>
+        ${buildGuideMainSections(guide)}
         ${buildGuideComparisonTable(guide)}
         ${buildGuideExtraSections(guide)}
         ${buildGuideFaqSection(guide)}
@@ -4126,7 +4361,9 @@ function buildPrivacyPage() {
     { name: 'プライバシーポリシー', url: canonicalUrl },
   ]);
 
-  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [privacyJsonLd, breadcrumbLd]) +
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [privacyJsonLd, breadcrumbLd], {
+    robots: 'noindex, follow, max-snippet:-1, max-image-preview:large',
+  }) +
     htmlHeader() +
     `
   <div class="container">
@@ -4177,7 +4414,9 @@ function buildAboutPage() {
     { name: '運営者情報', url: canonicalUrl },
   ]);
 
-  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [aboutJsonLd, breadcrumbLd]) +
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [aboutJsonLd, breadcrumbLd], {
+    robots: 'noindex, follow, max-snippet:-1, max-image-preview:large',
+  }) +
     htmlHeader() +
     `
   <div class="container">
@@ -4488,8 +4727,6 @@ function main() {
     { loc: `${SITE_URL}/`, lastmod: now, changefreq: 'daily', priority: '1.0' },
     { loc: `${SITE_URL}/guides/index.html`, lastmod: now, changefreq: 'weekly', priority: '0.9' },
     { loc: `${SITE_URL}/events.html`, lastmod: now, changefreq: 'weekly', priority: '0.8' },
-    { loc: `${SITE_URL}/about.html`, lastmod: now, changefreq: 'monthly', priority: '0.5' },
-    { loc: `${SITE_URL}/privacy.html`, lastmod: now, changefreq: 'monthly', priority: '0.3' },
     ...categoryUrls,
   ];
   const articleUrls = posts.map((post) => {

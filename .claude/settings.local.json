@@ -73,7 +73,9 @@
       "Bash(ls *.js)",
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)[:5]\\)\")",
       "Bash(dir \"C:\\\\Users\\\\tyk12\\\\ai-company\\\\categories\"\")",
-      "Bash(ls C:/Users/tyk12/ai-company/*.js C:/Users/tyk12/ai-company/*.html)"
+      "Bash(ls C:/Users/tyk12/ai-company/*.js C:/Users/tyk12/ai-company/*.html)",
+      "Bash(ls C:/Users/tyk12/ai-company/posts/*.html)",
+      "Bash(grep -v \"^\\\\s*//\")"
     ]
   }
 }

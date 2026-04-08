@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { getAffiliateLinks } = require('./affiliateLinks.js');
+const { createSidebarTools } = require('./sidebar.js');
 
 const SITE_NAME = 'AEC News Japan';
 const SITE_DESC = 'BIM・AEC・建設DXの最新ニュースをAIが日本語で解説';
@@ -2607,27 +2608,35 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       font-size: 0.7rem;
       color: var(--text-muted);
     }
-    .sidebar-popular-list { list-style: none; padding: 0; margin: 0; }
-    .sidebar-popular-list li { padding: 0.45rem 0; border-bottom: 1px solid #f5f7fa; font-size: 0.8rem; line-height: 1.5; }
-    .sidebar-popular-list li:last-child { border-bottom: none; }
-    .sidebar-popular-list a { color: var(--text); display: flex; align-items: flex-start; gap: 0.5rem; }
-    .sidebar-popular-list a:hover { color: var(--blue); text-decoration: none; }
-    .sidebar-rank {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 18px; height: 18px; min-width: 18px;
-      background: var(--blue); color: #fff;
-      border-radius: 4px; font-size: 0.65rem; font-weight: 800;
-      margin-top: 0.1rem;
-    }
-    .sidebar-popular-list li:nth-child(1) .sidebar-rank { background: #f59e0b; }
-    .sidebar-popular-list li:nth-child(2) .sidebar-rank { background: #94a3b8; }
-    .sidebar-popular-list li:nth-child(3) .sidebar-rank { background: #b45309; }
     .sidebar-about { font-size: 0.82rem; line-height: 1.75; color: var(--text-muted); }
+    .sidebar-widget-intro { margin-bottom: 0.85rem; }
+    .sidebar-widget-intro-wide { margin-bottom: 0.9rem; }
+    .sidebar-widget-cta { margin-top: 0.9rem; }
+    .sidebar-widget-stack { display: flex; flex-direction: column; }
+    .sidebar-widget-entry {
+      padding: 0.9rem 0;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+    .sidebar-widget-entry-title {
+      margin-bottom: 0.45rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .sidebar-widget-entry-copy { margin-bottom: 0.75rem; }
     .sidebar-recent-list { list-style: none; padding: 0; margin: 0; }
     .sidebar-recent-list li { padding: 0.45rem 0; border-bottom: 1px solid #f5f7fa; font-size: 0.8rem; line-height: 1.5; }
     .sidebar-recent-list li:last-child { border-bottom: none; }
     .sidebar-recent-list a { color: var(--text); }
     .sidebar-recent-list a:hover { color: var(--blue); text-decoration: none; }
+    .sidebar-daily-list,
+    .sidebar-daily-list li {
+      list-style: none !important;
+      padding-left: 0;
+      margin-left: 0;
+    }
+    .sidebar-daily-list li::marker {
+      content: '';
+    }
 
     /* ---- pagination ---- */
     .pagination { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
@@ -2868,143 +2877,6 @@ function htmlFooter(base = '.', articleCount = 0) {
 </html>`;
 }
 
-// ---- sidebar ----------------------------------------------------------------
-
-function buildRecommendedBooks(categoryKey) {
-  const books = RECOMMENDED_BOOKS[categoryKey] || [];
-  if (books.length === 0) return '';
-
-  const items = books.map((book) => `
-          <article style="padding:0.9rem 0; border-top:1px solid rgba(15, 23, 42, 0.08);">
-            <p class="sidebar-about" style="margin-bottom:0.45rem; color: var(--text); font-weight:700;">${escape(book.title)}</p>
-            <p class="sidebar-about" style="margin-bottom:0.75rem;">${escape(book.description)}</p>
-            <a class="sidebar-follow-btn" href="${escape(book.url)}" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
-          </article>`).join('');
-
-  return `
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">参考アイテム</div>
-        <p class="sidebar-about" style="margin-bottom:0.9rem;">このカテゴリの理解や実務整理に役立つ書籍・ツールをまとめています。ニュースや基礎解説を読んだあとに、必要なものだけ選べる導線です。</p>
-        <div style="display:flex; flex-direction:column;">
-          ${items}
-        </div>
-      </div>`;
-}
-
-function buildHomeSidebarWidgets(base = '.') {
-  const guides = ['bim', 'revit', 'archicad', 'ifc']
-    .map((slug) => EXPLAINER_GUIDE_MAP[slug])
-    .filter(Boolean);
-  const learningWidget = `
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">基礎解説</div>
-        <p class="sidebar-about" style="margin-bottom:0.85rem;">ニュース理解の前提になるテーマを先に整理できるよう、入口として読みやすい解説をまとめています。</p>
-        <ul class="sidebar-recent-list">
-          ${guides.map((guide) => `<li><a href="${base}/guides/${escape(guide.slug)}.html">${escape(guide.title)}</a></li>`).join('')}
-        </ul>
-        <a class="sidebar-follow-btn" href="${base}/guides/index.html" style="margin-top:0.9rem;">基礎解説をもっと見る</a>
-      </div>`;
-
-  const homeItems = [
-    RECOMMENDED_BOOKS.REVIT && RECOMMENDED_BOOKS.REVIT[0],
-    RECOMMENDED_BOOKS.BIM_ECOSYSTEM && RECOMMENDED_BOOKS.BIM_ECOSYSTEM[0],
-    RECOMMENDED_BOOKS.BIM_ECOSYSTEM && RECOMMENDED_BOOKS.BIM_ECOSYSTEM[2],
-  ].filter(Boolean);
-
-  const referenceWidget = `
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">参考アイテム</div>
-        <p class="sidebar-about" style="margin-bottom:0.9rem;">BIMの基礎理解や実務整理に役立つ定番アイテムを、入口向けに絞って掲載しています。</p>
-        <div style="display:flex; flex-direction:column;">
-          ${homeItems.map((item) => `
-          <article style="padding:0.9rem 0; border-top:1px solid rgba(15, 23, 42, 0.08);">
-            <p class="sidebar-about" style="margin-bottom:0.45rem; color: var(--text); font-weight:700;">${escape(item.title)}</p>
-            <p class="sidebar-about" style="margin-bottom:0.75rem;">${escape(item.description)}</p>
-            <a class="sidebar-follow-btn" href="${escape(item.url)}" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
-          </article>`).join('')}
-        </div>
-      </div>`;
-
-  return {
-    afterCategories: learningWidget,
-    afterRecent: referenceWidget,
-  };
-}
-
-function buildSidebar(posts, base = '.', extraWidgets = '') {
-  const catData = {};
-  for (const p of posts) {
-    const key = (p.category || 'OTHER').toUpperCase();
-    const label = categoryLabel(p.category);
-    if (!catData[key]) catData[key] = { label, count: 0 };
-    catData[key].count++;
-  }
-  const catItems = Object.entries(catData)
-    .sort((a, b) => b[1].count - a[1].count)
-    .map(([key, { label, count }]) =>
-      `<li><a href="${base}/categories/${categorySlug(key)}.html">${escape(label)}</a><span class="sidebar-category-count">${count}</span></li>`
-    ).join('');
-
-  // Recent 5 posts
-  const recent = posts.slice(0, 5);
-  const recentItems = recent.map(p =>
-    `<li><a href="${base}/posts/${escape(p.slug)}.html">${escape(p.titleJa || p.title)}</a></li>`
-  ).join('');
-
-  // Weekly digest posts (isWeekly === true), most recent 5
-  const weeklyPosts = posts
-    .filter((p) => p.isWeekly === true)
-    .slice(0, 5);
-  const weeklyWidget = weeklyPosts.length > 0
-    ? `
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">週次まとめ</div>
-        <ul class="sidebar-recent-list">
-          ${weeklyPosts.map((p) =>
-            `<li><a href="${base}/posts/${escape(p.slug)}.html">${escape(p.titleJa || p.title)}</a></li>`
-          ).join('')}
-        </ul>
-      </div>`
-    : '';
-
-  // Popular articles: top 5 by index (proxy for importance/recency)
-  const popularItems = posts.slice(0, 5).map((p, i) =>
-    `<li>
-      <a href="${base}/posts/${escape(p.slug)}.html">
-        <span class="sidebar-rank">${i + 1}</span>${escape(p.titleJa || p.title)}
-      </a>
-    </li>`
-  ).join('');
-
-  const widgets = typeof extraWidgets === 'string'
-    ? { beforePopular: extraWidgets }
-    : (extraWidgets || {});
-  const beforePopular = widgets.beforePopular || '';
-  const afterCategories = widgets.afterCategories ? `\n      ${widgets.afterCategories}` : '';
-  const afterRecent = widgets.afterRecent ? `\n      ${widgets.afterRecent}` : '';
-
-  return `
-    <aside class="sidebar">
-      ${beforePopular}
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">人気記事</div>
-        <ul class="sidebar-popular-list">${popularItems}</ul>
-      </div>
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">カテゴリ</div>
-        <ul class="sidebar-category-list">${catItems}</ul>
-      </div>${afterCategories}
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">最新記事</div>
-        <ul class="sidebar-recent-list">${recentItems}</ul>
-      </div>${afterRecent}
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">このサイトについて</div>
-        <p class="sidebar-about">AEC News JapanはBIM・AEC・建設DXの最新情報をAIが日本語で解説する専門メディアです。</p>
-      </div>${weeklyWidget}
-    </aside>`;
-}
-
 // ---- index page -------------------------------------------------------------
 
 // カテゴリ別サムネイル画像マップ（画像があれば優先、なければグラデ）
@@ -3091,6 +2963,21 @@ function guideUrl(slug, base = '.') {
   return `${base}/guides/${slug}.html`;
 }
 
+const {
+  buildSidebar,
+  buildHomeSidebarWidgets,
+  buildRecommendedBooks,
+  buildCategoryLearningSection,
+} = createSidebarTools({
+  explainerGuides: EXPLAINER_GUIDES,
+  explainerGuideMap: EXPLAINER_GUIDE_MAP,
+  recommendedBooks: RECOMMENDED_BOOKS,
+  categoryLabel,
+  categorySlug,
+  escape,
+  guideUrl,
+});
+
 function buildGuideCard(guide, base = '.', kicker = '基礎解説') {
   return `
     <article class="guide-card">
@@ -3108,37 +2995,6 @@ function buildGuideCard(guide, base = '.', kicker = '基礎解説') {
 function buildGuideGrid(guides, base = '.', kicker = '基礎解説') {
   if (!guides || guides.length === 0) return '';
   return `<div class="guide-grid">${guides.map((guide) => buildGuideCard(guide, base, kicker)).join('')}</div>`;
-}
-
-function selectGuidesForCategory(categoryKey) {
-  const category = (categoryKey || 'OTHER').toUpperCase();
-  if (category === 'REVIT') {
-    return ['revit', 'bim', 'bim-manager'].map((slug) => EXPLAINER_GUIDE_MAP[slug]).filter(Boolean);
-  }
-  if (category === 'IFC') {
-    return ['ifc', 'openbim', 'cde'].map((slug) => EXPLAINER_GUIDE_MAP[slug]).filter(Boolean);
-  }
-  if (category === 'BIM_AI' || category === 'AI_DX' || category === 'AI') {
-    return ['bim-ai', 'bim', 'bim-manager'].map((slug) => EXPLAINER_GUIDE_MAP[slug]).filter(Boolean);
-  }
-  if (category === 'BIM_ECOSYSTEM' || category === 'ARCHICAD' || category === 'GLOOBE') {
-    return ['bim', 'archicad', 'cde', 'bim-manager'].map((slug) => EXPLAINER_GUIDE_MAP[slug]).filter(Boolean);
-  }
-  return ['bim', 'openbim', 'bim-manager'].map((slug) => EXPLAINER_GUIDE_MAP[slug]).filter(Boolean);
-}
-
-function buildCategoryLearningSection(categoryKey) {
-  const guides = selectGuidesForCategory(categoryKey).slice(0, 3);
-  if (guides.length === 0) return '';
-  return `
-      <div class="sidebar-widget">
-        <div class="sidebar-widget-title">基礎解説</div>
-        <p class="sidebar-about" style="margin-bottom:0.85rem;">このカテゴリを理解する前提知識を先に整理できます。ニュースを読む前の導入として使いやすい記事をまとめています。</p>
-        <ul class="sidebar-recent-list">
-          ${guides.map((guide) => `<li><a href="../guides/${escape(guide.slug)}.html">${escape(guide.title)}</a></li>`).join('')}
-        </ul>
-        <a class="sidebar-follow-btn" href="../guides/index.html" style="margin-top:0.9rem;">基礎解説をもっと見る</a>
-      </div>`;
 }
 
 function inferRelevantGuides(post) {

@@ -1518,27 +1518,35 @@
       font-size: 0.7rem;
       color: var(--text-muted);
     }
-    .sidebar-popular-list { list-style: none; padding: 0; margin: 0; }
-    .sidebar-popular-list li { padding: 0.45rem 0; border-bottom: 1px solid #f5f7fa; font-size: 0.8rem; line-height: 1.5; }
-    .sidebar-popular-list li:last-child { border-bottom: none; }
-    .sidebar-popular-list a { color: var(--text); display: flex; align-items: flex-start; gap: 0.5rem; }
-    .sidebar-popular-list a:hover { color: var(--blue); text-decoration: none; }
-    .sidebar-rank {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 18px; height: 18px; min-width: 18px;
-      background: var(--blue); color: #fff;
-      border-radius: 4px; font-size: 0.65rem; font-weight: 800;
-      margin-top: 0.1rem;
-    }
-    .sidebar-popular-list li:nth-child(1) .sidebar-rank { background: #f59e0b; }
-    .sidebar-popular-list li:nth-child(2) .sidebar-rank { background: #94a3b8; }
-    .sidebar-popular-list li:nth-child(3) .sidebar-rank { background: #b45309; }
     .sidebar-about { font-size: 0.82rem; line-height: 1.75; color: var(--text-muted); }
+    .sidebar-widget-intro { margin-bottom: 0.85rem; }
+    .sidebar-widget-intro-wide { margin-bottom: 0.9rem; }
+    .sidebar-widget-cta { margin-top: 0.9rem; }
+    .sidebar-widget-stack { display: flex; flex-direction: column; }
+    .sidebar-widget-entry {
+      padding: 0.9rem 0;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+    .sidebar-widget-entry-title {
+      margin-bottom: 0.45rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .sidebar-widget-entry-copy { margin-bottom: 0.75rem; }
     .sidebar-recent-list { list-style: none; padding: 0; margin: 0; }
     .sidebar-recent-list li { padding: 0.45rem 0; border-bottom: 1px solid #f5f7fa; font-size: 0.8rem; line-height: 1.5; }
     .sidebar-recent-list li:last-child { border-bottom: none; }
     .sidebar-recent-list a { color: var(--text); }
     .sidebar-recent-list a:hover { color: var(--blue); text-decoration: none; }
+    .sidebar-daily-list,
+    .sidebar-daily-list li {
+      list-style: none !important;
+      padding-left: 0;
+      margin-left: 0;
+    }
+    .sidebar-daily-list li::marker {
+      content: '';
+    }
 
     /* ---- pagination ---- */
     .pagination { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; }

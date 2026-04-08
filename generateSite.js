@@ -2458,6 +2458,43 @@ function buildRecommendedBooks(categoryKey) {
       </div>`;
 }
 
+function buildHomeSidebarWidgets(base = '.') {
+  const guides = ['bim', 'revit', 'archicad', 'ifc']
+    .map((slug) => EXPLAINER_GUIDE_MAP[slug])
+    .filter(Boolean);
+  const learningWidget = `
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">基礎解説</div>
+        <p class="sidebar-about" style="margin-bottom:0.85rem;">ニュース理解の前提になるテーマを先に整理できるよう、入口として読みやすい解説をまとめています。</p>
+        <ul class="sidebar-recent-list">
+          ${guides.map((guide) => `<li><a href="${base}/guides/${escape(guide.slug)}.html">${escape(guide.title)}</a></li>`).join('')}
+        </ul>
+        <a class="sidebar-follow-btn" href="${base}/guides/index.html" style="margin-top:0.9rem;">基礎解説をもっと見る</a>
+      </div>`;
+
+  const homeItems = [
+    RECOMMENDED_BOOKS.REVIT && RECOMMENDED_BOOKS.REVIT[0],
+    RECOMMENDED_BOOKS.BIM_ECOSYSTEM && RECOMMENDED_BOOKS.BIM_ECOSYSTEM[0],
+    RECOMMENDED_BOOKS.BIM_ECOSYSTEM && RECOMMENDED_BOOKS.BIM_ECOSYSTEM[2],
+  ].filter(Boolean);
+
+  const referenceWidget = `
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">参考アイテム</div>
+        <p class="sidebar-about" style="margin-bottom:0.9rem;">BIMの基礎理解や実務整理に役立つ定番アイテムを、入口向けに絞って掲載しています。</p>
+        <div style="display:flex; flex-direction:column;">
+          ${homeItems.map((item) => `
+          <article style="padding:0.9rem 0; border-top:1px solid rgba(15, 23, 42, 0.08);">
+            <p class="sidebar-about" style="margin-bottom:0.45rem; color: var(--text); font-weight:700;">${escape(item.title)}</p>
+            <p class="sidebar-about" style="margin-bottom:0.75rem;">${escape(item.description)}</p>
+            <a class="sidebar-follow-btn" href="${escape(item.url)}" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
+          </article>`).join('')}
+        </div>
+      </div>`;
+
+  return `${learningWidget}${referenceWidget}`;
+}
+
 function buildSidebar(posts, base = '.', extraWidgets = '') {
   // Category counts
   const catCounts = {};
@@ -3129,7 +3166,7 @@ function buildIndex(posts, totalCount = 0) {
           ${cards}
         </div>
       </main>
-      ${buildSidebar(posts, '.')}
+      ${buildSidebar(posts, '.', buildHomeSidebarWidgets('.'))}
     </div>
   </div>
   <section class="cta-block">

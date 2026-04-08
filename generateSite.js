@@ -2622,7 +2622,6 @@ function buildGuideCard(guide, base = '.', kicker = '基礎解説') {
         <div class="card-thumb-badge"><span class="badge">${escape(categoryLabel(guide.category))}</span></div>
       </div>
       <div class="guide-card-body">
-        <div class="guide-card-kicker">${escape(kicker)}</div>
         <h3 class="guide-card-title"><a href="${guideUrl(guide.slug, base)}">${escape(guide.title)}</a></h3>
         <p class="guide-card-excerpt">${escape(guide.description)}</p>
         <a class="guide-card-link" href="${guideUrl(guide.slug, base)}">詳しく読む →</a>

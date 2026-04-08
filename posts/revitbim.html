@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Revitのファミリ構造を徹底解説—BIMオブジェクトの階層と運用 | AEC News Japan</title>
-  <meta name="description" content="【背景】 RevitはBIM標準ソフトとして建築設計の現場に浸透していますが、そのファミリシステムの複雑さゆえに、初心者ユーザーが戸惑うことも少なくありません。効果的なBIMモデル作成と情報管理を実現するには、オブジェクトの体系的な理解が必…">
+  <title>Revitファミリ完全ガイド：カテゴリから共有パラメータまで、BIMオブジェクトの階層構造を解く | AEC News Japan</title>
+  <meta name="description" content="【背景】 RevitはBIM設計の標準ツールとして広く採用されており、その核となるのが「ファミリ」というBIMオブジェクトの仕組みです。しかし、階層構造の複雑さや、パラメータの種類、ホストの概念などが相互に関係するため、初心者ユーザーはRe…">
   <link rel="canonical" href="https://aec-news.com/posts/revitbim.html">
   <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large">
   <meta name="author" content="AEC News Japan 編集部">
-  <meta property="og:title" content="Revitのファミリ構造を徹底解説—BIMオブジェクトの階層と運用 | AEC News Japan">
-  <meta property="og:description" content="【背景】 RevitはBIM標準ソフトとして建築設計の現場に浸透していますが、そのファミリシステムの複雑さゆえに、初心者ユーザーが戸惑うことも少なくありません。効果的なBIMモデル作成と情報管理を実現するには、オブジェクトの体系的な理解が必…">
+  <meta property="og:title" content="Revitファミリ完全ガイド：カテゴリから共有パラメータまで、BIMオブジェクトの階層構造を解く | AEC News Japan">
+  <meta property="og:description" content="【背景】 RevitはBIM設計の標準ツールとして広く採用されており、その核となるのが「ファミリ」というBIMオブジェクトの仕組みです。しかし、階層構造の複雑さや、パラメータの種類、ホストの概念などが相互に関係するため、初心者ユーザーはRe…">
   <meta property="og:url" content="https://aec-news.com/posts/revitbim.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AEC News Japan">
@@ -18,8 +18,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Revitのファミリ構造を徹底解説—BIMオブジェクトの階層と運用 | AEC News Japan">
-  <meta name="twitter:description" content="【背景】 RevitはBIM標準ソフトとして建築設計の現場に浸透していますが、そのファミリシステムの複雑さゆえに、初心者ユーザーが戸惑うことも少なくありません。効果的なBIMモデル作成と情報管理を実現するには、オブジェクトの体系的な理解が必…">
+  <meta name="twitter:title" content="Revitファミリ完全ガイド：カテゴリから共有パラメータまで、BIMオブジェクトの階層構造を解く | AEC News Japan">
+  <meta name="twitter:description" content="【背景】 RevitはBIM設計の標準ツールとして広く採用されており、その核となるのが「ファミリ」というBIMオブジェクトの仕組みです。しかし、階層構造の複雑さや、パラメータの種類、ホストの概念などが相互に関係するため、初心者ユーザーはRe…">
   <meta name="twitter:image" content="https://aec-news.com/assets/og-image.png">
   <meta property="article:published_time" content="2026-02-18T02:49:52.000Z">
   <meta property="article:modified_time" content="2026-02-18T02:49:52.000Z">
@@ -27,8 +27,8 @@
   <link rel="icon" type="image/svg+xml" href="https://aec-news.com/favicon.svg">
   <link rel="icon" type="image/png" sizes="48x48" href="https://aec-news.com/favicon.png">
   <link rel="apple-touch-icon" href="https://aec-news.com/favicon.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Revitのファミリ構造を徹底解説—BIMオブジェクトの階層と運用","description":"【背景】 RevitはBIM標準ソフトとして建築設計の現場に浸透していますが、そのファミリシステムの複雑さゆえに、初心者ユーザーが戸惑うことも少なくありません。効果的なBIMモデル作成と情報管理を実現するには、オブジェクトの体系的な理解が必…","datePublished":"2026-02-18T02:49:52.000Z","dateModified":"2026-02-18T02:49:52.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/revitbim.html","articleSection":"Revit","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/","logo":"https://aec-news.com/assets/logo-mark.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/revitbim.html"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://aec-news.com/"},{"@type":"ListItem","position":2,"name":"Revit","item":"https://aec-news.com/categories/revit.html"},{"@type":"ListItem","position":3,"name":"Revitのファミリ構造を徹底解説—BIMオブジェクトの階層と運用","item":"https://aec-news.com/posts/revitbim.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Revitファミリ完全ガイド：カテゴリから共有パラメータまで、BIMオブジェクトの階層構造を解く","description":"【背景】 RevitはBIM設計の標準ツールとして広く採用されており、その核となるのが「ファミリ」というBIMオブジェクトの仕組みです。しかし、階層構造の複雑さや、パラメータの種類、ホストの概念などが相互に関係するため、初心者ユーザーはRe…","datePublished":"2026-02-18T02:49:52.000Z","dateModified":"2026-02-18T02:49:52.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/revitbim.html","articleSection":"Revit","publisher":{"@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/","logo":"https://aec-news.com/assets/logo-mark.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/revitbim.html"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://aec-news.com/"},{"@type":"ListItem","position":2,"name":"Revit","item":"https://aec-news.com/categories/revit.html"},{"@type":"ListItem","position":3,"name":"Revitファミリ完全ガイド：カテゴリから共有パラメータまで、BIMオブジェクトの階層構造を解く","item":"https://aec-news.com/posts/revitbim.html"}]}</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
   <!-- Google Analytics 4 -->
@@ -1616,18 +1616,18 @@
         <span class="article-hero-tag article-hero-tag--cat">Revit</span>
         <span class="article-hero-tag article-hero-tag--source">BIMゲート</span>
       </div>
-      <h1 class="article-hero-title">Revitのファミリ構造を徹底解説—BIMオブジェクトの階層と運用</h1>
-      <p class="article-hero-summary">RevitはBIM標準ソフトとして建築設計の現場に浸透していますが、そのファミリシステムの複雑さゆえに、初心者ユーザーが戸惑うことも少なくありません。効果的なBIMモデル作成と情報管理を実現するには、オブジェクトの体系的な理解が必須です。</p>
+      <h1 class="article-hero-title">Revitファミリ完全ガイド：カテゴリから共有パラメータまで、BIMオブジェクトの階層構造を解く</h1>
+      <p class="article-hero-summary">RevitはBIM設計の標準ツールとして広く採用されており、その核となるのが「ファミリ」というBIMオブジェクトの仕組みです。しかし、階層構造の複雑さや、パラメータの種類、ホストの概念などが相互に関係するため、初心者ユーザーはRevitの挙動を理解しにくいこと…</p>
       <div class="article-hero-meta">
         <span>📅 2026年2月18日</span>
         <span class="article-hero-meta-sep">·</span>
-        <span>⏱ 約2分</span>
+        <span>⏱ 約3分</span>
         <span class="article-hero-meta-sep">·</span>
         <span>出典: BIMゲート</span>
       </div>
       <div class="article-hero-actions">
         <a class="article-hero-btn article-hero-btn--primary" href="https://bimgate.jp/knowledge/2789" target="_blank" rel="noopener noreferrer">原文を読む →</a>
-        <a class="article-hero-btn article-hero-btn--share" href="https://twitter.com/intent/tweet?text=Revit%E3%81%AE%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E6%A7%8B%E9%80%A0%E3%82%92%E5%BE%B9%E5%BA%95%E8%A7%A3%E8%AA%AC%E2%80%94BIM%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E9%9A%8E%E5%B1%A4%E3%81%A8%E9%81%8B%E7%94%A8&url=https%3A%2F%2Faec-news.com%2Fposts%2Frevitbim.html" target="_blank" rel="noopener noreferrer">𝕏 シェア</a>
+        <a class="article-hero-btn article-hero-btn--share" href="https://twitter.com/intent/tweet?text=Revit%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89%EF%BC%9A%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%81%8B%E3%82%89%E5%85%B1%E6%9C%89%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%81%BE%E3%81%A7%E3%80%81BIM%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E9%9A%8E%E5%B1%A4%E6%A7%8B%E9%80%A0%E3%82%92%E8%A7%A3%E3%81%8F&url=https%3A%2F%2Faec-news.com%2Fposts%2Frevitbim.html" target="_blank" rel="noopener noreferrer">𝕏 シェア</a>
       </div>
     </div>
   </div>
@@ -1637,12 +1637,12 @@
         <div class="article-body-wrap">
           <div class="ai-body-label">AI による日本語解説</div>
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>RevitはBIM標準ソフトとして建築設計の現場に浸透していますが、そのファミリシステムの複雑さゆえに、初心者ユーザーが戸惑うことも少なくありません。効果的なBIMモデル作成と情報管理を実現するには、オブジェクトの体系的な理解が必須です。</p><h2 class="article-section-h2"><span>内容</span></h2><p>RevitのBIMオブジェクトは「ファミリ」と呼ばれ、「カテゴリ→ファミリ（階層構成）→タイプ→インスタンス」という段階的な階層構造を持ちます。壁・ドア・家具といった部材ごとに分類されるカテゴリ、同一種類を作るための「ひな形」としてのファミリ、寸法や仕様が異なるバリエーションを指すタイプ、そしてモデル上に配置された個々の要素がインスタンスです。ファミリは主に3種類に分類されます：プロジェクトに内包される「システムファミリ」、外部ファイルとして管理可能な「ロード可能なファミリ（.rfa）」、プロジェクト専用の「インプレイスファミリ」です。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>RevitはBIM設計の標準ツールとして広く採用されており、その核となるのが「ファミリ」というBIMオブジェクトの仕組みです。しかし、階層構造の複雑さや、パラメータの種類、ホストの概念などが相互に関係するため、初心者ユーザーはRevitの挙動を理解しにくいことが課題となっていました。本記事は、Revitの公式ナレッジベースが提供する体系的な解説で、この問題を解決します。</p><h2 class="article-section-h2"><span>内容</span></h2><p>RevitのBIMオブジェクトは「カテゴリ→ファミリ（階層構成）→タイプ→インスタンス」という四段階の構造で成り立っています。カテゴリは壁やドアといった部材の大分類であり、表示制御や集計の基準になります。ファミリは要素形状や属性のルール定義である「ひな形」で、タイプは同一ファミリ内でのサイズ・仕様バリエーション、インスタンスはモデル上に配置された個々の要素を指します。さらにファミリは、プロジェクトに内包されるシステムファミリ、外部ファイルとして管理できるロード可能なファミリ、特定プロジェクト専用のインプレイスファミリの3種類に分類されます。パラメータは「タイプパラメータ」（同一タイプ全体に適用）と「インスタンスパラメータ」（個別要素ごとに適用）の二階層構造を持ち、その適用範囲によってファミリパラメータ、プロジェクトパラメータ、共有パラメータに分けられます。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
-      <a class="mid-related-link" href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">Autodesk「Forma Building Design」登場、スキーマティック設計からRevitへシームレスに</a>
+      <a class="mid-related-link" href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">Autodesk、スキーマティック設計を一新する「Forma Building Design」と Revit クラウド統</a>
       <span class="mid-related-cat">Revit</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>ファミリは「タイプパラメータ」と「インスタンスパラメータ」の二階層構造を持ちます。タイプパラメータはタイプ内のすべての要素に共通して作用し、インスタンスパラメータは個々の配置オブジェクトごとに個別設定可能です。さらに重要なのは「共有パラメータ」の概念で、これはプロジェクトやファミリをまたいで共通利用でき、GUID（Globally Unique Identifier）により一意に識別されます。GUIDは理論的に重複しないため、同名でも異なるGUIDなら別パラメータとして扱われます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この階層構造を正確に理解することで、タイプ変更時の波及範囲を予測でき、集計表やタグ表示の信頼性が向上します。基本的なファミリ編集は初心者でも対応可能であり、既存ファミリの流用・調整から始めることで学習曲線を緩和できます。標準的なライブラリ（Autodeskファミリ、RUGライブラリ、BooT.oneなど）の活用により、ファミリ作成の作業負荷を削減できるため、プロジェクト全体のBIM運用効率が飛躍的に向上します。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>共有パラメータは、GUIDという32文字の一意識別子によって管理される点が重要です。パラメータ名称ではなくGUIDで識別されるため、同名のパラメータであってもGUIDが異なれば別物として扱われます。これにより集計表やタグ表示、外部データ連携の精度が確保されます。また、ファミリの振る舞いを規定するカテゴリ、ホスト（壁ホスト・床ホスト・非ホスト）、部屋計算ポイント、コネクタといった機能も、ファミリの使い分けに直結する技術的要素です。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この階層構造とパラメータ体系を理解することで、BIM運用の効率性が劇的に向上します。モデル修正時にタイプパラメータの変更で一括適用できれば、手作業による個別編集を大幅に削減できます。また、共有パラメータの正確な設定により、複数プロジェクト間での集計・分析やメーカー施工情報との連携が円滑になります。RUGライブラリなどの充実したファミリリソースの活用、既存ファミリのカスタマイズからの学習開始により、BIM初心者でも効果的なファミリ運用が可能になり、設計・施工・発注者間の情報共有の質が向上するでしょう。</p>
           </div>
         </div>
         
@@ -1709,7 +1709,7 @@
         <span class="article-editorial-icon">💡</span>
         <span class="article-editorial-title">AEC News Japan 編集部の見解</span>
       </div>
-      <div class="article-editorial-text"><p>この階層構造を正確に理解することで、タイプ変更時の波及範囲を予測でき、集計表やタグ表示の信頼性が向上します。基本的なファミリ編集は初心者でも対応可能であり、既存ファミリの流用・調整から始めることで学習曲線を緩和できます。標準的なライブラリ（Autodeskファミリ、RUGライブラリ、BooT.oneなど）の活用により、ファミリ作成の作業負荷を削減できるため、プロジェクト全体のBIM運用効率が飛躍的に向上します。</p></div>
+      <div class="article-editorial-text"><p>この階層構造とパラメータ体系を理解することで、BIM運用の効率性が劇的に向上します。モデル修正時にタイプパラメータの変更で一括適用できれば、手作業による個別編集を大幅に削減できます。また、共有パラメータの正確な設定により、複数プロジェクト間での集計・分析やメーカー施工情報との連携が円滑になります。RUGライブラリなどの充実したファミリリソースの活用、既存ファミリのカスタマイズからの学習開始により、BIM初心者でも効果的なファミリ運用が可能になり、設計・施工・発注者間の情報共有の質が向上するでしょう。</p></div>
     </div>
         <div class="article-source-card">
           <span class="article-source-card-label">元記事・出典</span>
@@ -1725,7 +1725,7 @@
           <span class="article-tag article-tag--source">BIMゲート</span>
         </div>
         <div class="article-share-footer">
-          <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=Revit%E3%81%AE%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E6%A7%8B%E9%80%A0%E3%82%92%E5%BE%B9%E5%BA%95%E8%A7%A3%E8%AA%AC%E2%80%94BIM%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E9%9A%8E%E5%B1%A4%E3%81%A8%E9%81%8B%E7%94%A8&url=https%3A%2F%2Faec-news.com%2Fposts%2Frevitbim.html" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
+          <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=Revit%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89%EF%BC%9A%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%81%8B%E3%82%89%E5%85%B1%E6%9C%89%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%81%BE%E3%81%A7%E3%80%81BIM%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E9%9A%8E%E5%B1%A4%E6%A7%8B%E9%80%A0%E3%82%92%E8%A7%A3%E3%81%8F&url=https%3A%2F%2Faec-news.com%2Fposts%2Frevitbim.html" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
           <a class="back-btn" href="../">← 記事一覧に戻る</a>
         </div>
         <div class="article-rail">
@@ -1739,9 +1739,9 @@
         </div>
         <div class="card-body">
           <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/ai-design-and-re-shaping-the-aec-industry.html">AIがAEC業界を再編成へ、BIMが意思決定ハブに進化する転機</a>
+            <a href="../posts/ai-design-and-re-shaping-the-aec-industry.html">AIがAEC業界を再編へ──BIMは「インテリジェント決定ハブ」に進化</a>
           </h3>
-          <p class="card-excerpt">【背景】 AEC業界は現在、計画・設計・エンジニアリング・施工・運用の各段階に特化した企業が孤立した状態で存在する、極度に分断された価値チェーンが特徴です。この…</p>
+          <p class="card-excerpt">【背景】 AEC業界は現在、計画・設計・施工・運用の各段階が分断され、多くの専門企業が孤立して動作しています。AIとBIM、標準化されたデータモデルの登場により…</p>
           <div class="card-footer">
             <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年3月3日</span></div>
             <a class="card-read-more" href="../posts/ai-design-and-re-shaping-the-aec-industry.html">続きを読む →</a>
@@ -1754,9 +1754,9 @@
         </div>
         <div class="card-body">
           <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/gloobebim.html">GLOOBEの3種類BIMオブジェクト、法規チェックから高精度パースまで一手に</a>
+            <a href="../posts/gloobebim.html">GLOOBEの3種類BIMオブジェクト、法規チェックから高精度パースまで一気通貫</a>
           </h3>
-          <p class="card-excerpt">【背景】 BIM導入を進める設計事務所や建設企業では、ソフトウェア間のデータ連携と効率的なオブジェクト管理が課題となっています。特にRevitやArchicad…</p>
+          <p class="card-excerpt">【背景】 BIM設計ツールの選択と運用において、オブジェクト戦略は業務効率と品質に大きく影響します。特に日本の建築確認申請対応やメーカー部品との連携が求められる…</p>
           <div class="card-footer">
             <div class="card-meta-info"><span>BIMゲート</span><span class="card-meta-sep">·</span><span>2026年2月18日</span></div>
             <a class="card-read-more" href="../posts/gloobebim.html">続きを読む →</a>
@@ -1774,9 +1774,9 @@
         </div>
         <div class="card-body">
           <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">Autodesk「Forma Building Design」登場、スキーマティック設計からRevitへシームレスに</a>
+            <a href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">Autodesk、スキーマティック設計を一新する「Forma Building Design」と Revit クラウド統</a>
           </h3>
-          <p class="card-excerpt">【背景】 建設・設計業界では、計画から設計、施工にわたるプロジェクトデータが断片化し、各段階で意図や情報が失われることが課題となっています。従来のファイルベース…</p>
+          <p class="card-excerpt">【背景】 建設業界ではプロジェクトのライフサイクルを通じて、企画・設計・施工の各段階でデータが分断されることが課題となっています。各段階で異なるツールが使われ、…</p>
           <div class="card-footer">
             <div class="card-meta-info"><span>Autodesk News</span><span class="card-meta-sep">·</span><span>2026年4月7日</span></div>
             <a class="card-read-more" href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">続きを読む →</a>
@@ -1789,9 +1789,9 @@
         </div>
         <div class="card-body">
           <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/maxon-launches-redshift-for-archviz.html">Maxon、建築ビジュアライゼーション向けRedShiftプラグインでRevit・Archicad対応へ</a>
+            <a href="../posts/maxon-launches-redshift-for-archviz.html">Maxonがレンダリング革命。Revit・Archicad・Vectorworksに「映画品質」のビジュアライゼーション</a>
           </h3>
-          <p class="card-excerpt">【背景】 建築・設計業界では、クライアント提案やデザイン検討の段階で高品質なビジュアライゼーションの需要が急速に高まっています。従来、BIM上での作業環境から外…</p>
+          <p class="card-excerpt">【背景】 アーキテクチャルビジュアライゼーション市場は、提案資料やクライアントプレゼンテーションの品質が設計競争力を左右する重要な領域です。従来、BIM aut…</p>
           <div class="card-footer">
             <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年3月18日</span></div>
             <a class="card-read-more" href="../posts/maxon-launches-redshift-for-archviz.html">続きを読む →</a>
@@ -1804,9 +1804,9 @@
         </div>
         <div class="card-body">
           <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/cityweft-adds-3d-building-data-for-england.html">LiDAR建物データがRevit・Rhinoで即活用、イギリス主要都市の3D背景が自動取得可能に</a>
+            <a href="../posts/cityweft-adds-3d-building-data-for-england.html">LiDAR基盤の3D建物データがイングランドに統合、BIM・CADの設計精度が大幅向上</a>
           </h3>
-          <p class="card-excerpt">【背景】建築設計の初期段階では、周辺環境のリアルな建物コンテキストが不可欠ですが、従来は手作業で3Dモデルを構築する必要がありました。イギリスではDEFRA（環…</p>
+          <p class="card-excerpt">【背景】 建築設計やまちづくり計画において、既存建物の正確な寸法情報は欠かせません。しかし従来は現地測量や推定に頼ることが多く、大規模なエリアの空間情報を統合的…</p>
           <div class="card-footer">
             <div class="card-meta-info"><span>AEC Magazine</span><span class="card-meta-sep">·</span><span>2026年1月23日</span></div>
             <a class="card-read-more" href="../posts/cityweft-adds-3d-building-data-for-england.html">続きを読む →</a>
@@ -1822,34 +1822,34 @@
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">人気記事</div>
         <ul class="sidebar-popular-list"><li>
+      <a href="../posts/2026-1.html">
+        <span class="sidebar-rank">1</span>Archicad 30ベータ開始迫る、7月から10月の単一フェーズテスト体制へ
+      </a>
+    </li><li>
+      <a href="../posts/bimx-webprobimcloud.html">
+        <span class="sidebar-rank">2</span>BIMx Web版ついにPro機能搭載、断面機能と表示制御が統合へ
+      </a>
+    </li><li>
       <a href="../posts/autodesk-strengthens-bridge-between-revit-and-forma.html">
-        <span class="sidebar-rank">1</span>RevitがFormaと直結、クラウド設計データの自動移行が実現
+        <span class="sidebar-rank">3</span>RevitがFormaと深く統合、クラウド設計データの直接移行が可能に
       </a>
     </li><li>
       <a href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">
-        <span class="sidebar-rank">2</span>Autodesk「Forma Building Design」登場、スキーマティック設計からRevitへシームレスに
+        <span class="sidebar-rank">4</span>Autodesk、スキーマティック設計を一新する「Forma Building Design」と Revit クラウド統
       </a>
     </li><li>
       <a href="../posts/archicad.html">
-        <span class="sidebar-rank">3</span>Archicadのキーノート機能で詳細注記を自動化、一元管理が実現
-      </a>
-    </li><li>
-      <a href="../posts/graphisoft-tech.html">
-        <span class="sidebar-rank">4</span>Archicad図面表現の実践スキル、東京4月開催セミナー
-      </a>
-    </li><li>
-      <a href="../posts/ai.html">
-        <span class="sidebar-rank">5</span>AI設計ツールが変える建築実務、BIMとの融合で逆算型プロセスへ
+        <span class="sidebar-rank">5</span>Archicadのキーノートで詳細注記を自動化、一元管理で図面整合性を確保
       </a>
     </li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">カテゴリ</div>
-        <ul class="sidebar-category-list"><li><a href="../categories/bim-ecosystem.html">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../categories/archicad.html">Archicad</a><span class="sidebar-category-count">14</span></li><li><a href="../categories/bim-ai.html">BIM×AI</a><span class="sidebar-category-count">5</span></li><li><a href="../categories/revit.html">Revit</a><span class="sidebar-category-count">4</span></li><li><a href="../categories/ai-dx.html">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../categories/gloobe.html">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
+        <ul class="sidebar-category-list"><li><a href="../categories/bim-ecosystem.html">BIM全般</a><span class="sidebar-category-count">17</span></li><li><a href="../categories/archicad.html">Archicad</a><span class="sidebar-category-count">15</span></li><li><a href="../categories/bim-ai.html">BIM×AI</a><span class="sidebar-category-count">5</span></li><li><a href="../categories/revit.html">Revit</a><span class="sidebar-category-count">4</span></li><li><a href="../categories/ai-dx.html">AI/DX</a><span class="sidebar-category-count">2</span></li><li><a href="../categories/gloobe.html">GLOOBE</a><span class="sidebar-category-count">1</span></li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">最新記事</div>
-        <ul class="sidebar-recent-list"><li><a href="../posts/autodesk-strengthens-bridge-between-revit-and-forma.html">RevitがFormaと直結、クラウド設計データの自動移行が実現</a></li><li><a href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">Autodesk「Forma Building Design」登場、スキーマティック設計からRevitへシームレスに</a></li><li><a href="../posts/archicad.html">Archicadのキーノート機能で詳細注記を自動化、一元管理が実現</a></li><li><a href="../posts/graphisoft-tech.html">Archicad図面表現の実践スキル、東京4月開催セミナー</a></li><li><a href="../posts/ai.html">AI設計ツールが変える建築実務、BIMとの融合で逆算型プロセスへ</a></li></ul>
+        <ul class="sidebar-recent-list"><li><a href="../posts/2026-1.html">Archicad 30ベータ開始迫る、7月から10月の単一フェーズテスト体制へ</a></li><li><a href="../posts/bimx-webprobimcloud.html">BIMx Web版ついにPro機能搭載、断面機能と表示制御が統合へ</a></li><li><a href="../posts/autodesk-strengthens-bridge-between-revit-and-forma.html">RevitがFormaと深く統合、クラウド設計データの直接移行が可能に</a></li><li><a href="../posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html">Autodesk、スキーマティック設計を一新する「Forma Building Design」と Revit クラウド統</a></li><li><a href="../posts/archicad.html">Archicadのキーノートで詳細注記を自動化、一元管理で図面整合性を確保</a></li></ul>
       </div>
       <div class="sidebar-widget">
         <div class="sidebar-widget-title">このサイトについて</div>

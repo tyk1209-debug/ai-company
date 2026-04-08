@@ -1775,6 +1775,7 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1rem;
       margin-bottom: 1.5rem;
+      align-items: start;
     }
     .guide-card {
       background: var(--white);
@@ -1790,7 +1791,6 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       display: flex;
       flex-direction: column;
       gap: 0.7rem;
-      min-height: 100%;
     }
     .guide-card-kicker {
       font-size: 0.72rem;
@@ -1818,7 +1818,7 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       font-weight: 700;
       color: var(--blue);
       text-decoration: none;
-      margin-top: auto;
+      margin-top: 0.1rem;
     }
     .guide-card-link:hover { text-decoration: none; }
     .guide-intro {

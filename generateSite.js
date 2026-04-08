@@ -92,6 +92,72 @@ const RECOMMENDED_BOOKS = {
   ],
 };
 
+const MANUAL_POSTS = [
+  {
+    slug: 'revit-worksharing-basics',
+    title: 'Revit worksharing basics',
+    titleJa: 'Revitのワークシェアとは｜中央モデル・ローカル・同期の基本',
+    link: 'https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-0FC44807-DF06-4516-905A-4100281AC486',
+    source: 'Autodesk Help',
+    pubDate: '2026-04-06T09:00:00.000Z',
+    summary: 'About Worksharing for Revit projects.',
+    fetchedAt: '2026-04-08T00:00:00.000Z',
+    category: 'REVIT',
+    categoryHits: ['revit'],
+    allCategories: ['REVIT'],
+    keywordHits: ['revit', 'bim', 'worksharing'],
+    score: 8,
+    freshnessScore: 0,
+    relevant: true,
+    bodyJa: '【背景】\nRevitは個人で3Dモデルを作るだけのソフトではなく、複数人で同じ建物情報を扱う前提で強みが出やすいBIMツールです。特に、外れ値を許しにくいシステマチックな構造を実務で生かすには、誰がどの領域を触り、どう同期するかを整理した運用が欠かせません。\n\n【内容】\nRevitのワークシェアは、複数メンバーが同じプロジェクトモデルに並行して関わるための仕組みです。中心になるのは中央モデルで、各担当者はそのコピーをローカルで開き、作業内容を同期しながら進めます。実務では、意匠、構造、設備、作図、管理などを分担する際の前提になる考え方で、単なるファイル共有よりも責任範囲を整理しやすいのが特徴です。\n\n【技術的ポイント】\nワークシェアを理解するうえで重要なのは、中央モデル、ローカル作業、同期、ワークセットの関係です。Revitはモデル全体を自由に触る方向よりも、役割分担と更新手順をそろえる方向で安定しやすく、標準化されたテンプレートや命名ルールと相性が良いです。クラウド環境ではAutodesk Docsと組み合わせた Revit Cloud Worksharing も使えますが、どの方式でも「誰がどこを責任持って編集するか」を決めることが先に来ます。\n\n【業界への影響】\nRevit導入が進んでも、ワークシェアの考え方が弱いと、モデルが重い、誰が直したか分からない、同期が怖いという状態になりやすいです。逆にワークシェアを理解すると、Revitは個人技の3D作図ソフトではなく、組織で情報を揃える基盤として機能しやすくなります。これはRevitの強みであるシステマチックな運用を実務へ落とす最初の一歩です。',
+    xPostBody: '',
+    japaneseSummary: '',
+    postText: '',
+  },
+  {
+    slug: 'revit-view-templates-basics',
+    title: 'Revit view templates basics',
+    titleJa: 'Revitのビューテンプレートとは｜図面品質を揃える標準化の入口',
+    link: 'https://help.autodesk.com/cloudhelp/2026/ENU/Revit-HaveYouTried/files/GUID-DD1AF833-EAA0-4C91-8CF3-EA8BB8B5C3D5.htm',
+    source: 'Autodesk Help',
+    pubDate: '2026-04-05T09:00:00.000Z',
+    summary: 'View Templates in Revit.',
+    fetchedAt: '2026-04-08T00:00:00.000Z',
+    category: 'REVIT',
+    categoryHits: ['revit'],
+    allCategories: ['REVIT'],
+    keywordHits: ['revit', 'view template', 'bim'],
+    score: 8,
+    freshnessScore: 0,
+    relevant: true,
+    bodyJa: '【背景】\nRevitを導入した直後のチームで起こりやすいのが、同じ建物を扱っているのに人ごとに図面の見え方が違う、という問題です。Revitは自由に見た目を調整できる一方で、実務ではその自由度を放置すると図面品質のばらつきが大きくなります。\n\n【内容】\nビューテンプレートは、表示設定や縮尺、詳細レベル、表示/非表示、グラフィック設定などをまとめて管理するための仕組みです。個々のビューをその都度調整する代わりに、テンプレートを通して同じルールを適用できるため、平面図、天井伏図、詳細図、申請図、社内検討図の見え方を揃えやすくなります。Revitらしい標準化の入り口として、非常に効果の大きい機能です。\n\n【技術的ポイント】\nビューテンプレートには、既存ビューから作る方法と、管理画面から新規作成する方法があります。重要なのは、単に見た目を固定することではなく、どのビュー種別にどのテンプレートを紐づけるかを決めることです。Revitは外れ値を許しにくい構造のソフトなので、テンプレートを使って図面表現の揺れを減らすほど、ビュー管理やレビューが安定します。\n\n【業界への影響】\nビューテンプレートが整うと、属人的だった図面表現が組織の標準へ近づきます。教育コストも下がり、新人や外部協力者が参加しても品質を合わせやすくなるため、Revit運用の再現性が上がります。これはRevitの強みであるシステマチックな運用を、最も分かりやすく体感できるテーマの一つです。',
+    xPostBody: '',
+    japaneseSummary: '',
+    postText: '',
+  },
+  {
+    slug: 'revit-schedules-basics',
+    title: 'Revit schedules basics',
+    titleJa: 'Revitの集計表とは｜数量・属性・図面連動を生かす基本',
+    link: 'https://help.autodesk.com/cloudhelp/2026/ENU/Revit-DocumentPresent/files/GUID-F50D6FF4-859E-43A2-A2F6-81C84A1BA0EB.htm',
+    source: 'Autodesk Help',
+    pubDate: '2026-04-04T09:00:00.000Z',
+    summary: 'Schedules in Revit.',
+    fetchedAt: '2026-04-08T00:00:00.000Z',
+    category: 'REVIT',
+    categoryHits: ['revit'],
+    allCategories: ['REVIT'],
+    keywordHits: ['revit', 'schedule', 'quantity'],
+    score: 8,
+    freshnessScore: 0,
+    relevant: true,
+    bodyJa: '【背景】\nRevitの価値は3D表示だけではなく、モデルに入れた属性や数量を図面・集計へつなげられる点にあります。にもかかわらず、導入初期は3Dモデルの作成だけで止まり、数量や仕様の整理は結局Excelへ戻ってしまうことが少なくありません。\n\n【内容】\nRevitの集計表は、モデル内の要素情報を一覧化し、数量確認、仕様確認、シート管理、注記管理などに使えるビューです。壁、建具、部屋、設備機器、仕上げ、材料など、カテゴリごとに必要な項目を抜き出し、並べ替え、集計し、条件で絞り込めます。単なる表ではなく、モデルと連動するため、属性を直せば集計も変わり、集計から要素確認へ戻ることもできます。\n\n【技術的ポイント】\n実務で重要なのは、どのパラメータを入れておくと後で集計に使えるか、という設計です。共有パラメータやカテゴリ設定が曖昧だと、集計表は作れても運用に乗りません。Revitは外れ値を減らすように属性を揃えていくほど、集計表の価値が大きくなります。これは自由なモデリングよりも、ルール化された情報管理に強いRevitの性格がよく表れる部分です。\n\n【業界への影響】\n集計表を使いこなせると、Revitは単なるモデリングソフトではなく、数量・仕様・図面整合を一つのモデルで回す基盤に近づきます。設計変更の影響確認、社内レビュー、協力会社との受け渡しでも情報のズレを減らしやすくなり、Revit導入の効果が見えやすくなります。ファミリ理解と並んで、Revitを実務へ定着させるための重要テーマです。',
+    xPostBody: '',
+    japaneseSummary: '',
+    postText: '',
+  },
+];
+
 const EXPLAINER_GUIDES = [
   {
     slug: 'bim',
@@ -2945,7 +3011,7 @@ function buildSidebar(posts, base = '.', extraWidgets = '') {
 const THUMB_IMAGES = {
   REVIT: './assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg',
   ARCHICAD: './assets/Archicad用.png',
-  BIM_ECOSYSTEM: './assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg',
+  BIM_ECOSYSTEM: './assets/未来の建設技術とBIM.png',
   BIM_AI: './assets/csm_KI_Bau_2a4ab20acc.jpg',
   CONSTRUCTION_TECH: './assets/csm_KI_Bau_2a4ab20acc.jpg',
   AI_DX: './assets/blue-ai-digital-cube.jpg',
@@ -2972,6 +3038,9 @@ const THUMB_GRADIENTS = {
 
 function resolveVisualKey(catKey, item = null) {
   const fallback = (catKey || 'OTHER').toUpperCase();
+  if (fallback && fallback !== 'OTHER') {
+    return fallback;
+  }
   const haystack = [
     item?.slug,
     item?.title,
@@ -2981,7 +3050,6 @@ function resolveVisualKey(catKey, item = null) {
   ].filter(Boolean).join(' ').toLowerCase();
 
   if (
-    fallback === 'ARCHICAD' ||
     haystack.includes('archicad') ||
     haystack.includes('graphisoft') ||
     haystack.includes('bimx')
@@ -4579,6 +4647,8 @@ function main() {
     console.warn('[generateSite] No posts found — generating empty site');
     posts = [];
   }
+
+  posts = [...MANUAL_POSTS, ...posts];
 
   // titleJaが空の記事（日本語化できなかった＝BIM無関係と判定済み）をサイト表示から除外
   const before = posts.length;

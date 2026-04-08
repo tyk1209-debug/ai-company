@@ -163,8 +163,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aec-news.com/posts/revit-worksharing-basics.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aec-news.com/posts/archicad-soloarchicad-studio.html</loc>
     <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/revit-view-templates-basics.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/revit-schedules-basics.html</loc>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

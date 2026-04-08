@@ -152,42 +152,92 @@ const EXPLAINER_GUIDES = [
     slug: 'revit',
     title: 'Revitとは',
     category: 'REVIT',
-    description: 'Revitの役割、BIMでの位置づけ、Archicadとの違い、学び方を整理した基礎解説です。',
-    heroSummary: 'RevitはAutodeskのBIMオーサリングツールで、設計から施工連携まで広く使われています。',
-    overview: 'RevitはAutodeskが提供するBIMソフトで、建築・構造・設備を同一モデル上で扱いやすいのが特徴です。国内外で導入実績が多く、設計事務所だけでなくゼネコン、施工会社、設備会社でも採用されています。',
+    description: 'Revitの特徴、できること、実務フロー、Archicadとの違い、学び方を整理した基礎解説です。',
+    heroSummary: 'RevitはAutodeskのBIMオーサリングツールで、意匠・構造・設備を一つのモデルで扱い、設計から施工連携までつなげやすいのが強みです。',
+    oneLine: 'Revitは、建築・構造・設備を同じルールで統合しやすい、Autodeskの総合BIMソフトです。',
+    overview: 'RevitはAutodeskが提供するBIMソフトで、壁・床・窓・設備機器のような建物要素をパラメトリックに扱いながら、平面・立面・断面・集計表まで一貫して更新できるのが特徴です。国内外で導入実績が多く、設計事務所だけでなくゼネコン、施工会社、設備会社でも採用されています。単なる3D作図ソフトではなく、図面、数量、干渉確認、施工準備までつながる情報モデルを作るための基盤として使われます。',
+    industryImpact: 'Revitの普及によって、BIMは意匠設計だけの取り組みから、設計・施工・設備・維持管理をまたぐ共通基盤へ広がりやすくなりました。特にAutodesk製品群やACCと組み合わせる運用では、モデルを中心に関係者が同じ前提で情報共有しやすくなります。',
+    practicalImpact: '実務では、設計変更を図面や集計へ反映しやすくなるだけでなく、設備・構造との干渉確認、数量拾い、施工検討、クラウド共有まで一本化しやすくなります。一方で、テンプレートやファミリの設計が弱いまま導入すると、モデルは作れても業務が安定しない状態になりやすいです。',
     features: [
-      '建築・構造・設備を同一プラットフォーム上で調整しやすい',
-      'Autodesk製品群やACCとの連携が強く、施工フェーズにつなぎやすい',
-      'テンプレート、ファミリ、外部情報が多く、組織導入しやすい',
+      '建築・構造・設備を同一プラットフォーム上で調整しやすく、干渉確認や責任分担を整理しやすい',
+      'モデル変更が図面、立面、断面、集計表へ連動しやすく、修正漏れを抑えやすい',
+      'Autodesk製品群やACCとの連携が強く、設計から施工フェーズへつなぎやすい',
+      'テンプレート、ファミリ、外部情報が多く、組織標準を作りやすい',
     ],
     differences: [
-      'Archicadが建築設計者の操作感やモデリング体験を重視しやすいのに対し、Revitは多職種連携と標準化に強みがあります。',
-      'Revitはファミリやテンプレートの設計が実務効率を大きく左右します。',
-      'openBIMの観点では、IFC連携やデータ受け渡しの設計も重要になります。',
+      'Archicadが直感的な操作性、モデリングの自由度、openBIMを重く受け止めた思想を評価されやすいのに対し、Revitは多職種統合と標準化のしやすさに強みがあります。',
+      'Revitはファミリ、テンプレート、ワークシェア、ビュー管理まで含めて設計しないと実務効率が上がりにくく、自由度よりも統制を効かせやすい構造のソフトです。',
+      'openBIMを重視する場合は、Revit単体の操作だけでなく、IFC連携や属性受け渡しの設計まで考える必要があります。',
     ],
     fit: [
       '設計と施工をまたぐBIM体制を作りたい会社',
       '設備や構造を含む総合調整が多いプロジェクト担当者',
       'Autodesk製品群を中心に運用している組織',
+      'プロジェクトごとの差より組織標準を重視したいチーム',
     ],
     practicalUse: [
       '意匠・構造・設備モデルの統合と干渉確認',
-      '図面とモデルの整合、ファミリ管理、数量拾い',
-      'ACCや施工側ツールとの連携による施工準備',
+      '平面・立面・断面・集計表を連動させた図面整備',
+      'ファミリ管理、数量拾い、部材情報の標準化',
+      'ACCや施工側ツールとの連携による施工準備やモデル共有',
     ],
-    difficulty: '操作そのものより、ファミリ、テンプレート、ビュー管理、ワークシェア、属性ルールの理解が必要になるため、初心者は「描けるのに業務では回らない」状態になりやすいです。',
+    difficulty: '操作そのものより、ファミリ、テンプレート、ビュー管理、ワークシェア、属性ルールの理解が必要になるため、初心者は「描けるのに業務では回らない」状態になりやすいです。特にRevitは、個人の作図テクニックよりも、チーム全体で同じルールを守って使えるかどうかで成果が大きく変わります。',
     stumblingPoints: [
-      'ファミリ作成で止まりやすい',
-      'ビュー・シート・フィルタ管理が複雑になりやすい',
-      'モデル運用ルールがないまま始めると、すぐに整合が崩れやすい',
+      'ファミリ作成で止まりやすく、既製品と自作の使い分けが曖昧になりやすい',
+      'ビュー・シート・フィルタ・フェーズ管理が複雑になりやすい',
+      'モデル運用ルールがないまま始めると、名称や表現の整合がすぐに崩れやすい',
+      '意匠、構造、設備で責任範囲を決めずに進めると、モデル更新の衝突が起きやすい',
     ],
-    selfStudyWhyHard: '独学では画面操作は覚えられても、テンプレート設計や組織運用の勘所がつかみにくいです。特に実務では、建築だけでなく設備・構造・施工との接続まで考える必要があります。',
-    learningMethod: 'まずは入門書でRevitの基本概念と標準操作を押さえ、その後に実案件を意識したテンプレート・ファミリ・図面化の練習に移るのが自然です。基礎を飛ばすと後で修正コストが大きくなります。',
+    selfStudyWhyHard: '',
+    learningMethod: 'まずはRevitの基本概念と標準操作を押さえ、次にビュー、シート、集計表、ファミリの関係を理解し、その後に実案件を意識したテンプレート・図面化・他職種連携の練習に移るのが自然です。最初から高度なファミリ作成へ進むより、標準機能でどこまで業務を回せるかを先に整理する方が定着しやすいです。',
+    comparisonTable: {
+      title: 'RevitとArchicadの比較',
+      intro: 'どちらも代表的なBIMソフトですが、向いている場面は少し異なります。',
+      headers: ['観点', 'Revit', 'Archicad'],
+      rows: [
+        ['向いている場面', '標準化、役割分担、ルール運用を強く効かせたい案件', '直感的な操作性、モデリングの自由度、openBIMの汎用性を重視したい案件'],
+        ['強み', '外れ値を許しにくいシステマチックな構造、多職種連携、テンプレート運用', '直感的な操作性、モデリングの自由度、openBIMを重く受け止めた思想'],
+        ['注意点', 'ルール設計が弱いとシステムの強みを活かしにくく、運用負荷だけが残りやすい', '自由度が高いぶん、属性や表現ルールを揃えないとチーム運用でばらつきが出やすい'],
+        ['選ばれやすい組織', '標準化、統制、責任分担の明確化を重視する組織', '設計者の自由度やopenBIMの汎用性を重視する組織'],
+      ],
+    },
+    extraSections: [
+      {
+        title: 'Revitでできること',
+        body: 'Revitでできることは、3Dモデル作成だけではありません。意匠モデルの作成、構造フレームの整理、設備ルートの配置、図面化、数量拾い、干渉確認、クラウド共有まで、建物情報を一つの流れで扱える点が価値です。特に、壁や窓を修正すると関連する図面や集計にも影響が反映されやすいため、設計変更が多い案件ほどメリットを感じやすいです。',
+      },
+      {
+        title: '日本国内の公開調査で見るRevitとArchicadの利用率',
+        body: '日本国内で一般公開されている比較可能な数字は、販売本数ベースの厳密な市場シェアではなく、複数回答の「利用率」調査が中心です。2020年版のBIM活用実態調査レポート（調査期間は2020年2月26日〜3月8日）では、勤務先で利用しているBIMツールとしてRevit 54.2%、Archicad 50.9%でした。同じ調査を業種別に見ると、設計事務所ではArchicad 52.6%、Revit 41.2%、総合建設会社ではRevit 65.0%、Archicad 57.5%です。さらに、2019年9月公開の日事連の建築士事務所調査では、導入予定を含むBIMソフトがArchicad 43.0%、Revit 33.2%でした。つまり日本国内では、全体では両者がかなり拮抗しつつ、設計事務所ではArchicad寄り、総合建設会社ではRevit寄りと見るのが自然です。',
+        links: [
+          { label: 'BIM活用実態調査レポート 2020年版（日経BPコンサルティング / 日経BP、Autodesk掲載PDF）', url: 'https://www.autodesk.co.jp/content/dam/autodesk/www/apac/pdf/bim-report-final.pdf' },
+          { label: '建築士事務所のBIMとIT活用実態にかかわる調査結果について（日事連、2019年9月）', url: 'https://www.njr.or.jp/list/01277.html' },
+        ],
+      },
+      {
+        title: 'Revit導入で重要なポイント',
+        body: 'Revit導入で本当に重要なのは、ソフトを入れることより、どのテンプレートを使うか、ファミリを誰が管理するか、ビュー命名をどう統一するか、どの段階で施工や設備とモデル共有するかを決めることです。この設計が曖昧だと、モデルは作れても図面品質や更新責任が安定しません。逆にここが整理されると、Revitは属人的な作図ソフトではなく、組織のBIM基盤として機能しやすくなります。',
+      },
+    ],
     guideLinks: [
       { slug: 'archicad', text: 'Archicadとの違いを知りたい方はこちら' },
       { slug: 'bim', text: 'BIM全体の考え方を整理したい方はこちら' },
       { slug: 'openbim', text: 'openBIMとの関係を知りたい方はこちら' },
     ],
+    extraFaqs: [
+      {
+        question: 'RevitとArchicadはどちらが向いている？',
+        answer: '標準化、役割分担、ルール運用を強く効かせたいならRevitが向いています。直感的な操作性、モデリングの自由度、openBIMの汎用性を重視するならArchicadが合う場面があります。',
+      },
+      {
+        question: 'Revitは意匠設計だけでも使える？',
+        answer: '使えます。実際に意匠設計だけでRevitを使う事務所もあります。ただしRevitの強みは、意匠単体よりも、構造・設備・施工との接続まで含めて情報をつなげやすい点にあります。',
+      },
+    ],
+    booksLabel: '参考書籍',
+    booksTitle: '必要に応じて参考になる書籍',
+    booksIntro: '本文だけで概要は把握できます。さらに体系立てて学びたい方向けに、参考として書籍を載せています。',
+    booksCtaLabel: '書籍ページを見る',
     books: [
       {
         audience: '初心者向け',
@@ -208,22 +258,24 @@ const EXPLAINER_GUIDES = [
     title: 'Archicadとは',
     category: 'ARCHICAD',
     description: 'Archicadの特徴、Revitとの違い、設計実務での使われ方、学び方を整理した基礎解説です。',
-    heroSummary: 'Archicadは建築設計との相性が良いBIMソフトで、初期計画から実施設計まで一貫して使われています。',
-    overview: 'ArchicadはGraphisoftが提供するBIMソフトで、建築設計者が直感的に扱いやすいモデリング体験と、openBIMへの親和性を強みとしています。意匠設計を中心に、早い段階からモデルで検討したい組織と相性が良いツールです。',
+    heroSummary: 'Archicadは、直感的な操作性とモデリングの自由度、openBIMを重く受け止めた思想が強みのBIMソフトです。',
+    overview: 'ArchicadはGraphisoftが提供するBIMソフトで、建築設計者が直感的に扱いやすい操作性と、形を考えながらモデルを組み立てやすい自由度を強みとしています。加えて、openBIMへの親和性が高く、特定ベンダーに閉じすぎない運用を重視する姿勢でも語られることが多いツールです。Revitのようにシステマチックな統制をかける方向とは少し違い、設計者の思考や試行錯誤を止めにくいBIMソフトとして評価されやすいです。',
     features: [
-      '建築設計者が扱いやすいモデリング操作と表現性',
-      '初期計画から実施設計まで設計思考を止めにくい',
+      '建築設計者が扱いやすい直感的なモデリング操作と表現性',
+      '初期計画から実施設計まで設計思考を止めにくいモデリングの自由度',
       'openBIMとの相性が比較的良く、外部連携を考えやすい',
+      '特定のシステムに閉じすぎない運用を考えやすい',
     ],
     differences: [
-      'Revitが多職種統合と標準化に強いのに対し、Archicadは設計者の思考を止めにくい操作感が強みです。',
-      'Archicadは設計初期からモデルを使いやすい一方で、組織標準や施工連携の設計は別途詰める必要があります。',
+      'Revitが外れ値を許しにくいシステマチックな構造で標準化しやすいのに対し、Archicadは設計者の思考を止めにくい操作感と自由度が強みです。',
+      'Archicadは設計初期からモデルを使いやすい一方で、組織標準や属性設計を意識しないとチーム運用で個人差が出やすい面があります。',
       'openBIMを重視する場合は、IFCの扱い方を理解しておくと効果が大きいです。',
     ],
     fit: [
       '意匠設計を中心にBIMを定着させたい設計事務所',
       '初期計画段階からモデルで検討したいチーム',
       'ベンダーロックを避けつつ設計を進めたい実務者',
+      '直感的な操作性やopenBIMの汎用性を重視する組織',
     ],
     practicalUse: [
       '基本設計から実施設計までのモデルベース設計',
@@ -238,11 +290,26 @@ const EXPLAINER_GUIDES = [
     ],
     selfStudyWhyHard: '独学ではモデリングは進んでも、属性管理や連携設定の意味が見えにくいです。特に組織導入では、個人最適ではなくチームで回る運用を最初から考える必要があります。',
     learningMethod: 'まずは設計フローに沿った入門書で全体をつかみ、その後にテンプレート、属性、IFC設定を実務視点で学ぶのが効率的です。Revitとの違いも早めに理解しておくと判断しやすくなります。',
+    extraSections: [
+      {
+        title: '日本国内の公開調査で見るRevitとArchicadの利用率',
+        body: '日本国内で一般公開されている比較可能な数字は、厳密な販売シェアよりも複数回答の「利用率」調査が中心です。2020年版のBIM活用実態調査レポート（調査期間は2020年2月26日〜3月8日）では、勤務先で利用しているBIMツールとしてRevit 54.2%、Archicad 50.9%でした。ただし業種別に見ると差があり、設計事務所ではArchicad 52.6%、Revit 41.2%、総合建設会社ではRevit 65.0%、Archicad 57.5%です。さらに、2019年9月公開の日事連の建築士事務所調査では、導入予定を含むBIMソフトがArchicad 43.0%、Revit 33.2%でした。このため日本国内では、全体ではほぼ拮抗しつつ、設計事務所ではArchicad寄り、ゼネコンを含む総合建設会社ではRevit寄りと理解するのが妥当です。',
+        links: [
+          { label: 'BIM活用実態調査レポート 2020年版（日経BPコンサルティング / 日経BP、Autodesk掲載PDF）', url: 'https://www.autodesk.co.jp/content/dam/autodesk/www/apac/pdf/bim-report-final.pdf' },
+          { label: '建築士事務所のBIMとIT活用実態にかかわる調査結果について（日事連、2019年9月）', url: 'https://www.njr.or.jp/list/01277.html' },
+        ],
+      },
+      {
+        title: 'ArchicadがopenBIMで語られやすい理由',
+        body: 'Archicadは、単にIFCを書き出せるというだけでなく、最初からopenBIMを前提にした運用と相性が良いソフトとして語られることが多いです。将来的なツール変更や他社連携も見据えたい組織にとっては、この姿勢そのものが選定理由になりやすいです。',
+      },
+    ],
     guideLinks: [
       { slug: 'revit', text: 'Revitとの違いを整理したい方はこちら' },
       { slug: 'bim', text: 'BIM全体の考え方を整理したい方はこちら' },
       { slug: 'openbim', text: 'openBIMについて詳しくはこちら' },
     ],
+    extraFaqs: [],
     books: [
       {
         audience: '初心者向け',
@@ -1860,6 +1927,16 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       color: var(--text);
     }
     .guide-section li + li { margin-top: 0.55rem; }
+    .guide-source-list {
+      margin-top: 0.85rem !important;
+    }
+    .guide-source-list a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .guide-source-list a:hover {
+      text-decoration: underline;
+    }
     .guide-links {
       display: flex;
       flex-wrap: wrap;
@@ -1878,6 +1955,41 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       text-decoration: none;
     }
     .guide-links a:hover { text-decoration: none; background: rgba(37,99,235,0.13); }
+    .guide-compare-wrap {
+      margin-top: 0.9rem;
+      overflow-x: auto;
+      border: 1px solid #e4ecf5;
+      border-radius: 12px;
+    }
+    .guide-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+      background: #fff;
+    }
+    .guide-compare-table th,
+    .guide-compare-table td {
+      padding: 0.9rem 0.95rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e9eff6;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+    .guide-compare-table thead th {
+      background: #f8fbff;
+      color: var(--navy);
+      font-weight: 800;
+    }
+    .guide-compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .guide-compare-table tbody td:first-child {
+      width: 24%;
+      font-weight: 700;
+      color: var(--navy);
+      background: #fcfdff;
+    }
     .guide-books {
       background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
       border: 1px solid #dbe7f4;
@@ -2769,11 +2881,11 @@ function buildLearningGuidesSection(post) {
 }
 
 function buildExplainerBooks(guide) {
-  if (!guide.books || guide.books.length === 0) return '';
+  if (guide.hideBooks || !guide.books || guide.books.length === 0) return '';
   return `
     <section class="guide-books">
-      <div class="reference-books-label">おすすめ書籍</div>
-      <h2 class="reference-books-title">この記事を理解するためのおすすめ書籍</h2>
+      <div class="reference-books-label">${escape(guide.booksLabel || 'おすすめ書籍')}</div>
+      <h2 class="reference-books-title">${escape(guide.booksTitle || 'この記事を理解するためのおすすめ書籍')}</h2>
       <p class="reference-books-desc">${escape(guide.booksIntro || '概念や運用設計は断片的な記事だけでは理解しにくいため、全体像を体系的に学べる書籍を紹介します。売り込みではなく、学習の順番を作るための導線です。')}</p>
       <div class="guide-books-grid">
         ${guide.books.map((book) => `
@@ -2781,11 +2893,50 @@ function buildExplainerBooks(guide) {
             <div class="guide-book-audience">${escape(book.audience)}</div>
             <div class="guide-book-title">${escape(book.title)}</div>
             <p class="guide-book-desc">${escape(book.description)}</p>
-            <a class="guide-book-link" href="${escape(book.url)}" target="_blank" rel="noopener noreferrer sponsored">Amazonで見る</a>
+            <a class="guide-book-link" href="${escape(book.url)}" target="_blank" rel="noopener noreferrer sponsored">${escape(guide.booksCtaLabel || 'Amazonで見る')}</a>
           </article>
         `).join('')}
       </div>
     </section>`;
+}
+
+function buildGuideComparisonTable(guide) {
+  const table = guide.comparisonTable;
+  if (!table || !Array.isArray(table.headers) || !Array.isArray(table.rows) || table.headers.length === 0 || table.rows.length === 0) return '';
+  return `
+    <section class="guide-section">
+      <h2>${escape(table.title || '比較')}</h2>
+      ${table.intro ? `<p>${escape(table.intro)}</p>` : ''}
+      <div class="guide-compare-wrap">
+        <table class="guide-compare-table">
+          <thead>
+            <tr>${table.headers.map((header) => `<th>${escape(header)}</th>`).join('')}</tr>
+          </thead>
+          <tbody>
+            ${table.rows.map((row) => `
+              <tr>${row.map((cell) => `<td>${escape(cell)}</td>`).join('')}</tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    </section>`;
+}
+
+function buildGuideExtraSections(guide) {
+  return (guide.extraSections || []).map((section) => {
+    const links = Array.isArray(section.links) && section.links.length > 0
+      ? `
+          <ul class="guide-source-list">
+            ${section.links.map((link) => `<li><a href="${escape(link.url)}" target="_blank" rel="noopener noreferrer">${escape(link.label || link.url)}</a></li>`).join('')}
+          </ul>`
+      : '';
+    return `
+        <section class="guide-section">
+          <h2>${escape(section.title)}</h2>
+          <p>${escape(section.body)}</p>
+          ${links}
+        </section>`;
+  }).join('');
 }
 
 function buildGuideFaqItems(guide) {
@@ -2808,7 +2959,10 @@ function buildGuideFaqItems(guide) {
       answer: guide.learningMethod || '',
     },
   ].filter((item) => item.answer && item.answer.trim());
-  return faqs;
+  const extraFaqs = Array.isArray(guide.extraFaqs)
+    ? guide.extraFaqs.filter((item) => item && item.question && item.answer)
+    : [];
+  return faqs.concat(extraFaqs);
 }
 
 function buildGuideFaqSection(guide) {
@@ -2900,19 +3054,17 @@ function buildExplainerPage(guide, posts) {
           <h2>つまずくポイント</h2>
           <ul>${guide.stumblingPoints.map((item) => `<li>${escape(item)}</li>`).join('')}</ul>
         </section>
+        ${guide.selfStudyWhyHard ? `
         <section class="guide-section">
           <h2>なぜ独学では難しいか</h2>
           <p>${escape(guide.selfStudyWhyHard)}</p>
-        </section>
+        </section>` : ''}
         <section class="guide-section">
           <h2>学習方法</h2>
           <p>${escape(guide.learningMethod)}</p>
         </section>
-        ${(guide.extraSections || []).map((section) => `
-        <section class="guide-section">
-          <h2>${escape(section.title)}</h2>
-          <p>${escape(section.body)}</p>
-        </section>`).join('')}
+        ${buildGuideComparisonTable(guide)}
+        ${buildGuideExtraSections(guide)}
         ${buildGuideFaqSection(guide)}
         ${buildExplainerBooks(guide)}
         <div class="article-related-group">

@@ -1149,6 +1149,16 @@
       color: var(--text);
     }
     .guide-section li + li { margin-top: 0.55rem; }
+    .guide-source-list {
+      margin-top: 0.85rem !important;
+    }
+    .guide-source-list a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .guide-source-list a:hover {
+      text-decoration: underline;
+    }
     .guide-links {
       display: flex;
       flex-wrap: wrap;
@@ -1167,6 +1177,41 @@
       text-decoration: none;
     }
     .guide-links a:hover { text-decoration: none; background: rgba(37,99,235,0.13); }
+    .guide-compare-wrap {
+      margin-top: 0.9rem;
+      overflow-x: auto;
+      border: 1px solid #e4ecf5;
+      border-radius: 12px;
+    }
+    .guide-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+      background: #fff;
+    }
+    .guide-compare-table th,
+    .guide-compare-table td {
+      padding: 0.9rem 0.95rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e9eff6;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+    .guide-compare-table thead th {
+      background: #f8fbff;
+      color: var(--navy);
+      font-weight: 800;
+    }
+    .guide-compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .guide-compare-table tbody td:first-child {
+      width: 24%;
+      font-weight: 700;
+      color: var(--navy);
+      background: #fcfdff;
+    }
     .guide-books {
       background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
       border: 1px solid #dbe7f4;
@@ -1671,6 +1716,7 @@
           <h2>つまずくポイント</h2>
           <ul><li>ストレージ導入をCDE導入だと考えてしまう</li><li>命名ルールや承認フローが決まっていない</li><li>現場運用に合わず、結局メール共有へ戻ってしまう</li></ul>
         </section>
+        
         <section class="guide-section">
           <h2>なぜ独学では難しいか</h2>
           <p>独学では製品機能は理解できても、自社案件にどう運用設計を落とすかが見えにくいです。CDEはソフト操作ではなく、設計・施工・発注者の実務フローを横断して考える必要があります。</p>
@@ -1680,21 +1726,26 @@
           <p>まずBIMと情報管理の全体像を理解し、その後にCDEが必要になる理由を手戻りや承認の観点で押さえるのが効率的です。製品比較は最後に行い、先に運用ルールを考える方が失敗しにくいです。</p>
         </section>
         
+        
         <section class="guide-section">
           <h2>なぜ必要か</h2>
           <p>建設プロジェクトは、設計、施工、発注者、協力会社で参照情報が分断されやすいのが現実です。CDEがないと、古い図面で施工が進む、承認履歴が追えない、PDFとBIMモデルがずれる、といった問題が起きやすくなります。</p>
+          
         </section>
         <section class="guide-section">
           <h2>BIMとの関係</h2>
           <p>BIMは情報付きモデルを作る考え方で、CDEはそのモデルや関連文書を関係者間で正しく共有・管理する仕組みです。BIMだけ導入しても、CDEが弱いと実務では運用しにくい状態が残ります。</p>
+          
         </section>
         <section class="guide-section">
           <h2>Autodesk Construction Cloudなどとの関係</h2>
           <p>Autodesk Construction Cloudは代表的なCDE系プラットフォームの一つです。ただし、製品を入れるだけではCDEになりません。命名ルール、承認フロー、更新責任、共有権限まで整えて初めてCDEとして機能します。</p>
+          
         </section>
         <section class="guide-section">
           <h2>導入すると何が変わるか</h2>
           <p>設計では最新版管理と変更伝達が安定し、施工では承認済み情報へのアクセスや是正履歴管理がしやすくなります。発注者側でも、承認済み情報や引き渡し情報を整理しやすくなり、プロジェクト全体の透明性が上がります。</p>
+          
         </section>
         
     <section class="guide-section">

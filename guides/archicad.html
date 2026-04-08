@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon" href="https://aec-news.com/favicon.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Archicadとは | AEC News Japan","description":"Archicadの特徴、Revitとの違い、設計実務での使われ方、学び方を整理した基礎解説です。","url":"https://aec-news.com/guides/archicad.html","inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"AEC News Japan","url":"https://aec-news.com/"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://aec-news.com/"},{"@type":"ListItem","position":2,"name":"基礎解説","item":"https://aec-news.com/guides/index.html"},{"@type":"ListItem","position":3,"name":"Archicadとは","item":"https://aec-news.com/guides/archicad.html"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Archicadを一言でいうと？","acceptedAnswer":{"@type":"Answer","text":"ArchicadはGraphisoftが提供するBIMソフトで、建築設計者が直感的に扱いやすいモデリング体験と、openBIMへの親和性を強みとしています。意匠設計を中心に、早い段階からモデルで検討したい組織と相性が良いツールです。"}},{"@type":"Question","name":"Archicadは実務でどう使われる？","acceptedAnswer":{"@type":"Answer","text":"基本設計から実施設計までのモデルベース設計 プレゼン、図面、数量、BIM連携の土台作り IFCを使った他ツール連携やデータ受け渡し"}},{"@type":"Question","name":"Archicadはなぜ独学で難しい？","acceptedAnswer":{"@type":"Answer","text":"独学ではモデリングは進んでも、属性管理や連携設定の意味が見えにくいです。特に組織導入では、個人最適ではなくチームで回る運用を最初から考える必要があります。"}},{"@type":"Question","name":"Archicadを学ぶには？","acceptedAnswer":{"@type":"Answer","text":"まずは設計フローに沿った入門書で全体をつかみ、その後にテンプレート、属性、IFC設定を実務視点で学ぶのが効率的です。Revitとの違いも早めに理解しておくと判断しやすくなります。"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Archicadを一言でいうと？","acceptedAnswer":{"@type":"Answer","text":"ArchicadはGraphisoftが提供するBIMソフトで、建築設計者が直感的に扱いやすい操作性と、形を考えながらモデルを組み立てやすい自由度を強みとしています。加えて、openBIMへの親和性が高く、特定ベンダーに閉じすぎない運用を重視する姿勢でも語られることが多いツールです。Revitのようにシステマチックな統制をかける方向とは少し違い、設計者の思考や試行錯誤を止めにくいBIMソフトとして評価されやすいです。"}},{"@type":"Question","name":"Archicadは実務でどう使われる？","acceptedAnswer":{"@type":"Answer","text":"基本設計から実施設計までのモデルベース設計 プレゼン、図面、数量、BIM連携の土台作り IFCを使った他ツール連携やデータ受け渡し"}},{"@type":"Question","name":"Archicadはなぜ独学で難しい？","acceptedAnswer":{"@type":"Answer","text":"独学ではモデリングは進んでも、属性管理や連携設定の意味が見えにくいです。特に組織導入では、個人最適ではなくチームで回る運用を最初から考える必要があります。"}},{"@type":"Question","name":"Archicadを学ぶには？","acceptedAnswer":{"@type":"Answer","text":"まずは設計フローに沿った入門書で全体をつかみ、その後にテンプレート、属性、IFC設定を実務視点で学ぶのが効率的です。Revitとの違いも早めに理解しておくと判断しやすくなります。"}}]}</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
   <!-- Google Analytics 4 -->
@@ -1149,6 +1149,16 @@
       color: var(--text);
     }
     .guide-section li + li { margin-top: 0.55rem; }
+    .guide-source-list {
+      margin-top: 0.85rem !important;
+    }
+    .guide-source-list a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .guide-source-list a:hover {
+      text-decoration: underline;
+    }
     .guide-links {
       display: flex;
       flex-wrap: wrap;
@@ -1167,6 +1177,41 @@
       text-decoration: none;
     }
     .guide-links a:hover { text-decoration: none; background: rgba(37,99,235,0.13); }
+    .guide-compare-wrap {
+      margin-top: 0.9rem;
+      overflow-x: auto;
+      border: 1px solid #e4ecf5;
+      border-radius: 12px;
+    }
+    .guide-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+      background: #fff;
+    }
+    .guide-compare-table th,
+    .guide-compare-table td {
+      padding: 0.9rem 0.95rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e9eff6;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+    .guide-compare-table thead th {
+      background: #f8fbff;
+      color: var(--navy);
+      font-weight: 800;
+    }
+    .guide-compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .guide-compare-table tbody td:first-child {
+      width: 24%;
+      font-weight: 700;
+      color: var(--navy);
+      background: #fcfdff;
+    }
     .guide-books {
       background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
       border: 1px solid #dbe7f4;
@@ -1623,7 +1668,7 @@
     <div class="article-hero-inner">
       <div class="article-hero-breadcrumb"><a href="../">ホーム</a><span class="article-hero-meta-sep">·</span><span>基礎解説</span></div>
       <h1 class="article-hero-title">Archicadとは</h1>
-      <p class="article-hero-summary">Archicadは建築設計との相性が良いBIMソフトで、初期計画から実施設計まで一貫して使われています。</p>
+      <p class="article-hero-summary">Archicadは、直感的な操作性とモデリングの自由度、openBIMを重く受け止めた思想が強みのBIMソフトです。</p>
       <div class="article-hero-actions">
         <a class="article-hero-btn article-hero-btn--primary" href="../#guides">基礎解説一覧を見る</a>
       </div>
@@ -1634,22 +1679,22 @@
       <main>
         <section class="guide-intro">
           <div class="reference-books-label">概要</div><h2 class="reference-books-title">まず押さえるべき結論</h2>
-          <p class="reference-books-desc">ArchicadはGraphisoftが提供するBIMソフトで、建築設計者が直感的に扱いやすいモデリング体験と、openBIMへの親和性を強みとしています。意匠設計を中心に、早い段階からモデルで検討したい組織と相性が良いツールです。</p>
+          <p class="reference-books-desc">ArchicadはGraphisoftが提供するBIMソフトで、建築設計者が直感的に扱いやすい操作性と、形を考えながらモデルを組み立てやすい自由度を強みとしています。加えて、openBIMへの親和性が高く、特定ベンダーに閉じすぎない運用を重視する姿勢でも語られることが多いツールです。Revitのようにシステマチックな統制をかける方向とは少し違い、設計者の思考や試行錯誤を止めにくいBIMソフトとして評価されやすいです。</p>
         </section>
         
         
         <section class="guide-section">
           <h2>特徴</h2>
-          <ul><li>建築設計者が扱いやすいモデリング操作と表現性</li><li>初期計画から実施設計まで設計思考を止めにくい</li><li>openBIMとの相性が比較的良く、外部連携を考えやすい</li></ul>
+          <ul><li>建築設計者が扱いやすい直感的なモデリング操作と表現性</li><li>初期計画から実施設計まで設計思考を止めにくいモデリングの自由度</li><li>openBIMとの相性が比較的良く、外部連携を考えやすい</li><li>特定のシステムに閉じすぎない運用を考えやすい</li></ul>
         </section>
         <section class="guide-section">
           <h2>他との違い</h2>
-          <ul><li>Revitが多職種統合と標準化に強いのに対し、Archicadは設計者の思考を止めにくい操作感が強みです。</li><li>Archicadは設計初期からモデルを使いやすい一方で、組織標準や施工連携の設計は別途詰める必要があります。</li><li>openBIMを重視する場合は、IFCの扱い方を理解しておくと効果が大きいです。</li></ul>
+          <ul><li>Revitが外れ値を許しにくいシステマチックな構造で標準化しやすいのに対し、Archicadは設計者の思考を止めにくい操作感と自由度が強みです。</li><li>Archicadは設計初期からモデルを使いやすい一方で、組織標準や属性設計を意識しないとチーム運用で個人差が出やすい面があります。</li><li>openBIMを重視する場合は、IFCの扱い方を理解しておくと効果が大きいです。</li></ul>
           <div class="guide-links"><a href="../guides/revit.html">Revitとの違いを整理したい方はこちら</a><a href="../guides/bim.html">BIM全体の考え方を整理したい方はこちら</a><a href="../guides/openbim.html">openBIMについて詳しくはこちら</a></div>
         </section>
         <section class="guide-section">
           <h2>向いている人</h2>
-          <ul><li>意匠設計を中心にBIMを定着させたい設計事務所</li><li>初期計画段階からモデルで検討したいチーム</li><li>ベンダーロックを避けつつ設計を進めたい実務者</li></ul>
+          <ul><li>意匠設計を中心にBIMを定着させたい設計事務所</li><li>初期計画段階からモデルで検討したいチーム</li><li>ベンダーロックを避けつつ設計を進めたい実務者</li><li>直感的な操作性やopenBIMの汎用性を重視する組織</li></ul>
         </section>
         <section class="guide-section">
           <h2>実務での使われ方</h2>
@@ -1663,6 +1708,7 @@
           <h2>つまずくポイント</h2>
           <ul><li>ライブラリと属性の整理で混乱しやすい</li><li>IFC書き出しや他ソフト連携の設定で止まりやすい</li><li>設計者個人の操作に寄りすぎると組織標準化しにくい</li></ul>
         </section>
+        
         <section class="guide-section">
           <h2>なぜ独学では難しいか</h2>
           <p>独学ではモデリングは進んでも、属性管理や連携設定の意味が見えにくいです。特に組織導入では、個人最適ではなくチームで回る運用を最初から考える必要があります。</p>
@@ -1673,12 +1719,26 @@
         </section>
         
         
+        <section class="guide-section">
+          <h2>日本国内の公開調査で見るRevitとArchicadの利用率</h2>
+          <p>日本国内で一般公開されている比較可能な数字は、厳密な販売シェアよりも複数回答の「利用率」調査が中心です。2020年版のBIM活用実態調査レポート（調査期間は2020年2月26日〜3月8日）では、勤務先で利用しているBIMツールとしてRevit 54.2%、Archicad 50.9%でした。ただし業種別に見ると差があり、設計事務所ではArchicad 52.6%、Revit 41.2%、総合建設会社ではRevit 65.0%、Archicad 57.5%です。さらに、2019年9月公開の日事連の建築士事務所調査では、導入予定を含むBIMソフトがArchicad 43.0%、Revit 33.2%でした。このため日本国内では、全体ではほぼ拮抗しつつ、設計事務所ではArchicad寄り、ゼネコンを含む総合建設会社ではRevit寄りと理解するのが妥当です。</p>
+          
+          <ul class="guide-source-list">
+            <li><a href="https://www.autodesk.co.jp/content/dam/autodesk/www/apac/pdf/bim-report-final.pdf" target="_blank" rel="noopener noreferrer">BIM活用実態調査レポート 2020年版（日経BPコンサルティング / 日経BP、Autodesk掲載PDF）</a></li><li><a href="https://www.njr.or.jp/list/01277.html" target="_blank" rel="noopener noreferrer">建築士事務所のBIMとIT活用実態にかかわる調査結果について（日事連、2019年9月）</a></li>
+          </ul>
+        </section>
+        <section class="guide-section">
+          <h2>ArchicadがopenBIMで語られやすい理由</h2>
+          <p>Archicadは、単にIFCを書き出せるというだけでなく、最初からopenBIMを前提にした運用と相性が良いソフトとして語られることが多いです。将来的なツール変更や他社連携も見据えたい組織にとっては、この姿勢そのものが選定理由になりやすいです。</p>
+          
+        </section>
+        
     <section class="guide-section">
       <h2>よくある質問</h2>
       
         <div style="padding:0.85rem 0; border-top:1px solid #e5edf6;">
           <h3 style="font-size:0.98rem; color:var(--navy); margin-bottom:0.4rem;">Archicadを一言でいうと？</h3>
-          <p>ArchicadはGraphisoftが提供するBIMソフトで、建築設計者が直感的に扱いやすいモデリング体験と、openBIMへの親和性を強みとしています。意匠設計を中心に、早い段階からモデルで検討したい組織と相性が良いツールです。</p>
+          <p>ArchicadはGraphisoftが提供するBIMソフトで、建築設計者が直感的に扱いやすい操作性と、形を考えながらモデルを組み立てやすい自由度を強みとしています。加えて、openBIMへの親和性が高く、特定ベンダーに閉じすぎない運用を重視する姿勢でも語られることが多いツールです。Revitのようにシステマチックな統制をかける方向とは少し違い、設計者の思考や試行錯誤を止めにくいBIMソフトとして評価されやすいです。</p>
         </div>
         <div style="padding:0.85rem 0; border-top:1px solid #e5edf6;">
           <h3 style="font-size:0.98rem; color:var(--navy); margin-bottom:0.4rem;">Archicadは実務でどう使われる？</h3>
@@ -1725,7 +1785,7 @@
       </div>
       <div class="guide-card-body">
         <h3 class="guide-card-title"><a href="../guides/revit.html">Revitとは</a></h3>
-        <p class="guide-card-excerpt">Revitの役割、BIMでの位置づけ、Archicadとの違い、学び方を整理した基礎解説です。</p>
+        <p class="guide-card-excerpt">Revitの特徴、できること、実務フロー、Archicadとの違い、学び方を整理した基礎解説です。</p>
         <a class="guide-card-link" href="../guides/revit.html">詳しく読む →</a>
       </div>
     </article>

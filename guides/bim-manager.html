@@ -1149,6 +1149,16 @@
       color: var(--text);
     }
     .guide-section li + li { margin-top: 0.55rem; }
+    .guide-source-list {
+      margin-top: 0.85rem !important;
+    }
+    .guide-source-list a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .guide-source-list a:hover {
+      text-decoration: underline;
+    }
     .guide-links {
       display: flex;
       flex-wrap: wrap;
@@ -1167,6 +1177,41 @@
       text-decoration: none;
     }
     .guide-links a:hover { text-decoration: none; background: rgba(37,99,235,0.13); }
+    .guide-compare-wrap {
+      margin-top: 0.9rem;
+      overflow-x: auto;
+      border: 1px solid #e4ecf5;
+      border-radius: 12px;
+    }
+    .guide-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+      background: #fff;
+    }
+    .guide-compare-table th,
+    .guide-compare-table td {
+      padding: 0.9rem 0.95rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e9eff6;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+    .guide-compare-table thead th {
+      background: #f8fbff;
+      color: var(--navy);
+      font-weight: 800;
+    }
+    .guide-compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .guide-compare-table tbody td:first-child {
+      width: 24%;
+      font-weight: 700;
+      color: var(--navy);
+      background: #fcfdff;
+    }
     .guide-books {
       background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
       border: 1px solid #dbe7f4;
@@ -1671,6 +1716,7 @@
           <h2>つまずくポイント</h2>
           <ul><li>ソフト操作ができれば十分だと考えやすい</li><li>IFCやCDEを後回しにしてしまい、運用設計が弱くなる</li><li>標準化より案件対応を優先し、組織に知見が残らない</li></ul>
         </section>
+        
         <section class="guide-section">
           <h2>なぜ独学では難しいか</h2>
           <p>独学では、RevitやArchicadの操作は学べても、IFC/openBIM、CDE、発注者要件、施工連携まで横断して理解するのが難しいです。BIMマネージャーは操作職ではなく、運用設計職に近いため、知識を体系で学ぶ必要があります。</p>
@@ -1680,17 +1726,21 @@
           <p>まずBIMの基本概念を押さえ、次に主要ツールの違い、IFC/openBIM、CDE、プロジェクト管理の順で学ぶのが効率的です。そのうえで実案件の運用設計に触れると、役割の全体像が見えやすくなります。</p>
         </section>
         
+        
         <section class="guide-section">
           <h2>日本と海外の違い</h2>
           <p>海外ではBIMマネージャーが独立職種として定義され、設計事務所、施工会社、BIMコンサルティング会社で専任化が進んでいます。一方、日本では設計担当やBIM担当の兼務が多く、役割や権限が曖昧になりやすいのが実情です。日本市場では、今後この役割を専任で担える人材の価値が上がりやすいと考えられます。</p>
+          
         </section>
         <section class="guide-section">
           <h2>年収レンジ</h2>
           <p>日本市場では、BIM担当やBIMコーディネーター寄りで500万〜700万円前後、案件横断や標準化まで担うBIMマネージャー層で700万〜1000万円前後、組織戦略やDX推進まで担う上位層では1000万円以上もあり得ます。会社規模や役割範囲で差は大きいですが、ソフト操作だけでなく運用設計まで担える人材は評価されやすいです。</p>
+          
         </section>
         <section class="guide-section">
           <h2>キャリアとしての魅力</h2>
           <p>BIMマネージャーは、設計、施工、DX、情報管理の交点に立てる職種です。現場理解を持ちながら標準化や組織変革に関われるため、将来的にDX推進、技術統括、BIM戦略などへ広がりやすいキャリアです。</p>
+          
         </section>
         
     <section class="guide-section">
@@ -1772,7 +1822,7 @@
       </div>
       <div class="guide-card-body">
         <h3 class="guide-card-title"><a href="../guides/revit.html">Revitとは</a></h3>
-        <p class="guide-card-excerpt">Revitの役割、BIMでの位置づけ、Archicadとの違い、学び方を整理した基礎解説です。</p>
+        <p class="guide-card-excerpt">Revitの特徴、できること、実務フロー、Archicadとの違い、学び方を整理した基礎解説です。</p>
         <a class="guide-card-link" href="../guides/revit.html">詳しく読む →</a>
       </div>
     </article></div>

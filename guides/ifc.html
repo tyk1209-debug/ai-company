@@ -1149,6 +1149,16 @@
       color: var(--text);
     }
     .guide-section li + li { margin-top: 0.55rem; }
+    .guide-source-list {
+      margin-top: 0.85rem !important;
+    }
+    .guide-source-list a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .guide-source-list a:hover {
+      text-decoration: underline;
+    }
     .guide-links {
       display: flex;
       flex-wrap: wrap;
@@ -1167,6 +1177,41 @@
       text-decoration: none;
     }
     .guide-links a:hover { text-decoration: none; background: rgba(37,99,235,0.13); }
+    .guide-compare-wrap {
+      margin-top: 0.9rem;
+      overflow-x: auto;
+      border: 1px solid #e4ecf5;
+      border-radius: 12px;
+    }
+    .guide-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+      background: #fff;
+    }
+    .guide-compare-table th,
+    .guide-compare-table td {
+      padding: 0.9rem 0.95rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e9eff6;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+    .guide-compare-table thead th {
+      background: #f8fbff;
+      color: var(--navy);
+      font-weight: 800;
+    }
+    .guide-compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .guide-compare-table tbody td:first-child {
+      width: 24%;
+      font-weight: 700;
+      color: var(--navy);
+      background: #fcfdff;
+    }
     .guide-books {
       background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
       border: 1px solid #dbe7f4;
@@ -1671,6 +1716,7 @@
           <h2>つまずくポイント</h2>
           <ul><li>IFCを書き出せば終わりだと考えやすい</li><li>受け取り側の使い方を想定せずに出力してしまう</li><li>属性や分類の整理が不足し、再利用しにくいデータになる</li></ul>
         </section>
+        
         <section class="guide-section">
           <h2>なぜ独学では難しいか</h2>
           <p>独学ではIFCの用語は理解できても、どの契約・工程・受け渡し場面で必要になるかが見えにくいです。ソフト操作だけでなく、BIM運用と合わせて理解しないと実務で使える知識になりません。</p>
@@ -1680,17 +1726,21 @@
           <p>まずBIMとopenBIMの全体像を理解し、そのうえでIFCが何を表現する標準なのかを押さえるのが近道です。次にRevitやArchicadでの入出力や要件定義へ進むと、実務に結びつきやすくなります。</p>
         </section>
         
+        
         <section class="guide-section">
           <h2>なぜ重要なのか</h2>
           <p>IFCが重要なのは、BIMデータを特定ベンダーに閉じないためです。設計者はRevit、協力会社はArchicad、施工側は別ツールという状況は珍しくありません。IFCが弱いと、データ受け渡しのたびに再入力や手戻りが発生し、BIMの価値が大きく下がります。</p>
+          
         </section>
         <section class="guide-section">
           <h2>日本で普及が遅れている理由</h2>
           <p>日本では、まず社内導入を優先し、他社連携や納品要件まで設計していないケースが多いです。また、案件ごとに運用が異なり、属性や分類の標準化が弱いため、IFCを出しても実務で再利用しにくい場面が少なくありません。</p>
+          
         </section>
         <section class="guide-section">
           <h2>Revit / Archicadとの関係</h2>
           <p>RevitもArchicadもIFC入出力に対応していますが、自動的にopenBIM運用が成立するわけではありません。重要なのは、どの属性をどの粒度で出すか、受け取り側がどう使うかまで含めて設計することです。</p>
+          
         </section>
         
     <section class="guide-section">

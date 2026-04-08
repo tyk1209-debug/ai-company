@@ -1149,6 +1149,16 @@
       color: var(--text);
     }
     .guide-section li + li { margin-top: 0.55rem; }
+    .guide-source-list {
+      margin-top: 0.85rem !important;
+    }
+    .guide-source-list a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .guide-source-list a:hover {
+      text-decoration: underline;
+    }
     .guide-links {
       display: flex;
       flex-wrap: wrap;
@@ -1167,6 +1177,41 @@
       text-decoration: none;
     }
     .guide-links a:hover { text-decoration: none; background: rgba(37,99,235,0.13); }
+    .guide-compare-wrap {
+      margin-top: 0.9rem;
+      overflow-x: auto;
+      border: 1px solid #e4ecf5;
+      border-radius: 12px;
+    }
+    .guide-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+      background: #fff;
+    }
+    .guide-compare-table th,
+    .guide-compare-table td {
+      padding: 0.9rem 0.95rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e9eff6;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+    .guide-compare-table thead th {
+      background: #f8fbff;
+      color: var(--navy);
+      font-weight: 800;
+    }
+    .guide-compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .guide-compare-table tbody td:first-child {
+      width: 24%;
+      font-weight: 700;
+      color: var(--navy);
+      background: #fcfdff;
+    }
     .guide-books {
       background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
       border: 1px solid #dbe7f4;
@@ -1671,6 +1716,7 @@
           <h2>つまずくポイント</h2>
           <ul><li>AIを入れれば設計や施工が自動化されると期待しすぎる</li><li>BIMデータ整備が不十分なままAI活用を始めてしまう</li><li>何をAIに任せ、何を人が判断するか整理できていない</li></ul>
         </section>
+        
         <section class="guide-section">
           <h2>なぜ独学では難しいか</h2>
           <p>独学だと、AIの一般論は分かってもBIM実務への適用が見えにくく、逆にBIMだけ学んでいてもAIの限界が見えにくいです。BIM基礎とAI基礎をつないで理解する必要があります。</p>
@@ -1680,17 +1726,21 @@
           <p>まずBIMの基本とデータ構造を理解し、その後にAIが得意なことと苦手なことを押さえるのが効率的です。そのうえで、干渉チェック、コスト予測、施工検討など用途別に整理すると実務に落とし込みやすくなります。</p>
         </section>
         
+        
         <section class="guide-section">
           <h2>具体的な活用例</h2>
           <p>現時点で現実的なのは、自動モデリングの補助、干渉チェック結果の整理、概算コストの比較、施工手順案の比較です。設計や施工を完全自動化する段階ではなく、確認と比較を速くする用途が中心です。</p>
+          
         </section>
         <section class="guide-section">
           <h2>海外と日本の差</h2>
           <p>海外の方がBIMデータ標準化やクラウド基盤整備が進んでおり、BIM×AIの実証や製品化も先行しています。日本では、AI導入以前にBIMデータ運用が整っていない会社も多く、まず標準化が必要なケースが少なくありません。</p>
+          
         </section>
         <section class="guide-section">
           <h2>現実的に使えるレベルか</h2>
           <p>部分的には十分使える一方で、全面自動化を期待する段階ではありません。現実的には、干渉確認、比較検討、情報整理、施工案の比較など、補助的な使い方で成果が出やすいです。</p>
+          
         </section>
         
     <section class="guide-section">
@@ -1762,7 +1812,7 @@
       </div>
       <div class="guide-card-body">
         <h3 class="guide-card-title"><a href="../guides/revit.html">Revitとは</a></h3>
-        <p class="guide-card-excerpt">Revitの役割、BIMでの位置づけ、Archicadとの違い、学び方を整理した基礎解説です。</p>
+        <p class="guide-card-excerpt">Revitの特徴、できること、実務フロー、Archicadとの違い、学び方を整理した基礎解説です。</p>
         <a class="guide-card-link" href="../guides/revit.html">詳しく読む →</a>
       </div>
     </article>

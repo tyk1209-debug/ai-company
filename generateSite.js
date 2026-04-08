@@ -707,7 +707,11 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null, options = {
     options.articleSection
       ? `  <meta property="article:section" content="${escape(options.articleSection)}">`
       : '',
+    ...(options.articleTags || []).map((tag) => `  <meta property="article:tag" content="${escape(tag)}">`),
   ].filter(Boolean).join('\n');
+  const keywordContent = Array.isArray(options.keywords)
+    ? options.keywords.filter(Boolean).join(', ')
+    : String(options.keywords || '');
   const truncatedDesc = desc && desc.length > 120 ? desc.substring(0, 119) + '…' : (desc || '');
   return `<!DOCTYPE html>
 <html lang="ja">
@@ -716,6 +720,7 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null, options = {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${escape(title)}</title>
   <meta name="description" content="${escape(metaDesc)}">
+  ${keywordContent ? `<meta name="keywords" content="${escape(keywordContent)}">` : ''}
   <link rel="canonical" href="${escape(canonical)}">
   <meta name="robots" content="${escape(robots)}">
   <meta name="author" content="AEC News Japan 編集部">
@@ -2310,10 +2315,17 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
 
 function organizationJsonLd() {
   return {
+    '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE_NAME,
     url: SITE_URL + '/',
     logo: `${SITE_URL}/assets/logo-mark.png`,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      url: CONTACT_FORM_URL,
+      availableLanguage: ['ja'],
+    },
   };
 }
 
@@ -2358,6 +2370,36 @@ function breadcrumbJsonLd(items) {
       position: index + 1,
       name: item.name,
       item: item.url,
+    })),
+  };
+}
+
+function itemListJsonLd(name, url, items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name,
+    url,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: item.url,
+      name: item.name,
+    })),
+  };
+}
+
+function faqPageJsonLd(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
     })),
   };
 }
@@ -2663,6 +2705,43 @@ function buildExplainerBooks(guide) {
     </section>`;
 }
 
+function buildGuideFaqItems(guide) {
+  const guideSubject = String(guide.title || '').replace(/\s*とは(?:\?|？)?$/, '');
+  const faqs = [
+    {
+      question: `${guideSubject || guide.title}を一言でいうと？`,
+      answer: guide.oneLine || guide.overview,
+    },
+    {
+      question: `${guideSubject || guide.title}は実務でどう使われる？`,
+      answer: Array.isArray(guide.practicalUse) ? guide.practicalUse.join(' ') : '',
+    },
+    {
+      question: `${guideSubject || guide.title}はなぜ独学で難しい？`,
+      answer: guide.selfStudyWhyHard || '',
+    },
+    {
+      question: `${guideSubject || guide.title}を学ぶには？`,
+      answer: guide.learningMethod || '',
+    },
+  ].filter((item) => item.answer && item.answer.trim());
+  return faqs;
+}
+
+function buildGuideFaqSection(guide) {
+  const faqs = buildGuideFaqItems(guide);
+  if (faqs.length === 0) return '';
+  return `
+    <section class="guide-section">
+      <h2>よくある質問</h2>
+      ${faqs.map((item) => `
+        <div style="padding:0.85rem 0; border-top:1px solid #e5edf6;">
+          <h3 style="font-size:0.98rem; color:var(--navy); margin-bottom:0.4rem;">${escape(item.question)}</h3>
+          <p>${escape(item.answer)}</p>
+        </div>`).join('')}
+    </section>`;
+}
+
 function buildExplainerPage(guide, posts) {
   const pageTitle = `${guide.title} | ${SITE_NAME}`;
   const pageDesc = guide.description;
@@ -2673,13 +2752,16 @@ function buildExplainerPage(guide, posts) {
     { name: guide.title, url: canonicalUrl },
   ]);
   const pageLd = webPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const faqItems = buildGuideFaqItems(guide);
+  const faqLd = faqItems.length > 0 ? faqPageJsonLd(faqItems) : null;
   const relatedGuides = guide.guideLinks
     .map((item) => EXPLAINER_GUIDE_MAP[item.slug])
     .filter(Boolean);
 
-  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [pageLd, breadcrumbLd], {
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [pageLd, breadcrumbLd, faqLd], {
     ogType: 'article',
     articleSection: '基礎解説',
+    keywords: [guide.title, guide.category, 'BIM', ...(guide.guideLinks || []).map((item) => item.text)],
   }) +
     htmlHeader('..') +
     `
@@ -2748,6 +2830,7 @@ function buildExplainerPage(guide, posts) {
           <h2>${escape(section.title)}</h2>
           <p>${escape(section.body)}</p>
         </section>`).join('')}
+        ${buildGuideFaqSection(guide)}
         ${buildExplainerBooks(guide)}
         <div class="article-related-group">
           <h2 class="section-title" style="margin-top:0;">あわせて読みたい基礎解説</h2>
@@ -2769,8 +2852,18 @@ function buildGuidesIndexPage(posts) {
     { name: '基礎解説', url: canonicalUrl },
   ]);
   const pageLd = collectionPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const itemListLd = itemListJsonLd(
+    '基礎解説一覧',
+    canonicalUrl,
+    EXPLAINER_GUIDES.map((guide) => ({
+      name: guide.title,
+      url: `${SITE_URL}/guides/${guide.slug}.html`,
+    }))
+  );
 
-  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [pageLd, breadcrumbLd]) +
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [pageLd, breadcrumbLd, itemListLd], {
+    keywords: ['BIM 解説', 'Revit 解説', 'Archicad 解説', 'IFC 解説', 'CDE 解説', 'BIM AI 解説'],
+  }) +
     htmlHeader('..') +
     `
   <div class="cat-hero" style="background: linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(15,42,74,0.88) 100%), url('../assets/blue-ai-digital-cube.jpg') center/cover no-repeat;">
@@ -2911,6 +3004,22 @@ function buildIndex(posts, totalCount = 0) {
     SITE_DESC,
     SITE_URL + '/'
   );
+  const homeNewsItemListLd = itemListJsonLd(
+    `${SITE_NAME} 注目ニュース`,
+    `${SITE_URL}/`,
+    posts.slice(0, 10).map((post) => ({
+      name: post.titleJa || post.title,
+      url: `${SITE_URL}/posts/${post.slug}.html`,
+    }))
+  );
+  const homeGuideItemListLd = itemListJsonLd(
+    `${SITE_NAME} 基礎解説`,
+    `${SITE_URL}/guides/index.html`,
+    topGuides.map((guide) => ({
+      name: guide.title,
+      url: `${SITE_URL}/guides/${guide.slug}.html`,
+    }))
+  );
 
   const categoryNavHtml = `
   <div class="category-nav-wrapper">
@@ -2955,7 +3064,10 @@ function buildIndex(posts, totalCount = 0) {
     SITE_DESC,
     SITE_URL + '/',
     '.',
-    [websiteJsonLd, homePageJsonLd]
+    [websiteJsonLd, homePageJsonLd, homeNewsItemListLd, homeGuideItemListLd],
+    {
+      keywords: ['BIM', 'AEC', '建設DX', 'Revit', 'Archicad', 'IFC', 'openBIM', 'BIM AI'],
+    }
   ) +
     htmlHeader() +
     `
@@ -3350,6 +3462,12 @@ function buildArticlePage(post, allPosts) {
     publisher: organizationJsonLd(),
     mainEntityOfPage: { '@type': 'WebPage', '@id': shareUrl },
   };
+  const articleKeywords = Array.from(new Set([
+    post.titleJa || post.title,
+    catLabel,
+    post.source,
+    ...(post.tags || []),
+  ].filter(Boolean)));
   const articleBreadcrumbJsonLd = breadcrumbJsonLd([
     { name: 'ホーム', url: `${SITE_URL}/` },
     { name: catLabel, url: `${SITE_URL}/categories/${catSlugStr}.html` },
@@ -3367,6 +3485,8 @@ function buildArticlePage(post, allPosts) {
       articlePublishedTime: isoDate,
       articleModifiedTime: isoDate,
       articleSection: catLabel,
+      articleTags: post.tags || [],
+      keywords: articleKeywords,
     }
   ) +
     htmlHeader('..') +
@@ -3601,6 +3721,22 @@ function buildCategoryPage(category, posts) {
   const pageDesc = `BIM・AEC・建設DXに関する${label}カテゴリの最新ニュース一覧です。`;
   const canonicalUrl = `${SITE_URL}/categories/${categorySlug(category)}.html`;
   const categoryJsonLd = collectionPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const itemListLd = itemListJsonLd(
+    `${label} 一覧`,
+    canonicalUrl,
+    catPosts.slice(0, 20).map((post) => ({
+      name: post.titleJa || post.title,
+      url: `${SITE_URL}/posts/${post.slug}.html`,
+    }))
+  );
+  const categoryKeywords = Array.from(new Set([
+    label,
+    `${label} ニュース`,
+    `${label} 解説`,
+    'BIM',
+    'AEC',
+    '建設DX',
+  ]));
   const breadcrumbLd = breadcrumbJsonLd([
     { name: 'ホーム', url: `${SITE_URL}/` },
     { name: label, url: canonicalUrl },
@@ -3615,7 +3751,9 @@ function buildCategoryPage(category, posts) {
   const catGrad2 = THUMB_GRADIENTS[catKey2] || 'linear-gradient(135deg, rgba(30,58,95,0.65) 0%, rgba(37,99,235,0.65) 100%)';
   const catHeroBg = `linear-gradient(135deg, rgba(10,22,40,0.80) 0%, rgba(10,22,40,0.72) 100%), ${catGrad2}, url('${catImg2}') center/cover no-repeat`;
 
-  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [categoryJsonLd, breadcrumbLd]) +
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [categoryJsonLd, breadcrumbLd, itemListLd], {
+    keywords: categoryKeywords,
+  }) +
     htmlHeader('..') +
     `
   <div class="cat-hero" style="background: ${catHeroBg};">

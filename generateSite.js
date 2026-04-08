@@ -309,7 +309,7 @@ const EXPLAINER_GUIDES = [
       {
         audience: '初心者向け',
         title: 'はじめてのAutodesk Revit＆Revit LT [Revit/Revit LT 2026対応]',
-        description: 'Revitの基本操作と考え方を最初に押さえたい人向けです。独学の最初の一冊として使いやすい構成です。',
+        description: 'Revitの基本操作と考え方を最初に押さえたい人向けです。入口で全体像をつかみやすい構成です。',
         url: 'https://amzn.to/3QpB1Ja',
       },
       {
@@ -3120,6 +3120,7 @@ function buildGuideSectionBlock(section, options = {}) {
 }
 
 function buildGuideMainSections(guide) {
+  guide = { ...guide, selfStudyWhyHard: '' };
   if (Array.isArray(guide.contentSections) && guide.contentSections.length > 0) {
     return guide.contentSections.map((section) => buildGuideSectionBlock(section)).join('');
   }
@@ -3142,6 +3143,7 @@ function buildGuideExtraSections(guide) {
 }
 
 function buildGuideFaqItems(guide) {
+  return [];
   const guideSubject = String(guide.title || '').replace(/\s*とは(?:\?|？)?$/, '');
   const faqs = [
     {

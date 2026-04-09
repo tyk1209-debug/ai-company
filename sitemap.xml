@@ -25,13 +25,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/categories/bim-ecosystem.html</loc>
+    <loc>https://aec-news.com/categories/ifc.html</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aec-news.com/categories/archicad.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/categories/bim-ecosystem.html</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -109,6 +115,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aec-news.com/posts/the-buildingsmart-implementers-assembly-february-2026-event-report.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/archicad.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/qonic-introduces-native-drawing-generation.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aec-news.com/posts/arcol-helps-sera-architects-boost-collaboration.html</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -116,12 +140,6 @@
   </url>
   <url>
     <loc>https://aec-news.com/posts/puget-systems-expands-server-portfolio.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/posts/from-data-to-digital-twins-japans-plateau-project-offers-open-access-models-of-m.html</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -140,12 +158,6 @@
   </url>
   <url>
     <loc>https://aec-news.com/posts/autodesk-brings-design-and-make-intelligence-to-the-built-environment-with-forma.html</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/posts/archicad.html</loc>
     <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -150,13 +150,13 @@ function detectCategory(text) {
     return { category: "OTHER", categoryHits: [] };
   }
 
-  // スコアが最も高いカテゴリを採用（同点はCATEGORY_ORDER優先）
+  // CATEGORY_ORDERの優先順位を尊重して採用
+  // 具体的なカテゴリ（REVIT, ARCHICADなど）が汎用カテゴリ（BIM_ECOSYSTEM）より常に優先される
   let best = null;
   for (const cat of CATEGORY_ORDER) {
     if (scores[cat]) {
-      if (!best || scores[cat].count > scores[best].count) {
-        best = cat;
-      }
+      best = cat;
+      break;
     }
   }
 

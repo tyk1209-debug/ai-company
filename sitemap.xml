@@ -25,6 +25,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aec-news.com/categories/bim-ecosystem.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/categories/ai-dx.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aec-news.com/categories/ifc.html</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -37,12 +49,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/categories/bim-ecosystem.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://aec-news.com/categories/revit.html</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -50,12 +56,6 @@
   </url>
   <url>
     <loc>https://aec-news.com/categories/bim-ai.html</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/categories/ai-dx.html</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -115,6 +115,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aec-news.com/posts/intel-moves-to-build-pro-graphics-trust.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/autodesk-launches-product-help-mcp-server-to-bring-trusted-documentation-to-ai-a.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aec-news.com/posts/the-buildingsmart-implementers-assembly-february-2026-event-report.html</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -169,12 +181,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/ai.html</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://aec-news.com/posts/revit-worksharing-basics.html</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -195,12 +201,6 @@
   <url>
     <loc>https://aec-news.com/posts/revit-schedules-basics.html</loc>
     <lastmod>2026-04-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/posts/autodesk-flow-studio-launches-wonder-3d-gen-ai-model-to-help-creators-make-3d-ch.html</loc>
-    <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -91,6 +91,30 @@ const RECOMMENDED_BOOKS = {
       url: 'https://amzn.to/3PQRhD2',
     },
   ],
+  ARCHICAD: [
+    {
+      title: 'Archicad28ではじめるBIM設計入門[基本・実施設計編]',
+      description: 'ArchicadでBIM設計を始めたい方向けの入門書です。基本設計から実施設計までの流れを体系的に学べます。',
+      url: 'https://amzn.to/4tCIdjL',
+    },
+    {
+      title: 'ファシリティマネジメントのためのBIM要件定義',
+      description: 'Archicadで蓄積したBIMデータを維持管理・FM段階へつなげたい方向けの実務書です。openBIMとの連携も含めて整理できます。',
+      url: 'https://amzn.to/4cg9ZLX',
+    },
+  ],
+  BIM_AI: [
+    {
+      title: 'ゼネコン5.0: SDGs、DX時代の建設業の経営戦略',
+      description: '建設業へのAI・DX導入と事業変革を経営と現場の両面から読み解きたい方向けの書籍です。',
+      url: 'https://amzn.to/4tAYxl5',
+    },
+    {
+      title: 'Core i7 13700F / RTX4070 / メモリ32GB / SSD 1TB デスクトップPC',
+      description: 'BIM処理や軽めのAI検証まで視野に入れた実務向け構成です。ローカルでAIを動かしたい読者にも対応できます。',
+      url: 'https://amzn.to/4cfUpjf',
+    },
+  ],
 };
 
 const MANUAL_POSTS = [
@@ -153,6 +177,69 @@ const MANUAL_POSTS = [
     freshnessScore: 0,
     relevant: true,
     bodyJa: '【背景】\nRevitの価値は3D表示だけではなく、モデルに入れた属性や数量を図面・集計へつなげられる点にあります。にもかかわらず、導入初期は3Dモデルの作成だけで止まり、数量や仕様の整理は結局Excelへ戻ってしまうことが少なくありません。\n\n【内容】\nRevitの集計表は、モデル内の要素情報を一覧化し、数量確認、仕様確認、シート管理、注記管理などに使えるビューです。壁、建具、部屋、設備機器、仕上げ、材料など、カテゴリごとに必要な項目を抜き出し、並べ替え、集計し、条件で絞り込めます。単なる表ではなく、モデルと連動するため、属性を直せば集計も変わり、集計から要素確認へ戻ることもできます。\n\n【技術的ポイント】\n実務で重要なのは、どのパラメータを入れておくと後で集計に使えるか、という設計です。共有パラメータやカテゴリ設定が曖昧だと、集計表は作れても運用に乗りません。Revitは外れ値を減らすように属性を揃えていくほど、集計表の価値が大きくなります。これは自由なモデリングよりも、ルール化された情報管理に強いRevitの性格がよく表れる部分です。\n\n【業界への影響】\n集計表を使いこなせると、Revitは単なるモデリングソフトではなく、数量・仕様・図面整合を一つのモデルで回す基盤に近づきます。設計変更の影響確認、社内レビュー、協力会社との受け渡しでも情報のズレを減らしやすくなり、Revit導入の効果が見えやすくなります。ファミリ理解と並んで、Revitを実務へ定着させるための重要テーマです。',
+    xPostBody: '',
+    japaneseSummary: '',
+    postText: '',
+  },
+  {
+    slug: 'nemetschek-group-reports-record-revenue-above-1-billion-euro-in-fiscal-year-2025',
+    title: 'Nemetschek Group reports record revenue above 1 billion euro in fiscal year 2025',
+    titleJa: 'Nemetschekグループ、2025年度に初の10億ユーロ超え — サブスク売上51%増で成長加速',
+    link: 'https://www.nemetschek.com/en/news-media/successful-fiscal-year-2025',
+    source: 'Nemetschek Newsroom',
+    pubDate: '2026-03-19T00:00:00.000Z',
+    fetchedAt: '2026-04-10T00:00:00.000Z',
+    summary: 'Nemetschekグループが2025年度通期決算を発表。売上高は19.7%増の11億9,120万ユーロと初めて10億ユーロを超え、サブスクリプション・SaaS売上は51.2%増。13年連続で配当を増額する。',
+    category: 'BIM_ECOSYSTEM',
+    categoryHits: ['bim', 'aec'],
+    allCategories: ['BIM_ECOSYSTEM'],
+    keywordHits: ['nemetschek', 'bim', 'saas', 'subscription'],
+    score: 9,
+    freshnessScore: 0,
+    relevant: true,
+    bodyJa: '【背景】\nNemetschekグループは、Graphisoft（Archicad）、Vectorworks、Allplan、Bluebeam、Solibriなど建設・設計業界を代表する複数のBIMソフトウェアブランドを傘下に持つドイツの上場企業です。同グループの業績はBIM・AECソフトウェア市場全体の動向を映す指標として、業界関係者に広く注目されています。\n\n【内容】\n2025年度通期（1〜12月）決算において、Nemetschekグループは売上高11億9,120万ユーロ（前年比+19.7%、通貨調整後+22.6%）を達成し、グループ史上初めて10億ユーロの大台を突破した。なかでもサブスクリプション・SaaS売上は8億5,870万ユーロ（+51.2%）と急増し、売上全体に占める比率が大きく高まった。EBITDAは3億7,110万ユーロ（+23.3%）、利益率は前年の30.2%から31.2%に改善。営業キャッシュフローも4億290万ユーロ（+31.3%）と強含んだ。配当は1株あたり0.68ユーロ（+24%）と提案され、13年連続の増配となる。2026年は通貨調整後で14〜15%の売上成長と、EBITDA利益率32〜33%を目標に掲げている。\n\n【なぜ重要か】\nBIMソフトウェア業界の主要プレーヤーが安定した高成長を示したことは、AEC分野のデジタル化需要が世界的に継続していることを裏付けている。特にサブスク・SaaS転換が50%超という数字は、従来の永続ライセンス型からクラウド課金型へのビジネスモデルシフトが業界標準になりつつあることを意味する。ベンダー選定や予算計画に直結する情報として実務担当者は把握しておく必要がある。\n\n【日本への影響】\nGraphisoft JapanやVectorworks日本法人を通じた日本市場への投資継続が見込まれる。サブスク移行が進む中、国内ユーザーは永続ライセンスから年間サブスクへの切り替え判断を迫られる可能性がある。また、同社が注力するAIアシスタント機能（Archicad AI、Vectorworks AI Visualizerなど）が今後のアップデートで日本語対応に向けて強化されることが期待される。',
+    xPostBody: '',
+    japaneseSummary: '',
+    postText: '',
+  },
+  {
+    slug: 'maxon-enters-aec-market-with-redshift-for-vectorworks-and-revit-beta',
+    title: 'Maxon enters AEC market with Redshift for Vectorworks and Revit beta',
+    titleJa: 'MaxonがAEC市場に本格参入 — VectorworksとRevit向けリアルタイムレンダリング「Redshift」提供開始',
+    link: 'https://www.nemetschek.com/en/news-media/maxon-marks-its-official-entry-aec-market-its-real-time-archviz-solution',
+    source: 'Nemetschek Newsroom',
+    pubDate: '2026-03-17T00:00:00.000Z',
+    fetchedAt: '2026-04-10T00:00:00.000Z',
+    summary: 'Nemetschek傘下のMaxonが「Redshift for Vectorworks」商用版と「Redshift for Autodesk Revit」ベータ版をリリース。BIMツール内でリアルタイム建築ビジュアライゼーションが可能になる。',
+    category: 'BIM_ECOSYSTEM',
+    categoryHits: ['bim', 'aec', 'revit'],
+    allCategories: ['BIM_ECOSYSTEM'],
+    keywordHits: ['maxon', 'redshift', 'vectorworks', 'revit', 'rendering'],
+    score: 8,
+    freshnessScore: 0,
+    relevant: true,
+    bodyJa: '【背景】\n建築ビジュアライゼーション市場では、設計者がBIMモデルから高品質なレンダリングを素早く生成したいというニーズが高まっています。従来はRevitやVectorworksからデータをエクスポートして別ソフトでレンダリングする工程が必要でしたが、その手間と時間がボトルネックになっていました。映像・VFX分野で実績を持つMaxon（Cinema 4D・Redshiftの開発元）のNemetschekグループ内での展開が注目されていました。\n\n【内容】\nNemetschekグループ傘下のMaxonは、「Redshift for Vectorworks」の商用版リリースと「Redshift for Autodesk Revit」のベータ版公開を発表し、AEC市場への本格参入を宣言した。Redshiftはリアルタイムレンダリングエンジンで、BIMモデルから映画品質のビジュアライゼーションを短時間で生成できる。「Capsules」と呼ぶアセットライブラリを月次更新で提供し、建築向けのマテリアルや照明設定を追加し続ける。Mac/Windows両対応で、Maya・HoudiniなどのDCCパイプラインとも接続できる設計になっている。2026年から2027年にかけてさらなるBIMツール統合が予定されている。\n\n【なぜ重要か】\n映像制作分野でトップクラスのレンダラーがVectorworks・Revitに直接統合されることで、設計者がプレゼン品質のビジュアルを設計ツール内で完結して作れる環境が整う。これは「設計ソフト＋別ツールでレンダリング」という従来の分断ワークフローを解消し、提案・監理・竣工記録の品質を底上げする可能性を持つ。\n\n【日本への影響】\nVectorworksはNemetschek Japanを通じて国内設計事務所に多数導入されており、Redshiftの統合はすぐに使える実務ツールとして国内ユーザーに恩恵をもたらす。RevitユーザーにとってもRedshift for Revitのベータ版は選択肢が広がる機会となる。価格面では既存レンダリングツールより手頃な設定を打ち出しており、コスト意識の高い中小設計事務所にも導入しやすい水準になる見込みだ。',
+    xPostBody: '',
+    japaneseSummary: '',
+    postText: '',
+  },
+  {
+    slug: 'nemetschek-group-at-digitalbau-2026-ai-software-solutions-and-connected-workflow',
+    title: 'Nemetschek Group at digitalBAU 2026: AI software solutions and connected workflows',
+    titleJa: 'NemetschekグループがdigitalBAU 2026を総力展示 — エージェントAIと全ブランド統合ワークフロー披露',
+    link: 'https://www.nemetschek.com/en/news-media/digitalbau-2026',
+    source: 'Nemetschek Newsroom',
+    pubDate: '2026-03-12T00:00:00.000Z',
+    fetchedAt: '2026-04-10T00:00:00.000Z',
+    summary: '2026年3月24〜26日にケルンで開催されたdigitalBAU 2026にNemetschekグループが出展。ALLPLAN、Graphisoft、Vectorworks、Bluebeamなど全ブランドのAI機能と統合ワークフローを展示。',
+    category: 'BIM_ECOSYSTEM',
+    categoryHits: ['bim', 'aec', 'ai'],
+    allCategories: ['BIM_ECOSYSTEM'],
+    keywordHits: ['nemetschek', 'digitalbau', 'bim', 'ai', 'allplan', 'graphisoft'],
+    score: 7,
+    freshnessScore: 0,
+    relevant: true,
+    bodyJa: '【背景】\ndigitalBAUはドイツ・ケルンで隔年開催される建設デジタル化専門の国際見本市で、BIM・建設テック企業が最新製品・戦略を発表する主要プラットフォームです。2026年はAIとBIMの統合が業界の最大テーマとなっており、各社の展示内容が今後のロードマップを占う場として注目されていました。\n\n【内容】\nNemetschekグループは2026年3月24〜26日のdigitalBAU 2026（ケルン、ブース8.402）に全ブランドを結集させた。CEOのイヴ・パドリーヌ氏は「AIは建設・不動産業界の根本的変革を意味する」と述べ、同社が注力する3領域として「エージェントベースのAIシステム」「インテリジェント自動化」「製品固有のAI機能」を挙げた。主要展示内容はALLPLANの「AI Visualizer V2」と「AI Coder」、Bluebeam Maxの自動チェック・知的図面比較、GraphisoftのDesign Intelligence戦略とProject Aurora（次世代Archicad）、VectorworksのAIアシスタント・AI Visualizer、dRofus/dTwinのデータ連携、Solibriの品質管理AIなど。設計から施工、ビル管理までのフルライフサイクルにAIを適用する戦略を示した。\n\n【なぜ重要か】\n複数のBIMブランドを横断したAI統合戦略を公の場で示したことは、「各ツールがバラバラに動く」時代から「ブランド間でデータと知識が連携するAI基盤」に移行する姿勢を明確にしたものだ。エージェントベースのAIに言及したことは、将来的に「指示すれば設計・チェック・修正が自動化される」方向性への投資を示唆する。\n\n【日本への影響】\nArchicad（Graphisoft）やVectorworksは日本市場での導入が進んでおり、今回発表されたAI機能が日本語で利用できるようになるかが焦点となる。Project Aurora（次世代Archicad）はGraphisoft Japanを通じて国内ユーザーへの展開が見込まれる。BIMマネージャーやAEC企業のDX担当者は、今回の展示内容を自社ツール選定の参考情報として押さえておくべきだ。',
     xPostBody: '',
     japaneseSummary: '',
     postText: '',
@@ -3280,7 +3367,7 @@ function buildGuidesIndexPage(posts) {
         </div>
         ${buildGuideGrid(EXPLAINER_GUIDES, '..', '基礎解説')}
       </main>
-      ${buildSidebar(posts, '..')}
+      ${buildSidebar(posts, '..', buildRecommendedBooks('BIM_ECOSYSTEM'))}
     </div>
   </div>` +
     htmlFooter('..', EXPLAINER_GUIDES.length);
@@ -3898,7 +3985,7 @@ function buildArticlePage(post, allPosts) {
               <div class="reference-book-name">${escape(a.title)}</div>
               <div class="reference-book-copy">${escape(a.description || '関連テーマをさらに理解したい読者向けの参考書籍です。')}</div>
             </div>
-            <a href="${escape(a.url)}" target="_blank" rel="noopener sponsored" class="reference-book-link">Amazonで見る</a>
+            <a href="${escape(a.url)}" target="_blank" rel="noopener sponsored" class="reference-book-link" onclick="typeof gtag==='function'&&gtag('event','affiliate_click',{item_id:'${escape(a.id||a.title.slice(0,30))}',item_name:'${escape(a.title.slice(0,50))}',page_type:'post',page_slug:'${escape(post.slug)}'})">Amazonで見る</a>
           </div>
         `).join('')}
       </div>

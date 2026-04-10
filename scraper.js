@@ -158,6 +158,64 @@ async function scrapeMlit() {
 }
 
 // ─────────────────────────────────────────────────────────────
+// Nemetschek ニュースルーム
+// ─────────────────────────────────────────────────────────────
+
+const NEMETSCHEK_NEWSROOM_URL = "https://www.nemetschek.com/en/news-media/newsroom";
+const NEMETSCHEK_BASE = "https://www.nemetschek.com";
+
+/**
+ * Nemetschek ニュースルームから最新記事を取得する。
+ * @returns {Promise<Array>}
+ */
+async function scrapeNemetschekNewsroom() {
+  const articles = [];
+
+  try {
+    const html = await fetchHtml(NEMETSCHEK_NEWSROOM_URL);
+
+    // 記事リンクを抽出 (/en/news-media/ で始まるリンク)
+    const linkPattern = /href=["'](\/en\/news-media\/[^"'?#]+)["']/gi;
+    const seen = new Set();
+    let m;
+
+    while ((m = linkPattern.exec(html)) !== null) {
+      const relPath = m[1];
+      // newsroom 一覧ページ自体や汎用パスは除外
+      if (relPath === "/en/news-media/newsroom" || relPath === "/en/news-media") continue;
+      if (seen.has(relPath)) continue;
+      seen.add(relPath);
+
+      const link = NEMETSCHEK_BASE + relPath;
+
+      // スラッグからタイトル候補を生成
+      const slug = relPath.split("/").pop();
+      const titleGuess = slug
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, (c) => c.toUpperCase());
+
+      // 日付抽出: YYYY-MM-DD または月名パターン
+      const datePattern = /(\d{4}[-/]\d{2}[-/]\d{2})|(\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4})/i;
+      const dateMatch = html.slice(Math.max(0, html.indexOf(relPath) - 500), html.indexOf(relPath) + 500).match(datePattern);
+      const pubDate = dateMatch ? new Date(dateMatch[0].replace(/[-/]/g, "-")).toISOString() : new Date().toISOString();
+
+      articles.push({
+        title: `[Nemetschek] ${titleGuess}`,
+        link,
+        pubDate,
+        summary: titleGuess,
+        source: "Nemetschek Newsroom",
+        category: "BIM_ECOSYSTEM",
+      });
+    }
+  } catch (err) {
+    console.error(`[scraper] Nemetschek newsroom 取得エラー: ${err.message}`);
+  }
+
+  return articles.slice(0, 10); // 最大10件
+}
+
+// ─────────────────────────────────────────────────────────────
 // メインエクスポート
 // ─────────────────────────────────────────────────────────────
 
@@ -168,6 +226,7 @@ async function scrapeMlit() {
 async function scrapeJapaneseSources() {
   const results = await Promise.all([
     scrapeMlit(),
+    scrapeNemetschekNewsroom(),
   ]);
 
   return results.flat();

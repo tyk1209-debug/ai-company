@@ -201,7 +201,47 @@ async function main() {
     blocked.forEach((a) => console.log(`  - ${(a.title || "").slice(0, 60)}`));
   }
 
-  const posts = applyAffiliateLinks(generatePosts(passed));
+  const freshPosts = applyAffiliateLinks(generatePosts(passed));
+
+  // Merge with existing posts.json to preserve articles that aged out of RSS feeds
+  const existingPostsPath = path.join(DATA_DIR, "posts.json");
+  let existingPosts = [];
+  if (fs.existsSync(existingPostsPath)) {
+    try {
+      existingPosts = JSON.parse(fs.readFileSync(existingPostsPath, "utf8"));
+    } catch { /* ignore parse errors */ }
+  }
+
+  // Build a lookup of existing posts by link for quick access
+  const existingByLink = new Map(
+    existingPosts.map((p) => [(p.link || "").trim().toLowerCase(), p])
+  );
+
+  // For fresh posts missing titleJa/bodyJa, inherit from the existing version if available.
+  // This prevents re-fetched RSS articles from losing their previously generated translations.
+  const enrichedFresh = freshPosts.map((p) => {
+    const key = (p.link || "").trim().toLowerCase();
+    const existing = existingByLink.get(key);
+    if (!existing) return p;
+    return {
+      ...p,
+      titleJa: p.titleJa && p.titleJa.trim() ? p.titleJa : (existing.titleJa || ""),
+      bodyJa:  p.bodyJa  && p.bodyJa.trim()  ? p.bodyJa  : (existing.bodyJa  || ""),
+    };
+  });
+
+  const freshLinks = new Set(enrichedFresh.map((p) => (p.link || "").trim().toLowerCase()));
+
+  // Keep existing posts that are not already covered by fresh data and are within 180 days
+  const preserved = existingPosts.filter((p) => {
+    if (freshLinks.has((p.link || "").trim().toLowerCase())) return false;
+    if (!p.pubDate) return true;
+    const ageDays = (Date.now() - new Date(p.pubDate).getTime()) / (1000 * 60 * 60 * 24);
+    return ageDays <= 180;
+  });
+
+  // Merge: fresh posts first (newest), then preserved historical ones
+  const posts = [...enrichedFresh, ...preserved];
   saveJson("posts.json", posts);
 
   const postResult = await maybeAutoPost(posts);

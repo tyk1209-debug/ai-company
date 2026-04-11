@@ -48,7 +48,25 @@ function mergeWithExistingPosts(freshPosts, existingPostsPath) {
     } catch { /* ignore parse errors */ }
   }
 
-  const freshLinks = new Set(freshPosts.map((p) => (p.link || "").trim().toLowerCase()));
+  // Build a lookup of existing posts by link for quick access
+  const existingByLink = new Map(
+    existingPosts.map((p) => [(p.link || "").trim().toLowerCase(), p])
+  );
+
+  // For fresh posts missing titleJa/bodyJa, inherit from the existing version if available.
+  // This prevents re-fetched RSS articles from losing their previously generated translations.
+  const enrichedFresh = freshPosts.map((p) => {
+    const key = (p.link || "").trim().toLowerCase();
+    const existing = existingByLink.get(key);
+    if (!existing) return p;
+    return {
+      ...p,
+      titleJa: p.titleJa && p.titleJa.trim() ? p.titleJa : (existing.titleJa || ""),
+      bodyJa:  p.bodyJa  && p.bodyJa.trim()  ? p.bodyJa  : (existing.bodyJa  || ""),
+    };
+  });
+
+  const freshLinks = new Set(enrichedFresh.map((p) => (p.link || "").trim().toLowerCase()));
 
   const preserved = existingPosts.filter((p) => {
     if (freshLinks.has((p.link || "").trim().toLowerCase())) return false;
@@ -57,7 +75,7 @@ function mergeWithExistingPosts(freshPosts, existingPostsPath) {
     return ageDays <= 180;
   });
 
-  return [...freshPosts, ...preserved];
+  return [...enrichedFresh, ...preserved];
 }
 
 function ensureDataDir() {

@@ -193,12 +193,13 @@ const SITE_AFFILIATE_LINKS = [
   {
     id: 'neuro-dive',
     family: 'career-ai',
+    type: 'career-service',
     category: 'AI_DX',
     title: 'AIやデータサイエンスが学べるIT特化の就労移行支援【Neuro Dive】',
     description: 'AI・データサイエンス領域へのキャリアチェンジを支援する就労移行支援サービスです。IT分野に特化したカリキュラムで、BIM・建設DX人材としてのスキルアップも視野に入れられます。',
     url: 'https://px.a8.net/svt/ejp?a8mat=4B1ILM+CVSP0Y+47GS+HVFKY',
     pixel: 'https://www12.a8.net/0.gif?a8mat=4B1ILM+CVSP0Y+47GS+HVFKY',
-    linkText: '詳細を見る',
+    linkText: '無料で詳細を見る',
     rel: 'nofollow noopener',
     keywords: ['AI', 'データサイエンス', 'キャリア', '就労', 'DX', '転職', 'スキルアップ', '建設DX', 'IT'],
     signals: ['ai', 'career', 'dx'],
@@ -369,4 +370,25 @@ function getAffiliateLinks(post) {
   return getFallbackLinks(context.category).slice(0, 2);
 }
 
-module.exports = { getAffiliateLink, appendAffiliateLink, applyAffiliateLinks, getAffiliateLinks };
+/**
+ * Returns career-service affiliates when the article has AI/DX/career signals.
+ * This is intentionally independent of POST_AFFILIATE_OVERRIDES so that the
+ * career banner always appears on relevant articles regardless of product overrides.
+ */
+function getCareerAffiliates(post) {
+  const text = normalizeText(
+    `${post.title || ''} ${post.titleJa || ''} ${post.category || ''} ${post.postText || ''} ${post.bodyJa || ''} ${post.summary || ''}`
+  );
+  const category = String(post.category || '').toUpperCase();
+
+  const hasCareerSignal =
+    category === 'AI_DX' ||
+    category === 'BIM_AI' ||
+    hasAny(text, ['ai', 'dx', '人工知能', 'エージェント', 'agent', '建設dx', 'データサイエンス', 'キャリア', '就労', 'スキルアップ']);
+
+  if (!hasCareerSignal) return [];
+
+  return SITE_AFFILIATE_LINKS.filter((a) => a.type === 'career-service');
+}
+
+module.exports = { getAffiliateLink, appendAffiliateLink, applyAffiliateLinks, getAffiliateLinks, getCareerAffiliates };

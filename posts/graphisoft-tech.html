@@ -1280,6 +1280,60 @@
     .article-related-card .card-thumb { height: 110px; }
     .article-related-card .card-body { padding: 1rem 1.1rem 1.05rem; }
 
+    /* ---- career service banner ---- */
+    .career-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.6rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .career-banner-body { flex: 1; min-width: 0; }
+    .career-banner-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+    .career-banner-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 0.4rem;
+      line-height: 1.5;
+    }
+    .career-banner-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .career-banner-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #3b82f6;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    .career-banner-cta:hover { background: #2563eb; text-decoration: none; color: #fff; }
+    @media (max-width: 640px) {
+      .career-banner { flex-direction: column; align-items: flex-start; }
+      .career-banner-cta { width: 100%; justify-content: center; }
+    }
+
     .reference-books {
       background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
       border: 1px solid #dbe7f4;
@@ -1725,6 +1779,18 @@
         <a class="cta-block-btn" href="../guides/index.html">基礎解説を一覧で見る</a>
       </div>
     </section>
+        
+    <div class="career-banner">
+      <div class="career-banner-body">
+        <div class="career-banner-label">PR・キャリア支援（広告）</div>
+        <p class="career-banner-title">AIやデータサイエンスが学べるIT特化の就労移行支援【Neuro Dive】</p>
+        <p class="career-banner-desc">AI・データサイエンス領域へのキャリアチェンジを支援する就労移行支援サービスです。IT分野に特化したカリキュラムで、BIM・建設DX人材としてのスキルアップも視野に入れられます。</p>
+      </div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ILM+CVSP0Y+47GS+HVFKY" target="_blank" rel="nofollow noopener" class="career-banner-cta" onclick="typeof gtag==='function'&&gtag('event','affiliate_click',{item_id:'neuro-dive',item_name:'AIやデータサイエンスが学べるIT特化の就労移行支援【Neuro Dive】',page_type:'post',page_slug:'graphisoft-tech'})">
+        無料で詳細を見る →
+      </a>
+      <img src="https://www12.a8.net/0.gif?a8mat=4B1ILM+CVSP0Y+47GS+HVFKY" width="1" height="1" style="display:none" alt="">
+    </div>
         
     <section class="reference-books">
       <div class="reference-books-label">関連アイテム（広告）</div>

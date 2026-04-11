@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { getAffiliateLinks } = require('./affiliateLinks.js');
 const { createSidebarTools } = require('./sidebar.js');
+const { MANUAL_POSTS } = require('./manualPosts.js');
 
 const SITE_NAME = 'AEC News Japan';
 const SITE_DESC = 'BIM・AEC・建設DXの最新ニュースをAIが日本語で解説';
@@ -117,134 +118,7 @@ const RECOMMENDED_BOOKS = {
   ],
 };
 
-const MANUAL_POSTS = [
-  {
-    slug: 'revit-worksharing-basics',
-    title: 'Revit worksharing basics',
-    titleJa: 'Revitのワークシェアとは｜中央モデル・ローカル・同期の基本',
-    link: 'https://help.autodesk.com/view/RVT/2026/ENU/?guid=GUID-0FC44807-DF06-4516-905A-4100281AC486',
-    source: 'Autodesk Help',
-    pubDate: '2026-04-06T09:00:00.000Z',
-    summary: 'About Worksharing for Revit projects.',
-    fetchedAt: '2026-04-08T00:00:00.000Z',
-    category: 'REVIT',
-    categoryHits: ['revit'],
-    allCategories: ['REVIT'],
-    keywordHits: ['revit', 'bim', 'worksharing'],
-    score: 8,
-    freshnessScore: 0,
-    relevant: true,
-    bodyJa: '【背景】\nRevitは個人で3Dモデルを作るだけのソフトではなく、複数人で同じ建物情報を扱う前提で強みが出やすいBIMツールです。特に、外れ値を許しにくいシステマチックな構造を実務で生かすには、誰がどの領域を触り、どう同期するかを整理した運用が欠かせません。\n\n【内容】\nRevitのワークシェアは、複数メンバーが同じプロジェクトモデルに並行して関わるための仕組みです。中心になるのは中央モデルで、各担当者はそのコピーをローカルで開き、作業内容を同期しながら進めます。実務では、意匠、構造、設備、作図、管理などを分担する際の前提になる考え方で、単なるファイル共有よりも責任範囲を整理しやすいのが特徴です。\n\n【技術的ポイント】\nワークシェアを理解するうえで重要なのは、中央モデル、ローカル作業、同期、ワークセットの関係です。Revitはモデル全体を自由に触る方向よりも、役割分担と更新手順をそろえる方向で安定しやすく、標準化されたテンプレートや命名ルールと相性が良いです。クラウド環境ではAutodesk Docsと組み合わせた Revit Cloud Worksharing も使えますが、どの方式でも「誰がどこを責任持って編集するか」を決めることが先に来ます。\n\n【業界への影響】\nRevit導入が進んでも、ワークシェアの考え方が弱いと、モデルが重い、誰が直したか分からない、同期が怖いという状態になりやすいです。逆にワークシェアを理解すると、Revitは個人技の3D作図ソフトではなく、組織で情報を揃える基盤として機能しやすくなります。これはRevitの強みであるシステマチックな運用を実務へ落とす最初の一歩です。',
-    xPostBody: '',
-    japaneseSummary: '',
-    postText: '',
-  },
-  {
-    slug: 'revit-view-templates-basics',
-    title: 'Revit view templates basics',
-    titleJa: 'Revitのビューテンプレートとは｜図面品質を揃える標準化の入口',
-    link: 'https://help.autodesk.com/cloudhelp/2026/ENU/Revit-HaveYouTried/files/GUID-DD1AF833-EAA0-4C91-8CF3-EA8BB8B5C3D5.htm',
-    source: 'Autodesk Help',
-    pubDate: '2026-04-05T09:00:00.000Z',
-    summary: 'View Templates in Revit.',
-    fetchedAt: '2026-04-08T00:00:00.000Z',
-    category: 'REVIT',
-    categoryHits: ['revit'],
-    allCategories: ['REVIT'],
-    keywordHits: ['revit', 'view template', 'bim'],
-    score: 8,
-    freshnessScore: 0,
-    relevant: true,
-    bodyJa: '【背景】\nRevitを導入した直後のチームで起こりやすいのが、同じ建物を扱っているのに人ごとに図面の見え方が違う、という問題です。Revitは自由に見た目を調整できる一方で、実務ではその自由度を放置すると図面品質のばらつきが大きくなります。\n\n【内容】\nビューテンプレートは、表示設定や縮尺、詳細レベル、表示/非表示、グラフィック設定などをまとめて管理するための仕組みです。個々のビューをその都度調整する代わりに、テンプレートを通して同じルールを適用できるため、平面図、天井伏図、詳細図、申請図、社内検討図の見え方を揃えやすくなります。Revitらしい標準化の入り口として、非常に効果の大きい機能です。\n\n【技術的ポイント】\nビューテンプレートには、既存ビューから作る方法と、管理画面から新規作成する方法があります。重要なのは、単に見た目を固定することではなく、どのビュー種別にどのテンプレートを紐づけるかを決めることです。Revitは外れ値を許しにくい構造のソフトなので、テンプレートを使って図面表現の揺れを減らすほど、ビュー管理やレビューが安定します。\n\n【業界への影響】\nビューテンプレートが整うと、属人的だった図面表現が組織の標準へ近づきます。教育コストも下がり、新人や外部協力者が参加しても品質を合わせやすくなるため、Revit運用の再現性が上がります。これはRevitの強みであるシステマチックな運用を、最も分かりやすく体感できるテーマの一つです。',
-    xPostBody: '',
-    japaneseSummary: '',
-    postText: '',
-  },
-  {
-    slug: 'revit-schedules-basics',
-    title: 'Revit schedules basics',
-    titleJa: 'Revitの集計表とは｜数量・属性・図面連動を生かす基本',
-    link: 'https://help.autodesk.com/cloudhelp/2026/ENU/Revit-DocumentPresent/files/GUID-F50D6FF4-859E-43A2-A2F6-81C84A1BA0EB.htm',
-    source: 'Autodesk Help',
-    pubDate: '2026-04-04T09:00:00.000Z',
-    summary: 'Schedules in Revit.',
-    fetchedAt: '2026-04-08T00:00:00.000Z',
-    category: 'REVIT',
-    categoryHits: ['revit'],
-    allCategories: ['REVIT'],
-    keywordHits: ['revit', 'schedule', 'quantity'],
-    score: 8,
-    freshnessScore: 0,
-    relevant: true,
-    bodyJa: '【背景】\nRevitの価値は3D表示だけではなく、モデルに入れた属性や数量を図面・集計へつなげられる点にあります。にもかかわらず、導入初期は3Dモデルの作成だけで止まり、数量や仕様の整理は結局Excelへ戻ってしまうことが少なくありません。\n\n【内容】\nRevitの集計表は、モデル内の要素情報を一覧化し、数量確認、仕様確認、シート管理、注記管理などに使えるビューです。壁、建具、部屋、設備機器、仕上げ、材料など、カテゴリごとに必要な項目を抜き出し、並べ替え、集計し、条件で絞り込めます。単なる表ではなく、モデルと連動するため、属性を直せば集計も変わり、集計から要素確認へ戻ることもできます。\n\n【技術的ポイント】\n実務で重要なのは、どのパラメータを入れておくと後で集計に使えるか、という設計です。共有パラメータやカテゴリ設定が曖昧だと、集計表は作れても運用に乗りません。Revitは外れ値を減らすように属性を揃えていくほど、集計表の価値が大きくなります。これは自由なモデリングよりも、ルール化された情報管理に強いRevitの性格がよく表れる部分です。\n\n【業界への影響】\n集計表を使いこなせると、Revitは単なるモデリングソフトではなく、数量・仕様・図面整合を一つのモデルで回す基盤に近づきます。設計変更の影響確認、社内レビュー、協力会社との受け渡しでも情報のズレを減らしやすくなり、Revit導入の効果が見えやすくなります。ファミリ理解と並んで、Revitを実務へ定着させるための重要テーマです。',
-    xPostBody: '',
-    japaneseSummary: '',
-    postText: '',
-  },
-  {
-    slug: 'nemetschek-group-reports-record-revenue-above-1-billion-euro-in-fiscal-year-2025',
-    title: 'Nemetschek Group reports record revenue above 1 billion euro in fiscal year 2025',
-    titleJa: 'Nemetschekグループ、2025年度に初の10億ユーロ超え — サブスク売上51%増で成長加速',
-    link: 'https://www.nemetschek.com/en/news-media/successful-fiscal-year-2025',
-    source: 'Nemetschek Newsroom',
-    pubDate: '2026-03-19T00:00:00.000Z',
-    fetchedAt: '2026-04-10T00:00:00.000Z',
-    summary: 'Nemetschekグループが2025年度通期決算を発表。売上高は19.7%増の11億9,120万ユーロと初めて10億ユーロを超え、サブスクリプション・SaaS売上は51.2%増。13年連続で配当を増額する。',
-    category: 'BIM_ECOSYSTEM',
-    categoryHits: ['bim', 'aec'],
-    allCategories: ['BIM_ECOSYSTEM'],
-    keywordHits: ['nemetschek', 'bim', 'saas', 'subscription'],
-    score: 9,
-    freshnessScore: 0,
-    relevant: true,
-    bodyJa: '【背景】\nNemetschekグループは、Graphisoft（Archicad）、Vectorworks、Allplan、Bluebeam、Solibriなど建設・設計業界を代表する複数のBIMソフトウェアブランドを傘下に持つドイツの上場企業です。同グループの業績はBIM・AECソフトウェア市場全体の動向を映す指標として、業界関係者に広く注目されています。\n\n【内容】\n2025年度通期（1〜12月）決算において、Nemetschekグループは売上高11億9,120万ユーロ（前年比+19.7%、通貨調整後+22.6%）を達成し、グループ史上初めて10億ユーロの大台を突破した。なかでもサブスクリプション・SaaS売上は8億5,870万ユーロ（+51.2%）と急増し、売上全体に占める比率が大きく高まった。EBITDAは3億7,110万ユーロ（+23.3%）、利益率は前年の30.2%から31.2%に改善。営業キャッシュフローも4億290万ユーロ（+31.3%）と強含んだ。配当は1株あたり0.68ユーロ（+24%）と提案され、13年連続の増配となる。2026年は通貨調整後で14〜15%の売上成長と、EBITDA利益率32〜33%を目標に掲げている。\n\n【なぜ重要か】\nBIMソフトウェア業界の主要プレーヤーが安定した高成長を示したことは、AEC分野のデジタル化需要が世界的に継続していることを裏付けている。特にサブスク・SaaS転換が50%超という数字は、従来の永続ライセンス型からクラウド課金型へのビジネスモデルシフトが業界標準になりつつあることを意味する。ベンダー選定や予算計画に直結する情報として実務担当者は把握しておく必要がある。\n\n【日本への影響】\nGraphisoft JapanやVectorworks日本法人を通じた日本市場への投資継続が見込まれる。サブスク移行が進む中、国内ユーザーは永続ライセンスから年間サブスクへの切り替え判断を迫られる可能性がある。また、同社が注力するAIアシスタント機能（Archicad AI、Vectorworks AI Visualizerなど）が今後のアップデートで日本語対応に向けて強化されることが期待される。',
-    xPostBody: '',
-    japaneseSummary: '',
-    postText: '',
-  },
-  {
-    slug: 'maxon-enters-aec-market-with-redshift-for-vectorworks-and-revit-beta',
-    title: 'Maxon enters AEC market with Redshift for Vectorworks and Revit beta',
-    titleJa: 'MaxonがAEC市場に本格参入 — VectorworksとRevit向けリアルタイムレンダリング「Redshift」提供開始',
-    link: 'https://www.nemetschek.com/en/news-media/maxon-marks-its-official-entry-aec-market-its-real-time-archviz-solution',
-    source: 'Nemetschek Newsroom',
-    pubDate: '2026-03-17T00:00:00.000Z',
-    fetchedAt: '2026-04-10T00:00:00.000Z',
-    summary: 'Nemetschek傘下のMaxonが「Redshift for Vectorworks」商用版と「Redshift for Autodesk Revit」ベータ版をリリース。BIMツール内でリアルタイム建築ビジュアライゼーションが可能になる。',
-    category: 'BIM_ECOSYSTEM',
-    categoryHits: ['bim', 'aec', 'revit'],
-    allCategories: ['BIM_ECOSYSTEM'],
-    keywordHits: ['maxon', 'redshift', 'vectorworks', 'revit', 'rendering'],
-    score: 8,
-    freshnessScore: 0,
-    relevant: true,
-    bodyJa: '【背景】\n建築ビジュアライゼーション市場では、設計者がBIMモデルから高品質なレンダリングを素早く生成したいというニーズが高まっています。従来はRevitやVectorworksからデータをエクスポートして別ソフトでレンダリングする工程が必要でしたが、その手間と時間がボトルネックになっていました。映像・VFX分野で実績を持つMaxon（Cinema 4D・Redshiftの開発元）のNemetschekグループ内での展開が注目されていました。\n\n【内容】\nNemetschekグループ傘下のMaxonは、「Redshift for Vectorworks」の商用版リリースと「Redshift for Autodesk Revit」のベータ版公開を発表し、AEC市場への本格参入を宣言した。Redshiftはリアルタイムレンダリングエンジンで、BIMモデルから映画品質のビジュアライゼーションを短時間で生成できる。「Capsules」と呼ぶアセットライブラリを月次更新で提供し、建築向けのマテリアルや照明設定を追加し続ける。Mac/Windows両対応で、Maya・HoudiniなどのDCCパイプラインとも接続できる設計になっている。2026年から2027年にかけてさらなるBIMツール統合が予定されている。\n\n【なぜ重要か】\n映像制作分野でトップクラスのレンダラーがVectorworks・Revitに直接統合されることで、設計者がプレゼン品質のビジュアルを設計ツール内で完結して作れる環境が整う。これは「設計ソフト＋別ツールでレンダリング」という従来の分断ワークフローを解消し、提案・監理・竣工記録の品質を底上げする可能性を持つ。\n\n【日本への影響】\nVectorworksはNemetschek Japanを通じて国内設計事務所に多数導入されており、Redshiftの統合はすぐに使える実務ツールとして国内ユーザーに恩恵をもたらす。RevitユーザーにとってもRedshift for Revitのベータ版は選択肢が広がる機会となる。価格面では既存レンダリングツールより手頃な設定を打ち出しており、コスト意識の高い中小設計事務所にも導入しやすい水準になる見込みだ。',
-    xPostBody: '',
-    japaneseSummary: '',
-    postText: '',
-  },
-  {
-    slug: 'nemetschek-group-at-digitalbau-2026-ai-software-solutions-and-connected-workflow',
-    title: 'Nemetschek Group at digitalBAU 2026: AI software solutions and connected workflows',
-    titleJa: 'NemetschekグループがdigitalBAU 2026を総力展示 — エージェントAIと全ブランド統合ワークフロー披露',
-    link: 'https://www.nemetschek.com/en/news-media/digitalbau-2026',
-    source: 'Nemetschek Newsroom',
-    pubDate: '2026-03-12T00:00:00.000Z',
-    fetchedAt: '2026-04-10T00:00:00.000Z',
-    summary: '2026年3月24〜26日にケルンで開催されたdigitalBAU 2026にNemetschekグループが出展。ALLPLAN、Graphisoft、Vectorworks、Bluebeamなど全ブランドのAI機能と統合ワークフローを展示。',
-    category: 'BIM_ECOSYSTEM',
-    categoryHits: ['bim', 'aec', 'ai'],
-    allCategories: ['BIM_ECOSYSTEM'],
-    keywordHits: ['nemetschek', 'digitalbau', 'bim', 'ai', 'allplan', 'graphisoft'],
-    score: 7,
-    freshnessScore: 0,
-    relevant: true,
-    bodyJa: '【背景】\ndigitalBAUはドイツ・ケルンで隔年開催される建設デジタル化専門の国際見本市で、BIM・建設テック企業が最新製品・戦略を発表する主要プラットフォームです。2026年はAIとBIMの統合が業界の最大テーマとなっており、各社の展示内容が今後のロードマップを占う場として注目されていました。\n\n【内容】\nNemetschekグループは2026年3月24〜26日のdigitalBAU 2026（ケルン、ブース8.402）に全ブランドを結集させた。CEOのイヴ・パドリーヌ氏は「AIは建設・不動産業界の根本的変革を意味する」と述べ、同社が注力する3領域として「エージェントベースのAIシステム」「インテリジェント自動化」「製品固有のAI機能」を挙げた。主要展示内容はALLPLANの「AI Visualizer V2」と「AI Coder」、Bluebeam Maxの自動チェック・知的図面比較、GraphisoftのDesign Intelligence戦略とProject Aurora（次世代Archicad）、VectorworksのAIアシスタント・AI Visualizer、dRofus/dTwinのデータ連携、Solibriの品質管理AIなど。設計から施工、ビル管理までのフルライフサイクルにAIを適用する戦略を示した。\n\n【なぜ重要か】\n複数のBIMブランドを横断したAI統合戦略を公の場で示したことは、「各ツールがバラバラに動く」時代から「ブランド間でデータと知識が連携するAI基盤」に移行する姿勢を明確にしたものだ。エージェントベースのAIに言及したことは、将来的に「指示すれば設計・チェック・修正が自動化される」方向性への投資を示唆する。\n\n【日本への影響】\nArchicad（Graphisoft）やVectorworksは日本市場での導入が進んでおり、今回発表されたAI機能が日本語で利用できるようになるかが焦点となる。Project Aurora（次世代Archicad）はGraphisoft Japanを通じて国内ユーザーへの展開が見込まれる。BIMマネージャーやAEC企業のDX担当者は、今回の展示内容を自社ツール選定の参考情報として押さえておくべきだ。',
-    xPostBody: '',
-    japaneseSummary: '',
-    postText: '',
-  },
-];
+// MANUAL_POSTS is loaded from ./manualPosts.js (required at the top of this file)
 
 const EXPLAINER_GUIDES = [
   {
@@ -2647,7 +2521,7 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       justify-content: center;
       width: 2.2rem;
       height: 2.2rem;
-      border-radius: 4px;
+      border-radius: var(--radius-sm);
       border: 1px solid var(--border);
       font-size: 0.875rem;
       background: var(--white);
@@ -2730,22 +2604,6 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
     .sidebar-daily-list li::marker {
       content: '';
     }
-
-    /* ---- pagination ---- */
-    .pagination { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
-    .pagination a, .pagination span {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.2rem;
-      height: 2.2rem;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border);
-      font-size: 0.875rem;
-      background: var(--white);
-      color: var(--text);
-    }
-    .pagination .active { background: var(--blue); color: var(--white); border-color: var(--blue); font-weight: 700; }
 
     /* ---- featured section ---- */
     .featured-grid {
@@ -4145,112 +4003,6 @@ function buildArticlePage(post, allPosts) {
     htmlFooter('..');
 }
 
-// ---- privacy policy page ----------------------------------------------------
-
-function buildPrivacyPage() {
-  return htmlHead(
-    `プライバシーポリシー | ${SITE_NAME}`,
-    `${SITE_NAME}のプライバシーポリシーです。`,
-    `${SITE_URL}/privacy.html`
-  ) +
-    htmlHeader() +
-    `
-  <div class="container">
-    <main class="main-content">
-      <div class="static-page">
-        <h1>プライバシーポリシー</h1>
-
-        <p>本プライバシーポリシーは、${SITE_NAME}（以下「当サイト」）における、ユーザーの個人情報の取扱いを定めるものです。</p>
-
-        <h2>1. 個人情報の収集について</h2>
-        <p>当サイトでは、お問い合わせフォーム等を通じてお名前・メールアドレス等の個人情報をご提供いただく場合があります。収集した個人情報は、お問い合わせへの回答以外の目的には使用いたしません。</p>
-
-        <h2>2. アクセス解析ツールについて</h2>
-        <p>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。GoogleアナリティクスはCookieを使用してデータを収集しますが、個人を特定する情報は含まれません。Cookieの無効化により収集を拒否することができます。詳細は<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Googleのポリシー</a>をご確認ください。</p>
-
-        <h2>3. 広告について</h2>
-        <p>当サイトでは、第三者配信の広告サービスを利用する場合があります。これらの広告配信事業者はCookieを使用してユーザーの興味に応じた広告を表示することがあります。</p>
-        <p>また、記事内や今後掲載する特集において、アフィリエイトリンクや広告リンクを使用する場合があります。広告・提携リンクを含むコンテンツは、読者に誤解を与えないよう配慮して掲載します。</p>
-
-        <h2>4. Cookieについて</h2>
-        <p>当サイトでは、利便性の向上のためにCookieを使用する場合があります。ブラウザの設定からCookieを無効化することが可能ですが、一部の機能が利用できなくなる場合があります。</p>
-
-        <h2>5. 免責事項</h2>
-        <p>当サイトに掲載する情報の正確性には万全を期していますが、内容の完全性・正確性・有用性・安全性等について保証するものではありません。当サイトの情報を利用されたことによる損害については、一切責任を負いかねます。</p>
-
-        <h2>6. 著作権</h2>
-        <p>当サイトに掲載されているコンテンツ（文章・画像等）の著作権は、当サイトまたは各記事の出典元に帰属します。無断転載・複製は禁止いたします。</p>
-
-        <h2>7. プライバシーポリシーの変更</h2>
-        <p>当サイトは、必要に応じて本プライバシーポリシーを変更することがあります。重要な変更がある場合には、サイト上でお知らせします。</p>
-
-        <h2>8. お問い合わせ</h2>
-        <p>本ポリシーに関するお問い合わせは、<a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>よりご連絡ください。</p>
-
-        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">最終更新日: ${CURRENT_YEAR}年4月</p>
-      </div>
-    </main>
-  </div>` +
-    htmlFooter();
-}
-
-// ---- about page -------------------------------------------------------------
-
-function buildAboutPage() {
-  return htmlHead(
-    `運営者情報 | ${SITE_NAME}`,
-    `${SITE_NAME}の運営者情報です。`,
-    `${SITE_URL}/about.html`
-  ) +
-    htmlHeader() +
-    `
-  <div class="container">
-    <main class="main-content">
-      <div class="static-page">
-        <h1>運営者情報</h1>
-
-        <h2>サイトについて</h2>
-        <p>${SITE_NAME}は、BIM（Building Information Modeling）・AEC（建築・エンジニアリング・建設）・建設DXに関する最新ニュースを、AIを活用して日本語でわかりやすく解説する専門メディアです。</p>
-
-        <h2>対象読者</h2>
-        <ul>
-          <li>BIM担当者・BIMマネージャー</li>
-          <li>建設会社・設計事務所のデジタル化推進担当者</li>
-          <li>AECテクノロジーに関心のある建設・不動産プロフェッショナル</li>
-          <li>Autodesk Revit・Archicad・Vectorworks・Rebroユーザー</li>
-        </ul>
-
-        <h2>掲載コンテンツ</h2>
-        <p>当サイトはBIM・AEC関連ブログ・プレスリリース・技術記事をAIが収集・要約し、日本語で提供しています。各記事には元記事へのリンクを掲載しています。</p>
-
-        <h2>編集方針</h2>
-        <p>当サイトは、単なる翻訳ではなく、日本のBIM・AEC実務にとって重要かどうかを基準に記事を編集しています。特に「何が起きたか」「なぜ重要か」「日本の実務にどう影響するか」を重視し、読者が短時間で判断材料を得られる構成を目指しています。</p>
-
-        <h2>AI利用ポリシー</h2>
-        <p>当サイトでは、記事候補の収集、要約草案、日本語化の一部にAIを活用しています。ただし、公開内容は一次情報へのリンクを明示し、専門メディアとしての可読性と妥当性を重視して整形しています。重要な判断や導入検討の際は、必ず元記事・公式発表・製品情報をご確認ください。</p>
-
-        <h2>広告・アフィリエイト方針</h2>
-        <p>当サイトでは、運営費の一部をまかなうために広告やアフィリエイトリンクを利用する場合があります。広告や提携リンクの有無によって記事の評価基準を変更することはなく、読者価値を最優先に編集します。</p>
-
-        <h2>免責事項</h2>
-        <p>掲載情報は参考目的であり、内容の正確性・最新性を保証するものではありません。重要な意思決定の際は必ず元記事や一次情報をご確認ください。</p>
-
-        <h2>著作権・引用ポリシー</h2>
-        <p>当サイトの独自コンテンツの著作権は当サイトに帰属します。引用・転載の際は出典を明記の上、元記事へのリンクを設けてください。</p>
-
-        <h2>お問い合わせ</h2>
-        <p>当サイトへのお問い合わせ・記事に関するご意見は、<a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">Googleフォームのお問い合わせ窓口</a>よりお送りください。</p>
-        <p><a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:0.75rem; background:var(--blue); color:#fff; padding:0.75rem 1.25rem; border-radius:6px; font-weight:700; text-decoration:none;">お問い合わせフォームを開く</a></p>
-
-        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">
-          &copy; ${CURRENT_YEAR} ${SITE_NAME}
-        </p>
-      </div>
-    </main>
-  </div>` +
-    htmlFooter();
-}
-
 // ---- category page ----------------------------------------------------------
 
 function buildCategoryPage(category, posts) {
@@ -4354,107 +4106,7 @@ function buildCategoryPage(category, posts) {
     htmlFooter('..', catPosts.length);
 }
 
-// ---- events page ------------------------------------------------------------
-
-function buildEventsPage(events) {
-  const now = Date.now();
-
-  // 今後 + 日付不明を「開催予定」、過去を「開催済み」に分類
-  const upcoming = events.filter((ev) => {
-    if (!ev.date) return true;
-    const d = new Date(ev.date).getTime();
-    return isNaN(d) || d >= now;
-  });
-  const past = events.filter((ev) => {
-    if (!ev.date) return false;
-    const d = new Date(ev.date).getTime();
-    return !isNaN(d) && d < now;
-  });
-
-  function formatEventDate(ev) {
-    if (!ev.date) return '日程未定';
-    const d = new Date(ev.date);
-    if (isNaN(d.getTime())) return '日程未定';
-    const dateStr = d.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
-    if (ev.dateEnd) {
-      const de = new Date(ev.dateEnd);
-      if (!isNaN(de.getTime())) {
-        return dateStr + ' 〜 ' + de.toLocaleDateString('ja-JP', { month: 'long', day: 'numeric' });
-      }
-    }
-    return dateStr;
-  }
-
-  function eventCard(ev) {
-    const dateLabel = formatEventDate(ev);
-    const location  = escape(ev.location || '');
-    const source    = escape(ev.source || '');
-    const desc      = ev.description ? `<p class="event-desc">${escape(ev.description)}</p>` : '';
-    return `
-        <article class="event-card">
-          <div class="event-meta">
-            <span class="event-date">📅 ${escape(dateLabel)}</span>
-            ${location ? `<span class="event-location">📍 ${location}</span>` : ''}
-            <span class="event-source">${source}</span>
-          </div>
-          <h2 class="event-title">
-            <a href="${escape(ev.url)}" target="_blank" rel="noopener noreferrer">${escape(ev.title)}</a>
-          </h2>
-          ${desc}
-          <a class="event-link" href="${escape(ev.url)}" target="_blank" rel="noopener noreferrer">詳細・登録 →</a>
-        </article>`;
-  }
-
-  const upcomingHtml = upcoming.length > 0
-    ? upcoming.map(eventCard).join('')
-    : '<p class="event-empty">現在、開催予定のイベント情報はありません。</p>';
-
-  const pastHtml = past.length > 0
-    ? past.map(eventCard).join('')
-    : '';
-
-  const pastSection = past.length > 0
-    ? `<h2 class="events-section-title">開催済み</h2><div class="event-list past">${pastHtml}</div>`
-    : '';
-
-  const eventStyles = `
-    .events-hero { background: var(--navy); color: var(--white); padding: 2.5rem 1.5rem; text-align: center; }
-    .events-hero h1 { font-size: 1.75rem; font-weight: 700; }
-    .events-hero p { opacity: 0.75; margin-top: 0.5rem; font-size: 0.95rem; }
-    .events-main { max-width: 820px; margin: 2.5rem auto; padding: 0 1.5rem 4rem; }
-    .events-section-title { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; border-left: 4px solid var(--blue); padding-left: 0.75rem; }
-    .event-list { display: flex; flex-direction: column; gap: 1.25rem; }
-    .event-card { background: var(--white); border-radius: 10px; padding: 1.4rem 1.6rem; box-shadow: var(--card-shadow); border: 1px solid var(--border); }
-    .event-list.past .event-card { opacity: 0.6; }
-    .event-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
-    .event-date { font-weight: 600; color: var(--blue); }
-    .event-title { font-size: 1.05rem; font-weight: 700; line-height: 1.5; margin-bottom: 0.5rem; }
-    .event-title a { color: var(--text); }
-    .event-title a:hover { color: var(--blue); text-decoration: none; }
-    .event-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.75rem; }
-    .event-link { font-size: 0.85rem; font-weight: 600; color: var(--blue); }
-    .event-empty { color: var(--text-muted); font-size: 0.95rem; padding: 2rem 0; }`;
-
-  return htmlHead(
-    `イベント情報 | ${SITE_NAME}`,
-    'BIM・AEC・建設DX関連の日本開催イベント・セミナー情報',
-    `${SITE_URL}/events.html`
-  ).replace('</style>', eventStyles + '\n  </style>') +
-    htmlHeader('.') +
-    `
-  <div class="events-hero">
-    <h1>イベント情報</h1>
-    <p>BIM・AEC・建設DX関連の日本開催イベント・セミナー</p>
-  </div>
-  <div class="events-main">
-    <h2 class="events-section-title">開催予定</h2>
-    <div class="event-list">${upcomingHtml}</div>
-    ${pastSection}
-  </div>` +
-    htmlFooter('.');
-}
-
-// ---- SEO/static page overrides ----------------------------------------------
+// ---- static pages -----------------------------------------------------------
 
 function buildPrivacyPage() {
   const pageTitle = `プライバシーポリシー | ${SITE_NAME}`;

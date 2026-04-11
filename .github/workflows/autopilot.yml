@@ -139,61 +139,6 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
 
-  weekly-digest:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    permissions:
-      contents: write
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 1'
-    concurrency:
-      group: site-deploy
-      cancel-in-progress: false
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Generate weekly digest
-        run: node weeklyDigest.js
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-
-      - name: Commit and push weekly digest
-        run: |
-          git config user.email "action@github.com"
-          git config user.name "GitHub Actions"
-          git add index.html posts/ categories/ privacy.html about.html sitemap.xml robots.txt
-          git add -f data/ || true
-          git diff --staged --quiet || git commit -m "feat: add weekly BIM/AEC digest [skip ci]"
-          git fetch origin main
-          git push --force-with-lease
-
-      - name: Notify Telegram weekly digest
-        if: success()
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          node -e "
-          const https = require('https');
-          const token = process.env.TELEGRAM_BOT_TOKEN;
-          const chatId = process.env.TELEGRAM_CHAT_ID;
-          if (!token || !chatId) process.exit(0);
-          const text = 'AEC News Japan - 週次まとめを更新しました\nhttps://tyk1209-debug.github.io/ai-company/';
-          const body = JSON.stringify({ chat_id: chatId, text });
-          const req = https.request({ hostname:'api.telegram.org', path:'/bot'+token+'/sendMessage', method:'POST', headers:{'Content-Type':'application/json','Content-Length':Buffer.byteLength(body)} });
-          req.write(body); req.end();
-          "
-
   design-review:
     runs-on: ubuntu-latest
     permissions:

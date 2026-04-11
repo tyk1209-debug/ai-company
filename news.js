@@ -32,6 +32,34 @@ const ENABLE_X_AUTO_POST = false;
 
 const parser = new Parser({ timeout: 12000 });
 
+/**
+ * Merge freshly fetched posts with the existing posts.json to avoid losing
+ * articles that have aged out of RSS feeds.
+ *
+ * @param {Array} freshPosts - Posts generated from the current pipeline run.
+ * @param {string} existingPostsPath - Absolute path to the on-disk posts.json.
+ * @returns {Array} Merged array: fresh posts first, then preserved historical ones.
+ */
+function mergeWithExistingPosts(freshPosts, existingPostsPath) {
+  let existingPosts = [];
+  if (fs.existsSync(existingPostsPath)) {
+    try {
+      existingPosts = JSON.parse(fs.readFileSync(existingPostsPath, "utf8"));
+    } catch { /* ignore parse errors */ }
+  }
+
+  const freshLinks = new Set(freshPosts.map((p) => (p.link || "").trim().toLowerCase()));
+
+  const preserved = existingPosts.filter((p) => {
+    if (freshLinks.has((p.link || "").trim().toLowerCase())) return false;
+    if (!p.pubDate) return true;
+    const ageDays = (Date.now() - new Date(p.pubDate).getTime()) / (1000 * 60 * 60 * 24);
+    return ageDays <= 180;
+  });
+
+  return [...freshPosts, ...preserved];
+}
+
 function ensureDataDir() {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -204,27 +232,7 @@ async function main() {
   const freshPosts = applyAffiliateLinks(generatePosts(passed));
 
   // Merge with existing posts.json to preserve articles that aged out of RSS feeds
-  const existingPostsPath = path.join(DATA_DIR, "posts.json");
-  let existingPosts = [];
-  if (fs.existsSync(existingPostsPath)) {
-    try {
-      existingPosts = JSON.parse(fs.readFileSync(existingPostsPath, "utf8"));
-    } catch { /* ignore parse errors */ }
-  }
-
-  // Build a set of URLs from fresh posts for deduplication
-  const freshLinks = new Set(freshPosts.map((p) => (p.link || "").trim().toLowerCase()));
-
-  // Keep existing posts that are not already covered by fresh data and are within 180 days
-  const preserved = existingPosts.filter((p) => {
-    if (freshLinks.has((p.link || "").trim().toLowerCase())) return false;
-    if (!p.pubDate) return true;
-    const ageDays = (Date.now() - new Date(p.pubDate).getTime()) / (1000 * 60 * 60 * 24);
-    return ageDays <= 180;
-  });
-
-  // Merge: fresh posts first (newest), then preserved historical ones
-  const posts = [...freshPosts, ...preserved];
+  const posts = mergeWithExistingPosts(freshPosts, path.join(DATA_DIR, "posts.json"));
   saveJson("posts.json", posts);
 
   const postResult = await maybeAutoPost(posts);

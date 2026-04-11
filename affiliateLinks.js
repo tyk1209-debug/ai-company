@@ -190,13 +190,26 @@ const SITE_AFFILIATE_LINKS = [
     keywords: ['チェア', 'chair', 'Herman Miller', 'ハーマンミラー', '作業環境', '長時間作業', '姿勢', '腰', 'ergonomics'],
     signals: ['workspace'],
   },
+  {
+    id: 'neuro-dive',
+    family: 'career-ai',
+    category: 'AI_DX',
+    title: 'AIやデータサイエンスが学べるIT特化の就労移行支援【Neuro Dive】',
+    description: 'AI・データサイエンス領域へのキャリアチェンジを支援する就労移行支援サービスです。IT分野に特化したカリキュラムで、BIM・建設DX人材としてのスキルアップも視野に入れられます。',
+    url: 'https://px.a8.net/svt/ejp?a8mat=4B1ILM+CVSP0Y+47GS+HVFKY',
+    pixel: 'https://www12.a8.net/0.gif?a8mat=4B1ILM+CVSP0Y+47GS+HVFKY',
+    linkText: '詳細を見る',
+    rel: 'nofollow noopener',
+    keywords: ['AI', 'データサイエンス', 'キャリア', '就労', 'DX', '転職', 'スキルアップ', '建設DX', 'IT'],
+    signals: ['ai', 'career', 'dx'],
+  },
 ];
 
 const FALLBACK_BY_CATEGORY = {
   REVIT: ['revit-book', 'fm-book'],
   GLOOBE: ['gloobe-book', 'fm-book'],
   BIM_AI: ['dx-book', 'revit-book'],
-  AI_DX: ['dx-book', 'ultrawide-lg'],
+  AI_DX: ['neuro-dive', 'dx-book', 'ultrawide-lg'],
   BIM_ECOSYSTEM: ['fm-book', 'archicad-book'],
   OTHER: ['dx-book', 'fm-book'],
 };

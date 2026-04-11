@@ -3849,7 +3849,7 @@ function buildArticlePage(post, allPosts) {
               <div class="reference-book-name">${escape(a.title)}</div>
               <div class="reference-book-copy">${escape(a.description || '関連テーマをさらに理解したい読者向けの参考書籍です。')}</div>
             </div>
-            <a href="${escape(a.url)}" target="_blank" rel="noopener sponsored" class="reference-book-link" onclick="typeof gtag==='function'&&gtag('event','affiliate_click',{item_id:'${escape(a.id||a.title.slice(0,30))}',item_name:'${escape(a.title.slice(0,50))}',page_type:'post',page_slug:'${escape(post.slug)}'})">Amazonで見る</a>
+            <a href="${escape(a.url)}" target="_blank" rel="${escape(a.rel || 'noopener sponsored')}" class="reference-book-link" onclick="typeof gtag==='function'&&gtag('event','affiliate_click',{item_id:'${escape(a.id||a.title.slice(0,30))}',item_name:'${escape(a.title.slice(0,50))}',page_type:'post',page_slug:'${escape(post.slug)}'})">  ${escape(a.linkText || 'Amazonで見る')}</a>${a.pixel ? `<img src="${escape(a.pixel)}" width="1" height="1" style="display:none" alt="">` : ''}
           </div>
         `).join('')}
       </div>

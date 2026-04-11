@@ -55,11 +55,12 @@ jobs:
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Actions"
-          git add index.html posts/ privacy.html about.html events.html sitemap.xml robots.txt categories/
+          git add index.html posts/ page/ guides/ privacy.html about.html events.html sitemap.xml robots.txt categories/
           git add -f data/ || true
           git diff --staged --quiet || git commit -m "chore: update website [skip ci]"
           git fetch origin main
-          git push --force-with-lease
+          git merge origin/main --no-edit || true
+          git push
 
       - name: Notify Telegram on success
         if: success()

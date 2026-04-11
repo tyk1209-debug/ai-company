@@ -184,7 +184,7 @@ async function main() {
   });
   saveJson("selected_posts.json", selected);
 
-  const summarized = await summarizeArticles(selected, { limit: 5 });
+  const summarized = await summarizeArticles(selected, { limit: 20 });
   saveJson("summarized_news.json", summarized);
 
   const irrelevant = summarized.filter((a) => a.relevant === false);

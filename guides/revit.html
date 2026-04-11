@@ -1278,6 +1278,60 @@
     .article-related-card .card-thumb { height: 110px; }
     .article-related-card .card-body { padding: 1rem 1.1rem 1.05rem; }
 
+    /* ---- career service banner ---- */
+    .career-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.6rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .career-banner-body { flex: 1; min-width: 0; }
+    .career-banner-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+    .career-banner-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 0.4rem;
+      line-height: 1.5;
+    }
+    .career-banner-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .career-banner-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #3b82f6;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.65rem 1.25rem;
+      border-radius: 0.5rem;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    .career-banner-cta:hover { background: #2563eb; text-decoration: none; color: #fff; }
+    @media (max-width: 640px) {
+      .career-banner { flex-direction: column; align-items: flex-start; }
+      .career-banner-cta { width: 100%; justify-content: center; }
+    }
+
     .reference-books {
       background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
       border: 1px solid #dbe7f4;
@@ -1455,6 +1509,7 @@
     /* ---- pagination ---- */
     .pagination {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 0.5rem;
       margin-top: 2rem;
@@ -1550,7 +1605,7 @@
     }
 
     /* ---- pagination ---- */
-    .pagination { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
+    .pagination { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
     .pagination a, .pagination span {
       display: inline-flex;
       align-items: center;
@@ -1656,6 +1711,8 @@
       .article-tag { width: auto; min-height: 44px; display: inline-flex; align-items: center; }
       .reference-book-item { flex-direction: column; }
       .reference-book-link { width: 100%; }
+      .pagination { flex-wrap: wrap; gap: 0.4rem; }
+      .pagination a, .pagination span { width: 2.75rem; height: 2.75rem; font-size: 0.95rem; }
     }
     @media (max-width: 480px) {
       nav a { font-size: 0.75rem; margin-left: 0.6rem; }
@@ -1831,7 +1888,7 @@
       </div>
       <div class="guide-card-body">
         <h3 class="guide-card-title"><a href="../guides/bim.html">BIMとは</a></h3>
-        <p class="guide-card-excerpt">BIMの基本、CADとの違い、実務での使われ方、学習の壁を整理した基礎解説です。</p>
+        <p class="guide-card-excerpt">BIMモデルとは建物のデータベースであり、そこを中心にしたワークフローへの転換がBIM導入の本質です。CADとの違い、データベースとしての構造、実務DXとの関係を整理した基礎解説です。</p>
         <a class="guide-card-link" href="../guides/bim.html">詳しく読む →</a>
       </div>
     </article>

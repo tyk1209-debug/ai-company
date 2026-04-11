@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { getAffiliateLinks } = require('./affiliateLinks.js');
+const { getAffiliateLinks, getCareerAffiliates } = require('./affiliateLinks.js');
 const { createSidebarTools } = require('./sidebar.js');
 
 const SITE_NAME = 'AEC News Japan';
@@ -2460,6 +2460,60 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
     .article-related-card .card-thumb { height: 110px; }
     .article-related-card .card-body { padding: 1rem 1.1rem 1.05rem; }
 
+    /* ---- career service banner ---- */
+    .career-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.6rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .career-banner-body { flex: 1; min-width: 0; }
+    .career-banner-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+    .career-banner-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 0.4rem;
+      line-height: 1.5;
+    }
+    .career-banner-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .career-banner-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #3b82f6;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.65rem 1.25rem;
+      border-radius: 0.5rem;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    .career-banner-cta:hover { background: #2563eb; text-decoration: none; color: #fff; }
+    @media (max-width: 640px) {
+      .career-banner { flex-direction: column; align-items: flex-start; }
+      .career-banner-cta { width: 100%; justify-content: center; }
+    }
+
     .reference-books {
       background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
       border: 1px solid #dbe7f4;
@@ -2637,6 +2691,7 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
     /* ---- pagination ---- */
     .pagination {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 0.5rem;
       margin-top: 2rem;
@@ -2732,7 +2787,7 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
     }
 
     /* ---- pagination ---- */
-    .pagination { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
+    .pagination { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
     .pagination a, .pagination span {
       display: inline-flex;
       align-items: center;
@@ -2838,6 +2893,8 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       .article-tag { width: auto; min-height: 44px; display: inline-flex; align-items: center; }
       .reference-book-item { flex-direction: column; }
       .reference-book-link { width: 100%; }
+      .pagination { flex-wrap: wrap; gap: 0.4rem; }
+      .pagination a, .pagination span { width: 2.75rem; height: 2.75rem; font-size: 0.95rem; }
     }
     @media (max-width: 480px) {
       nav a { font-size: 0.75rem; margin-left: 0.6rem; }
@@ -3978,14 +4035,32 @@ function buildArticlePage(post, allPosts) {
 
   // ---- affiliate ----
   const affiliates = getAffiliateLinks(post);
-  const affiliateHtml = affiliates.length > 0 ? `
+  // Career affiliates determined independently of overrides so the banner
+  // always appears on AI/DX articles even when product overrides are set.
+  const careerAffiliates = getCareerAffiliates(post);
+  const productAffiliates = affiliates.filter(a => a.type !== 'career-service');
+
+  const careerBannerHtml = careerAffiliates.map(a => `
+    <div class="career-banner">
+      <div class="career-banner-body">
+        <div class="career-banner-label">PR・キャリア支援（広告）</div>
+        <p class="career-banner-title">${escape(a.title)}</p>
+        <p class="career-banner-desc">${escape(a.description || '')}</p>
+      </div>
+      <a href="${escape(a.url)}" target="_blank" rel="${escape(a.rel || 'nofollow noopener')}" class="career-banner-cta" onclick="typeof gtag==='function'&&gtag('event','affiliate_click',{item_id:'${escape(a.id)}',item_name:'${escape(a.title.slice(0,50))}',page_type:'post',page_slug:'${escape(post.slug)}'})">
+        ${escape(a.linkText || '詳細を見る')} →
+      </a>
+      ${a.pixel ? `<img src="${escape(a.pixel)}" width="1" height="1" style="display:none" alt="">` : ''}
+    </div>`).join('');
+
+  const affiliateHtml = productAffiliates.length > 0 ? `
     <section class="reference-books">
       <div class="reference-books-label">関連アイテム（広告）</div>
       <h2 class="reference-books-title">この内容に関連する参考アイテム</h2>
       <p class="reference-books-desc">記事テーマと関連性の高い書籍、実務ツール、作業環境アイテムだけを掲載しています。理解を深めたい場合だけでなく、実際に試したい、業務環境を整えたい場面でも使いやすいものを選んでいます。</p>
       <p class="reference-books-note">編集部が記事文脈との相性を見て選定した参考アイテムです。リンクにはアフィリエイトを含みます。</p>
       <div class="reference-books-list">
-        ${affiliates.map(a => `
+        ${productAffiliates.map(a => `
           <div class="reference-book-item">
             <div class="reference-book-meta">
               <div class="reference-book-name">${escape(a.title)}</div>
@@ -4099,6 +4174,7 @@ function buildArticlePage(post, allPosts) {
           </div>
         </div>
         ${learningGuidesHtml}
+        ${careerBannerHtml}
         ${affiliateHtml}
         ${editorialHtml}
         <div class="article-source-card">

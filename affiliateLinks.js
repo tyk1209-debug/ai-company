@@ -375,19 +375,7 @@ function getAffiliateLinks(post) {
  * This is intentionally independent of POST_AFFILIATE_OVERRIDES so that the
  * career banner always appears on relevant articles regardless of product overrides.
  */
-function getCareerAffiliates(post) {
-  const text = normalizeText(
-    `${post.title || ''} ${post.titleJa || ''} ${post.category || ''} ${post.postText || ''} ${post.bodyJa || ''} ${post.summary || ''}`
-  );
-  const category = String(post.category || '').toUpperCase();
-
-  const hasCareerSignal =
-    category === 'AI_DX' ||
-    category === 'BIM_AI' ||
-    hasAny(text, ['ai', 'dx', '人工知能', 'エージェント', 'agent', '建設dx', 'データサイエンス', 'キャリア', '就労', 'スキルアップ']);
-
-  if (!hasCareerSignal) return [];
-
+function getCareerAffiliates(_post) {
   return SITE_AFFILIATE_LINKS.filter((a) => a.type === 'career-service');
 }
 

@@ -1,11 +1,79 @@
 [
   {
+    "title": "Graitec earns Autodesk Gold Partner status",
+    "link": "https://aecmag.com/data-management/graitec-earns-autodesk-gold-partner-status",
+    "source": "AEC Magazine",
+    "pubDate": "2026-04-13T16:36:34.000Z",
+    "summary": "Achieved through Graitec File Sync, which streamlines migration, synchronisation, and backup The post Graitec earns Autodesk Gold Partner status appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk"
+    ],
+    "score": 8,
+    "freshnessScore": 2,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "AEC業界の注目ニュースです\n\nGraitec earns Autodesk Gold Partner status（4/13）\n\nhttps://aecmag.com/data-management/graitec-earns-autodesk-gold-partner-status\n\n#BIM #AEC #建設テック"
+  },
+  {
+    "title": "The agentic future of BIM",
+    "link": "https://aecmag.com/bim/the-agentic-future-of-bim",
+    "source": "AEC Magazine",
+    "pubDate": "2026-03-07T07:22:16.000Z",
+    "summary": "With AI, could solver-driven design tools radically reshape our industry in as little as five years? The post The agentic future of BIM appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai",
+      "agent"
+    ],
+    "score": 8,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nBIM導入から20年、建築・エンジニアリング・建設業界は新たな転換点を迎えています。RevitやArchicadなどの既存ツールは長年の知見を蓄積していますが、一方で大規模モデルの処理性能問題、コラボレーション上の制約、ベンダー独占による進化の停滞に直面しています。これまでは技術導入に数十年要しましたが、AI時代には5年以内に根本的な変化が起こる可能性が高まっており、業界内で次世代BIMツール開発競争が激化しています。\n\n【内容】\n注目される新しいビジョンは、BIMを「建設環境のOSのような存在」として再設計することです。これは単なるマーケティング概念ではなく、人間の意図と機械の実行を仲介する構造化データレイヤーの実現です。一方、AIエージェント技術が急速に進化しています。従来のChatGPTのような反応型AI（ユーザーの質問に応答するのみ）とは異なり、AIエージェントはプロジェクトデータを読み込み・解釈し、建物モデルを独立して修正できます。複数の専門AIエージェント（MEP、構造、コンプライアンス検証等）が協働し、人間が定めた設計パラメータ・規制条件の下で最適解を自動生成するようになります。\n\n【技術的ポイント】\nAIエージェントがBIM環境で機能するには、IFC（Industry Foundation Classes）などのオープンスタンダードに基づいた、ベンダー非依存の安定したデータレイヤーが不可欠です。現在、IFCによるラウンドトリップ処理でも情報劣化が発生し、各ベンダーの独占的スキーマが妨げになっています。エージェントがあらゆるフォーマット・サイロ化したデータにアクセス可能になるには、プロプライエタリな制約を超えた真のデータ流動性が必要です。\n\n【業界への影響】\nこのパラダイムシフトにより、設計プロセス自体が根本的に変わります。設計者は「何を作るか」の意図定義に専念し、「どう最適化するか」の計算・検証はAIエージェントが担当する分業体制へ移行します。既存のRevit・Archicadなどの支配的ポジションへの挑戦が活発化しており、VC資金も流入しています。ただし、BIMが単なる「ベンダー製ガーデン」のままでは、エージェント時代に対応できません。業界全体が真のデータ中立性を求め始めており、今後5年の標準化・オープン化の動向が市場構造を決定する転機となるでしょう。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "BIM × AI の最新事例👇\n\nThe agentic future of BIM（3/7）\n\nhttps://aecmag.com/bim/the-agentic-future-of-bim\n\n#BIM #AI #建設DX #AEC #建設テック #DX",
+    "titleJa": "BIMはAIエージェントのOS化へ—5年で産業が激変する"
+  },
+  {
     "title": "AEC Magazine March / April 2026",
     "link": "https://aecmag.com/featured/aec-magazine-march-april-2026",
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:36.000Z",
     "summary": "We dive deep into the future of AI in AEC - exploring the rise of agentic BIM and lots more The post AEC Magazine March / April 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -33,7 +101,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "建設×AI の実務事例が出ています\n\nAEC Magazine March / April 2026（3/3）\n\nhttps://aecmag.com/featured/aec-magazine-march-april-2026\n\n#BIM #AI #建設DX #AEC #建設テック #DX",
+    "postText": "AIがBIMを変える——最新情報です\n\nAEC Magazine March / April 2026（3/3）\n\nhttps://aecmag.com/featured/aec-magazine-march-april-2026\n\n#BIM #AI #建設DX #AEC #建設テック #DX",
     "titleJa": "エージェント型BIMの時代へ、AIが設計プロセスを根本から変える"
   },
   {
@@ -42,7 +110,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-25T17:18:25.000Z",
     "summary": "With design automation, AI, and data-driven approaches set to reshape AEC, NXT BLD has never felt more important The post NXT BLD 2026: a decade of looking around corners appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec",
@@ -69,7 +137,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "AEC業界の注目ニュースです\n\nNXT BLD 2026: a decade of looking around corners（2/25）\n\nhttps://aecmag.com/nxt-bld/nxt-bld-2026-a-decade-of-looking-around-corners\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
+    "postText": "建設テックの最前線情報\n\nNXT BLD 2026: a decade of looking around corners（2/25）\n\nhttps://aecmag.com/nxt-bld/nxt-bld-2026-a-decade-of-looking-around-corners\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
     "titleJa": "AI時代のAEC革命、NXT BLD 2026が示す建築・エンジニアリングの未来"
   },
   {
@@ -78,7 +146,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-18T16:56:45.000Z",
     "summary": "What World Labs investment means for AEC design workflows The post Autodesk’s $200m bet on spatial AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -113,7 +181,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-03T14:51:09.000Z",
     "summary": "UK construction technology company Qflow provides real-time material tracking and management software The post Autodesk invests £2M in construction material tracking firm appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.011Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -147,7 +215,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-01-23T11:29:22.000Z",
     "summary": "Models can be brought into Rhino, via the Cityweft platform, with support for Revit and SketchUp coming soon The post Cityweft adds 3D building data for England appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.011Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -171,7 +239,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "Revitユーザー注目の情報です\n\nCityweft adds 3D building data for England（1/23）\n\nhttps://aecmag.com/geospatial/cityweft-adds-3d-building-data-for-england\n\n#Revit #BIM #Autodesk #AEC #建設テック",
+    "postText": "Autodesk / Revit アップデート情報\n\nCityweft adds 3D building data for England（1/23）\n\nhttps://aecmag.com/geospatial/cityweft-adds-3d-building-data-for-england\n\n#Revit #BIM #Autodesk #AEC #建設テック",
     "titleJa": "イングランド全域の3D建物データがCityweftに統合、BIM設計の精度が向上"
   },
   {
@@ -180,7 +248,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-05T08:00:45.000Z",
     "summary": "Even the fastest GPU can stall if it runs out of memory. CAD, BIM visualisation, and AI workflows often demand more than you think, and it all adds up when multi-tasking, writes Greg Corke The post Why GPU memory matters for CAD, viz and AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.011Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -217,7 +285,7 @@
     "source": "BIMゲート",
     "pubDate": "2026-02-18T02:49:52.000Z",
     "summary": "オブジェクトの呼称と種類 RevitにおけるBIMオブジェクトは、一般に「ファミリ（※注1）」と呼ばれます。ファミリは、BIMモデルを構成する情報オブジェクトであり、形状・属性情報・振る舞いを併せ持つ点が特徴です。 Re […]",
-    "fetchedAt": "2026-04-16T05:35:54.849Z",
+    "fetchedAt": "2026-04-16T11:57:40.453Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -241,7 +309,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "Revitユーザー注目の情報です\n\nRevitのBIMオブジェクトについて（2/18）\n\nhttps://bimgate.jp/knowledge/2789\n\n#Revit #BIM #Autodesk #AEC #建設テック",
+    "postText": "Autodesk / Revit アップデート情報\n\nRevitのBIMオブジェクトについて（2/18）\n\nhttps://bimgate.jp/knowledge/2789\n\n#Revit #BIM #Autodesk #AEC #建設テック",
     "titleJa": "Revitファミリの階層構造を完全理解する：BIMオブジェクト設計の基礎"
   },
   {
@@ -250,7 +318,7 @@
     "source": "BIMゲート",
     "pubDate": "2026-02-18T02:46:33.000Z",
     "summary": "オブジェクトの呼称と種類 GLOOBEのオブジェクトは大きく分けて3種類に分類されます。まず、【専用オブジェクト（.glm）】と呼ばれる構造体や仕上げ、手摺といった建築要素に特化した専用属性を保有したオブジェクトです。 […]",
-    "fetchedAt": "2026-04-16T05:35:54.849Z",
+    "fetchedAt": "2026-04-16T11:57:40.453Z",
     "category": "GLOOBE",
     "categoryHits": [
       "gloobe"
@@ -283,7 +351,7 @@
     "source": "Autodesk News",
     "pubDate": "2026-04-15T12:45:16.000Z",
     "summary": "New recommendations outline practical steps to support responsible AI adoption across architecture, engineering, construction, and manufacturing",
-    "fetchedAt": "2026-04-16T05:35:54.414Z",
+    "fetchedAt": "2026-04-16T11:57:40.162Z",
     "category": "AI_DX",
     "categoryHits": [
       "ai"
@@ -315,7 +383,7 @@
     "source": "Autodesk News",
     "pubDate": "2026-03-24T14:56:49.000Z",
     "summary": "Autodesk Forma connects design and construction workflows across the AECO lifecycle.",
-    "fetchedAt": "2026-04-16T05:35:54.414Z",
+    "fetchedAt": "2026-04-16T11:57:40.162Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "construction cloud"
@@ -339,7 +407,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "建設テックの最前線情報\n\nAutodesk Construction Cloud is now Autodesk Forma（3/24）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-construction-cloud-is-now-autodesk-forma\n\n#BIM #AEC #建設テック",
+    "postText": "BIMエコシステムの最新情報👇\n\nAutodesk Construction Cloud is now Autodesk Forma（3/24）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-construction-cloud-is-now-autodesk-forma\n\n#BIM #AEC #建設テック",
     "titleJa": "Autodesk Construction Cloud が Autodesk Forma へ統合、設計から施工まで一貫流"
   },
   {
@@ -348,7 +416,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-15T12:12:25.000Z",
     "summary": "Chaos V-Ray 7, Update 3 to “unify real-time and final-quality rendering in a single workflow” The post Chaos brings real time rendering to V-Ray viewport appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.235Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -371,7 +439,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "AEC業界の注目ニュースです\n\nChaos brings real time rendering to V-Ray viewport（4/15）\n\nhttps://aecmag.com/visualisation/chaos-brings-real-time-rendering-to-v-ray-viewport\n\n#BIM #AEC #建設テック",
+    "postText": "BIMエコシステムの最新情報👇\n\nChaos brings real time rendering to V-Ray viewport（4/15）\n\nhttps://aecmag.com/visualisation/chaos-brings-real-time-rendering-to-v-ray-viewport\n\n#BIM #AEC #建設テック",
     "titleJa": ""
   },
   {
@@ -380,7 +448,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-09T13:50:53.000Z",
     "summary": "Intel expands CAD, BIM, and engineering software certifications for integrated Arc Pro graphics The post Intel moves to build pro graphics trust appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.235Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -413,7 +481,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:44.000Z",
     "summary": "AI could consolidate AEC firms, reshape design practice and elevate full-stack designers, transforming BIM into an intelligent, integrated decision hub The post AI, design, and re-shaping the AEC industry appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -440,7 +508,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "BIM × AI の最新事例👇\n\nAI, design, and re-shaping the AEC industry（3/3）\n\nhttps://aecmag.com/business/ai-design-and-re-shaping-the-aec-industry\n\n#BIM #AI #建設DX #AEC #建設テック #DX",
+    "postText": "AIがBIMを変える——最新情報です\n\nAI, design, and re-shaping the AEC industry（3/3）\n\nhttps://aecmag.com/business/ai-design-and-re-shaping-the-aec-industry\n\n#BIM #AI #建設DX #AEC #建設テック #DX",
     "titleJa": "AIがAEC業界を再編成へ　BIMは「知能統合プラットフォーム」に進化"
   },
   {
@@ -449,7 +517,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T06:00:14.000Z",
     "summary": "How Autodesk’s EULA shift reshaped the AI training debate The post Rewriting the rules appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -483,7 +551,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-05T07:00:07.000Z",
     "summary": "Amy Bunszel, EVP of AEC solutions, Autodesk, on what she expects to see from AI in 2026 The post AI in AEC: why better decisions matter more than faster tools appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -508,7 +576,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "BIMエコシステムの最新情報👇\n\nAI in AEC: why better decisions matter more than faster tools（2/5）\n\nhttps://aecmag.com/opinion/ai-in-aec-why-better-decisions-matter-more-than-faster-tools\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
+    "postText": "建設テックの最前線情報\n\nAI in AEC: why better decisions matter more than faster tools（2/5）\n\nhttps://aecmag.com/opinion/ai-in-aec-why-better-decisions-matter-more-than-faster-tools\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
     "titleJa": "AEC業界のAI活用が転換期へ、「速度」から「意思決定の質」へシフト"
   },
   {
@@ -517,7 +585,7 @@
     "source": "Autodesk News",
     "pubDate": "2026-04-13T15:26:13.000Z",
     "summary": "Mike Kelly to lead enterprise technology and AI adoption at Autodesk.",
-    "fetchedAt": "2026-04-16T05:35:54.414Z",
+    "fetchedAt": "2026-04-16T11:57:40.162Z",
     "category": "AI_DX",
     "categoryHits": [
       "ai"
@@ -540,7 +608,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "DX推進に役立つ情報です\n\nAutodesk appoints Mike Kelly as Chief Information Officer（4/13）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-appoints-mike-kelly-as-chief-information-officer\n\n#AI #建設DX #DX",
+    "postText": "建設DX / AIの最新動向👇\n\nAutodesk appoints Mike Kelly as Chief Information Officer（4/13）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-appoints-mike-kelly-as-chief-information-officer\n\n#AI #建設DX #DX",
     "titleJa": ""
   },
   {
@@ -549,7 +617,7 @@
     "source": "Autodesk News",
     "pubDate": "2026-04-09T12:56:38.000Z",
     "summary": "Autodesk launches Product Help MCP Server to power trusted AI answers across workflows.",
-    "fetchedAt": "2026-04-16T05:35:54.414Z",
+    "fetchedAt": "2026-04-16T11:57:40.162Z",
     "category": "AI_DX",
     "categoryHits": [
       "ai"
@@ -582,7 +650,7 @@
     "source": "Autodesk News",
     "pubDate": "2026-03-26T14:56:40.000Z",
     "summary": "Autodesk recognized in Fast Company’s 2026 Most Innovative Companies list for advancing historic and cultural preservation through BIM, reality capture, and cloud-based collaboration.",
-    "fetchedAt": "2026-04-16T05:35:54.414Z",
+    "fetchedAt": "2026-04-16T11:57:40.162Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim"
@@ -614,7 +682,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-16T04:47:40.000Z",
     "summary": "このたび、最新バージョンのBIMcloud SaaSのリリース作業が、数日以内に完了する予定となりましたのでお知らせいたします。 今回のリリースには、複数の機能改善および重要な不具合修正が含まれています。詳細については、関連ページ「BIMcloudの改善点一覧（英語版）」をご覧ください。※日本語ページが更新されたらリンクを修正します。 なお、本リリースの対象はBIMcloud SaaS（サブスクリプション版）をご利用中のお客様のみとなります。対象となる改善内容はすべて自動的に適用されますので、追加で行っていただく作業はありません。 ご質問やご意見がございましたら、どうぞお気軽にお知らせください。 Graphisoft カスタマーサポート",
-    "fetchedAt": "2026-04-16T05:35:52.439Z",
+    "fetchedAt": "2026-04-16T11:57:38.291Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft"
@@ -636,7 +704,8 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "Graphisoft / Archicad アップデート情報\n\nBIMcloud SaaS 2026年4月リリース（4/16）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/BIMcloud-SaaS-2026%E5%B9%B44%E6%9C%88%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9/ba-p/699699\n\n#Archicad #Graphisoft #BIM"
+    "postText": "Archicadユーザー向け情報です\n\nBIMcloud SaaS 2026年4月リリース（4/16）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/BIMcloud-SaaS-2026%E5%B9%B44%E6%9C%88%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9/ba-p/699699\n\n#Archicad #Graphisoft #BIM",
+    "titleJa": ""
   },
   {
     "title": "BIMx Web版でのPro機能の導入およびBIMcloudに関するお知らせ",
@@ -644,7 +713,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-08T01:45:51.000Z",
     "summary": "&nbsp; &nbsp; &nbsp;",
-    "fetchedAt": "2026-04-16T05:35:52.439Z",
+    "fetchedAt": "2026-04-16T11:57:38.291Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft",
@@ -677,7 +746,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-01T10:55:24.000Z",
     "summary": "&nbsp; &nbsp;",
-    "fetchedAt": "2026-04-16T05:35:52.439Z",
+    "fetchedAt": "2026-04-16T11:57:38.291Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft"
@@ -701,8 +770,38 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "Archicadユーザー向け情報です\n\n５月スタート BIMマネージャープログラム 受付開始！（4/1）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%EF%BC%95%E6%9C%88%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88-BIM%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0-%E5%8F%97%E4%BB%98%E9%96%8B%E5%A7%8B/ba-p/698103\n\n#Archicad #Graphisoft #BIM #AEC #建設テック",
+    "postText": "Graphisoft / Archicad アップデート情報\n\n５月スタート BIMマネージャープログラム 受付開始！（4/1）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%EF%BC%95%E6%9C%88%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88-BIM%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0-%E5%8F%97%E4%BB%98%E9%96%8B%E5%A7%8B/ba-p/698103\n\n#Archicad #Graphisoft #BIM #AEC #建設テック",
     "titleJa": "Graphisoft認定BIMマネージャー育成、5月開講プログラム受付開始"
+  },
+  {
+    "title": "Swegon to automate HVAC acoustic design",
+    "link": "https://aecmag.com/mep/swegon-to-automate-hvac-acoustic-design",
+    "source": "AEC Magazine",
+    "pubDate": "2026-04-16T07:07:43.000Z",
+    "summary": "Design Assist said to replace days of repetitive work with seconds of automated calculations The post Swegon to automate HVAC acoustic design appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "aec"
+    ],
+    "score": 6,
+    "freshnessScore": 3,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "建設テックの最前線情報\n\nSwegon to automate HVAC acoustic design（4/16）\n\nhttps://aecmag.com/mep/swegon-to-automate-hvac-acoustic-design\n\n#BIM #AEC #建設テック"
   },
   {
     "title": "Embodied carbon calcs for BIM objects",
@@ -710,7 +809,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-01T08:58:11.000Z",
     "summary": "NBS partners with Circular Ecology to launch practical guide for construction professionals The post Embodied carbon calcs for BIM objects appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.235Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -734,7 +833,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "AEC業界の注目ニュースです\n\nEmbodied carbon calcs for BIM objects（4/1）\n\nhttps://aecmag.com/sustainability/embodied-carbon-calcs-for-bim-objects\n\n#BIM #AEC #建設テック",
+    "postText": "建設テックの最前線情報\n\nEmbodied carbon calcs for BIM objects（4/1）\n\nhttps://aecmag.com/sustainability/embodied-carbon-calcs-for-bim-objects\n\n#BIM #AEC #建設テック",
     "titleJa": "BIMオブジェクトに炭素データを組み込む—NBS新ガイドが設計の透明性を変える"
   },
   {
@@ -743,7 +842,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:01.000Z",
     "summary": "Allplan is charting a measured path where openness, data sovereignty, and automation underpin its design-to-build strategy The post Design-to-build in the age of AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -768,7 +867,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "建設テックの最前線情報\n\nDesign-to-build in the age of AI（3/3）\n\nhttps://aecmag.com/bim/design-to-build-in-the-age-of-ai\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
+    "postText": "AEC業界の注目ニュースです\n\nDesign-to-build in the age of AI（3/3）\n\nhttps://aecmag.com/bim/design-to-build-in-the-age-of-ai\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
     "titleJa": "AIの時代、設計から施工へ一貫流動　Allplanが描くデザイン・トゥ・ビルド戦略"
   },
   {
@@ -777,7 +876,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:13.000Z",
     "summary": "From modelling tool to intelligence layer that continuously validates models The post Rethinking the BIM platform appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -801,7 +900,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "BIMエコシステムの最新情報👇\n\nRethinking the BIM platform（3/3）\n\nhttps://aecmag.com/bim/rethinking-the-bim-platform\n\n#BIM #AEC #建設テック",
+    "postText": "AEC業界の注目ニュースです\n\nRethinking the BIM platform（3/3）\n\nhttps://aecmag.com/bim/rethinking-the-bim-platform\n\n#BIM #AEC #建設テック",
     "titleJa": "BIMプラットフォームが自動検証する知能型システムへ進化、設計の品質管理を革新"
   },
   {
@@ -810,7 +909,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-20T10:02:15.000Z",
     "summary": "On-site reality capture analysis data pushed directly into the BIM collaboration platform The post Hexagon Multivista connects to Revizto appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -835,7 +934,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "BIMエコシステムの最新情報👇\n\nHexagon Multivista connects to Revizto（2/20）\n\nhttps://aecmag.com/reality-capture-modelling/hexagon-multivista-connects-to-revizto\n\n#BIM #AEC #建設テック",
+    "postText": "AEC業界の注目ニュースです\n\nHexagon Multivista connects to Revizto（2/20）\n\nhttps://aecmag.com/reality-capture-modelling/hexagon-multivista-connects-to-revizto\n\n#BIM #AEC #建設テック",
     "titleJa": "Hexagon Multivista、Reviztoと連携開始——現場スキャンの逸脱検出がBIM環境へ直結"
   },
   {
@@ -844,7 +943,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-03T05:00:07.000Z",
     "summary": "This tower handles CAD, BIM, and viz tasks efficiently while staying price-conscious The post Review: CyberPowerPC Intel Core U7WS Workstation appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -868,7 +967,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "BIMエコシステムの最新情報👇\n\nReview: CyberPowerPC Intel Core U7WS Workstation（2/3）\n\nhttps://aecmag.com/workstations/cyberpowerpc-intel-core-u7ws-workstation\n\n#BIM #AEC #建設テック",
+    "postText": "建設テックの最前線情報\n\nReview: CyberPowerPC Intel Core U7WS Workstation（2/3）\n\nhttps://aecmag.com/workstations/cyberpowerpc-intel-core-u7ws-workstation\n\n#BIM #AEC #建設テック",
     "titleJa": "CyberPowerPC初のBIM対応ワークステーション、Core Ultra 7で「価格対性能」の新基準"
   },
   {
@@ -877,7 +976,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-03T05:00:38.000Z",
     "summary": "We explore where small systems shine, where their limitations lie, and when a traditional tower still makes more sense The post Can a small workstation handle big BIM? appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -901,7 +1000,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "AEC業界の注目ニュースです\n\nCan a small workstation handle big BIM?（2/3）\n\nhttps://aecmag.com/workstations/can-a-small-workstation-really-handle-big-bim-cad-and-viz\n\n#BIM #AEC #建設テック",
+    "postText": "BIMエコシステムの最新情報👇\n\nCan a small workstation handle big BIM?（2/3）\n\nhttps://aecmag.com/workstations/can-a-small-workstation-really-handle-big-bim-cad-and-viz\n\n#BIM #AEC #建設テック",
     "titleJa": "コンパクトワークステーションでも大規模BIMは動く？性能の現実"
   },
   {
@@ -910,7 +1009,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-03T05:00:32.000Z",
     "summary": "Our top picks — from lightweight 14-inch models to take CAD and BIM on the road to 18-inch powerhouses The post Best enterprise workstation laptops 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.010Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -934,7 +1033,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "AEC業界の注目ニュースです\n\nBest enterprise workstation laptops 2026（2/3）\n\nhttps://aecmag.com/workstations/best-enterprise-class-workstation-laptops-2026\n\n#BIM #AEC #建設テック",
+    "postText": "BIMエコシステムの最新情報👇\n\nBest enterprise workstation laptops 2026（2/3）\n\nhttps://aecmag.com/workstations/best-enterprise-class-workstation-laptops-2026\n\n#BIM #AEC #建設テック",
     "titleJa": "2026年モバイルワークステーション選定ガイド　BIM・CAD対応14～18型の最新機種比較"
   },
   {
@@ -943,7 +1042,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-01-23T10:30:15.000Z",
     "summary": "Uses AI and automation to help firms get the most out of their established CMap processes The post CMap introduces CMap intelligence appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.011Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -977,7 +1076,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-01-20T16:08:33.000Z",
     "summary": "Deal will push agentic AI deeper into construction workflows The post Procore acquires Datagrid appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-16T05:35:57.236Z",
+    "fetchedAt": "2026-04-16T11:57:43.011Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -1003,13 +1102,13 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "建設テックの最前線情報\n\nProcore acquires Datagrid（1/20）\n\nhttps://aecmag.com/construction/procore-acquires-datagrid\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
+    "postText": "BIMエコシステムの最新情報👇\n\nProcore acquires Datagrid（1/20）\n\nhttps://aecmag.com/construction/procore-acquires-datagrid\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
     "titleJa": "Procoreが「エージェントAI」企業Datagridを買収、建設DXの次段階へ"
   },
   {
     "title": "[Nemetschek] Maxon Marks Its Official Entry Aec Market Its Real Time Archviz Solution",
     "link": "https://www.nemetschek.com/en/news-media/maxon-marks-its-official-entry-aec-market-its-real-time-archviz-solution",
-    "pubDate": "2026-04-16T05:36:04.600Z",
+    "pubDate": "2026-04-16T11:57:50.716Z",
     "summary": "Maxon Marks Its Official Entry Aec Market Its Real Time Archviz Solution",
     "source": "Nemetschek Newsroom",
     "category": "BIM_ECOSYSTEM",
@@ -1033,7 +1132,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "AEC業界の注目ニュースです\n\n[Nemetschek] Maxon Marks Its Official Entry Aec Market Its Real Time Archviz…（4/16）\n\nhttps://www.nemetschek.com/en/news-media/maxon-marks-its-official-entry-aec-market-its-real-time-archviz-solution\n\n#BIM #AEC #建設テック",
+    "postText": "建設テックの最前線情報\n\n[Nemetschek] Maxon Marks Its Official Entry Aec Market Its Real Time Archviz So…（4/16）\n\nhttps://www.nemetschek.com/en/news-media/maxon-marks-its-official-entry-aec-market-its-real-time-archviz-solution\n\n#BIM #AEC #建設テック",
     "titleJa": ""
   },
   {
@@ -1711,43 +1810,6 @@
     },
     "postText": "Archicadの最新情報👇\n\nArchicad 28.3.3 Hotfix リリース（2/10）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-28-3-3-Hotfix-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9/ba-p/692542\n\n#Archicad #Graphisoft #BIM",
     "titleJa": "Archicad 28.3.3ホットフィックス、ドキュメント作成の重大バグを解決"
-  },
-  {
-    "title": "The agentic future of BIM",
-    "link": "https://aecmag.com/bim/the-agentic-future-of-bim",
-    "source": "AEC Magazine",
-    "pubDate": "2026-03-07T07:22:16.000Z",
-    "summary": "With AI, could solver-driven design tools radically reshape our industry in as little as five years? The post The agentic future of BIM appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-09T22:44:49.217Z",
-    "category": "BIM_AI",
-    "categoryHits": [
-      "bim",
-      "ai"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
-    ],
-    "keywordHits": [
-      "bim",
-      "aec",
-      "ai",
-      "agent"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nBIM導入から20年、建築・エンジニアリング・建設業界は新たな転換点を迎えています。RevitやArchicadなどの既存ツールは長年の知見を蓄積していますが、一方で大規模モデルの処理性能問題、コラボレーション上の制約、ベンダー独占による進化の停滞に直面しています。これまでは技術導入に数十年要しましたが、AI時代には5年以内に根本的な変化が起こる可能性が高まっており、業界内で次世代BIMツール開発競争が激化しています。\n\n【内容】\n注目される新しいビジョンは、BIMを「建設環境のOSのような存在」として再設計することです。これは単なるマーケティング概念ではなく、人間の意図と機械の実行を仲介する構造化データレイヤーの実現です。一方、AIエージェント技術が急速に進化しています。従来のChatGPTのような反応型AI（ユーザーの質問に応答するのみ）とは異なり、AIエージェントはプロジェクトデータを読み込み・解釈し、建物モデルを独立して修正できます。複数の専門AIエージェント（MEP、構造、コンプライアンス検証等）が協働し、人間が定めた設計パラメータ・規制条件の下で最適解を自動生成するようになります。\n\n【技術的ポイント】\nAIエージェントがBIM環境で機能するには、IFC（Industry Foundation Classes）などのオープンスタンダードに基づいた、ベンダー非依存の安定したデータレイヤーが不可欠です。現在、IFCによるラウンドトリップ処理でも情報劣化が発生し、各ベンダーの独占的スキーマが妨げになっています。エージェントがあらゆるフォーマット・サイロ化したデータにアクセス可能になるには、プロプライエタリな制約を超えた真のデータ流動性が必要です。\n\n【業界への影響】\nこのパラダイムシフトにより、設計プロセス自体が根本的に変わります。設計者は「何を作るか」の意図定義に専念し、「どう最適化するか」の計算・検証はAIエージェントが担当する分業体制へ移行します。既存のRevit・Archicadなどの支配的ポジションへの挑戦が活発化しており、VC資金も流入しています。ただし、BIMが単なる「ベンダー製ガーデン」のままでは、エージェント時代に対応できません。業界全体が真のデータ中立性を求め始めており、今後5年の標準化・オープン化の動向が市場構造を決定する転機となるでしょう。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "建設×AI の実務事例が出ています\n\nThe agentic future of BIM（3/7）\n\nhttps://aecmag.com/bim/the-agentic-future-of-bim\n\n#BIM #AI #建設DX #AEC #建設テック #DX",
-    "titleJa": "BIMはAIエージェントのOS化へ—5年で産業が激変する"
   },
   {
     "title": "Qonic introduces native drawing generation",

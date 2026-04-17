@@ -3292,7 +3292,7 @@ function buildGuidesIndexPage(posts) {
 }
 
 const HOME_FEATURED_POSTS = 3;
-const HOME_ARTICLES_PER_PAGE = 24;
+const HOME_ARTICLES_PER_PAGE = 10;
 
 function homeArchiveUrl(pageNumber) {
   return pageNumber <= 1 ? `${SITE_URL}/` : `${SITE_URL}/page/${pageNumber}/`;

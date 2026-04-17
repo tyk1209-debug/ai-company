@@ -2,11 +2,8 @@ name: AI News Autopilot
 
 on:
   schedule:
-    - cron: '0 22 * * *'
-    - cron: '0 3 * * *'
     - cron: '0 11 * * *'
-    - cron: '0 0 * * 1'
-    - cron: '0 1 * * 1'
+    - cron: '0 11 * * 5'
   workflow_dispatch:
 
 jobs:
@@ -113,7 +110,7 @@ jobs:
   generate-video:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 11 * * *'
+    if: github.event_name == 'workflow_dispatch'
 
     steps:
       - name: Checkout repository
@@ -144,7 +141,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    if: github.event_name == 'schedule' && github.event.schedule == '0 1 * * 1'
+    if: github.event_name == 'schedule' && github.event.schedule == '0 11 * * 5'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

@@ -18,6 +18,7 @@ const { scrapeJapaneseSources } = require("./scraper.js");
 const { normalizeArticles } = require("./normalizeNews.js");
 const { dedupeNews } = require("./dedupeNews.js");
 const { scoreNews } = require("./scoreNews.js");
+const { adjustScoreWeights } = require("./autopilot.js");
 const { generatePosts } = require("./generatePost.js");
 const { applyAffiliateLinks } = require("./affiliateLinks.js");
 const { postArticles } = require("./postToX.js");
@@ -219,7 +220,8 @@ async function main() {
   const deduped = dedupeNews(raw);
   saveJson("deduped_news.json", deduped);
 
-  const scored = scoreNews(deduped);
+  const weights = adjustScoreWeights();
+  const scored = scoreNews(deduped, weights);
   saveJson("scored_news.json", scored);
 
   const selected = scored.filter((a) => {

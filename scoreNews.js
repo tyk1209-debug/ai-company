@@ -204,9 +204,13 @@ function scoreArticle(article) {
   };
 }
 
-function scoreNews(articles) {
+function scoreNews(articles, weights = {}) {
   return articles
     .map(scoreArticle)
+    .map((a) => {
+      const w = weights[a.category] ?? 1.0;
+      return { ...a, score: Math.round(a.score * w * 100) / 100 };
+    })
     .sort((a, b) => b.score - a.score);
 }
 

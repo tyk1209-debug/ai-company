@@ -75,7 +75,10 @@
       "Bash(dir \"C:\\\\Users\\\\tyk12\\\\ai-company\\\\categories\"\")",
       "Bash(ls C:/Users/tyk12/ai-company/*.js C:/Users/tyk12/ai-company/*.html)",
       "Bash(ls C:/Users/tyk12/ai-company/posts/*.html)",
-      "Bash(grep -v \"^\\\\s*//\")"
+      "Bash(grep -v \"^\\\\s*//\")",
+      "Bash(python3 -c ' *)",
+      "Bash(git ls-tree *)",
+      "Bash(git fetch *)"
     ]
   }
 }

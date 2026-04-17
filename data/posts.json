@@ -1,35 +1,706 @@
 [
   {
-    "title": "London borough cuts maintenance costs with ‘digital twin’",
-    "link": "https://aecmag.com/geospatial/london-borough-cuts-maintenance-costs-with-digital-twin",
+    "title": "Autodesk strengthens bridge between Revit and Forma",
+    "link": "https://aecmag.com/bim/autodesk-strengthens-bridge-between-revit-and-forma",
     "source": "AEC Magazine",
-    "pubDate": "2026-04-16T05:45:56.000Z",
-    "summary": "High-res drone imagery allowing “faster and more cost-effective” maintenance surveys The post London borough cuts maintenance costs with ‘digital twin’ appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.973Z",
-    "category": "BIM_ECOSYSTEM",
+    "pubDate": "2026-04-07T15:00:12.000Z",
+    "summary": "Autodesk's mature BIM authoring tool connects to the Forma AECO platform The post Autodesk strengthens bridge between Revit and Forma appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.207Z",
+    "category": "REVIT",
     "categoryHits": [
-      "aec",
-      "digital twin"
+      "revit"
     ],
     "allCategories": [
+      "REVIT",
       "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
+      "revit",
+      "bim",
       "aec",
-      "digital twin"
+      "autodesk"
+    ],
+    "score": 16.38,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "RevitがFormaと直結へ—クラウド設計がデスクトップで完結",
+    "bodyJa": "【背景】\nAutodeskは従来、BIM作成ツール（Revit）とAECO向けクラウドプラットフォーム（Forma）を独立したシステムとして展開してきました。しかし設計プロセスの早期段階から詳細設計まで一気通貫で対応する需要が高まり、デスクトップとクラウドの統合をさらに深める必要性が生じていました。\n\n【内容】\nAutodeskは「Revit as a Forma Connected Client」のテックプレビューを発表しました。これにより、Forma Site DesignやForma Building Designのデータを手動ファイル交換なしにRevit上で直接利用できるようになります。さらにForma Data Marketplace から地形、周辺建物、敷地情報といった文脈データをクリック数回で追加可能になります。加えてRevit内で環境分析などのFormaクラウド機能が直接実行でき、Revitユーザーはクラウドプラットフォームへのアクセスが必要なくなります。また、Revit全ユーザーがForma Site Design、Forma Building Design、Forma Board、Forma Data Management Essentialsへのアクセス権を獲得します。\n\n【技術的ポイント】\n本統合の最大の特徴は、地理座標系を保ったネイティブモデルでのデータ受け渡しです。Forma Building Designの早期設計段階で建物の日照・採光・カーボン分析を行い、その結果をそのままRevitの詳細設計段階へ引き継げます。これにより座標ズレや属性喪失といった従来の相互運用性の課題を解消します。加えてAutodesk Assistantが搭載されたことで、AIが業界固有の文脈を理解した上でタスク実行やAutodeskプロダクト間の連携をサポートするようになります。\n\n【業界への影響】\nこの統合によってAECワークフロー全体の効率化が実現します。従来は基本構想段階と実施設計段階で異なるツールを使用し、データ変換による損失が生じていました。今後はFormaの概念設計機能からRevitの詳細設計・施工図作成まで同一プラットフォーム上で完結することで、再作業削減と設計精度向上が期待できます。特にFormaの設計自動化（ファサード・平面図の自動生成）とRevitの詳細モデリング機能の連携により、大規模プロジェクトや反復設計の生産性が大幅に改善される見込みです。",
+    "xPostBody": "🏗️ RevitがFormaクラウドと完全統合へ。これまで手動でファイル交換していた早期設計と詳細設計のデータが、座標を保ったまま直結。日照分析などクラウド機能もRevit内で実行可能に。設計ワークフロー全体の再定義が始まります。 #Revit #BIM",
+    "japaneseSummary": "🏗️ RevitがFormaクラウドと完全統合へ。これまで手動でファイル交換していた早期設計と詳細設計のデータが、座標を保ったまま直結。日照分析などクラウド機能もRevit内で実行可能に。設計ワークフロー全体の再定義が始まります。 #Revit #BIM",
+    "hallucinationRisk": {
+      "score": "MEDIUM",
+      "flags": [
+        "統合",
+        "「完全統合へ」という断定的表現：元記事は統合の強化（strengthen）であり、完全性の段階は不明",
+        "「座標を保ったまま直結」：記事から座標保持の技術仕様が確認できない",
+        "「日照分析などクラウド機能もRevit内で実行可能に」：実装状況の具体性が不明確"
+      ],
+      "reason": "要約は統合強化の方向性は捉えているが、実装の完全性と具体的な技術仕様について、元記事から検証できない詳細を断定的に述べている。"
+    },
+    "postText": "🏗️ RevitがFormaクラウドと完全統合へ。これまで手動でファイル交換していた早期設計と詳細設計のデータが、座標を保ったまま直結。日照分析などクラウド機能もRevit内で実行可能に。設計ワークフロー全体の再定義が始まります。 #Revit #BIM\n\nhttps://aecmag.com/bim/autodesk-strengthens-bridge-between-revit-and-forma"
+  },
+  {
+    "title": "Maxon launches RedShift for Archviz",
+    "link": "https://aecmag.com/visualisation/maxon-launches-redshift-for-archviz",
+    "source": "AEC Magazine",
+    "pubDate": "2026-03-18T09:25:14.000Z",
+    "summary": "Users of Vectorworks, Revit and Archicad given access to Maxon’s “cinematic rendering technology” The post Maxon launches RedShift for Archviz appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.207Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "ARCHICAD",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "revit",
+      "archicad",
+      "aec"
+    ],
+    "score": 15.21,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "Maxonがアーキヴィズ向けRedShiftを正式リリース、RevitとArchicadに統合",
+    "bodyJa": "【背景】\n建築ビジュアライゼーション市場は、設計プロセスの初期段階でのクライアント説得力やデザイン意思決定の精度向上が求められています。従来、高品質なレンダリングはBIMオーサリングツールの外部で専門ソフトウェアを使用する必要があり、ワークフローの複雑化や時間ロスが課題でした。Maxonはこうした市場ニーズに対応するため、ハリウッド映画制作で使用される高度なレンダリング技術をアーキテクチャ向けに適用する戦略を進めています。\n\n【内容】\nMaxonは「RedShift for Archviz」プラグインの商用版をVectorworksに、ベータ版をRevit向けにリリースし、Archicad版も2026年中にリリース予定です。このプラグインにより、建築家やインテリアデザイナーはBIM環境を離れることなく、リアルタイムで建築ビジュアライゼーションを実現できます。機能としては、時間帯や太陽の位置、空の条件をコントロール可能で、家具・車両・植物・人物などの高品質アセットライブラリを活用できます。また、ポリッシュコンクリート、ブラッシュメタル、ガラス、木材、テキスタイルなど物理的に正確なマテリアルをサポートしており、さらに高度な可視化が必要な場合はワンクリックでCinema 4Dに送信してライティング調整やフライスルー制作が可能です。\n\n【技術的ポイント】\nRedShift for Archvizの技術的な要点は、BIMオーサリングツール内でのネイティブレンダリングエンジン統合にあります。Revit、Archicad、VectorworksといったプロプライエタリなBIM環境内でシームレスに動作し、モデル変更の即座な反映が実現されています。リアルタイムプレビューとシーン送信ワークフローにより、軽量なレンダリングはプラグイン内で、複雑なエフェクトはCinema 4Dで処理する柔軟な設計が特徴です。これはIFCなどのオープンフォーマットとは異なり、各プラットフォームの深い統合を活用したアプローチです。\n\n【業界への影響】\nこのリリースは建築ビジュアライゼーション市場に大きな変化をもたらします。設計初期段階でのクライアント説得力が向上し、設計検討サイクルが加速します。従来はレンダリング専門家に依存していた業務が、設計者自身で対応可能になるため、プロジェクトターンアラウンド時間の短縮と各種ビジュアル制作コストの削減が期待できます。またVectorworks、Revit、Archicadという主要BIMプラットフォームへの対応展開により、大規模な設計事務所から中堅企業まで広範な採用が見込まれ、アーキテクチャビジュアライゼーションの民主化につながるでしょう。",
+    "xPostBody": "🏢 Maxonがハリウッド映画級のレンダリング技術をRevit・Archicad向けプラグインとしてリリース。BIM環境内でリアルタイムに高品質ビジュアライゼーションが可能に。従来は外部ソフト任せだった建築ビジュアライゼーション工程が劇的に効率化します。 #Revit #BIM",
+    "japaneseSummary": "🏢 Maxonがハリウッド映画級のレンダリング技術をRevit・Archicad向けプラグインとしてリリース。BIM環境内でリアルタイムに高品質ビジュアライゼーションが可能に。従来は外部ソフト任せだった建築ビジュアライゼーション工程が劇的に効率化します。 #Revit #BIM",
+    "hallucinationRisk": {
+      "score": "MEDIUM",
+      "flags": [
+        "が可能",
+        "「リアルタイムに高品質ビジュアライゼーションが可能」という具体的な機能説明が元記事に明記されていない",
+        "「従来は外部ソフト任せだった工程が劇的に効率化」という効果の大きさが元記事にない",
+        "Vectorworksへの対応がタイトルと要約に記載されていない（元記事概要に含まれる）"
+      ],
+      "reason": "元記事の要約には対応ソフト（Vectorworks含む）と「cinematic rendering technology」の提供開始のみが記載されており、要約は具体的な機能や効果を過度に詳述・誇張している傾向がある。"
+    },
+    "postText": "🏢 Maxonがハリウッド映画級のレンダリング技術をRevit・Archicad向けプラグインとしてリリース。BIM環境内でリアルタイムに高品質ビジュアライゼーションが可能に。従来は外部ソフト任せだった建築ビジュアライゼーション工程が劇的に効率化します。 #Revit #BIM\n\nhttps://aecmag.com/visualisation/maxon-launches-redshift-for-archviz"
+  },
+  {
+    "title": "Industry Insights “Embracing Challenges and Opportunities of using openBIM® for Increasing Efficiency in the Construction Process”",
+    "link": "https://www.buildingsmart.org/industry-insights-embracing-challenges-and-opportunities-of-using-openbim-for-increasing-efficiency-in-the-construction-process",
+    "source": "buildingSMART International",
+    "pubDate": "2026-04-16T12:30:14.000Z",
+    "summary": "Read about Construction Industry leaders perspective on embracing challenges and opportunities of using openBIM for increasing efficiency: Link The post Industry Insights “Embracing Challenges and Opportunities of using openBIM® for Increasing Efficiency in the Construction Process” appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-17T14:02:00.503Z",
+    "category": "IFC",
+    "categoryHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "allCategories": [
+      "IFC"
+    ],
+    "keywordHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "score": 12,
+    "freshnessScore": 2,
+    "relevant": true,
+    "titleJa": "openBIM導入で建設効率が激変、業界リーダーが語る課題と可能性",
+    "bodyJa": "【背景】建設業界は長年、異なるソフトウェアやシステム間のデータ互換性の問題に悩まされてきました。設計から施工、運用まで各段階で異なるプラットフォームが使われ、情報の二重入力や齟齬が発生することで、プロジェクト遅延やコスト増加につながっていました。openBIM標準の普及が進む中、業界リーダーたちは、この仕様がどのように建設プロセスの効率化を実現できるかに注目しています。\n\n【内容】buildingSMART Internationalが発表した本レポートは、openBIM導入における実践的な課題と機会をまとめたものです。建設業界の経営層・技術責任者らが、IFC（Industry Foundation Classes）標準に基づくワークフロー導入による効率化の事例、および導入時の現実的な障壁を語っています。データの一元管理による設計変更への迅速な対応、施工段階でのBIMモデル活用による手戻り削減、さらには運用保守フェーズまでライフサイクル全体でのデータ継続性が実現されることが示されています。\n\n【技術的ポイント】openBIM（オープンBIM）はIFC形式に基づいており、ベンダーロックインを排除し、複数のBIMツール間での相互運用性を確保します。これにより、RevitやArchiCAD、他のAECソフトで作成されたモデルをシームレスに交換・統合できます。LOD（詳細度レベル）の概念を共有することで、各段階で必要な情報粒度が明確になり、データ品質管理が容易になります。\n\n【業界への影響】openBIM採用は設計事務所、施工企業、発注者の間における情報流通の透明性を大幅に高めます。施工現場ではBIMモデルが単なる設計ツールではなく、施工管理・原価管理・品質管理の実装ツールとなり、リアルタイム性が向上します。また、ベンダー非依存のため企業規模や投資規模に関わらず採用でき、中小建設企業も大型プロジェクトに参画しやすくなります。業界全体の生産性向上に向けた標準化の加速が期待されます。",
+    "xPostBody": "🏗️ openBIM導入で建設現場が変わる。異なるソフト間のデータ互換性が実現されれば、設計から施工、運用まで一貫したBIMワークフローが可能に。業界リーダーたちが語る現実的な課題と、その先にある効率化の可能性を知りたい方は必見です。 #IFC #BIM",
+    "japaneseSummary": "🏗️ openBIM導入で建設現場が変わる。異なるソフト間のデータ互換性が実現されれば、設計から施工、運用まで一貫したBIMワークフローが可能に。業界リーダーたちが語る現実的な課題と、その先にある効率化の可能性を知りたい方は必見です。 #IFC #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [
+        "が可能"
+      ],
+      "reason": "要約は元記事の概要と矛盾せず、openBIM導入による効率化と業界リーダーの観点という基本的な主題を正しく反映しており、検証不可能だが重大な断定や具体的な虚偽情報は含まれていない。"
+    },
+    "postText": "🏗️ openBIM導入で建設現場が変わる。異なるソフト間のデータ互換性が実現されれば、設計から施工、運用まで一貫したBIMワークフローが可能に。業界リーダーたちが語る現実的な課題と、その先にある効率化の可能性を知りたい方は必見です。 #IFC #BIM\n\nhttps://www.buildingsmart.org/industry-insights-embracing-challenges-and-opportunities-of-using-openbim-for-increasing-efficiency-in-the-construction-process"
+  },
+  {
+    "title": "The first buildingSMART openBIM Hackathon in Porto is complete",
+    "link": "https://www.buildingsmart.org/the-first-buildingsmart-openbim-hackathon-in-porto-is-complete",
+    "source": "buildingSMART International",
+    "pubDate": "2026-04-14T15:05:06.000Z",
+    "summary": "The first buildingSMART openBIM Hackathon is complete - and it delivered more than expected. Over 50 hours, 47 participants across 9 teams worked under real pressure to build solutions that work in practice.… The post The first buildingSMART openBIM Hackathon in Porto is complete appeared first on buildingSMART International.",
+    "fetchedAt": "2026-04-17T14:02:00.503Z",
+    "category": "IFC",
+    "categoryHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "allCategories": [
+      "IFC"
+    ],
+    "keywordHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "score": 12,
+    "freshnessScore": 2,
+    "relevant": true,
+    "titleJa": "openBIM初のハッカソンがポルトで完結、9チーム47名が実践的ソリューション開発",
+    "bodyJa": "【背景】\nbuildinSMARTが主催するopenBIMハッカソンは、BIM業界の国際的な協働とイノベーション促進を目的とした初の試みです。IFC（Industry Foundation Classes）標準に基づいた相互運用性の実現と、実務レベルでの課題解決を目指すイベントです。デジタルツイン時代において、ベンダー非依存のオープンスタンダードの重要性が高まる中、実践的なソリューション開発の場が求められていました。\n\n【内容】\nポルトで開催されたこのハッカソンには、47名の参加者が9チームを構成して参加し、50時間以上にわたってプロトタイプ開発に取り組みました。開発されたソリューションは、単なるアイデアではなく実運用を想定した実装品質が求められました。複数国から集まったプログラマー、BIM専門家、設計者が協力し、IFC形式の相互運用性に関する具体的な課題への対応や、オープンスタンダードを活用した革新的なツール開発が行われました。\n\n【技術的ポイント】\nこのハッカソンの成果はIFC標準の実装強化と、エコシステムの拡張に直結します。参加チームが開発したソリューションは、既存のBIMアプリケーション間での相互運用性を検証し、標準仕様の問題点や改善点を明らかにしました。openBIM推進の観点から、実践的な検証データが得られたことは、IFC仕様の今後の進化に貴重な知見となります。\n\n【業界への影響】\nこのハッカソンの成功は、BIM業界のオープン化とコラボレーション文化の醸成を加速させます。ベンダー依存を減らし、相互運用性を高めるための具体的なソリューションが生まれたことで、実務現場でのIFC採用の障壁が低下します。また、国際的な人材ネットワーク構築により、今後の建設DX推進における標準化への認識が業界全体で高まるでしょう。",
+    "xPostBody": "🏗️ buildingSMARTの初のopenBIMハッカソンがポルトで完結。47人の参加者が9チームに分かれ、50時間以上かけてIFC標準に基づく実践的なソリューションを開発。ベンダー非依存のオープンなBIMエコシステム実現へ、実装レベルでの課題解決が始まりました。 #IFC #BIM",
+    "japaneseSummary": "🏗️ buildingSMARTの初のopenBIMハッカソンがポルトで完結。47人の参加者が9チームに分かれ、50時間以上かけてIFC標準に基づく実践的なソリューションを開発。ベンダー非依存のオープンなBIMエコシステム実現へ、実装レベルでの課題解決が始まりました。 #IFC #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約は元記事の基本情報（開催地ポルト、参加者47名、9チーム、50時間以上、IFC標準、openBIMエコシステム）と整合しており、検証可能な情報に誤りなく、過度な誇張も含まれていない。"
+    },
+    "postText": "🏗️ buildingSMARTの初のopenBIMハッカソンがポルトで完結。47人の参加者が9チームに分かれ、50時間以上かけてIFC標準に基づく実践的なソリューションを開発。ベンダー非依存のオープンなBIMエコシステム実現へ、実装レベルでの課題解決が始まりました。 #IFC #BIM\n\nhttps://www.buildingsmart.org/the-first-buildingsmart-openbim-hackathon-in-porto-is-complete"
+  },
+  {
+    "title": "USERFEST2026 エントリー開始しています！",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/USERFEST2026-%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC%E9%96%8B%E5%A7%8B%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99/ba-p/699703",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-04-16T05:28:55.000Z",
+    "summary": "今年は東京（浜松町）開催！ 開催まであと2か月を切りました！エントリーも始まっていますので、過去に参加された方も、初めましてな方も、ぜひご参加ください！ 開催日時：2026年6月12日（金） 11：00開場 12：00スタート 会 場：東京都立産業貿易センター「浜松町館」5F参 加 費 ：無料 （懇親会は6,000円を予定しています） 申込締切：2026年6月2日 参加申し込みや、セッションの内容など、USERFEST2026特集ページをチェックしてください！※社内申請に使えるパンフレットもご用意しています！USERFEST2026特集ページ 初心者から上級者まで、設計、施工、AI、ビジュアライズなどさまざまなテーマでArchicadを語るスペシャルなイチニチとなります！なにより共通言語＝Archicadで語り合える仲間とたくさん出会えます！みなさんのご参加をお待ちしています！",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft",
+      "ai"
+    ],
+    "score": 11,
+    "freshnessScore": 2,
+    "relevant": true,
+    "titleJa": "Archicad最大級ユーザーカンファレンス USERFEST2026、6月開催決定—エントリー受付中",
+    "bodyJa": "【背景】\nGraphisoftが展開するArchicadは、建築・建設業界で最も広く採用されるBIMソフトの一つです。同社が毎年開催するUSERFESTは、ユーザーコミュニティが一堂に集まり、最新機能や活用事例を共有する重要なイベントです。2026年は東京での開催が決定し、BIM導入が加速する日本市場の関心も高まっています。\n\n【内容】\nUSERFEST2026は2026年6月12日（金）、東京都立産業貿易センター浜松町館5階で開催されます。開場は11時、スタート12時で、参加費は無料（懇親会のみ6,000円）です。申込締切は6月2日となっています。設計から施工、AI活用、ビジュアライズなど、初心者から上級者まで対象とした多様なセッションが予定されており、Archicadユーザーが実務知見を交換する場となります。社内稟議用のパンフレットも用意されています。\n\n【技術的ポイント】\nArchicadはIFCフォーマット対応やパラメトリック設計、リアルタイムコラボレーション機能などが強化されており、USERFESTではこれらの最新機能活用法が詳しく解説される見込みです。特にAIやビジュアライズセッションは、設計生産性向上やクライアント提案の高度化を目指すユーザーにとって有用な情報源となるでしょう。\n\n【業界への影響】\nBIM義務化の動きが加速する中、Archicadユーザーのスキル向上は業界全体の生産性向上に直結します。本イベントを通じた知見共有やコミュニティ形成は、設計事務所や施工企業、ゼネコンのデジタル変革を促進する重要な機会となります。また、国内ユーザーの実践例が多数共有されることで、導入検討企業の判断材料も増え、Archicad採用の加速が期待できます。",
+    "xPostBody": "🏗️ Archicad最大級のユーザーカンファレンス USERFEST2026が東京で6月開催。設計・施工・AI・ビジュアライズなど、初心者から上級者まで対象の豊富なセッションで、BIM活用の最新知見が集約されます。参加費無料、エントリー受付中です。 #Archicad #BIM",
+    "japaneseSummary": "🏗️ Archicad最大級のユーザーカンファレンス USERFEST2026が東京で6月開催。設計・施工・AI・ビジュアライズなど、初心者から上級者まで対象の豊富なセッションで、BIM活用の最新知見が集約されます。参加費無料、エントリー受付中です。 #Archicad #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [
+        "無料"
+      ],
+      "reason": "要約は元記事の開催日時、場所、参加費無料、対象テーマ（設計・施工・AI・ビジュアライズ）、初心者から上級者対象という主要情報を正確に反映しており、ハルシネーションは認められません。"
+    },
+    "postText": "🏗️ Archicad最大級のユーザーカンファレンス USERFEST2026が東京で6月開催。設計・施工・AI・ビジュアライズなど、初心者から上級者まで対象の豊富なセッションで、BIM活用の最新知見が集約されます。参加費無料、エントリー受付中です。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/USERFEST2026-%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC%E9%96%8B%E5%A7%8B%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99/ba-p/699703"
+  },
+  {
+    "title": "Graphisoft ID のセキュリティアップデート",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Graphisoft-ID-%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/695546",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-03-16T08:59:18.000Z",
+    "summary": "Graphisoftでは、お客様のデータを保護し、Graphisoft IDアカウントの安全性を確保することに取り組んでいます。私たちは常に最新のセキュリティ基準を満たすため、継続的にセキュリティの改善を行っています。 今回のアップデートでは、次の2つの重要な対応を行います。 非アクティブなアカウントに対する強制パスワード変更 実際のユーザーによるサインインであることを確認するためのCAPTCHAの導入 では、これらの変更は何を意味し、どのような影響があるのでしょうか。 Graphisoft IDのサインイン頻度によって、影響の受け方は異なります。 非アクティブアカウントに対する強制パスワード変更 Graphisoft IDアカウントには、氏名やメールアドレスなどの個人情報に加え、すべてのライセンスキーへのアクセスなど重要な情報が含まれています。これらの情報への不正アクセスを防ぐため、長期間使用されていないアカウントに対して、段階的に強制パスワード変更を導入します。 **「非アクティブアカウント（inactive account）」**とは、以下のいずれにもサインインしていないGraphisoft IDアカウントを指します。 Archicad BIMxモバイルアプリ BIMcloud SaaS Graphisoftのサービスサイト Graphisoft公式サイト Graphisoft Community Graphisoft Learn Graphisoft IDページ Graphisoft Webstore 最初の段階では、2023年以降サインインしていないすべてのアカウントが対象となります。その後のフェーズでは、1年以上利用されていないアカウントを対象に見直しを行う予定です。 データベースを常に最新の状態に保ち、皆様のデータを安全に守るため、今後も非アクティブアカウントの状況を定期的かつ継続的に監視していきます。 アカウントを回復するには お使いのGraphisoft IDが対象となった場合は、サインインページにある「Forgot password?（パスワードをお忘れですか？）」からパスワードをリセットできます。 Graphisoft IDへのCAPTCHAの導入 Graphisoftのすべてのウェブサイトにおいて、安心してサービスをご利用いただけるよう、CAPTCHAを導入します。 CAPTCHAは、不正な大量アクセスやスパムなどの悪意ある活動を防止するための、業界標準の技術です。 今後数か月の間に、Graphisoftのすべてのウェブサイトの登録およびサインインプロセスにCAPTCHAを段階的に導入していきます。 新しいGraphisoft IDの登録では、CAPTCHA認証が必須となります。 サインイン時には、複数回のログイン失敗や不審なアクセスパターンが検出された場合にCAPTCHAが表示されます。 さらにセキュリティを強化するには：多要素認証（MFA） Graphisoft IDアカウントのセキュリティをさらに高めたい場合は、多要素認証（Multi-Factor Authentication / MFA） を有効にすることもできます。 詳細はこちらをご参照ください。https://support.graphisoft.com/hc/en-us/articles/30578874208017-About-Multi-Factor-Authentication-MFA-in-generalGraphisoft IT・カスタマーサポートチーム",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft",
+      "bimx"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft",
+      "bimx"
+    ],
+    "score": 11,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "Archicad利用者必読、Graphisoft IDが段階的セキュリティ強化へ",
+    "bodyJa": "【背景】\nGraphisoftは、BIM設計ソフトArchicadおよびBIMcloud、BIMxなどのクラウドサービスを提供するプラットフォーム企業です。これらのサービスへのアクセスを統一管理するGraphisoft IDアカウントには、ライセンスキーや個人情報が集約されており、セキュリティリスクが高まっています。近年、クラウドベースのBIMシステムへの不正アクセス事例が増加する中、Graphisoftは継続的にセキュリティ基準を強化する必要に迫られています。\n\n【内容】\nGraphisoftは2つの重要なセキュリティアップデートを段階的に実施します。第一に、非アクティブアカウント（2023年以降サインインしていないアカウント）に対して強制パスワード変更を導入し、その後1年以上未利用のアカウントへも拡大します。第二に、Archicad、BIMx、BIMcloud SaaS、Graphisoftサービスサイト、Community、Webstoreなど全ウェブサイトの登録・サインインプロセスにCAPTCHA認証を段階的に導入します。新規登録時はCAPTCHA認証が必須となり、サインイン時は複数回失敗や不審なアクセスパターン検出時に表示されます。\n\n【技術的ポイント】\nCAPTCHAは業界標準のボット対策技術で、Archicadユーザーの多くが経験する一般的な認証方式です。多要素認証（MFA）の利用も推奨されており、Graphisoft IDページで設定可能です。非アクティブアカウントの定義は複数のサービスへの統合ログインで判定され、BIMcloud SaaSなどのクラウド型BIMプラットフォームの利用実績が考慮されます。これにより、全サービス横断的なセキュリティモニタリングが実現します。\n\n【業界への影響】\nArchicad導入企業やBIMコーディネーター、設計事務所のユーザーは、長期間サインインしていないアカウント保有者に対してパスワードリセットを事前に通知する運用が必要になります。特にBIMcloud SaaSを複数プロジェクトで運用する環境では、全員がアクティブ状態を維持しなければなりません。一方、継続的なセキュリティ強化により、ライセンス管理やBIMデータへのアクセス制御がより堅牢になり、建設DXプロジェクトの情報セキュリティ対策が標準化されることは業界全体にとってポジティブです。",
+    "xPostBody": "🏢 Graphisoft IDが段階的セキュリティ強化。2023年以降サインインしていないArchicadユーザーのアカウントは強制パスワード変更対象になります。加えて全サービスにCAPTCHA導入で、BIMcloud SaaSなどのクラウドBIMプラットフォームのセキュリティが一段と強まります。 #Archicad #BIM",
+    "japaneseSummary": "🏢 Graphisoft IDが段階的セキュリティ強化。2023年以降サインインしていないArchicadユーザーのアカウントは強制パスワード変更対象になります。加えて全サービスにCAPTCHA導入で、BIMcloud SaaSなどのクラウドBIMプラットフォームのセキュリティが一段と強まります。 #Archicad #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約は元記事の主要なセキュリティ対策（非アクティブアカウントの強制パスワード変更、CAPTCHA導入、MFA推奨）を正確に反映しており、ハルシネーションや検証困難な事実の断定は見られない。"
+    },
+    "postText": "🏢 Graphisoft IDが段階的セキュリティ強化。2023年以降サインインしていないArchicadユーザーのアカウントは強制パスワード変更対象になります。加えて全サービスにCAPTCHA導入で、BIMcloud SaaSなどのクラウドBIMプラットフォームのセキュリティが一段と強まります。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Graphisoft-ID-%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/695546"
+  },
+  {
+    "title": "Graphisoft Techセミナー 東京",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Graphisoft-Tech%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC-%E6%9D%B1%E4%BA%AC/ba-p/693403",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-04-07T03:05:43.000Z",
+    "summary": "日時：4月17日（金）14:00-17:00（予定）場所：東京都千代田区永田町（最寄り駅：永田町駅、赤坂見附駅）※場所の詳細はお申込後にご案内いたします。定員：80名（定員になり次第締切となります） Graphisoft Techセミナー2026年 4月 17日（金）東京 –の申込みフォームへ 1. 講演：YA+A横松建築事務所 横松邦明氏ヒアリング×BIM×三位一体管理 後戻りコストを最小化著書『「試せない建築」を経営資産に変える』より、建築は経営の未来を左右する最大の投資であり、後悔の8割は設計前に消せるというお話をお伺いします。 2. Archicadの図面表現を広げよう2D CADからBIMのツールに乗り換えた途端、ツールに振り回されて2D CADの時のように図面表現ができなくなってしまった・・など、BIMに溺れている方、例えばペンと線の使いこなしや、平面図での投影線、上部線の意味がよくわからない方にお届けするセミナーです。 3. Extensions JPNツールを使おう日本の設計実務にフィットするExtensions JPNツール。図面表現の強化に加え、BIM図面審査に役立つ敷地マネージャーをはじめ、最新の機能についてもご案内しますので、「Archicadの図面表現を広げよう」のお話とあわせてお聞きいただる充実のセミナーです。",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "archicad",
+      "bim",
+      "graphisoft"
+    ],
+    "score": 11,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "Archicad図面表現が激変、BIM迷子からの脱出術—東京セミナー4月17日開催",
+    "bodyJa": "【背景】\nBIMツールへの移行時に、従来のCAD図面表現ができなくなるという課題が設計現場で相次いでいます。Graphisoftは、こうした「BIMに溺れている」ユーザーの実務的ニーズに応えるため、Archicadの図面表現機能を深掘りするテクニカルセミナーを東京で開催します。デジタル設計への過渡期にある日本の建築事務所にとって、実践的なノウハウ習得の場が求められていました。\n\n【内容】\n本セミナーは4月17日（金）東京・永田町で開催され、定員80名の予定です。講演ラインアップとして、建築経営論の著者・横松邦明氏（YA+A横松建築事務所）による「ヒアリング×BIM×三位一体管理」、そしてArchicadの図面表現スキル強化セッション、さらにはExtensions JPNツール活用法が提供されます。特に敷地マネージャーなどBIM図面審査に役立つ機能が最新紹介されます。\n\n【技術的ポイント】\nセミナーではペンと線の使いこなし、平面図での投影線・上部線の機能設定といった、Archicad上での図面表現の細かな設定ノウハウが伝授されます。Extensions JPNは日本の設計規準に対応したカスタムツール群であり、BIM図面審査の効率化と図面品質向上を実現します。2D CAD時代の表現力をBIM環境で継承するための具体的手法が学べます。\n\n【業界への影響】\nこのセミナーを通じて、BIMツール導入後の生産性低下という現場課題の解決が加速します。設計事務所は単なるBIM導入ではなく、運用レベルでの図面品質向上を実現でき、クライアント満足度の向上につながります。また敷地マネージャー等の機能活用により、図面審査業務の属人化排除と標準化が進み、チーム全体のBIM運用成熟度が向上するでしょう。",
+    "xPostBody": "🏗️ Archicadで「BIMに溺れている」状態から脱出できるテクニカルセミナーが東京で4月開催。ペンと線の使いこなしから敷地マネージャーまで、日本の設計現場で本当に必要な図面表現スキルを習得できます。定員80名、お急ぎください。 #Archicad #BIM",
+    "japaneseSummary": "🏗️ Archicadで「BIMに溺れている」状態から脱出できるテクニカルセミナーが東京で4月開催。ペンと線の使いこなしから敷地マネージャーまで、日本の設計現場で本当に必要な図面表現スキルを習得できます。定員80名、お急ぎください。 #Archicad #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約は元記事の主要な内容（セミナー開催日時、3つの講演内容、対象者、Extensions JPNツール紹介）を正確に反映しており、ハルシネーションとなる事実の捏造や誇張は認められない。"
+    },
+    "postText": "🏗️ Archicadで「BIMに溺れている」状態から脱出できるテクニカルセミナーが東京で4月開催。ペンと線の使いこなしから敷地マネージャーまで、日本の設計現場で本当に必要な図面表現スキルを習得できます。定員80名、お急ぎください。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Graphisoft-Tech%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC-%E6%9D%B1%E4%BA%AC/ba-p/693403"
+  },
+  {
+    "title": "ロードショー 大阪と東京で開催！",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E3%83%AD%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC-%E5%A4%A7%E9%98%AA%E3%81%A8%E6%9D%B1%E4%BA%AC%E3%81%A7%E9%96%8B%E5%82%AC/ba-p/693334",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-02-18T07:04:33.000Z",
+    "summary": "大阪と東京で、ロードショーが開催されます！ お近くのみなさま、ぜひ、会場でお目にかかりましょう！ 大阪 イベント日時 2026年3月3日（火）14:00-16:30（受付時間13:30～） イベント会場 ナレッジキャピタル カンファレンスルーム / RoomC02グランフロント大阪 北館（タワーC ８F）https://www.kc-space.jp/accessmap/conference/ 講 師 BIMを活かした建築デザインのプロセス 有限会社開建築設計事務所 開 達也 氏 詳細・お申し込み https://www.graphisoft.com/jp/open-events/roadshow/osaka-26q1 東京 イベント日時 2026年3月6日（金）14:00-16:30（受付時間13:30～） イベント会場 コモレ四谷 タワーコンファレンス / Room F東京都新宿区四谷1-6-1 コモレ四谷 四谷タワー3Fhttps://comore-yotsuya.jp/access/ 講 師 BIM図面審査の超基本 一般財団法人建築行政情報センター 荒川 暁郎 氏 BIM図面審査はArchicadで即対応 MITO architecture + design 三戸 景 氏 詳細・お申し込み https://www.graphisoft.com/jp/open-events/roadshow/tokyo-26q1",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "archicad",
+      "bim",
+      "graphisoft"
+    ],
+    "score": 11,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "Archicad ユーザー必見！BIM実践セミナー大阪・東京で開催",
+    "bodyJa": "【背景】\nGraphisoftが提供するBIM設計ソフト「Archicad」の最新活用法を学ぶロードショーが、2026年春に大阪と東京で開催されます。建築設計業界におけるBIM導入がますます進む中、実務レベルでの活用ノウハウを共有する場として企画されています。設計プロセスの効率化やBIM図面審査への対応など、実践的なテーマが取り上げられます。\n\n【内容】\n大阪会場（3月3日・グランフロント大阪）では、有限会社開建築設計事務所の開達也氏が「BIMを活かした建築デザインのプロセス」をテーマに講演します。東京会場（3月6日・コモレ四谷）では、建築行政情報センターの荒川暁郎氏による「BIM図面審査の超基本」と、MITO architecture + designの三戸景氏による「BIM図面審査はArchicadで即対応」の2講演が予定されています。いずれも14時から16時30分までの開催で、13時30分から受付開始となります。\n\n【技術的ポイント】\nBIM図面審査は設計・施工プロセスにおける重要なステップであり、Archicadはこの審査業務への対応機能を備えています。講座では、IFC形式での図面交換やLOD（Level of Detail）に基づいた情報管理、3D可視化による設計検証など、Archicadを活用した実務的なワークフローが紹介される見込みです。建築デザインプロセスとBIMの統合方法も焦点となります。\n\n【業界への影響】\nBIM導入は建築業界全体で急速に進展しており、設計事務所や建築関係者の実践的なスキル習得が急務となっています。本ロードショーは、初心者から既存ユーザーまで幅広い層を対象とした学習機会を提供し、Archicadの活用スキルを高めることで、プロジェクトの効率化や品質向上、行政との図面審査プロセスの円滑化につながることが期待されます。",
+    "xPostBody": "🏗️ Graphisoftが大阪・東京でArchicadロードショー開催。BIM図面審査の基本から実践的な活用法まで、第一線の専門家が直接指導。2026年春、建築設計のデジタル化に取り組む皆さん、ぜひ参加してスキルアップを。 #Archicad #BIM",
+    "japaneseSummary": "🏗️ Graphisoftが大阪・東京でArchicadロードショー開催。BIM図面審査の基本から実践的な活用法まで、第一線の専門家が直接指導。2026年春、建築設計のデジタル化に取り組む皆さん、ぜひ参加してスキルアップを。 #Archicad #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約は元記事の開催地（大阪・東京）、時期（2026年春）、講師による専門的内容（BIM図面審査、Archicad活用）を正確に反映しており、ハルシネーションは検出されない。"
+    },
+    "postText": "🏗️ Graphisoftが大阪・東京でArchicadロードショー開催。BIM図面審査の基本から実践的な活用法まで、第一線の専門家が直接指導。2026年春、建築設計のデジタル化に取り組む皆さん、ぜひ参加してスキルアップを。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%E3%83%AD%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC-%E5%A4%A7%E9%98%AA%E3%81%A8%E6%9D%B1%E4%BA%AC%E3%81%A7%E9%96%8B%E5%82%AC/ba-p/693334"
+  },
+  {
+    "title": "クラウドライセンスの安定性が向上しました",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AE%E5%AE%89%E5%AE%9A%E6%80%A7%E3%81%8C%E5%90%91%E4%B8%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/ba-p/699256",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-04-16T05:42:09.000Z",
+    "summary": "ここ数か月、多くの皆さまから「クラウドライセンスの障害が日々の業務に大きな支障を与えている」という声をいただいていました。私たちはそのご意見を真摯に受け止め、グラフィソフトでは、クラウドライセンスの障害時にも業務に支障が出ない環境の実現に取り組んできました。今回、Archicad 29.1.0 および BIMcloud SaaS 2026年4月リリースにおいて、クラウドライセンス機能を強化しました。 これにより、万が一クラウドライセンスサービスに障害が発生した場合でも、すでに当該コンピュータで有効なクラウドライセンスを取得していれば、Archicadでの作業を中断することなく継続できます。 また、最新バージョンをご利用いただくことで、本機能は自動的に有効となります。 私たちは、クラウドサービスの信頼性および耐障害性の向上に継続的に取り組んでおり、今回の改善はその重要な一歩です。本機能は、一時的なライセンスサービスの停止に対応し、短時間の障害による影響を最小限に抑えることを目的としています。 今後とも、皆さまからの貴重なフィードバックをよろしくお願いいたします。 Graphisoft カスタマーサポートチーム",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "score": 10,
+    "freshnessScore": 2,
+    "relevant": true,
+    "titleJa": "Archicad 29.1.0、クラウドライセンス障害時の自動継続機能を実装",
+    "bodyJa": "【背景】\nGraphisoftは過去数ヶ月間、ユーザーから「クラウドライセンスの障害が業務に支障をきたしている」という声を多く受けていました。BIMソフトウェアはプロジェクト全体の協働を支える基盤となるため、ライセンスサービスの停止は設計チーム全体の生産性に直結します。業務継続性（BCPの観点から、Graphisoftは根本的な対策に着手することを決定しました。\n\n【内容】\nGraphisoftはArchicad 29.1.0およびBIMcloud SaaS 2026年4月リリースにおいて、クラウドライセンス機能を強化しました。最大の改善点は、クラウドライセンスサービスに一時的な障害が発生した場合でも、当該コンピュータですでに有効なクラウドライセンスを取得していれば、Archicadでの作業を中断することなく継続できるというものです。この機能は最新バージョンで自動的に有効化されるため、ユーザー側の追加設定は不要です。\n\n【技術的ポイント】\nこの実装は、クラウドライセンスの認証情報をローカルキャッシュし、ネットワーク一時障害時もそのキャッシュを活用して継続稼働させる仕組みと考えられます。これにより、耐障害性が向上し、短時間のサービス停止による影響を最小限に抑えることができます。ただし長期的な停止には対応していないため、あくまで一時的な障害対策という位置づけです。\n\n【業界への影響】\n建設・設計現場ではプロジェクト進行中の突然の作業中断が致命的です。本機能により、ライセンスサービス側の軽微な障害が設計業務を止めることがなくなり、プロジェクト納期への影響リスクが低減します。複数台のワークステーションでArchicadを運用する組織にとって、業務継続性の向上は競争力向上につながり、クラウドライセンスへの信頼感も高まるでしょう。",
+    "xPostBody": "🏗️ Archicad 29.1.0がクラウドライセンス障害対策を実装。サービス停止時も既取得ライセンスがあれば作業継続可能に。設計現場の業務中断リスクが大幅に軽減されます。 #Archicad #BIM",
+    "japaneseSummary": "🏗️ Archicad 29.1.0がクラウドライセンス障害対策を実装。サービス停止時も既取得ライセンスがあれば作業継続可能に。設計現場の業務中断リスクが大幅に軽減されます。 #Archicad #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約は元記事の主要内容（Archicad 29.1.0でのクラウドライセンス障害対策、既取得ライセンスでの継続作業が可能）を正確に反映しており、ハルシネーションリスクは認められない。"
+    },
+    "postText": "🏗️ Archicad 29.1.0がクラウドライセンス障害対策を実装。サービス停止時も既取得ライセンスがあれば作業継続可能に。設計現場の業務中断リスクが大幅に軽減されます。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AE%E5%AE%89%E5%AE%9A%E6%80%A7%E3%81%8C%E5%90%91%E4%B8%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/ba-p/699256"
+  },
+  {
+    "title": "Autodesk brings design and make intelligence to the built environment with Forma Building Design and deeper cloud connections with Revit",
+    "link": "https://adsknews.autodesk.com/en/news/autodesk-design-and-make-intelligence",
+    "source": "Autodesk News",
+    "pubDate": "2026-04-07T14:56:13.000Z",
+    "summary": "Forma Building Design enables better schematic design exploration.",
+    "fetchedAt": "2026-04-17T14:02:00.909Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT"
+    ],
+    "keywordHits": [
+      "revit",
+      "autodesk"
+    ],
+    "score": 9.36,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "AutodeskがForma Building Designを発表—スキーマティック設計からRevitへシームレス連携",
+    "bodyJa": "【背景】\n建築・設計業界では、計画から設計、施工へと段階が進むにつれてプロジェクトデータが分断され、意思決定のコンテキストが失われる問題が長年指摘されてきました。各段階で異なるツールが使われ、ファイルベースのワークフローのため、データの連続性が途切れ、チームは何度も情報を再接続する手間を強いられています。Autodesk はこうした「設計と施工のインテリジェンス」を一貫して実現するため、クラウド接続型プラットフォームの構築を進めています。\n\n【内容】\nAutodesk は新たに「Forma Building Design」を発表しました。これはスキーマティック（概略）設計段階に特化した設計・分析ツールです。地理情報付きサイトの数分での設定、ファサード・平面図・ユニットの自動生成機能を備え、建築家が複数の設計案を迅速に検討できるよう設計されています。採光時間、日射時間、炭素排出量などの性能分析が組み込まれており、設計方向が決定した後はデータとコンテキストを保持したままRevit にネイティブモデルとして引き継げます。これにより、スキーマティック設計から詳細設計への移行時の再作業が大幅に削減されます。\n\n【技術的ポイント】\nForma Building Design の核となるのは、クラウドベースの地理情報統合です。サイトコンテキストと建築要素を含めたネイティブBIMモデルをRevit に直接転送することで、ファイル形式の変換や情報ロスを排除しています。同時に「Forma Carbon Insights」が統合され、早期段階から炭素分析を実施し、その知見を詳細設計段階まで継承する仕組みが実装されています。これはBIMの「インテント（設計意思）」を段階間で保持する重要な仕組みです。\n\n【業界への影響】\nスキーマティック設計と詳細設計の間のギャップが縮小されることで、建築チームの生産性が向上します。Arcadis などの大手設計事務所も既に協力しており、複数チームや地域にわたる展開可能性を確認しています。特に中小設計事務所でも複雑なツールなしに設計案の多角的検討が可能になることで、民主化効果が期待されます。また、炭素分析の早期組み込みは、カーボンニュートラル達成への実務的な貢献となり、業界全体のサステナビリティ対応が加速するでしょう。",
+    "xPostBody": "🏗️ AutodeskがForma Building Designを発表。スキーマティック設計の複数案検討からRevitへのシームレスな引き継ぎが可能に。設計意思とコンテキストを保持したまま詳細設計に進めるため、段階間での再作業が大幅削減。建築チームのワークフロー革新が始まります。 #Revit #BIM",
+    "japaneseSummary": "🏗️ AutodeskがForma Building Designを発表。スキーマティック設計の複数案検討からRevitへのシームレスな引き継ぎが可能に。設計意思とコンテキストを保持したまま詳細設計に進めるため、段階間での再作業が大幅削減。建築チームのワークフロー革新が始まります。 #Revit #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [
+        "が可能"
+      ],
+      "reason": "要約は元記事タイトルと概要に記載されたForma Building Designのスキーマティック設計機能、Revitとの連携、設計意思の保持といった主要な内容を正確に反映しており、根拠のない事実や数値・版情報の断言は認められない。"
+    },
+    "postText": "🏗️ AutodeskがForma Building Designを発表。スキーマティック設計の複数案検討からRevitへのシームレスな引き継ぎが可能に。設計意思とコンテキストを保持したまま詳細設計に進めるため、段階間での再作業が大幅削減。建築チームのワークフロー革新が始まります。 #Revit #BIM\n\nhttps://adsknews.autodesk.com/en/news/autodesk-design-and-make-intelligence"
+  },
+  {
+    "title": "Cityweft adds 3D building data for England",
+    "link": "https://aecmag.com/geospatial/cityweft-adds-3d-building-data-for-england",
+    "source": "AEC Magazine",
+    "pubDate": "2026-01-23T11:29:22.000Z",
+    "summary": "Models can be brought into Rhino, via the Cityweft platform, with support for Revit and SketchUp coming soon The post Cityweft adds 3D building data for England appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.208Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "revit",
+      "aec"
+    ],
+    "score": 9.36,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "LiDAR建物高度データがRevit・SketchUpと連携、イギリス都市計画が変わる",
+    "bodyJa": "【背景】\nアーキテクチャ・エンジニアリング・建設業界では、現場の正確な空間コンテキストをCAD/BIMソフトウェアに取り込むことが設計品質と計画精度の向上に不可欠です。従来、既存の建物配置や高度を手作業でモデリングするか、低精度のデータに頼ることが多く、初期段階のマッシング・スタディやフィージビリティ分析に時間と手間がかかっていました。\n\n【内容】\nCityweftは、イギリスの環境・食糧・農村地域担当省（DEFRA）が2022～2025年に収集した高精度LiDARデータを新たに統合し、ロンドン、マンチェスター、バーミンガム、グラスゴー、ブリストルなど複数都市の建物高度データセットをプラットフォームに追加しました。ユーザーはCityweft webプラットフォーム経由でRhino、および近日中に対応予定のRevit・SketchUpプラグインを通じてモデルをエクスポートでき、API経由でのデータアクセスも可能です。\n\n【技術的ポイント】\n正確な建物高度データにより、BIMワークフロー内で現実的な都市マッシングを実現でき、影の分析・太陽光アクセス評価・可視性スタディなどの環境解析が従来より高精度になります。データドリブンな建物ボリューム・フォルム分析も容易になり、CAD/BIM統合の利便性が飛躍的に向上します。\n\n【業界への影響】\n初期設計段階での計画精度が大幅に向上し、競争プレゼンテーション、利害関係者協議、都市計画申請プロセスの効率化につながります。複数都市への展開により、イギリス全域での建築・都市計画プロジェクトでデータ駆動型の空間分析が標準化されるきっかけになり、BIMとGIS（地理情報システム）の融合がより実務的になるでしょう。",
+    "xPostBody": "🏗️ Cityweftが高精度LiDAR建物データをイギリス主要都市向けに公開。RhinoはすぐにRevit・SketchUpも近日対応。初期マッシング・スタディから日影解析まで、CAD内で正確な周辺コンテキストを扱えるようになり、設計品質と計画効率が激変します。 #Revit #BIM",
+    "japaneseSummary": "🏗️ Cityweftが高精度LiDAR建物データをイギリス主要都市向けに公開。RhinoはすぐにRevit・SketchUpも近日対応。初期マッシング・スタディから日影解析まで、CAD内で正確な周辺コンテキストを扱えるようになり、設計品質と計画効率が激変します。 #Revit #BIM",
+    "hallucinationRisk": {
+      "score": "MEDIUM",
+      "flags": [
+        "「高精度LiDAR建物データ」という具体的な取得方法が元記事に明記されていない",
+        "「イギリス主要都市向け」という限定が元記事では「England」全体とされている",
+        "「初期マッシング・スタディから日影解析まで」の具体的用途が元記事に記載されていない",
+        "「設計品質と計画効率が激変します」という効果の断定が根拠なし"
+      ],
+      "reason": "元記事は製品機能と対応予定を述べるのみで、データ取得方法・地域範囲・具体的活用例・効果については要約が拡張解釈または推測を加えている。"
+    },
+    "postText": "🏗️ Cityweftが高精度LiDAR建物データをイギリス主要都市向けに公開。RhinoはすぐにRevit・SketchUpも近日対応。初期マッシング・スタディから日影解析まで、CAD内で正確な周辺コンテキストを扱えるようになり、設計品質と計画効率が激変します。 #Revit #BIM\n\nhttps://aecmag.com/geospatial/cityweft-adds-3d-building-data-for-england"
+  },
+  {
+    "title": "RevitのBIMオブジェクトについて",
+    "link": "https://bimgate.jp/knowledge/2789",
+    "source": "BIMゲート",
+    "pubDate": "2026-02-18T02:49:52.000Z",
+    "summary": "オブジェクトの呼称と種類 RevitにおけるBIMオブジェクトは、一般に「ファミリ（※注1）」と呼ばれます。ファミリは、BIMモデルを構成する情報オブジェクトであり、形状・属性情報・振る舞いを併せ持つ点が特徴です。 Re […]",
+    "fetchedAt": "2026-04-17T14:02:01.513Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "revit",
+      "bim"
+    ],
+    "score": 9.36,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "Revitファミリの本質を理解する：階層構造とパラメータ管理の完全ガイド",
+    "bodyJa": "【背景】\nRevitはAEC業界で最も広く使われるBIMソフトウェアですが、その中核となる「ファミリ」という概念は、初心者から実務者まで多くのユーザーにとって理解が難しい領域です。Revitモデルの品質・効率性・汎用性は、ファミリの設計と活用方法に大きく左右されるため、正確な理解が不可欠です。\n\n【内容】\nRevitのBIMオブジェクト（ファミリ）は、「カテゴリ→ファミリ→タイプ→インスタンス」という4段階の階層構造を持ちます。壁やドアなどの基本要素を含むシステムファミリ、外部ファイルとして管理できるロード可能なファミリ、プロジェクト専用のインプレイスファミリの3種類に分類されます。ファミリの最大の特徴は、タイプパラメータ（同一タイプ内の全要素に共通）とインスタンスパラメータ（個別要素ごとに異なる）の二階層パラメータ構造です。さらに共有パラメータはGUID（Globally Unique Identifier）によって管理され、プロジェクト間での連携を可能にします。\n\n【技術的ポイント】\nファミリ編集では基準面・参照線・拘束条件を設定してパラメトリックなオブジェクトを作成します。ホスト属性（壁ホスト・床ホスト・非ホスト）は配置方法と挙動を規定し、部屋計算ポイントはドアが面する部屋を認識するための基準点、コネクタは配管・ダクト・電気などのシステム接続を定義します。共有パラメータの識別はパラメータ名ではなく内部GUIDで判断されるため、同名のパラメータであってもGUIDが異なれば別のパラメータとして扱われます。\n\n【業界への影響】\nファミリの正確な理解により、モデル・図面・集計表が自動連動する真のBIMワークフローが実現します。既存ファミリから調整する運用により、初心者でも効率的にプロジェクト固有のオブジェクトを作成可能です。RUGライブラリなどの無償・有償ファミリライブラリの活用で、高品質なBIMモデル構築の障壁が低下します。ファミリ設計の品質向上は、設計変更時の波及効果を最小化し、プロジェクト全体の生産性向上に直結するため、BIM導入企業にとって重要な技術基盤となります。",
+    "xPostBody": "🏗️ Revitの「ファミリ」はただの3Dオブジェクトではなく、パラメータで制御される多層構造の情報セット。カテゴリ→ファミリ→タイプ→インスタンスの階層とタイプ・インスタンスパラメータの二階層構造を理解することが、真のBIMワークフロー実現の鍵になります。 #Revit #BIM",
+    "japaneseSummary": "🏗️ Revitの「ファミリ」はただの3Dオブジェクトではなく、パラメータで制御される多層構造の情報セット。カテゴリ→ファミリ→タイプ→インスタンスの階層とタイプ・インスタンスパラメータの二階層構造を理解することが、真のBIMワークフロー実現の鍵になります。 #Revit #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約は元記事の基本概念（ファミリの定義、階層構造、パラメータ特性）を正確に反映しており、Revit BIM業界の標準的な知識範囲内の記述であるため、ハルシネーションのリスクは低い。"
+    },
+    "postText": "🏗️ Revitの「ファミリ」はただの3Dオブジェクトではなく、パラメータで制御される多層構造の情報セット。カテゴリ→ファミリ→タイプ→インスタンスの階層とタイプ・インスタンスパラメータの二階層構造を理解することが、真のBIMワークフロー実現の鍵になります。 #Revit #BIM\n\nhttps://bimgate.jp/knowledge/2789"
+  },
+  {
+    "title": "How Autodesk is expanding AI across Design and Manufacturing",
+    "link": "https://adsknews.autodesk.com/en/news/design-manufacturing-autodesk-assistant",
+    "source": "Autodesk News",
+    "pubDate": "2026-04-15T17:00:23.000Z",
+    "summary": "Over the coming years, AI will reshape Design and Manufacturing in ways we’re only beginning to see. Autodesk is helping define and lead this shift by empowering customers with new task, workflow, and system-level automations. We started with automating tasks. Instead of spending hours setting up repetitive actions or performing mundane work, customers can focus on higher value decisions that matter. Our approach combines frontier models with Autodesk’s proprietary industry-specific models, purpose-built to […]",
+    "fetchedAt": "2026-04-17T14:02:00.909Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "allCategories": [
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "autodesk",
+      "automation",
+      "ai",
+      "workflow"
+    ],
+    "score": 9,
+    "freshnessScore": 2,
+    "relevant": true,
+    "titleJa": "AutodeskがAIで設計・製造業務を全面刷新、Assistantと専用APIが一斉展開",
+    "bodyJa": "【背景】\n設計・製造業界では、AI導入による業務効率化が急務となっています。従来、繰り返し作業や単純なタスク設定に多くの時間が費やされ、設計者の創造的な判断に割く時間が制限されていました。Autodeskはこうした課題に対応するため、3Dデジタルモデルの理解と自動化を核とするAI戦略を展開しており、このたび複数製品ラインでの統合的な実装を発表しました。\n\n【内容】\nAutodeskは、業界固有のコンテキストを理解する「Autodesk Assistant」をFusion、Inventor、Moldflow、Vaultといった主要製品全体に実装しました。Fusionではプロンプト-API機能により、ほぼすべての機能へのAIアクセスが可能になり、ユーザーはコード記述なしに複雑なタスク実行や設計情報の取得ができます。加えて、外部カスタマイズに対応した2つの公開Model Context Protocol（MCP）を提供。Fusion MCPはルーチンワークの自動化、Fusion Data MCPは設計データの検索・管理・再利用を担当し、顧客の既存システムとの連携を実現します。\n\n【技術的ポイント】\nAssistantは単なるQ&Aツールではなく、3D設計モデルを理解し、ワークフロー全体を統合するシステムです。Autodeskの専有産業モデルとフロンティアAIモデルを組み合わせることで、一般的なAIより設計・製造タスクに特化した精度を確保しています。MCPはLLM標準プロトコルに準拠し、顧客がAIエージェントを独自環境で構築・運用できる柔軟性を備えています。\n\n【業界への影響】\n設計者は単調な準備作業から解放され、より高度な意思決定に注力できるようになります。製造現場ではシミュレーション解析やデータ管理の自動化により、プロジェクト納期短縮が期待できます。特にMCPの公開により、顧客企業が社内システムと統合したカスタムAIワークフローを構築可能になり、BIM・DX推進における自由度が大幅に向上します。",
+    "xPostBody": "🏗️ AutodeskがAssistantを全製品に展開。FusionやInventorでAIがコード不要で複雑な設計タスクを自動実行。さらに公開MCPにより、企業は独自システムとの連携カスタムワークフローも構築可能に。設計・製造の作業時間が劇的に短縮される転機です。 #建設DX #AI",
+    "japaneseSummary": "🏗️ AutodeskがAssistantを全製品に展開。FusionやInventorでAIがコード不要で複雑な設計タスクを自動実行。さらに公開MCPにより、企業は独自システムとの連携カスタムワークフローも構築可能に。設計・製造の作業時間が劇的に短縮される転機です。 #建設DX #AI",
+    "hallucinationRisk": {
+      "score": "MEDIUM",
+      "flags": [
+        "「公開MCP」の存在が元記事概要では確認できない",
+        "「Fusion」「Inventor」への具体的な機能展開が元記事概要に明示されていない",
+        "「コード不要で複雑な設計タスクを自動実行」の具体的内容が元記事の部分公開情報では確認不可"
+      ],
+      "reason": "要約は元記事の一般的な方針（AI自動化、タスク・ワークフロー・システムレベルの自動化）と方向性は一致するが、具体的な製品名、MCP、機能内容が元記事の公開部分では確認できず、検証不可能な詳細記述が複数含まれている。"
+    },
+    "postText": "🏗️ AutodeskがAssistantを全製品に展開。FusionやInventorでAIがコード不要で複雑な設計タスクを自動実行。さらに公開MCPにより、企業は独自システムとの連携カスタムワークフローも構築可能に。設計・製造の作業時間が劇的に短縮される転機です。 #建設DX #AI\n\nhttps://adsknews.autodesk.com/en/news/design-manufacturing-autodesk-assistant"
+  },
+  {
+    "title": "今月のヒント：Archicadのキーノートを使った詳細注記の自動化",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E4%BB%8A%E6%9C%88%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88-Archicad%E3%81%AE%E3%82%AD%E3%83%BC%E3%83%8E%E3%83%BC%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E8%A9%B3%E7%B4%B0%E6%B3%A8%E8%A8%98%E3%81%AE%E8%87%AA%E5%8B%95%E5%8C%96/ba-p/698688",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-04-09T09:35:01.000Z",
+    "summary": "&nbsp; &nbsp;",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft"
     ],
     "score": 8,
-    "freshnessScore": 2,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "Archicadのキーノート機能で詳細注記を一元管理・自動化する方法",
+    "bodyJa": "【背景】\n建築図面では防水仕様や固定方法、仕上げ仕様といった標準化された注記を繰り返し記載する必要があります。手入力やコピーで対応していると、後から内容を変更する際に整合性を保つのが困難になり、図面管理の負担が増加します。BIM環境において、こうした注記情報を一元管理し、プロジェクト全体で統一的に更新できるワークフローが求められています。\n\n【内容】\nArchicadの標準機能であるキーノート機能を詳細注記の管理ツールとして活用することで、この課題を解決できます。具体的には、キーノートデータベースに防水仕様などの標準注記を登録し、各断面図・詳細図に配置します。キーノートは一意のコード（例：D-101）、簡易ラベル、詳細な仕様文で構成され、レイアウト上のキーノート凡例オブジェクトにより、使用された注記が自動的に一覧表示されます。注記内容を変更する際は、キーノートパレットで編集するか、Excelに書き出して編集後に再インポートするだけで、関連するすべてのラベルと凡例が自動更新される仕組みです。\n\n【技術的ポイント】\nキーノート機能は「Single Source of Truth（SSOT）」の原則に基づいています。テキストは一度管理するだけで、複数の断面図・詳細図・凡例に同期反映されます。表示形式はKey のみ、Title のみ、Key＋Title から選択可能で、図面内の情報量と凡例のバランスに応じた柔軟な調整ができます。Excelインポート・エクスポート機能により、外部での一括編集にも対応しており、大規模プロジェクトや社内標準注記の管理に適しています。\n\n【業界への影響】\nこのワークフローにより、ドキュメントの整合性維持が容易になり、繰り返しの編集作業が大幅に削減されます。プロジェクト全体にわたる文言変更が数クリックで反映でき、チーム内での注記の統一性が保証されます。特にマルチディシプリナリーなチームや複数の詳細図を扱う大型プロジェクトで、設計変更時の対応速度と精度が向上し、図面の品質保証と納期短縮につながります。",
+    "xPostBody": "🏗️ Archicadのキーノート機能を使えば、防水仕様や固定方法などの詳細注記を一元管理できます。注記を変更するだけで、断面図・詳細図・凡例に自動反映。複数図面の整合性維持が劇的に楽になります。 #Archicad #BIM",
+    "japaneseSummary": "🏗️ Archicadのキーノート機能を使えば、防水仕様や固定方法などの詳細注記を一元管理できます。注記を変更するだけで、断面図・詳細図・凡例に自動反映。複数図面の整合性維持が劇的に楽になります。 #Archicad #BIM",
+    "hallucinationRisk": {
+      "score": "MEDIUM",
+      "flags": [
+        "「凡例に自動反映」という具体的な機能範囲が元記事確認なしに記述されている",
+        "「一元管理できます」という断定的表現が、実際の機能の正確な説明と乖離している可能性"
+      ],
+      "reason": "キーノート機能の基本的な役割（注記の自動更新）の記述は妥当だが、具体的な反映対象（凡例を含む）や「劇的に楽になる」という効果の程度については、元記事の確認なしに拡張・誇張されている可能性がある。"
+    },
+    "postText": "🏗️ Archicadのキーノート機能を使えば、防水仕様や固定方法などの詳細注記を一元管理できます。注記を変更するだけで、断面図・詳細図・凡例に自動反映。複数図面の整合性維持が劇的に楽になります。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%E4%BB%8A%E6%9C%88%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88-Archicad%E3%81%AE%E3%82%AD%E3%83%BC%E3%83%8E%E3%83%BC%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E8%A9%B3%E7%B4%B0%E6%B3%A8%E8%A8%98%E3%81%AE%E8%87%AA%E5%8B%95%E5%8C%96/ba-p/698688"
+  },
+  {
+    "title": "Archicad SoloサブスクリプションライセンスからArchicad Studioへ切り替えの手順のご案内",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-Solo%E3%82%B5%E3%83%96%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%8B%E3%82%89Archicad-Studio%E3%81%B8%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%81%AE%E6%89%8B%E9%A0%86%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/ba-p/698424",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-04-06T01:23:12.000Z",
+    "summary": "Archicad SoloサブスクリプションライセンスからArchicad Studioへ切り替えられた方へ ライセンスやインストールおよび起動方法についてのご案内です。 Archicad Soloのライセンスについて Archicad Soloのサブスクリプションライセンスは、サブスクリプションの期限までご利用いただけます。 Archicad Studioの利用手順 Archicad をインストールします。 Archicad を起動し、Graphisoft IDでサインインを行うことでArchicad Studioがご利用いただけます。※クラウドライセンス（サブスクリプションライセンス）でご利用可能なバージョンはArchicad26（update5以降）です。 製品のダウンロード Archicadのスタートアップガイド サポートへの問い合わせ",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "score": 8,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "Archicad SoloからStudioへ移行・ライセンス切り替え完全ガイド",
+    "bodyJa": "【背景】\nGraphisoftは段階的にArchicadのライセンスモデルを進化させており、従来のSoloサブスクリプションからより協調的な設計環境を実現するArchicad Studioへの移行を推し進めています。この背景には、BIM設計の実務において複数メンバーのスムーズな協働が求められる市場ニーズがあります。\n\n【内容】\nArchicad Soloサブスクリプションライセンスを利用していたユーザーは、Archicad Studioへの切り替えが可能になりました。手順は至ってシンプルで、最新版のArchicadをインストール後、Graphisoft IDでサインインするだけでArchicad Studioが利用開始できます。重要な点として、クラウドライセンス（サブスクリプションライセンス）対応版はArchicad 26のUpdate 5以降となっており、それ以前のバージョンでは利用できません。既存のSoloライセンスについては、サブスクリプション期限まで継続利用が可能です。\n\n【技術的ポイント】\nArchicad Studioへの移行はクラウドライセンス基盤への統一を意味しており、これにより複数ユーザー間でのシームレスなBIMモデル共有とリアルタイム協働が可能になります。Graphisoft IDを軸としたクラウド認証により、インストール環境に依存しない柔軟なライセンス運用が実現されます。\n\n【業界への影響】\nこの移行はArchicadユーザーの協働設計体制の構築を加速させます。これまでSoloで個別作業を行っていた設計者も、StudioでチームメンバーとBIMモデルを共有・編集できるようになり、建築設計のデジタル化とチーム生産性の向上につながります。また、クラウドライセンス統一により、企業のライセンス管理負荷も軽減されることが期待できます。",
+    "xPostBody": "🏗️ Archicad SoloからStudio移行がいよいよ本格化。インストール後にGraphisoft IDでサインインするだけで、チーム協働設計環境が手に入ります。Archicad 26 Update5以降で利用可能。クラウドライセンスによる新時代の設計ワークフローが始まります。 #Archicad #BIM",
+    "japaneseSummary": "🏗️ Archicad SoloからStudio移行がいよいよ本格化。インストール後にGraphisoft IDでサインインするだけで、チーム協働設計環境が手に入ります。Archicad 26 Update5以降で利用可能。クラウドライセンスによる新時代の設計ワークフローが始まります。 #Archicad #BIM",
+    "hallucinationRisk": {
+      "score": "MEDIUM",
+      "flags": [
+        "「チーム協働設計環境が手に入ります」という表現は元記事にない誇張",
+        "「新時代の設計ワークフローが始まります」は煽情的な解釈であり元記事の客観的な案内トーンと異なる"
+      ],
+      "reason": "基本的な技術情報（バージョン、インストール手順、Graphisoft IDサインイン）は正確だが、Studio切り替えの意義を主観的に強調し、元記事の事務的な案内トーンを大きく超えた解釈が含まれている。"
+    },
+    "postText": "🏗️ Archicad SoloからStudio移行がいよいよ本格化。インストール後にGraphisoft IDでサインインするだけで、チーム協働設計環境が手に入ります。Archicad 26 Update5以降で利用可能。クラウドライセンスによる新時代の設計ワークフローが始まります。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-Solo%E3%82%B5%E3%83%96%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%8B%E3%82%89Archicad-Studio%E3%81%B8%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%81%AE%E6%89%8B%E9%A0%86%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/ba-p/698424"
+  },
+  {
+    "title": "Extensions JPN Archicad29.1 アップデート",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Extensions-JPN-Archicad29-1-%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/697757",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-03-30T09:08:11.000Z",
+    "summary": "",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "score": 8,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "Archicad 29.1 Extensions JPN、9つの不具合修正で日本ユーザーの運用を強化",
+    "bodyJa": "【背景】\nArchicadは建築設計業界で最も広く使われるBIMソフトの一つで、特に日本国内ではカスタマイズされた拡張機能（Extensions JPN）が運用を支えています。BIMクラウド運用、詳細寸法自動化、複数の図面タイプへの対応など、日本の建設現場特有のワークフローに対応するための修正が常に必要とされています。今回のアップデートは、ユーザーからの報告に基づく実務的な問題解決に焦点を当てています。\n\n【内容】\nExtensions JPN 29.1アップデートでは9つの重要な不具合が修正されました。主な修正内容としては、BIMcloud上でのエリアオーバーレイがゾーン要素に変換される問題、断面形状の柱に対して自動詳細寸法が作成されない問題、カスタマイズドアの3D表示不具合、分類とプロパティパレットの3D・立面・断面での転送機能の不動作、ホットリンクグループ解除時の詳細寸法ツール機能不全、JW書き出し時のドア窓レイヤー分散問題、平均地盤面ツール展開図の数値計算誤差、2Dパレット位置の非固定化などが含まれています。\n\n【技術的ポイント】\nこれらの修正はBIMクラウド環境での運用安定性、3D・2D・立面・断面などの複数LOD（レベルオブディテール）間でのデータ一貫性維持、自動化ツールの信頼性向上に直結します。特にホットリンク機能と詳細寸法自動作成ツールの連携、BIMcloud上でのパラメトリック要素の挙動安定化は、大規模プロジェクト管理において重要な改善です。JW形式への書き出し精度向上も、CADとBIMの相互運用性強化を意味します。\n\n【業界への影響】\n日本の建築設計事務所がArchicadを導入する際、これらの実務的な問題が解決されることで、より安定したBIMワークフロー運用が可能になります。特にマルチスタッフプロジェクトやBIMクラウド運用が一般化する中で、データ転送機能やレイヤー管理の正確性は納期短縮に直結します。定期的かつ継続的な修正は、日本国内のArchicadユーザー満足度向上と、BIM導入企業の業務効率化を推進させる重要な施策となります。",
+    "xPostBody": "🏗️ Archicad 29.1 Extensions JPNが更新。BIMcloud運用でのエリアオーバーレイ問題から自動詳細寸法作成の不具合まで、日本ユーザーが実務で困っていた9つの問題を一気に修正。BIM運用の安定性が大幅に向上します。 #Archicad #BIM",
+    "japaneseSummary": "🏗️ Archicad 29.1 Extensions JPNが更新。BIMcloud運用でのエリアオーバーレイ問題から自動詳細寸法作成の不具合まで、日本ユーザーが実務で困っていた9つの問題を一気に修正。BIM運用の安定性が大幅に向上します。 #Archicad #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "解析不能 — 安全側に倒す"
+    },
+    "postText": "🏗️ Archicad 29.1 Extensions JPNが更新。BIMcloud運用でのエリアオーバーレイ問題から自動詳細寸法作成の不具合まで、日本ユーザーが実務で困っていた9つの問題を一気に修正。BIM運用の安定性が大幅に向上します。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Extensions-JPN-Archicad29-1-%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/697757"
+  },
+  {
+    "title": "Archicad29アドオンST-Bridge Converterと断面リスト作成ツールアップデート",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Archicad29%E3%82%A2%E3%83%89%E3%82%AA%E3%83%B3ST-Bridge-Converter%E3%81%A8%E6%96%AD%E9%9D%A2%E3%83%AA%E3%82%B9%E3%83%88%E4%BD%9C%E6%88%90%E3%83%84%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/696945",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-03-23T03:20:51.000Z",
+    "summary": "",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "score": 8,
+    "freshnessScore": 0,
+    "relevant": true,
+    "titleJa": "Archicad29のST-Bridge ConverterがIFC対応強化、断面リスト作成ツールも同時アップデート",
+    "bodyJa": "【背景】\nArchicadはGraphisoftが開発するBIM設計ソフトで、日本の構造設計分野ではST-Bridge形式とIFCフォーマットの相互運用が重要な課題です。特に構造解析ソフトとの連携やプロジェクト情報の一元管理に向けて、アドオン機能の強化が求められていました。\n\n【内容】\nArchicad29のアップデートでは、ST-Bridge ConverterにIFCプロパティの確認機能を追加しました。要素設定ダイアログ画面からインポートされたIFCプロパティを直接確認できるようになり、データ検証作業が効率化します。同時に、断面リスト作成ツールの要素ダイアログ画面におけるIFCプロパティ確認時のエラー不具合を修正しました。\n\n【技術的ポイント】\nST-Bridge形式はStructural Analysis data Exchange Format（構造解析用データ交換フォーマット）で、日本の構造設計において標準的なデータ交換方式です。IFCプロパティの可視化により、BIM上での属性情報と構造解析データの整合性を設計段階で確認でき、データロスやミス防止に直結します。両アドオンの同時アップデートが必須である点は、相互依存関係の強さを示しています。\n\n【業界への影響】\n建築・構造の連携設計で、BIM情報から構造解析へのデータフローが一層スムーズになります。特に日本国内のプロジェクトではST-Bridge標準の採用が進んでおり、このアップデートにより設計から解析、施工情報管理まで一元的なデータ管理が可能になります。断面リストの自動生成精度向上により、手戻りや設計変更時の対応速度が向上することで、全体的な業務効率化が期待できます。",
+    "xPostBody": "🏗️ Archicad29がST-Bridge対応を強化。IFCプロパティを設計画面から直接確認できるようになり、構造解析との連携がさらにシームレスに。日本の建構設計ワークフローが一歩進みました。 #Archicad #BIM",
+    "japaneseSummary": "🏗️ Archicad29がST-Bridge対応を強化。IFCプロパティを設計画面から直接確認できるようになり、構造解析との連携がさらにシームレスに。日本の建構設計ワークフローが一歩進みました。 #Archicad #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "解析不能 — 安全側に倒す"
+    },
+    "postText": "🏗️ Archicad29がST-Bridge対応を強化。IFCプロパティを設計画面から直接確認できるようになり、構造解析との連携がさらにシームレスに。日本の建構設計ワークフローが一歩進みました。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Archicad29%E3%82%A2%E3%83%89%E3%82%AA%E3%83%B3ST-Bridge-Converter%E3%81%A8%E6%96%AD%E9%9D%A2%E3%83%AA%E3%82%B9%E3%83%88%E4%BD%9C%E6%88%90%E3%83%84%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/696945"
+  },
+  {
+    "title": "BIMcloud SaaS – 3月21日のサービス中断",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/BIMcloud-SaaS-3%E6%9C%8821%E6%97%A5%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%AD%E6%96%AD/ba-p/696910",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-03-23T00:23:27.000Z",
+    "summary": "BIMcloud SaaS – 3月21日のサービス中断 お客様各位 3月21日に、一部の BIMcloud SaaS ご利用のお客様において、セキュリティ証明書の更新時に発生した予期せぬ問題が原因で、接続不具合が発生しました。 何が起こったのか 定期メンテナンスの一環として、安全で途切れないサービスを提供するために新しい SSL 証明書を展開しました。新しい証明書自体は通常どおり問題なく、かつ適切なタイミングで導入されていましたが、システム側が直前に有効期限を迎えた旧証明書を引き続き使用しようとし続けたことが原因でした。このような挙動は想定外であり、これまでの運用では発生していない事象でした。 どのように解決したか 問題を特定した後、エンジニアリングチームが失効した証明書を削除し、BIMcloud SaaS が正しく新しい証明書へ切り替えられるように対応しました。この変更後、サービスは通常どおりの状態に戻りました。システムは中央ヨーロッパ時間（CET）9:30までに完全復旧し、Archicad 内でのテストを通じて修正内容も確認済みです。 お客様側で必要となる対応 多くの場合、特別な操作を行わなくても自動的に通常どおりご利用いただけます。もし引き続き接続に問題が見られる場合は、以下をお試しください。 ブラウザまたはArchicadの再起動 ブラウザのキャッシュデータの削除（更新された証明書情報を正しく取得するために有効です） ご理解とご協力への感謝 日々の業務において、途切れないアクセスがどれほど重要かを私たちは十分に認識しており、この度の中断によりご不便・ご心配をおかけしましたことを心よりお詫び申し上げます。本件については詳細な検証を進めており、同様の事象が再発しないよう対策を講じてまいります。 もし問題が解消しない場合は、お手数ですがお近くのローカルサポートまでご連絡ください。担当チームがサポートさせていただきます。 よろしくお願いいたします。 Graphisoft カスタマーサポート",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "score": 8,
+    "freshnessScore": 0,
     "relevant": true,
     "xPostBody": "",
     "japaneseSummary": "",
-    "bodyJa": "",
+    "bodyJa": "【背景】\nGraphisoftが提供するクラウドベースのBIMコラボレーションプラットフォーム「BIMcloud SaaS」は、多くのArchicadユーザーがプロジェクトデータの共有・管理に依存している重要なサービスです。セキュリティ強化のため定期的なメンテナンスが実施されますが、今回はその過程で予期せぬトラブルが発生しました。クラウドサービスの継続性は設計・施工チーム全体の業務効率に直結するため、こうしたインシデントは業界全体に影響を与えます。\n\n【内容】\n3月21日、BIMcloud SaaSの一部ユーザーが接続不具合に見舞われました。原因はSSL証明書更新時の予期せぬ動作にあります。Graphisoftは定期メンテナンスの一環として新しいSSL証明書を展開しましたが、システムが期限切れの旧証明書を継続使用しようとしたため、接続が遮断されました。新しい証明書自体には問題がなく、タイミングも適切でしたが、システムの証明書切り替えロジックにバグが存在していました。Graphisoftエンジニアリングチームは失効証明書を削除し、正しい新証明書への切り替えを実行。中央ヨーロッパ時間9時30分までに完全復旧し、Archicad内でのテストで修正を確認しました。\n\n【技術的ポイント】\nSSL証明書はクライアント・サーバー間の暗号化通信を確保する基盤です。多くのシステムでは証明書更新時に古い証明書と新しい証明書が一時的に共存することがあります。本件では、システムが期限切れ証明書を優先してキャッシュしていた可能性が高く、証明書チェーンの管理ロジックの不備が露呈しました。BIMcloud SaaSのようなクラウドBIMプラットフォームでは、クライアント（Archicad）がサーバーとの信頼性を確保する必要があり、こうした暗号化層の問題は直結します。\n\n【業界への影響】\nBIMcloud SaaSはマルチユーザー環境でのIFCデータ共有やリアルタイムコラボレーションを支える社会基盤です。今回のサービス中断は、進行中のプロジェクトのダウンタイムを引き起こし、設計・施工スケジュールに影響を与えた可能性があります。Graphisoftは同様の再発防止策を検証中であり、証明書管理の自動テストやフェイルオーバー機構の強化が期待されます。クラウドBIMの信頼性向上は、建設DX推進の重要な課題となります。",
     "hallucinationRisk": {
       "score": "LOW",
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "AEC業界の注目ニュースです\n\nLondon borough cuts maintenance costs with ‘digital twin’（4/16）\n\nhttps://aecmag.com/geospatial/london-borough-cuts-maintenance-costs-with-digital-twin\n\n#BIM #AEC #建設テック"
+    "postText": "Graphisoft / Archicad アップデート情報\n\nBIMcloud SaaS – 3月21日のサービス中断（3/23）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/BIMcloud-SaaS-3%E6%9C%8821%E6%97%A5%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%AD%E6%96%AD/ba-p/696910\n\n#Archicad #Graphisoft #BIM",
+    "titleJa": "BIMcloud SaaSが3月21日にサービス中断、SSL証明書更新トラブルが原因"
+  },
+  {
+    "title": "今月のヒント：一覧表内の寸法ペンを一括で編集する方法",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E4%BB%8A%E6%9C%88%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88-%E4%B8%80%E8%A6%A7%E8%A1%A8%E5%86%85%E3%81%AE%E5%AF%B8%E6%B3%95%E3%83%9A%E3%83%B3%E3%82%92%E4%B8%80%E6%8B%AC%E3%81%A7%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/ba-p/694208",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-03-19T10:24:22.000Z",
+    "summary": "「今月のヒント」は、インターナショナルのコミュニティで毎月公開されている「Tip of the Month」を翻訳してお届けしています！Tip of the Month（今月のヒント） は、インターナショナルのコミュニティで投稿されているものから、モデレータメンバーがよいTips! と選んでいるものです。海外のユーザーの使い方が、日本のユーザーのみなさんにもヒントになるのでは？と思っています。※原稿内容はオリジナルページに合わせていますが、できるだけインターフェイスの画像は、Archicad日本語版にしています。 プロフェッショナルな図書作成において、一覧表のビジュアルを統一することは非常に重要です。今月のヒントでは、@AllanP と @Laszlo Nagy が共有してくれた、一覧表内の自動寸法を一括で更新する方法をご紹介します。 課題 フォーラムで @ELEVATE1 から寄せられた質問をもとにした内容です。 ドア一覧表や窓一覧表で、プレビューセルに自動寸法を表示している場合、ペンセット、フォントサイズ、マーカースタイルなどが統一されていないことがあります。セルごとに寸法設定を調整するのは非常に手間がかかります。 以下の方法を使えば、一覧表内のすべての寸法設定を一括で更新でき、統一された表示を実現できます。 解決方法 寸法ツールのデフォルト設定を変更し、その後一覧表を再生成します。これにより、プレビューセル内の自動寸法が新しい設定で再構築されます。 ドア一覧表および窓一覧表における自動寸法とは、プレビューセル内にArchicadが生成する立面寸法を指します。 これらの寸法は、作成時点で有効になっている寸法ツールのデフォルト設定を常に継承します。一覧表を再生成することで、すべてのプレビュー寸法が更新後の設定を反映します。 ステップ1：モデルビューに切り替える 一覧表ビューを離れ、平面図や断面図などの2Dビューに移動します。 ステップ2：寸法ツールのデフォルト設定を変更する すべての要素を選択解除します（Escキー）。 ツールボックスから寸法ツールをアクティブにします。 設定ダイアログを開きます（Ctrl/Cmd + T）。 ペン、文字サイズ、マーカースタイルなどを、一覧表で使用したい表示に合わせて調整します。 OKをクリックします。 ステップ3：自動寸法を再生成する ドア一覧表または窓一覧表に戻ります。 左側のフォーマットパネルを開きます。 プレビューセルのひとつを選択し、「自動寸法を追加」のチェックを外します（寸法が消えます）。 再度「自動寸法を追加」にチェックを入れます。 これにより、更新された寸法ツールのデフォルト設定を使用して、自動寸法が再生成されます。 なぜ有効なのか 自動寸法をオフ／オンに切り替えることで、Archicadは既存の寸法を再利用するのではなく、現在の寸法ツール設定に基づいて新しく生成し直します。 注意 このワークフローは自動寸法のみに適用されます。 ［注釈］タブで手動配置した寸法は独立した要素であるため、寸法ツールのデフォルト設定を変更しても影響を受けません。 結果 数クリックで、一覧表内すべてのプレビューが正しいペン、テキストスタイル、マーカーに更新されます。ドアおよび窓の立面図を、繰り返し手作業で修正することなく、統一されたきれいなグラフィックに仕上げることができます。 ぜひお試しください。元のフォーラムディスカッションにもアクセスして、@AllanP と @Laszlo Nagy に いいね！ を送ってください。 日常業務の中で見つけた便利なテクニックや工夫はありませんか？コミュニティに共有いただければ、Insightsブログに掲載されるかもしれません 😎",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "score": 8,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nArchicadでドア一覧表や窓一覧表を作成する際、プレビューセルに自動寸法を表示している場合、ペンセット・フォントサイズ・マーカースタイルなどが統一されていないことが多くあります。従来はセルごとに個別に寸法設定を調整する必要があり、大規模なプロジェクトでは非常に手間がかかる作業でした。プロフェッショナルな図書作成では、一覧表のビジュアル統一が重要な要件となるため、この課題の解決方法が多く求められていました。\n\n【内容】\nGraphisoftコミュニティが公開した解決方法は、寸法ツールのデフォルト設定を変更した後、一覧表を再生成するという3ステップのワークフローです。具体的には、モデルビューで寸法ツールをアクティブにし、設定ダイアログ（Ctrl/Cmd+T）でペン・文字サイズ・マーカースタイルを調整します。その後、ドア一覧表または窓一覧表に戻り、フォーマットパネルで自動寸法のチェックボックスをオフ→オンにすることで、更新されたデフォルト設定に基づいて全寸法が一括で再生成されます。\n\n【技術的ポイント】\nこの方法が有効である理由は、自動寸法のオン/オフ切り替えにより、Archicadが既存寸法を再利用するのではなく、現在の寸法ツール設定に基づいて新規に生成し直すためです。ただし重要な制限として、このワークフローは自動寸法にのみ適用されます。「注釈」タブで手動配置した寸法は独立した要素であるため、寸法ツールのデフォルト設定変更の影響を受けません。\n\n【業界への影響】\nこのテクニックにより、複数のドア・窓一覧表において数クリックで全プレビューの寸法表示を統一できるようになります。繰り返しの手作業が削減され、大幅な業務効率化につながります。特に複雑なプロジェクトや大量の建具要素を扱う場合、一覧表の作成工程で費やされていた時間をより重要な設計業務に充てることが可能になり、BIMワークフローの生産性向上に貢献します。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "Graphisoft / Archicad アップデート情報\n\n今月のヒント：一覧表内の寸法ペンを一括で編集する方法（3/19）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%E4%BB%8A%E6%9C%88%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88-%E4%B8%80%E8%A6%A7%E8%A1%A8%E5%86%85%E3%81%AE%E5%AF%B8%E6%B3%95%E3%83%9A%E3%83%B3%E3%82%92%E4%B8%80%E6%8B%AC%E3%81%A7%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/ba-p/694208\n\n#Archicad #Graphisoft #BIM",
+    "titleJa": "Archicadで一覧表の寸法を一括編集——手作業を劇的に削減"
+  },
+  {
+    "title": "Archicad 28.3.3 Hotfix リリース",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-28-3-3-Hotfix-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9/ba-p/692542",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-02-10T12:14:35.000Z",
+    "summary": "Archicad 28.3.3 Hotfix が、Full（6300）版および Solo（6301）版の両方で利用可能になりました。 対応しているすべての言語バージョンのインストーラが提供されています。 本 Hotfix には、ドキュメント作成、ビジュアライゼーション、その他の不具合修正が含まれておりますので、Archicad 28 をご利用の方は必ずインストールしてください。改善内容の詳細については、リリースノートページ（現在は英文） にてご確認いただけます。※ 本ページ下に暫定的に翻訳を掲載します。 アップデート用インストーラは、弊社ウェブサイトの「アップデート」セクションから入手可能です。 Archicad 28.3.3 Hotfix（ビルド 6300）をインストールしても、Archicad 28.3.0（6003）アップデート版、および AC28.3.1～AC28.3.2 Hotfix（6200）とのチームワーク互換性は維持されます。 また、自動更新チェック機能（Check for Updates）により、エンドユーザーには新バージョンの通知が表示されます。 ご不明な点やフィードバックがございましたら、お気軽にお知らせください。 テクニカルサポートチーム-----日本語ページ掲載まで Archicad 28.3.3 このホットフィックスでは、ドキュメントおよびビジュアリゼーションに関する問題を含む、その他の軽微な不具合を修正しています。 修正点は以下の通りです。 ドキュメンテーション Archicad またはサードパーティ製アドオンから表示される「開く」ダイアログが途中で切れてしまい、ボタンにアクセスできない場合がありましたが、この問題を修正しました (DEF-26279) チームワークプロジェクトにおいて、要素の予約なしにキーノートラベルが変更可能だった不具合を修正しました。 (DEF-26134) 建具一覧表でカスタムテキストを入力した際に発生していたクラッシュを修正しました。 (DEF-14724) ビジュアリゼーション（視覚化） macOS で、Archicad 28および29 使用時に空のウィンドウが残って表示され、操作の妨げになる問題を修正しました。 (DEF-26526) インストール&アップデート 日常の操作をより安心して行えるよう、Archicad の安定性を向上させました。 (DEF-23724)",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "score": 8,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nArchicadはBIM設計の業界標準ツールとして広く使用されており、安定性と機能の正確性がプロジェクト管理に直結します。28.3系統の運用において、ユーザーの作業フローを阻害する複数の不具合が報告されていました。特にチームワーク機能を活用する大規模プロジェクトでは、予期しない動作によるリスクが懸念されていました。\n\n【内容】\nGraphisoftは2024年にArchicad 28.3.3ホットフィックスをリリースしました。このアップデートはFull版（ビルド6300）とSolo版（6301）の両方で利用可能です。主な修正点として、ファイルオープンダイアログの表示不具合、チームワークプロジェクト内でのキーノートラベルの無断変更問題、建具一覧表作成時のクラッシュが解決されています。macOS環境での空のウィンドウ残存問題も修正され、全般的な安定性が向上しました。\n\n【技術的ポイント】\nチームワークプロジェクトにおける要素予約メカニズムの不備は、複数ユーザーが同時編集する環境で深刻な競合エラーを引き起こします。キーノートラベルの管理はドキュメント出力品質に直結するため、この修正はBIM情報の正確性確保に重要です。建具一覧表のクラッシュはLOD情報や属性データの処理プロセスにおける問題で、データベース連携の堅牢性を強化します。\n\n【業界への影響】\nこのホットフィックスは、特にチームワークを基本とする建設プロジェクトにおいて、データ競合リスクを低減させます。設計変更ドキュメントの確実な作成と管理が可能になることで、竣工図等の重要な納品物の品質が向上します。安定性強化により、大規模チーム環境での導入障壁が低下し、より多くのプロジェクトでのArchicad活用が促進されるでしょう。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "Graphisoft / Archicad アップデート情報\n\nArchicad 28.3.3 Hotfix リリース（2/10）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-28-3-3-Hotfix-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9/ba-p/692542\n\n#Archicad #Graphisoft #BIM",
+    "titleJa": "Archicad 28.3.3ホットフィックス、ドキュメント作成の重大バグを解決"
   },
   {
     "title": "The agentic future of BIM",
@@ -37,7 +708,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-07T07:22:16.000Z",
     "summary": "With AI, could solver-driven design tools radically reshape our industry in as little as five years? The post The agentic future of BIM appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.974Z",
+    "fetchedAt": "2026-04-17T14:02:03.208Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -65,7 +736,7 @@
       "flags": [],
       "reason": "要約なし — スキップ"
     },
-    "postText": "BIM × AI の最新事例👇\n\nThe agentic future of BIM（3/7）\n\nhttps://aecmag.com/bim/the-agentic-future-of-bim\n\n#BIM #AI #建設DX #AEC #建設テック #DX",
+    "postText": "AIがBIMを変える——最新情報です\n\nThe agentic future of BIM（3/7）\n\nhttps://aecmag.com/bim/the-agentic-future-of-bim\n\n#BIM #AI #建設DX #AEC #建設テック #DX",
     "titleJa": "BIMはAIエージェントのOS化へ—5年で産業が激変する"
   },
   {
@@ -74,7 +745,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:36.000Z",
     "summary": "We dive deep into the future of AI in AEC - exploring the rise of agentic BIM and lots more The post AEC Magazine March / April 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.974Z",
+    "fetchedAt": "2026-04-17T14:02:03.208Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -106,150 +777,12 @@
     "titleJa": "エージェント型BIMの時代へ、AIが設計プロセスを根本から変える"
   },
   {
-    "title": "NXT BLD 2026: a decade of looking around corners",
-    "link": "https://aecmag.com/nxt-bld/nxt-bld-2026-a-decade-of-looking-around-corners",
-    "source": "AEC Magazine",
-    "pubDate": "2026-02-25T17:18:25.000Z",
-    "summary": "With design automation, AI, and data-driven approaches set to reshape AEC, NXT BLD has never felt more important The post NXT BLD 2026: a decade of looking around corners appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.974Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec",
-      "design automation"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "design automation",
-      "automation",
-      "ai"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nAEC業界は過去10年間で驚異的な技術進化を遂げています。2017年の初開催時には未来構想だった生成型デザインやリアリティキャプチャが今や主流化し、その加速度は増すばかりです。NXT BLDは業界の技術革命を先読みし、実装段階にある技術を冷徹に紹介するイベントとして定着しました。今回の10周年記念開催となる2026年版は、AIとデータドリブンアプローチがAEC業界を根底から変える瞬間を記録する最前線となります。\n\n【内容】\n2026年5月13～14日、ロンドンのクイーンエリザベスIIセンターで開催されるNXT BLD 2026は、「Agentic BIM」「デザイン自動化」「データファースト思考」を3本柱として構成されます。Agentic BIMは、インテリジェントなソフトウェアエージェントが設計者を支援するのではなく、意思決定や解析実行、学際間の連携を最小限の人間介入で能動的に駆動する世界を指します。デザイン自動化はパラメトリック設計の枠を超え、建築システム全体を数週間ではなく数時間で生成・評価・最適化できる領域へシフト。特にエンジニアリング分野では、Augmenta、StructureCraft、Hvakr、Endraといった革新的スタートアップが電気・MEP・構造の自動化で劇的な進展を実現しており、これらの企業が一堂に会する初の機会となります。\n\n【技術的ポイント】\nこの転換の核心は「データファースト」への認識転換にあります。建築モデルの価値は幾何学的表現ではなく、その背後の構造化データに存在するという理解が、BIM/デジタルツインの可能性を根本的に拡張しています。同時に、モノリシックなプラットフォーム型ソフトウェアから、オープンデータを中心に軽量で特定タスク向けのアプリケーションを組み合わせる「オンデマンドアプリケーション」へのシフトが進行中です。自動ドローイング生成技術も実験段階を脱し、施工図作成・編集時間を大幅削減できる実装可能なレベルに成熟しています。\n\n【業界への影響】\nこれらの変化は2D から3Dへの移行以来、業界が経験する最大規模のワークフロー変革です。特にエンジニアリング価値の再評価（ConsiglのAecom買収が象徴）により、AI駆動型の構造・MEP解析が競争力の中核へと昇華します。事務所規模を問わず、これらの自動化技術の導入・習得いかんが今後5年のプロジェクト納期と品質を大きく左右することになり、業界全体の生産性向上と同時に、古い手法への依存度低下が急速に進むと予想されます。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "AEC業界の注目ニュースです\n\nNXT BLD 2026: a decade of looking around corners（2/25）\n\nhttps://aecmag.com/nxt-bld/nxt-bld-2026-a-decade-of-looking-around-corners\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
-    "titleJa": "AI時代のAEC革命、NXT BLD 2026が示す建築・エンジニアリングの未来"
-  },
-  {
-    "title": "Autodesk’s $200m bet on spatial AI",
-    "link": "https://aecmag.com/ai/autodesks-200m-bet-on-spatial-ai",
-    "source": "AEC Magazine",
-    "pubDate": "2026-02-18T16:56:45.000Z",
-    "summary": "What World Labs investment means for AEC design workflows The post Autodesk’s $200m bet on spatial AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.974Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "autodesk",
-      "ai",
-      "workflow"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nAutodesktop は従来、テキスト生成AIや平面的な画像生成に頼ってきましたが、建築・構造設計には不足がありました。橋梁や複雑な工業製品の設計には、単なるテキスト処理ではなく、空間推論、物理的な構造理解、そして時系列での反復能力が必要です。AEC業界のAI化は新しい段階を迎えており、Autodesktは基礎研究段階からの投資に踏み切ります。\n\n【内容】\nAutodesktは2025年、スタンフォード大学のAI研究者フェイ・フェイ・リー博士が共同創業した空間知能企業World Labsに2億ドル（約200億円）を投資しました。この投資は10億ドルの総ラウンドの一部で、NvidiaやAMDも参画しています。World Labsの主力製品「Marble」は、単一の画像、動画クリップ、またはテキストプロンプトから、空間的に一貫性のある高忠実度の対話的3D環境を生成します。神経放射場（NeRF）と生成型3Dモデリング技術を基盤としており、コンピュータビジョンと神経レンダリングの専門家チームにより開発されています。\n\n【技術的ポイント】\nこのアプローチの革新性は、単なる画像生成ではなく「物理的に妥当で永続的な3D環境」を構築・推論できる点です。従来のCADやBIM補助AIは狭い範囲に限定されていましたが、Marbleは複数モダリティ（画像・動画・テキスト）からの入力を統一的に処理し、構造物の幾何学的性質と物理特性を保持した環境を生成します。これにより、設計反復と検証が従来のワークフローと大きく異なります。\n\n【業界への影響】\nAutodesktの助言役就任と研究レベルでの深い協力は、単なる資金投下ではなく、次世代設計ツール開発への長期的コミットメントを示しています。ただし、研究段階から実務設計ワークフロー（特に構造エンジニアの意思決定支援）への実装には相当な距離があります。今後、Marbleのような基盤技術がRevitやAutoCADに統合されれば、BIM作成の初期段階や代替案生成が根本的に変わる可能性が高いです。\n",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "AEC業界の注目ニュースです\n\nAutodesk’s $200m bet on spatial AI（2/18）\n\nhttps://aecmag.com/ai/autodesks-200m-bet-on-spatial-ai\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
-    "titleJa": "Autodesk、空間AI企業World Labsに200億円投資—設計ワークフロー革新への布石"
-  },
-  {
-    "title": "Autodesk invests £2M in construction material tracking firm",
-    "link": "https://aecmag.com/news/autodesk-invests-2m-in-construction-material-tracking-firm-qflow",
-    "source": "AEC Magazine",
-    "pubDate": "2026-02-03T14:51:09.000Z",
-    "summary": "UK construction technology company Qflow provides real-time material tracking and management software The post Autodesk invests £2M in construction material tracking firm appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.974Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "autodesk",
-      "construction tech"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\n建設業界では、資材の紛失・廃棄・遅延による年間数十億ドルの損失が課題となっています。従来、設計段階のBIMデータと現場の資材管理システムが分断されており、リアルタイムな連携が困難でした。Autodesk社はこうした業界課題を解決し、サステナビリティと効率性を両立させるため、UK拠点の建設テック企業Qflowへの戦略的投資に踏み切りました。\n\n【内容】\nAutodesk社は、リアルタイム資材追跡・管理ソフトウェアを提供するQflowに£2百万を投資しました。Qflowのプラットフォームは、建設現場の資材配送、返品、廃棄をリアルタイムで追跡し、過去18ヶ月間でUK全域400サイト以上で50万件以上の配送を記録しています。本投資により、Qflow と Autodesk Construction Cloud の統合が強化され、設計データと現場の資材品質・数量・サプライチェーン情報が接続される予定です。Qflowの総資金調達額は£7百万に達し、Pi Labs、Triple Point Ventures、Construction Innovation Hubが既存投資家として参加しています。\n\n【技術的ポイント】\nこの統合により、BIM環境で設計された資材情報が現場のIoT・RFID追跡システムと動的に同期されます。Autodesk Construction Cloudプラットフォーム内で、LOD（Level of Development）に基づいた資材仕様と現場実績を一元管理でき、設計変更に応じた資材調整がリアルタイムで反映されます。また、ブロックチェーンやAIによる異常検知を組み合わせることで、資材関連リスクの早期発見が可能になります。\n\n【業界への影響】\nこの統合は、デジタルツイン概念を現場運営段階に拡張する重要なマイルストーンです。建設現場の意思決定がデータドリブン化され、資材遅延や過剰注文による工期遅延・原価超過が削減されます。さらにQflowCEO Brittany Harris氏が指摘する通り、廃棄削減による年間カーボンエミッション削減は持続可能な建設業界実現の鍵になります。コンプライアンス強化と利幅改善を同時に達成する企業にとって、本ソリューションの導入は競争優位性を生むことになるでしょう。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "AEC業界の注目ニュースです\n\nAutodesk invests £2M in construction material tracking firm（2/3）\n\nhttps://aecmag.com/news/autodesk-invests-2m-in-construction-material-tracking-firm-qflow\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
-    "titleJa": "Autodesk、建設現場の資材追跡ソフトに£2M投資—BIMとサイトデータの融合が加速"
-  },
-  {
-    "title": "Cityweft adds 3D building data for England",
-    "link": "https://aecmag.com/geospatial/cityweft-adds-3d-building-data-for-england",
-    "source": "AEC Magazine",
-    "pubDate": "2026-01-23T11:29:22.000Z",
-    "summary": "Models can be brought into Rhino, via the Cityweft platform, with support for Revit and SketchUp coming soon The post Cityweft adds 3D building data for England appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.974Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "aec"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\n建築設計やプランニングにおいて、周辺環境の正確なコンテキスト情報は初期段階のマッシング検討やシャドウ分析に不可欠です。従来、高精度な建物高さデータの取得は時間とコストがかかり、BIM/CADワークフローへの統合も限定的でした。イングランド各地の都市計画プロジェクトでこの課題が顕在化していました。\n\n【内容】\nCityweftは、英国環境・食糧・農村地域対策省（DEFRA）が2022～2025年に収集したLiDARベースの高精度建物高さデータセットをプラットフォームに統合しました。ロンドン、マンチェスター、バーミンガム、グラスゴー、ブリストルなど主要都市を網羅しています。ユーザーはCityweft webプラットフォーム上でRhinoおよびCADプラグイン経由でモデルをエクスポート可能で、Revit・SketchUpのサポートも近日中に予定されています。APIを通じたデータアクセスも可能です。\n\n【技術的ポイント】\nLiDARから導出された建物高さデータは既存のBIM/CAD環境（Rhino、Revit、SketchUp）と統合され、初期段階の概念設計から詳細検討まで一貫して利用できます。Cityweft APIにより、独自ワークフローへの組み込みやデータ駆動型の意思決定が可能になります。正確な周辺建物ジオメトリにより、シャドウ・日射・見通し線分析などの環境シミュレーションの精度が大幅に向上します。\n\n【業界への影響】\n設計初期段階でリアルなサイトコンテキストを活用することで、クライアント説明や計画競技案の質が向上します。環境分析の高度化により、サステナブル設計の検討根拠が強化されます。正確な建物ボリュームデータにより、都市マスタープランやビルディングタイプ分析など、より信頼性の高いデータ駆動型ワークフローが実現します。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Revitユーザー注目の情報です\n\nCityweft adds 3D building data for England（1/23）\n\nhttps://aecmag.com/geospatial/cityweft-adds-3d-building-data-for-england\n\n#Revit #BIM #Autodesk #AEC #建設テック",
-    "titleJa": "イングランド全域の3D建物データがCityweftに統合、BIM設計の精度が向上"
-  },
-  {
     "title": "Why GPU memory matters for CAD, viz and AI",
     "link": "https://aecmag.com/workstations/why-gpu-memory-matters-for-cad-viz-and-ai",
     "source": "AEC Magazine",
     "pubDate": "2026-02-05T08:00:45.000Z",
     "summary": "Even the fastest GPU can stall if it runs out of memory. CAD, BIM visualisation, and AI workflows often demand more than you think, and it all adds up when multi-tasking, writes Greg Corke The post Why GPU memory matters for CAD, viz and AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.974Z",
+    "fetchedAt": "2026-04-17T14:02:03.208Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -281,6 +814,444 @@
     "titleJa": "GPU メモリが足りないと CAD・BIM・AI が崩壊する理由"
   },
   {
+    "title": "London borough cuts maintenance costs with ‘digital twin’",
+    "link": "https://aecmag.com/geospatial/london-borough-cuts-maintenance-costs-with-digital-twin",
+    "source": "AEC Magazine",
+    "pubDate": "2026-04-16T05:45:56.000Z",
+    "summary": "High-res drone imagery allowing “faster and more cost-effective” maintenance surveys The post London borough cuts maintenance costs with ‘digital twin’ appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.207Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec",
+      "digital twin"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "aec",
+      "digital twin"
+    ],
+    "score": 7.2,
+    "freshnessScore": 2,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nロンドン自治区ハロウは、公共資産の保守管理において従来の手作業による点検や足場設営に大きなコストを費やしてきました。特に歴史的建造物の検査では安全確保のため多額の予算を必要としており、より効率的で安全なアプローチの導入が課題となっていました。一方、GISとドローン技術の進化により、自治体レベルでのデジタルツイン構築が現実的になりつつあります。\n\n【内容】\nハロウはEsri UKのSite Scanドローンソフトウェアを導入し、高解像度ドローン画像を取得して詳細な3Dモデルを作成しています。特に注目すべきは、1310年にさかのぼるグレード1指定建造物「ヘッドストーン・マナー&ミュージアム」の屋根調査で、従来の足場設営と手作業による点検を廃止し、単一プロジェクトで12,000ポンドのコスト削減を実現した点です。また、Point CloudとHigh-Quality 3D Meshを含む2D・3D出力により、距離・面積・体積の正確な計測が可能になりました。\n\n【技術的ポイント】\nハロウは既存の低解像度デジタルツインに高解像度ドローンデータを選別統合する「ハイブリッドアプローチ」を採用しています。これにより開発コストを抑制しつつ、必要な箇所に集中的に詳細データを配置できます。将来的にはRevit BIMモデルをデジタルツインに自動統合し、トラフィックデータや気象データなどのリアルタイム情報の組み込みを計画。Esri GISプラットフォームがデータ統合・可視化・解析の基盤として機能しています。\n\n【業界への影響】\n本事例は自治体や大規模施設管理者にとって、デジタルツイン導入が「高額投資」から「低コスト・低リスク戦略」へシフトしたことを示唆しています。特に保守点検業務における時間・経費削減の可視化により、同様の課題を抱える他の自治体への導入が加速すると予想されます。さらにハロウは不法投棄対策にもドローンを応用しており、予防的インフラ配置の最適化など、デジタルツインが運用・計画業務全般に拡大する可能性を示しています。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "建設テックの最前線情報\n\nLondon borough cuts maintenance costs with ‘digital twin’（4/16）\n\nhttps://aecmag.com/geospatial/london-borough-cuts-maintenance-costs-with-digital-twin\n\n#BIM #AEC #建設テック",
+    "titleJa": "ロンドン自治区がドローン×デジタルツインで保守費12,000ポンド削減"
+  },
+  {
+    "title": "NXT BLD 2026: a decade of looking around corners",
+    "link": "https://aecmag.com/nxt-bld/nxt-bld-2026-a-decade-of-looking-around-corners",
+    "source": "AEC Magazine",
+    "pubDate": "2026-02-25T17:18:25.000Z",
+    "summary": "With design automation, AI, and data-driven approaches set to reshape AEC, NXT BLD has never felt more important The post NXT BLD 2026: a decade of looking around corners appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.208Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec",
+      "design automation"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "design automation",
+      "automation",
+      "ai"
+    ],
+    "score": 7.2,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nAEC業界は過去10年間で驚異的な技術進化を遂げています。2017年の初開催時には未来構想だった生成型デザインやリアリティキャプチャが今や主流化し、その加速度は増すばかりです。NXT BLDは業界の技術革命を先読みし、実装段階にある技術を冷徹に紹介するイベントとして定着しました。今回の10周年記念開催となる2026年版は、AIとデータドリブンアプローチがAEC業界を根底から変える瞬間を記録する最前線となります。\n\n【内容】\n2026年5月13～14日、ロンドンのクイーンエリザベスIIセンターで開催されるNXT BLD 2026は、「Agentic BIM」「デザイン自動化」「データファースト思考」を3本柱として構成されます。Agentic BIMは、インテリジェントなソフトウェアエージェントが設計者を支援するのではなく、意思決定や解析実行、学際間の連携を最小限の人間介入で能動的に駆動する世界を指します。デザイン自動化はパラメトリック設計の枠を超え、建築システム全体を数週間ではなく数時間で生成・評価・最適化できる領域へシフト。特にエンジニアリング分野では、Augmenta、StructureCraft、Hvakr、Endraといった革新的スタートアップが電気・MEP・構造の自動化で劇的な進展を実現しており、これらの企業が一堂に会する初の機会となります。\n\n【技術的ポイント】\nこの転換の核心は「データファースト」への認識転換にあります。建築モデルの価値は幾何学的表現ではなく、その背後の構造化データに存在するという理解が、BIM/デジタルツインの可能性を根本的に拡張しています。同時に、モノリシックなプラットフォーム型ソフトウェアから、オープンデータを中心に軽量で特定タスク向けのアプリケーションを組み合わせる「オンデマンドアプリケーション」へのシフトが進行中です。自動ドローイング生成技術も実験段階を脱し、施工図作成・編集時間を大幅削減できる実装可能なレベルに成熟しています。\n\n【業界への影響】\nこれらの変化は2D から3Dへの移行以来、業界が経験する最大規模のワークフロー変革です。特にエンジニアリング価値の再評価（ConsiglのAecom買収が象徴）により、AI駆動型の構造・MEP解析が競争力の中核へと昇華します。事務所規模を問わず、これらの自動化技術の導入・習得いかんが今後5年のプロジェクト納期と品質を大きく左右することになり、業界全体の生産性向上と同時に、古い手法への依存度低下が急速に進むと予想されます。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "建設テックの最前線情報\n\nNXT BLD 2026: a decade of looking around corners（2/25）\n\nhttps://aecmag.com/nxt-bld/nxt-bld-2026-a-decade-of-looking-around-corners\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
+    "titleJa": "AI時代のAEC革命、NXT BLD 2026が示す建築・エンジニアリングの未来"
+  },
+  {
+    "title": "Autodesk’s $200m bet on spatial AI",
+    "link": "https://aecmag.com/ai/autodesks-200m-bet-on-spatial-ai",
+    "source": "AEC Magazine",
+    "pubDate": "2026-02-18T16:56:45.000Z",
+    "summary": "What World Labs investment means for AEC design workflows The post Autodesk’s $200m bet on spatial AI appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.208Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "ai",
+      "workflow"
+    ],
+    "score": 7.2,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nAutodesktop は従来、テキスト生成AIや平面的な画像生成に頼ってきましたが、建築・構造設計には不足がありました。橋梁や複雑な工業製品の設計には、単なるテキスト処理ではなく、空間推論、物理的な構造理解、そして時系列での反復能力が必要です。AEC業界のAI化は新しい段階を迎えており、Autodesktは基礎研究段階からの投資に踏み切ります。\n\n【内容】\nAutodesktは2025年、スタンフォード大学のAI研究者フェイ・フェイ・リー博士が共同創業した空間知能企業World Labsに2億ドル（約200億円）を投資しました。この投資は10億ドルの総ラウンドの一部で、NvidiaやAMDも参画しています。World Labsの主力製品「Marble」は、単一の画像、動画クリップ、またはテキストプロンプトから、空間的に一貫性のある高忠実度の対話的3D環境を生成します。神経放射場（NeRF）と生成型3Dモデリング技術を基盤としており、コンピュータビジョンと神経レンダリングの専門家チームにより開発されています。\n\n【技術的ポイント】\nこのアプローチの革新性は、単なる画像生成ではなく「物理的に妥当で永続的な3D環境」を構築・推論できる点です。従来のCADやBIM補助AIは狭い範囲に限定されていましたが、Marbleは複数モダリティ（画像・動画・テキスト）からの入力を統一的に処理し、構造物の幾何学的性質と物理特性を保持した環境を生成します。これにより、設計反復と検証が従来のワークフローと大きく異なります。\n\n【業界への影響】\nAutodesktの助言役就任と研究レベルでの深い協力は、単なる資金投下ではなく、次世代設計ツール開発への長期的コミットメントを示しています。ただし、研究段階から実務設計ワークフロー（特に構造エンジニアの意思決定支援）への実装には相当な距離があります。今後、Marbleのような基盤技術がRevitやAutoCADに統合されれば、BIM作成の初期段階や代替案生成が根本的に変わる可能性が高いです。\n",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "BIMエコシステムの最新情報👇\n\nAutodesk’s $200m bet on spatial AI（2/18）\n\nhttps://aecmag.com/ai/autodesks-200m-bet-on-spatial-ai\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
+    "titleJa": "Autodesk、空間AI企業World Labsに200億円投資—設計ワークフロー革新への布石"
+  },
+  {
+    "title": "Autodesk invests £2M in construction material tracking firm",
+    "link": "https://aecmag.com/news/autodesk-invests-2m-in-construction-material-tracking-firm-qflow",
+    "source": "AEC Magazine",
+    "pubDate": "2026-02-03T14:51:09.000Z",
+    "summary": "UK construction technology company Qflow provides real-time material tracking and management software The post Autodesk invests £2M in construction material tracking firm appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.208Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "construction tech"
+    ],
+    "score": 7.2,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\n建設業界では、資材の紛失・廃棄・遅延による年間数十億ドルの損失が課題となっています。従来、設計段階のBIMデータと現場の資材管理システムが分断されており、リアルタイムな連携が困難でした。Autodesk社はこうした業界課題を解決し、サステナビリティと効率性を両立させるため、UK拠点の建設テック企業Qflowへの戦略的投資に踏み切りました。\n\n【内容】\nAutodesk社は、リアルタイム資材追跡・管理ソフトウェアを提供するQflowに£2百万を投資しました。Qflowのプラットフォームは、建設現場の資材配送、返品、廃棄をリアルタイムで追跡し、過去18ヶ月間でUK全域400サイト以上で50万件以上の配送を記録しています。本投資により、Qflow と Autodesk Construction Cloud の統合が強化され、設計データと現場の資材品質・数量・サプライチェーン情報が接続される予定です。Qflowの総資金調達額は£7百万に達し、Pi Labs、Triple Point Ventures、Construction Innovation Hubが既存投資家として参加しています。\n\n【技術的ポイント】\nこの統合により、BIM環境で設計された資材情報が現場のIoT・RFID追跡システムと動的に同期されます。Autodesk Construction Cloudプラットフォーム内で、LOD（Level of Development）に基づいた資材仕様と現場実績を一元管理でき、設計変更に応じた資材調整がリアルタイムで反映されます。また、ブロックチェーンやAIによる異常検知を組み合わせることで、資材関連リスクの早期発見が可能になります。\n\n【業界への影響】\nこの統合は、デジタルツイン概念を現場運営段階に拡張する重要なマイルストーンです。建設現場の意思決定がデータドリブン化され、資材遅延や過剰注文による工期遅延・原価超過が削減されます。さらにQflowCEO Brittany Harris氏が指摘する通り、廃棄削減による年間カーボンエミッション削減は持続可能な建設業界実現の鍵になります。コンプライアンス強化と利幅改善を同時に達成する企業にとって、本ソリューションの導入は競争優位性を生むことになるでしょう。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "BIMエコシステムの最新情報👇\n\nAutodesk invests £2M in construction material tracking firm（2/3）\n\nhttps://aecmag.com/news/autodesk-invests-2m-in-construction-material-tracking-firm-qflow\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
+    "titleJa": "Autodesk、建設現場の資材追跡ソフトに£2M投資—BIMとサイトデータの融合が加速"
+  },
+  {
+    "title": "AI, design, and re-shaping the AEC industry",
+    "link": "https://aecmag.com/business/ai-design-and-re-shaping-the-aec-industry",
+    "source": "AEC Magazine",
+    "pubDate": "2026-03-03T07:00:44.000Z",
+    "summary": "AI could consolidate AEC firms, reshape design practice and elevate full-stack designers, transforming BIM into an intelligent, integrated decision hub The post AI, design, and re-shaping the AEC industry appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.208Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai"
+    ],
+    "score": 7,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nAEC業界は現在、計画・設計・施工・運用の各段階で専門企業が分断された極めて断片的な構造をしています。AIと標準化されたデータモデル、共有デジタルプラットフォームの組み合わせにより、これらの段階間の摩擦が大幅に減少する可能性が高まっています。歴史的には、1910年前後の自動車業界が同様の転換期を迎えました。組立ラインと共有プラットフォームの導入により、多数の小規模メーカーから少数の大型統合企業と高級・専門領域企業の二層構造へと再編されたのです。\n\n【内容】\nGraphisoftのアンドラス・フェレンツィは、AEC業界がAIの影響下で二つの主要な構造変化を経験すると指摘しています。第一に業界全体では、プラットフォーム主導の統合が進行し、企業は垂直統合型（ニッチ深化）か水平統合型（ライフサイクル全体対応の多分野企業）かの戦略選択を迫られるようになります。第二に設計実務では、従来の建築・インテリア・BIM等の職種別組織から、建築タイプやプロジェクト「プロダクト」中心の機能横断チームへの転換が起きます。これにより設計知識が再利用可能な資産となり、設計パッケージ化や構成可能なテンプレートの販売が成立します。\n\n【技術的ポイント】\nBIMはAIを通じて単なるモデリングツールから意思決定ハブへと進化します。AI支援設計では、同じ建築タイプに対する複数プロジェクトの知見を標準化テンプレートやパラメトリック設計に内包させることで、座標変換・分析・文書化を一体ユニットとして自動化・最適化できます。これはソフトウェア業界のSaaS化やコンポーネント再利用と同じメカニズムです。IFCをはじめとしたオープンスタンダードは、こうした再利用可能資産の交換基盤として機能します。\n\n【業界への影響】\n設計企業の役割は大きく三分化する見通しです。データドリブンな不動産戦略コンサルティングに進出する企業、施工企業と統合した設計・施工一貫プラットフォームに特化する企業、デベロッパー内部に埋め込まれる企業が出現します。同時に、AI活用の進展と並行して人間の責任が強化される点が重要です。新興のAI責任・規制枠組みは、ツール主導ではなく「責任ある設計者・組織」の存在を法的に求め続けるため、AIは意思決定の方法を変えても、最終的な説明責任は人間専門家に帰属することになります。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "BIM × AI の最新事例👇\n\nAI, design, and re-shaping the AEC industry（3/3）\n\nhttps://aecmag.com/business/ai-design-and-re-shaping-the-aec-industry\n\n#BIM #AI #建設DX #AEC #建設テック #DX",
+    "titleJa": "AIがAEC業界を再編成へ　BIMは「知能統合プラットフォーム」に進化"
+  },
+  {
+    "title": "Autodesk Construction Cloud is now Autodesk Forma",
+    "link": "https://adsknews.autodesk.com/en/news/autodesk-construction-cloud-is-now-autodesk-forma",
+    "source": "Autodesk News",
+    "pubDate": "2026-03-24T14:56:49.000Z",
+    "summary": "Autodesk Forma connects design and construction workflows across the AECO lifecycle.",
+    "fetchedAt": "2026-04-17T14:02:00.909Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "construction cloud"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "autodesk",
+      "construction cloud",
+      "workflow"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nAutodesxkは長年、設計・施工・運用を分断されたワークフローで運営する業界課題に取り組んできました。2025年秋のAU25では、建築家、エンジニア、施工業者、オーナーに向けた業界初のエンドツーエンド、クラウドベース、AI ネイティブプラットフォーム「Autodesk Forma」を発表。計画から設計、施工、運用まで、建築環境のライフサイクル全体を一つの接続された環境で統合するビジョンを示してきました。\n\n【内容】\n本発表により、Autodesk Construction Cloud（ACC）は Autodesk Forma に統合されました。既存データの移行なし、既存ワークフローへの中断なし、ライセンスや統合設定も変更されません。同時に、Forma Data Management（旧Autodesk Docs）が共通データ環境として機能し、計画・設計から施工・運用にかけて、グラニュラーなデータ共有が可能になります。3月25日には、現場向けの「Forma Build Essentials」がリリース予定。パンチリスト、写真による問題管理、最新ファイル閲覧、図面マークアップ、日報記録がウェブおよびモバイルアプリで利用可能となり、小中規模チーム向けに最適化されます。\n\n【技術的ポイント】\nForma Data Management は全プロジェクト関係者の共通データ環境として機能し、設計インテント（BIM）から施工実行への連続性を確保します。AutoCAD、Revit、Civil 3D のスタンドアロンユーザーも Forma Data Management Essentials を通じてクラウド協調環境にアクセス可能に。さらにベータ版の Bidding Tool は BuildingConnected の実績ある入札管理ワークフローを Forma の Preconstruction に統合し、複数 RFP の管理と見積りの調整を一元化します。\n\n【業界への影響】\nこの統合は、分断されたファイルベースから共有データベース中心の運用へのシフトを加速させます。上流の意思決定（設計段階での選択）が下流（施工・運用段階）に文脈と明確性を持って伝達される環階段的な情報フローが実現。IDC の調査でも、フラグメント化されたデータと非接続ワークフローは生産性を制限すると指摘されており、本プラットフォームアプローチは業界の統合トレンドを象徴。現場チームから設計チームまで、同一の最新情報に基づく判断が可能になることで、バージョン混乱の削減、施工精度の向上、プロジェクト全体の可視化が期待されます。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "建設テックの最前線情報\n\nAutodesk Construction Cloud is now Autodesk Forma（3/24）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-construction-cloud-is-now-autodesk-forma\n\n#BIM #AEC #建設テック",
+    "titleJa": "Autodesk Construction Cloud が Autodesk Forma へ統合、設計から施工まで一貫流"
+  },
+  {
+    "title": "McKinsey and Alice Technologies form alliance",
+    "link": "https://aecmag.com/project-management/mckinsey-and-alice-technologies-form-alliance",
+    "source": "AEC Magazine",
+    "pubDate": "2026-04-17T09:40:07.000Z",
+    "summary": "Collaboration aims to brings AI- and advanced-analytics-enabled scheduling to project delivery The post McKinsey and Alice Technologies form alliance appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.207Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai"
+    ],
+    "score": 6.3,
+    "freshnessScore": 3,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】建設業界は長年、スケジュール遅延やコスト超過の問題を抱えており、他産業と比べて生産性改善が遅れています。特に大型資本プロジェクトの計画立案には、従来の重要経路法（クリティカルパス）では対応しきれない複雑な変数が存在します。McKinseyとAlice Technologiesは約5年間にわたり、インフラ、データセンター、エネルギー、鉱業、製造業などの領域で共同クライアント業務を展開してきました。このたび両社は、生成的スケジューリング技術の応用に特化した商用提携を正式化しました。\n\n【内容】今回の提携は、AI・高度分析機能を備えたスケジューリングを大規模資本プロジェクトに導入することを目指しています。すでに35以上のクライアントに展開済みで、McKinseyは工期短縮率で平均20%、最大40%の実績を報告しています。技術基盤はAlice Technologiesの「パラメトリック実行モデル」で、BIMデータとPrimavera P6スケジュールを取り込み、シーケンス手配とリソース配分の数百万通りの組み合わせをシミュレーション。労務、機器、材料、空間制約、作業順序を可変要素として扱い、単一の決定論的スケジュールに頼らず、コスト・工期・リスクの相互関係を多角的に評価できます。\n\n【技術的ポイント】従来のクリティカルパス手法と異なり、本プラットフォームは複数の代替案を自動生成・ランク付けすることで、計画者が手動でシナリオを構築する手間を削減します。BIM統合により設計情報を直接活用でき、スケジュール最適化の精度が向上します。McKinseyはこの技術を、プロジェクトコントロール全体と運営モデル改革に組み込むことで、単なるソフトウェア導入を超えた包括的ソリューションとして位置づけています。\n\n【業界への影響】本提携は、コンサルティング企業が従来の方法論だけでなく、構造化された技術パートナーシップへシフトする業界トレンドを象徴しています。ただし成果の再現性はプロジェクト種別やオーナーの成熟度に左右される見込みです。データ品質、モデル忠実度、組織変革という実装上の制約により、成果は大きく変動する可能性があります。McKinseyもこれを認識し、単なるソフトウェア提供ではなく、運営モデル変革を含めた統合提案として展開する方針を示しています。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "BIMエコシステムの最新情報👇\n\nMcKinsey and Alice Technologies form alliance（4/17）\n\nhttps://aecmag.com/project-management/mckinsey-and-alice-technologies-form-alliance\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
+    "titleJa": "マッキンゼーとAlice Technologies提携、AI生成スケジューリングで工期40%短縮へ"
+  },
+  {
+    "title": "Graitec earns Autodesk Gold Partner status",
+    "link": "https://aecmag.com/data-management/graitec-earns-autodesk-gold-partner-status",
+    "source": "AEC Magazine",
+    "pubDate": "2026-04-13T16:36:34.000Z",
+    "summary": "Achieved through Graitec File Sync, which streamlines migration, synchronisation, and backup The post Graitec earns Autodesk Gold Partner status appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.207Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk"
+    ],
+    "score": 6.3,
+    "freshnessScore": 1,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nAEC業界では、複数のクラウドサービスやオンプレミスシステムにプロジェクトデータが分散し、バージョン管理やデータ連携が大きな課題となっています。Autodesk Forma、Procore、Bluebeamなど異なるプラットフォーム間でのシームレスな連携を実現できるツールの需要が高まっており、Graitecはこの課題解決に向けた統合ソリューションを提供することで、パートナーシップの強化を実現しました。\n\n【内容】\nGraitecは「Graitec File Sync」というデータ統合ツールの提供を通じて、Autodesk AECO Gold Technology Partnerの認定を取得しました。このツールは、Autodesk Forma、Procore、Bluebeam、Microsoft SharePoint、Egnyte間でファイルとフォルダを自動同期し、プロジェクトデータの移行時にフォルダ構造と命名規則を保持することで、バージョン競合やファイルの誤送信を削減します。また、Autodesk Formaのプロジェクトデータを外部ストレージにバックアップ・アーカイブする機能も備え、プロジェクトライフサイクル全体を通じた継続性とコンプライアンスを確保します。\n\n【技術的ポイント】\nFile Syncは複数プラットフォーム間の自動同期により、手動によるデータ統合作業を排除し、ファイルシステムの整合性を維持します。特にAutodesk Formaとの連携では、BIMデータを含むプロジェクト情報をリアルタイムで更新することで、設計・施工チーム全体が最新の計画から作業できる環境を実現。データの一元化によってマルチプラットフォーム環境での競合やエラーを根本的に解決する構造を採用しています。\n\n【業界への影響】\nこの認定はAEC企業にとって、設計・施工管理ツールの統合による業務効率化の道を拓きます。データ管理に費やす手作業が削減され、チーム間の連携が加速することで、プロジェクト納期の短縮とエラー率の低下に直結します。大規模プロジェクトにおいて複数システムを運用するゼネコンやAEC事務所にとって、建設DX推進の重要な基盤となり、デジタルワークフローの成熟度を大きく向上させるツールとなるでしょう。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "建設テックの最前線情報\n\nGraitec earns Autodesk Gold Partner status（4/13）\n\nhttps://aecmag.com/data-management/graitec-earns-autodesk-gold-partner-status\n\n#BIM #AEC #建設テック",
+    "titleJa": "Graitec、Autodesk Gold Partner認定取得—ファイル同期で建設DXが加速"
+  },
+  {
+    "title": "Rewriting the rules",
+    "link": "https://aecmag.com/business/rewriting-the-rules",
+    "source": "AEC Magazine",
+    "pubDate": "2026-03-03T06:00:14.000Z",
+    "summary": "How Autodesk’s EULA shift reshaped the AI training debate The post Rewriting the rules appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.208Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "ai"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\n2025年10月、AEC Magazineが報じた「Contract Killers」記事によって、AECソフトウェア企業のエンドユーザーライセンス契約（EULA）における問題条項が注目を集めました。特にAutodeskのAI訓練禁止規定が、実務的にはBIMモデルや設計データを用いた自社AI開発を違約行為として解釈される可能性があり、業界内で懸念が広がっていました。同条項は2018年5月から存在していたものの、生成AIの実務的関連性が高まるまで大きな問題視されていませんでした。\n\n【内容】\n2025年12月8日、Autodesk は利用契約、受容可能な使用方針（AUP）、およびAutodesk Platform Services（APS）利用規約を大幅改訂しました。改訂は「接続ワークフロー、プラットフォームサービス、エージェント自動化」への対応と位置付けられていますが、実質的には業界からの強い反発に応じたものです。改訂により、企業が自社データを用いてAIモデルの訓練やエラー検出分類器の開発、コスト予測ツールの構築、Revitエクスポートを使用した機械学習スクリプト実行など、正当なAEC AI用途が法的に許可されるようになりました。\n\n【技術的ポイント】\nこの変更はBIM実務における重要なマイルストーンです。従来、多くの企業がRevitや設計データを活用した内部AI プロジェクトを一時停止せざるを得ない状況に陥っていました。改訂後は、歴史プロジェクトデータを用いた予測ツール開発やモデリングエラー自動検出など、計算設計コミュニティが推進してきたAI活用が法的に明確化されました。意図と実際の条文の齟齬が解消され、利用者は過度な法的リスク解釈から解放されます。\n\n【業界への影響】\n本改訂は単なる契約修正ではなく、AECテック産業全体のイノベーション加速を意味します。設計IT責任者は法的コンプライアンスへの懸念を軽減でき、企業はAI導入への戦略的投資を再開できるようになりました。同時にこれは、利用者団体や専門家（Nathan Millerのような意見指導者）の公開批判が、大規模ソフトウェアベンダーの方針変更を直接促した事例として、業界のパワーバランス変化を示唆しています。今後、他社も同様の利用条項見直しを迫られる可能性が高く、顧客データ権とベンダー権のより透明で公正なフレームワーク構築が加速するでしょう。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "建設テックの最前線情報\n\nRewriting the rules（3/3）\n\nhttps://aecmag.com/business/rewriting-the-rules\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
+    "titleJa": "AI訓練禁止条項が撤廃へ、Autodesk利用者の懸念解消"
+  },
+  {
+    "title": "AI in AEC: why better decisions matter more than faster tools",
+    "link": "https://aecmag.com/opinion/ai-in-aec-why-better-decisions-matter-more-than-faster-tools",
+    "source": "AEC Magazine",
+    "pubDate": "2026-02-05T07:00:07.000Z",
+    "summary": "Amy Bunszel, EVP of AEC solutions, Autodesk, on what she expects to see from AI in 2026 The post AI in AEC: why better decisions matter more than faster tools appeared first on AEC Magazine.",
+    "fetchedAt": "2026-04-17T14:02:03.208Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "ai"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nAEC業界におけるAI活用は、これまでドキュメント自動化や調整の加速化といった効率性向上に重点が置かれてきました。しかし業界が直面する課題は単なる処理速度ではなく、より複雑で高性能な建築・インフラを少ない人数で、限られた予算と時間の中で実現することです。オーナーやコミュニティは、プロジェクトが期待通りに機能し長期にわたって耐用できることを求めており、設計段階での意思決定の重要性が急速に高まっています。\n\n【内容】\nAutodeskのAmy Bunszel氏が指摘する2026年のAI活用の最大の転換点は、デジタル作業の高速化ではなく、チームがより良い意思決定を下し、プロジェクト全体で創造性と革新性を引き出すことにあります。敷地戦略、ボリューム計画、工程計画といった初期段階の決定は、以前は仮設的な選択肢として扱われていたのに対し、現在はプロジェクト進行後も修正する余裕がなくなっています。AIはサイト条件、環境要因、システム性能、施工性などのプロジェクトデータを分析することで、決定がロックイン前にトレードオフを検討できます。\n\n【技術的ポイント】\nAI活用の鍵は、概念設計から詳細設計への移行において、設計意図の連続性を保つことです。従来の方法では概念探索と技術定義を別々の手法オフとして扱い、後段階で再解釈されていました。AI統合により、初期段階の設計意図、空間的判断、システムロジック、性能期待値がそのまま詳細レイアウトと連動します。これにより、建築家、構造エンジニア、施工者が共有データに基づいた分析・シミュレーションをリアルタイムで実行でき、後段階の大幅な設計変更を削減します。\n\n【業界への影響】\nこの転換はプロジェクト実現方法に根本的な変化をもたらします。各職種が異なる視点から同じプロジェクトを見ていた従来の体制から、エネルギー使用量、材料インパクト、工程、気候曝露を共有データで継続的に評価する体制へ移行します。施工性と工程計画が設計段階での会話に組み込まれ、初期決定が確実に施工・運用可能な解決策に繋がるという信頼性が生まれます。結果として、後付けの課題解決や大幅な設計変更が大幅に減少し、プロジェクト全体の効率性と成功確度が向上します。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "AEC業界の注目ニュースです\n\nAI in AEC: why better decisions matter more than faster tools（2/5）\n\nhttps://aecmag.com/opinion/ai-in-aec-why-better-decisions-matter-more-than-faster-tools\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
+    "titleJa": "AEC業界のAI活用が転換期へ、「速度」から「意思決定の質」へシフト"
+  },
+  {
+    "title": "Autodesk shares AI Public Policy Recommendations to help accelerate innovation, efficiency, and resilience in Design and Make industries",
+    "link": "https://adsknews.autodesk.com/en/news/autodesk-shares-ai-policy-recommendations",
+    "source": "Autodesk News",
+    "pubDate": "2026-04-15T12:45:16.000Z",
+    "summary": "New recommendations outline practical steps to support responsible AI adoption across architecture, engineering, construction, and manufacturing",
+    "fetchedAt": "2026-04-17T14:02:00.909Z",
+    "category": "AI_DX",
+    "categoryHits": [
+      "ai"
+    ],
+    "allCategories": [
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "autodesk",
+      "ai"
+    ],
+    "score": 6,
+    "freshnessScore": 2,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nAIが建設・設計・製造業界の在り方を急速に変える中、政府の政策支援が産業規模でのAI導入を左右する重要な局面を迎えています。Autodeskは2026年4月、設計・建設・製造産業におけるAI活用を加速させるための公開政策提言を発表しました。業界全体が責任あるAI導入をいかに実現するかが、今後の競争力と経済成長の鍵となっているのです。\n\n【内容】\nAutodeskの提言は4つの優先事項から構成されています。第一に、デジタルツールとプロセスの採用加速です。第二が、ワークフォース開発とデジタルスキルへの投資で、AI時代に対応できる人材育成を求めています。第三は、公共課題解決のためのデータシェアリング基盤の構築。第四が、責任あるAI導入のための明確な規制枠組みと透明性基準の設立です。特にBIM（ビルディング・インフォメーション・モデリング）の公共プロジェクトでの採用と、建設・製造業の労働力へのデジタルスキル提供を重点として位置づけています。\n\n【技術的ポイント】\nインフラ・建設環境における具体的なAI応用として、リスク早期発見、洪水リスクや風の流れなどの環境要因評価、建設前のプロジェクト最適化が挙げられます。製造業ではAIが設計オプションの高速探索を可能にし、性能・サステナビリティ・コストのバランスを自動で評価できます。これらはIFC標準やデジタルツイン技術と組み合わせることで、より高度なデータ連携と意思決定支援を実現します。\n\n【業界への影響】\nこの提言は単なる企業声明ではなく、政府の政策立案に直接影響を与える戦略的な動きです。BIM導入の加速、人材育成への公共投資、データシェアリング規制の整備が実現すれば、中小建設企業も含めた業界全体のデジタル化が一気に進展する可能性があります。同時に、AI導入に伴う雇用や技能の変化に対して政府レベルでの対応が必要という認識も広がるでしょう。建設・製造業の生産性向上とレジリエンス強化が経済政策の中心に組み込まれるターニングポイントとなる提言です。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "DX推進に役立つ情報です\n\nAutodesk shares AI Public Policy Recommendations to help accelerate innovation, e…（4/15）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-shares-ai-policy-recommendations\n\n#AI #建設DX #DX",
+    "titleJa": "Autodeskが建設・製造業のAI政策提言を発表、BIM推進と人材育成が鍵"
+  },
+  {
+    "title": "BIMx Web版でのPro機能の導入およびBIMcloudに関するお知らせ",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/BIMx-Web%E7%89%88%E3%81%A7%E3%81%AEPro%E6%A9%9F%E8%83%BD%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%8A%E3%82%88%E3%81%B3BIMcloud%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/ba-p/698691",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-04-08T01:45:51.000Z",
+    "summary": "&nbsp; &nbsp; &nbsp;",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "graphisoft",
+      "bimx"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "graphisoft",
+      "bimx"
+    ],
+    "score": 6,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nGraphisoftはBIMxのモバイル版・デスクトップ版でPro機能を展開してきましたが、ブラウザ版（Web版）への対応が課題でした。プラットフォーム統合を推し進める業界トレンドに合わせ、Web版にもPro機能を追加することで、デバイスを問わないシームレスなBIMモデル活用環境の実現を目指しています。\n\n【内容】\n2026年4月7日より、BIMx Web版（BIMx Model TransferおよびBIMcloud）に以下のPro機能が追加されます。まず、3D要素の表示・非表示切り替え、および層・層フォルダ・層コンビネーションによる複数要素の表示制御が可能になります。次に、カスタマイズ可能なカットプレーン機能により、任意の要素面に平行に3Dモデルをスライスでき、垂直・斜め・水平の断面を簡単に取得できるようになります。さらに、Archicad 29.1およびMEP Designer 29.1アップデートに伴い、BIMxエクスポートが最適化され、ファイルサイズが小さく、高速にエクスポートできるようになっています。\n\n【技術的ポイント】\nこのアップデートの技術的な注目点は、Web版・デスクトップ版における3Dモデルとレイアウトの読み込み高速化です。プロジェクトの複雑さに応じて、これまでより大幅に高速処理を実現しています。レイヤーコンビネーション機能はBIM運用の重要な要素であり、Web環境での対応により、施工現場やクライアント打ち合わせでのタブレットやPC活用がより実用的になります。\n\n【業界への影響】\nこれらの機能強化により、設計事務所と建設現場、施主間での情報共有がより効率化されます。特にWeb版での層制御とカットプレーン機能は、現場検査やコンフリクトチェック、詳細設計の確認作業を大幅に効率化します。BIMcloud 2026.1の提供開始とともに、クラウド環境でのリアルタイムモデル共有がより強化され、分散チーム間での設計・施工プロセスの加速が期待できます。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "Archicadの最新情報👇\n\nBIMx Web版でのPro機能の導入およびBIMcloudに関するお知らせ（4/8）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/BIMx-Web%E7%89%88%E3%81%A7%E3%81%AEPro%E6%A9%9F%E8%83%BD%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%8A%E3%82%88%E3%81%B3BIMcloud%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/ba-p/698691\n\n#Archicad #Graphisoft #BIM",
+    "titleJa": "BIMx Web版がついに進化。Pro機能とBIMcloud 2026.1でワークフロー一新"
+  },
+  {
+    "title": "５月スタート BIMマネージャープログラム 受付開始！",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%EF%BC%95%E6%9C%88%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88-BIM%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0-%E5%8F%97%E4%BB%98%E9%96%8B%E5%A7%8B/ba-p/698103",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-04-01T10:55:24.000Z",
+    "summary": "&nbsp; &nbsp;",
+    "fetchedAt": "2026-04-17T14:01:58.553Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "bim",
+      "graphisoft"
+    ],
+    "score": 6,
+    "freshnessScore": 0,
+    "relevant": true,
+    "xPostBody": "",
+    "japaneseSummary": "",
+    "bodyJa": "【背景】\nBIMプロジェクトの推進には、単なる設計スキルだけでなく、プロジェクト全体のBIM戦略立案・管理・運用を統括できるBIMマネージャーの存在が業界で急速に重要性を増しています。一方、体系的にBIMマネージャー教育を受ける機会は限定的であり、ベンダー主導の認定教育プログラムへの需要が高まっているのが現状です。\n\n【内容】\nGraphisoftが年2回開催するBIMマネージャープログラムは、2026年5月開講の春講座の受付を開始しました。本プログラムは10週間のオンライン講習形式で、BIMマネージャーに必要な実践的知識の習得とGraphisoft認定BIMマネージャー証明書の取得を目的としています。参加者同士がグループワークを通じて意見交換しながら課題に取り組む形式で、単純な知識伝達にとどまらないピアラーニングを重視した設計になっています。\n\n【技術的ポイント】\nGraphisoftのBIMマネージャー教育では、ArchiCADをはじめとするBIMツール操作だけでなく、BIMプロセス設計、LOD（Level of Development）定義、IFC等の業界標準フォーマット、マルチユーザー環境での運用管理など、実際のプロジェクト現場で直面する課題への対応スキルを網羅しています。グループワークで実案件に近い環境を設定することで、理論と実践の融合を実現しています。\n\n【業界への影響】\nBIM導入企業の増加に伴い、BIMマネージャーの育成と認定は、BIM運用の質を標準化する重要な施策となります。本プログラムの修了者がプロジェクト現場で実践的な BIM管理ノウハウを展開することで、業界全体のBIM導入レベルの底上げが期待されます。また、Graphisoft認定資格は、BIMマネージャーの専門性証明として、キャリア構築の軸となり得る有効な指標となるでしょう。",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約なし — スキップ"
+    },
+    "postText": "Archicadユーザー向け情報です\n\n５月スタート BIMマネージャープログラム 受付開始！（4/1）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%EF%BC%95%E6%9C%88%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88-BIM%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0-%E5%8F%97%E4%BB%98%E9%96%8B%E5%A7%8B/ba-p/698103\n\n#Archicad #Graphisoft #BIM #AEC #建設テック",
+    "titleJa": "Graphisoft認定BIMマネージャー育成、5月開講プログラム受付開始"
+  },
+  {
     "title": "Charleroi Palais des Expositions revamp wins Mies van der Rohe Award 2026",
     "link": "https://www.dezeen.com/2026/04/16/mies-van-der-rohe-award-2026",
     "source": "Dezeen",
@@ -309,272 +1280,6 @@
       "reason": "要約なし — スキップ"
     },
     "postText": "Autodesk / Revit アップデート情報\n\nCharleroi Palais des Expositions revamp wins Mies van der Ro…（4/16）\n\nhttps://www.dezeen.com/2026/04/16/mies-van-der-rohe-award-2026\n\n#Revit #BIM #Autodesk",
-    "titleJa": ""
-  },
-  {
-    "title": "RevitのBIMオブジェクトについて",
-    "link": "https://bimgate.jp/knowledge/2789",
-    "source": "BIMゲート",
-    "pubDate": "2026-02-18T02:49:52.000Z",
-    "summary": "オブジェクトの呼称と種類 RevitにおけるBIMオブジェクトは、一般に「ファミリ（※注1）」と呼ばれます。ファミリは、BIMモデルを構成する情報オブジェクトであり、形状・属性情報・振る舞いを併せ持つ点が特徴です。 Re […]",
-    "fetchedAt": "2026-04-17T11:51:15.022Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "bim"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nRevitにおけるBIMオブジェクト設計は、建築設計・施工業界でのデジタル化の中核となっています。しかし、多くのユーザーがRevitのオブジェクト体系を十分に理解できないまま運用されることが課題でした。特にファミリの階層構造やパラメータ管理は、効率的なモデル作成と図面・集計表の連動性に直結する重要な知識です。BIM GATE が提供するこの解説は、実務レベルでのファミリ運用を体系的に整理した実践的なガイドラインとなっています。\n\n【内容】\nRevitのBIMオブジェクト（ファミリ）は、「カテゴリ→ファミリ(階層構成)→タイプ→インスタンス」という4段階の階層構造を持ちます。このうちカテゴリは壁・ドア・家具などの大分類であり、表示制御や集計の基準となります。ファミリは要素の形状・属性・動作ルールをまとめた部品定義で、タイプはその内での寸法・仕様バリエーション、インスタンスは実際にモデル上に配置された個々の要素です。ファミリには「システムファミリ」「ロード可能なファミリ（.rfa）」「インプレイスファミリ」の3種類があり、それぞれプロジェクト内での管理方法が異なります。\n\n【技術的ポイント】\nRevitファミリの最大の技術的特徴は、タイプパラメータとインスタンスパラメータという二階層のパラメータ体系です。タイプパラメータはすべての同一タイプオブジェクトに共通で作用し、一括更新が可能です。一方、インスタンスパラメータは個別のオブジェクトごとに異なる値を設定できます。さらに重要なのが「共有パラメータ」で、GUID（Globally Unique Identifier）によって識別され、プロジェクトをまたいで利用可能です。GUIDは32文字の唯一無二のIDで、パラメータ名称ではなくこのIDで判定されるため、集計表やタグ表示で正確なデータ連携が実現します。\n\n【業界への影響】\nこのファミリ体系の理解は、BIM運用の生産性に直結します。既存ファミリをベースに調整する運用により、ゼロからの作成に比べて大幅に作業負荷が削減できます。設備機器のコネクタ機能を活用すれば、配管やダクトが自動生成・接続され、設計変更時の修正業務が劇的に削減されます。また部屋計算ポイントの正確な設定により、建具表や部屋別集計の精度が向上し、設計から施工段階までの情報連携がスムーズになります。Autodesk提供のファミリライブラリや、RUG等の無償・有償ライブラリの活用により、実務レベルのBIM運用基盤が整備されている状況です。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Autodesk / Revit アップデート情報\n\nRevitのBIMオブジェクトについて（2/18）\n\nhttps://bimgate.jp/knowledge/2789\n\n#Revit #BIM #Autodesk #AEC #建設テック",
-    "titleJa": "Revitファミリの階層構造を完全理解する：BIMオブジェクト設計の基礎"
-  },
-  {
-    "title": "Autodesk Construction Cloud is now Autodesk Forma",
-    "link": "https://adsknews.autodesk.com/en/news/autodesk-construction-cloud-is-now-autodesk-forma",
-    "source": "Autodesk News",
-    "pubDate": "2026-03-24T14:56:49.000Z",
-    "summary": "Autodesk Forma connects design and construction workflows across the AECO lifecycle.",
-    "fetchedAt": "2026-04-17T11:51:14.852Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "construction cloud"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "autodesk",
-      "construction cloud",
-      "workflow"
-    ],
-    "score": 7,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nAutodesxkは長年、設計・施工・運用を分断されたワークフローで運営する業界課題に取り組んできました。2025年秋のAU25では、建築家、エンジニア、施工業者、オーナーに向けた業界初のエンドツーエンド、クラウドベース、AI ネイティブプラットフォーム「Autodesk Forma」を発表。計画から設計、施工、運用まで、建築環境のライフサイクル全体を一つの接続された環境で統合するビジョンを示してきました。\n\n【内容】\n本発表により、Autodesk Construction Cloud（ACC）は Autodesk Forma に統合されました。既存データの移行なし、既存ワークフローへの中断なし、ライセンスや統合設定も変更されません。同時に、Forma Data Management（旧Autodesk Docs）が共通データ環境として機能し、計画・設計から施工・運用にかけて、グラニュラーなデータ共有が可能になります。3月25日には、現場向けの「Forma Build Essentials」がリリース予定。パンチリスト、写真による問題管理、最新ファイル閲覧、図面マークアップ、日報記録がウェブおよびモバイルアプリで利用可能となり、小中規模チーム向けに最適化されます。\n\n【技術的ポイント】\nForma Data Management は全プロジェクト関係者の共通データ環境として機能し、設計インテント（BIM）から施工実行への連続性を確保します。AutoCAD、Revit、Civil 3D のスタンドアロンユーザーも Forma Data Management Essentials を通じてクラウド協調環境にアクセス可能に。さらにベータ版の Bidding Tool は BuildingConnected の実績ある入札管理ワークフローを Forma の Preconstruction に統合し、複数 RFP の管理と見積りの調整を一元化します。\n\n【業界への影響】\nこの統合は、分断されたファイルベースから共有データベース中心の運用へのシフトを加速させます。上流の意思決定（設計段階での選択）が下流（施工・運用段階）に文脈と明確性を持って伝達される環階段的な情報フローが実現。IDC の調査でも、フラグメント化されたデータと非接続ワークフローは生産性を制限すると指摘されており、本プラットフォームアプローチは業界の統合トレンドを象徴。現場チームから設計チームまで、同一の最新情報に基づく判断が可能になることで、バージョン混乱の削減、施工精度の向上、プロジェクト全体の可視化が期待されます。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "AEC業界の注目ニュースです\n\nAutodesk Construction Cloud is now Autodesk Forma（3/24）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-construction-cloud-is-now-autodesk-forma\n\n#BIM #AEC #建設テック",
-    "titleJa": "Autodesk Construction Cloud が Autodesk Forma へ統合、設計から施工まで一貫流"
-  },
-  {
-    "title": "McKinsey and Alice Technologies form alliance",
-    "link": "https://aecmag.com/project-management/mckinsey-and-alice-technologies-form-alliance",
-    "source": "AEC Magazine",
-    "pubDate": "2026-04-17T09:40:07.000Z",
-    "summary": "Collaboration aims to brings AI- and advanced-analytics-enabled scheduling to project delivery The post McKinsey and Alice Technologies form alliance appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.973Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai"
-    ],
-    "score": 7,
-    "freshnessScore": 3,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "建設テックの最前線情報\n\nMcKinsey and Alice Technologies form alliance（4/17）\n\nhttps://aecmag.com/project-management/mckinsey-and-alice-technologies-form-alliance\n\n#BIM #AEC #建設テック #AI #建設DX #DX"
-  },
-  {
-    "title": "Graitec earns Autodesk Gold Partner status",
-    "link": "https://aecmag.com/data-management/graitec-earns-autodesk-gold-partner-status",
-    "source": "AEC Magazine",
-    "pubDate": "2026-04-13T16:36:34.000Z",
-    "summary": "Achieved through Graitec File Sync, which streamlines migration, synchronisation, and backup The post Graitec earns Autodesk Gold Partner status appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.973Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "aec",
-      "autodesk"
-    ],
-    "score": 7,
-    "freshnessScore": 1,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "建設テックの最前線情報\n\nGraitec earns Autodesk Gold Partner status（4/13）\n\nhttps://aecmag.com/data-management/graitec-earns-autodesk-gold-partner-status\n\n#BIM #AEC #建設テック",
-    "titleJa": ""
-  },
-  {
-    "title": "AI, design, and re-shaping the AEC industry",
-    "link": "https://aecmag.com/business/ai-design-and-re-shaping-the-aec-industry",
-    "source": "AEC Magazine",
-    "pubDate": "2026-03-03T07:00:44.000Z",
-    "summary": "AI could consolidate AEC firms, reshape design practice and elevate full-stack designers, transforming BIM into an intelligent, integrated decision hub The post AI, design, and re-shaping the AEC industry appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.974Z",
-    "category": "BIM_AI",
-    "categoryHits": [
-      "bim",
-      "ai"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
-    ],
-    "keywordHits": [
-      "bim",
-      "aec",
-      "ai"
-    ],
-    "score": 7,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nAEC業界は現在、計画・設計・施工・運用の各段階で専門企業が分断された極めて断片的な構造をしています。AIと標準化されたデータモデル、共有デジタルプラットフォームの組み合わせにより、これらの段階間の摩擦が大幅に減少する可能性が高まっています。歴史的には、1910年前後の自動車業界が同様の転換期を迎えました。組立ラインと共有プラットフォームの導入により、多数の小規模メーカーから少数の大型統合企業と高級・専門領域企業の二層構造へと再編されたのです。\n\n【内容】\nGraphisoftのアンドラス・フェレンツィは、AEC業界がAIの影響下で二つの主要な構造変化を経験すると指摘しています。第一に業界全体では、プラットフォーム主導の統合が進行し、企業は垂直統合型（ニッチ深化）か水平統合型（ライフサイクル全体対応の多分野企業）かの戦略選択を迫られるようになります。第二に設計実務では、従来の建築・インテリア・BIM等の職種別組織から、建築タイプやプロジェクト「プロダクト」中心の機能横断チームへの転換が起きます。これにより設計知識が再利用可能な資産となり、設計パッケージ化や構成可能なテンプレートの販売が成立します。\n\n【技術的ポイント】\nBIMはAIを通じて単なるモデリングツールから意思決定ハブへと進化します。AI支援設計では、同じ建築タイプに対する複数プロジェクトの知見を標準化テンプレートやパラメトリック設計に内包させることで、座標変換・分析・文書化を一体ユニットとして自動化・最適化できます。これはソフトウェア業界のSaaS化やコンポーネント再利用と同じメカニズムです。IFCをはじめとしたオープンスタンダードは、こうした再利用可能資産の交換基盤として機能します。\n\n【業界への影響】\n設計企業の役割は大きく三分化する見通しです。データドリブンな不動産戦略コンサルティングに進出する企業、施工企業と統合した設計・施工一貫プラットフォームに特化する企業、デベロッパー内部に埋め込まれる企業が出現します。同時に、AI活用の進展と並行して人間の責任が強化される点が重要です。新興のAI責任・規制枠組みは、ツール主導ではなく「責任ある設計者・組織」の存在を法的に求め続けるため、AIは意思決定の方法を変えても、最終的な説明責任は人間専門家に帰属することになります。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "建設×AI の実務事例が出ています\n\nAI, design, and re-shaping the AEC industry（3/3）\n\nhttps://aecmag.com/business/ai-design-and-re-shaping-the-aec-industry\n\n#BIM #AI #建設DX #AEC #建設テック #DX",
-    "titleJa": "AIがAEC業界を再編成へ　BIMは「知能統合プラットフォーム」に進化"
-  },
-  {
-    "title": "Rewriting the rules",
-    "link": "https://aecmag.com/business/rewriting-the-rules",
-    "source": "AEC Magazine",
-    "pubDate": "2026-03-03T06:00:14.000Z",
-    "summary": "How Autodesk’s EULA shift reshaped the AI training debate The post Rewriting the rules appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.974Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "autodesk",
-      "ai"
-    ],
-    "score": 7,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\n2025年10月、AEC Magazineが報じた「Contract Killers」記事によって、AECソフトウェア企業のエンドユーザーライセンス契約（EULA）における問題条項が注目を集めました。特にAutodeskのAI訓練禁止規定が、実務的にはBIMモデルや設計データを用いた自社AI開発を違約行為として解釈される可能性があり、業界内で懸念が広がっていました。同条項は2018年5月から存在していたものの、生成AIの実務的関連性が高まるまで大きな問題視されていませんでした。\n\n【内容】\n2025年12月8日、Autodesk は利用契約、受容可能な使用方針（AUP）、およびAutodesk Platform Services（APS）利用規約を大幅改訂しました。改訂は「接続ワークフロー、プラットフォームサービス、エージェント自動化」への対応と位置付けられていますが、実質的には業界からの強い反発に応じたものです。改訂により、企業が自社データを用いてAIモデルの訓練やエラー検出分類器の開発、コスト予測ツールの構築、Revitエクスポートを使用した機械学習スクリプト実行など、正当なAEC AI用途が法的に許可されるようになりました。\n\n【技術的ポイント】\nこの変更はBIM実務における重要なマイルストーンです。従来、多くの企業がRevitや設計データを活用した内部AI プロジェクトを一時停止せざるを得ない状況に陥っていました。改訂後は、歴史プロジェクトデータを用いた予測ツール開発やモデリングエラー自動検出など、計算設計コミュニティが推進してきたAI活用が法的に明確化されました。意図と実際の条文の齟齬が解消され、利用者は過度な法的リスク解釈から解放されます。\n\n【業界への影響】\n本改訂は単なる契約修正ではなく、AECテック産業全体のイノベーション加速を意味します。設計IT責任者は法的コンプライアンスへの懸念を軽減でき、企業はAI導入への戦略的投資を再開できるようになりました。同時にこれは、利用者団体や専門家（Nathan Millerのような意見指導者）の公開批判が、大規模ソフトウェアベンダーの方針変更を直接促した事例として、業界のパワーバランス変化を示唆しています。今後、他社も同様の利用条項見直しを迫られる可能性が高く、顧客データ権とベンダー権のより透明で公正なフレームワーク構築が加速するでしょう。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "建設テックの最前線情報\n\nRewriting the rules（3/3）\n\nhttps://aecmag.com/business/rewriting-the-rules\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
-    "titleJa": "AI訓練禁止条項が撤廃へ、Autodesk利用者の懸念解消"
-  },
-  {
-    "title": "AI in AEC: why better decisions matter more than faster tools",
-    "link": "https://aecmag.com/opinion/ai-in-aec-why-better-decisions-matter-more-than-faster-tools",
-    "source": "AEC Magazine",
-    "pubDate": "2026-02-05T07:00:07.000Z",
-    "summary": "Amy Bunszel, EVP of AEC solutions, Autodesk, on what she expects to see from AI in 2026 The post AI in AEC: why better decisions matter more than faster tools appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-17T11:51:16.974Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "autodesk",
-      "ai"
-    ],
-    "score": 7,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nAEC業界におけるAI活用は、これまでドキュメント自動化や調整の加速化といった効率性向上に重点が置かれてきました。しかし業界が直面する課題は単なる処理速度ではなく、より複雑で高性能な建築・インフラを少ない人数で、限られた予算と時間の中で実現することです。オーナーやコミュニティは、プロジェクトが期待通りに機能し長期にわたって耐用できることを求めており、設計段階での意思決定の重要性が急速に高まっています。\n\n【内容】\nAutodeskのAmy Bunszel氏が指摘する2026年のAI活用の最大の転換点は、デジタル作業の高速化ではなく、チームがより良い意思決定を下し、プロジェクト全体で創造性と革新性を引き出すことにあります。敷地戦略、ボリューム計画、工程計画といった初期段階の決定は、以前は仮設的な選択肢として扱われていたのに対し、現在はプロジェクト進行後も修正する余裕がなくなっています。AIはサイト条件、環境要因、システム性能、施工性などのプロジェクトデータを分析することで、決定がロックイン前にトレードオフを検討できます。\n\n【技術的ポイント】\nAI活用の鍵は、概念設計から詳細設計への移行において、設計意図の連続性を保つことです。従来の方法では概念探索と技術定義を別々の手法オフとして扱い、後段階で再解釈されていました。AI統合により、初期段階の設計意図、空間的判断、システムロジック、性能期待値がそのまま詳細レイアウトと連動します。これにより、建築家、構造エンジニア、施工者が共有データに基づいた分析・シミュレーションをリアルタイムで実行でき、後段階の大幅な設計変更を削減します。\n\n【業界への影響】\nこの転換はプロジェクト実現方法に根本的な変化をもたらします。各職種が異なる視点から同じプロジェクトを見ていた従来の体制から、エネルギー使用量、材料インパクト、工程、気候曝露を共有データで継続的に評価する体制へ移行します。施工性と工程計画が設計段階での会話に組み込まれ、初期決定が確実に施工・運用可能な解決策に繋がるという信頼性が生まれます。結果として、後付けの課題解決や大幅な設計変更が大幅に減少し、プロジェクト全体の効率性と成功確度が向上します。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "建設テックの最前線情報\n\nAI in AEC: why better decisions matter more than faster tools（2/5）\n\nhttps://aecmag.com/opinion/ai-in-aec-why-better-decisions-matter-more-than-faster-tools\n\n#BIM #AEC #建設テック #AI #建設DX #DX",
-    "titleJa": "AEC業界のAI活用が転換期へ、「速度」から「意思決定の質」へシフト"
-  },
-  {
-    "title": "Autodesk shares AI Public Policy Recommendations to help accelerate innovation, efficiency, and resilience in Design and Make industries",
-    "link": "https://adsknews.autodesk.com/en/news/autodesk-shares-ai-policy-recommendations",
-    "source": "Autodesk News",
-    "pubDate": "2026-04-15T12:45:16.000Z",
-    "summary": "New recommendations outline practical steps to support responsible AI adoption across architecture, engineering, construction, and manufacturing",
-    "fetchedAt": "2026-04-17T11:51:14.852Z",
-    "category": "AI_DX",
-    "categoryHits": [
-      "ai"
-    ],
-    "allCategories": [
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "autodesk",
-      "ai"
-    ],
-    "score": 6,
-    "freshnessScore": 2,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "建設業界のAI活用事例です\n\nAutodesk shares AI Public Policy Recommendations to help accelerate innovation, …（4/15）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-shares-ai-policy-recommendations\n\n#AI #建設DX #DX",
     "titleJa": ""
   },
   {
@@ -610,72 +1315,6 @@
     "titleJa": "ノートルダム大聖堂の再生、BIMで実現—Autodeskが革新企業に選出"
   },
   {
-    "title": "BIMx Web版でのPro機能の導入およびBIMcloudに関するお知らせ",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/BIMx-Web%E7%89%88%E3%81%A7%E3%81%AEPro%E6%A9%9F%E8%83%BD%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%8A%E3%82%88%E3%81%B3BIMcloud%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/ba-p/698691",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-04-08T01:45:51.000Z",
-    "summary": "&nbsp; &nbsp; &nbsp;",
-    "fetchedAt": "2026-04-17T11:51:12.938Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft",
-      "bimx"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "graphisoft",
-      "bimx"
-    ],
-    "score": 6,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nGraphisoftはBIMxのモバイル版・デスクトップ版でPro機能を展開してきましたが、ブラウザ版（Web版）への対応が課題でした。プラットフォーム統合を推し進める業界トレンドに合わせ、Web版にもPro機能を追加することで、デバイスを問わないシームレスなBIMモデル活用環境の実現を目指しています。\n\n【内容】\n2026年4月7日より、BIMx Web版（BIMx Model TransferおよびBIMcloud）に以下のPro機能が追加されます。まず、3D要素の表示・非表示切り替え、および層・層フォルダ・層コンビネーションによる複数要素の表示制御が可能になります。次に、カスタマイズ可能なカットプレーン機能により、任意の要素面に平行に3Dモデルをスライスでき、垂直・斜め・水平の断面を簡単に取得できるようになります。さらに、Archicad 29.1およびMEP Designer 29.1アップデートに伴い、BIMxエクスポートが最適化され、ファイルサイズが小さく、高速にエクスポートできるようになっています。\n\n【技術的ポイント】\nこのアップデートの技術的な注目点は、Web版・デスクトップ版における3Dモデルとレイアウトの読み込み高速化です。プロジェクトの複雑さに応じて、これまでより大幅に高速処理を実現しています。レイヤーコンビネーション機能はBIM運用の重要な要素であり、Web環境での対応により、施工現場やクライアント打ち合わせでのタブレットやPC活用がより実用的になります。\n\n【業界への影響】\nこれらの機能強化により、設計事務所と建設現場、施主間での情報共有がより効率化されます。特にWeb版での層制御とカットプレーン機能は、現場検査やコンフリクトチェック、詳細設計の確認作業を大幅に効率化します。BIMcloud 2026.1の提供開始とともに、クラウド環境でのリアルタイムモデル共有がより強化され、分散チーム間での設計・施工プロセスの加速が期待できます。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Archicadの最新情報👇\n\nBIMx Web版でのPro機能の導入およびBIMcloudに関するお知らせ（4/8）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/BIMx-Web%E7%89%88%E3%81%A7%E3%81%AEPro%E6%A9%9F%E8%83%BD%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%8A%E3%82%88%E3%81%B3BIMcloud%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/ba-p/698691\n\n#Archicad #Graphisoft #BIM",
-    "titleJa": "BIMx Web版がついに進化。Pro機能とBIMcloud 2026.1でワークフロー一新"
-  },
-  {
-    "title": "５月スタート BIMマネージャープログラム 受付開始！",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%EF%BC%95%E6%9C%88%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88-BIM%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0-%E5%8F%97%E4%BB%98%E9%96%8B%E5%A7%8B/ba-p/698103",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-04-01T10:55:24.000Z",
-    "summary": "&nbsp; &nbsp;",
-    "fetchedAt": "2026-04-17T11:51:12.938Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "bim",
-      "graphisoft"
-    ],
-    "score": 6,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nBIMプロジェクトの推進には、単なる設計スキルだけでなく、プロジェクト全体のBIM戦略立案・管理・運用を統括できるBIMマネージャーの存在が業界で急速に重要性を増しています。一方、体系的にBIMマネージャー教育を受ける機会は限定的であり、ベンダー主導の認定教育プログラムへの需要が高まっているのが現状です。\n\n【内容】\nGraphisoftが年2回開催するBIMマネージャープログラムは、2026年5月開講の春講座の受付を開始しました。本プログラムは10週間のオンライン講習形式で、BIMマネージャーに必要な実践的知識の習得とGraphisoft認定BIMマネージャー証明書の取得を目的としています。参加者同士がグループワークを通じて意見交換しながら課題に取り組む形式で、単純な知識伝達にとどまらないピアラーニングを重視した設計になっています。\n\n【技術的ポイント】\nGraphisoftのBIMマネージャー教育では、ArchiCADをはじめとするBIMツール操作だけでなく、BIMプロセス設計、LOD（Level of Development）定義、IFC等の業界標準フォーマット、マルチユーザー環境での運用管理など、実際のプロジェクト現場で直面する課題への対応スキルを網羅しています。グループワークで実案件に近い環境を設定することで、理論と実践の融合を実現しています。\n\n【業界への影響】\nBIM導入企業の増加に伴い、BIMマネージャーの育成と認定は、BIM運用の質を標準化する重要な施策となります。本プログラムの修了者がプロジェクト現場で実践的な BIM管理ノウハウを展開することで、業界全体のBIM導入レベルの底上げが期待されます。また、Graphisoft認定資格は、BIMマネージャーの専門性証明として、キャリア構築の軸となり得る有効な指標となるでしょう。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Graphisoft / Archicad アップデート情報\n\n５月スタート BIMマネージャープログラム 受付開始！（4/1）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%EF%BC%95%E6%9C%88%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88-BIM%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0-%E5%8F%97%E4%BB%98%E9%96%8B%E5%A7%8B/ba-p/698103\n\n#Archicad #Graphisoft #BIM #AEC #建設テック",
-    "titleJa": "Graphisoft認定BIMマネージャー育成、5月開講プログラム受付開始"
-  },
-  {
     "title": "Chaos brings real time rendering to V-Ray viewport",
     "link": "https://aecmag.com/visualisation/chaos-brings-real-time-rendering-to-v-ray-viewport",
     "source": "AEC Magazine",
@@ -698,14 +1337,14 @@
     "relevant": true,
     "xPostBody": "",
     "japaneseSummary": "",
-    "bodyJa": "",
+    "bodyJa": "【背景】\n建築・デザイン分野では、リアルタイムレンダリングと最終品質のフォトリアリスティック表現を両立させることが、長年の課題でした。これまで設計者は、高速なプレビューと高品質なビジュアライゼーションの間で複数のツールを切り替える必要があり、ワークフローの効率性が低下していました。Chaosが今回リアルタイムレンダリングエンジンを統合することで、この課題の解決を目指します。\n\n【内容】\nChaos V-Ray 7 Update 3では、Vantage技術との新しい統合により、SketchUp、Rhino、3ds Max内のV-Ray ビューポートで直接リアルタイムレンダリングが利用可能になりました。複雑な照明、大規模なジオメトリ、詳細なマテリアルを「スローダウンなし」で扱えるのが特徴です。さらに新機能として、Parallax Interiorsによる建物外観への現実的なインテリア奥行き追加、AI搭載のムードマッチング、改善されたQuick Causticsによる反射・屈折表現の簡素化が追加されました。Gaussian Splatのリライティング機能により、ガウシアンスプラットの照明を調整してプロジェクトに自然に統合できます。また新しいNode Material Editorはビジュアルノードベースでマテリアルを構築でき、複雑なシェーダー作成がより直感的になります。\n\n【技術的ポイント】\nこの更新の核は、リアルタイムレイトレーシングをネイティブなDCC（Digital Content Creation）ツールに統合した点です。従来、Vantageは外部の別ツールでしたが、V-Ray ビューポート内での実行により、切り替えのオーバーヘッドが排除されます。Node Material Editorの採用により、複雑なシェーダーロジックがノード化され、BIMモデルの詳細マテリアル設定がCADユーザーにも容易になります。\n\n【業界への影響】\n建築設計のビジュアライゼーション業務では、案件提案段階から最終レンダリングまで、同一ワークフロー内で完結できるようになります。特に設計変更時の迅速な反映確認が可能になり、クライアント協議や設計検討のターンアラウンドが大幅に短縮されるでしょう。また建築CGスタジオのプリプロダクション作業効率が向上し、デザインから最終出力までの人的コスト削減につながります。BIM連携時のマテリアル表現精度も向上するため、デジタルツインやビジュアルシミュレーションの品質向上も期待できます。",
     "hallucinationRisk": {
       "score": "LOW",
       "flags": [],
       "reason": "要約なし — スキップ"
     },
     "postText": "BIMエコシステムの最新情報👇\n\nChaos brings real time rendering to V-Ray viewport（4/15）\n\nhttps://aecmag.com/visualisation/chaos-brings-real-time-rendering-to-v-ray-viewport\n\n#BIM #AEC #建設テック",
-    "titleJa": ""
+    "titleJa": "V-Ray 7がリアルタイムレンダリング対応へ、ビューポート内で最終品質を実現"
   },
   {
     "title": "Intel moves to build pro graphics trust",
@@ -1064,14 +1703,14 @@
     "relevant": true,
     "xPostBody": "",
     "japaneseSummary": "",
-    "bodyJa": "",
+    "bodyJa": "【背景】\n日本の建設業界において、デジタル化と脱炭素化の実現は急務です。国土交通省は建築分野のGX（グリーントランスフォーメーション）とDX（デジタルトランスフォーメーション）を同時に推進するため、「建築GX・DX推進事業」を立ち上げました。令和８年度（2026年度）はこの事業の本格的な実行年度となり、補助金を活用したプロジェクトが本格化します。\n\n【内容】\n令和８年度の建築GX・DX推進事業が正式に開始され、代表事業者および事業者の本登録受付が2026年4月7日から12月31日まで実施されます。事業者は電子申請システム「Jグランツ」を通じて登録手続きを行う必要があります。令和７年度末に事前登録（プレエントリー）を完了した事業者は既に本登録への移行が完了しているため、改めての手続きは不要です。登録にはGビズID（プライムまたはメンバー）が必須となります。\n\n【技術的ポイント】\nBIMやデジタルツールを活用した建築プロジェクトの申請が想定されており、IFC形式での情報共有やデジタルツインの構築、ライフサイクル全体でのカーボンニュートラル達成などが評価対象となる可能性があります。補助金の交付申請は登録日以降となり、登録日以降に発生した費用が補助対象とされる点は、プロジェクト開始時期を計画する上で重要です。\n\n【業界への影響】\n本登録により、設計事務所・建設企業・メーカーなどは正式に補助金申請が可能となります。これにより、BIM導入やデジタル施工管理システムの導入、省エネ・脱炭素技術の実装が加速することが期待されます。予算の執行状況によっては受付期間内でも申請受付が終了する可能性があるため、事業者は早期の登録・申請準備が必須となります。建設DXの実現に向けた重要な資金支援制度として、業界全体に大きな影響を与えるでしょう。",
     "hallucinationRisk": {
       "score": "LOW",
       "flags": [],
       "reason": "要約なし — スキップ"
     },
     "postText": "BIMエコシステムの最新情報👇\n\n令和８年度 建築GX・DX推進事業｜事業開始および代表事業者・事業者の本登録受付開始（4/17）\n\nhttps://bimgate.jp/knowledge/3218\n\n#BIM #AEC #建設テック",
-    "titleJa": ""
+    "titleJa": "令和８年度「建築GX・DX推進事業」本登録が開始、BIM活用プロジェクトに補助金チャンス"
   },
   {
     "title": "[Nemetschek] Maxon Marks Its Official Entry Aec Market Its Real Time Archviz Solution",
@@ -1094,47 +1733,14 @@
     "relevant": true,
     "xPostBody": "",
     "japaneseSummary": "",
-    "bodyJa": "",
+    "bodyJa": "【背景】\n3D制作ソフトウェアの大手Maxonは、これまで映画・VFX・ゲーム分野を中心に事業を展開してきましたが、建築可視化（Archviz）分野への本格進出を決定しました。建築・設計業界ではBIMワークフローの標準化に伴い、設計段階から高品質な可視化ツールへの需要が高まっており、Maxonが持つ業界実績あるレンダリング技術をAEC市場に展開するタイミングが成熟したと言えます。\n\n【内容】\nMaxonは2026年3月、Redshift for Vectorworksの商用提供を開始し、同時にRevit向けベータ版の提供を宣言しました。Redshift for VectorworksはVectorworks 2026 Update 4に合わせてリリースされ、ネイティブプラグインとして機能します。ユーザーはCAD環境内でリアルタイムプレビューから映画レベルの写真リアルなレンダリングへシームレスに移行でき、ワンクリックでCinema 4Dへのエクスポートも可能です。Revit版は2026年内のローンチ予定で、Archicad対応も同年内に予定されています。\n\n【技術的ポイント】\nRedshift for ArchvizはMaxonの強力な3Dエコシステムを基盤とし、リアルタイムレンダリング、Cinema 4DとのネイティブIFC/BIM連携、月次更新される「Capsules」（マテリアル・植物・家具などのプロダクションレディアセット）、AI補助検索機能を備えています。Mac/Windows完全互換性があり、Maya・Houdiniなど幅広いDCCパイプラインをサポートしており、既存BIMワークフローへの統合が容易です。\n\n【業界への影響】\n競合ソリューションと比較して大幅に低価格での提供開始により、中堅設計事務所・スタジオの導入敷居が低くなります。リアルタイムプレビューから最終レンダリングまで統一環境で完結できることで、イテレーティブな設計検討サイクルの高速化と品質向上が期待できます。またBIM標準データ（IFC）への対応によって、設計から可視化までのワークフロー断裂が解消され、次世代のデジタルツイン活用へのファーストステップとなる可能性があります。",
     "hallucinationRisk": {
       "score": "LOW",
       "flags": [],
       "reason": "要約なし — スキップ"
     },
     "postText": "BIMエコシステムの最新情報👇\n\n[Nemetschek] Maxon Marks Its Official Entry Aec Market Its Real Time Archv…（4/17）\n\nhttps://www.nemetschek.com/en/news-media/maxon-marks-its-official-entry-aec-market-its-real-time-archviz-solution\n\n#BIM #AEC #建設テック",
-    "titleJa": ""
-  },
-  {
-    "title": "Archicad 28.3.3 Hotfix リリース",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-28-3-3-Hotfix-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9/ba-p/692542",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-02-10T12:14:35.000Z",
-    "summary": "Archicad 28.3.3 Hotfix が、Full（6300）版および Solo（6301）版の両方で利用可能になりました。 対応しているすべての言語バージョンのインストーラが提供されています。 本 Hotfix には、ドキュメント作成、ビジュアライゼーション、その他の不具合修正が含まれておりますので、Archicad 28 をご利用の方は必ずインストールしてください。改善内容の詳細については、リリースノートページ（現在は英文） にてご確認いただけます。※ 本ページ下に暫定的に翻訳を掲載します。 アップデート用インストーラは、弊社ウェブサイトの「アップデート」セクションから入手可能です。 Archicad 28.3.3 Hotfix（ビルド 6300）をインストールしても、Archicad 28.3.0（6003）アップデート版、および AC28.3.1～AC28.3.2 Hotfix（6200）とのチームワーク互換性は維持されます。 また、自動更新チェック機能（Check for Updates）により、エンドユーザーには新バージョンの通知が表示されます。 ご不明な点やフィードバックがございましたら、お気軽にお知らせください。 テクニカルサポートチーム-----日本語ページ掲載まで Archicad 28.3.3 このホットフィックスでは、ドキュメントおよびビジュアリゼーションに関する問題を含む、その他の軽微な不具合を修正しています。 修正点は以下の通りです。 ドキュメンテーション Archicad またはサードパーティ製アドオンから表示される「開く」ダイアログが途中で切れてしまい、ボタンにアクセスできない場合がありましたが、この問題を修正しました (DEF-26279) チームワークプロジェクトにおいて、要素の予約なしにキーノートラベルが変更可能だった不具合を修正しました。 (DEF-26134) 建具一覧表でカスタムテキストを入力した際に発生していたクラッシュを修正しました。 (DEF-14724) ビジュアリゼーション（視覚化） macOS で、Archicad 28および29 使用時に空のウィンドウが残って表示され、操作の妨げになる問題を修正しました。 (DEF-26526) インストール&アップデート 日常の操作をより安心して行えるよう、Archicad の安定性を向上させました。 (DEF-23724)",
-    "fetchedAt": "2026-04-16T22:44:00.471Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nArchicadはBIM設計の業界標準ツールとして広く使用されており、安定性と機能の正確性がプロジェクト管理に直結します。28.3系統の運用において、ユーザーの作業フローを阻害する複数の不具合が報告されていました。特にチームワーク機能を活用する大規模プロジェクトでは、予期しない動作によるリスクが懸念されていました。\n\n【内容】\nGraphisoftは2024年にArchicad 28.3.3ホットフィックスをリリースしました。このアップデートはFull版（ビルド6300）とSolo版（6301）の両方で利用可能です。主な修正点として、ファイルオープンダイアログの表示不具合、チームワークプロジェクト内でのキーノートラベルの無断変更問題、建具一覧表作成時のクラッシュが解決されています。macOS環境での空のウィンドウ残存問題も修正され、全般的な安定性が向上しました。\n\n【技術的ポイント】\nチームワークプロジェクトにおける要素予約メカニズムの不備は、複数ユーザーが同時編集する環境で深刻な競合エラーを引き起こします。キーノートラベルの管理はドキュメント出力品質に直結するため、この修正はBIM情報の正確性確保に重要です。建具一覧表のクラッシュはLOD情報や属性データの処理プロセスにおける問題で、データベース連携の堅牢性を強化します。\n\n【業界への影響】\nこのホットフィックスは、特にチームワークを基本とする建設プロジェクトにおいて、データ競合リスクを低減させます。設計変更ドキュメントの確実な作成と管理が可能になることで、竣工図等の重要な納品物の品質が向上します。安定性強化により、大規模チーム環境での導入障壁が低下し、より多くのプロジェクトでのArchicad活用が促進されるでしょう。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Archicadユーザー向け情報です\n\nArchicad 28.3.3 Hotfix リリース（2/10）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-28-3-3-Hotfix-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9/ba-p/692542\n\n#Archicad #Graphisoft #BIM",
-    "titleJa": "Archicad 28.3.3ホットフィックス、ドキュメント作成の重大バグを解決"
+    "titleJa": "Maxon、Redshift for Vectorworksで建築市場に本格参入。Revitベータ版も発表"
   },
   {
     "title": "GLOOBEのBIMオブジェクトについて",
@@ -1191,14 +1797,14 @@
     "relevant": true,
     "xPostBody": "",
     "japaneseSummary": "",
-    "bodyJa": "",
+    "bodyJa": "【背景】\nGraphisoftのBIMcloud SaaSは、建築設計におけるクラウドベースのコラボレーションプラットフォームとして、複数のプロジェクト参加者がリアルタイムでBIMデータを共有・管理する重要なツールです。建設DXの進展に伴い、クラウドベースのBIM運用環境の安定性と機能拡張は業界全体の関心事であり、定期的なアップデートは利用者にとって必須となっています。\n\n【内容】\n2026年4月、Graphisoftは最新バージョンのBIMcloud SaaSをリリースします。本リリースには複数の機能改善および重要な不具合修正が含まれており、数日以内にリリース作業が完了する予定となっています。更新内容の詳細はGraphisoftの公式ページ「BIMcloudの改善点一覧」で確認できます。このアップデートはBIMcloud SaaS（サブスクリプション版）のユーザーを対象としており、対象となる改善はすべて自動的に適用されるため、ユーザー側での追加作業は不要です。\n\n【技術的ポイント】\nBIMcloud SaaSは、ArchiCADユーザーが設計ファイルをクラウド上で一元管理し、複数チームによる並行作業を可能にするプラットフォームです。今回のアップデートで機能改善と不具合修正が実施されることで、データ同期の安定性、パフォーマンス、ユーザーインターフェイスの操作性がさらに向上すると予想されます。自動適用による無停止アップデートの仕組みは、設計業務の中断を最小化する利点があります。\n\n【業界への影響】\nクラウドベースのBIM環境は、地理的に分散した設計チームのコラボレーション効率を大きく左右する要素です。BIMcloud SaaSの安定性向上は、建築設計事務所や大規模プロジェクトチームにおいて、デジタルツイン活用やBIMワークフローの信頼性を高めます。継続的なアップデートにより、GraphisoftはクラウドベースのAECソリューションにおける競争力を維持し、ユーザーの生産性向上を支援することになります。",
     "hallucinationRisk": {
       "score": "LOW",
       "flags": [],
       "reason": "要約なし — スキップ"
     },
     "postText": "Graphisoft / Archicad アップデート情報\n\nBIMcloud SaaS 2026年4月リリース（4/16）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/BIMcloud-SaaS-2026%E5%B9%B44%E6%9C%88%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9/ba-p/699699\n\n#Archicad #Graphisoft #BIM",
-    "titleJa": ""
+    "titleJa": "Graphisoft BIMcloud SaaS、2026年4月大型アップデート—機能改善と不具合修正を一斉適用"
   },
   {
     "title": "Swegon to automate HVAC acoustic design",
@@ -1207,12 +1813,12 @@
     "pubDate": "2026-04-16T07:07:43.000Z",
     "summary": "Design Assist said to replace days of repetitive work with seconds of automated calculations The post Swegon to automate HVAC acoustic design appeared first on AEC Magazine.",
     "fetchedAt": "2026-04-16T22:44:04.807Z",
-    "category": "BIM_ECOSYSTEM",
+    "category": "REVIT",
     "categoryHits": [
-      "aec"
+      "revit"
     ],
     "allCategories": [
-      "BIM_ECOSYSTEM"
+      "REVIT"
     ],
     "keywordHits": [
       "aec"
@@ -1222,14 +1828,14 @@
     "relevant": true,
     "xPostBody": "",
     "japaneseSummary": "",
-    "bodyJa": "",
+    "bodyJa": "【背景】\nHVAC（暖房・換気・空調）システムの設計において、音響性能の検証は極めて重要な工程です。従来、技術コンサルタントは複雑な音響計算を手作業で実施し、システムの規制適合性を確認する必要がありました。この作業は一般的なプロジェクトで数日間を要し、繰り返しの修正検討が発生するため、設計効率の大きな課題となっていました。\n\n【内容】\nスウェーデンのHVACメーカーSwegonが「Design Assist」というRevit向けプラグインを発表しました。このツールはRevitモデルに含まれた建築・空間データを活用し、従来は手作業で実施していた音響設計の詳細計算を自動化します。ソフトウェアは音響減衰装置をダクト内の適切な位置に配置し、ダクトサイズに合わせてサイジングを行い、その後空間を再計算して適合性を確認します。図面と仕様書のスケジュール作成も自動生成されます。大規模な換気システムであっても5分以内に解析可能で、結果の精度・透明性・信頼性が確保されると謳われています。\n\n【技術的ポイント】\nDesign AssistはRevitの標準的なBIMワークフローに統合され、モデル内データを直接参照することで、手作業の計算エラーを排除します。音響計算と3Dダクト配置の連動によって、設計変更時の自動再計算が可能になり、設計反復プロセスが大幅に短縮されます。このプラグインは複数の規制基準への適合性検証も自動化し、一貫性のある検証結果を生成することが特徴です。\n\n【業界への影響】\nこのツールによってMEP設計プロセスが革新的に変わります。数日かかっていた音響検証作業が数分で完了することで、エンジニアはより創造的・分析的な業務に時間を割くことができます。複数分野間の調整やシステム性能の最適化に注力する余裕が生まれることで、設計品質の向上につながります。Swegonが無料で提供することで、業界全体のBIM導入加速も期待されます。",
     "hallucinationRisk": {
       "score": "LOW",
       "flags": [],
       "reason": "要約なし — スキップ"
     },
     "postText": "建設テックの最前線情報\n\nSwegon to automate HVAC acoustic design（4/16）\n\nhttps://aecmag.com/mep/swegon-to-automate-hvac-acoustic-design\n\n#BIM #AEC #建設テック",
-    "titleJa": ""
+    "titleJa": "Revitの音響設計が数秒で自動化、Swegonが業界初のプラグイン発表"
   },
   {
     "title": "Autodesk appoints Mike Kelly as Chief Information Officer",
@@ -1381,14 +1987,14 @@
     "relevant": true,
     "xPostBody": "",
     "japaneseSummary": "",
-    "bodyJa": "",
+    "bodyJa": "【背景】\nBIM・AEC業界の大手ソフトウェア企業ネメッテック・グループは、建築セクターで既に強固なポジションを確立していますが、インフラ・重建設分野での市場占有率はまだ発展の余地があります。政府による大規模投資、老朽化インフラの更新需要、エネルギー転換、都市化の進展といった構造的な成長要因が同セクターを牽引する中、ネメッテックはこの急成長市場への戦略的な拡張を加速させています。\n\n【内容】\nネメッテック・グループは、北米を拠点とする建設テク企業HCSS（重建設システム・スペシャリスツ）の買収を決定しました。HCSSは1986年創立で、550人以上の従業員を擁し、4,000社以上のクライアント（小規模企業から10億ドル規模の建設企業まで）をサポートしています。同社のエンドツーエンドプラットフォームは、インフラ・重建設プロジェクトの効率性、安全性、コミュニケーション向上で実績があります。HCSSはネメッテックの「Build & Construct」セグメント（Bluebeam、GoCanvas、Nevaris等を統括）に統合され、買収価格に伴う約4億5,000万ユーロの債務を引き継ぎます。\n\n【技術的ポイント】\nHCSSの統合により、ネメッテックはBluebeamやGoCanvasといった既存のBIM・コラボレーションソリューションをインフラ・重建設向けに拡張できます。HCSSのプラットフォームは現場での安全・通信管理に最適化されており、Nevaris等の設計・原価管理ツールとの連携で、プロジェクト全体の可視化が実現します。AI活用による革新能力も強化され、デジタルツインやデータドリブン意思決定の実装が加速するでしょう。\n\n【業界への影響】\nこの買収はAEC産業の再編を象徴する動きです。ネメッテックは北米でのプレゼンスを大幅に強化し、建築から重建設までの統合プラットフォーム提供者として競争力が劇的に向上します。インフラプロジェクトの関係者にとっては、建築系ツールとの統一的なワークフローが可能になり、プロジェクト管理の効率化が期待できます。また、Build & Constructセグメントへの投資ファンド（Thoma Bravo）の参加は、戦略的な成長加速と継続的なイノベーション投資の意思を示しており、業界全体のデジタル化速度をさらに高めるでしょう。",
     "hallucinationRisk": {
       "score": "LOW",
       "flags": [],
       "reason": "要約なし — スキップ"
     },
     "postText": "AEC業界の注目ニュースです\n\nNemetschek Group bets big on construction（4/14）\n\nhttps://aecmag.com/construction/nemetschek-group-bets-big-on-construction\n\n#BIM #AEC #建設テック",
-    "titleJa": ""
+    "titleJa": "ネメッテック、インフラ・重建設市場へ本格進出—HCSSを買収"
   },
   {
     "title": "Renovation Design of Yongping Warehouses / Atelier cnS",
@@ -1420,119 +2026,6 @@
     },
     "postText": "Revitユーザー注目の情報です\n\nRenovation Design of Yongping Warehouses / Atelier cnS（4/13）\n\nhttps://www.archdaily.com/1040379/renovation-design-of-yongping-warehouses-atelier-cns\n\n#Revit #BIM #Autodesk",
     "titleJa": ""
-  },
-  {
-    "title": "Autodesk strengthens bridge between Revit and Forma",
-    "link": "https://aecmag.com/bim/autodesk-strengthens-bridge-between-revit-and-forma",
-    "source": "AEC Magazine",
-    "pubDate": "2026-04-07T15:00:12.000Z",
-    "summary": "Autodesk's mature BIM authoring tool connects to the Forma AECO platform The post Autodesk strengthens bridge between Revit and Forma appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-09T22:44:49.217Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "bim",
-      "aec",
-      "autodesk"
-    ],
-    "score": 16,
-    "freshnessScore": 2,
-    "relevant": true,
-    "titleJa": "RevitがFormaと深く統合へ。クラウド設計プラットフォームとの直結で設計フロー一新",
-    "bodyJa": "【背景】\nAutodeskは、BIM設計とクラウドベースの初期設計プラットフォームの連携を強化する必要に迫られていました。従来、Revitで詳細設計を行う前段階のFormaでの概念設計から詳細設計への移行は、データの手動交換が必要でした。建築・エンジニアリング業界でクラウドネイティブなワークフローへのシフトが加速する中、デスクトップツールとクラウドプラットフォームのシームレスな連携がプロジェクト効率を左右するようになってきたのです。\n\n【内容】\nAutodeskは「Revit as a Forma Connected Client」のテクニカルプレビューを発表しました。これにより、Forma Site DesignやForma Building Designで作成したデータを、ファイル交換なしでRevitに直接移行できるようになります。さらに、Forma Data Marketplaceから地形・周辺建物・敷地情報などのコンテキストデータを数クリックで取得・統合可能です。Forma内で実行できた環境分析（採光、日射、カーボン評価など）がRevit内で直接実行できるようにもなり、すべてのRevitサブスクライバーがForma Site Design、Building Design、Board、Data Management Essentialsにアクセスできるようになります。\n\n【技術的ポイント】\nRevitが初のForma Connected Clientとなることで、設計データの地理情報（geolocated）を保持したままネイティブモデルとしてクラウドからデスクトップへ移行できるようになります。これにより、早期設計段階でのパフォーマンス分析結果が詳細設計フェーズに継承され、設計変更による影響評価を迅速に行えます。また、新たに統合されたAutodesk Assistantは、単なるQ&Aツールではなく、複数のAutodeskプロダクト間でタスク実行とアクション調整を行うAIエージェントとして機能します。\n\n【業界への影響】\n本統合により、スキーマティック設計からディテール設計への移行がデータロスなく実現でき、プロジェクト全体の設計生産性が飛躍的に向上します。すべてのRevitユーザーがFormaツールセットにアクセスできるため、大規模プロジェクトだけでなく、中小規模事務所でも初期設計段階での気候・環境分析を活用した設計決定が可能になります。Autodeskはさらに他のデスクトップアプリケーションへの拡張を予定しており、AutoCAD、Navisworksなど関連ツール群でも同様の統合が進むと予想されます。",
-    "xPostBody": "🏗️ RevitとFormaがついに深く統合。クラウド初期設計で作ったデータがRevitに直結され、ファイル交換の手間が消えます。地形・環境分析もRevit内で即実行可能に。すべてRevitユーザーがFormaツールセットにアクセスできるようになり、設計フローが大きく変わる局面です。 #Revit #BIM",
-    "japaneseSummary": "🏗️ RevitとFormaがついに深く統合。クラウド初期設計で作ったデータがRevitに直結され、ファイル交換の手間が消えます。地形・環境分析もRevit内で即実行可能に。すべてRevitユーザーがFormaツールセットにアクセスできるようになり、設計フローが大きく変わる局面です。 #Revit #BIM",
-    "hallucinationRisk": {
-      "score": "MEDIUM",
-      "flags": [
-        "統合",
-        "「すべてRevitユーザーがFormaツールセットにアクセスできるようになり」という記述が過度な一般化である可能性",
-        "「ファイル交換の手間が消えます」という絶対的な表現が、実際の統合レベルを誇張している可能性",
-        "「地形・環境分析もRevit内で即実行可能に」という具体的な機能仕様が元記事から明確に確認できない"
-      ],
-      "reason": "タイトルは統合強化を示すが、要約では具体的な機能や利用可能性について、元記事では検証できない過度な表現や一般化が含まれており、実装範囲や段階的展開の詳細情報が欠落しているため。"
-    },
-    "postText": "🏗️ RevitとFormaがついに深く統合。クラウド初期設計で作ったデータがRevitに直結され、ファイル交換の手間が消えます。地形・環境分析もRevit内で即実行可能に。すべてRevitユーザーがFormaツールセットにアクセスできるようになり、設計フローが大きく変わる局面です。 #Revit #BIM\n\nhttps://aecmag.com/bim/autodesk-strengthens-bridge-between-revit-and-forma"
-  },
-  {
-    "title": "Graphisoft Techセミナー 東京",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Graphisoft-Tech%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC-%E6%9D%B1%E4%BA%AC/ba-p/693403",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-04-07T03:05:43.000Z",
-    "summary": "日時：4月17日（金）14:00-17:00（予定）場所：東京都千代田区永田町（最寄り駅：永田町駅、赤坂見附駅）※場所の詳細はお申込後にご案内いたします。定員：80名（定員になり次第締切となります） Graphisoft Techセミナー2026年 4月 17日（金）東京 –の申込みフォームへ 1. 講演：YA+A横松建築事務所 横松邦明氏ヒアリング×BIM×三位一体管理 後戻りコストを最小化著書『「試せない建築」を経営資産に変える』より、建築は経営の未来を左右する最大の投資であり、後悔の8割は設計前に消せるというお話をお伺いします。 2. Archicadの図面表現を広げよう2D CADからBIMのツールに乗り換えた途端、ツールに振り回されて2D CADの時のように図面表現ができなくなってしまった・・など、BIMに溺れている方、例えばペンと線の使いこなしや、平面図での投影線、上部線の意味がよくわからない方にお届けするセミナーです。 3. Extensions JPNツールを使おう日本の設計実務にフィットするExtensions JPNツール。図面表現の強化に加え、BIM図面審査に役立つ敷地マネージャーをはじめ、最新の機能についてもご案内しますので、「Archicadの図面表現を広げよう」のお話とあわせてお聞きいただる充実のセミナーです。",
-    "fetchedAt": "2026-04-09T22:44:44.891Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "archicad",
-      "bim",
-      "graphisoft"
-    ],
-    "score": 13,
-    "freshnessScore": 2,
-    "relevant": true,
-    "titleJa": "Graphisoft Techセミナー東京開催、BIM実装の課題解決へ",
-    "bodyJa": "【背景】\nBIMツール導入企業が増える一方で、2D CADからの移行時に図面表現や運用方法で戸惑う設計事務所は少なくありません。特に日本の設計実務に特化したBIM活用法の確立が急務となっており、実践的なナレッジ共有が求められています。\n\n【内容】\nGraphisoftが2026年4月17日（金）に東京（永田町）でTechセミナーを開催します。定員80名の本セミナーでは、建築経営コンサルタントの横松邦明氏による「ヒアリング×BIM×三位一体管理」の講演のほか、Archicadの図面表現スキルアップセッション、さらに日本向けの専用ツール「Extensions JPN」の最新機能解説が予定されています。特にExtensions JPNツールには敷地マネージャーなど、BIM図面審査に直結した機能が搭載されており、実務レベルでの活用を想定した内容となっています。\n\n【技術的ポイント】\nセミナーではArchicadの基本的な図面表現機能（ペンと線の使い分け、平面図での投影線・上部線の扱い）から、Extensions JPNの敷地マネージャーなどの日本仕様機能まで、段階的に解説します。これはBIMツールの機能を使いこなす上で重要な、2D表現との融合アプローチを示しています。\n\n【業界への影響】\nBIM導入後の実務運用で躓く設計事務所が、日本の設計基準に適したツール活用法を習得できる機会となります。特に敷地マネージャーを含む審査対応機能の認知拡大により、BIM図面の品質向上と審査プロセスの効率化が期待でき、業界全体のBIM成熟度向上に寄与するでしょう。",
-    "xPostBody": "🏗️ Graphisoft Techセミナー東京で、BIM導入後の図面表現の悩みを解決。2D CADとの融合、Extensions JPNの敷地マネージャー機能など、日本の設計実務に特化した実装ノウハウを4月に公開します。 #Archicad #BIM",
-    "japaneseSummary": "🏗️ Graphisoft Techセミナー東京で、BIM導入後の図面表現の悩みを解決。2D CADとの融合、Extensions JPNの敷地マネージャー機能など、日本の設計実務に特化した実装ノウハウを4月に公開します。 #Archicad #BIM",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "解析不能 — 安全側に倒す"
-    },
-    "postText": "🏗️ Graphisoft Techセミナー東京で、BIM導入後の図面表現の悩みを解決。2D CADとの融合、Extensions JPNの敷地マネージャー機能など、日本の設計実務に特化した実装ノウハウを4月に公開します。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Graphisoft-Tech%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC-%E6%9D%B1%E4%BA%AC/ba-p/693403"
-  },
-  {
-    "title": "Maxon launches RedShift for Archviz",
-    "link": "https://aecmag.com/visualisation/maxon-launches-redshift-for-archviz",
-    "source": "AEC Magazine",
-    "pubDate": "2026-03-18T09:25:14.000Z",
-    "summary": "Users of Vectorworks, Revit and Archicad given access to Maxon’s “cinematic rendering technology” The post Maxon launches RedShift for Archviz appeared first on AEC Magazine.",
-    "fetchedAt": "2026-04-09T22:44:49.217Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "ARCHICAD",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "archicad",
-      "aec"
-    ],
-    "score": 13,
-    "freshnessScore": 0,
-    "relevant": true,
-    "titleJa": "MaxonがRedShift for Archvizをリリース—BIMツール内で映画品質のレンダリングが実現",
-    "bodyJa": "【背景】\n建築業界では、クライアント提案や設計検討の段階で高品質なビジュアライゼーションの需要が高まっています。従来、Revit、Archicad、Vectorworksといった主要BIMツール内でのレンダリング機能は限定的であり、高度な表現にはCinema 4Dなどの専門ソフトへのデータ移行が必要でした。Maxonは、ハリウッド映画のVFX制作で培った高度なレンダリング技術を、建築ビジュアライゼーション市場へ展開する戦略を進めています。\n\n【内容】\nMaxonは「RedShift for Archviz」プラグインとして、Vectorworksでの商用リリース、Revitでのベータ版提供を実現し、Archicadのベータ版も2024年内に予定しています。このプラグインにより、建築家やインテリアデザイナーは、BIMオーサリングツール内で直接Redshiftの映画級レンダリング技術にアクセス可能になります。リアルタイム3Dモデルプレビュー、正確な照明・材質・環境エフェクトの適用、時間帯や太陽位置の調整、クラウドカバレッジの制御が可能です。家具、車両、植物、キャラクターなどの高品質アセット、また物理的に正確なポリッシュコンクリート、ブラッシュ加工メタル、ガラス、木材、テキスタイルなどの材質ライブラリも搭載されています。\n\n【技術的ポイント】\nRedShift for Archvizは、Maxonの製品エコシステムと緊密に統合されています。より高度な表現が必要な場合、ワンクリックでシーンをCinema 4Dに転送できるワークフローを用意し、詳細な照明設定、フライスルーアニメーション、シミュレーション処理を実行できます。BIM環境内でのリアルタイム編集と、Cinema 4Dでの高度な制作環境のシームレスな連携が、効率的な提案資料作成を実現します。\n\n【業界への影響】\nこのプラグインは、設計ドキュメント作成から客先提案資料まで、建築業務全体の可視化プロセスを加速させます。設計変更時のレンダリング更新がBIM環境内で即座に反映されるため、設計意思決定の迅速化と、クライアント説得力の強化が期待されます。大量の建築ビジュアライゼーション案件を扱う企業にとって、Cinema 4D習得の負担を軽減しつつ、プロフェッショナルな仕上がりを実現できるツールとなり、建築ビジュアライゼーション市場の競争構造が変わる可能性があります。",
-    "xPostBody": "🏗️ MaxonのRedShift for Archvizが登場。Revit・Archicad・Vectorworks内で直接ハリウッド級のレンダリングが実行可能に。BIM環境のまま映画品質のビジュアルが作成でき、設計検討から客先提案まで驚くほど効率化できます。 #Revit #BIM",
-    "japaneseSummary": "🏗️ MaxonのRedShift for Archvizが登場。Revit・Archicad・Vectorworks内で直接ハリウッド級のレンダリングが実行可能に。BIM環境のまま映画品質のビジュアルが作成でき、設計検討から客先提案まで驚くほど効率化できます。 #Revit #BIM",
-    "hallucinationRisk": {
-      "score": "MEDIUM",
-      "flags": [
-        "「Revit・Archicad・Vectorworks内で直接ハリウッド級のレンダリングが実行可能」という具体的な機能実装の詳細が元記事の概要には明記されていない",
-        "「映画品質のビジュアル」「驚くほど効率化」などの主観的な評価表現が要約に含まれている"
-      ],
-      "reason": "元記事は3つのプラットフォーム対応とシネマティックレンダリング技術へのアクセス提供を述べるのみで、要約は実装方法と効果を具体的に記述しており、検証不可能な誇張がある。"
-    },
-    "postText": "🏗️ MaxonのRedShift for Archvizが登場。Revit・Archicad・Vectorworks内で直接ハリウッド級のレンダリングが実行可能に。BIM環境のまま映画品質のビジュアルが作成でき、設計検討から客先提案まで驚くほど効率化できます。 #Revit #BIM\n\nhttps://aecmag.com/visualisation/maxon-launches-redshift-for-archviz"
   },
   {
     "title": "2026年 リリーススケジュールのご案内",
@@ -1570,177 +2063,6 @@
       "reason": "要約は元記事の主要な内容（Archicad 30の10月リリース、AI Solutions の強化、Project Aurora の後半展開）を正確に反映しており、ハルシネーションと判定される記述は認められない。"
     },
     "postText": "🏗️ Graphisoftが2026年のロードマップを発表。Archicad 30は10月リリース予定で、AI AssistantやAI Visualizerの信頼性向上に注力。さらに次世代クラウドプラットフォーム「Project Aurora」が後半から本格展開され、建築設計のAI活用とクラウド協働が急速に進みます。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/2026%E5%B9%B4-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/ba-p/692502"
-  },
-  {
-    "title": "今月のヒント：Archicadのキーノートを使った詳細注記の自動化",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E4%BB%8A%E6%9C%88%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88-Archicad%E3%81%AE%E3%82%AD%E3%83%BC%E3%83%8E%E3%83%BC%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E8%A9%B3%E7%B4%B0%E6%B3%A8%E8%A8%98%E3%81%AE%E8%87%AA%E5%8B%95%E5%8C%96/ba-p/698688",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-04-09T09:35:01.000Z",
-    "summary": "&nbsp; &nbsp;",
-    "fetchedAt": "2026-04-09T22:44:44.891Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "score": 11,
-    "freshnessScore": 3,
-    "relevant": true,
-    "titleJa": "Archicadのキーノート機能で詳細注記を自動化、一元管理を実現",
-    "bodyJa": "【背景】\n設計図面では防水仕様や固定方法など同じ内容の注記を断面図や詳細図に繰り返し記載する必要があります。これらを手入力やコピーで対応していると、後から内容変更時に整合性を保つのが困難になり、図面品質の低下につながります。Archicadのキーノート機能を標準的なテキストラベルの代わりに活用することで、この課題を解決できます。\n\n【内容】\nArchicadのキーノート機能を使用して、詳細注記ライブラリを一元管理するワークフローが提案されています。まず「ウィンドウ>パレット>キーノート」からキーノートパレットを開き、Key（コード）、Title（簡易ラベル）、Description（詳細仕様文）の三階層で注記を登録します。その後、断面図や詳細図で対象要素を選択してキーノートラベルを配置し、レイアウト上ではキーノート凡例オブジェクトで使用注記を自動一覧表示します。注記内容を変更する場合、キーノートパレット上で編集するか、Excelに書き出して編集後に再インポートすると、関連するすべてのラベルと凡例が自動更新されます。\n\n【技術的ポイント】\nこのアプローチは「Single Source of Truth（SSOT）」の設計原則に基づいています。キーノートの三層構造（Key・Title・Description）により、図面内の情報量と凡例のバランスを柔軟に調整でき、Key のみ、Title のみ、Key+Title など複数の表示形式から選択可能です。また、キーノート凡例はプロジェクト全体またはレイアウト単位での適用が選択でき、列数・フォント・表示項目をカスタマイズできるため、社内標準に沿った管理が実現できます。\n\n【業界への影響】\nこのワークフローにより、プロジェクト全体の図面整合性が大幅に向上し、繰り返しの編集作業が削減されます。注記内容の変更が数クリックで全図面に反映されるため、設計変更時の手戻りリスクが低減され、設計者の生産性が向上します。特に大規模プロジェクトや標準化が重要な組織では、品質管理と効率化の両立が可能になり、図面作成プロセスの標準化と自動化が推進されます。",
-    "xPostBody": "🏗️ Archicadのキーノート機能を使うと、詳細注記を一元管理できます。防水仕様や固定方法などの繰り返し注記をキーノート登録すれば、修正時に全図面が一括更新される。注記の単一情報源（SSOT）を実現し、図面整合性と作業効率が劇的に向上します。 #Archicad #BIM",
-    "japaneseSummary": "🏗️ Archicadのキーノート機能を使うと、詳細注記を一元管理できます。防水仕様や固定方法などの繰り返し注記をキーノート登録すれば、修正時に全図面が一括更新される。注記の単一情報源（SSOT）を実現し、図面整合性と作業効率が劇的に向上します。 #Archicad #BIM",
-    "hallucinationRisk": {
-      "score": "MEDIUM",
-      "flags": [
-        "「修正時に全図面が一括更新される」という機能の説明が過度に具体的で、実装の詳細が不明確",
-        "「図面整合性と作業効率が劇的に向上する」という定量的でない強い表現"
-      ],
-      "reason": "キーノート機能の基本概念は妥当だが、一括更新メカニズムや具体的な効果について、元記事の内容を確認できない段階での具体的な機能説明と成果表現に誇張のリスクがある。"
-    },
-    "postText": "🏗️ Archicadのキーノート機能を使うと、詳細注記を一元管理できます。防水仕様や固定方法などの繰り返し注記をキーノート登録すれば、修正時に全図面が一括更新される。注記の単一情報源（SSOT）を実現し、図面整合性と作業効率が劇的に向上します。 #Archicad #BIM\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%E4%BB%8A%E6%9C%88%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88-Archicad%E3%81%AE%E3%82%AD%E3%83%BC%E3%83%8E%E3%83%BC%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E8%A9%B3%E7%B4%B0%E6%B3%A8%E8%A8%98%E3%81%AE%E8%87%AA%E5%8B%95%E5%8C%96/ba-p/698688"
-  },
-  {
-    "title": "Graphisoft ID のセキュリティアップデート",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Graphisoft-ID-%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/695546",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-03-16T08:59:18.000Z",
-    "summary": "Graphisoftでは、お客様のデータを保護し、Graphisoft IDアカウントの安全性を確保することに取り組んでいます。私たちは常に最新のセキュリティ基準を満たすため、継続的にセキュリティの改善を行っています。 今回のアップデートでは、次の2つの重要な対応を行います。 非アクティブなアカウントに対する強制パスワード変更 実際のユーザーによるサインインであることを確認するためのCAPTCHAの導入 では、これらの変更は何を意味し、どのような影響があるのでしょうか。 Graphisoft IDのサインイン頻度によって、影響の受け方は異なります。 非アクティブアカウントに対する強制パスワード変更 Graphisoft IDアカウントには、氏名やメールアドレスなどの個人情報に加え、すべてのライセンスキーへのアクセスなど重要な情報が含まれています。これらの情報への不正アクセスを防ぐため、長期間使用されていないアカウントに対して、段階的に強制パスワード変更を導入します。 **「非アクティブアカウント（inactive account）」**とは、以下のいずれにもサインインしていないGraphisoft IDアカウントを指します。 Archicad BIMxモバイルアプリ BIMcloud SaaS Graphisoftのサービスサイト Graphisoft公式サイト Graphisoft Community Graphisoft Learn Graphisoft IDページ Graphisoft Webstore 最初の段階では、2023年以降サインインしていないすべてのアカウントが対象となります。その後のフェーズでは、1年以上利用されていないアカウントを対象に見直しを行う予定です。 データベースを常に最新の状態に保ち、皆様のデータを安全に守るため、今後も非アクティブアカウントの状況を定期的かつ継続的に監視していきます。 アカウントを回復するには お使いのGraphisoft IDが対象となった場合は、サインインページにある「Forgot password?（パスワードをお忘れですか？）」からパスワードをリセットできます。 Graphisoft IDへのCAPTCHAの導入 Graphisoftのすべてのウェブサイトにおいて、安心してサービスをご利用いただけるよう、CAPTCHAを導入します。 CAPTCHAは、不正な大量アクセスやスパムなどの悪意ある活動を防止するための、業界標準の技術です。 今後数か月の間に、Graphisoftのすべてのウェブサイトの登録およびサインインプロセスにCAPTCHAを段階的に導入していきます。 新しいGraphisoft IDの登録では、CAPTCHA認証が必須となります。 サインイン時には、複数回のログイン失敗や不審なアクセスパターンが検出された場合にCAPTCHAが表示されます。 さらにセキュリティを強化するには：多要素認証（MFA） Graphisoft IDアカウントのセキュリティをさらに高めたい場合は、多要素認証（Multi-Factor Authentication / MFA） を有効にすることもできます。 詳細はこちらをご参照ください。https://support.graphisoft.com/hc/en-us/articles/30578874208017-About-Multi-Factor-Authentication-MFA-in-generalGraphisoft IT・カスタマーサポートチーム",
-    "fetchedAt": "2026-04-09T22:44:44.891Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft",
-      "bimx"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "archicad",
-      "graphisoft",
-      "bimx"
-    ],
-    "score": 11,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nArchicadやBIMxなどGraphisoftのクラウドサービスは、建築設計業界における重要なプラットフォームです。これらのサービスへのアクセス管理を担うGraphisoft IDには、ユーザーの個人情報やライセンスキーなど極めて機密性の高い情報が集約されています。近年のサイバー脅威の増加を受けて、Graphisoftはアカウントセキュリティの段階的強化に乗り出しました。\n\n【内容】\nGraphisoftが発表したセキュリティアップデートは、大きく2つの施策で構成されています。第1は「非アクティブアカウントに対する強制パスワード変更」です。2023年以降サインインしていないアカウントを皮切りに、段階的に対象を拡大し、最終的には1年以上未使用のアカウントまで対象化します。第2は「CAPTCHA認証の導入」で、新規登録時は必須化、ログイン時は複数回失敗や不審なアクセスパターン検出時に表示される条件付き実装となります。さらに多要素認証（MFA）の有効化も推奨されています。\n\n【技術的ポイント】\nCAPTCHA導入は業界標準のセキュリティ対策で、ボット攻撃やブルートフォース攻撃を防ぎます。段階的なロールアウトにより、ユーザー体験への悪影響を最小化しながら段階的に検証可能です。非アクティブアカウントの強制パスワード変更は、長期未使用アカウントの認証情報流出リスクを低減する戦略的措置です。MFAと組み合わせることで、多層防御が実現されます。\n\n【業界への影響】\nBIM推進企業やArchicadユーザー企業では、非アクティブなライセンスキーの管理体制を見直す必要が生じます。特に複数プロジェクトで利用停止中のアカウントがある場合、パスワードリセット手続きが必須になります。一方、セキュリティ強化により、Graphisoft IDを経由したライセンス情報漏洩リスクが低下し、大規模プロジェクトでのBIMクラウド運用がより安全になります。登録・ログイン時のCAPTCHA対応は初期段階では若干の手間増加ですが、不正アクセス防止による業務継続性の向上が期待できます。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Archicadユーザー向け情報です\n\nGraphisoft ID のセキュリティアップデート（3/16）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Graphisoft-ID-%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/695546\n\n#Archicad #Graphisoft #BIM",
-    "titleJa": "Graphisoft IDが大幅セキュリティ強化、CAPTCHA導入と強制パスワード変更へ"
-  },
-  {
-    "title": "ロードショー 大阪と東京で開催！",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E3%83%AD%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC-%E5%A4%A7%E9%98%AA%E3%81%A8%E6%9D%B1%E4%BA%AC%E3%81%A7%E9%96%8B%E5%82%AC/ba-p/693334",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-02-18T07:04:33.000Z",
-    "summary": "大阪と東京で、ロードショーが開催されます！ お近くのみなさま、ぜひ、会場でお目にかかりましょう！ 大阪 イベント日時 2026年3月3日（火）14:00-16:30（受付時間13:30～） イベント会場 ナレッジキャピタル カンファレンスルーム / RoomC02グランフロント大阪 北館（タワーC ８F）https://www.kc-space.jp/accessmap/conference/ 講 師 BIMを活かした建築デザインのプロセス 有限会社開建築設計事務所 開 達也 氏 詳細・お申し込み https://www.graphisoft.com/jp/open-events/roadshow/osaka-26q1 東京 イベント日時 2026年3月6日（金）14:00-16:30（受付時間13:30～） イベント会場 コモレ四谷 タワーコンファレンス / Room F東京都新宿区四谷1-6-1 コモレ四谷 四谷タワー3Fhttps://comore-yotsuya.jp/access/ 講 師 BIM図面審査の超基本 一般財団法人建築行政情報センター 荒川 暁郎 氏 BIM図面審査はArchicadで即対応 MITO architecture + design 三戸 景 氏 詳細・お申し込み https://www.graphisoft.com/jp/open-events/roadshow/tokyo-26q1",
-    "fetchedAt": "2026-04-09T22:44:44.891Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "archicad",
-      "bim",
-      "graphisoft"
-    ],
-    "score": 11,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nGraphisoftが日本国内でArchicadユーザーを対象としたロードショーを開催します。建築業界のBIM導入が急速に進む中、設計現場での実践的な活用方法や最新の図面審査手法を共有する場として企画されました。BIM図面審査の基準化やプロセス改善が業界課題となっており、ユーザーコミュニティとのダイレクトな情報交換ニーズが高まっています。\n\n【内容】\n大阪会場（2026年3月3日、グランフロント大阪）では、有限会社開建築設計事務所の開達也氏が「BIMを活かした建築デザインのプロセス」をテーマに講演します。東京会場（2026年3月6日、コモレ四谷）では、建築行政情報センターの荒川暁郎氏によるBIM図面審査の基礎講座と、MITO architecture + designの三戸景氏によるArchicadでの実装事例が紹介されます。両会場とも14:00～16:30の開催で、事前登録制です。\n\n【技術的ポイント】\nBIM図面審査の標準化は、設計・施工間の情報連携において重要な課題です。Archicadプラットフォームでの審査対応方法、IFC形式での図面交換、LOD（Level of Development）の管理手法などが実例を通じて解説されることで、ユーザーは自社プロジェクトへの適用パターンを理解できます。\n\n【業界への影響】\nこのロードショーを通じて、BIM導入企業の設計プロセス最適化やコンプライアンス対応が加速します。特に図面審査の効率化は、発注者・設計者・施工者間の検査期間短縮につながり、全体プロジェクト工期の短縮に寄与します。Archicad活用のベストプラクティスが共有されることで、導入検討企業の判断材料も充実します。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Archicadの最新情報👇\n\nロードショー 大阪と東京で開催！（2/18）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%E3%83%AD%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC-%E5%A4%A7%E9%98%AA%E3%81%A8%E6%9D%B1%E4%BA%AC%E3%81%A7%E9%96%8B%E5%82%AC/ba-p/693334\n\n#Archicad #Graphisoft #BIM #AEC #建設テック",
-    "titleJa": "Archicad ロードショー大阪・東京で開催、BIM設計の最新事例を紹介"
-  },
-  {
-    "title": "Autodesk brings design and make intelligence to the built environment with Forma Building Design and deeper cloud connections with Revit",
-    "link": "https://adsknews.autodesk.com/en/news/autodesk-design-and-make-intelligence",
-    "source": "Autodesk News",
-    "pubDate": "2026-04-07T14:56:13.000Z",
-    "summary": "Forma Building Design enables better schematic design exploration.",
-    "fetchedAt": "2026-04-09T22:44:46.913Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT"
-    ],
-    "keywordHits": [
-      "revit",
-      "autodesk"
-    ],
-    "score": 10,
-    "freshnessScore": 2,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\n建築設計業界では、計画から設計、施工に至る各段階でデータが分断され、意思決定の文脈が失われるという課題が長年存在しています。従来のファイルベースのワークフローでは、段階ごとにプロジェクト情報が再構築され、前段階の意図が詳細設計に引き継がれにくい状況が続いていました。Autodeskはこうした業界課題を解決するため、「デザイン・メイク・インテリジェンス」というビジョンを掲げ、データがプロジェクトライフサイクル全体を通じて連続的に流れるクラウド連携プラットフォームの構築を推進しています。\n\n【内容】\nAutodeskは、スキーマティック設計段階に特化した新しい設計・分析ツール「Forma Building Design」を発表しました。このツールは、地理的に定位されたサイトを数分で設定でき、デザインオートメーション機能を活用してファサード、平面図、ユニット設計を迅速に作成・編集できます。さらに昼光利用率、日照時間、カーボン排出量などのパフォーマンス分析を統合。最も重要な決定がなされる初期段階の設計探索を加速させます。設計方向が決定すると、地理情報やサイトコンテキスト、建築要素を保持したネイティブモデルとしてRevitに直接移行でき、再作業を最小化します。同時にForma Carbon Insightsがアップデートされ、Forma Building DesignとRevit両方で詳細なカーボン分析が可能になりました。\n\n【技術的ポイント】\nForma Building Designは、スキーマティック設計からRevitへのデータ連携を実現するファーストForma Connected Clientとして機能します。初期段階で作成された地理情報参照モデルがそのまま詳細設計フェーズに引き継がれることで、BIM環階層での情報損失を防ぎます。クラウドベースのアーキテクチャにより、複数チーム・地域間でのスケーラビリティが向上し、AIと自動化がコンテキストを保持したまま機能することで、意思決定の追跡可能性と設計意図の保存が実現します。\n\n【業界への影響】\nこの連携により、AEC業界全体のワークフロー効率が大幅に向上します。Arcadisなどの大手コンサルティング企業も既に導入評価を進めており、複数のファサード・レイアウト案の探索が手動作業なしに可能になるため、設計の民主化が促進されます。ファイルベースから真の意味のクラウド連携プロジェクトデータへの移行は、設計段階全体での重複作業を削減し、プロジェクトの意思決定をより透明かつ追跡可能にします。結果として、初期段階での設計品質向上が後続段階での変更コストを低減し、プロジェクト全体の納期短縮と予算最適化につながることが期待されます。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Revitユーザー注目の情報です\n\nAutodesk brings design and make intelligence to the built environment …（4/7）\n\nhttps://adsknews.autodesk.com/en/news/autodesk-design-and-make-intelligence\n\n#Revit #BIM #Autodesk",
-    "titleJa": "AutodeskがForma Building Designを発表、スキーマティック設計からRevitへのシームレス連携"
-  },
-  {
-    "title": "Archicad SoloサブスクリプションライセンスからArchicad Studioへ切り替えの手順のご案内",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-Solo%E3%82%B5%E3%83%96%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%8B%E3%82%89Archicad-Studio%E3%81%B8%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%81%AE%E6%89%8B%E9%A0%86%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/ba-p/698424",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-04-06T01:23:12.000Z",
-    "summary": "Archicad SoloサブスクリプションライセンスからArchicad Studioへ切り替えられた方へ ライセンスやインストールおよび起動方法についてのご案内です。 Archicad Soloのライセンスについて Archicad Soloのサブスクリプションライセンスは、サブスクリプションの期限までご利用いただけます。 Archicad Studioの利用手順 Archicad をインストールします。 Archicad を起動し、Graphisoft IDでサインインを行うことでArchicad Studioがご利用いただけます。※クラウドライセンス（サブスクリプションライセンス）でご利用可能なバージョンはArchicad26（update5以降）です。 製品のダウンロード Archicadのスタートアップガイド サポートへの問い合わせ",
-    "fetchedAt": "2026-04-09T22:44:44.891Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "score": 9,
-    "freshnessScore": 1,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nGraphisoftはArchicad SoloというサブスクリプションライセンスからArchicad Studioへの段階的な切り替えを進めています。BIM設計ソフトのライセンス体系の転換は、ユーザーの運用に大きな影響を及ぼすため、正確な移行手順の周知が重要です。特にコラボレーション機能の強化や運用形態の見直しに伴い、新しいライセンスモデルへの統一が進められています。\n\n【内容】\nArchicad SoloのサブスクリプションライセンスはSubscription期限まで継続利用が可能です。Archicad Studioへの切り替えは、まずArchicadの最新版をインストールした後、Graphisoft IDでサインインすることで自動的に新ライセンスが有効化されます。クラウドライセンス（サブスクリプションライセンス）でArchicad Studioを利用するには、Archicad26（Update5以降）が必須条件となっています。\n\n【技術的ポイント】\nGraphisoftのクラウドライセンスシステムはGraphisoft IDの認証に基づいており、オンプレミス型の従来ライセンス方式から大きく転換しました。Archicad26 Update5以降にのみ対応する仕様により、バージョン管理とセキュリティ強化が両立しています。これはBIM環境でのIFC標準対応やクラウドコラボレーション機能の統合と連動した設計です。\n\n【業界への影響】\nこの移行により、設計事務所やゼネコン、ディベロッパーといったArchicadユーザーは統一されたクラウドベースのライセンス運用が可能になります。複数プロジェクト間でのシームレスな協働作業やバージョン管理が効率化され、特にリモートワークや分散チームでのBIM運用が強化されることが期待されます。併せてサポート体制の一本化も実現し、問題発生時の対応速度向上につながります。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Archicadユーザー向け情報です\n\nArchicad SoloサブスクリプションライセンスからArchicad Studioへ切り替えの手順のご案内（4/6）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-Solo%E3%82%B5%E3%83%96%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%8B%E3%82%89Archicad-Studio%E3%81%B8%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%81%AE%E6%89%8B%E9%A0%86%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/ba-p/698424\n\n#Archicad #Graphisoft #BIM",
-    "titleJa": "Archicad Solo終了、Studio移行手順を完全ガイド"
   },
   {
     "title": "Archicadに隠されたイースターエッグを発見しよう!",
@@ -1806,138 +2128,6 @@
     },
     "postText": "Archicadの最新情報👇\n\nArchicad と MEP Designer の新機能について（3/30）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-%E3%81%A8-MEP-Designer-%E3%81%AE%E6%96%B0%E6%A9%9F%E8%83%BD%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/ba-p/697760\n\n#Archicad #Graphisoft #BIM",
     "titleJa": "Archicad 29.1が配管設計を革新、水理計算がBIMで直接実行可能に"
-  },
-  {
-    "title": "Extensions JPN Archicad29.1 アップデート",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Extensions-JPN-Archicad29-1-%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/697757",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-03-30T09:08:11.000Z",
-    "summary": "",
-    "fetchedAt": "2026-04-09T22:44:44.891Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nGraphisoftが提供するArchicadは、建築設計に特化したBIMソフトウェアとして広く活用されています。日本の建築実務に対応した拡張機能「Extensions JPN」は、日本固有の設計基準や表記方法に対応する重要なツールです。継続的な改善とバグ修正を通じて、ユーザーの設計効率を高めることが開発の重要な課題となっています。\n\n【内容】\nGraphisoftコミュニティが発表したExtensions JPN Archicad 29.1アップデートでは、合計9件の不具合修正が実装されました。主な修正内容は、BIMcloud上でのエリアオーバーレイ機能の不正動作、断面形状の柱への自動詳細寸法作成の失敗、カスタマイズドアの3D表示不具合、2D機能のゾーンスタンプ操作の不完全性、分類とプロパティパレット転送機能の制限、ホットリンクグループ一時解除時の機能不全、JW書き出し時のレイヤー分割問題、平均地盤面ツールの数値計算エラー、2D機能パレット位置固定の問題などが含まれています。\n\n【技術的ポイント】\nこれらの修正は、BIMワークフロー全体に影響する重要な改善です。特にBIMcloud環境での動作安定性向上、3D表現の正確性強化、2D詳細図作成時の自動化機能の信頼性向上が実現されました。JW書き出し機能の修正により、CAD形式への相互運用性が強化され、既存システムとの連携がより円滑になります。ゾーンやエリアオーバーレイなどの空間管理機能の改善により、複雑な建築プロジェクトの管理精度が向上します。\n\n【業界への影響】\n日本の建築設計事務所やゼネコンの現場では、Archicadとその拡張機能は設計品質とプロジェクト納期に直結する重要なツールです。このアップデートにより、BIMcloud上での協働設計がより安定し、詳細図の自動生成精度が向上することで、設計者の生産性が向上します。特に大規模プロジェクトやチーム設計では、これらのバグ修正により設計の手戻りやトラブルが減少し、全体的なプロジェクト効率が改善されることが期待できます。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Archicadの最新情報👇\n\nExtensions JPN Archicad29.1 アップデート（3/30）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Extensions-JPN-Archicad29-1-%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/697757\n\n#Archicad #Graphisoft #BIM",
-    "titleJa": "Archicad 29.1用Extension JPN、9件の不具合を修正"
-  },
-  {
-    "title": "Archicad29アドオンST-Bridge Converterと断面リスト作成ツールアップデート",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Archicad29%E3%82%A2%E3%83%89%E3%82%AA%E3%83%B3ST-Bridge-Converter%E3%81%A8%E6%96%AD%E9%9D%A2%E3%83%AA%E3%82%B9%E3%83%88%E4%BD%9C%E6%88%90%E3%83%84%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/696945",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-03-23T03:20:51.000Z",
-    "summary": "",
-    "fetchedAt": "2026-04-09T22:44:44.891Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nArchicadはBIM設計の中核ツールとして広く利用されていますが、特に日本の構造設計との連携が重要な課題でした。ST-Bridge形式は日本の構造解析ソフトとの標準的なデータ交換フォーマットであり、より円滑な設計プロセスの実現が求められていました。\n\n【内容】\nGraphisoftはArchicad 29用アドオンのST-Bridge ConverterおよびIFC断面リスト作成ツールをアップデートしました。主な改善点として、ST-Bridge Converter側では要素設定ダイアログ内でST-Bridge形式でインポートされたIFCプロパティを直接確認できる機能が追加されました。また、断面リスト作成ツール側では、要素ダイアログ画面においてIFCプロパティ確認時に発生していたエラーを修正し、より安定した動作を実現しています。\n\n【技術的ポイント】\nこのアップデートはBIMワークフローにおけるIFCデータの透明性と整合性向上に重点を置いています。IFCプロパティの可視化により、設計者は構造データの正確性をArchicad画面上で検証でき、データ品質管理が格段に向上します。両アドオンの同期更新が必須である点は、IFC情報の一貫性を保つための重要な仕様です。\n\n【業界への影響】\n日本の建設プロジェクトでは構造計画と建築設計の連携が極めて重要であり、本アップデートにより建築BIMから構造解析ソフトへのデータ流通がより効率化されます。設計変更時の構造チェック検証サイクルが短縮され、プロジェクト工程の圧縮が期待できます。特に中大規模プロジェクトでのデータ整合性維持に大きく貢献するでしょう。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Archicadユーザー向け情報です\n\nArchicad29アドオンST-Bridge Converterと断面リスト作成ツールアップデート（3/23）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/Archicad29%E3%82%A2%E3%83%89%E3%82%AA%E3%83%B3ST-Bridge-Converter%E3%81%A8%E6%96%AD%E9%9D%A2%E3%83%AA%E3%82%B9%E3%83%88%E4%BD%9C%E6%88%90%E3%83%84%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/696945\n\n#Archicad #Graphisoft #BIM",
-    "titleJa": "Archicad 29の構造設計連携が強化、ST-Bridge ConverterとIFC対応が進化"
-  },
-  {
-    "title": "BIMcloud SaaS – 3月21日のサービス中断",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/BIMcloud-SaaS-3%E6%9C%8821%E6%97%A5%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%AD%E6%96%AD/ba-p/696910",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-03-23T00:23:27.000Z",
-    "summary": "BIMcloud SaaS – 3月21日のサービス中断 お客様各位 3月21日に、一部の BIMcloud SaaS ご利用のお客様において、セキュリティ証明書の更新時に発生した予期せぬ問題が原因で、接続不具合が発生しました。 何が起こったのか 定期メンテナンスの一環として、安全で途切れないサービスを提供するために新しい SSL 証明書を展開しました。新しい証明書自体は通常どおり問題なく、かつ適切なタイミングで導入されていましたが、システム側が直前に有効期限を迎えた旧証明書を引き続き使用しようとし続けたことが原因でした。このような挙動は想定外であり、これまでの運用では発生していない事象でした。 どのように解決したか 問題を特定した後、エンジニアリングチームが失効した証明書を削除し、BIMcloud SaaS が正しく新しい証明書へ切り替えられるように対応しました。この変更後、サービスは通常どおりの状態に戻りました。システムは中央ヨーロッパ時間（CET）9:30までに完全復旧し、Archicad 内でのテストを通じて修正内容も確認済みです。 お客様側で必要となる対応 多くの場合、特別な操作を行わなくても自動的に通常どおりご利用いただけます。もし引き続き接続に問題が見られる場合は、以下をお試しください。 ブラウザまたはArchicadの再起動 ブラウザのキャッシュデータの削除（更新された証明書情報を正しく取得するために有効です） ご理解とご協力への感謝 日々の業務において、途切れないアクセスがどれほど重要かを私たちは十分に認識しており、この度の中断によりご不便・ご心配をおかけしましたことを心よりお詫び申し上げます。本件については詳細な検証を進めており、同様の事象が再発しないよう対策を講じてまいります。 もし問題が解消しない場合は、お手数ですがお近くのローカルサポートまでご連絡ください。担当チームがサポートさせていただきます。 よろしくお願いいたします。 Graphisoft カスタマーサポート",
-    "fetchedAt": "2026-04-09T22:44:44.891Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nGraphisoftが提供するクラウドベースのBIMコラボレーションプラットフォーム「BIMcloud SaaS」は、多くのArchicadユーザーがプロジェクトデータの共有・管理に依存している重要なサービスです。セキュリティ強化のため定期的なメンテナンスが実施されますが、今回はその過程で予期せぬトラブルが発生しました。クラウドサービスの継続性は設計・施工チーム全体の業務効率に直結するため、こうしたインシデントは業界全体に影響を与えます。\n\n【内容】\n3月21日、BIMcloud SaaSの一部ユーザーが接続不具合に見舞われました。原因はSSL証明書更新時の予期せぬ動作にあります。Graphisoftは定期メンテナンスの一環として新しいSSL証明書を展開しましたが、システムが期限切れの旧証明書を継続使用しようとしたため、接続が遮断されました。新しい証明書自体には問題がなく、タイミングも適切でしたが、システムの証明書切り替えロジックにバグが存在していました。Graphisoftエンジニアリングチームは失効証明書を削除し、正しい新証明書への切り替えを実行。中央ヨーロッパ時間9時30分までに完全復旧し、Archicad内でのテストで修正を確認しました。\n\n【技術的ポイント】\nSSL証明書はクライアント・サーバー間の暗号化通信を確保する基盤です。多くのシステムでは証明書更新時に古い証明書と新しい証明書が一時的に共存することがあります。本件では、システムが期限切れ証明書を優先してキャッシュしていた可能性が高く、証明書チェーンの管理ロジックの不備が露呈しました。BIMcloud SaaSのようなクラウドBIMプラットフォームでは、クライアント（Archicad）がサーバーとの信頼性を確保する必要があり、こうした暗号化層の問題は直結します。\n\n【業界への影響】\nBIMcloud SaaSはマルチユーザー環境でのIFCデータ共有やリアルタイムコラボレーションを支える社会基盤です。今回のサービス中断は、進行中のプロジェクトのダウンタイムを引き起こし、設計・施工スケジュールに影響を与えた可能性があります。Graphisoftは同様の再発防止策を検証中であり、証明書管理の自動テストやフェイルオーバー機構の強化が期待されます。クラウドBIMの信頼性向上は、建設DX推進の重要な課題となります。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Graphisoft / Archicad アップデート情報\n\nBIMcloud SaaS – 3月21日のサービス中断（3/23）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/BIMcloud-SaaS-3%E6%9C%8821%E6%97%A5%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%AD%E6%96%AD/ba-p/696910\n\n#Archicad #Graphisoft #BIM",
-    "titleJa": "BIMcloud SaaSが3月21日にサービス中断、SSL証明書更新トラブルが原因"
-  },
-  {
-    "title": "今月のヒント：一覧表内の寸法ペンを一括で編集する方法",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E4%BB%8A%E6%9C%88%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88-%E4%B8%80%E8%A6%A7%E8%A1%A8%E5%86%85%E3%81%AE%E5%AF%B8%E6%B3%95%E3%83%9A%E3%83%B3%E3%82%92%E4%B8%80%E6%8B%AC%E3%81%A7%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/ba-p/694208",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-03-19T10:24:22.000Z",
-    "summary": "「今月のヒント」は、インターナショナルのコミュニティで毎月公開されている「Tip of the Month」を翻訳してお届けしています！Tip of the Month（今月のヒント） は、インターナショナルのコミュニティで投稿されているものから、モデレータメンバーがよいTips! と選んでいるものです。海外のユーザーの使い方が、日本のユーザーのみなさんにもヒントになるのでは？と思っています。※原稿内容はオリジナルページに合わせていますが、できるだけインターフェイスの画像は、Archicad日本語版にしています。 プロフェッショナルな図書作成において、一覧表のビジュアルを統一することは非常に重要です。今月のヒントでは、@AllanP と @Laszlo Nagy が共有してくれた、一覧表内の自動寸法を一括で更新する方法をご紹介します。 課題 フォーラムで @ELEVATE1 から寄せられた質問をもとにした内容です。 ドア一覧表や窓一覧表で、プレビューセルに自動寸法を表示している場合、ペンセット、フォントサイズ、マーカースタイルなどが統一されていないことがあります。セルごとに寸法設定を調整するのは非常に手間がかかります。 以下の方法を使えば、一覧表内のすべての寸法設定を一括で更新でき、統一された表示を実現できます。 解決方法 寸法ツールのデフォルト設定を変更し、その後一覧表を再生成します。これにより、プレビューセル内の自動寸法が新しい設定で再構築されます。 ドア一覧表および窓一覧表における自動寸法とは、プレビューセル内にArchicadが生成する立面寸法を指します。 これらの寸法は、作成時点で有効になっている寸法ツールのデフォルト設定を常に継承します。一覧表を再生成することで、すべてのプレビュー寸法が更新後の設定を反映します。 ステップ1：モデルビューに切り替える 一覧表ビューを離れ、平面図や断面図などの2Dビューに移動します。 ステップ2：寸法ツールのデフォルト設定を変更する すべての要素を選択解除します（Escキー）。 ツールボックスから寸法ツールをアクティブにします。 設定ダイアログを開きます（Ctrl/Cmd + T）。 ペン、文字サイズ、マーカースタイルなどを、一覧表で使用したい表示に合わせて調整します。 OKをクリックします。 ステップ3：自動寸法を再生成する ドア一覧表または窓一覧表に戻ります。 左側のフォーマットパネルを開きます。 プレビューセルのひとつを選択し、「自動寸法を追加」のチェックを外します（寸法が消えます）。 再度「自動寸法を追加」にチェックを入れます。 これにより、更新された寸法ツールのデフォルト設定を使用して、自動寸法が再生成されます。 なぜ有効なのか 自動寸法をオフ／オンに切り替えることで、Archicadは既存の寸法を再利用するのではなく、現在の寸法ツール設定に基づいて新しく生成し直します。 注意 このワークフローは自動寸法のみに適用されます。 ［注釈］タブで手動配置した寸法は独立した要素であるため、寸法ツールのデフォルト設定を変更しても影響を受けません。 結果 数クリックで、一覧表内すべてのプレビューが正しいペン、テキストスタイル、マーカーに更新されます。ドアおよび窓の立面図を、繰り返し手作業で修正することなく、統一されたきれいなグラフィックに仕上げることができます。 ぜひお試しください。元のフォーラムディスカッションにもアクセスして、@AllanP と @Laszlo Nagy に いいね！ を送ってください。 日常業務の中で見つけた便利なテクニックや工夫はありませんか？コミュニティに共有いただければ、Insightsブログに掲載されるかもしれません 😎",
-    "fetchedAt": "2026-04-09T22:44:44.891Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "score": 8,
-    "freshnessScore": 0,
-    "relevant": true,
-    "xPostBody": "",
-    "japaneseSummary": "",
-    "bodyJa": "【背景】\nArchicadでドア一覧表や窓一覧表を作成する際、プレビューセルに自動寸法を表示している場合、ペンセット・フォントサイズ・マーカースタイルなどが統一されていないことが多くあります。従来はセルごとに個別に寸法設定を調整する必要があり、大規模なプロジェクトでは非常に手間がかかる作業でした。プロフェッショナルな図書作成では、一覧表のビジュアル統一が重要な要件となるため、この課題の解決方法が多く求められていました。\n\n【内容】\nGraphisoftコミュニティが公開した解決方法は、寸法ツールのデフォルト設定を変更した後、一覧表を再生成するという3ステップのワークフローです。具体的には、モデルビューで寸法ツールをアクティブにし、設定ダイアログ（Ctrl/Cmd+T）でペン・文字サイズ・マーカースタイルを調整します。その後、ドア一覧表または窓一覧表に戻り、フォーマットパネルで自動寸法のチェックボックスをオフ→オンにすることで、更新されたデフォルト設定に基づいて全寸法が一括で再生成されます。\n\n【技術的ポイント】\nこの方法が有効である理由は、自動寸法のオン/オフ切り替えにより、Archicadが既存寸法を再利用するのではなく、現在の寸法ツール設定に基づいて新規に生成し直すためです。ただし重要な制限として、このワークフローは自動寸法にのみ適用されます。「注釈」タブで手動配置した寸法は独立した要素であるため、寸法ツールのデフォルト設定変更の影響を受けません。\n\n【業界への影響】\nこのテクニックにより、複数のドア・窓一覧表において数クリックで全プレビューの寸法表示を統一できるようになります。繰り返しの手作業が削減され、大幅な業務効率化につながります。特に複雑なプロジェクトや大量の建具要素を扱う場合、一覧表の作成工程で費やされていた時間をより重要な設計業務に充てることが可能になり、BIMワークフローの生産性向上に貢献します。",
-    "hallucinationRisk": {
-      "score": "LOW",
-      "flags": [],
-      "reason": "要約なし — スキップ"
-    },
-    "postText": "Graphisoft / Archicad アップデート情報\n\n今月のヒント：一覧表内の寸法ペンを一括で編集する方法（3/19）\n\nhttps://community.graphisoft.com/t5/Graphisoft-Insights/%E4%BB%8A%E6%9C%88%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88-%E4%B8%80%E8%A6%A7%E8%A1%A8%E5%86%85%E3%81%AE%E5%AF%B8%E6%B3%95%E3%83%9A%E3%83%B3%E3%82%92%E4%B8%80%E6%8B%AC%E3%81%A7%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/ba-p/694208\n\n#Archicad #Graphisoft #BIM",
-    "titleJa": "Archicadで一覧表の寸法を一括編集——手作業を劇的に削減"
   },
   {
     "title": "Qonic introduces native drawing generation",

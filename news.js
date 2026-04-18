@@ -17,7 +17,7 @@ const feeds = require("./feeds.js");
 const { scrapeJapaneseSources } = require("./scraper.js");
 const { normalizeArticles } = require("./normalizeNews.js");
 const { dedupeNews } = require("./dedupeNews.js");
-const { scoreNews } = require("./scoreNews.js");
+const { scoreNews, refineCategories } = require("./scoreNews.js");
 const { adjustScoreWeights } = require("./autopilot.js");
 const { generatePosts } = require("./generatePost.js");
 const { applyAffiliateLinks } = require("./affiliateLinks.js");
@@ -232,7 +232,9 @@ async function main() {
   });
   saveJson("selected_posts.json", selected);
 
-  const summarized = await summarizeArticles(selected, { limit: 20 });
+  const summarizedRaw = await summarizeArticles(selected, { limit: 20 });
+  // 日本語本文を含めてカテゴリを再判定（英語要約では拾えないRevit等を救済）
+  const summarized = refineCategories(summarizedRaw);
   saveJson("summarized_news.json", summarized);
 
   const irrelevant = summarized.filter((a) => a.relevant === false);
@@ -252,7 +254,8 @@ async function main() {
   const freshPosts = applyAffiliateLinks(generatePosts(passed));
 
   // Merge with existing posts.json to preserve articles that aged out of RSS feeds
-  const posts = mergeWithExistingPosts(freshPosts, path.join(DATA_DIR, "posts.json"));
+  // 過去記事も日本語本文を含めてカテゴリを再判定（誤分類の是正）
+  const posts = refineCategories(mergeWithExistingPosts(freshPosts, path.join(DATA_DIR, "posts.json")));
   saveJson("posts.json", posts);
 
   const postResult = await maybeAutoPost(posts);

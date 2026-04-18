@@ -214,4 +214,66 @@ function scoreNews(articles, weights = {}) {
     .sort((a, b) => b.score - a.score);
 }
 
-module.exports = { scoreNews, scoreArticle };
+// 製品カテゴリと、再分類で使う主要キーワード（短く一意なもの）
+const PRODUCT_CATEGORY_PRIMARY = {
+  REVIT: "revit",
+  ARCHICAD: "archicad",
+  GLOOBE: "gloobe",
+};
+
+// 「弱い」現状カテゴリ: 日本語本文に明確な製品記述があれば上書き候補とする
+const WEAK_CURRENT_CATEGORIES = new Set(["BIM_ECOSYSTEM", "OTHER", "AI_DX"]);
+
+const MIN_PRODUCT_MENTIONS = 3;
+
+/**
+ * 日本語要約(bodyJa/titleJa)を使って誤分類を是正する。
+ *
+ * 英語タイトル・要約・ソース名ではキーワードが拾えないが翻訳された本文に
+ * 特定の製品名（Revit、Archicad、GLOOBE）が頻繁に登場するケースを救済する。
+ *
+ * 保守的な条件：
+ *   1. 現状カテゴリがBIM_ECOSYSTEM / OTHER / AI_DX のいずれか（汎用）
+ *   2. 日本語本文に特定製品名が MIN_PRODUCT_MENTIONS 回以上出現
+ *   3. 競合製品名（他のPRODUCT_CATEGORY_PRIMARY）がその半分以下
+ */
+function refineCategory(article) {
+  if (!article) return article;
+  if (!WEAK_CURRENT_CATEGORIES.has(article.category || "OTHER")) return article;
+
+  const extra = `${article.titleJa || ""} ${article.bodyJa || ""}`;
+  if (!extra.trim()) return article;
+  const extraLower = extra.toLowerCase();
+
+  const counts = {};
+  for (const [cat, word] of Object.entries(PRODUCT_CATEGORY_PRIMARY)) {
+    const regex = new RegExp(`\\b${word}\\b`, "g");
+    counts[cat] = (extraLower.match(regex) || []).length;
+  }
+
+  let bestCat = null;
+  let bestCount = 0;
+  for (const [cat, n] of Object.entries(counts)) {
+    if (n > bestCount) { bestCount = n; bestCat = cat; }
+  }
+  if (!bestCat || bestCount < MIN_PRODUCT_MENTIONS) return article;
+
+  const competitorMax = Math.max(
+    0,
+    ...Object.entries(counts).filter(([c]) => c !== bestCat).map(([, n]) => n)
+  );
+  if (competitorMax * 2 > bestCount) return article;
+
+  return {
+    ...article,
+    category: bestCat,
+    categoryHits: [...new Set([...(article.categoryHits || []), PRODUCT_CATEGORY_PRIMARY[bestCat]])],
+    allCategories: Array.from(new Set([...(article.allCategories || []), bestCat])),
+  };
+}
+
+function refineCategories(articles) {
+  return articles.map(refineCategory);
+}
+
+module.exports = { scoreNews, scoreArticle, refineCategory, refineCategories };

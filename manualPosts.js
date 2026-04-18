@@ -8,6 +8,37 @@
 
 const MANUAL_POSTS = [
   {
+    slug: 'matterport-3d-spatial-data-platform-for-aec',
+    title: 'Matterport: 3D spatial data platform for AEC and digital twins',
+    titleJa: 'Matterportとは｜AEC・BIM・デジタルツインをつなぐ3D空間データプラットフォーム',
+    link: 'https://matterport.com/ja',
+    source: 'Matterport',
+    pubDate: '2026-04-18T09:00:00.000Z',
+    summary: 'Matterportは建物・空間を3Dデジタルデータとして記録・共有するプラットフォームです。竣工記録、既存建物調査、BIM連携、施設管理まで幅広い用途でAEC業界の実務を変えています。',
+    fetchedAt: '2026-04-18T09:00:00.000Z',
+    category: 'BIM_ECOSYSTEM',
+    categoryHits: ['bim', 'aec', 'digital twin'],
+    allCategories: ['BIM_ECOSYSTEM'],
+    keywordHits: ['matterport', '3d scan', 'digital twin', 'bim', 'facility management'],
+    score: 9,
+    freshnessScore: 0,
+    relevant: true,
+    bodyJa: `【背景】
+建設・不動産・施設管理の現場では、「現地に行かないと状況がわからない」「既存建物の正確な寸法や状況が図面にない」「竣工後に建物情報が散逸する」という課題が長年続いています。従来の対処法は写真撮影や手作業の採寸で、手間とコストがかかるうえ、情報の精度と再利用性に限界がありました。スマートフォンのLiDAR普及や3Dカメラの低価格化により、空間そのものをデジタルデータとして記録・活用する動きが急速に広がっています。
+
+【内容】
+Matterportは、建物や空間を360度3Dデータとして記録し、ブラウザ上でバーチャルウォークスルーを可能にするクラウドプラットフォームです。専用の3Dカメラ（Pro3など）だけでなく、iPhone・iPadのLiDARカメラやAndroid端末でも撮影でき、撮影データはMatterportクラウドに自動アップロードされて処理されます。生成されたデジタルモデルは、平面図の自動生成、距離・面積測定、OBJやEシリーズCADファイルのエクスポート、BIMソフトへの取り込みまで対応しています。2023年にCoStarグループが26億ドルで買収したことで、不動産データ基盤との統合が進んでいます。主な活用場面は、不動産バーチャル内見、建設現場の進捗記録、既存建物の改修前調査、竣工デジタルアーカイブ、ファシリティマネジメントのベースデータ整備などです。
+
+【なぜ重要か】
+建設DXの実務で課題になるのは「現場と設計事務所・発注者の情報共有の断絶」と「既存建物の正確なデータがない」という二点です。Matterportはこの両方を解決する手段として機能します。特に、点群データやBIMが整備されていない既存建物では、Matterportのスキャンデータが改修設計のベースになります。また、施工中の現場を定期撮影してクラウドで共有することで、遠隔での進捗確認や関係者間の情報整合が取りやすくなります。RevitやArchicadとの連携プラグインも提供されており、スキャンデータをBIMモデル作成の下絵として活用するリバースBIM（Scan-to-BIM）ワークフローが整いつつあります。
+
+【日本への影響】
+日本では既存建物の改修・リノベーション需要が増加しており、正確な現況図が取れない案件でのMatterport活用が広がっています。大手ゼネコンや設計事務所での現場記録・品質管理ツールとしての導入事例も出てきています。不動産会社では賃貸・売買物件のバーチャル内見として定着しつつあります。iPhoneのLiDARを使えば追加機材なしで試せるため、中小設計事務所でも導入障壁が低いのが特徴です。一方、Scan-to-BIMの精度はスキャン密度や処理品質に依存するため、BIM連携を前提とする場合は精度要件の事前確認が必要です。国土交通省が推進するi-Constructionや3Dモデルデータの整備方針とも方向性が合っており、公共建築分野での採用も今後拡大が見込まれます。`,
+    xPostBody: '',
+    japaneseSummary: '',
+    postText: '',
+  },
+  {
     slug: 'revit-worksharing-basics',
     title: 'Revit worksharing basics',
     titleJa: 'Revitのワークシェアとは｜中央モデル・ローカル・同期の基本',

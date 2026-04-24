@@ -3,14 +3,12 @@ name: AI News Autopilot
 on:
   schedule:
     - cron: '0 11 */3 * *'
-    - cron: '0 11 * * 5'
   workflow_dispatch:
 
 jobs:
   run-news-pipeline:
     runs-on: ubuntu-latest
     timeout-minutes: 35
-    if: github.event_name != 'schedule' || github.event.schedule == '0 11 */3 * *'
     permissions:
       contents: write
     concurrency:
@@ -138,32 +136,3 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
 
-  design-review:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    if: github.event_name == 'schedule' && github.event.schedule == '0 11 * * 5'
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-      - run: npm ci
-      - name: Run design review
-        run: node designReview.js
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-
-      - name: Apply design improvements
-        run: node designImplement.js
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-
-      - name: Commit design review changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add DESIGN_REVIEW.md generateSite.js index.html posts/ categories/ data/ || true
-          git diff --staged --quiet || git commit -m "feat: apply weekly design review $(date +'%Y-%m-%d')"
-          git fetch origin main
-          git push --force-with-lease

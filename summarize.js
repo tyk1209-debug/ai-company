@@ -44,14 +44,14 @@ async function getArticleBody(article) {
 // 専門家コメント付きX投稿文を生成
 // ─────────────────────────────────────────────────────────────
 
-const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者です。
+const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者です。日本のBIM/AEC実務者（設計事務所・ゼネコン・サブコン・FM事業者）が読む専門メディアの編集を担当しています。
 記事を読んで、以下をJSON形式で返してください。
 
 【出力形式】
 {
   "relevant": true,
   "titleJa": "日本語の見出し（25〜40文字、読者が思わずクリックしたくなる表現）",
-  "bodyJa": "サイト掲載用の詳細記事（500〜800文字）",
+  "bodyJa": "サイト掲載用の詳細記事（1200〜2000文字）",
   "xPost": "X投稿本文（200字以内。絵文字と本文のみ。URLやハッシュタグは含めない）"
 }
 
@@ -70,16 +70,25 @@ const SYSTEM_PROMPT = `あなたはBIM・AEC・建設DX分野の専門編集者�
 - 体言止めOK
 
 【bodyJaのルール】（relevant: true のときのみ）— サイト掲載用の深い解説記事
-⚠️ 必ず500文字以上800文字以下で書くこと。これより短い場合は不合格です。
-- 以下の4部構成で書く（各部の文字数を必ず守ること）:
-  1. 【背景】なぜこのニュースが生まれたか、業界の文脈（最低100文字）
-  2. 【内容】何が発表・実現されたか、具体的な機能・数値・仕様（最低150文字）
-  3. 【技術的ポイント】BIM/AEC専門家が注目すべき技術的詳細（最低100文字）
-  4. 【業界への影響】現場・プロジェクト・業界全体にどう影響するか（最低150文字）
-- 各部は必ず具体的な説明を含める。「〜が期待されます」のような曖昧な表現だけで終わらせない
+⚠️ 必ず1200文字以上2000文字以下で書くこと。これより短い場合は不合格です。
+- 単なる翻訳・要約は禁止。日本市場の文脈と編集視点を必ず加えること
+- 以下の5部構成で書く（各部の見出しは【】付きで明示し、各部の文字数を必ず守ること）:
+  1. 【背景】なぜこのニュースが生まれたか、業界の文脈・前史（最低200文字）
+  2. 【内容】何が発表・実現されたか、具体的な機能・数値・仕様・対象ユーザー（最低250文字）
+  3. 【技術的ポイント】BIM/AEC専門家が注目すべき技術的詳細・既存技術との比較（最低250文字）
+  4. 【業界への影響】グローバルな業界全体・プロジェクト・現場にどう影響するか（最低250文字）
+  5. 【日本への影響】日本市場特有の視点で、以下のうち該当するものを必ず2つ以上含めて具体的に書く（最低250文字）:
+     - 国土交通省BIM/CIMロードマップや建築BIM推進会議など国内政策との関係
+     - 日本市場での製品取り扱い状況・代理店・国内サポートの現状
+     - 国内の設計事務所・ゼネコン・サブコンの実務ワークフローへの示唆
+     - 国内競合製品（GLOOBE、Rebroなど）との位置づけ
+     - 日本の法規・確認申請・施工ルール・商習慣との整合性
+     - 海外との時差・言語・人材スキルなど国内導入時の論点
+- 各部は必ず具体的な説明を含める。「〜が期待されます」「〜が重要です」のような曖昧な表現だけで終わらせない
+- 一次情報に書かれていない事実は推測で補わない。一般的に公知の業界文脈や日本市場の構造についてのみ編集視点を加える
 - 専門用語（BIM、IFC、デジタルツイン、LOD等）はそのまま使用
 - ですます調で統一する
-- 合計500〜800文字を絶対厳守する（400文字以下は禁止）
+- 合計1200〜2000文字を絶対厳守する（1000文字以下は禁止）
 - 各部の見出し（【背景】等）を含めて改行を入れて読みやすくする
 
 【xPostのルール】（relevant: true のときのみ）— X（Twitter）用のコンパクトな引きつけ投稿
@@ -108,7 +117,7 @@ ${feedbackText ? `\n【追加修正指示】\n${feedbackText}` : ""}`;
   try {
     const response = await client.messages.create({
       model:      "claude-haiku-4-5-20251001",
-      max_tokens: 3000,
+      max_tokens: 6000,
       system:     SYSTEM_PROMPT,
       messages:   [{ role: "user", content: prompt }],
     });
@@ -127,7 +136,7 @@ ${feedbackText ? `\n【追加修正指示】\n${feedbackText}` : ""}`;
       relevant: parsed.relevant !== false, // 明示的にfalseの場合のみ除外
       xPost:   (parsed.xPost   || "").slice(0, 210),
       titleJa: (parsed.titleJa || "").slice(0, 60),
-      bodyJa:  (parsed.bodyJa  || "").slice(0, 3000),
+      bodyJa:  (parsed.bodyJa  || "").slice(0, 5000),
     };
   } catch (err) {
     console.error(`[summarize] Claude API エラー: ${err.message}`);
@@ -135,7 +144,7 @@ ${feedbackText ? `\n【追加修正指示】\n${feedbackText}` : ""}`;
   }
 }
 
-const REQUIRED_BODY_SECTIONS = ["【背景】", "【内容】", "【技術的ポイント】", "【業界への影響】"];
+const REQUIRED_BODY_SECTIONS = ["【背景】", "【内容】", "【技術的ポイント】", "【業界への影響】", "【日本への影響】"];
 const MOJIBAKE_PATTERN = /[�]|縲|繝|窶|�/;
 
 function validateGeneratedContent(result) {
@@ -156,8 +165,8 @@ function validateGeneratedContent(result) {
     issues.push("titleJa が長すぎます");
   }
 
-  if (bodyJa.length < 500) {
-    issues.push("bodyJa が 500 文字未満です");
+  if (bodyJa.length < 1200) {
+    issues.push(`bodyJa が 1200 文字未満です（現在 ${bodyJa.length} 文字）`);
   }
 
   for (const section of REQUIRED_BODY_SECTIONS) {
@@ -243,7 +252,7 @@ async function summarizeArticle(article) {
       article,
       body,
       `以下の問題を修正してください: ${quality.issues.join("、")}。
-titleJa / bodyJa / xPost を自然な日本語で作り直し、特に bodyJa は4部構成と500文字以上を厳守してください。`
+titleJa / bodyJa / xPost を自然な日本語で作り直し、特に bodyJa は5部構成（【背景】【内容】【技術的ポイント】【業界への影響】【日本への影響】）と1200文字以上を厳守してください。【日本への影響】では国土交通省BIM/CIM、建築BIM推進会議、国内代理店、国内競合、国内法規、商習慣などの観点から具体的に書いてください。`
     );
     quality = validateGeneratedContent(result);
   }

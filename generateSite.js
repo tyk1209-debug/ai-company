@@ -3930,11 +3930,15 @@ function buildArticlePage(post, allPosts) {
   const learningGuidesHtml = buildLearningGuidesSection(post);
 
   // ---- editorial card ----
+  const editorialTitle = editSection && editSection.label && /日本/.test(editSection.label)
+    ? `日本への影響 — AEC News Japan 編集部視点`
+    : `AEC News Japan 編集部の見解`;
+  const editorialIcon = editSection && editSection.label && /日本/.test(editSection.label) ? '🇯🇵' : '💡';
   const editorialHtml = editorialText ? `
     <div class="article-editorial">
       <div class="article-editorial-header">
-        <span class="article-editorial-icon">💡</span>
-        <span class="article-editorial-title">AEC News Japan 編集部の見解</span>
+        <span class="article-editorial-icon">${editorialIcon}</span>
+        <span class="article-editorial-title">${escape(editorialTitle)}</span>
       </div>
       <div class="article-editorial-text">${editorialText.split('\n').filter(s => s.trim()).map(p => `<p>${escape(p)}</p>`).join('')}</div>
     </div>` : '';

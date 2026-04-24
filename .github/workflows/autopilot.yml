@@ -74,7 +74,7 @@ jobs:
           const fs = require('fs');
           let count = 0;
           try { count = JSON.parse(fs.readFileSync('data/posts.json','utf-8')).length; } catch(e) {}
-          const text = 'AEC News Japan - 自動更新完了\n' + time + '\n候補記事数: ' + count + '件\nhttps://tyk1209-debug.github.io/ai-company/';
+          const text = 'AEC News Japan - 自動更新完了\n' + time + '\n候補記事数: ' + count + '件\nhttps://aec-news.com/';
           const body = JSON.stringify({ chat_id: chatId, text });
           const req = https.request({ hostname:'api.telegram.org', path:'/bot'+token+'/sendMessage', method:'POST', headers:{'Content-Type':'application/json','Content-Length':Buffer.byteLength(body)} });
           req.write(body); req.end();

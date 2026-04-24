@@ -1084,8 +1084,8 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null, options = {
 ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" href="${SITE_URL}/favicon.svg">
   <link rel="icon" type="image/png" sizes="48x48" href="${SITE_URL}/favicon.png">
   <link rel="apple-touch-icon" href="${SITE_URL}/favicon.png">${jsonLdScript}
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script>
+  <!-- Google AdSense (一時停止: 審査品質改善中) -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script> -->
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQXDS1Z41Y"></script>
   <script>
@@ -3834,11 +3834,11 @@ function buildArticlePage(post, allPosts) {
     })
     .slice(0, 5);
 
-  // ---- editorial section (日本への影響 or last section) ----
-  const editLabels = ['日本への影響', '日本市場', '日本', '見解', 'まとめ', '考察', '影響'];
-  const editSection = sections.find(s => s.label && editLabels.some(l => s.label.includes(l)) && s.paragraphs.length > 0)
-    || (sections.length > 1 ? sections[sections.length - 1] : null);
-  // セクションの全段落を表示（途切れ防止）
+  // ---- editorial section ----
+  // 本文と重複しないように、明示的な「日本への影響/見解/まとめ/考察」セクションがある場合のみ採用する。
+  // 本文の最後のセクション（業界への影響など）と重複する 編集部の見解 は表示しない。
+  const editLabels = ['日本への影響', '日本市場', '日本', '見解', 'まとめ', '考察'];
+  const editSection = sections.find(s => s.label && editLabels.some(l => s.label.includes(l)) && s.paragraphs.length > 0);
   const editorialText = editSection && editSection.paragraphs.length > 0
     ? editSection.paragraphs.join('\n')
     : '';
@@ -3869,6 +3869,7 @@ function buildArticlePage(post, allPosts) {
     let sIdx = 0;
     for (const sec of sections) {
       if (sec === tldrSection) continue;
+      if (sec === editSection) continue; // 編集部の見解として別カードで表示するため本文からは除外
       if (sec.label) {
         bodyHtml += `<h2 class="article-section-h2"><span>${escape(sec.label)}</span></h2>`;
       }
@@ -4023,7 +4024,6 @@ function buildArticlePage(post, allPosts) {
     <div class="article-layout">
       <main class="article-main">
         <div class="article-body-wrap">
-          <div class="ai-body-label">AI による日本語解説</div>
           <div class="article-body">
             ${bodyHtml}
           </div>
@@ -4192,7 +4192,7 @@ function buildPrivacyPage() {
   ]);
 
   return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [privacyJsonLd, breadcrumbLd], {
-    robots: 'noindex, follow, max-snippet:-1, max-image-preview:large',
+    robots: 'index, follow, max-snippet:-1, max-image-preview:large',
   }) +
     htmlHeader() +
     `
@@ -4245,7 +4245,7 @@ function buildAboutPage() {
   ]);
 
   return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [aboutJsonLd, breadcrumbLd], {
-    robots: 'noindex, follow, max-snippet:-1, max-image-preview:large',
+    robots: 'index, follow, max-snippet:-1, max-image-preview:large',
   }) +
     htmlHeader() +
     `
@@ -4255,7 +4255,13 @@ function buildAboutPage() {
         <h1>運営者情報</h1>
 
         <h2>このサイトについて</h2>
-        <p>${SITE_NAME}は、BIM・AEC・建設DXに関する国内外のニュースや製品情報を、日本語で整理・解説する専門メディアです。世界の動向を追いながら、日本の実務にどう影響するかを短時間で把握できる構成を目指しています。</p>
+        <p>${SITE_NAME}は、BIM・AEC・建設DXに関する国内外のニュースや製品情報を、日本語で整理・解説する専門メディアです。世界の動向を追いながら、日本の建築・建設実務にどう影響するかを短時間で把握できることを目的としています。海外メディアの単純翻訳ではなく、日本の設計事務所・ゼネコン・サブコン・FM事業者にとっての示唆を編集視点で加えることを重視しています。</p>
+
+        <h2>運営者</h2>
+        <p>運営: AEC News Japan 編集部</p>
+        <p>編集責任者: 友繁 勇樹（建築・BIM分野の業務経験を持つ実務者。海外BIMベンダーでのプリセールス・導入支援業務を通じて、日本市場におけるBIM/AECツール導入の実情を把握。BIM・建設DXの一次情報を日本語で読める環境を整えるべく、本メディアを立ち上げ）</p>
+        <p>所在地: 日本</p>
+        <p>連絡先: <a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a></p>
 
         <h2>対象領域</h2>
         <ul>
@@ -4263,13 +4269,40 @@ function buildAboutPage() {
           <li>建設DX、AI、デジタルツイン、CDEなどの関連技術</li>
           <li>Revit、Archicad、GLOOBE、IFCなどの製品・規格動向</li>
           <li>海外・国内の業界発表、技術記事、プレスリリース</li>
+          <li>国土交通省BIM/CIM、建築BIM推進会議など国内政策動向</li>
         </ul>
 
         <h2>編集方針</h2>
-        <p>当サイトは、単なる翻訳ではなく、日本のBIM・AEC実務にとって重要かどうかを基準に記事を編集しています。特に「何が起きたか」「なぜ重要か」「日本の実務にどう影響するか」を重視し、読者が短時間で判断材料を得られる構成を目指しています。</p>
+        <p>当サイトは、単なる翻訳ではなく、日本のBIM・AEC実務にとって重要かどうかを基準に記事を編集しています。すべての記事で次の3点を満たすことを編集ルールとしています。</p>
+        <ol>
+          <li><strong>何が起きたか</strong> — 一次情報を確認した上で、事実関係を簡潔に整理する</li>
+          <li><strong>なぜ重要か</strong> — BIM/AEC業界の文脈での意味づけを行う</li>
+          <li><strong>日本の実務にどう影響するか</strong> — 国内のワークフロー・規格・商習慣を踏まえた視点を加える</li>
+        </ol>
+        <p>翻訳に終始する記事、単純な要約のみの記事は公開しません。記事は編集部が公開前に内容を確認しています。</p>
+
+        <h2>情報源</h2>
+        <p>記事は以下のような一次情報・専門ソースをもとに編集しています。</p>
+        <ul>
+          <li>各ソフトウェアベンダーの公式発表（Autodesk, Graphisoft, Bentley, Trimble など）</li>
+          <li>国土交通省・建築BIM推進会議など公的機関の発表</li>
+          <li>buildingSMART International / buildingSMART Japan</li>
+          <li>海外専門メディア（AEC Magazine, BIMplus, Architosh など）の記事を出典明示の上で参照</li>
+        </ul>
+        <p>すべての記事には元記事・出典へのリンクを明示しています。</p>
 
         <h2>AI利用ポリシー</h2>
-        <p>当サイトでは、記事候補の収集、要約草案、日本語化の一部にAIを活用しています。ただし、公開内容には一次情報へのリンクを明示し、専門メディアとしての可読性と妥当性を重視して整形しています。重要な判断や導入検討の際は、必ず元記事・公式発表・製品情報をご確認ください。</p>
+        <p>記事候補の収集、構成の下書き、用語の日本語化補助の一部にAIを活用しています。ただし以下のルールを設けています。</p>
+        <ul>
+          <li>公開記事は編集部が内容を確認したうえで公開する</li>
+          <li>事実関係は一次情報で照合する</li>
+          <li>引用・要約は出典を明示する</li>
+          <li>AIの出力をそのまま掲載しない（日本市場視点の編集を加える）</li>
+        </ul>
+        <p>重要な判断や導入検討の際は、必ず元記事・公式発表・製品情報をご確認ください。</p>
+
+        <h2>訂正・お問い合わせ方針</h2>
+        <p>記事内容に誤り・更新の必要がある場合、<a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>からご連絡ください。確認のうえ、記事内に訂正の旨を明示して修正します。</p>
 
         <h2>広告・アフィリエイト方針</h2>
         <p>当サイトでは、読者にとって関連性が高いと判断した書籍や機材を紹介するために、広告やアフィリエイトリンクを使用する場合があります。紹介先の選定は編集方針に基づいて行い、広告であることが分かるように表示します。</p>

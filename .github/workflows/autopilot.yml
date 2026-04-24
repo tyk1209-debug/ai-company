@@ -2,7 +2,7 @@ name: AI News Autopilot
 
 on:
   schedule:
-    - cron: '0 11 * * *'
+    - cron: '0 11 */3 * *'
     - cron: '0 11 * * 5'
   workflow_dispatch:
 
@@ -10,6 +10,7 @@ jobs:
   run-news-pipeline:
     runs-on: ubuntu-latest
     timeout-minutes: 35
+    if: github.event_name != 'schedule' || github.event.schedule == '0 11 */3 * *'
     permissions:
       contents: write
     concurrency:

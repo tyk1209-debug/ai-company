@@ -6,7 +6,9 @@ on:
 jobs:
   translate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -26,10 +28,13 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      - name: Regenerate website
+        run: node generateSite.js
+
       - name: Commit and push updated posts.json and site
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Actions"
-          git add data/posts.json index.html posts/ categories/ sitemap.xml robots.txt about.html privacy.html || true
-          git diff --staged --quiet || git commit -m "feat: retroactively generate Japanese titles and body for existing articles"
+          git add data/posts.json index.html posts/ categories/ guides/ page/ sitemap.xml robots.txt about.html privacy.html events.html || true
+          git diff --staged --quiet || git commit -m "feat: retroactively enrich bodyJa to 1200+ chars with Japan impact section"
           git push

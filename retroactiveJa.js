@@ -28,13 +28,16 @@ function sleep(ms) {
 async function main() {
   const posts = JSON.parse(fs.readFileSync(POSTS_PATH, "utf-8"));
 
-  // titleJa が空、または bodyJa が薄い（400文字未満）記事を抽出
+  // titleJa が空、または bodyJa が薄い（1200文字未満）、または【日本への影響】セクションが無い記事を抽出
+  // （Phase 2 でAdSense審査品質要件に合わせて閾値を 400 → 1200 に引き上げ、日本への影響セクション必須化）
   // 週次まとめ（slugが"weekly-"で始まる）はスキップ
   const targets = posts.filter((p) => {
     if (p.slug && p.slug.startsWith("weekly-")) return false;
     const missingTitle = !p.titleJa || p.titleJa.trim() === "";
-    const thinBody = !p.bodyJa || p.bodyJa.length < 400;
-    return missingTitle || thinBody;
+    const body = p.bodyJa || "";
+    const thinBody = body.length < 1200;
+    const missingJapanSection = !body.includes("【日本への影響】");
+    return missingTitle || thinBody || missingJapanSection;
   });
 
   console.log(`[retroactiveJa] 対象記事数: ${targets.length} / 全${posts.length}件`);

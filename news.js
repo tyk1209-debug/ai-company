@@ -232,7 +232,14 @@ async function main() {
   });
   saveJson("selected_posts.json", selected);
 
-  const summarizedRaw = await summarizeArticles(selected, { limit: 20 });
+  // 翻訳枠（limit）に新着記事が確実に入るよう、pubDate 降順で並び替えてから渡す。
+  // selected_posts.json は score 順のまま保存して下流デバッグの可読性を保つ。
+  const summarizeQueue = [...selected].sort((a, b) => {
+    const ta = a.pubDate ? new Date(a.pubDate).getTime() : 0;
+    const tb = b.pubDate ? new Date(b.pubDate).getTime() : 0;
+    return tb - ta;
+  });
+  const summarizedRaw = await summarizeArticles(summarizeQueue, { limit: 20 });
   // 日本語本文を含めてカテゴリを再判定（英語要約では拾えないRevit等を救済）
   const summarized = refineCategories(summarizedRaw);
   saveJson("summarized_news.json", summarized);

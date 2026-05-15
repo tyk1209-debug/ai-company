@@ -11,6 +11,9 @@ const SITE_DESC = 'BIM・AEC・建設DXの最新ニュースをAIが日本語で
 const SITE_URL = 'https://aec-news.com';
 const CONTACT_FORM_URL = 'https://forms.gle/kF7Jf8PErq6S15tu5';
 const CURRENT_YEAR = new Date().getFullYear();
+// AdSense審査モード: 有用性審査中はアフィリエイト枠を全停止し、編集コンテンツのみ表示する。
+// 環境変数 ADSENSE_REVIEW_MODE=false で明示的に解除するまで ON のままにする。
+const ADSENSE_REVIEW_MODE = process.env.ADSENSE_REVIEW_MODE !== 'false';
 const RECOMMENDED_BOOKS = {
   REVIT: [
     {
@@ -2976,7 +2979,8 @@ const {
 } = createSidebarTools({
   explainerGuides: EXPLAINER_GUIDES,
   explainerGuideMap: EXPLAINER_GUIDE_MAP,
-  recommendedBooks: RECOMMENDED_BOOKS,
+  // AdSense審査中はサイドバーの「参考アイテム」も停止（カテゴリ/ホーム両方）。
+  recommendedBooks: ADSENSE_REVIEW_MODE ? {} : RECOMMENDED_BOOKS,
   categoryLabel,
   categorySlug,
   escape,
@@ -3053,6 +3057,8 @@ function buildLearningGuidesSection(post) {
 }
 
 function buildExplainerBooks(guide) {
+  // AdSense審査中は基礎解説ページのアフィリエイト書籍枠も全停止する。
+  if (ADSENSE_REVIEW_MODE) return '';
   if (guide.hideBooks || !guide.books || guide.books.length === 0) return '';
   return `
     <section class="guide-books">
@@ -3890,10 +3896,9 @@ function buildArticlePage(post, allPosts) {
   }
 
   // ---- affiliate ----
-  const affiliates = getAffiliateLinks(post);
-  // Career affiliates are determined independently of overrides so the banner
-  // always appears on AI/DX-relevant articles even when product overrides are set.
-  const careerAffiliates = getCareerAffiliates(post);
+  // AdSense審査中は全アフィリエイトを停止する。
+  const affiliates = ADSENSE_REVIEW_MODE ? [] : getAffiliateLinks(post);
+  const careerAffiliates = ADSENSE_REVIEW_MODE ? [] : getCareerAffiliates(post);
   const productAffiliates = affiliates.filter(a => a.type !== 'career-service');
 
   const careerBannerHtml = careerAffiliates.map(a => `
@@ -4032,10 +4037,8 @@ function buildArticlePage(post, allPosts) {
             ${bodyHtml}
           </div>
         </div>
-        ${learningGuidesHtml}
-        ${careerBannerHtml}
-        ${affiliateHtml}
         ${editorialHtml}
+        ${learningGuidesHtml}
         <div class="article-source-card">
           <span class="article-source-card-label">元記事・出典</span>
           <div class="article-source-card-info">
@@ -4053,6 +4056,8 @@ function buildArticlePage(post, allPosts) {
           <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.titleJa || post.title)}&url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
           <a class="back-btn" href="../">← 記事一覧に戻る</a>
         </div>
+        ${careerBannerHtml}
+        ${affiliateHtml}
         <div class="article-rail">
           ${buildContextualRelatedArticles(post, allPosts)}
           ${buildRelatedArticles(post, allPosts, '同カテゴリの関連記事')}

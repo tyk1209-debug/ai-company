@@ -5,7 +5,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-07T15:00:12.000Z",
     "summary": "Autodesk's mature BIM authoring tool connects to the Forma AECO platform The post Autodesk strengthens bridge between Revit and Forma appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.816Z",
+    "fetchedAt": "2026-05-19T13:52:20.285Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -29,7 +29,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-18T09:25:14.000Z",
     "summary": "Users of Vectorworks, Revit and Archicad given access to Maxon’s “cinematic rendering technology” The post Maxon launches RedShift for Archviz appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.816Z",
+    "fetchedAt": "2026-05-19T13:52:20.286Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -53,7 +53,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-27T10:39:26.000Z",
     "summary": "「今月のヒント」は、インターナショナルのコミュニティで毎月公開されている「Tip of the Month」を翻訳してお届けしています！Tip of the Month（今月のヒント） は、インターナショナルのコミュニティで投稿されているものから、モデレータメンバーがよいTips! と選んでいるものです。海外のユーザーの使い方が、日本のユーザーのみなさんにもヒントになるのでは？と思っています。※原稿内容はオリジナルページに合わせていますが、できるだけインターフェイスの画像は、Archicad日本語版にしています。 ターゲットを絞ったIFC出力は、設計者やコンサルタントとの調整をよりスムーズにします。今月のTipsでは、@Laszlo Nagy による実用的なアイデアをご紹介します。Archicadの衝突判定設定とIFCジオメトリフィルタを組み合わせることで、壁などのホスト要素を含めずにドアと窓だけをIFCとして出力する方法です。 課題 コンサルタントから、開口部（ドアや窓）のみを含むIFCデータを求められることがあります。これは、構造モデルやMEPモデルとの位置確認、クリアランス、干渉チェックに集中するためであり、壁・スラブなどの余分な要素は不要とされるケースです。 解決方法 Archicadの「ビルディングマテリアル」には「干渉検出に参加」というフラグがあり、IFCトランスレータには「”干渉検出に参加”する要素のみを出力」というオプションがあります。 すべてのビルディングマテリアルでこのフラグを一時的にオフにし、その上でIFCトランスレータ側で「”干渉検出に参加”する要素のみを出力」を有効にすると、壁やスラブなどの構成要素は除外されます。一方、ライブラリパーツとして実装されているドアや窓はこの条件に影響されないため、引き続き出力されます。 Step 1：プロジェクトのコピーで作業する 元のプロジェクトを開き、「ファイル → 名前を付けて保存」で別ファイルを作成します。（例：Project_IFC_DoorsWindowsOnly.pln）以降の操作はこのコピー上で行い、本体プロジェクトの設定には影響を与えないようにします。 Step 2：すべてのビルディングマテリアルの干渉検出をオフにする 「オプション → 要素属性 → ビルディングマテリアル」を開きます。リストの最初のマテリアルを選択し、Shiftキーや「すべて選択」で全マテリアルを選択します。プロパティ内の「干渉検出に参加」のチェックを外し、OKで確定します。 これにより、このコピー内では壁・スラブ・屋根・梁・柱など、マテリアルに依存する構成要素は干渉検出対象外となります。 ※操作は下記の動画をご覧ください。 Step 3：IFCトランスレータの設定 「ファイル → 相互運用 → IFC → IFCトランスレータ」を開きます。 通常使用しているトランスレータ（例：「Exact Geometry Export」）を複製し、「IFC – Doors & Windows only」などにリネームします。 新しいトランスレータを選択し、「設定」→「形状変換」パネルでを開きます。 「”干渉検出に参加”する形状のみを出力する」を有効にします。 その他の設定（IFCバージョン、プロパティセットなど）は標準設定のままで問題ありません。 Step 4：ドアと窓のみのIFCを書き出す エクスポート用のコピーで、「ファイル → 名前を付けて保存」を選択し、フォーマット／ファイルの種類をIFCファイルに設定します。 ファイル名は、例えば「Project_DoorsWindowsOnly.ifc」のように分かりやすく付けます。 同じダイアログ内で、設定したトランスレータ（IFC – Doors & Windows only）を選択します。 「保存」をクリックし、Archicadによるエクスポートが完了するのを待ちます。 作成されたIFCを任意のビューア、またはArchicad（「ファイル → 開く → IFCファイル」）で開き、ドアと窓（およびその他の純粋なライブラリパーツ）のみが含まれ、壁・スラブ・梁・屋根が含まれていないことを確認します。 オプション：フルモデルとの併用 この方法ではビルディングマテリアルを持つ要素がすべて除外されるため、必要に応じて以下も併せて提供できます。 通常どおり標準のトランスレータを使用して、建物全体モデルをエクスポートします。 または、「ドア／窓を含まないモデル」として、「3Dでの表示要素のフィルタと切断」においてドアと窓の3D表示をオフにし、その後、通常のトランスレータで再度エクスポートします。 受信側には、調整に必要な内容に応じて、ドア／窓のみのIFCファイルと、それ以外を含むIFCファイルの2つを読み込んでもらいます。 結果 この方法を使えば、プロジェクト構成を変更したり、要素をレイヤーに移動したりすることなく、ドアと窓のみのIFCを簡単に作成できます。 ぜひ試してみてください！また、このTipsを共有してくれた @Laszlo Nagy に感謝を伝えたい方は、元のフォーラム投稿もぜひご覧ください。 日々の業務で役立つ工夫やアイデアがあれば、ぜひコミュニティで共有してください。Insightsブログで紹介されるかもしれません！",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.223Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -72,36 +72,34 @@
     "freshnessScore": 0
   },
   {
-    "title": "ベータプログラム2026 応募受付開始 ！",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E3%83%99%E3%83%BC%E3%82%BF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A02026-%E5%BF%9C%E5%8B%9F%E5%8F%97%E4%BB%98%E9%96%8B%E5%A7%8B/ba-p/700173",
+    "title": "Archicad 28.4.0 Update リリース",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Archicad-28-4-0-Update-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9/ba-p/702729",
     "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-04-21T02:45:59.000Z",
-    "summary": "Beta Program2026へは、日本からも参加することはできますが、英語版で実施され、すべてのコミュニケーションおよびレポートは英語のみで行われ、応募後選考があります。ご了承ください。 このたび、Graphisoft Beta Program 2026 の応募受付を開始しましたことをお知らせいたします。 Archicad および Graphisoft エコシステムの次に向けた最新機能をいち早く体験し、開発の最前線に参加したい方にとって、絶好の機会です。 ベータテスターとして参加をご希望の方は、ぜひご応募ください。 応募をご希望の方は、申請ページのフォームにご記入ください。選考後、結果はメールにてご連絡いたします。 Graphisoft Beta Program 2026 は、今後リリース予定の製品を対象とした、実務環境に近い形での検証プログラムです。選ばれたユーザーは、Archicad 30、MEP Designer、BIMx、BIMcloud などのほぼ完成版（INT、USA、GER ローカライズ対応）に早期アクセスできます。 本プログラムでは、実運用に影響のない環境でベータ版を使用しながら、新しいワークフローや機能をリリース前に試すことができるほか、不具合やユーザビリティの問題の発見・改善に貢献いただきます。 また、アドオン開発者の方は、正式リリース前に開発キットを用いて Archicad 30 向けの対応準備や移植も可能です。 なお、プログラム期間中のすべてのコミュニケーションおよびレポートは英語で行われます。 参加するメリット 一般公開前に最新バージョンへいち早くアクセス可能 実務ベースの検証を通じて、製品の品質・安定性・ワークフロー改善に直接貢献できる 専用ベータフォーラムで、他のテスターや Graphisoft の専門家と情報共有・交流ができる アドオン開発者は、新しい開発キットを活用して Archicad 30 対応の準備が可能 プログラム終了時には、貢献度の高いテスターを対象に表彰も行われます。 Graphisoft Beta Program に関するご質問は、betasupport@graphisoft.com までお問い合わせください。",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "pubDate": "2026-05-19T07:33:25.000Z",
+    "summary": "Archicad 28.4.0 Update（7006、7007）が、Full版およびSolo版の全言語向けに利用可能となりましたことをお知らせします。インストーラーは弊社Webサイトのダウンロードページ内の「アップデート」セクションより入手いただけます。 今回のアップデートでは、Preview版とFinal版の間でいくつか変更が行われたため、ビルド番号が若干異なっています。ただし、Preview版をインストール済みの場合でも互換性の問題は発生しません。Archicad 28.4.0 Update Final版（7006）をインストールするだけで、シームレスに移行できます。※日本語版にはPreview版はありませんので、このバージョンのみとなります。 このアップデートには、以下のようないくつかの重要な不具合修正が含まれています。 macOS 26.4 Tahoe において、入力した値が変更されることなく数値入力が正しく動作するようになりました。 ホットリンクコンテンツ使用時に、Keynote接続が時間経過とともに失われる問題を修正しました。 改善点および修正内容の完全な一覧については、関連するリリースノートページ をご確認ください。 なお、このアップデートはTeamwork互換性に影響するため、同じプロジェクトで作業するすべてのユーザーが同じアップデートバージョンを使用する必要があります。 自動アップデート確認機能を有効にしているユーザーには、本リリースの通知が表示されます。 Teamwork互換性にご注意のうえ、この重要なアップデートをインストールされることを推奨します。 本リリースをもって、Archicad 28 は予定されていた最終アップデートに到達しました。今後、重大な問題が確認された場合には、それに対応するHotfixをリリースする可能性があります。 ご質問やフィードバックがございましたら、ぜひお知らせください。 Graphisoft Customer Support",
+    "fetchedAt": "2026-05-19T13:52:16.223Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
-      "graphisoft",
-      "bimx"
+      "graphisoft"
     ],
     "allCategories": [
       "ARCHICAD"
     ],
     "keywordHits": [
       "archicad",
-      "graphisoft",
-      "bimx"
+      "graphisoft"
     ],
     "score": 11,
-    "freshnessScore": 0
+    "freshnessScore": 3
   },
   {
-    "title": "Graphisoft ID のセキュリティアップデート",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/Graphisoft-ID-%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88/ba-p/695546",
+    "title": "ベータプログラム2026 応募受付開始 ！",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E3%83%99%E3%83%BC%E3%82%BF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A02026-%E5%BF%9C%E5%8B%9F%E5%8F%97%E4%BB%98%E9%96%8B%E5%A7%8B/ba-p/700173",
     "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-03-16T08:59:18.000Z",
-    "summary": "Graphisoftでは、お客様のデータを保護し、Graphisoft IDアカウントの安全性を確保することに取り組んでいます。私たちは常に最新のセキュリティ基準を満たすため、継続的にセキュリティの改善を行っています。 今回のアップデートでは、次の2つの重要な対応を行います。 非アクティブなアカウントに対する強制パスワード変更 実際のユーザーによるサインインであることを確認するためのCAPTCHAの導入 では、これらの変更は何を意味し、どのような影響があるのでしょうか。 Graphisoft IDのサインイン頻度によって、影響の受け方は異なります。 非アクティブアカウントに対する強制パスワード変更 Graphisoft IDアカウントには、氏名やメールアドレスなどの個人情報に加え、すべてのライセンスキーへのアクセスなど重要な情報が含まれています。これらの情報への不正アクセスを防ぐため、長期間使用されていないアカウントに対して、段階的に強制パスワード変更を導入します。 **「非アクティブアカウント（inactive account）」**とは、以下のいずれにもサインインしていないGraphisoft IDアカウントを指します。 Archicad BIMxモバイルアプリ BIMcloud SaaS Graphisoftのサービスサイト Graphisoft公式サイト Graphisoft Community Graphisoft Learn Graphisoft IDページ Graphisoft Webstore 最初の段階では、2023年以降サインインしていないすべてのアカウントが対象となります。その後のフェーズでは、1年以上利用されていないアカウントを対象に見直しを行う予定です。 データベースを常に最新の状態に保ち、皆様のデータを安全に守るため、今後も非アクティブアカウントの状況を定期的かつ継続的に監視していきます。 アカウントを回復するには お使いのGraphisoft IDが対象となった場合は、サインインページにある「Forgot password?（パスワードをお忘れですか？）」からパスワードをリセットできます。 Graphisoft IDへのCAPTCHAの導入 Graphisoftのすべてのウェブサイトにおいて、安心してサービスをご利用いただけるよう、CAPTCHAを導入します。 CAPTCHAは、不正な大量アクセスやスパムなどの悪意ある活動を防止するための、業界標準の技術です。 今後数か月の間に、Graphisoftのすべてのウェブサイトの登録およびサインインプロセスにCAPTCHAを段階的に導入していきます。 新しいGraphisoft IDの登録では、CAPTCHA認証が必須となります。 サインイン時には、複数回のログイン失敗や不審なアクセスパターンが検出された場合にCAPTCHAが表示されます。 さらにセキュリティを強化するには：多要素認証（MFA） Graphisoft IDアカウントのセキュリティをさらに高めたい場合は、多要素認証（Multi-Factor Authentication / MFA） を有効にすることもできます。 詳細はこちらをご参照ください。https://support.graphisoft.com/hc/en-us/articles/30578874208017-About-Multi-Factor-Authentication-MFA-in-generalGraphisoft IT・カスタマーサポートチーム",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "pubDate": "2026-04-21T02:45:59.000Z",
+    "summary": "Beta Program2026へは、日本からも参加することはできますが、英語版で実施され、すべてのコミュニケーションおよびレポートは英語のみで行われ、応募後選考があります。ご了承ください。 このたび、Graphisoft Beta Program 2026 の応募受付を開始しましたことをお知らせいたします。 Archicad および Graphisoft エコシステムの次に向けた最新機能をいち早く体験し、開発の最前線に参加したい方にとって、絶好の機会です。 ベータテスターとして参加をご希望の方は、ぜひご応募ください。 応募をご希望の方は、申請ページのフォームにご記入ください。選考後、結果はメールにてご連絡いたします。 Graphisoft Beta Program 2026 は、今後リリース予定の製品を対象とした、実務環境に近い形での検証プログラムです。選ばれたユーザーは、Archicad 30、MEP Designer、BIMx、BIMcloud などのほぼ完成版（INT、USA、GER ローカライズ対応）に早期アクセスできます。 本プログラムでは、実運用に影響のない環境でベータ版を使用しながら、新しいワークフローや機能をリリース前に試すことができるほか、不具合やユーザビリティの問題の発見・改善に貢献いただきます。 また、アドオン開発者の方は、正式リリース前に開発キットを用いて Archicad 30 向けの対応準備や移植も可能です。 なお、プログラム期間中のすべてのコミュニケーションおよびレポートは英語で行われます。 参加するメリット 一般公開前に最新バージョンへいち早くアクセス可能 実務ベースの検証を通じて、製品の品質・安定性・ワークフロー改善に直接貢献できる 専用ベータフォーラムで、他のテスターや Graphisoft の専門家と情報共有・交流ができる アドオン開発者は、新しい開発キットを活用して Archicad 30 対応の準備が可能 プログラム終了時には、貢献度の高いテスターを対象に表彰も行われます。 Graphisoft Beta Program に関するご質問は、betasupport@graphisoft.com までお問い合わせください。",
+    "fetchedAt": "2026-05-19T13:52:16.223Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -125,7 +123,7 @@
     "source": "buildingSMART International",
     "pubDate": "2026-04-16T12:30:14.000Z",
     "summary": "Read about Construction Industry leaders perspective on embracing challenges and opportunities of using openBIM for increasing efficiency: Link The post Industry Insights “Embracing Challenges and Opportunities of using openBIM® for Increasing Efficiency in the Construction Process” appeared first on buildingSMART International.",
-    "fetchedAt": "2026-05-16T11:44:30.014Z",
+    "fetchedAt": "2026-05-19T13:52:18.293Z",
     "category": "IFC",
     "categoryHits": [
       "openbim",
@@ -147,7 +145,7 @@
     "source": "buildingSMART International",
     "pubDate": "2026-04-14T15:05:06.000Z",
     "summary": "The first buildingSMART openBIM Hackathon is complete - and it delivered more than expected. Over 50 hours, 47 participants across 9 teams worked under real pressure to build solutions that work in practice.… The post The first buildingSMART openBIM Hackathon in Porto is complete appeared first on buildingSMART International.",
-    "fetchedAt": "2026-05-16T11:44:30.014Z",
+    "fetchedAt": "2026-05-19T13:52:18.293Z",
     "category": "IFC",
     "categoryHits": [
       "openbim",
@@ -169,7 +167,7 @@
     "source": "Autodesk News",
     "pubDate": "2026-04-07T14:56:13.000Z",
     "summary": "Forma Building Design enables better schematic design exploration.",
-    "fetchedAt": "2026-05-16T11:44:29.686Z",
+    "fetchedAt": "2026-05-19T13:52:18.374Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -185,34 +183,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "RevitのBIMオブジェクトについて",
-    "link": "https://bimgate.jp/knowledge/2789",
-    "source": "BIMゲート",
-    "pubDate": "2026-02-18T02:49:52.000Z",
-    "summary": "オブジェクトの呼称と種類 RevitにおけるBIMオブジェクトは、一般に「ファミリ（※注1）」と呼ばれます。ファミリは、BIMモデルを構成する情報オブジェクトであり、形状・属性情報・振る舞いを併せ持つ点が特徴です。 Re […]",
-    "fetchedAt": "2026-05-16T11:44:30.049Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "bim"
-    ],
-    "score": 9.36,
-    "freshnessScore": 0
-  },
-  {
     "title": "ライブラリパッケージにおけるオブジェクトデフォルト編集機能の進化",
     "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E7%B7%A8%E9%9B%86%E6%A9%9F%E8%83%BD%E3%81%AE%E9%80%B2%E5%8C%96/ba-p/699504",
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-21T11:36:32.000Z",
     "summary": "Archicadのライブラリパッケージでは、JSON（Mapping Valuesテーブル）を編集することで属性を一括変更できますが、手作業での編集には課題がありました。 この課題に対し、ドイツのパワーユーザーを中心に改善が進められ、Community内でのコラボレーションを経て、AIを活用したブラウザベースのツールとして公開されています。これにより、より直感的にライブラリ属性をカスタマイズすることが可能となりました。 なお、本ツールはGraphisoftの公式製品ではなく、日本語には対応しておらず、サポートやアップデートの対象外となります。本記事は、AIも活用したユーザー同士のコミュニケーションから生まれた事例としてご紹介するものです。 詳細は原文（英語）のポストをご参照ください。",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.223Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -236,7 +212,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-16T05:28:55.000Z",
     "summary": "今年は東京（浜松町）開催！ 開催まであと2か月を切りました！エントリーも始まっていますので、過去に参加された方も、初めましてな方も、ぜひご参加ください！ 開催日時：2026年6月12日（金） 11：00開場 12：00スタート 会 場：東京都立産業貿易センター「浜松町館」5F参 加 費 ：無料 （懇親会は6,000円を予定しています） 申込締切：2026年6月2日 参加申し込みや、セッションの内容など、USERFEST2026特集ページをチェックしてください！※社内申請に使えるパンフレットもご用意しています！USERFEST2026特集ページ 初心者から上級者まで、設計、施工、AI、ビジュアライズなどさまざまなテーマでArchicadを語るスペシャルなイチニチとなります！なにより共通言語＝Archicadで語り合える仲間とたくさん出会えます！みなさんのご参加をお待ちしています！",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.223Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -255,32 +231,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "Beijing National Day School Student Creative Activity Center / Origin Architect",
-    "link": "https://www.archdaily.com/1041547/beijing-national-day-school-student-creative-activity-center-origin-architect",
-    "source": "ArchDaily",
-    "pubDate": "2026-05-15T02:00:00.000Z",
-    "summary": "Beijing National Day School is renowned for its student-led, open and free campus culture. Every year, students initiate ten campus improvement proposals, which receive full support from the school authorities.The former School Uniform Center, located in the northeast corner of the campus, was listed on the 2023 Annual Ten Practical Campus Improvement Projects due to student concerns regarding space experience and frequency of use.Originally built as an underground concrete fish pond, the building had undergone numerous extension and partition, resulting in a chaotic and disorganized function: the underground bookstore and print shop were dim, damp and poorly ventilated; the ground-floor uniform storage and exhibition area was cramped and enclosed, standing in stark contrast to the natural beauty of the surrounding pine woods. Seizing this renovation opportunity, Origin Architect seeks to revitalize the building under pines and sunshine, metamorphosing it into a free realm that stirs students' sensibility and creative thinking.",
-    "fetchedAt": "2026-05-16T11:44:28.898Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT"
-    ],
-    "keywordHits": [
-      "revit"
-    ],
-    "score": 8.19,
-    "freshnessScore": 2
-  },
-  {
     "title": "クラウドライセンスの安定性が向上しました",
     "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AE%E5%AE%89%E5%AE%9A%E6%80%A7%E3%81%8C%E5%90%91%E4%B8%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/ba-p/699256",
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-16T05:42:09.000Z",
     "summary": "ここ数か月、多くの皆さまから「クラウドライセンスの障害が日々の業務に大きな支障を与えている」という声をいただいていました。私たちはそのご意見を真摯に受け止め、グラフィソフトでは、クラウドライセンスの障害時にも業務に支障が出ない環境の実現に取り組んできました。今回、Archicad 29.1.0 および BIMcloud SaaS 2026年4月リリースにおいて、クラウドライセンス機能を強化しました。 これにより、万が一クラウドライセンスサービスに障害が発生した場合でも、すでに当該コンピュータで有効なクラウドライセンスを取得していれば、Archicadでの作業を中断することなく継続できます。 また、最新バージョンをご利用いただくことで、本機能は自動的に有効となります。 私たちは、クラウドサービスの信頼性および耐障害性の向上に継続的に取り組んでおり、今回の改善はその重要な一歩です。本機能は、一時的なライセンスサービスの停止に対応し、短時間の障害による影響を最小限に抑えることを目的としています。 今後とも、皆さまからの貴重なフィードバックをよろしくお願いいたします。 Graphisoft カスタマーサポートチーム",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.223Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -302,7 +258,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-09T09:35:01.000Z",
     "summary": "&nbsp; &nbsp;",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.224Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -324,7 +280,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-06T01:23:12.000Z",
     "summary": "Archicad SoloサブスクリプションライセンスからArchicad Studioへ切り替えられた方へ ライセンスやインストールおよび起動方法についてのご案内です。 Archicad Soloのライセンスについて Archicad Soloのサブスクリプションライセンスは、サブスクリプションの期限までご利用いただけます。 Archicad Studioの利用手順 Archicad をインストールします。 Archicad を起動し、Graphisoft IDでサインインを行うことでArchicad Studioがご利用いただけます。※クラウドライセンス（サブスクリプションライセンス）でご利用可能なバージョンはArchicad26（update5以降）です。 製品のダウンロード Archicadのスタートアップガイド サポートへの問い合わせ",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.224Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -346,7 +302,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-01T10:45:58.000Z",
     "summary": "&nbsp; &nbsp;",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.224Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -368,7 +324,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-03-30T09:57:13.000Z",
     "summary": "&nbsp; &nbsp;",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.224Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -390,7 +346,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-03-30T09:08:11.000Z",
     "summary": "",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.224Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -412,7 +368,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-03-23T03:20:51.000Z",
     "summary": "",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.224Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -434,7 +390,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-03-23T00:23:27.000Z",
     "summary": "BIMcloud SaaS – 3月21日のサービス中断 お客様各位 3月21日に、一部の BIMcloud SaaS ご利用のお客様において、セキュリティ証明書の更新時に発生した予期せぬ問題が原因で、接続不具合が発生しました。 何が起こったのか 定期メンテナンスの一環として、安全で途切れないサービスを提供するために新しい SSL 証明書を展開しました。新しい証明書自体は通常どおり問題なく、かつ適切なタイミングで導入されていましたが、システム側が直前に有効期限を迎えた旧証明書を引き続き使用しようとし続けたことが原因でした。このような挙動は想定外であり、これまでの運用では発生していない事象でした。 どのように解決したか 問題を特定した後、エンジニアリングチームが失効した証明書を削除し、BIMcloud SaaS が正しく新しい証明書へ切り替えられるように対応しました。この変更後、サービスは通常どおりの状態に戻りました。システムは中央ヨーロッパ時間（CET）9:30までに完全復旧し、Archicad 内でのテストを通じて修正内容も確認済みです。 お客様側で必要となる対応 多くの場合、特別な操作を行わなくても自動的に通常どおりご利用いただけます。もし引き続き接続に問題が見られる場合は、以下をお試しください。 ブラウザまたはArchicadの再起動 ブラウザのキャッシュデータの削除（更新された証明書情報を正しく取得するために有効です） ご理解とご協力への感謝 日々の業務において、途切れないアクセスがどれほど重要かを私たちは十分に認識しており、この度の中断によりご不便・ご心配をおかけしましたことを心よりお詫び申し上げます。本件については詳細な検証を進めており、同様の事象が再発しないよう対策を講じてまいります。 もし問題が解消しない場合は、お手数ですがお近くのローカルサポートまでご連絡ください。担当チームがサポートさせていただきます。 よろしくお願いいたします。 Graphisoft カスタマーサポート",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.224Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -456,7 +412,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-27T16:00:34.000Z",
     "summary": "We put the spotlight on construction, explore AI in MEP design and the limitations of Agentic BIM The post AEC Magazine May / June 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.815Z",
+    "fetchedAt": "2026-05-19T13:52:20.285Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -482,7 +438,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-07T07:22:16.000Z",
     "summary": "With AI, could solver-driven design tools radically reshape our industry in as little as five years? The post The agentic future of BIM appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.816Z",
+    "fetchedAt": "2026-05-19T13:52:20.286Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -508,7 +464,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:36.000Z",
     "summary": "We dive deep into the future of AI in AEC - exploring the rise of agentic BIM and lots more The post AEC Magazine March / April 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.816Z",
+    "fetchedAt": "2026-05-19T13:52:20.286Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -534,7 +490,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-25T17:18:25.000Z",
     "summary": "With design automation, AI, and data-driven approaches set to reshape AEC, NXT BLD has never felt more important The post NXT BLD 2026: a decade of looking around corners appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.816Z",
+    "fetchedAt": "2026-05-19T13:52:20.286Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec",
@@ -559,7 +515,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-02-18T16:56:45.000Z",
     "summary": "What World Labs investment means for AEC design workflows The post Autodesk’s $200m bet on spatial AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.816Z",
+    "fetchedAt": "2026-05-19T13:52:20.286Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -583,7 +539,7 @@
     "source": "Autodesk News",
     "pubDate": "2026-04-15T17:00:23.000Z",
     "summary": "Over the coming years, AI will reshape Design and Manufacturing in ways we’re only beginning to see. Autodesk is helping define and lead this shift by empowering customers with new task, workflow, and system-level automations. We started with automating tasks. Instead of spending hours setting up repetitive actions or performing mundane work, customers can focus on higher value decisions that matter. Our approach combines frontier models with Autodesk’s proprietary industry-specific models, purpose-built to […]",
-    "fetchedAt": "2026-05-16T11:44:29.686Z",
+    "fetchedAt": "2026-05-19T13:52:18.374Z",
     "category": "AI_DX",
     "categoryHits": [
       "ai"
@@ -601,32 +557,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "We are looking for feedback on your experience with IDS",
-    "link": "https://www.buildingsmart.org/we-are-looking-for-feedback-on-your-experience-with-ids",
-    "source": "buildingSMART International",
-    "pubDate": "2026-05-14T10:13:46.000Z",
-    "summary": "Information Delivery Specification (IDS) marks its second anniversary this June, and we want to hear from the community - especially IDS users and implementers. Share your feedback on what works… The post We are looking for feedback on your experience with IDS appeared first on buildingSMART International.",
-    "fetchedAt": "2026-05-16T11:44:30.014Z",
-    "category": "IFC",
-    "categoryHits": [
-      "buildingsmart"
-    ],
-    "allCategories": [
-      "IFC"
-    ],
-    "keywordHits": [
-      "buildingsmart"
-    ],
-    "score": 7,
-    "freshnessScore": 2
-  },
-  {
     "title": "Suffolk Technologies invests in Speckle",
     "link": "https://aecmag.com/collaboration/suffolk-technologies-invests-in-speckle",
     "source": "AEC Magazine",
     "pubDate": "2026-04-22T09:59:15.000Z",
     "summary": "Construction-focused VC firm aims to normalise BIM data for AI and analytics pipelines The post Suffolk Technologies invests in Speckle appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.816Z",
+    "fetchedAt": "2026-05-19T13:52:20.285Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -651,7 +587,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-25T05:52:20.000Z",
     "summary": "Hvakr provides further evidence that discipline-specific AI is landing in engineering software faster than it is in mainstream BIM The post HVAKR: integrated AI HVAC design appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.816Z",
+    "fetchedAt": "2026-05-19T13:52:20.285Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -676,7 +612,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T07:00:44.000Z",
     "summary": "AI could consolidate AEC firms, reshape design practice and elevate full-stack designers, transforming BIM into an intelligent, integrated decision hub The post AI, design, and re-shaping the AEC industry appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.816Z",
+    "fetchedAt": "2026-05-19T13:52:20.286Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -701,7 +637,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-28T06:00:19.000Z",
     "summary": "A Google research paper provides the framework for making agentic BIM work – but also exposes a yawning gap The post Agentic BIM’s missing infrastructure appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.815Z",
+    "fetchedAt": "2026-05-19T13:52:20.285Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -725,7 +661,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-03-03T06:00:14.000Z",
     "summary": "How Autodesk’s EULA shift reshaped the AI training debate The post Rewriting the rules appeared first on AEC Magazine.",
-    "fetchedAt": "2026-05-16T11:44:31.816Z",
+    "fetchedAt": "2026-05-19T13:52:20.286Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -748,7 +684,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-08T01:45:51.000Z",
     "summary": "&nbsp; &nbsp; &nbsp;",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.224Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft",
@@ -770,7 +706,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-01T10:55:24.000Z",
     "summary": "&nbsp; &nbsp;",
-    "fetchedAt": "2026-05-16T11:44:27.483Z",
+    "fetchedAt": "2026-05-19T13:52:16.224Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft"
@@ -785,5 +721,25 @@
     ],
     "score": 6,
     "freshnessScore": 0
+  },
+  {
+    "title": "We are looking for feedback on your experience with IDS",
+    "link": "https://www.buildingsmart.org/we-are-looking-for-feedback-on-your-experience-with-ids",
+    "source": "buildingSMART International",
+    "pubDate": "2026-05-14T10:13:46.000Z",
+    "summary": "Information Delivery Specification (IDS) marks its second anniversary this June, and we want to hear from the community - especially IDS users and implementers. Share your feedback on what works… The post We are looking for feedback on your experience with IDS appeared first on buildingSMART International.",
+    "fetchedAt": "2026-05-19T13:52:18.293Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "allCategories": [
+      "IFC"
+    ],
+    "keywordHits": [
+      "buildingsmart"
+    ],
+    "score": 6,
+    "freshnessScore": 1
   }
 ]

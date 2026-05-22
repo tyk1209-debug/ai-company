@@ -2886,8 +2886,6 @@ function htmlFooter(base = '.', articleCount = 0) {
       <a href="${base}/">ホーム</a>
       <a href="${base}/events.html">イベント</a>
       <a href="${base}/about.html">運営者情報</a>
-      <a href="${base}/newsletter.html">ニュースレター</a>
-      <a href="${base}/sponsor.html">広告掲載</a>
       <a href="${base}/privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>
@@ -4385,125 +4383,6 @@ function buildAboutPage() {
     htmlFooter();
 }
 
-function buildNewsletterPage() {
-  const pageTitle = `ニュースレター登録 | ${SITE_NAME}`;
-  const pageDesc = `${SITE_NAME}の編集部が、BIM・AEC・建設DXの注目ニュースを定期的にお届けします。実務に直結する一次情報と編集視点をまとめたメールマガジンの登録を受付中です。`;
-  const canonicalUrl = `${SITE_URL}/newsletter.html`;
-  const pageJsonLd = webPageJsonLd(pageTitle, pageDesc, canonicalUrl);
-  const breadcrumbLd = breadcrumbJsonLd([
-    { name: 'ホーム', url: `${SITE_URL}/` },
-    { name: 'ニュースレター登録', url: canonicalUrl },
-  ]);
-
-  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [pageJsonLd, breadcrumbLd], {
-    robots: 'index, follow, max-snippet:-1, max-image-preview:large',
-  }) +
-    htmlHeader() +
-    `
-  <div class="container">
-    <main class="main-content">
-      <div class="static-page">
-        <h1>ニュースレター登録</h1>
-
-        <p>${SITE_NAME}は、BIM・AEC・建設DXの注目ニュースを編集視点とともに整理した無料メールニュースレターを準備しています。海外メディアの動向、国内ベンダーの発表、国土交通省の政策動向などから、実務に直結する情報のみを厳選してお届けします。</p>
-
-        <h2>こんな方におすすめ</h2>
-        <ul>
-          <li>BIM・建設DXの一次情報を毎週まとめて把握したい設計事務所・ゼネコンの実務者</li>
-          <li>Revit・Archicad・IFCなどの製品アップデートを見落としたくないBIMマネージャー</li>
-          <li>海外のAEC業界動向を日本市場視点で読み解きたい事業企画・経営層</li>
-          <li>BIM/AECツールの導入・選定担当者</li>
-        </ul>
-
-        <h2>配信内容（予定）</h2>
-        <ul>
-          <li>週次まとめ: 編集部が選んだ今週の重要ニュース3〜5本</li>
-          <li>注目ベンダー動向: Autodesk、Graphisoft、Trimble など主要プレイヤーの戦略変化</li>
-          <li>国内政策・規格動向: 国土交通省BIM/CIM、建築BIM推進会議の最新情報</li>
-          <li>イベント・セミナー情報: 業界カンファレンス、ウェビナーの先取り情報</li>
-        </ul>
-
-        <h2>料金</h2>
-        <p>無料で配信します。配信頻度は週1回を予定しています。いつでも配信停止できます。</p>
-
-        <h2>登録方法</h2>
-        <p>現在、配信システムを準備中です。先行登録ご希望の方は、下記フォームから「ニュースレター登録希望」とご記入のうえメールアドレスをお送りください。配信開始時に最初にお知らせします。</p>
-        <p><a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:0.75rem; background:var(--blue); color:#fff; padding:0.75rem 1.25rem; border-radius:6px; font-weight:700; text-decoration:none;">先行登録フォームを開く</a></p>
-
-        <h2>プライバシー</h2>
-        <p>登録時にお預かりするメールアドレスは、本ニュースレター配信および配信停止に関するご連絡以外には使用しません。第三者への提供は行いません。詳しくは<a href="${SITE_URL}/privacy.html">プライバシーポリシー</a>をご確認ください。</p>
-
-        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">最終更新日: 2026年5月22日</p>
-      </div>
-    </main>
-  </div>` +
-    htmlFooter();
-}
-
-function buildSponsorPage() {
-  const pageTitle = `広告掲載・スポンサー募集 | ${SITE_NAME}`;
-  const pageDesc = `${SITE_NAME}は日本のBIM・AEC・建設DX実務者にリーチする専門メディアです。スポンサード記事、メディアプレースメント、ニュースレタータイアップなどのご相談を承ります。`;
-  const canonicalUrl = `${SITE_URL}/sponsor.html`;
-  const sponsorJsonLd = webPageJsonLd(pageTitle, pageDesc, canonicalUrl);
-  const breadcrumbLd = breadcrumbJsonLd([
-    { name: 'ホーム', url: `${SITE_URL}/` },
-    { name: '広告掲載・スポンサー募集', url: canonicalUrl },
-  ]);
-
-  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [sponsorJsonLd, breadcrumbLd], {
-    robots: 'index, follow, max-snippet:-1, max-image-preview:large',
-  }) +
-    htmlHeader() +
-    `
-  <div class="container">
-    <main class="main-content">
-      <div class="static-page">
-        <h1>広告掲載・スポンサー募集</h1>
-
-        <p>${SITE_NAME}は、BIM・AEC・建設DXに特化した日本語メディアです。設計事務所、ゼネコン、サブコン、FM事業者、BIMベンダーの実務者を読者層とし、海外動向の編集解説と日本市場視点の意味づけを軸にコンテンツを提供しています。BIM/AEC領域の意思決定層に直接届く媒体として、貴社の製品・サービスのプロモーションをご検討ください。</p>
-
-        <h2>読者層</h2>
-        <ul>
-          <li>設計事務所のBIMマネージャー、BIM推進担当</li>
-          <li>ゼネコン・サブコンの設計部門、施工管理、DX推進部門</li>
-          <li>BIMソフトウェアベンダーのプロダクト・営業担当</li>
-          <li>FM・運用管理事業者、不動産デベロッパーのデジタル戦略部門</li>
-          <li>建設テック・建設DX関連のスタートアップ・投資家</li>
-          <li>大学・研究機関のBIM/建築情報領域の研究者</li>
-        </ul>
-
-        <h2>媒体特性</h2>
-        <ul>
-          <li><strong>専門メディア</strong>: BIM・AEC・建設DXに領域を絞り、ノイズの少ない読者プールを形成</li>
-          <li><strong>編集視点</strong>: 単純翻訳ではなく日本市場視点の編集を加えた解説記事</li>
-          <li><strong>定期更新</strong>: パイプラインによる自動収集と編集レビューで国内外の動向を継続配信</li>
-          <li><strong>SEO最適化</strong>: 構造化データ、サイトマップ整備、Core Web Vitals対応済み</li>
-          <li><strong>長期アーカイブ</strong>: 過去記事も検索流入し続ける資産型コンテンツ設計</li>
-        </ul>
-
-        <h2>提供可能なスポンサーシップ形式</h2>
-        <ol>
-          <li><strong>スポンサード記事</strong> — 製品ローンチ、導入事例、ホワイトペーパー要約などを編集視点で記事化。<code>sponsored</code>属性を明示</li>
-          <li><strong>記事内バナー / 製品リンク</strong> — 関連カテゴリ記事のサイドバー・本文末への掲載</li>
-          <li><strong>ニュースレター掲載</strong> — メールニュースレター内のプレースメント枠（準備中）</li>
-          <li><strong>イベント告知</strong> — セミナー・展示会・ウェビナーの<a href="${SITE_URL}/events.html">イベントページ</a>への掲載</li>
-          <li><strong>サイト調査・カスタムレポート</strong> — 業界調査や読者アンケートの企画・実施</li>
-        </ol>
-
-        <h2>編集ポリシー</h2>
-        <p>スポンサードコンテンツも編集ガイドラインに従います。誇大表現や事実誤認は掲載できません。読者の信頼を維持するため、広告であることを必ず明示します。製品比較記事においては、編集独立性を保ち、特定ベンダーに偏った評価を行いません。</p>
-
-        <h2>お問い合わせ</h2>
-        <p>料金、出稿条件、企画のご相談は<a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>よりご連絡ください。「広告掲載について」と明記いただけるとスムーズです。BIM/AEC領域のスタートアップ・中小ベンダー向けには柔軟なパッケージも提供可能です。</p>
-        <p><a href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:0.75rem; background:var(--blue); color:#fff; padding:0.75rem 1.25rem; border-radius:6px; font-weight:700; text-decoration:none;">広告掲載について相談する</a></p>
-
-        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">最終更新日: 2026年5月22日</p>
-      </div>
-    </main>
-  </div>` +
-    htmlFooter();
-}
-
 function buildEventsPage(events) {
   const now = Date.now();
   const upcoming = events.filter((ev) => {
@@ -4784,12 +4663,6 @@ function main() {
   fs.writeFileSync(path.join(__dirname, 'about.html'), buildAboutPage(), 'utf-8');
   console.log('[generateSite] Generated about.html');
 
-  fs.writeFileSync(path.join(__dirname, 'sponsor.html'), buildSponsorPage(), 'utf-8');
-  console.log('[generateSite] Generated sponsor.html');
-
-  fs.writeFileSync(path.join(__dirname, 'newsletter.html'), buildNewsletterPage(), 'utf-8');
-  console.log('[generateSite] Generated newsletter.html');
-
   // Generate events.html
   const eventsFile = path.join(__dirname, 'data', 'events.json');
   let events = [];
@@ -4817,8 +4690,6 @@ function main() {
     { loc: `${SITE_URL}/`, lastmod: now, changefreq: 'daily', priority: '1.0' },
     { loc: `${SITE_URL}/guides/index.html`, lastmod: now, changefreq: 'weekly', priority: '0.9' },
     { loc: `${SITE_URL}/events.html`, lastmod: now, changefreq: 'weekly', priority: '0.8' },
-    { loc: `${SITE_URL}/sponsor.html`, lastmod: now, changefreq: 'monthly', priority: '0.6' },
-    { loc: `${SITE_URL}/newsletter.html`, lastmod: now, changefreq: 'monthly', priority: '0.7' },
     ...paginatedHomeUrls,
     ...categoryUrls,
   ];

@@ -41,12 +41,29 @@ const parser = new Parser({ timeout: 12000 });
  * @param {string} existingPostsPath - Absolute path to the on-disk posts.json.
  * @returns {Array} Merged array: fresh posts first, then preserved historical ones.
  */
+// 壊れた記事レコードの判定: titleJa空 & bodyJa空 のものは過去ログ汚染とみなして除外する。
+// 翻訳途中で失敗したRSS残骸や、retroactiveJaが回り切らなかった records が
+// thin contentとしてSEO・AdSense審査に悪影響を与えるのを防ぐ。
+function isBrokenRecord(post) {
+  const title = (post.titleJa || "").trim();
+  const body = (post.bodyJa || "").trim();
+  return (!title || title === "undefined") && body.length < 100;
+}
+
 function mergeWithExistingPosts(freshPosts, existingPostsPath) {
   let existingPosts = [];
   if (fs.existsSync(existingPostsPath)) {
     try {
       existingPosts = JSON.parse(fs.readFileSync(existingPostsPath, "utf8"));
     } catch { /* ignore parse errors */ }
+  }
+
+  // 過去ログから壊れた records を自己修復で除去
+  const beforeCleanup = existingPosts.length;
+  existingPosts = existingPosts.filter((p) => !isBrokenRecord(p));
+  const removedBroken = beforeCleanup - existingPosts.length;
+  if (removedBroken > 0) {
+    console.log(`[self-heal] Removed ${removedBroken} broken record(s) from existing posts`);
   }
 
   // Build a lookup of existing posts by link for quick access

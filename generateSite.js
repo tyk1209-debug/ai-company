@@ -996,7 +996,13 @@ function formatDate(dateStr) {
 
 function excerpt(text, maxLen) {
   if (!text) return '';
-  const clean = text.replace(/\s+/g, ' ').trim();
+  // 【背景】【概要】等のセクション見出しを除去してから抜粋する。
+  // meta description / OG description が「【背景】Archicad は…」のように
+  // 不自然にラベルで始まるのを防ぐ。
+  const clean = text
+    .replace(/【[^】]{1,20}】/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
   if (clean.length <= maxLen) return clean;
   return clean.substring(0, maxLen) + '…';
 }

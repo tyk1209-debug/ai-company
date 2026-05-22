@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>BIM施工管理の現場では、設計モデルと実際の施工状況のズレを検出することが品質管理の重要な課題です。従来、現場のレーザースキャンや写真測量で取得した現実データと設計モデルを比較する作業は、複数のツールを使い分け、検出結果を手作業でBIM調整プラットフォームに入力するという非効率なプロセスでした。一方、Reviztoは設計段階のクラッシュチェックと施工段階の問題管理を一元化するBIM協働プラットフォームとして、グローバル市場で急速に採用が広がっています。こうした背景のなか、Hexagonが提供する現実データ解析と、Reviztoの問題追跡機能を直結させることで、施工現場の意思決定スピードを大幅に向上させるプラットフォーム連携が実現しました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Hexagon Multivista Analyzeは、現場で取得したレーザースキャンデータや写真測量データを、federated設計モデル（複数の専門分野の設計モデルを統合したもの）と比較し、設計意図からのズレを自動検出するサービスです。今回の統合により、Analyzeで検出された個別のズレやクラッシュ群をワンアクションでReviztoのイシューログに送信できるようになりました。送信されたデータはRevizto上で構造部材の寸法誤差、MEP設備の設置位置ズレ、空間侵害といった具体的な問題として記録され、従来のモデルベースのクラッシュ検出結果と同じ環境で一元管理されます。ユーザーはReviztoの標準機能である担当者割り当て、進捗状況追跡、通知機能をそのまま利用でき、3D協働環境内で問題の可視化と追跡が実現します。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/bim.html">BIM</a>施工管理の現場では、設計モデルと実際の施工状況のズレを検出することが品質管理の重要な課題です。従来、現場のレーザースキャンや写真測量で取得した現実データと設計モデルを比較する作業は、複数のツールを使い分け、検出結果を手作業でBIM調整プラットフォームに入力するという非効率なプロセスでした。一方、Reviztoは設計段階のクラッシュチェックと施工段階の問題管理を一元化するBIM協働プラットフォームとして、グローバル市場で急速に採用が広がっています。こうした背景のなか、Hexagonが提供する現実データ解析と、Reviztoの問題追跡機能を直結させることで、施工現場の意思決定スピードを大幅に向上させるプラットフォーム連携が実現しました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Hexagon Multivista Analyzeは、現場で取得したレーザースキャンデータや写真測量データを、federated設計モデル（複数の専門分野の設計モデルを統合したもの）と比較し、設計意図からのズレを自動検出するサービスです。今回の統合により、Analyzeで検出された個別のズレやクラッシュ群をワンアクションでReviztoのイシューログに送信できるようになりました。送信されたデータはRevizto上で構造部材の寸法誤差、MEP設備の設置位置ズレ、空間侵害といった具体的な問題として記録され、従来のモデルベースのクラッシュ検出結果と同じ環境で一元管理されます。ユーザーはReviztoの標準機能である担当者割り当て、進捗状況追跡、通知機能をそのまま利用でき、3D協働環境内で問題の可視化と追跡が実現します。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

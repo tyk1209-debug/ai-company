@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>BIM導入の理想と現実のギャップは、日本を含む世界的な課題です。BIMツールは「モデルと図面の統合ワークフロー」を謳いながらも、実務では寸法付けや室名タグ、各種注釈は手作業に頼る設計事務所がほとんどです。モデル更新のたびに図面を修正し直す作業は、生産性向上の足かせになっています。特に日本では詳細な寸法図や竣工図面が求められる文化があり、この課題はより深刻です。Qonicのような新世代BIMプラットフォームが、この「手作業の自動化」に本気で取り組む背景には、業界全体が図面生成の効率化を切実に求めていることがあります。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Qonicは2026年4月のアップデートで「ネイティブ図面生成機能」を実装しました。これはBIMモデルまたはIFCファイルから、寸法・室名タグ・注釈が自動的に付与された平面図・断面図を直接生成する機能です。生成された図面はDWG形式でエクスポート可能で、プラットフォーム外での追加編集は不要です。特徴的なのは、モデル更新時に図面が自動的に追従する点です。従来のワークフローでは、モデル修正後に手作業で図面シートを再編集していましたが、この機能により一般配置図などの図面セットを一括自動生成できます。Aaron Perry（Qonic戦略責任者）は「従来のBIMツールは統合ワークフローを約束してきたが、実際には退屈で繰り返し、かつ手作業が多かった。今回のリリースは単調な作業を自動化し、カスタマイズ可能な図面セットを実現する」とコメントしています。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/bim.html">BIM</a>導入の理想と現実のギャップは、日本を含む世界的な課題です。BIMツールは「モデルと図面の統合ワークフロー」を謳いながらも、実務では寸法付けや室名タグ、各種注釈は手作業に頼る設計事務所がほとんどです。モデル更新のたびに図面を修正し直す作業は、生産性向上の足かせになっています。特に日本では詳細な寸法図や竣工図面が求められる文化があり、この課題はより深刻です。Qonicのような新世代BIMプラットフォームが、この「手作業の自動化」に本気で取り組む背景には、業界全体が図面生成の効率化を切実に求めていることがあります。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Qonicは2026年4月のアップデートで「ネイティブ図面生成機能」を実装しました。これはBIMモデルまたは<a class="glossary-link" href="../guides/ifc.html">IFC</a>ファイルから、寸法・室名タグ・注釈が自動的に付与された平面図・断面図を直接生成する機能です。生成された図面はDWG形式でエクスポート可能で、プラットフォーム外での追加編集は不要です。特徴的なのは、モデル更新時に図面が自動的に追従する点です。従来のワークフローでは、モデル修正後に手作業で図面シートを再編集していましたが、この機能により一般配置図などの図面セットを一括自動生成できます。Aaron Perry（Qonic戦略責任者）は「従来のBIMツールは統合ワークフローを約束してきたが、実際には退屈で繰り返し、かつ手作業が多かった。今回のリリースは単調な作業を自動化し、カスタマイズ可能な図面セットを実現する」とコメントしています。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

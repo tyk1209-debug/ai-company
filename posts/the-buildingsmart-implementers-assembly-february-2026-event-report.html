@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Bentleyがホストした2月のbuildingSMART実装者会議は、openBIM標準の実装における業界の課題を解決するために定期開催されている重要な集まりです。IFCやBCF、IDSといった国際標準仕様が実務の現場でどう機能しているか、どこに改善の余地があるかを、ソフトウェアベンダーと実装者が直接意見交換する貴重な場となっています。国土交通省が推進するBIM/CIMロードマップにおいて、日本も国際標準への準拠が求められるなか、こうした国際的な実装コミュニティの動きは、日本市場の標準化推進にも直結する影響を持ちます。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026年2月11日～12日にペンシルベニア州エクストンのBentley本社で開催された本会議には、buildingSMART国際団体の実装者コミュニティが集結しました。アジェンダは、bSIとISO/CEN間の協力関係、IFC・IDS・BCF・IFC検証・ソフトウェア認証といった現在進行中の標準化作業の進捗確認に充てられました。顧客の声セッションでは、実装者とエンドユーザーが現場での課題を直接報告。IFC 4.3の実装上の問題点が集約され、次期IFC実装者フォーラムの開催が決定されました。最大の注目点は、IFCの次世代仕様「IFC X」に関するワークショップで、参加者はブレークアウトグループに分かれて優先課題や実装ギャップを洗い出し、改善案を提示しました。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Bentleyがホストした2月のbuildingSMART実装者会議は、<a class="glossary-link" href="../guides/openbim.html">openBIM</a>標準の実装における業界の課題を解決するために定期開催されている重要な集まりです。<a class="glossary-link" href="../guides/ifc.html">IFC</a>やBCF、IDSといった国際標準仕様が実務の現場でどう機能しているか、どこに改善の余地があるかを、ソフトウェアベンダーと実装者が直接意見交換する貴重な場となっています。国土交通省が推進する<a class="glossary-link" href="../guides/bim.html">BIM</a>/CIMロードマップにおいて、日本も国際標準への準拠が求められるなか、こうした国際的な実装コミュニティの動きは、日本市場の標準化推進にも直結する影響を持ちます。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026年2月11日～12日にペンシルベニア州エクストンのBentley本社で開催された本会議には、buildingSMART国際団体の実装者コミュニティが集結しました。アジェンダは、bSIとISO/CEN間の協力関係、IFC・IDS・BCF・IFC検証・ソフトウェア認証といった現在進行中の標準化作業の進捗確認に充てられました。顧客の声セッションでは、実装者とエンドユーザーが現場での課題を直接報告。IFC 4.3の実装上の問題点が集約され、次期IFC実装者フォーラムの開催が決定されました。最大の注目点は、IFCの次世代仕様「IFC X」に関するワークショップで、参加者はブレークアウトグループに分かれて優先課題や実装ギャップを洗い出し、改善案を提示しました。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/we-are-looking-for-feedback-on-your-experience-with-ids.html">IDS2周年、ユーザーフィードバック募集開始——buildingSMARTが改善へ動く</a>
       <span class="mid-related-cat">IFC</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>IFC X（次世代IFC）は、現在のIFC 4.3の限界を補い、より柔軟で実装しやすい標準仕様を目指すプロジェクトです。従来のIFCは機械的で複雑な構造が現場での採用を阻害してきましたが、IFC Xではこうした課題に対してコアプロジェクトレベルで検討が進められています。本会議で参加者から挙がったギャップや課題は、実装経験に基づいた具体的なものであり、理論的なニーズではなく実務的なニーズから優先順位が決定されることが強調されました。IDS（情報配信仕様）やBCF（BIM Collaboration Format）といった補助標準とのシームレスな統合も、IFC Xの重要な検討項目です。IFC検証やソフトウェア認証プロセスの改善も、実装の敷居を下げるための重要な施策として議論されました。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この会議の成果は、グローバルなBIM標準化の方向性を規定する重要な決定に直結します。IFC X開発プロジェクトは、buildingSMART内で最優先課題の一つであり、今後2～3年のうちに初期版が公開される見通しです。IFC 4.3の実装上の課題が専門フォーラムで集中的に検討されることで、既存ユーザーのブロッキング問題が段階的に解決される可能性が高まりました。これにより、Autodesk Revit、Archicad、Graphisoft、Bentleyなど主要BIMソフトの相互運用性がさらに向上し、プロジェクトレベルでのデータ共有の効率化が期待されます。また、実装者の声が直接標準開発に反映される仕組みが機能していることは、業界全体の信頼感を高め、オープンBIMへの投資意欲を刺激します。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>IFC X（次世代IFC）は、現在のIFC 4.3の限界を補い、より柔軟で実装しやすい標準仕様を目指すプロジェクトです。従来のIFCは機械的で複雑な構造が現場での採用を阻害してきましたが、IFC Xではこうした課題に対してコアプロジェクトレベルで検討が進められています。本会議で参加者から挙がったギャップや課題は、実装経験に基づいた具体的なものであり、理論的なニーズではなく実務的なニーズから優先順位が決定されることが強調されました。IDS（情報配信仕様）やBCF（BIM Collaboration Format）といった補助標準とのシームレスな統合も、IFC Xの重要な検討項目です。IFC検証やソフトウェア認証プロセスの改善も、実装の敷居を下げるための重要な施策として議論されました。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この会議の成果は、グローバルなBIM標準化の方向性を規定する重要な決定に直結します。IFC X開発プロジェクトは、buildingSMART内で最優先課題の一つであり、今後2～3年のうちに初期版が公開される見通しです。IFC 4.3の実装上の課題が専門フォーラムで集中的に検討されることで、既存ユーザーのブロッキング問題が段階的に解決される可能性が高まりました。これにより、Autodesk <a class="glossary-link" href="../guides/revit.html">Revit</a>、<a class="glossary-link" href="../guides/archicad.html">Archicad</a>、Graphisoft、Bentleyなど主要BIMソフトの相互運用性がさらに向上し、プロジェクトレベルでのデータ共有の効率化が期待されます。また、実装者の声が直接標準開発に反映される仕組みが機能していることは、業界全体の信頼感を高め、オープンBIMへの投資意欲を刺激します。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

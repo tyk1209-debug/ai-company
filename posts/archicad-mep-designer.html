@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Archicad は建築BIM設計の国際標準ツールとして、特に欧米の設計現場で広く使用されており、国土交通省のBIM/CIMロードマップでも注目される製品です。一方、MEP（機械・電気・配管）設計の複雑さは、BIM推進の大きな課題となっています。日本国内でも大型プロジェクトでのBIM活用が進むにつれて、MEP領域の設計品質向上と効率化の需要が急速に高まっています。これまでArchicad ユーザーは、MEP計算や配管シミュレーションを外部ツールで実施せざるを得ず、モデルと計算結果のズレが生じるリスクがありました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Graphisoft は Archicad 29.1（ビルド4006）および MEP Designer の新バージョンをリリースしました。主な新機能は以下の通りです。ライブラリ管理では、「Replace All Packages」機能により、古いプロジェクトのライブラリを数クリックで最新版に一括更新できるようになり、手動更新の手間が大幅に削減されます。コラボレーション機能では、Bluebeam Connection アドオンが5地域（ドイツ、英国、オーストラリア、米国、スウェーデン）に対応し、データレジデンシー要件への適合性が向上しました。MEP設計では、床平面図および連動一覧表で水配管システムの計算結果をラベル表示できるようになり、ドキュメントが常に最新の計算値を反映するようになりました。AI機能では、AI Assistant と AI Visualizer の連携強化、自然言語によるBIMクエリのオートコレクション機能が追加されています。さらに、MEP Designer と CALHYDRA（配管シミュレーションツール）の新たな連携により、ヨーロッパおよびドイツ規格準拠の水理計算を Archicad 内で直接実行可能になりました。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/archicad.html">Archicad</a> は建築<a class="glossary-link" href="../guides/bim.html">BIM</a>設計の国際標準ツールとして、特に欧米の設計現場で広く使用されており、国土交通省のBIM/CIMロードマップでも注目される製品です。一方、MEP（機械・電気・配管）設計の複雑さは、BIM推進の大きな課題となっています。日本国内でも大型プロジェクトでのBIM活用が進むにつれて、MEP領域の設計品質向上と効率化の需要が急速に高まっています。これまでArchicad ユーザーは、MEP計算や配管シミュレーションを外部ツールで実施せざるを得ず、モデルと計算結果のズレが生じるリスクがありました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Graphisoft は Archicad 29.1（ビルド4006）および MEP Designer の新バージョンをリリースしました。主な新機能は以下の通りです。ライブラリ管理では、「Replace All Packages」機能により、古いプロジェクトのライブラリを数クリックで最新版に一括更新できるようになり、手動更新の手間が大幅に削減されます。コラボレーション機能では、Bluebeam Connection アドオンが5地域（ドイツ、英国、オーストラリア、米国、スウェーデン）に対応し、データレジデンシー要件への適合性が向上しました。MEP設計では、床平面図および連動一覧表で水配管システムの計算結果をラベル表示できるようになり、ドキュメントが常に最新の計算値を反映するようになりました。AI機能では、AI Assistant と AI Visualizer の連携強化、自然言語によるBIMクエリのオートコレクション機能が追加されています。さらに、MEP Designer と CALHYDRA（配管シミュレーションツール）の新たな連携により、ヨーロッパおよびドイツ規格準拠の水理計算を Archicad 内で直接実行可能になりました。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/archicad-2840-update.html">Archicad 28.4.0が正式リリース、Teamwork運用で注意が必要に</a>
       <span class="mid-related-cat">Archicad</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>MEP計算の Archicad ネイティブ対応は、BIM ワークフローにおける大きな技術的転換です。従来は、Archicad でモデルを作成した後、外部の配管設計・シミュレーションツール（CALHYDRA など）に別途データを出力し、計算結果を反映させるという二重管理が常習化していました。今回の CALHYDRA 統合により、配管径の最適化、流速・圧力損失の検証が Archicad インターフェース内で完結します。特に、水理計算結果をリアルタイムで BIM モデルに反映できることで、設計変更時の再計算コストが大幅に低減されます。また、IFC 互換性の維持を前提としながら MEP ドメインの高度な機能を実装する点は、オープン BIM 推進の観点から重要です。BIMx エクスポート最適化により、ファイルサイズと生成速度が改善されたことは、Web ベースの BIM ビューアー（BIMx Web など）の普及促進にも貢献します。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバルには、Archicad の MEP 機能強化により、設計事務所とエンジニアリング会社の連携が従来より密接になることが予想されます。特に建築・構造・MEP の「3BIM」統合推進が、欧米の大規模プロジェクトでより現実的になります。配管計算の自動化と計算ドキュメントの自動更新により、設計品質レビュー時間の短縮、変更管理のトレーサビリティ向上が期待されます。また、Bluebeam Connection の多地域対応拡大は、地域規制への対応を強化し、グローバル・プロジェクトでのチーム作業の効率化を促進します。MEP Designer の市場拡大も、20カ国以上への同日リリースにより、グローバルな標準化傾向を加速させるでしょう。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>MEP計算の Archicad ネイティブ対応は、BIM ワークフローにおける大きな技術的転換です。従来は、Archicad でモデルを作成した後、外部の配管設計・シミュレーションツール（CALHYDRA など）に別途データを出力し、計算結果を反映させるという二重管理が常習化していました。今回の CALHYDRA 統合により、配管径の最適化、流速・圧力損失の検証が Archicad インターフェース内で完結します。特に、水理計算結果をリアルタイムで BIM モデルに反映できることで、設計変更時の再計算コストが大幅に低減されます。また、<a class="glossary-link" href="../guides/ifc.html">IFC</a> 互換性の維持を前提としながら MEP ドメインの高度な機能を実装する点は、オープン BIM 推進の観点から重要です。BIMx エクスポート最適化により、ファイルサイズと生成速度が改善されたことは、Web ベースの BIM ビューアー（BIMx Web など）の普及促進にも貢献します。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバルには、Archicad の MEP 機能強化により、設計事務所とエンジニアリング会社の連携が従来より密接になることが予想されます。特に建築・構造・MEP の「3BIM」統合推進が、欧米の大規模プロジェクトでより現実的になります。配管計算の自動化と計算ドキュメントの自動更新により、設計品質レビュー時間の短縮、変更管理のトレーサビリティ向上が期待されます。また、Bluebeam Connection の多地域対応拡大は、地域規制への対応を強化し、グローバル・プロジェクトでのチーム作業の効率化を促進します。MEP Designer の市場拡大も、20カ国以上への同日リリースにより、グローバルな標準化傾向を加速させるでしょう。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

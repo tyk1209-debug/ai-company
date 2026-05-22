@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Revitの価値は3D表示だけではなく、モデルに入れた属性や数量を図面・集計へつなげられる点にあります。にもかかわらず、導入初期は3Dモデルの作成だけで止まり、数量や仕様の整理は結局Excelへ戻ってしまうことが少なくありません。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Revitの集計表は、モデル内の要素情報を一覧化し、数量確認、仕様確認、シート管理、注記管理などに使えるビューです。壁、建具、部屋、設備機器、仕上げ、材料など、カテゴリごとに必要な項目を抜き出し、並べ替え、集計し、条件で絞り込めます。単なる表ではなく、モデルと連動するため、属性を直せば集計も変わり、集計から要素確認へ戻ることもできます。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/revit.html">Revit</a>の価値は3D表示だけではなく、モデルに入れた属性や数量を図面・集計へつなげられる点にあります。にもかかわらず、導入初期は3Dモデルの作成だけで止まり、数量や仕様の整理は結局Excelへ戻ってしまうことが少なくありません。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Revitの集計表は、モデル内の要素情報を一覧化し、数量確認、仕様確認、シート管理、注記管理などに使えるビューです。壁、建具、部屋、設備機器、仕上げ、材料など、カテゴリごとに必要な項目を抜き出し、並べ替え、集計し、条件で絞り込めます。単なる表ではなく、モデルと連動するため、属性を直せば集計も変わり、集計から要素確認へ戻ることもできます。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
@@ -1991,6 +2002,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

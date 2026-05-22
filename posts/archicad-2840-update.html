@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Archicadは建築設計業界で広く使用されているBIMソフトウェアであり、特に日本でも設計事務所やゼネコンの設計部門で採用が進んでいます。定期的なアップデートリリースは、ユーザーからの報告バグの修正、OSやハードウェアの新仕様への対応、そして既存機能の安定性向上を目的としています。Archicad 28シリーズは2023年後半に主版がリリースされてから、段階的なアップデートを重ねており、28.4.0は同シリーズにおける重要なマイルストーンとなります。BIM導入が進む日本の建設業界では、複数ユーザーの協働作業が前提となる案件が増えており、このTeamwork機能の安定性確保が急務となっていました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Archicad 28.4.0 Update（ビルド番号7006、7007）がFull版およびSolo版の全言語向けに公開されました。ダウンロードはGraphisoftの公式Webサイトのアップデートセクションから取得できます。主な修正内容としては、macOS Sequoia 14.7以上の環境における数値入力の不具合が解消され、入力値が意図せず変更される現象が改善されました。また、ホットリンク機能を使用する際にKeynoteアプリケーション接続が時間経過とともに失われていた問題も修正されています。日本語版についてはPreview版が提供されずFinal版のみとなり、Preview版から移行するユーザーでも互換性に問題なくシームレスに更新できます。Graphisoftの発表によれば、このアップデートをもってArchicad 28シリーズの計画されたアップデートサイクルは終了し、今後は重大な不具合に対応するHotfixのみの提供となります。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/archicad.html">Archicad</a>は建築設計業界で広く使用されている<a class="glossary-link" href="../guides/bim.html">BIM</a>ソフトウェアであり、特に日本でも設計事務所やゼネコンの設計部門で採用が進んでいます。定期的なアップデートリリースは、ユーザーからの報告バグの修正、OSやハードウェアの新仕様への対応、そして既存機能の安定性向上を目的としています。Archicad 28シリーズは2023年後半に主版がリリースされてから、段階的なアップデートを重ねており、28.4.0は同シリーズにおける重要なマイルストーンとなります。BIM導入が進む日本の建設業界では、複数ユーザーの協働作業が前提となる案件が増えており、このTeamwork機能の安定性確保が急務となっていました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Archicad 28.4.0 Update（ビルド番号7006、7007）がFull版およびSolo版の全言語向けに公開されました。ダウンロードはGraphisoftの公式Webサイトのアップデートセクションから取得できます。主な修正内容としては、macOS Sequoia 14.7以上の環境における数値入力の不具合が解消され、入力値が意図せず変更される現象が改善されました。また、ホットリンク機能を使用する際にKeynoteアプリケーション接続が時間経過とともに失われていた問題も修正されています。日本語版についてはPreview版が提供されずFinal版のみとなり、Preview版から移行するユーザーでも互換性に問題なくシームレスに更新できます。Graphisoftの発表によれば、このアップデートをもってArchicad 28シリーズの計画されたアップデートサイクルは終了し、今後は重大な不具合に対応するHotfixのみの提供となります。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/ifc.html">Archicadで「ドア・窓のみ」IFC出力が可能に―干渉検出フィルタで実務効率化</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

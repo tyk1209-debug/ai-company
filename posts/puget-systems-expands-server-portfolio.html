@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>AEC産業におけるデジタルツイン、リアリティキャプチャ、AI活用の拡大に伴い、建築・設計・施工現場が求めるコンピュート要件は劇的に変化しています。特にRevitやArchicadなどのBIMソフト、VR/XRコラボレーションツール、点群処理、機械学習による設計最適化など、高い演算性能を必要とするワークロードが急増しているのです。従来の汎用ワークステーションだけではカバーしきれない、密度の高いGPUレンダリング、AI推論・学習、リアルタイム可視化を必要とする大規模チーム・研究機関では、サーバーレベルのインフラ構築が不可欠になってきました。Puget Systemsは高性能ワークステーションメーカーとして知られていますが、今回のサーバーポートフォリオ拡大は、AEC分野全体が本格的なハイパフォーマンスコンピューティングの時代に突入したことを象徴する動きとなっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Puget SystemsはMSI Enterprise Platform Solutionsとの協業により、11機種の新型1Uおよび2Uサーバーを投入しました。1U CPU最適型は4機種で、AMD EPYC 9005またはIntel Xeon 6プロセッサの単一または二重構成に対応し、NVMe 12ベイを装備します。2U CPU型はより高い拡張性を持ち、ストレージ容量は約2倍となります。一方、GPU専用型は3機種で、レンダリング・AI推論・学習・高速コンピュート向けに設計されており、単一CPUあたり最大4基のNvidia RTX PRO 6000 Blackwell Server Edition（600W各）を搭載可能です。全モデルはOS用として内部M.2デュアルドライブを装備し、4～24ドライブ対応の前面U.2ストレージを備えます。OCP 3.0ネットワーク対応も大多数の構成に含まれます。春以降、4U 8GPU型のリフレッシュと、高密度展開向けマルチノードCPUサーバーの追加が予定されています。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>AEC産業におけるデジタルツイン、リアリティキャプチャ、AI活用の拡大に伴い、建築・設計・施工現場が求めるコンピュート要件は劇的に変化しています。特に<a class="glossary-link" href="../guides/revit.html">Revit</a>や<a class="glossary-link" href="../guides/archicad.html">Archicad</a>などの<a class="glossary-link" href="../guides/bim.html">BIM</a>ソフト、VR/XRコラボレーションツール、点群処理、機械学習による設計最適化など、高い演算性能を必要とするワークロードが急増しているのです。従来の汎用ワークステーションだけではカバーしきれない、密度の高いGPUレンダリング、AI推論・学習、リアルタイム可視化を必要とする大規模チーム・研究機関では、サーバーレベルのインフラ構築が不可欠になってきました。Puget Systemsは高性能ワークステーションメーカーとして知られていますが、今回のサーバーポートフォリオ拡大は、AEC分野全体が本格的なハイパフォーマンスコンピューティングの時代に突入したことを象徴する動きとなっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Puget SystemsはMSI Enterprise Platform Solutionsとの協業により、11機種の新型1Uおよび2Uサーバーを投入しました。1U CPU最適型は4機種で、AMD EPYC 9005またはIntel Xeon 6プロセッサの単一または二重構成に対応し、NVMe 12ベイを装備します。2U CPU型はより高い拡張性を持ち、ストレージ容量は約2倍となります。一方、GPU専用型は3機種で、レンダリング・AI推論・学習・高速コンピュート向けに設計されており、単一CPUあたり最大4基のNvidia RTX PRO 6000 Blackwell Server Edition（600W各）を搭載可能です。全モデルはOS用として内部M.2デュアルドライブを装備し、4～24ドライブ対応の前面U.2ストレージを備えます。OCP 3.0ネットワーク対応も大多数の構成に含まれます。春以降、4U 8GPU型のリフレッシュと、高密度展開向けマルチノードCPUサーバーの追加が予定されています。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

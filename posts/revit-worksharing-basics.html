@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Revitは個人で3Dモデルを作るだけのソフトではなく、複数人で同じ建物情報を扱う前提で強みが出やすいBIMツールです。特に、外れ値を許しにくいシステマチックな構造を実務で生かすには、誰がどの領域を触り、どう同期するかを整理した運用が欠かせません。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Revitのワークシェアは、複数メンバーが同じプロジェクトモデルに並行して関わるための仕組みです。中心になるのは中央モデルで、各担当者はそのコピーをローカルで開き、作業内容を同期しながら進めます。実務では、意匠、構造、設備、作図、管理などを分担する際の前提になる考え方で、単なるファイル共有よりも責任範囲を整理しやすいのが特徴です。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/revit.html">Revit</a>は個人で3Dモデルを作るだけのソフトではなく、複数人で同じ建物情報を扱う前提で強みが出やすい<a class="glossary-link" href="../guides/bim.html">BIM</a>ツールです。特に、外れ値を許しにくいシステマチックな構造を実務で生かすには、誰がどの領域を触り、どう同期するかを整理した運用が欠かせません。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Revitのワークシェアは、複数メンバーが同じプロジェクトモデルに並行して関わるための仕組みです。中心になるのは中央モデルで、各担当者はそのコピーをローカルで開き、作業内容を同期しながら進めます。実務では、意匠、構造、設備、作図、管理などを分担する際の前提になる考え方で、単なるファイル共有よりも責任範囲を整理しやすいのが特徴です。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
@@ -1991,6 +2002,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

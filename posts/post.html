@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Archicadユーザーが日常的に行うライブラリパッケージの管理では、建築部材（窓・扉・家具など）の属性情報をJSON形式のMappingValuesテーブルで一括変更する作業が必要です。しかし従来、この属性編集は手作業に依存しており、複数のオブジェクトにわたる属性値の統一や変更には多大な時間がかかっていました。特に大規模プロジェクトや複数プロジェクト間でのライブラリ運用を統一する場合、手動編集はヒューマンエラーの温床となり、BIMモデルの品質管理に課題をもたらしていたのです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Graphisoftコミュニティを中心としたドイツのパワーユーザーグループが、この課題を解決するためAIを活用したブラウザベースのツールを開発・公開しました。このツール最大の特徴は、JSON編集の複雑性を大幅に軽減し、より直感的なインターフェイスでライブラリ属性をカスタマイズできることです。ユーザーはコマンドラインやテキストエディタでのJSON手作業を避け、ブラウザ上でグラフィカルに属性値を編集・管理できるようになりました。開発プロセスそのものがコミュニティ内での協働を通じて実現されており、複数のパワーユーザーからのフィードバックが反映されている点が注目されます。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/archicad.html">Archicad</a>ユーザーが日常的に行うライブラリパッケージの管理では、建築部材（窓・扉・家具など）の属性情報をJSON形式のMappingValuesテーブルで一括変更する作業が必要です。しかし従来、この属性編集は手作業に依存しており、複数のオブジェクトにわたる属性値の統一や変更には多大な時間がかかっていました。特に大規模プロジェクトや複数プロジェクト間でのライブラリ運用を統一する場合、手動編集はヒューマンエラーの温床となり、<a class="glossary-link" href="../guides/bim.html">BIM</a>モデルの品質管理に課題をもたらしていたのです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Graphisoftコミュニティを中心としたドイツのパワーユーザーグループが、この課題を解決するためAIを活用したブラウザベースのツールを開発・公開しました。このツール最大の特徴は、JSON編集の複雑性を大幅に軽減し、より直感的なインターフェイスでライブラリ属性をカスタマイズできることです。ユーザーはコマンドラインやテキストエディタでのJSON手作業を避け、ブラウザ上でグラフィカルに属性値を編集・管理できるようになりました。開発プロセスそのものがコミュニティ内での協働を通じて実現されており、複数のパワーユーザーからのフィードバックが反映されている点が注目されます。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/archicad-2840-update.html">Archicad 28.4.0が正式リリース、Teamwork運用で注意が必要に</a>
@@ -1974,6 +1985,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

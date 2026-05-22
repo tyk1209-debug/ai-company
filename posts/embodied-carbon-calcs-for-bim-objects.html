@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>建設業界は2050年のカーボンニュートラル達成に向けて急速に動いています。特に注目されているのが「具現化炭素（Embodied Carbon）」──建材製造から施工段階までで発生するCO2です。しかし現在、この炭素データは断片化しており、設計者が簡単にアクセスできる状態にありません。日本でも2023年の建築BIM推進会議で、カーボンニュートラルを見据えたBIMデータ整備の必要性が指摘されており、グローバルな課題は日本市場でも緊急性が高まっています。NBS（Hubexoの仕様・製品情報プラットフォーム）がCircular Ecologyと共同でこのガイドを発表したのは、こうした業界の痛点に対する一つの回答です。</p><h2 class="article-section-h2"><span>内容</span></h2>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建設業界は2050年のカーボンニュートラル達成に向けて急速に動いています。特に注目されているのが「具現化炭素（Embodied Carbon）」──建材製造から施工段階までで発生するCO2です。しかし現在、この炭素データは断片化しており、設計者が簡単にアクセスできる状態にありません。日本でも2023年の建築<a class="glossary-link" href="../guides/bim.html">BIM</a>推進会議で、カーボンニュートラルを見据えたBIMデータ整備の必要性が指摘されており、グローバルな課題は日本市場でも緊急性が高まっています。NBS（Hubexoの仕様・製品情報プラットフォーム）がCircular Ecologyと共同でこのガイドを発表したのは、こうした業界の痛点に対する一つの回答です。</p><h2 class="article-section-h2"><span>内容</span></h2>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>新ガイド「NBS Guide</span></h2><p>Embodied Carbon Calculations」は、BIMオブジェクトレベルで具現化炭素データを直接組み込むための実践的フレームワークを提供します。BS EN 15804で定義される上流段階（Modules A1-A5）の炭素値を、ジオメトリベースのアプローチで実装することが中核です。ガイドは4つのBIMオブジェクトタイプを対象としています。まず「レイヤー化アイテム」（断熱材や煉瓦）、次に「レイヤー化アセンブリ」（キャビティウォール等の複合壁体）、「アイテム」（洗面台やラジエーター等の機器）、そして「複合アセンブリ」（鉄筋コンクリート等）です。各タイプについて、数量に排出係数を乗じて炭素量を計算する方法論が詳述されており、材料密度などの重要な係数も含まれています。設計段階での意思決定が、プロジェクト全体の炭素フットプリント削減に直結するよう設計されています。</p><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>このガイドの技術的革新は、複雑な国際標準（BS EN 15804）をBIMワークフロー内で実装可能な形に翻訳した点にあります。従来、炭素計算は設計後の外部ツールで行われることが多く、BIMモデルの情報構造と分離していました。本ガイドでは、各オブジェクトの階層化されたプロパティ（ジオメトリ、材質、密度）から直接炭素値を導出する仕組みを提示しています。これにより、Revit等のBIMオーサリングツール内で、リアルタイムに炭素影響を評価できる可能性が開かれます。LOD（Level of Detail）の概念と同様に、オブジェクトの粒度に応じた計算精度の段階化も示唆されており、早期設計段階での概略計算から詳細設計での精密計算まで対応可能です。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>このガイドはグローバルな建設業界におけるカーボン意識設計の民主化を加速させます。現在、具現化炭素データは専門の環境コンサルタントや限定的なプラグインにのみ存在し、大多数の設計者にとってアクセス不可能です。NBS Guide によって、BIM標準の中に炭素評価が組み込まれれば、全世界のBIM運用組織が同一の方法論で比較可能なデータを生成できるようになります。これは、建材メーカーがEPD（Environmental Product Declaration）をBIM互換形式で公開する動機にもなり、サプライチェーン全体での透明性向上につながります。また、設計段階での選択が数百トンのCO2削減につながる可能性があり、プロジェクト収益性と環境性能の両立が現実的になります。</p>
+    </div><h2 class="article-section-h2"><span>新ガイド「NBS Guide</span></h2><p>Embodied Carbon Calculations」は、BIMオブジェクトレベルで具現化炭素データを直接組み込むための実践的フレームワークを提供します。BS EN 15804で定義される上流段階（Modules A1-A5）の炭素値を、ジオメトリベースのアプローチで実装することが中核です。ガイドは4つのBIMオブジェクトタイプを対象としています。まず「レイヤー化アイテム」（断熱材や煉瓦）、次に「レイヤー化アセンブリ」（キャビティウォール等の複合壁体）、「アイテム」（洗面台やラジエーター等の機器）、そして「複合アセンブリ」（鉄筋コンクリート等）です。各タイプについて、数量に排出係数を乗じて炭素量を計算する方法論が詳述されており、材料密度などの重要な係数も含まれています。設計段階での意思決定が、プロジェクト全体の炭素フットプリント削減に直結するよう設計されています。</p><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>このガイドの技術的革新は、複雑な国際標準（BS EN 15804）をBIMワークフロー内で実装可能な形に翻訳した点にあります。従来、炭素計算は設計後の外部ツールで行われることが多く、BIMモデルの情報構造と分離していました。本ガイドでは、各オブジェクトの階層化されたプロパティ（ジオメトリ、材質、密度）から直接炭素値を導出する仕組みを提示しています。これにより、<a class="glossary-link" href="../guides/revit.html">Revit</a>等のBIMオーサリングツール内で、リアルタイムに炭素影響を評価できる可能性が開かれます。LOD（Level of Detail）の概念と同様に、オブジェクトの粒度に応じた計算精度の段階化も示唆されており、早期設計段階での概略計算から詳細設計での精密計算まで対応可能です。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>このガイドはグローバルな建設業界におけるカーボン意識設計の民主化を加速させます。現在、具現化炭素データは専門の環境コンサルタントや限定的なプラグインにのみ存在し、大多数の設計者にとってアクセス不可能です。NBS Guide によって、BIM標準の中に炭素評価が組み込まれれば、全世界のBIM運用組織が同一の方法論で比較可能なデータを生成できるようになります。これは、建材メーカーがEPD（Environmental Product Declaration）をBIM互換形式で公開する動機にもなり、サプライチェーン全体での透明性向上につながります。また、設計段階での選択が数百トンのCO2削減につながる可能性があり、プロジェクト収益性と環境性能の両立が現実的になります。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

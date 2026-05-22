@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>GraphisoftのArchicadは、BIM設計の標準ツールとして国内の設計事務所・ゼネコン設計部門で広く採用されています。特に構造設計との連携や、施工図作成、積算業務を効率化するアドオンエコシステムが重要な競争力となっています。ST-Bridge Converterは、建築と土木をつなぐ標準データ形式「ST-Bridge」とIFCの相互変換を可能にするコア機能であり、国土交通省BIM/CIMロードマップにおいても、建築・土木の統一的なデータ流通を実現するための鍵となっています。一方、断面リスト作成ツールは、建築部材の断面情報を自動抽出・リスト化し、積算や施工図業務の生産性向上に貢献するアドオンです。両者のアップデートは、BIMモデル内のメタデータ（IFCプロパティ）を設計者がより容易に検証・活用できる環境を整備することで、BIM導入をしたプロジェクトにおける実務ワークフローの最適化を目指すものです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>今回のアップデートの主な改善点は、ST-Bridge Converterに「要素設定ダイアログでST-Bridge converterでインポートしたIFCプロパティを確認する機能」が追加されたこと、および断面リスト作成ツールの「要素ダイアログ画面でIFCプロパティを確認する際にエラーが発生する不具合が修正」されたことです。これは単なる機能追加ではなく、両アドオンのIFCプロパティ確認機能の一貫性を強化し、設計者がBIMモデル内のメタデータを安全かつ効率的に検証できる環境を整えるものです。また、Graphisoftは注意事項として「ST-Bridge ConverterとST-Bridge Converterのみをアップデートした場合、要素ダイアログを開いて閉じた時にクラッシュする可能性がある」と明記し、両アドオンのバージョン同期の重要性を強調しています。これは、複数アドオンが相互依存する設計環境において、互換性管理が実装の重要な課題であることを示唆しています。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Graphisoftの<a class="glossary-link" href="../guides/archicad.html">Archicad</a>は、<a class="glossary-link" href="../guides/bim.html">BIM</a>設計の標準ツールとして国内の設計事務所・ゼネコン設計部門で広く採用されています。特に構造設計との連携や、施工図作成、積算業務を効率化するアドオンエコシステムが重要な競争力となっています。ST-Bridge Converterは、建築と土木をつなぐ標準データ形式「ST-Bridge」と<a class="glossary-link" href="../guides/ifc.html">IFC</a>の相互変換を可能にするコア機能であり、国土交通省BIM/CIMロードマップにおいても、建築・土木の統一的なデータ流通を実現するための鍵となっています。一方、断面リスト作成ツールは、建築部材の断面情報を自動抽出・リスト化し、積算や施工図業務の生産性向上に貢献するアドオンです。両者のアップデートは、BIMモデル内のメタデータ（IFCプロパティ）を設計者がより容易に検証・活用できる環境を整備することで、BIM導入をしたプロジェクトにおける実務ワークフローの最適化を目指すものです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>今回のアップデートの主な改善点は、ST-Bridge Converterに「要素設定ダイアログでST-Bridge converterでインポートしたIFCプロパティを確認する機能」が追加されたこと、および断面リスト作成ツールの「要素ダイアログ画面でIFCプロパティを確認する際にエラーが発生する不具合が修正」されたことです。これは単なる機能追加ではなく、両アドオンのIFCプロパティ確認機能の一貫性を強化し、設計者がBIMモデル内のメタデータを安全かつ効率的に検証できる環境を整えるものです。また、Graphisoftは注意事項として「ST-Bridge ConverterとST-Bridge Converterのみをアップデートした場合、要素ダイアログを開いて閉じた時にクラッシュする可能性がある」と明記し、両アドオンのバージョン同期の重要性を強調しています。これは、複数アドオンが相互依存する設計環境において、互換性管理が実装の重要な課題であることを示唆しています。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/archicad-2840-update.html">Archicad 28.4.0が正式リリース、Teamwork運用で注意が必要に</a>
@@ -1993,6 +2004,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

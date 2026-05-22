@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Autodesk は建設・設計業界のデジタル変革において、設計と施工のワークフロー分断が長年の課題として存在してきました。従来、設計段階では Revit などの BIM ツールが中心となり、施工段階では別のプロジェクト管理プラットフォームが運用されることで、データの断裂やコミュニケーションロスが発生していました。Autodesk Construction Cloud は、施工・現場運用に特化したクラウドプラットフォームとして 2020 年代初頭から展開されてきましたが、依然として設計との連携面で限界がありました。こうした背景から Autodesk は 2025 年の Autodesk University で「Forma」という新たなエンドツーエンド、クラウドネイティブ、AI 対応プラットフォームのビジョンを発表。設計・施工・運用のすべてを統合する戦略を打ち出しました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026 年 3 月 24 日、Autodesk Construction Cloud は Autodesk Forma に統合されます。この統合により、製品名が段階的に変更されます。具体的には Autodesk Docs は「Forma Data Management」に、Autodesk BIM Collaborate Pro は「Forma Design Collaboration」に、Autodesk Build は「Forma Build」に、Autodesk Takeoff は「Forma Takeoff」に改称されます。Forma Data Management が共通データ環境（Common Data Environment）として機能し、計画・設計から施工、運用に至るまでのデータ連携を統一します。重要な点は、これはブランド・プラットフォームの進化であり、顧客への大規模な混乱ではないということです。既存の API、インテグレーション、ライセンス体系、ログイン体験、顧客データはすべてそのまま維持されます。データマイグレーションも不要です。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Autodesk は建設・設計業界のデジタル変革において、設計と施工のワークフロー分断が長年の課題として存在してきました。従来、設計段階では <a class="glossary-link" href="../guides/revit.html">Revit</a> などの <a class="glossary-link" href="../guides/bim.html">BIM</a> ツールが中心となり、施工段階では別のプロジェクト管理プラットフォームが運用されることで、データの断裂やコミュニケーションロスが発生していました。Autodesk Construction Cloud は、施工・現場運用に特化したクラウドプラットフォームとして 2020 年代初頭から展開されてきましたが、依然として設計との連携面で限界がありました。こうした背景から Autodesk は 2025 年の Autodesk University で「Forma」という新たなエンドツーエンド、クラウドネイティブ、AI 対応プラットフォームのビジョンを発表。設計・施工・運用のすべてを統合する戦略を打ち出しました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026 年 3 月 24 日、Autodesk Construction Cloud は Autodesk Forma に統合されます。この統合により、製品名が段階的に変更されます。具体的には Autodesk Docs は「Forma Data Management」に、Autodesk BIM Collaborate Pro は「Forma Design Collaboration」に、Autodesk Build は「Forma Build」に、Autodesk Takeoff は「Forma Takeoff」に改称されます。Forma Data Management が共通データ環境（Common Data Environment）として機能し、計画・設計から施工、運用に至るまでのデータ連携を統一します。重要な点は、これはブランド・プラットフォームの進化であり、顧客への大規模な混乱ではないということです。既存の API、インテグレーション、ライセンス体系、ログイン体験、顧客データはすべてそのまま維持されます。データマイグレーションも不要です。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Intelの統合グラフィックスがCAD・BIM業界で認知を得られなかった歴史的背景がある。従来、モバイルワークステーション市場ではNvidiaの独立型GPU搭載機が圧倒的シェアを占めており、これはISV（独立系ソフトウェアベンダー）認証の豊富さに由来していた。AMDが統合Radeonグラフィックスで成功を収めた一方で、Intelは「グラフィックス企業としての実績不足」という信用面での課題を抱えていた。2022年にArc Proの独立型デスクトップGPUが登場してから、Intelはドライバ検証とISV関係構築に投資を加速。その成果が今、統合グラフィックスにまで波及しようとしている。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Intelは新型Core Ultra Series 3プロセッサに統合されたArc Pro B390グラフィックスについて、主要なCAD・BIM・シミュレーションソフトウェア企業によるISV認証を大幅に拡大した。対象にはAutodesk（AutoCAD、Inventor、Fusion、3ds Max）、Ansys、Bentley Systems（MicroStation、LumenRT、iTwin Capture Modeler）、Dassault Systèmes（Solidworks）、Nemetschek（Vectorworks）、PTC（Creo）、Siemens（NX、Solid Edge）が含まれる。さらに公式ISV認証が存在しないアプリケーション向けに、Intel独自の検証プログラムを導入。Chaos Enscape、D5 Render、Autodesk Revit、Blender、Unreal Engine、Twinmotionなどをカバーしている。Dell、HP、Lenovoのモバイルワークステーションで利用可能であり、先月Dellが発表した「Pro Precision 5S」はNvidiaの独立型GPUオプションを排除した初めてのメジャーOEM製品となった。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Intelの統合グラフィックスがCAD・<a class="glossary-link" href="../guides/bim.html">BIM</a>業界で認知を得られなかった歴史的背景がある。従来、モバイルワークステーション市場ではNvidiaの独立型GPU搭載機が圧倒的シェアを占めており、これはISV（独立系ソフトウェアベンダー）認証の豊富さに由来していた。AMDが統合Radeonグラフィックスで成功を収めた一方で、Intelは「グラフィックス企業としての実績不足」という信用面での課題を抱えていた。2022年にArc Proの独立型デスクトップGPUが登場してから、Intelはドライバ検証とISV関係構築に投資を加速。その成果が今、統合グラフィックスにまで波及しようとしている。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Intelは新型Core Ultra Series 3プロセッサに統合されたArc Pro B390グラフィックスについて、主要なCAD・BIM・シミュレーションソフトウェア企業によるISV認証を大幅に拡大した。対象にはAutodesk（AutoCAD、Inventor、Fusion、3ds Max）、Ansys、Bentley Systems（MicroStation、LumenRT、iTwin Capture Modeler）、Dassault Systèmes（Solidworks）、Nemetschek（Vectorworks）、PTC（Creo）、Siemens（NX、Solid Edge）が含まれる。さらに公式ISV認証が存在しないアプリケーション向けに、Intel独自の検証プログラムを導入。Chaos Enscape、D5 Render、Autodesk <a class="glossary-link" href="../guides/revit.html">Revit</a>、Blender、Unreal Engine、Twinmotionなどをカバーしている。Dell、HP、Lenovoのモバイルワークステーションで利用可能であり、先月Dellが発表した「Pro Precision 5S」はNvidiaの独立型GPUオプションを排除した初めてのメジャーOEM製品となった。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

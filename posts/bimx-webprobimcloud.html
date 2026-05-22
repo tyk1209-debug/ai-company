@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Graphisoftが提供するBIMxは、Archicadで作成した3Dモデルをプラットフォーム横断的に閲覧・共有するための重要なツールです。これまでMobile版とDesktop版でPro機能が先行実装されていたのに対し、Web版（BIMx Model TransferおよびBIMcloud経由のアクセス）では基本機能に限定されていました。設計現場やクライアント向けプレゼンテーションでブラウザベースの閲覧が求められる日本市場においても、この制限が実務的な課題となっていました。今回のアップデートはプラットフォーム統一戦略の延長線上にあり、複雑なBIMモデルをどのデバイスからでも同等の操作性で確認できる環境を整備する狙いです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026年4月7日より、対象企業のメンバーがBIMx Web版で利用できるようになるPro機能は、主に以下の2つです。第一に、3D要素の表示/非表示の切り替え、およびレイヤー・レイヤーフォルダ・レイヤーコンビネーション機能です。これにより、モデル内の複数要素を階層的に管理し、用途に応じた表示制御が可能になります。例えば構造体だけを表示、設備だけを表示、といった用途別フィルタリングがWeb上で実現されます。第二に、カスタマイズ可能なカットプレーン機能で、任意の要素面に平行に3Dモデルをスライスして垂直・斜め・水平の断面を簡単に取得できます。従来はデスクトップアプリケーション側で事前に断面図を作成する必要がありましたが、Web版で動的に断面を生成できるようになることで、クライアント説明やレビュー時の利便性が大きく向上します。加えてArchicad 29.1およびMEP Designer 29.1アップデートの一環として、BIMxエクスポート機能も最適化され、ファイルサイズの縮小と高速化が実現されています。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Graphisoftが提供する<a class="glossary-link" href="../guides/bim.html">BIM</a>xは、<a class="glossary-link" href="../guides/archicad.html">Archicad</a>で作成した3Dモデルをプラットフォーム横断的に閲覧・共有するための重要なツールです。これまでMobile版とDesktop版でPro機能が先行実装されていたのに対し、Web版（BIMx Model TransferおよびBIMcloud経由のアクセス）では基本機能に限定されていました。設計現場やクライアント向けプレゼンテーションでブラウザベースの閲覧が求められる日本市場においても、この制限が実務的な課題となっていました。今回のアップデートはプラットフォーム統一戦略の延長線上にあり、複雑なBIMモデルをどのデバイスからでも同等の操作性で確認できる環境を整備する狙いです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026年4月7日より、対象企業のメンバーがBIMx Web版で利用できるようになるPro機能は、主に以下の2つです。第一に、3D要素の表示/非表示の切り替え、およびレイヤー・レイヤーフォルダ・レイヤーコンビネーション機能です。これにより、モデル内の複数要素を階層的に管理し、用途に応じた表示制御が可能になります。例えば構造体だけを表示、設備だけを表示、といった用途別フィルタリングがWeb上で実現されます。第二に、カスタマイズ可能なカットプレーン機能で、任意の要素面に平行に3Dモデルをスライスして垂直・斜め・水平の断面を簡単に取得できます。従来はデスクトップアプリケーション側で事前に断面図を作成する必要がありましたが、Web版で動的に断面を生成できるようになることで、クライアント説明やレビュー時の利便性が大きく向上します。加えてArchicad 29.1およびMEP Designer 29.1アップデートの一環として、BIMxエクスポート機能も最適化され、ファイルサイズの縮小と高速化が実現されています。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/archicad-2840-update.html">Archicad 28.4.0が正式リリース、Teamwork運用で注意が必要に</a>
       <span class="mid-related-cat">Archicad</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>BIMx Web版へのPro機能統合は、単なる機能追加にとどまりません。レイヤーコンビネーション機能の実装には、Archicadのネイティブデータベース構造（GUID、属性情報）をブラウザ環境で正確に解釈・管理する必要があります。これは、WebGL等の3Dレンダリング技術の進展と、サーバー側のデータ管理最適化があって初めて可能になる実装です。またカットプレーン機能は、任意の平面を定義してその法線ベクトルと交差判定を行う幾何学的処理をクライアント側で行うため、大規模モデル（例：高層ビル、複雑な設備配管）でのパフォーマンスが重要です。エクスポート高速化に関しては、Archicad 29.1での改良により、BIMxフォーマットへの変換時に冗長な幾何学情報を削減または圧縮している可能性が高く、IFCエクスポート時の効率化で得られた知見が応用されていると推測されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバルにはBIMx Web版の機能強化により、デスクトップ不要な建設プロジェクト管理が一層現実的になります。遠隔地のステークホルダーやクライアント、現場従事者がクラウドベースの環境で高度な3Dモデル解析を行え、設計変更やコンフリクト検出がより迅速に進みます。特にMEP（機械・電気・配管）モデルの複雑性が増すグローバルプロジェクトでは、Web上での即座な断面確認が調整作業を大幅に短縮します。Graphisoftはこの方向性でAutodeskのBIM 360やRevitクラウド機能との競争を強化しており、「デバイス横断的な操作性」を差別化要因として打ち出しています。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>BIMx Web版へのPro機能統合は、単なる機能追加にとどまりません。レイヤーコンビネーション機能の実装には、Archicadのネイティブデータベース構造（GUID、属性情報）をブラウザ環境で正確に解釈・管理する必要があります。これは、WebGL等の3Dレンダリング技術の進展と、サーバー側のデータ管理最適化があって初めて可能になる実装です。またカットプレーン機能は、任意の平面を定義してその法線ベクトルと交差判定を行う幾何学的処理をクライアント側で行うため、大規模モデル（例：高層ビル、複雑な設備配管）でのパフォーマンスが重要です。エクスポート高速化に関しては、Archicad 29.1での改良により、BIMxフォーマットへの変換時に冗長な幾何学情報を削減または圧縮している可能性が高く、<a class="glossary-link" href="../guides/ifc.html">IFC</a>エクスポート時の効率化で得られた知見が応用されていると推測されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバルにはBIMx Web版の機能強化により、デスクトップ不要な建設プロジェクト管理が一層現実的になります。遠隔地のステークホルダーやクライアント、現場従事者がクラウドベースの環境で高度な3Dモデル解析を行え、設計変更やコンフリクト検出がより迅速に進みます。特にMEP（機械・電気・配管）モデルの複雑性が増すグローバルプロジェクトでは、Web上での即座な断面確認が調整作業を大幅に短縮します。Graphisoftはこの方向性でAutodeskのBIM 360や<a class="glossary-link" href="../guides/revit.html">Revit</a>クラウド機能との競争を強化しており、「デバイス横断的な操作性」を差別化要因として打ち出しています。</p>
           </div>
         </div>
         
@@ -1974,6 +1985,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

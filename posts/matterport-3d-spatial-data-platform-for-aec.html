@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>建設・不動産・施設管理の現場では、「現地に行かないと状況がわからない」「既存建物の正確な寸法や状況が図面にない」「竣工後に建物情報が散逸する」という課題が長年続いています。従来の対処法は写真撮影や手作業の採寸で、手間とコストがかかるうえ、情報の精度と再利用性に限界がありました。スマートフォンのLiDAR普及や3Dカメラの低価格化により、空間そのものをデジタルデータとして記録・活用する動きが急速に広がっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Matterportは、建物や空間を360度3Dデータとして記録し、ブラウザ上でバーチャルウォークスルーを可能にするクラウドプラットフォームです。専用の3Dカメラ（Pro3など）だけでなく、iPhone・iPadのLiDARカメラやAndroid端末でも撮影でき、撮影データはMatterportクラウドに自動アップロードされて処理されます。生成されたデジタルモデルは、平面図の自動生成、距離・面積測定、OBJやEシリーズCADファイルのエクスポート、BIMソフトへの取り込みまで対応しています。2023年にCoStarグループが26億ドルで買収したことで、不動産データ基盤との統合が進んでいます。主な活用場面は、不動産バーチャル内見、建設現場の進捗記録、既存建物の改修前調査、竣工デジタルアーカイブ、ファシリティマネジメントのベースデータ整備などです。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建設・不動産・施設管理の現場では、「現地に行かないと状況がわからない」「既存建物の正確な寸法や状況が図面にない」「竣工後に建物情報が散逸する」という課題が長年続いています。従来の対処法は写真撮影や手作業の採寸で、手間とコストがかかるうえ、情報の精度と再利用性に限界がありました。スマートフォンのLiDAR普及や3Dカメラの低価格化により、空間そのものをデジタルデータとして記録・活用する動きが急速に広がっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Matterportは、建物や空間を360度3Dデータとして記録し、ブラウザ上でバーチャルウォークスルーを可能にするクラウドプラットフォームです。専用の3Dカメラ（Pro3など）だけでなく、iPhone・iPadのLiDARカメラやAndroid端末でも撮影でき、撮影データはMatterportクラウドに自動アップロードされて処理されます。生成されたデジタルモデルは、平面図の自動生成、距離・面積測定、OBJやEシリーズCADファイルのエクスポート、<a class="glossary-link" href="../guides/bim.html">BIM</a>ソフトへの取り込みまで対応しています。2023年にCoStarグループが26億ドルで買収したことで、不動産データ基盤との統合が進んでいます。主な活用場面は、不動産バーチャル内見、建設現場の進捗記録、既存建物の改修前調査、竣工デジタルアーカイブ、ファシリティマネジメントのベースデータ整備などです。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>なぜ重要か</span></h2><p>建設DXの実務で課題になるのは「現場と設計事務所・発注者の情報共有の断絶」と「既存建物の正確なデータがない」という二点です。Matterportはこの両方を解決する手段として機能します。特に、点群データやBIMが整備されていない既存建物では、Matterportのスキャンデータが改修設計のベースになります。また、施工中の現場を定期撮影してクラウドで共有することで、遠隔での進捗確認や関係者間の情報整合が取りやすくなります。RevitやArchicadとの連携プラグインも提供されており、スキャンデータをBIMモデル作成の下絵として活用するリバースBIM（Scan-to-BIM）ワークフローが整いつつあります。</p>
+    </div><h2 class="article-section-h2"><span>なぜ重要か</span></h2><p>建設DXの実務で課題になるのは「現場と設計事務所・発注者の情報共有の断絶」と「既存建物の正確なデータがない」という二点です。Matterportはこの両方を解決する手段として機能します。特に、点群データやBIMが整備されていない既存建物では、Matterportのスキャンデータが改修設計のベースになります。また、施工中の現場を定期撮影してクラウドで共有することで、遠隔での進捗確認や関係者間の情報整合が取りやすくなります。<a class="glossary-link" href="../guides/revit.html">Revit</a>や<a class="glossary-link" href="../guides/archicad.html">Archicad</a>との連携プラグインも提供されており、スキャンデータをBIMモデル作成の下絵として活用するリバースBIM（Scan-to-BIM）ワークフローが整いつつあります。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1745,7 +1756,7 @@
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Graitec File Syncの技術的な価値は、単なるファイルコピーではなく、構造化されたデータ管理にあります。異なるシステム間でのメタデータ保持やフォルダ階層の維持により、移行後のデータ検索性が損なわれません。特にAutodesk Formaとの統合では、BIMデータやプロジェクト情報をプラットフォーム間で矛盾なく同期させることが可能です。従来のマニュアルなコピー・ペーストやローカルバージョン管理では、ヒューマンエラーが発生しやすく、特に大規模プロジェクトで複数チームが異なるシステムを使用する場合にファイル競合が頻発していました。本ツールはこうした課題をAPI連携と自動スケジューリングで解決します。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この認定は、グローバルなAEC業界全体に統合データ戦略の重要性を再確認させるものです。プロジェクトチームが複数プラットフォームを使い分ける現実を前提に、「データの一貫性確保」が生産性向上の鍵となることが業界的に共有されつつあります。特に大型インフラプロジェクトや複雑な建築プロジェクトでは、設計、施工、施設管理の各段階でデータ連携が求められており、統合ツールへのニーズは今後さらに高まるでしょう。Autodeskがこのような周辺ツール企業をGold Partnerとして認定することで、AECOエコシステムの拡張戦略が加速します。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Graitec File Syncの技術的な価値は、単なるファイルコピーではなく、構造化されたデータ管理にあります。異なるシステム間でのメタデータ保持やフォルダ階層の維持により、移行後のデータ検索性が損なわれません。特にAutodesk Formaとの統合では、<a class="glossary-link" href="../guides/bim.html">BIM</a>データやプロジェクト情報をプラットフォーム間で矛盾なく同期させることが可能です。従来のマニュアルなコピー・ペーストやローカルバージョン管理では、ヒューマンエラーが発生しやすく、特に大規模プロジェクトで複数チームが異なるシステムを使用する場合にファイル競合が頻発していました。本ツールはこうした課題をAPI連携と自動スケジューリングで解決します。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この認定は、グローバルなAEC業界全体に統合データ戦略の重要性を再確認させるものです。プロジェクトチームが複数プラットフォームを使い分ける現実を前提に、「データの一貫性確保」が生産性向上の鍵となることが業界的に共有されつつあります。特に大型インフラプロジェクトや複雑な建築プロジェクトでは、設計、施工、施設管理の各段階でデータ連携が求められており、統合ツールへのニーズは今後さらに高まるでしょう。Autodeskがこのような周辺ツール企業をGold Partnerとして認定することで、AECOエコシステムの拡張戦略が加速します。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

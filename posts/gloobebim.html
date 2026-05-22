@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>日本の建築BIM市場では、RevitやArchicadといった海外標準ツールの導入が進む一方で、日本市場向けの国内BIMソリューション「GLOOBE」の実務的な活用方法が設計事務所やゼネコンの関心を集めています。特に法規チェック機能やIFC連携の強化が求められる確認申請プロセスにおいて、日本固有の建築基準法対応と効率的なオブジェクト管理が課題となっていました。GLOOBEは国土交通省BIM推進会議が掲げるロードマップに沿って、国内建築確認プロセスへの実装を目指しており、その中核をなすのが適切に設計されたBIMオブジェクトの整備です。本記事は、GLOOBEの公式ナレッジベースから、同ソフトのオブジェクト体系の全体像を解説したものです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>GLOOBEのBIMオブジェクトは大きく3種類に分類されています。第一は「専用オブジェクト（.glm形式）」で、構造体、仕上げ、手摺といった建築要素に特化した専用属性を保有します。このオブジェクトはシステム設定されたパラメーターを備え、法規チェック機能や自動化ツールと連携し、自動集計や整合性確保に特化した仕様になっています。既に必要な情報設定がされているため、ルール構築やメンテナンスが容易で安定した運用が可能です。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>日本の建築<a class="glossary-link" href="../guides/bim.html">BIM</a>市場では、<a class="glossary-link" href="../guides/revit.html">Revit</a>や<a class="glossary-link" href="../guides/archicad.html">Archicad</a>といった海外標準ツールの導入が進む一方で、日本市場向けの国内BIMソリューション「<a class="glossary-link" href="../guides/gloobe.html">GLOOBE</a>」の実務的な活用方法が設計事務所やゼネコンの関心を集めています。特に法規チェック機能や<a class="glossary-link" href="../guides/ifc.html">IFC</a>連携の強化が求められる確認申請プロセスにおいて、日本固有の建築基準法対応と効率的なオブジェクト管理が課題となっていました。GLOOBEは国土交通省BIM推進会議が掲げるロードマップに沿って、国内建築確認プロセスへの実装を目指しており、その中核をなすのが適切に設計されたBIMオブジェクトの整備です。本記事は、GLOOBEの公式ナレッジベースから、同ソフトのオブジェクト体系の全体像を解説したものです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>GLOOBEのBIMオブジェクトは大きく3種類に分類されています。第一は「専用オブジェクト（.glm形式）」で、構造体、仕上げ、手摺といった建築要素に特化した専用属性を保有します。このオブジェクトはシステム設定されたパラメーターを備え、法規チェック機能や自動化ツールと連携し、自動集計や整合性確保に特化した仕様になっています。既に必要な情報設定がされているため、ルール構築やメンテナンスが容易で安定した運用が可能です。</p>
 <p>第二は「汎用3Dオブジェクト（.glm形式）」で、立体形状作成ツールを用いて自由に形状を作成できます。床の間セットやドアノブなど、カスタマイズしたオブジェクトを登録し、別プロジェクトで再利用したり社内標準品として配布できます。RevitファミリやSketchUpなど他の3D形状の取り込みも可能で、ユーザーの得意なソフトでの作成に対応しています。</p>
 <p>第三は「カタログ部品（.xv3/.svg形式）」で、メーカー住設、建具、家具、添景等の施工部材に対応しています。付属アプリの「Archi Master」（無料の汎用部品）と「3Dカタログ」（有料のメーカー部品）から選択可能です。2025年12月時点で、3Dカタログサイトには200社・5300以上の建材が登録されており、DATA STATIONには160000以上のオブジェクトが用意されています。テクスチャー、照度、反射属性が事前設定されているため、V-styleレンダリング機能で高精度なパース作成が可能です。</p><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>GLOOBEのオブジェクト体系の特筆すべき点は、Revitネイティブデータ（.rvt）の読み込み互換性を備えていることです。Revitで作成したモデルの建具や部屋などのオブジェクトに法的情報を後付けして、法規LVS判定を実行できます。これはBIM確認申請への直接的なパスウェイとなるもので、IFC形式との並行運用において重要な機能です。</p>
 <p>Revitファミリのようなネストされた階層構造には非対応ですが、汎用3Dオブジェクトは形状作成の難易度が低く設計されており、直感的なツールセットで複雑な形状も対応可能です。また、既存のRevitファミリやSketchUpモデルをインポート後、GLOOBE内で汎用3D形式に変換できるため、複数ソフトのワークフロー統合が容易です。</p>
@@ -1945,6 +1956,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

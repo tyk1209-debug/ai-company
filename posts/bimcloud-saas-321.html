@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Graphisoftが提供するBIMクラウドサービス「BIMcloud SaaS」は、建築BIM設計の協調作業を支える重要なインフラです。クラウドベースの設計環境では、複数のユーザーが同時にアクセスし、リアルタイムでデータを共有することが求められます。このため、セキュリティ証明書の管理と更新は、システム運用における重要な定期メンテナンスの一環となっています。今回のインシデントは、こうした安全性確保の措置が行われる過程で、想定外の技術的問題が発生したことを示しています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2024年3月21日、BIMcloud SaaSを利用していた一部のユーザーが接続不具合に見舞われました。原因は、セキュリティ強化のための定期メンテナンスにおいて、新しいSSL証明書の導入時に発生した予期せぬ問題です。新しい証明書自体は正常に導入されていましたが、システムが有効期限切れの旧証明書を継続して使用しようとし続けるという異常な挙動が発生しました。これまでの運用では見られなかった事象であり、問題を検出した後、Graphisoftのエンジニアリングチームが失効した証明書を削除し、正しく新しい証明書へ切り替える対応を実施しました。サービスは中央ヨーロッパ時間（CET）9:30までに完全に復旧し、Archicad内でのテストによって修正内容も確認されています。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Graphisoftが提供する<a class="glossary-link" href="../guides/bim.html">BIM</a>クラウドサービス「BIMcloud SaaS」は、建築BIM設計の協調作業を支える重要なインフラです。クラウドベースの設計環境では、複数のユーザーが同時にアクセスし、リアルタイムでデータを共有することが求められます。このため、セキュリティ証明書の管理と更新は、システム運用における重要な定期メンテナンスの一環となっています。今回のインシデントは、こうした安全性確保の措置が行われる過程で、想定外の技術的問題が発生したことを示しています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2024年3月21日、BIMcloud SaaSを利用していた一部のユーザーが接続不具合に見舞われました。原因は、セキュリティ強化のための定期メンテナンスにおいて、新しいSSL証明書の導入時に発生した予期せぬ問題です。新しい証明書自体は正常に導入されていましたが、システムが有効期限切れの旧証明書を継続して使用しようとし続けるという異常な挙動が発生しました。これまでの運用では見られなかった事象であり、問題を検出した後、Graphisoftのエンジニアリングチームが失効した証明書を削除し、正しく新しい証明書へ切り替える対応を実施しました。サービスは中央ヨーロッパ時間（CET）9:30までに完全に復旧し、<a class="glossary-link" href="../guides/archicad.html">Archicad</a>内でのテストによって修正内容も確認されています。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/archicad-2840-update.html">Archicad 28.4.0が正式リリース、Teamwork運用で注意が必要に</a>
@@ -1998,6 +2009,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

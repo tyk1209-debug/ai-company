@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>建築・設計業界でのビジュアライゼーション（可視化）は、従来「プレゼンテーション用の最終レンダリング」と「制作中の迅速な確認」の二つのフローが分離していました。設計者やアーキテクトは、Revit や SketchUp での低品質なプレビューと、V-Ray などの高品質レンダラーによる最終画像の間を行き来する必要があり、ワークフロー全体の効率化が課題でした。特に BIM・AEC 分野では照明や素材の複雑な変更反映に時間がかかり、クライアント対応時の迅速な修正が困難でした。Chaos Group は長年、最高品質のレンダリングと処理速度のバランスを模索してきた中で、GPU 技術やリアルタイムレイトレーシングの急速な進化により、この課題の解決可能性が高まったのです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Chaos V-Ray 7 Update 3 では、Chaos Vantage との新統合により、SketchUp・Rhino・3ds Max ユーザーが V-Ray viewport 内でリアルタイムレンダリングを実行できるようになりました。Vantage ライセンスを保有するユーザーは、複雑な照明設定、大規模ジオメトリ、詳細なマテリアルを「遅延なく」扱える環境を手に入れます。このアップデートの最大の意義は「最終品質レベルでのリアルタイムプレビュー」が viewport 内で完結することです。同時に、AI を活用した「Mood Match」機能では参照画像を読み込ませることで自動的にシーンの照明と雰囲気を調整。Parallax Interiors により、複雑なモデリングなしに建物ファサードの窓に奥行きのある室内照明を表現でき、夜景レンダリングの説得力が大幅に向上します。新しい「Quick Caustics」は従来の光子ベース設定の複雑さを削減しながら、水面や透過材質のリアルな反射・屈折を容易に制御。Gaussian Splats への relighting 機能追加により、3D スキャンデータなどのアセットをシーンに自然に統合できます。さらにプレビュー段階ながら Node Material Editor（SketchUp・Rhino 対応予定）は、ノードベースのビジュアル編集により複雑なシェーダー作成を容易化し、マテリアルロジックの理解を深めます。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建築・設計業界でのビジュアライゼーション（可視化）は、従来「プレゼンテーション用の最終レンダリング」と「制作中の迅速な確認」の二つのフローが分離していました。設計者やアーキテクトは、<a class="glossary-link" href="../guides/revit.html">Revit</a> や SketchUp での低品質なプレビューと、V-Ray などの高品質レンダラーによる最終画像の間を行き来する必要があり、ワークフロー全体の効率化が課題でした。特に <a class="glossary-link" href="../guides/bim.html">BIM</a>・AEC 分野では照明や素材の複雑な変更反映に時間がかかり、クライアント対応時の迅速な修正が困難でした。Chaos Group は長年、最高品質のレンダリングと処理速度のバランスを模索してきた中で、GPU 技術やリアルタイムレイトレーシングの急速な進化により、この課題の解決可能性が高まったのです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Chaos V-Ray 7 Update 3 では、Chaos Vantage との新統合により、SketchUp・Rhino・3ds Max ユーザーが V-Ray viewport 内でリアルタイムレンダリングを実行できるようになりました。Vantage ライセンスを保有するユーザーは、複雑な照明設定、大規模ジオメトリ、詳細なマテリアルを「遅延なく」扱える環境を手に入れます。このアップデートの最大の意義は「最終品質レベルでのリアルタイムプレビュー」が viewport 内で完結することです。同時に、AI を活用した「Mood Match」機能では参照画像を読み込ませることで自動的にシーンの照明と雰囲気を調整。Parallax Interiors により、複雑なモデリングなしに建物ファサードの窓に奥行きのある室内照明を表現でき、夜景レンダリングの説得力が大幅に向上します。新しい「Quick Caustics」は従来の光子ベース設定の複雑さを削減しながら、水面や透過材質のリアルな反射・屈折を容易に制御。Gaussian Splats への relighting 機能追加により、3D スキャンデータなどのアセットをシーンに自然に統合できます。さらにプレビュー段階ながら Node Material Editor（SketchUp・Rhino 対応予定）は、ノードベースのビジュアル編集により複雑なシェーダー作成を容易化し、マテリアルロジックの理解を深めます。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

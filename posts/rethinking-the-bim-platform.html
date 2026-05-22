@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>BIM導入から20年以上が経過した現在、業界は新たな課題に直面しています。設計事務所やゼネコンの実務では、モデリング自体よりも、オブジェクト分類、パラメータ設定、規格適合性確認、学際的整合性、数量の一貫性維持といった手作業による検証に膨大な時間が費やされているのが現状です。従来のBIMワークフローは「モデル作成→検査→修正→繰り返し」という受動的なサイクルに依存しており、問題は完成後に発見されることが多い。このボトルネックを解決するため、業界ではAIを活用した自動検証機能の組み込みが急速に進みつつあります。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Qonic社が提唱する次世代BIMプラットフォームは、従来の静的なモデリング環境から「継続的に自己評価する知的システム」へと進化します。具体的には、以下の機能が実装されます：(1)アセンブリの不整合を自動認識、(2)量算報告の前に疑わしい数値をフラグ付け、(3)ユーザーの手動トリガーなしに継続的な調整チェック実行、(4)規格適合性のリアルタイム評価。これにより、品質管理が定期的に実施される活動ではなく、モデル構築と並行して継続的に行われるようになります。AIは設計者の仕事を奪うのではなく、繰り返しで単調な手作業を排除し、設計者がより創造的な業務に集中できる環境を実現するという位置づけです。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/bim.html">BIM</a>導入から20年以上が経過した現在、業界は新たな課題に直面しています。設計事務所やゼネコンの実務では、モデリング自体よりも、オブジェクト分類、パラメータ設定、規格適合性確認、学際的整合性、数量の一貫性維持といった手作業による検証に膨大な時間が費やされているのが現状です。従来のBIMワークフローは「モデル作成→検査→修正→繰り返し」という受動的なサイクルに依存しており、問題は完成後に発見されることが多い。このボトルネックを解決するため、業界ではAIを活用した自動検証機能の組み込みが急速に進みつつあります。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Qonic社が提唱する次世代BIMプラットフォームは、従来の静的なモデリング環境から「継続的に自己評価する知的システム」へと進化します。具体的には、以下の機能が実装されます：(1)アセンブリの不整合を自動認識、(2)量算報告の前に疑わしい数値をフラグ付け、(3)ユーザーの手動トリガーなしに継続的な調整チェック実行、(4)規格適合性のリアルタイム評価。これにより、品質管理が定期的に実施される活動ではなく、モデル構築と並行して継続的に行われるようになります。AIは設計者の仕事を奪うのではなく、繰り返しで単調な手作業を排除し、設計者がより創造的な業務に集中できる環境を実現するという位置づけです。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

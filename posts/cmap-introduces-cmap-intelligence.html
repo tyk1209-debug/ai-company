@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1745,7 +1756,7 @@
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Model Context Protocol（MCP）の採用は、BIM・AEC業界に大きな技術的示唆を与えます。従来のAPI連携では、システム間のデータ流通が一方向的で静的でしたが、MCPは大規模言語モデル（LLM）を中心に、複数のシステムからコンテキストを動的に取得できる枠組みです。BIMプロジェクトでは、Revit/Archicad等の設計情報、Tekla Structures等の構造解析データ、プロジェクト管理システムのスケジュール情報など、多数の独立したツールが並行稼働します。MCPによる統合は、これら異種システム間の「意思決定の橋渡し」を実現します。従来の単純なデータ同期ではなく、文脈を理解した問い合わせ・予測・提案が可能になる点が革新的です。また、「既存ワークフローに埋め込む」というアプローチは、新しいUIを学習する必要がなく、スタッフのアダプションコストを最小化する設計になっています。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバルなAEC業界では、AI導入の「失敗パターン」が既に認識されています。スタンドアロンのAIツールは導入率が低く、実務者がワークフロー変更を拒否するケースが多いのです。CMap intelligenceの「埋め込み型AI」アプローチは、このジレンマを解決する新しいパラダイムを示唆しています。プロジェクト管理、リソース配分、財務管理といったバックオフィス機能へのAI統合は、直接的なコスト削減と意思決定の高速化をもたらします。特に、複雑な人員配置最適化やプロジェクト遅延予測など、定量的な効果が期待できる領域です。また、MCPによる第三者システムの統合機能は、BIM環境における「単一のセマンティック・レイヤー」の実現に向けた一歩となります。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Model Context Protocol（MCP）の採用は、<a class="glossary-link" href="../guides/bim.html">BIM</a>・AEC業界に大きな技術的示唆を与えます。従来のAPI連携では、システム間のデータ流通が一方向的で静的でしたが、MCPは大規模言語モデル（LLM）を中心に、複数のシステムからコンテキストを動的に取得できる枠組みです。BIMプロジェクトでは、<a class="glossary-link" href="../guides/revit.html">Revit</a>/Archicad等の設計情報、Tekla Structures等の構造解析データ、プロジェクト管理システムのスケジュール情報など、多数の独立したツールが並行稼働します。MCPによる統合は、これら異種システム間の「意思決定の橋渡し」を実現します。従来の単純なデータ同期ではなく、文脈を理解した問い合わせ・予測・提案が可能になる点が革新的です。また、「既存ワークフローに埋め込む」というアプローチは、新しいUIを学習する必要がなく、スタッフのアダプションコストを最小化する設計になっています。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバルなAEC業界では、AI導入の「失敗パターン」が既に認識されています。スタンドアロンのAIツールは導入率が低く、実務者がワークフロー変更を拒否するケースが多いのです。CMap intelligenceの「埋め込み型AI」アプローチは、このジレンマを解決する新しいパラダイムを示唆しています。プロジェクト管理、リソース配分、財務管理といったバックオフィス機能へのAI統合は、直接的なコスト削減と意思決定の高速化をもたらします。特に、複雑な人員配置最適化やプロジェクト遅延予測など、定量的な効果が期待できる領域です。また、MCPによる第三者システムの統合機能は、BIM環境における「単一のセマンティック・レイヤー」の実現に向けた一歩となります。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1742,13 +1753,13 @@
           <div class="article-body">
             <h2 class="article-section-h2"><span>背景</span></h2><p>Autodeskが2024年11月、スタンフォード大学のAI研究者フェイ・フェイ・リー博士が共同創業した空間AI企業「World Labs」に2億ドルの戦略的投資を実施しました。World Labsの総調達額は10億ドルに達し、NvidiaやAMDも参加する規模の大きいラウンドです。この投資は単なる資金提供ではなく、Autodeskが研究レベルでの協業権を獲得し、「フィジカルワールドAI」と称する物理世界を推論できるAI技術の開発に経営層として関わることを意味しています。</p>
 <p>これまでAEC業界ではテキスト生成AI（ChatGPTなど）が仕様書や報告書作成の効率化に貢献してきましたが、建築・構造設計、橋梁設計、複雑な設備設計には「3次元空間を理解し、物理的な整合性を保ちながら反復設計できるAI」という別次元の能力が求められていました。Autodeskの既存の3D生成AI技術では目的を達成できていないため、同社は今回の投資を通じて最先端の研究能力にアクセスしようとしています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>World Labsの主力製品「Marble」は、1枚の画像、ビデオクリップ、またはテキストプロンプトから、空間的に一貫性のある高忠実度のインタラクティブ3D環境を生成します。この技術はNeRF（ニューラルラディアンスフィールド）と呼ばれる神経網ベースのレンダリング手法と、生成的3Dモデリングを組み合わせたものです。World Labsの共同創業者には、コンピュータビジョン、NeRF研究、神経レンダリングの学術的背景を持つ研究者たちがいます。</p>
-<p>Autodeskの投資により、AutodeskはこのMarbieの研究開発に助言者として関与でき、将来的には自社製品（RevitやFusion 360など）への統合の可能性を探ることができます。World Labsは既に2024年11月のシリーズBで2億3000万ドルを調達し、時価総額は約40億ドルでした。新たな10億ドルラウンドはこの評価を大幅に上昇させるものと考えられます。</p>
+<p>Autodeskの投資により、AutodeskはこのMarbieの研究開発に助言者として関与でき、将来的には自社製品（<a class="glossary-link" href="../guides/revit.html">Revit</a>やFusion 360など）への統合の可能性を探ることができます。World Labsは既に2024年11月のシリーズBで2億3000万ドルを調達し、時価総額は約40億ドルでした。新たな10億ドルラウンドはこの評価を大幅に上昇させるものと考えられます。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
     </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>これまでのAI生成画像技術（Diffusionモデルなど）は「見た目」を生成できますが、生成された環境は物理的に矛盾していることが多く、複数フレームで一貫性がありません。一方、NeRFと呼ばれる手法は、3次元空間そのものをニューラルネットワークで表現するため、カメラの視点が変わった場合でも正しく3Dジオメトリを推論できます。Marbleはこの技術を拡張し、生成と同時に「物理的に実現可能か」という推論を含めることができると考えられます。</p>
-<p>既存のBIM/CADツールと異なり、Marbleは手書きスケッチやテキスト指示から設計案を立ち上げることが可能です。これは概念設計フェーズでの設計者の創造プロセスを大幅に加速する可能性があります。ただしBIMレベルの精度（壁厚、材質、構造体などの情報）を持つかどうかは現在のところ明かされていません。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この投資は、空間AIが単なる研究トピックから実務ツール化へ向かう重要な転換点です。Autodesk、Nvidia、AMDが揃ってWorld Labsに投資する構図は、業界全体が3D生成AI技術を次世代の競争軸と見なしていることを示しています。</p>
+<p>既存の<a class="glossary-link" href="../guides/bim.html">BIM</a>/CADツールと異なり、Marbleは手書きスケッチやテキスト指示から設計案を立ち上げることが可能です。これは概念設計フェーズでの設計者の創造プロセスを大幅に加速する可能性があります。ただしBIMレベルの精度（壁厚、材質、構造体などの情報）を持つかどうかは現在のところ明かされていません。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この投資は、空間AIが単なる研究トピックから実務ツール化へ向かう重要な転換点です。Autodesk、Nvidia、AMDが揃ってWorld Labsに投資する構図は、業界全体が3D生成AI技術を次世代の競争軸と見なしていることを示しています。</p>
 <p>中期的には、概念設計段階でのスケッチから3Dモデルの自動生成、既存建築物の点群データからの詳細なデジタルツインの構築、施工シミュレーションの自動化などが考えられます。長期的には、構造エンジニアが「このような性能を持つ橋を設計せよ」とAIに指示すると、物理的制約と美学を満たす設計案が複数提案されるような使用法も想定されます。</p>
 <p>ただし、記事でも指摘されているように、Marbleが現在生成できる程度の3D環境から、実際の設計業務に使える知識への道のりはまだ遠いです。</p>
           </div>
@@ -2013,6 +2024,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

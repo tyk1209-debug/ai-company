@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Design and Manufacturing領域におけるAI活用は、ここ2～3年で劇的な転換点を迎えています。従来、3D設計ツールは設計者の操作スキルに大きく依存していましたが、LLMやマルチモーダルAIの進化により、自然言語で複雑な設計タスクを自動化する可能性が現実化してきました。Autodesk Fusion、Inventor、Moldflowといったプロダクトポートフォリオを持つAutodeskは、設計・製造業務の自動化において業界をリードする立場にあります。日本国内でも、建築BIM推進会議や国土交通省のBIM/CIMロードマップでは、設計業務の効率化と自動化がテーマとなっており、Autodeskの動向は国内の設計事務所やゼネコンにも大きな影響を与えています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskが今回発表した主要な施策は、以下の3つの層で構成されています。まず第1層が「Autodesk Assistant」で、Fusion、Inventor、Moldflow、Vaultの全主要プロダクトに実装されました。Fusionではプロンプト-API連携により、Fusionのほぼ全機能をAIが直接操作でき、自然言語で複雑なタスクを実行します。Inventorでは機械設計データからの情報抽出や設計変更タスクをコード記述なしで実行可能です。Moldflowではシミュレーション結果の解釈と トラブルシューティングをAIがガイドします。第2層が「Model Context Protocols（MCPs）」で、Fusion MCP（アクション拡張）とFusion Data MCP（データ理解）の2つの公開MCPにより、開発チームがFusionを外部システムに統合し、カスタムAIワークフローを構築できるようになります。第3層が「サードパーティ連携」で、Anthropicの「Claude for Creative Work」を通じてFusionがClaudeに統合され、設計概念から製造可能な出力へと直結するワークフローが実現しました。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Design and Manufacturing領域におけるAI活用は、ここ2～3年で劇的な転換点を迎えています。従来、3D設計ツールは設計者の操作スキルに大きく依存していましたが、LLMやマルチモーダルAIの進化により、自然言語で複雑な設計タスクを自動化する可能性が現実化してきました。Autodesk Fusion、Inventor、Moldflowといったプロダクトポートフォリオを持つAutodeskは、設計・製造業務の自動化において業界をリードする立場にあります。日本国内でも、建築<a class="glossary-link" href="../guides/bim.html">BIM</a>推進会議や国土交通省のBIM/CIMロードマップでは、設計業務の効率化と自動化がテーマとなっており、Autodeskの動向は国内の設計事務所やゼネコンにも大きな影響を与えています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskが今回発表した主要な施策は、以下の3つの層で構成されています。まず第1層が「Autodesk Assistant」で、Fusion、Inventor、Moldflow、Vaultの全主要プロダクトに実装されました。Fusionではプロンプト-API連携により、Fusionのほぼ全機能をAIが直接操作でき、自然言語で複雑なタスクを実行します。Inventorでは機械設計データからの情報抽出や設計変更タスクをコード記述なしで実行可能です。Moldflowではシミュレーション結果の解釈と トラブルシューティングをAIがガイドします。第2層が「Model Context Protocols（MCPs）」で、Fusion MCP（アクション拡張）とFusion Data MCP（データ理解）の2つの公開MCPにより、開発チームがFusionを外部システムに統合し、カスタムAIワークフローを構築できるようになります。第3層が「サードパーティ連携」で、Anthropicの「Claude for Creative Work」を通じてFusionがClaudeに統合され、設計概念から製造可能な出力へと直結するワークフローが実現しました。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
       <span class="mid-related-cat">Revit</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Autodeskのアプローチで注目すべきは、単なるLLMの統合ではなく「産業特化型の所有モデル」と「プロトコルベースの拡張性」を両立させている点です。Autodeskは境界モデル（frontier models）と自社の3D設計専用モデルを組み合わせることで、汎用LLMの精度限界を補完しています。MCPは、OpenAI的なプラグインアーキテクチャではなく、XML-RPC的な軽量プロトコルとして設計されており、企業のレガシーシステムやオンプレミス環境との統合にも対応しやすくなっています。Fusion MCPが「prompt to API」を実現することで、自然言語がそのままFusion APIコールに変換され、複数ステップの設計タスク（パターン生成→CAM準備→BOM抽出）をシーケンシャルに自動実行できる仕組みです。既存のRevit APIやInventor APIによるマクロ記述とは異なり、ノーコードでワークフロー設計が可能になり、スキルセット要件が大幅に低下します。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバルな製造・設計業界全体では、このAI自動化の波が生産性向上の新しい基準になると予想されます。従来、製造業のDX推進では「IoT→データ分析」という段階的なアプローチが主流でしたが、Autodeskの展開は「設計自動化→生産性ジャンプ」という異なるベクトルを示しています。特に機械設計分野では、パラメトリック設計やジェネレーティブデザインがAIアシスタントの組み込みで劇的に操作性が向上し、設計期間の短縮が実現可能になります。建築分野でもMoldflowの自動化は複合部材の設計検証を加速化し、施工時の品質問題の予測が早期段階で可能になります。プロジェクトレベルでは、大規模な国際プロジェクトにおいて、言語や操作スキルの障壁が低下することで、グローバル設計チームの協働がより効率化されるでしょう。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Autodeskのアプローチで注目すべきは、単なるLLMの統合ではなく「産業特化型の所有モデル」と「プロトコルベースの拡張性」を両立させている点です。Autodeskは境界モデル（frontier models）と自社の3D設計専用モデルを組み合わせることで、汎用LLMの精度限界を補完しています。MCPは、OpenAI的なプラグインアーキテクチャではなく、XML-RPC的な軽量プロトコルとして設計されており、企業のレガシーシステムやオンプレミス環境との統合にも対応しやすくなっています。Fusion MCPが「prompt to API」を実現することで、自然言語がそのままFusion APIコールに変換され、複数ステップの設計タスク（パターン生成→CAM準備→BOM抽出）をシーケンシャルに自動実行できる仕組みです。既存の<a class="glossary-link" href="../guides/revit.html">Revit</a> APIやInventor APIによるマクロ記述とは異なり、ノーコードでワークフロー設計が可能になり、スキルセット要件が大幅に低下します。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバルな製造・設計業界全体では、このAI自動化の波が生産性向上の新しい基準になると予想されます。従来、製造業のDX推進では「IoT→データ分析」という段階的なアプローチが主流でしたが、Autodeskの展開は「設計自動化→生産性ジャンプ」という異なるベクトルを示しています。特に機械設計分野では、パラメトリック設計やジェネレーティブデザインがAIアシスタントの組み込みで劇的に操作性が向上し、設計期間の短縮が実現可能になります。建築分野でもMoldflowの自動化は複合部材の設計検証を加速化し、施工時の品質問題の予測が早期段階で可能になります。プロジェクトレベルでは、大規模な国際プロジェクトにおいて、言語や操作スキルの障壁が低下することで、グローバル設計チームの協働がより効率化されるでしょう。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

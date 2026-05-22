@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>建築設計プロセスでは、企画・基本設計・実施設計・施工の各段階でデータが分断され、設計意図や判断根拠が喪失する課題が業界全体で認識されてきました。特に基本設計段階で決定された意思決定が、詳細設計段階では文脈を失い、同じ検討を繰り返すロスが生じています。日本国土交通省のBIM推進ロードマップでも、BIM活用による設計・施工情報の一元化と連続性の確保が重要施策として掲げられており、国内外を問わず「設計情報の連続性」がBIM時代の課題となっていました。Autodeskはこうしたワークフローの断絶を解決する方向へ、クラウドベースの統合環境の構築を進めてきました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskが発表した主な施策は、以下の通りです。第一に、新たな設計・分析環境「Forma Building Design」を導入し、基本設計段階での設計案の生成と性能分析の統合を実現しました。このツールは地理情報を含むサイトの設定、複数の建築案の自動生成、日照・太陽熱・炭素排出量などの性能指標を備えており、設計初期段階でパフォーマンスフィードバックを設計判断に組み込めます。従来は詳細設計後に性能検証を行うのが通例でしたが、Formaでは基本設計段階で複数案の性能を比較検討し、合理的な判断が可能になります。第二に、Revitを「Forma Connected Client」として認定し、両プラットフォーム間でのダイレクトなデータ流通を実現しました。Formaで決定された基本設計案は、地理情報やサイトデータを保有した状態でRevitのネイティブモデルに移行され、Forma Data Marketplaceからのコンテクスト情報も自動的に組み込まれます。第三に「Forma Carbon Insights」で、基本設計段階での炭素分析を詳細設計以降まで追跡可能にしました。これにより、初期段階で設定された持続可能性の方針がプロジェクト全体で可視化され続けます。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建築設計プロセスでは、企画・基本設計・実施設計・施工の各段階でデータが分断され、設計意図や判断根拠が喪失する課題が業界全体で認識されてきました。特に基本設計段階で決定された意思決定が、詳細設計段階では文脈を失い、同じ検討を繰り返すロスが生じています。日本国土交通省の<a class="glossary-link" href="../guides/bim.html">BIM</a>推進ロードマップでも、BIM活用による設計・施工情報の一元化と連続性の確保が重要施策として掲げられており、国内外を問わず「設計情報の連続性」がBIM時代の課題となっていました。Autodeskはこうしたワークフローの断絶を解決する方向へ、クラウドベースの統合環境の構築を進めてきました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskが発表した主な施策は、以下の通りです。第一に、新たな設計・分析環境「Forma Building Design」を導入し、基本設計段階での設計案の生成と性能分析の統合を実現しました。このツールは地理情報を含むサイトの設定、複数の建築案の自動生成、日照・太陽熱・炭素排出量などの性能指標を備えており、設計初期段階でパフォーマンスフィードバックを設計判断に組み込めます。従来は詳細設計後に性能検証を行うのが通例でしたが、Formaでは基本設計段階で複数案の性能を比較検討し、合理的な判断が可能になります。第二に、<a class="glossary-link" href="../guides/revit.html">Revit</a>を「Forma Connected Client」として認定し、両プラットフォーム間でのダイレクトなデータ流通を実現しました。Formaで決定された基本設計案は、地理情報やサイトデータを保有した状態でRevitのネイティブモデルに移行され、Forma Data Marketplaceからのコンテクスト情報も自動的に組み込まれます。第三に「Forma Carbon Insights」で、基本設計段階での炭素分析を詳細設計以降まで追跡可能にしました。これにより、初期段階で設定された持続可能性の方針がプロジェクト全体で可視化され続けます。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
       <span class="mid-related-cat">Revit</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>この統合の核は、従来のファイルベースのワークフローから「共有データ環境」への転換です。Forma→Revit間のデータ流通では、LOD（Level of Detail）に応じた段階的な情報構造を保持したまま移行でき、基本設計の意思決定メタデータが詳細設計段階でも活用可能になります。特に「Forma Connected Client」仕様により、Revit内でFormaのパフォーマンス分析結果にアクセス可能になった点が重要です。従来のRevitは詳細設計に特化し、初期段階の性能検討は別ツール（Ecotect等）で行われていましたが、本統合によりRevitが性能情報の統合プラットフォームに進化しました。IFC形式の運用を前提とした設計では、ツール間での属性情報損失が課題でしたが、Autodesk独自のクラウドネイティブデータモデルにより、Forma固有の設計生成ロジックやパラメータ情報もRevitで保持されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバル規模では、このアプローチは設計プロセスの根本的な再構成を意味します。従来のシーケンシャル型（企画→基本→詳細→施工）から、段階ごとの成果物を次段階で再利用する「情報継承型」への転換が進みます。結果として、設計案の検討回数削減（基本設計段階での複数案比較が効率化）、性能検証時間の短縮（Forma→Revit移行時のモデル再構築が不要）、決定根拠の追跡可能性向上（メタデータの保有）が実現します。施工段階への影響としては、Revitで確定した設計情報にFormaの早期検討結果が紐付くため、変更時の影響範囲評価が容易になり、VE（Value Engineering）提案の判断根拠も明確化されます。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>この統合の核は、従来のファイルベースのワークフローから「共有データ環境」への転換です。Forma→Revit間のデータ流通では、LOD（Level of Detail）に応じた段階的な情報構造を保持したまま移行でき、基本設計の意思決定メタデータが詳細設計段階でも活用可能になります。特に「Forma Connected Client」仕様により、Revit内でFormaのパフォーマンス分析結果にアクセス可能になった点が重要です。従来のRevitは詳細設計に特化し、初期段階の性能検討は別ツール（Ecotect等）で行われていましたが、本統合によりRevitが性能情報の統合プラットフォームに進化しました。<a class="glossary-link" href="../guides/ifc.html">IFC</a>形式の運用を前提とした設計では、ツール間での属性情報損失が課題でしたが、Autodesk独自のクラウドネイティブデータモデルにより、Forma固有の設計生成ロジックやパラメータ情報もRevitで保持されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバル規模では、このアプローチは設計プロセスの根本的な再構成を意味します。従来のシーケンシャル型（企画→基本→詳細→施工）から、段階ごとの成果物を次段階で再利用する「情報継承型」への転換が進みます。結果として、設計案の検討回数削減（基本設計段階での複数案比較が効率化）、性能検証時間の短縮（Forma→Revit移行時のモデル再構築が不要）、決定根拠の追跡可能性向上（メタデータの保有）が実現します。施工段階への影響としては、Revitで確定した設計情報にFormaの早期検討結果が紐付くため、変更時の影響範囲評価が容易になり、VE（Value Engineering）提案の判断根拠も明確化されます。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

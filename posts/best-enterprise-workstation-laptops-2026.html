@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>CADやBIM設計業務の現場では、従来デスクトップワークステーションが主流でしたが、施工現場への持ち込み、遠隔コラボレーション、プロジェクトオフィスでの機動的な設計作業など、モバイル環境での高性能計算需要が急速に高まっています。特に2025年以降、AMDの「Strix Halo」「Strix Point」プロセッサやIntelの「Arrow Lake」など、統合GPU性能の飛躍的向上により、従来はNvidiaの離散GPUが必須とされていた大規模モデル処理が、軽量なノートパソコンでも実現可能になりました。国土交通省のBIM/CIM推進ロードマップにおいても、現場DX化の重要施策として施工段階でのBIM活用が掲げられており、現場対応可能なモバイルワークステーションの位置づけが強まっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026年のエンタープライズワークステーション市場は、3つの主要カテゴリに分かれています。14インチ超軽量機はHP ZBook Ultra G1a（1.57kg）とLenovo ThinkPad P14s Gen 6 AMD（1.39kg）が中心で、CAD・BIM標準業務に必要十分な性能を提供します。特にZBook Ultra G1aは「Strix Halo」AMD Ryzen AI Max+ Pro 395（16コア、最大5.7GHz）を搭載し、統合Radeon 8060S GPUは最大96GBのシステムメモリをVRAM代わりに利用できる統一メモリアーキテクチャが特徴です。一方ThinkPad P14s Gen 6 AMDはRyzen AI 9 HX 370を採用し、1.39kgという業界最軽量クラスながらCAD・BIM業務で実用的なパフォーマンスを実現しています。16インチ以上の据置型としてはLenovo ThinkPad P16 Gen 3が最新鋭で、Arrow Lake Intel Core Ultra 200HX（最大24コア）、RTX Pro 5000 Blackwell（24GB）対応、192GBメモリ搭載可能という高スペック構成で、visualization・simulation・AI処理まで対応します。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>CADや<a class="glossary-link" href="../guides/bim.html">BIM</a>設計業務の現場では、従来デスクトップワークステーションが主流でしたが、施工現場への持ち込み、遠隔コラボレーション、プロジェクトオフィスでの機動的な設計作業など、モバイル環境での高性能計算需要が急速に高まっています。特に2025年以降、AMDの「Strix Halo」「Strix Point」プロセッサやIntelの「Arrow Lake」など、統合GPU性能の飛躍的向上により、従来はNvidiaの離散GPUが必須とされていた大規模モデル処理が、軽量なノートパソコンでも実現可能になりました。国土交通省のBIM/CIM推進ロードマップにおいても、現場DX化の重要施策として施工段階でのBIM活用が掲げられており、現場対応可能なモバイルワークステーションの位置づけが強まっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026年のエンタープライズワークステーション市場は、3つの主要カテゴリに分かれています。14インチ超軽量機はHP ZBook Ultra G1a（1.57kg）とLenovo ThinkPad P14s Gen 6 AMD（1.39kg）が中心で、CAD・BIM標準業務に必要十分な性能を提供します。特にZBook Ultra G1aは「Strix Halo」AMD Ryzen AI Max+ Pro 395（16コア、最大5.7GHz）を搭載し、統合Radeon 8060S GPUは最大96GBのシステムメモリをVRAM代わりに利用できる統一メモリアーキテクチャが特徴です。一方ThinkPad P14s Gen 6 AMDはRyzen AI 9 HX 370を採用し、1.39kgという業界最軽量クラスながらCAD・BIM業務で実用的なパフォーマンスを実現しています。16インチ以上の据置型としてはLenovo ThinkPad P16 Gen 3が最新鋭で、Arrow Lake Intel Core Ultra 200HX（最大24コア）、RTX Pro 5000 Blackwell（24GB）対応、192GBメモリ搭載可能という高スペック構成で、visualization・simulation・AI処理まで対応します。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

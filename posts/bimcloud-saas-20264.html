@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>GraphisoftのBIMcloudは、Archicadユーザーのための協調設計プラットフォームとして、オンプレミス版とクラウドSaaS版の二つの形態で提供されています。建設業界全体がクラウド化とリモートワーク対応を急速に進める中、クラウドベースのBIM協調環境の安定性と機能充実は、日本の設計事務所やゼネコンにおいても急速に重要度が高まっています。2025年から2026年にかけて、Graphisoftは段階的にBIMcloudのSaaS版の改善を推進しており、今回のリリースはその継続的な進化の一環です。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Graphisoftは2026年4月にBIMcloud SaaS版の最新バージョンをリリースすることを発表しました。本リリースには複数の機能改善および重要な不具合修正が含まれており、詳細はGraphisoftの改善点一覧（英語版）で公開される予定です。重要な点として、このリリースの対象はBIMcloud SaaS（サブスクリプション版）を利用中のユーザーのみであり、対象となる改善内容は自動的に適用されるため、ユーザー側での追加作業は不要です。オンプレミス版やサブスクリプション以外の契約形態のユーザーは今回のリリース対象外となります。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Graphisoftの<a class="glossary-link" href="../guides/bim.html">BIM</a>cloudは、<a class="glossary-link" href="../guides/archicad.html">Archicad</a>ユーザーのための協調設計プラットフォームとして、オンプレミス版とクラウドSaaS版の二つの形態で提供されています。建設業界全体がクラウド化とリモートワーク対応を急速に進める中、クラウドベースのBIM協調環境の安定性と機能充実は、日本の設計事務所やゼネコンにおいても急速に重要度が高まっています。2025年から2026年にかけて、Graphisoftは段階的にBIMcloudのSaaS版の改善を推進しており、今回のリリースはその継続的な進化の一環です。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Graphisoftは2026年4月にBIMcloud SaaS版の最新バージョンをリリースすることを発表しました。本リリースには複数の機能改善および重要な不具合修正が含まれており、詳細はGraphisoftの改善点一覧（英語版）で公開される予定です。重要な点として、このリリースの対象はBIMcloud SaaS（サブスクリプション版）を利用中のユーザーのみであり、対象となる改善内容は自動的に適用されるため、ユーザー側での追加作業は不要です。オンプレミス版やサブスクリプション以外の契約形態のユーザーは今回のリリース対象外となります。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/archicad-2840-update.html">Archicad 28.4.0が正式リリース、Teamwork運用で注意が必要に</a>
       <span class="mid-related-cat">Archicad</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>BIMcloud SaaSはArchicad環境における複数ユーザーの同時協調設計を実現するプラットフォームで、クラウド上で中央集約されたプロジェクトデータを管理します。SaaS形態での更新は、オンプレミス版と異なりGraphisoft側で自動展開されるため、バージョン管理や互換性の問題が軽減されるメリットがあります。不具合修正を含む今回のリリースにより、サーバーの安定性、データ同期の信頼性、マルチユーザー環境でのロック制御やコンflict解決の仕組みなどが改善される見込みです。IFC（Industry Foundation Classes）との連携やAPI機能の強化も業界標準化の観点から注視すべき点です。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>BIMcloudのSaaS版は、グローバルな建設プロジェクトにおけるリアルタイム協調設計の実現を加速させます。特に国境を越えたプロジェクトチームや、複数の拠点から同時にプロジェクトにアクセスする必要がある組織にとって、クラウドベースの安定した環境は業務効率を大きく向上させます。オンプレミス版と異なりサーバー運用の負担がユーザー側にかからないため、IT資源が限定的な中堅設計事務所でもBIM協調環境の導入が容易になります。また、自動更新により常に最新機能が利用可能になることで、業界全体のBIM熟度の底上げにも貢献します。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>BIMcloud SaaSはArchicad環境における複数ユーザーの同時協調設計を実現するプラットフォームで、クラウド上で中央集約されたプロジェクトデータを管理します。SaaS形態での更新は、オンプレミス版と異なりGraphisoft側で自動展開されるため、バージョン管理や互換性の問題が軽減されるメリットがあります。不具合修正を含む今回のリリースにより、サーバーの安定性、データ同期の信頼性、マルチユーザー環境でのロック制御やコンflict解決の仕組みなどが改善される見込みです。<a class="glossary-link" href="../guides/ifc.html">IFC</a>（Industry Foundation Classes）との連携やAPI機能の強化も業界標準化の観点から注視すべき点です。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>BIMcloudのSaaS版は、グローバルな建設プロジェクトにおけるリアルタイム協調設計の実現を加速させます。特に国境を越えたプロジェクトチームや、複数の拠点から同時にプロジェクトにアクセスする必要がある組織にとって、クラウドベースの安定した環境は業務効率を大きく向上させます。オンプレミス版と異なりサーバー運用の負担がユーザー側にかからないため、IT資源が限定的な中堅設計事務所でもBIM協調環境の導入が容易になります。また、自動更新により常に最新機能が利用可能になることで、業界全体のBIM熟度の底上げにも貢献します。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

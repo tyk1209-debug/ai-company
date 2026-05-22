@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>BIM業界では長年、計画・スキーマティック設計段階と詳細設計段階の間に大きな「溝」が存在してきました。ファイルベースのワークフローでは、各段階で異なるツールを使用するため、早期設計で決定された企図（intent）や意思決定の文脈が失われ、詳細設計に進む際に情報の再入力や設計の焼き直しが常態化していました。Autodesk社は2024年後半のAU25で「design and make intelligence」というビジョンを発表し、計画から設計、施工、運用までのプロジェクトデータを一貫して管理できるプラットフォームの構想を示していました。今回のForma Building Design導入は、そのビジョンを具体化する重要な一歩です。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskは新たに「Forma Building Design」をリリースしました。これはスキーマティック設計（基本計画）段階に特化した設計・分析ツールです。主な機能は以下の通りです。ユーザーは地理情報参照の敷地情報をわずか数分で設定でき、ファサード、フロアプランユニットレイアウトの自動生成・編集機能を備えています。設計案の比較検討時には、昼光量、日照時間、カーボンフットプリントなどの性能分析を統合的に実施できます。スキーマティック設計で選定された設計案は、敷地コンテキストと建築要素を保持したネイティブなRevitモデルとして自動移行でき、詳細設計段階での焼き直し作業を大幅に削減します。対象ユーザーはRevitおよびAEC Collectionのサブスクリプション利用者全員です。また同時に「Forma Carbon Insights」機能が拡張され、Forma Building DesignおよびRevitの両プラットフォームでカーボン分析が可能になりました。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/bim.html">BIM</a>業界では長年、計画・スキーマティック設計段階と詳細設計段階の間に大きな「溝」が存在してきました。ファイルベースのワークフローでは、各段階で異なるツールを使用するため、早期設計で決定された企図（intent）や意思決定の文脈が失われ、詳細設計に進む際に情報の再入力や設計の焼き直しが常態化していました。Autodesk社は2024年後半のAU25で「design and make intelligence」というビジョンを発表し、計画から設計、施工、運用までのプロジェクトデータを一貫して管理できるプラットフォームの構想を示していました。今回のForma Building Design導入は、そのビジョンを具体化する重要な一歩です。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskは新たに「Forma Building Design」をリリースしました。これはスキーマティック設計（基本計画）段階に特化した設計・分析ツールです。主な機能は以下の通りです。ユーザーは地理情報参照の敷地情報をわずか数分で設定でき、ファサード、フロアプランユニットレイアウトの自動生成・編集機能を備えています。設計案の比較検討時には、昼光量、日照時間、カーボンフットプリントなどの性能分析を統合的に実施できます。スキーマティック設計で選定された設計案は、敷地コンテキストと建築要素を保持したネイティブな<a class="glossary-link" href="../guides/revit.html">Revit</a>モデルとして自動移行でき、詳細設計段階での焼き直し作業を大幅に削減します。対象ユーザーはRevitおよびAEC Collectionのサブスクリプション利用者全員です。また同時に「Forma Carbon Insights」機能が拡張され、Forma Building DesignおよびRevitの両プラットフォームでカーボン分析が可能になりました。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

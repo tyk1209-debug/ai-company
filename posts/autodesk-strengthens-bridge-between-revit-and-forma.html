@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Autodeskは、BIM/AEC業界全体のデジタル化とクラウド移行が急速に進む中で、自社の主力製品群をより統合された形で提供する戦略を推し進めています。Revitは1997年のリリース以来、建築BIMの標準ツールとして位置づけられてきた一方で、Formaはクラウドベースの都市計画・早期設計プラットフォームとして、より上流の計画段階やマスタープラン、概念設計に特化して発展しています。これまで両ツール間にはデータの受け渡しに課題があり、手動ファイル交換に頼らざるを得ないという実務上の課題がありました。今回の発表は、こうした課題を解決し、計画・概念設計からディテール設計・ドキュメンテーションまでの一連のワークフローをシームレスに実現する試みです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskが発表した「Revit as a Forma Connected Client」のテックプレビューにより、Revitはクラウドベースの統合設計プラットフォーム（AECO cloud）であるFormaと初めて「深い統合」を実現しました。具体的には、Forma Site DesignおよびForma Building Designのデータを、従来の手動ファイル交換なしにRevitへ直接移行できます。さらに、Forma Data Marketplaceから地形、周辺建物、区画情報などのコンテキストデータを外部プロバイダー経由で取得し、「数クリックで」プロジェクトに追加することが可能になりました。従来はFormaで日光解析やカーボン評価などの環境分析を実施していましたが、これらのクラウド機能がRevit内でも直接実行できるようになります。さらに注目すべきは、Revit登録者すべてがForma Site Design、Forma Building Design、Forma Board、Forma Data Management Essentialsへのアクセス権を自動取得することです。これにより、計画段階の地理的配置設定から、ファサード・間取り・ユニット設計、そして性能評価まで、より統合された体験が実現します。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Autodeskは、<a class="glossary-link" href="../guides/bim.html">BIM</a>/AEC業界全体のデジタル化とクラウド移行が急速に進む中で、自社の主力製品群をより統合された形で提供する戦略を推し進めています。<a class="glossary-link" href="../guides/revit.html">Revit</a>は1997年のリリース以来、建築BIMの標準ツールとして位置づけられてきた一方で、Formaはクラウドベースの都市計画・早期設計プラットフォームとして、より上流の計画段階やマスタープラン、概念設計に特化して発展しています。これまで両ツール間にはデータの受け渡しに課題があり、手動ファイル交換に頼らざるを得ないという実務上の課題がありました。今回の発表は、こうした課題を解決し、計画・概念設計からディテール設計・ドキュメンテーションまでの一連のワークフローをシームレスに実現する試みです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskが発表した「Revit as a Forma Connected Client」のテックプレビューにより、Revitはクラウドベースの統合設計プラットフォーム（AECO cloud）であるFormaと初めて「深い統合」を実現しました。具体的には、Forma Site DesignおよびForma Building Designのデータを、従来の手動ファイル交換なしにRevitへ直接移行できます。さらに、Forma Data Marketplaceから地形、周辺建物、区画情報などのコンテキストデータを外部プロバイダー経由で取得し、「数クリックで」プロジェクトに追加することが可能になりました。従来はFormaで日光解析やカーボン評価などの環境分析を実施していましたが、これらのクラウド機能がRevit内でも直接実行できるようになります。さらに注目すべきは、Revit登録者すべてがForma Site Design、Forma Building Design、Forma Board、Forma Data Management Essentialsへのアクセス権を自動取得することです。これにより、計画段階の地理的配置設定から、ファサード・間取り・ユニット設計、そして性能評価まで、より統合された体験が実現します。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

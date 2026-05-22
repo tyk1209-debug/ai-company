@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Graphisoftは、BIM設計ツール「Archicad」や「BIMx」などのクラウドサービスを運営する際に、ユーザーの認証基盤となるGraphisoft IDを中核として位置づけています。同社は累積して数十万単位のユーザーベースを抱えており、これらのアカウントには氏名やメールアドレスといった個人情報に加えて、ライセンスキーなどの重要な資産が紐付けられています。近年、クラウドサービスへの不正アクセスやデータ漏洩のリスクが急速に高まっており、大手SaaS企業ではセキュリティ強化が経営課題になっています。Graphisoftもこうした業界動向に対応する形で、ID管理戦略の全面的な見直しを実施することにしました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>今回のセキュリティアップデートには、大きく2つの対応が含まれます。第一は「非アクティブアカウントに対する強制パスワード変更」です。Graphisoft IDは、Archicad、BIMx、BIMcloud SaaS、Graphisoftのサービスサイト、Community、Learn、Webstore など複数のプラットフォームに連携しており、これらのいずれにも2023年以降サインインしていないアカウントが最初の対象となります。その後のフェーズでは、1年以上利用されていないアカウントに対象を拡大する予定です。パスワードリセットは、サインインページの「Forgot password?」機能から実施できます。第二は「CAPTCHAの導入」で、登録およびサインインプロセスに段階的に導入されます。新規登録時には必須化され、サインイン時には複数回のログイン失敗や不審なアクセスパターンが検出された場合に表示されます。加えて、多要素認証（MFA）の有効化も推奨されています。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Graphisoftは、<a class="glossary-link" href="../guides/bim.html">BIM</a>設計ツール「<a class="glossary-link" href="../guides/archicad.html">Archicad</a>」や「BIMx」などのクラウドサービスを運営する際に、ユーザーの認証基盤となるGraphisoft IDを中核として位置づけています。同社は累積して数十万単位のユーザーベースを抱えており、これらのアカウントには氏名やメールアドレスといった個人情報に加えて、ライセンスキーなどの重要な資産が紐付けられています。近年、クラウドサービスへの不正アクセスやデータ漏洩のリスクが急速に高まっており、大手SaaS企業ではセキュリティ強化が経営課題になっています。Graphisoftもこうした業界動向に対応する形で、ID管理戦略の全面的な見直しを実施することにしました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>今回のセキュリティアップデートには、大きく2つの対応が含まれます。第一は「非アクティブアカウントに対する強制パスワード変更」です。Graphisoft IDは、Archicad、BIMx、BIMcloud SaaS、Graphisoftのサービスサイト、Community、Learn、Webstore など複数のプラットフォームに連携しており、これらのいずれにも2023年以降サインインしていないアカウントが最初の対象となります。その後のフェーズでは、1年以上利用されていないアカウントに対象を拡大する予定です。パスワードリセットは、サインインページの「Forgot password?」機能から実施できます。第二は「CAPTCHAの導入」で、登録およびサインインプロセスに段階的に導入されます。新規登録時には必須化され、サインイン時には複数回のログイン失敗や不審なアクセスパターンが検出された場合に表示されます。加えて、多要素認証（MFA）の有効化も推奨されています。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/archicad-2840-update.html">Archicad 28.4.0が正式リリース、Teamwork運用で注意が必要に</a>
       <span class="mid-related-cat">Archicad</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Graphisoft IDのセキュリティモデルは、業界標準のアイデンティティ管理手法に沿っています。非アクティブアカウントへの強制パスワード変更は、パスワード再利用検査やクレデンシャルスタッフィング攻撃への対抗手段として機能します。CAPTCHAは、自動化されたボット攻撃やブルートフォース攻撃を防止する古典的かつ有効なメカニズムです。従来のCAPTCHAに比べて、最新のreCAPTCHA v3のような実装では、ユーザー操作を最小化しながら背後で自動的にスコアリングするアプローチが主流となっています。MFAの導入は、パスワード漏洩後の不正アクセスを実質的に阻止でき、金融機関やSaaS企業で採用が急速に進んでいます。Graphisoftの多段階展開戦略は、既存ユーザーへの急激な負担を避けつつ、段階的にセキュリティレベルを引き上げるための現実的なアプローチです。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>BIM・AEC業界では、設計データやプロジェクト情報の機密性が極めて重要です。Archicad のような設計ツールがクラウド化していく過程で、認証セキュリティの強化は必須条件となっています。特に国際競争力を持つArchicadやAutodesKのRevit、Bentleyのいずれもが、クラウドプラットフォームの拡充とセキュリティ投資を並行して進めています。Graphisoftが今回実施する強制パスワード変更やCAPTCHA導入は、グローバルなBIMツール市場全体が採用している標準的なセキュリティプラクティスと合致しています。設計事務所やゼネコン、サブコン側からは、こうしたセキュリティ強化が契約者属性の確認や法令遵守（例：GDPR対応など）の観点から歓迎される傾向が強まっています。一方、非アクティブアカウント対策により、実務者が一度サービスから離脱すると再利用の障壁が上がる点は、ユーザーリテンション戦略とのバランスを要求します。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Graphisoft IDのセキュリティモデルは、業界標準のアイデンティティ管理手法に沿っています。非アクティブアカウントへの強制パスワード変更は、パスワード再利用検査やクレデンシャルスタッフィング攻撃への対抗手段として機能します。CAPTCHAは、自動化されたボット攻撃やブルートフォース攻撃を防止する古典的かつ有効なメカニズムです。従来のCAPTCHAに比べて、最新のreCAPTCHA v3のような実装では、ユーザー操作を最小化しながら背後で自動的にスコアリングするアプローチが主流となっています。MFAの導入は、パスワード漏洩後の不正アクセスを実質的に阻止でき、金融機関やSaaS企業で採用が急速に進んでいます。Graphisoftの多段階展開戦略は、既存ユーザーへの急激な負担を避けつつ、段階的にセキュリティレベルを引き上げるための現実的なアプローチです。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>BIM・AEC業界では、設計データやプロジェクト情報の機密性が極めて重要です。Archicad のような設計ツールがクラウド化していく過程で、認証セキュリティの強化は必須条件となっています。特に国際競争力を持つArchicadやAutodesKの<a class="glossary-link" href="../guides/revit.html">Revit</a>、Bentleyのいずれもが、クラウドプラットフォームの拡充とセキュリティ投資を並行して進めています。Graphisoftが今回実施する強制パスワード変更やCAPTCHA導入は、グローバルなBIMツール市場全体が採用している標準的なセキュリティプラクティスと合致しています。設計事務所やゼネコン、サブコン側からは、こうしたセキュリティ強化が契約者属性の確認や法令遵守（例：GDPR対応など）の観点から歓迎される傾向が強まっています。一方、非アクティブアカウント対策により、実務者が一度サービスから離脱すると再利用の障壁が上がる点は、ユーザーリテンション戦略とのバランスを要求します。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

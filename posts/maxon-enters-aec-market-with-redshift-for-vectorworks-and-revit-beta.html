@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>建築ビジュアライゼーション市場では、設計者がBIMモデルから高品質なレンダリングを素早く生成したいというニーズが高まっています。従来はRevitやVectorworksからデータをエクスポートして別ソフトでレンダリングする工程が必要でしたが、その手間と時間がボトルネックになっていました。映像・VFX分野で実績を持つMaxon（Cinema 4D・Redshiftの開発元）のNemetschekグループ内での展開が注目されていました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Nemetschekグループ傘下のMaxonは、「Redshift for Vectorworks」の商用版リリースと「Redshift for Autodesk Revit」のベータ版公開を発表し、AEC市場への本格参入を宣言した。Redshiftはリアルタイムレンダリングエンジンで、BIMモデルから映画品質のビジュアライゼーションを短時間で生成できる。「Capsules」と呼ぶアセットライブラリを月次更新で提供し、建築向けのマテリアルや照明設定を追加し続ける。Mac/Windows両対応で、Maya・HoudiniなどのDCCパイプラインとも接続できる設計になっている。2026年から2027年にかけてさらなるBIMツール統合が予定されている。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建築ビジュアライゼーション市場では、設計者が<a class="glossary-link" href="../guides/bim.html">BIM</a>モデルから高品質なレンダリングを素早く生成したいというニーズが高まっています。従来は<a class="glossary-link" href="../guides/revit.html">Revit</a>やVectorworksからデータをエクスポートして別ソフトでレンダリングする工程が必要でしたが、その手間と時間がボトルネックになっていました。映像・VFX分野で実績を持つMaxon（Cinema 4D・Redshiftの開発元）のNemetschekグループ内での展開が注目されていました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Nemetschekグループ傘下のMaxonは、「Redshift for Vectorworks」の商用版リリースと「Redshift for Autodesk Revit」のベータ版公開を発表し、AEC市場への本格参入を宣言した。Redshiftはリアルタイムレンダリングエンジンで、BIMモデルから映画品質のビジュアライゼーションを短時間で生成できる。「Capsules」と呼ぶアセットライブラリを月次更新で提供し、建築向けのマテリアルや照明設定を追加し続ける。Mac/Windows両対応で、Maya・HoudiniなどのDCCパイプラインとも接続できる設計になっている。2026年から2027年にかけてさらなるBIMツール統合が予定されている。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

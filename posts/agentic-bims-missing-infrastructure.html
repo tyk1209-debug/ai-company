@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>AIが建築・設計プロセスに深く統合される「エージェンティックBIM」の時代が近づいている。しかし、現在のBIMプラットフォームとAIエージェントの組み合わせは、極めて限定的な「提案支援」のレベルにとどまっている。Google DeepMindが発表した論文「Intelligent AI Delegation」は、このギャップを具体的に明らかにしている。BIM業界では、AIを既存プラットフォームに追加装備（bolt-on）すれば、スケーラブルで安全なエージェンティック設計が実現できると想定されてきた。しかし学術的な「委譲」の概念を適用すると、その前提は根本的に誤っていることが露呈する。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Google DeepMindの論文が提唱する「委譲（delegation）」とは、「権限移譲（authority transfer）」を意味する。現在のAI-in-BIM実装──例えばClashの自動解決提案、ダクトルート自動生成、スケジュール作成補助──は、すべて「支援」の範疇である。設計者が最終的に提案を検証し、責任を負う構図が変わらない。一方、真の「委譲」では、AIエージェントが建築基準法、火災避難要件、構造座標との整合性といった複数の制約条件を同時に満たす検証可能な証拠を提示して、初めて意思決定の責任を移譲する。現在のFinch（平面最適化）やBranch 3D（構造解析と原価・炭素フィードバック統合）は、個別分野での最適化は行うが、学際的な制約解決のメカニズムがない。建築計画エージェントはMEP配置と干渉しても気づかず、統合的な妥当性をシステム的に保証できない。建築家が手作業で調整する構図は変わっていない。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>AIが建築・設計プロセスに深く統合される「エージェンティック<a class="glossary-link" href="../guides/bim.html">BIM</a>」の時代が近づいている。しかし、現在のBIMプラットフォームとAIエージェントの組み合わせは、極めて限定的な「提案支援」のレベルにとどまっている。Google DeepMindが発表した論文「Intelligent AI Delegation」は、このギャップを具体的に明らかにしている。BIM業界では、AIを既存プラットフォームに追加装備（bolt-on）すれば、スケーラブルで安全なエージェンティック設計が実現できると想定されてきた。しかし学術的な「委譲」の概念を適用すると、その前提は根本的に誤っていることが露呈する。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Google DeepMindの論文が提唱する「委譲（delegation）」とは、「権限移譲（authority transfer）」を意味する。現在のAI-in-BIM実装──例えばClashの自動解決提案、ダクトルート自動生成、スケジュール作成補助──は、すべて「支援」の範疇である。設計者が最終的に提案を検証し、責任を負う構図が変わらない。一方、真の「委譲」では、AIエージェントが建築基準法、火災避難要件、構造座標との整合性といった複数の制約条件を同時に満たす検証可能な証拠を提示して、初めて意思決定の責任を移譲する。現在のFinch（平面最適化）やBranch 3D（構造解析と原価・炭素フィードバック統合）は、個別分野での最適化は行うが、学際的な制約解決のメカニズムがない。建築計画エージェントはMEP配置と干渉しても気づかず、統合的な妥当性をシステム的に保証できない。建築家が手作業で調整する構図は変わっていない。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Google論文が提示する「契約優先分解（contract-first decomposition）」は、本質的な技術転換を要求する。すべてのタスクは、その出力が検証可能になるまで分解されねばならない。検証コストが高ければ、さらに細粒度に分解する。つまり、検証可能性はオプション機能ではなく、アーキテクチャの根幹に組み込まれる必要がある。これは従来のBIM（容器としてのジオメトリ中心）から、BIMランタイム（実行環境）への根本的な転換を意味する。従来は幾何学的オブジェクトがアーティファクトであり、下流ツールが分析データを後付けする。エージェンティックシステムでは、ジオメトリは二次的であり、主要アーティファクトは「証明（proof）」になる。応力伝達経路、炭素計算、建築法規適合性──これらすべてが検証可能な形式で出力される必要がある。このモデルでは、単なるデータスキーマの拡張は不十分であり、ワークフロー全体を根本的に再設計する必要がある。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>エージェンティックBIMが産業規模で導入されるには、現在のプラットフォーム（Revit、Archicad、BentleyなどのモノリシックCAD統合環境）は本質的な再構築を迫られる。特に大規模複合プロジェクト（100棟以上の住宅群、超高層複合施設など）では、複数エージェント（建築、構造、MEP、プロジェクト管理）が並行して稼働し、リアルタイムで制約を相互交渉するアーキテクチャが必須となる。IFC（Industry Foundation Classes）標準すら、検証プルーフチェーンの埋め込みに対応していない。建設テックスタートアップが単独で解決可能な課題ではなく、CADベンダー、クラウドインフラ企業、規格策定機関の協調的な取り組みが必要である。このギャップが埋まるまで、エージェンティックBIMは「高度な提案支援」の段階に留まり、本来期待される生産性向上と自動化の効果は限定的である。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Google論文が提示する「契約優先分解（contract-first decomposition）」は、本質的な技術転換を要求する。すべてのタスクは、その出力が検証可能になるまで分解されねばならない。検証コストが高ければ、さらに細粒度に分解する。つまり、検証可能性はオプション機能ではなく、アーキテクチャの根幹に組み込まれる必要がある。これは従来のBIM（容器としてのジオメトリ中心）から、BIMランタイム（実行環境）への根本的な転換を意味する。従来は幾何学的オブジェクトがアーティファクトであり、下流ツールが分析データを後付けする。エージェンティックシステムでは、ジオメトリは二次的であり、主要アーティファクトは「証明（proof）」になる。応力伝達経路、炭素計算、建築法規適合性──これらすべてが検証可能な形式で出力される必要がある。このモデルでは、単なるデータスキーマの拡張は不十分であり、ワークフロー全体を根本的に再設計する必要がある。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>エージェンティックBIMが産業規模で導入されるには、現在のプラットフォーム（<a class="glossary-link" href="../guides/revit.html">Revit</a>、<a class="glossary-link" href="../guides/archicad.html">Archicad</a>、BentleyなどのモノリシックCAD統合環境）は本質的な再構築を迫られる。特に大規模複合プロジェクト（100棟以上の住宅群、超高層複合施設など）では、複数エージェント（建築、構造、MEP、プロジェクト管理）が並行して稼働し、リアルタイムで制約を相互交渉するアーキテクチャが必須となる。<a class="glossary-link" href="../guides/ifc.html">IFC</a>（Industry Foundation Classes）標準すら、検証プルーフチェーンの埋め込みに対応していない。建設テックスタートアップが単独で解決可能な課題ではなく、CADベンダー、クラウドインフラ企業、規格策定機関の協調的な取り組みが必要である。このギャップが埋まるまで、エージェンティックBIMは「高度な提案支援」の段階に留まり、本来期待される生産性向上と自動化の効果は限定的である。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

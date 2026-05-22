@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>米国の建設業界は年2兆ドルの経済規模を持ちながら、今後10年で数十万人の人手不足が見込まれています。特にデジタル化が急速に進む中で、BIMやCAD、AIを活用した設計・施工スキルを備えた人材の育成が急務となっており、業界と教育機関の連携強化が業界全体の課題となっていました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskはハワード大学に195万ドル（約3億円相当）を寄付し、同大学の建築・工学部に「Construction Engineering Management」プログラムの開発を支援することを発表しました。これは2024年の500万ドル寄付に続く追加投資です。併せて、AIを活用した設計とデジタルファブリケーション機能を備えた「CEA Makerspace」が開設され、学生がRevitなどのAutodeskツールを使い、プロトタイプ制作から実プロジェクトまで一貫した学習が可能になります。</p><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>MakerspaceではAutodeskの設計・施工関連ソフト（Revit、Construction Cloudなど）が統合されており、学生はBIMモデルの作成から施工計画、デジタルファブリケーション、統合プロジェクトデリバリーまで、業界標準のワークフロー全体を実践的に習得できます。これにより大学の机上学習と現場実務の距離が大幅に短縮されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>本プログラムの卒業生は、デジタルツールを使いこなす次世代の施工管理者・エンジニアとなり、米国建設業界のデジタル化を加速させる人材供給源となります。特に複雑な建設プロジェクトの効率化、工期短縮、コスト削減が期待でき、建設業界全体の生産性向上と競争力強化につながる重要なステップとなります。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>米国の建設業界は年2兆ドルの経済規模を持ちながら、今後10年で数十万人の人手不足が見込まれています。特にデジタル化が急速に進む中で、<a class="glossary-link" href="../guides/bim.html">BIM</a>やCAD、AIを活用した設計・施工スキルを備えた人材の育成が急務となっており、業界と教育機関の連携強化が業界全体の課題となっていました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskはハワード大学に195万ドル（約3億円相当）を寄付し、同大学の建築・工学部に「Construction Engineering Management」プログラムの開発を支援することを発表しました。これは2024年の500万ドル寄付に続く追加投資です。併せて、AIを活用した設計とデジタルファブリケーション機能を備えた「CEA Makerspace」が開設され、学生が<a class="glossary-link" href="../guides/revit.html">Revit</a>などのAutodeskツールを使い、プロトタイプ制作から実プロジェクトまで一貫した学習が可能になります。</p><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>MakerspaceではAutodeskの設計・施工関連ソフト（Revit、Construction Cloudなど）が統合されており、学生はBIMモデルの作成から施工計画、デジタルファブリケーション、統合プロジェクトデリバリーまで、業界標準のワークフロー全体を実践的に習得できます。これにより大学の机上学習と現場実務の距離が大幅に短縮されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>本プログラムの卒業生は、デジタルツールを使いこなす次世代の施工管理者・エンジニアとなり、米国建設業界のデジタル化を加速させる人材供給源となります。特に複雑な建設プロジェクトの効率化、工期短縮、コスト削減が期待でき、建設業界全体の生産性向上と競争力強化につながる重要なステップとなります。</p>
           </div>
         </div>
         
@@ -1947,6 +1958,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

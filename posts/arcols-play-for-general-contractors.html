@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>AEC業界は現在、生成AIとエージェント技術の急速な進展を前に大きな転換点を迎えています。従来のRevitに代表されるシングルユーザー型BIMツールの時代が終焉を迎えようとする中、新しいアーキテクチャに基づくプラットフォームの登場が加速しています。Arcolは建築デベロッパー向けソフトウェアから出発しましたが、CEO Paul O'Carrollの戦略的な思考は、Procore創業者Tooey Courtemancheをアドバイザーに迎えるなど、ゼネラルコントラクター（GC）市場への本格展開を視野に入れています。同社の現在の戦略は、実はAIブーム以前に遡ります。&quot;リアルタイム共同編集機能を備えたインテリジェント設計ツール&quot;という当初のビジョンが、LLMとエージェント技術の急速な進化により、今ようやく現実的な技術ロードマップとして実装可能になったのです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Arcolの核となる主張は、従来のシングルプレイヤーBIMツール（Revit）では対応不可能な、エージェント型ワークフローへの転換が業界の次のステップだということです。同社は、リアルタイムコラボレーション（Figmaに例えられることが多い）と、複数のAIエージェントが同じデータストリームに同時アクセスして競合なく編集できる&quot;ランタイム&quot;の構築を柱としています。コンセプト・フィージビリティ段階ではこの環境を既に整備済みで、現在はスキーマティックデザイン段階への深掘りと、エージェント層の追加を進めています。商用モデルは&quot;Consigliere Model&quot;と名付けられており、Arcol社が汎用的なコスティングエージェントを開発するのではなく、例えばTurner Constructionのコスティングエージェントをプロジェクトファイルに呼び込む仕組みです。このエージェントはTurnerの蓄積した案件履歴を携え、企業として責任を持つ見積値を提示します。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>AEC業界は現在、生成AIとエージェント技術の急速な進展を前に大きな転換点を迎えています。従来の<a class="glossary-link" href="../guides/revit.html">Revit</a>に代表されるシングルユーザー型<a class="glossary-link" href="../guides/bim.html">BIM</a>ツールの時代が終焉を迎えようとする中、新しいアーキテクチャに基づくプラットフォームの登場が加速しています。Arcolは建築デベロッパー向けソフトウェアから出発しましたが、CEO Paul O'Carrollの戦略的な思考は、Procore創業者Tooey Courtemancheをアドバイザーに迎えるなど、ゼネラルコントラクター（GC）市場への本格展開を視野に入れています。同社の現在の戦略は、実はAIブーム以前に遡ります。&quot;リアルタイム共同編集機能を備えたインテリジェント設計ツール&quot;という当初のビジョンが、LLMとエージェント技術の急速な進化により、今ようやく現実的な技術ロードマップとして実装可能になったのです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Arcolの核となる主張は、従来のシングルプレイヤーBIMツール（Revit）では対応不可能な、エージェント型ワークフローへの転換が業界の次のステップだということです。同社は、リアルタイムコラボレーション（Figmaに例えられることが多い）と、複数のAIエージェントが同じデータストリームに同時アクセスして競合なく編集できる&quot;ランタイム&quot;の構築を柱としています。コンセプト・フィージビリティ段階ではこの環境を既に整備済みで、現在はスキーマティックデザイン段階への深掘りと、エージェント層の追加を進めています。商用モデルは&quot;Consigliere Model&quot;と名付けられており、Arcol社が汎用的なコスティングエージェントを開発するのではなく、例えばTurner Constructionのコスティングエージェントをプロジェクトファイルに呼び込む仕組みです。このエージェントはTurnerの蓄積した案件履歴を携え、企業として責任を持つ見積値を提示します。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

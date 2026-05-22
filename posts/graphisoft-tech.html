@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Graphisoftは建築・建設業界向けBIMソフトウェアArchicadの国内ユーザー層の拡大と実務スキル向上を目的として、定期的なTechセミナーを開催しています。日本市場におけるArchicad導入は、ここ数年加速しており、特に中堅設計事務所や実務者の間でBIM導入検討が活発化しています。一方で、従来の2D CAD運用から切り替わった設計者の多くが、BIMツールとしての機能と図面表現のギャップに直面するという課題が指摘されています。本セミナーは、こうした実務レベルの課題を解決し、日本特有の設計・確認申請ワークフローに対応したツール活用法を紹介する企画です。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026年4月17日（金）14時～17時、東京都千代田区永田町で開催予定です。定員80名の対面セミナーで、以下3つの講演・ワークショップで構成されています。第1部では、YA+A横松建築事務所の横松邦明氏が「ヒアリング×BIM×三位一体管理」をテーマに講演。著書『「試せない建築」を経営資産に変える』の知見から、設計前段階での後戻りコスト最小化の重要性と、BIMを活用した経営戦略としての建築設計プロセスについて語ります。第2部はArchicadの図面表現機能に焦点を当て、2D CADからの移行時に生じる表現上の課題（ペンと線の運用、平面図投影線、上部線の扱い等）への実践的対応方法を解説。第3部ではGraphisoftが日本市場向けに開発した「Extensions JPNツール」の最新機能を紹介。敷地マネージャーなど、日本の法規確認申請プロセスに対応した機能強化と、BIM図面審査効率化のための実装内容を案内する予定です。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Graphisoftは建築・建設業界向け<a class="glossary-link" href="../guides/bim.html">BIM</a>ソフトウェア<a class="glossary-link" href="../guides/archicad.html">Archicad</a>の国内ユーザー層の拡大と実務スキル向上を目的として、定期的なTechセミナーを開催しています。日本市場におけるArchicad導入は、ここ数年加速しており、特に中堅設計事務所や実務者の間でBIM導入検討が活発化しています。一方で、従来の2D CAD運用から切り替わった設計者の多くが、BIMツールとしての機能と図面表現のギャップに直面するという課題が指摘されています。本セミナーは、こうした実務レベルの課題を解決し、日本特有の設計・確認申請ワークフローに対応したツール活用法を紹介する企画です。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026年4月17日（金）14時～17時、東京都千代田区永田町で開催予定です。定員80名の対面セミナーで、以下3つの講演・ワークショップで構成されています。第1部では、YA+A横松建築事務所の横松邦明氏が「ヒアリング×BIM×三位一体管理」をテーマに講演。著書『「試せない建築」を経営資産に変える』の知見から、設計前段階での後戻りコスト最小化の重要性と、BIMを活用した経営戦略としての建築設計プロセスについて語ります。第2部はArchicadの図面表現機能に焦点を当て、2D CADからの移行時に生じる表現上の課題（ペンと線の運用、平面図投影線、上部線の扱い等）への実践的対応方法を解説。第3部ではGraphisoftが日本市場向けに開発した「Extensions JPNツール」の最新機能を紹介。敷地マネージャーなど、日本の法規確認申請プロセスに対応した機能強化と、BIM図面審査効率化のための実装内容を案内する予定です。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/archicad-2840-update.html">Archicad 28.4.0が正式リリース、Teamwork運用で注意が必要に</a>
       <span class="mid-related-cat">Archicad</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Archicadの図面表現機能は、BIM本来の3Dモデルベース設計とともに、2次元図面出力の精度と柔軟性が問われます。特に日本の確認申請では、法的要件に基づいた投影線表示、線種・線幅の厳密な管理が必要であり、単なるBIMモデルから自動生成された図面では不十分なケースが多いです。Extensions JPNツールは、こうした日本特有のルール（敷地境界管理、法定の断面図表現、寸法体系等）をプラグイン形式で実装し、Archicad本体との統合性を保ちながら対応する仕組みです。この階層化されたアプローチは、IFC標準準拠のコア機能を保ちつつ、地域・国別のカスタマイズを効率的に行う現代的なBIMツール戦略を示しています。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>GraphisoftはグローバルBIMソフトウェア市場でAutodesk Revitに並ぶ主要プレイヤーです。本セミナーシリーズは、日本市場における Archicad の現場適用を加速させるための重要な取り組みです。特に実務者が直面する「BIMツールの使い勝手」と「従来の設計品質の維持」のバランス課題に正面から取り組むことで、BIM導入の心理的・実務的ハードルを低下させます。また、Extensions JPNのような地域特化型機能開発は、海外BIMソフトが日本市場で競争力を持つための必須戦略となっており、国内CAD・BIM市場全体の進化を促す競争環境を形成します。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Archicadの図面表現機能は、BIM本来の3Dモデルベース設計とともに、2次元図面出力の精度と柔軟性が問われます。特に日本の確認申請では、法的要件に基づいた投影線表示、線種・線幅の厳密な管理が必要であり、単なるBIMモデルから自動生成された図面では不十分なケースが多いです。Extensions JPNツールは、こうした日本特有のルール（敷地境界管理、法定の断面図表現、寸法体系等）をプラグイン形式で実装し、Archicad本体との統合性を保ちながら対応する仕組みです。この階層化されたアプローチは、<a class="glossary-link" href="../guides/ifc.html">IFC</a>標準準拠のコア機能を保ちつつ、地域・国別のカスタマイズを効率的に行う現代的なBIMツール戦略を示しています。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>GraphisoftはグローバルBIMソフトウェア市場でAutodesk <a class="glossary-link" href="../guides/revit.html">Revit</a>に並ぶ主要プレイヤーです。本セミナーシリーズは、日本市場における Archicad の現場適用を加速させるための重要な取り組みです。特に実務者が直面する「BIMツールの使い勝手」と「従来の設計品質の維持」のバランス課題に正面から取り組むことで、BIM導入の心理的・実務的ハードルを低下させます。また、Extensions JPNのような地域特化型機能開発は、海外BIMソフトが日本市場で競争力を持つための必須戦略となっており、国内CAD・BIM市場全体の進化を促す競争環境を形成します。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

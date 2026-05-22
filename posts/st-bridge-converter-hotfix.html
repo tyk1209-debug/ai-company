@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Archicadユーザーが日本の建設現場でBIM導入を進める際、ST-Bridge形式への変換は設計情報の受け渡しにおいて重要な役割を担っています。ST-Bridgeは日本国内で開発された中立的なBIM交換フォーマットで、建築BIM推進会議がIFC標準化と並行して推進している国内標準です。Graphisoft（Archicadの開発元）は日本市場対応を強化する一環として、ST-Bridge変換とIFCプロパティ管理機能をアドオン化してきました。今回のHotfixアップデートは、これらのアドオンで報告されていた複数の致命的バグに対応したものです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>GraphisoftはArchicad 29および28向けのST-Bridge Converterと断面リスト作成ツールについて、Hotfixアップデートをリリースしました。修正内容は以下の通りです。ST-Bridge Converter では、ST-Bridge変換用オブジェクトがロードされない場合があるという不具合を修正しました。これは変換プロセスの初期段階で発生していた問題で、ユーザーが変換機能そのものを使用できなくなる致命的なバグでした。また、Guid（グローバルユニークID）を指定していない部材が正しく変換されない不具合も修正しました。これはIFCデータの一意性識別に関わる問題で、複数ファイルの統合やデータベース管理に直結する問題です。断面リスト作成ツールでは、要素設定ダイアログでOKボタンを押した際に一部のIFCプロパティが消失する不具合に対応しました。このバグはメタデータロスにつながり、後続の設計変更管理やファミリー情報の管理に支障をきたしていました。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/archicad.html">Archicad</a>ユーザーが日本の建設現場で<a class="glossary-link" href="../guides/bim.html">BIM</a>導入を進める際、ST-Bridge形式への変換は設計情報の受け渡しにおいて重要な役割を担っています。ST-Bridgeは日本国内で開発された中立的なBIM交換フォーマットで、建築BIM推進会議が<a class="glossary-link" href="../guides/ifc.html">IFC</a>標準化と並行して推進している国内標準です。Graphisoft（Archicadの開発元）は日本市場対応を強化する一環として、ST-Bridge変換とIFCプロパティ管理機能をアドオン化してきました。今回のHotfixアップデートは、これらのアドオンで報告されていた複数の致命的バグに対応したものです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>GraphisoftはArchicad 29および28向けのST-Bridge Converterと断面リスト作成ツールについて、Hotfixアップデートをリリースしました。修正内容は以下の通りです。ST-Bridge Converter では、ST-Bridge変換用オブジェクトがロードされない場合があるという不具合を修正しました。これは変換プロセスの初期段階で発生していた問題で、ユーザーが変換機能そのものを使用できなくなる致命的なバグでした。また、Guid（グローバルユニークID）を指定していない部材が正しく変換されない不具合も修正しました。これはIFCデータの一意性識別に関わる問題で、複数ファイルの統合やデータベース管理に直結する問題です。断面リスト作成ツールでは、要素設定ダイアログでOKボタンを押した際に一部のIFCプロパティが消失する不具合に対応しました。このバグはメタデータロスにつながり、後続の設計変更管理やファミリー情報の管理に支障をきたしていました。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/archicad-2840-update.html">Archicad 28.4.0が正式リリース、Teamwork運用で注意が必要に</a>
       <span class="mid-related-cat">Archicad</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>ST-Bridge形式への変換におけるオブジェクトロード失敗は、アドオンのライブラリ参照パスやキャッシング機構の不具合と考えられます。IFC標準ではGuidは必須プロパティですが、ArchicadのRhinoやSketchUpとの相互運用性を考慮すると、Guid未指定の部材でも幾何学情報から自動生成すべき設計になっていたはずです。これが機能していなかったということは、変換エンジンの内部ロジックに根本的な問題があったことを示唆しています。IFCプロパティ消失バグは、ダイアログのコミット処理とメモリ管理の問題で、特にWindowsとmacOS両プラットフォームでの動作検証不足を反映しているとも考えられます。これらの修正により、IFCデータの完全性と相互運用性が向上するとともに、Archicad→ST-Bridge→他CAD間のワークフロー信頼性が高まります。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>このアップデートは、Archicadを採用するゼネコンや設計事務所にとって直接的な実務影響を持ちます。特に日本国内では、BIMデータの各段階での確認申請対応やプロジェクト間のデータ受け渡しにST-Bridge形式が活用されており、変換プロセスの信頼性は施工図や積算データへのトレーサビリティに関わります。変換失敗やプロパティロスが無くなることで、Archicadベースの設計データが施工側システム（ScanBIM、ANDPAD等）へシームレスに連携する環境が整備されます。また、マルチCAD環境での協働設計が一般化する中で、Revit→Archicad→他システムといった複数方向での変換信頼性が建築プロジェクトのDX推進に不可欠な要素となっています。このHotfixは、グローバルBIMプロジェクトにおけるArchicadの立場強化にも寄与します。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>ST-Bridge形式への変換におけるオブジェクトロード失敗は、アドオンのライブラリ参照パスやキャッシング機構の不具合と考えられます。IFC標準ではGuidは必須プロパティですが、ArchicadのRhinoやSketchUpとの相互運用性を考慮すると、Guid未指定の部材でも幾何学情報から自動生成すべき設計になっていたはずです。これが機能していなかったということは、変換エンジンの内部ロジックに根本的な問題があったことを示唆しています。IFCプロパティ消失バグは、ダイアログのコミット処理とメモリ管理の問題で、特にWindowsとmacOS両プラットフォームでの動作検証不足を反映しているとも考えられます。これらの修正により、IFCデータの完全性と相互運用性が向上するとともに、Archicad→ST-Bridge→他CAD間のワークフロー信頼性が高まります。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>このアップデートは、Archicadを採用するゼネコンや設計事務所にとって直接的な実務影響を持ちます。特に日本国内では、BIMデータの各段階での確認申請対応やプロジェクト間のデータ受け渡しにST-Bridge形式が活用されており、変換プロセスの信頼性は施工図や積算データへのトレーサビリティに関わります。変換失敗やプロパティロスが無くなることで、Archicadベースの設計データが施工側システム（ScanBIM、ANDPAD等）へシームレスに連携する環境が整備されます。また、マルチCAD環境での協働設計が一般化する中で、<a class="glossary-link" href="../guides/revit.html">Revit</a>→Archicad→他システムといった複数方向での変換信頼性が建築プロジェクトのDX推進に不可欠な要素となっています。このHotfixは、グローバルBIMプロジェクトにおけるArchicadの立場強化にも寄与します。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

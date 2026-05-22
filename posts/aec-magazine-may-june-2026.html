@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>建設・設計業界のAI導入が加速する中、AEC Magazineの2026年5月号は「エージェンティックBIM」という新しいパラダイムシフトを扱う。従来のBIMツールが人間主導の設計プロセスを支援する形だったのに対し、エージェンティックBIMは自律的に判断・設計を行うAIエージェントを前提としている。Google研究論文で基本フレームワークが提示されるなど、技術的な可能性が急速に高まる一方で、実装に向けた課題が明らかになり始めている。2026年はこうした理論と実装のギャップが本格的に議論される転換点となっている。</p><h2 class="article-section-h2"><span>内容</span></h2><p>本号の主要記事は、BIM産業における4つの重大なテーマを取り上げている。第一に、Palantirがエンタープライズデータ統合プラットフォームとしてAEC市場に参入。プロジェクト・財務・運用データを一元化し、より高速な意思決定を可能にする。第二に、HVACRのようなエンジニアリング規律特化型AI設計ツールが、汎用BIMツールより先行して実装されている事実が浮き彫りになった。第三に、Arcol社がゼネコン市場を主軸にしたエージェンティックBIM戦略を展開。BIM作成ツールの標準化論争を超えた、より実装的なアプローチを示している。第四に、HPが2D図面とデジタルCADファイル、現場レイアウトの同期を実現し、物理・デジタル世界の接続を進めている。また、本号ではNXT BLD 2026（10周年特別版）の開催予告が含まれ、11のテーマで最新AEC技術トレンドを網羅する。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建設・設計業界のAI導入が加速する中、AEC Magazineの2026年5月号は「エージェンティック<a class="glossary-link" href="../guides/bim.html">BIM</a>」という新しいパラダイムシフトを扱う。従来のBIMツールが人間主導の設計プロセスを支援する形だったのに対し、エージェンティックBIMは自律的に判断・設計を行うAIエージェントを前提としている。Google研究論文で基本フレームワークが提示されるなど、技術的な可能性が急速に高まる一方で、実装に向けた課題が明らかになり始めている。2026年はこうした理論と実装のギャップが本格的に議論される転換点となっている。</p><h2 class="article-section-h2"><span>内容</span></h2><p>本号の主要記事は、BIM産業における4つの重大なテーマを取り上げている。第一に、Palantirがエンタープライズデータ統合プラットフォームとしてAEC市場に参入。プロジェクト・財務・運用データを一元化し、より高速な意思決定を可能にする。第二に、HVACRのようなエンジニアリング規律特化型AI設計ツールが、汎用BIMツールより先行して実装されている事実が浮き彫りになった。第三に、Arcol社がゼネコン市場を主軸にしたエージェンティックBIM戦略を展開。BIM作成ツールの標準化論争を超えた、より実装的なアプローチを示している。第四に、HPが2D図面とデジタルCADファイル、現場レイアウトの同期を実現し、物理・デジタル世界の接続を進めている。また、本号ではNXT BLD 2026（10周年特別版）の開催予告が含まれ、11のテーマで最新AEC技術トレンドを網羅する。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hvakr-integrated-ai-hvac-design.html">AIが機械設計を自動化、HVACRが統合クラウド設計に挑む</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

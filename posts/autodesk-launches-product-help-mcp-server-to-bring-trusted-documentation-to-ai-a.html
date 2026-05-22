@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Autodeskin を中心とした設計・建設業界では、生成AI の活用が急速に進む一方、AI が提供する情報の信頼性と正確性が大きな課題となっています。特にRevit や AutoCAD などの複雑な設計ソフトウェアの学習や問題解決において、LLM（大規模言語モデル）が一般的なインターネット情報を学習源とする場合、古い情報や不正確な回答を生成するリスクがあります。建築・土木・製造分野では設計精度が直接的に品質や安全性に影響するため、AI が参照する情報源の正当性が極めて重要です。Autodesk は「信頼できるAI」を組織の中核方針とし、Autodesk Assistant など製品内AI機能の強化を進めてきました。今回の MCP サーバー公開は、その戦略の延長線上にある、業界全体への信頼できる情報基盤の提供という新しい試みです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodesk が発表した「Product Help MCP Server」は、Autodesk の110以上の製品に関する公式ヘルプドキュメントへのセキュアなアクセスを、外部の AI エージェント（ChatGPT やそのほかの生成AI プラットフォーム）に提供するサーバーです。MCP は Model Context Protocol の略で、AI エージェントが外部のツールやデータベースと安全に連携するための業界標準プロトコルです。このサーバーは読み取り専用で、無償で提供されます。ユーザーが外部の AI アシスタント（例えば Claude や ChatGPT）に Revit の特定の機能について質問した場合、その AI は Autodesk の最新かつ公式なドキュメントから直接情報を取得し、正確な回答を生成できるようになります。初心者の製品学習、新機能の探索、トラブル解決など、あらゆるユースケースで信頼性の高いガイダンスが得られます。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Autodeskin を中心とした設計・建設業界では、生成AI の活用が急速に進む一方、AI が提供する情報の信頼性と正確性が大きな課題となっています。特に<a class="glossary-link" href="../guides/revit.html">Revit</a> や AutoCAD などの複雑な設計ソフトウェアの学習や問題解決において、LLM（大規模言語モデル）が一般的なインターネット情報を学習源とする場合、古い情報や不正確な回答を生成するリスクがあります。建築・土木・製造分野では設計精度が直接的に品質や安全性に影響するため、AI が参照する情報源の正当性が極めて重要です。Autodesk は「信頼できるAI」を組織の中核方針とし、Autodesk Assistant など製品内AI機能の強化を進めてきました。今回の MCP サーバー公開は、その戦略の延長線上にある、業界全体への信頼できる情報基盤の提供という新しい試みです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodesk が発表した「Product Help MCP Server」は、Autodesk の110以上の製品に関する公式ヘルプドキュメントへのセキュアなアクセスを、外部の AI エージェント（ChatGPT やそのほかの生成AI プラットフォーム）に提供するサーバーです。MCP は Model Context Protocol の略で、AI エージェントが外部のツールやデータベースと安全に連携するための業界標準プロトコルです。このサーバーは読み取り専用で、無償で提供されます。ユーザーが外部の AI アシスタント（例えば Claude や ChatGPT）に Revit の特定の機能について質問した場合、その AI は Autodesk の最新かつ公式なドキュメントから直接情報を取得し、正確な回答を生成できるようになります。初心者の製品学習、新機能の探索、トラブル解決など、あらゆるユースケースで信頼性の高いガイダンスが得られます。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
       <span class="mid-related-cat">Revit</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>MCP は OpenAI や Anthropic など複数企業が推進する標準化されたプロトコルで、AI エージェントが企業のプロプライエタリな情報源に安全にアクセスするための仕組みです。従来、LLM は学習時に取得した知識しか使用できず、リアルタイムデータや最新ドキュメントへのアクセスが困難でした。MCP サーバーを通じることで、AI は常に最新の正確な情報を参照でき、いわゆる「ハルシネーション」（AI が事実でない情報を生成する現象）を大幅に削減できます。Autodesk はこれを「RAG（Retrieval Augmented Generation）」の企業版として位置付けており、ドメイン知識（製品マニュアル、FAQ、ベストプラクティス）と生成AI の組み合わせが真の価値を生むと強調しています。Agentic AI Foundation への金色スポンサー（Gold Member）として、業界標準化を主導する立場を取ることで、将来的には建設・設計業界全体で互換性のある AI エージェント連携が実現される可能性があります。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この発表は、建設・設計・製造業界における AI の信頼性向上を大きく前進させるものです。従来、エンタープライズソフトウェアのサポートは人間のサポートエンジニアやオンラインフォーラムに依存していました。MCP サーバーの普及により、AI エージェントが一次情報源として機能するようになれば、ユーザーの学習時間短縮と問題解決スピードの加速が実現します。特に複雑な建築情報モデリング（BIM）のワークフローでは、Revit やArchicad などのツール間連携やIFC フォーマット、LOD（Level of Detail）管理など専門的な知識が不可欠です。これまでこうした情報は経験豊富な管理者や外部コンサルタントに依存していましたが、AI が公式ドキュメントを直接参照できれば、中小設計事務所やサブコンでも高度なBIM 運用が可能になる可能性があります。さらに、Autodesk がMCP という業界標準に準拠することで、競合企業も同様の仕組みを構築するインセンティブが生まれ、業界全体の「信頼できるAI」エコシステムが加速する見込みです。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>MCP は OpenAI や Anthropic など複数企業が推進する標準化されたプロトコルで、AI エージェントが企業のプロプライエタリな情報源に安全にアクセスするための仕組みです。従来、LLM は学習時に取得した知識しか使用できず、リアルタイムデータや最新ドキュメントへのアクセスが困難でした。MCP サーバーを通じることで、AI は常に最新の正確な情報を参照でき、いわゆる「ハルシネーション」（AI が事実でない情報を生成する現象）を大幅に削減できます。Autodesk はこれを「RAG（Retrieval Augmented Generation）」の企業版として位置付けており、ドメイン知識（製品マニュアル、FAQ、ベストプラクティス）と生成AI の組み合わせが真の価値を生むと強調しています。Agentic AI Foundation への金色スポンサー（Gold Member）として、業界標準化を主導する立場を取ることで、将来的には建設・設計業界全体で互換性のある AI エージェント連携が実現される可能性があります。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この発表は、建設・設計・製造業界における AI の信頼性向上を大きく前進させるものです。従来、エンタープライズソフトウェアのサポートは人間のサポートエンジニアやオンラインフォーラムに依存していました。MCP サーバーの普及により、AI エージェントが一次情報源として機能するようになれば、ユーザーの学習時間短縮と問題解決スピードの加速が実現します。特に複雑な建築情報モデリング（<a class="glossary-link" href="../guides/bim.html">BIM</a>）のワークフローでは、Revit や<a class="glossary-link" href="../guides/archicad.html">Archicad</a> などのツール間連携や<a class="glossary-link" href="../guides/ifc.html">IFC</a> フォーマット、LOD（Level of Detail）管理など専門的な知識が不可欠です。これまでこうした情報は経験豊富な管理者や外部コンサルタントに依存していましたが、AI が公式ドキュメントを直接参照できれば、中小設計事務所やサブコンでも高度なBIM 運用が可能になる可能性があります。さらに、Autodesk がMCP という業界標準に準拠することで、競合企業も同様の仕組みを構築するインセンティブが生まれ、業界全体の「信頼できるAI」エコシステムが加速する見込みです。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

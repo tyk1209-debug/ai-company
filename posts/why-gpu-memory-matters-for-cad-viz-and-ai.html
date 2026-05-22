@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>GPU性能といえば、コア数やクロック周波数、レイトレーシング性能が注目されてきた。しかし建築・設計現場では、むしろGPUメモリの不足がワークフローを深刻に阻害する実態がある。BIMモデルの複雑化、フォトリアルな可視化ツールの普及、そしてAI画像生成ツールの登場により、GPU上で扱うデータ量が急速に増加している。従来のCAD・BIM用途では8GB程度のメモリで対応可能だったが、現在の高度な可視化やAI推論では16GB、24GB以上を求める声が増している。設計事務所やビジュアライゼーション専門家から「GPUメモリ不足でレンダリングが途中で失敗する」「AIツール導入で既存ワークステーションが使い物にならなくなった」といった課題報告が相次いでおり、ワークステーション選定時の重要な判断軸として浮上している。</p><h2 class="article-section-h2"><span>内容</span></h2><p>GPUメモリは、3Dモデルのジオメトリ、テクスチャ、ライティング、計算結果をすべて保持する領域である。容量を超えるとシステムRAMへのページング現象が発生し、処理速度が劇的に低下する。CAD（Solidworks）やBIM（Revit）用途では、標準的なシェーディング表示モードであればRTX A1000などの8GB GPU で対応可能だが、リアルビュー表示や複雑なモデル表示、4K解像度ではメモリ消費が増加する。一方、Twinmotion、D5 Render、Enscape、KeyShot、Lumion、Unreal Engineなどの実時間可視化ツールではメモリ需要が急増する。小規模な住宅プロジェクトで4～6GB、都市規模の大規模環境では20GB以上を消費することが報告されており、RTX Pro 2000や4000 Blackwellシリーズなど16～24GB以上のメモリを搭載するプロフェッショナルGPUが採用される理由となっている。AI画像生成（Stable Diffusion、Flux等）はさらに高いメモリ要求を持つ新しい計算形態であり、従来のCAD・可視化ワークフロー以上のメモリ余裕が必要とされている。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>GPU性能といえば、コア数やクロック周波数、レイトレーシング性能が注目されてきた。しかし建築・設計現場では、むしろGPUメモリの不足がワークフローを深刻に阻害する実態がある。<a class="glossary-link" href="../guides/bim.html">BIM</a>モデルの複雑化、フォトリアルな可視化ツールの普及、そしてAI画像生成ツールの登場により、GPU上で扱うデータ量が急速に増加している。従来のCAD・BIM用途では8GB程度のメモリで対応可能だったが、現在の高度な可視化やAI推論では16GB、24GB以上を求める声が増している。設計事務所やビジュアライゼーション専門家から「GPUメモリ不足でレンダリングが途中で失敗する」「AIツール導入で既存ワークステーションが使い物にならなくなった」といった課題報告が相次いでおり、ワークステーション選定時の重要な判断軸として浮上している。</p><h2 class="article-section-h2"><span>内容</span></h2><p>GPUメモリは、3Dモデルのジオメトリ、テクスチャ、ライティング、計算結果をすべて保持する領域である。容量を超えるとシステムRAMへのページング現象が発生し、処理速度が劇的に低下する。CAD（Solidworks）やBIM（<a class="glossary-link" href="../guides/revit.html">Revit</a>）用途では、標準的なシェーディング表示モードであればRTX A1000などの8GB GPU で対応可能だが、リアルビュー表示や複雑なモデル表示、4K解像度ではメモリ消費が増加する。一方、Twinmotion、D5 Render、Enscape、KeyShot、Lumion、Unreal Engineなどの実時間可視化ツールではメモリ需要が急増する。小規模な住宅プロジェクトで4～6GB、都市規模の大規模環境では20GB以上を消費することが報告されており、RTX Pro 2000や4000 Blackwellシリーズなど16～24GB以上のメモリを搭載するプロフェッショナルGPUが採用される理由となっている。AI画像生成（Stable Diffusion、Flux等）はさらに高いメモリ要求を持つ新しい計算形態であり、従来のCAD・可視化ワークフロー以上のメモリ余裕が必要とされている。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/aec-magazine-may-june-2026.html">Agentic BIMの実装課題が顕在化、Palantir・HVAC AI等が2026年の業界トレンド</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

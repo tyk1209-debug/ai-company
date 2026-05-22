@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>buildings MART Internationalが主催する初のopenBIM ハッカソンがポルトガルで開催されました。これは、建設デジタル化の国際標準であるopenBIM（IFC、BCF等）が、プロトタイプレベルで実際に機能するか、実務ワークフローに適用可能かを検証する貴重な実験です。従来、BIM標準の有効性は学術発表やコンセプト段階で議論されることが多かったのに対し、今回は50時間の限定時間内に「動くシステム」を作成する厳密な環境が設定されました。これは、IFC4.0やIDS（Information Delivery Specification）といった進化する標準が、実業務での課題解決に本当に貢献できるのかを問う、業界にとって極めて現実的なテストケースとなっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>47名の参加者が9チームに分かれ、50時間でopenBIM標準を用いた実装可能なプロトタイプを開発しました。成果物は、AI駆動のモデル強化機能、IFCデータの閲覧・編集が可能なAR対応iPhoneアプリ、大規模なIDS管理ダッシュボード、そして優勝チーム「BCF Time Machine」による BCF課題の履歴可視化ツール等、多岐にわたります。審査員（HTWベルリン、buildingSMART Spain、CCG/ZGDVインスティチュート、Esri）は単なるプレゼンテーション評価ではなく、問題定義、openBIM標準の活用方法、相互運用性の実装状況を総合的に評価しました。注目すべきは、87%の参加者がハッカソンを通じてopenBIMへの理解が深まったこと、また複数チームが開発した機能をベンダーの商用ツールに実装するよう働きかけるなど、成果の実務適用への強い意思が示されたことです。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>buildings MART Internationalが主催する初の<a class="glossary-link" href="../guides/openbim.html">openBIM</a> ハッカソンがポルトガルで開催されました。これは、建設デジタル化の国際標準であるopenBIM（<a class="glossary-link" href="../guides/ifc.html">IFC</a>、BCF等）が、プロトタイプレベルで実際に機能するか、実務ワークフローに適用可能かを検証する貴重な実験です。従来、<a class="glossary-link" href="../guides/bim.html">BIM</a>標準の有効性は学術発表やコンセプト段階で議論されることが多かったのに対し、今回は50時間の限定時間内に「動くシステム」を作成する厳密な環境が設定されました。これは、IFC4.0やIDS（Information Delivery Specification）といった進化する標準が、実業務での課題解決に本当に貢献できるのかを問う、業界にとって極めて現実的なテストケースとなっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>47名の参加者が9チームに分かれ、50時間でopenBIM標準を用いた実装可能なプロトタイプを開発しました。成果物は、AI駆動のモデル強化機能、IFCデータの閲覧・編集が可能なAR対応iPhoneアプリ、大規模なIDS管理ダッシュボード、そして優勝チーム「BCF Time Machine」による BCF課題の履歴可視化ツール等、多岐にわたります。審査員（HTWベルリン、buildingSMART Spain、CCG/ZGDVインスティチュート、Esri）は単なるプレゼンテーション評価ではなく、問題定義、openBIM標準の活用方法、相互運用性の実装状況を総合的に評価しました。注目すべきは、87%の参加者がハッカソンを通じてopenBIMへの理解が深まったこと、また複数チームが開発した機能をベンダーの商用ツールに実装するよう働きかけるなど、成果の実務適用への強い意思が示されたことです。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/we-are-looking-for-feedback-on-your-experience-with-ids.html">IDS2周年、ユーザーフィードバック募集開始——buildingSMARTが改善へ動く</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

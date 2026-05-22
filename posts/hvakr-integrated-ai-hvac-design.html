@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>BIM 2.0の議論がRevitの後継者をめぐり議論されている一方で、建設エンジニアリング業界では規律別AIツールが急速に実務に組み込まれ始めています。特に構造・MEP・電気設計などの専門領域では、汎用BIMプラットフォームより先に生産性向上の効果が検証されており、機械設計もその例外ではありません。従来、HVAC設計は複数の断片的なツール（負荷計算用のTrane TraceやCarrier HAP、ダクト設計用の独立したCADなど）に分散していました。設計変更時には手作業でデータ再入力を強いられ、負荷モデルとダクトレイアウトが乖離するリスクが常につきまといました。このような非効率を解決すべく、2021年から2023年にかけてカリフォルニアを拠点とするHVAKR社は、CEOのAndres Krippner氏とCOOのDavis Muxlow氏を中心に、Techstars 2024コホートに参加する企業へと成長させました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>HVAKRは負荷計算とダクトレイアウトを単一のクラウドプラットフォームで統合し、その上に機械設計AIエージェントを配置します。ワークフローは従来のシーケンス（基本設計の設定、床平面図からのビジュアルテイクオフ、ゾーニングとシステム割り当て、心理測定図による負荷サマリー、自動CFM割り当てと注釈付き2D出力）に従いながら、設計変更が一度のパスで負荷、気流、コイルサイジング、ダクト注釈すべてに反映される点が革新的です。特に入札会議や初期段階では、詳細計画が完成する前の見積段階で数時間かかる粗荷計算を数分で生成できます。AI層は自動テイクオフと数値批評クエリを提供し、例えば冷房負荷が最も高い空間を特定して、エンジニアが設計の妥当性を素早く検証できるようにしています。今後のロードマップには自動拡散器配置、生成的ダクトルーティング、システム比較機能が含まれています。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/bim.html">BIM</a> 2.0の議論が<a class="glossary-link" href="../guides/revit.html">Revit</a>の後継者をめぐり議論されている一方で、建設エンジニアリング業界では規律別AIツールが急速に実務に組み込まれ始めています。特に構造・MEP・電気設計などの専門領域では、汎用BIMプラットフォームより先に生産性向上の効果が検証されており、機械設計もその例外ではありません。従来、HVAC設計は複数の断片的なツール（負荷計算用のTrane TraceやCarrier HAP、ダクト設計用の独立したCADなど）に分散していました。設計変更時には手作業でデータ再入力を強いられ、負荷モデルとダクトレイアウトが乖離するリスクが常につきまといました。このような非効率を解決すべく、2021年から2023年にかけてカリフォルニアを拠点とするHVAKR社は、CEOのAndres Krippner氏とCOOのDavis Muxlow氏を中心に、Techstars 2024コホートに参加する企業へと成長させました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>HVAKRは負荷計算とダクトレイアウトを単一のクラウドプラットフォームで統合し、その上に機械設計AIエージェントを配置します。ワークフローは従来のシーケンス（基本設計の設定、床平面図からのビジュアルテイクオフ、ゾーニングとシステム割り当て、心理測定図による負荷サマリー、自動CFM割り当てと注釈付き2D出力）に従いながら、設計変更が一度のパスで負荷、気流、コイルサイジング、ダクト注釈すべてに反映される点が革新的です。特に入札会議や初期段階では、詳細計画が完成する前の見積段階で数時間かかる粗荷計算を数分で生成できます。AI層は自動テイクオフと数値批評クエリを提供し、例えば冷房負荷が最も高い空間を特定して、エンジニアが設計の妥当性を素早く検証できるようにしています。今後のロードマップには自動拡散器配置、生成的ダクトルーティング、システム比較機能が含まれています。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/aec-magazine-may-june-2026.html">Agentic BIMの実装課題が顕在化、Palantir・HVAC AI等が2026年の業界トレンド</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

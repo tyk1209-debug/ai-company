@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1745,7 +1756,7 @@
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Datagridのアプローチは、ChatGPTやCopilotといった会話型生成AIとは本質的に異なります。従来のプロジェクト管理系AIは、単一ベンダーの閉じたデータモデル内で最適化されていたのに対し、Datagridの「Deep Search」オーケストレーションエンジンは、複数システムにまたがるデータ連携を前提に構築されています。つまり、Procoreのデータだけでなく、ERP、会計ソフト、ドキュメント管理システムなど社内の既存ツール群から動的にデータを抽出し、AI推論を適用し、各システムへアクションを返す仕組みです。IFC（Industry Foundation Classes）などのオープン標準との親和性や、既存BIMソフト（Revit、Archicadなど）との連携も視野に入っていると考えられます。LOD（Level of Detail）の概念をワークフロー自動化に応用する場合も想定される興味深い技術統合ポイントです。エージェント型AIの本質として、人間の明示的な指示なしに段階的に判断・実行する自律性を持つ設計が、建設現場の実務ワークフローに適用されることになります。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この買収は建設テック業界全体に対し、単なるベンダーロックインではなく「AIブローカー」としての地位獲得を目指すProcoreの野心を示しています。従来、建設業の多くの企業は、提出物管理、RFI処理、ドキュメント分類といったプロセスに多大な人手と時間をかけています。自動化が実現すれば、ホワイトカラー層の生産性向上は顕著です。同時に、AEC業界全体で「システム・オブ・レコード」（データ記録）から「システム・オブ・インテリジェンス」（データ推論・実行）への進化が加速する可能性があります。Autodesk、Trimble、Teledeskなど他のメジャーベンダーも同様のエージェント型AI戦略を追求する圧力が高まることが予想されます。また、Datagridが「Procoreと非Procoreの両顧客に提供される」という戦略は、建設テック業界の相互運用性向上につながる可能性を示唆していますが、将来的にProcore独占機能化するリスクも存在します。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Datagridのアプローチは、ChatGPTやCopilotといった会話型生成AIとは本質的に異なります。従来のプロジェクト管理系AIは、単一ベンダーの閉じたデータモデル内で最適化されていたのに対し、Datagridの「Deep Search」オーケストレーションエンジンは、複数システムにまたがるデータ連携を前提に構築されています。つまり、Procoreのデータだけでなく、ERP、会計ソフト、ドキュメント管理システムなど社内の既存ツール群から動的にデータを抽出し、AI推論を適用し、各システムへアクションを返す仕組みです。<a class="glossary-link" href="../guides/ifc.html">IFC</a>（Industry Foundation Classes）などのオープン標準との親和性や、既存<a class="glossary-link" href="../guides/bim.html">BIM</a>ソフト（<a class="glossary-link" href="../guides/revit.html">Revit</a>、<a class="glossary-link" href="../guides/archicad.html">Archicad</a>など）との連携も視野に入っていると考えられます。LOD（Level of Detail）の概念をワークフロー自動化に応用する場合も想定される興味深い技術統合ポイントです。エージェント型AIの本質として、人間の明示的な指示なしに段階的に判断・実行する自律性を持つ設計が、建設現場の実務ワークフローに適用されることになります。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この買収は建設テック業界全体に対し、単なるベンダーロックインではなく「AIブローカー」としての地位獲得を目指すProcoreの野心を示しています。従来、建設業の多くの企業は、提出物管理、RFI処理、ドキュメント分類といったプロセスに多大な人手と時間をかけています。自動化が実現すれば、ホワイトカラー層の生産性向上は顕著です。同時に、AEC業界全体で「システム・オブ・レコード」（データ記録）から「システム・オブ・インテリジェンス」（データ推論・実行）への進化が加速する可能性があります。Autodesk、Trimble、Teledeskなど他のメジャーベンダーも同様のエージェント型AI戦略を追求する圧力が高まることが予想されます。また、Datagridが「Procoreと非Procoreの両顧客に提供される」という戦略は、建設テック業界の相互運用性向上につながる可能性を示唆していますが、将来的にProcore独占機能化するリスクも存在します。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

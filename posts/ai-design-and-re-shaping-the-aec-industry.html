@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,7 +1751,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>AEC産業におけるAI導入論は多く存在しますが、実際の業界変革の道筋は不明確なままです。過去の技術革新から教訓を引き出すことが重要です。自動車業界の1910年代における組立生産方式の導入と産業再編を見ると、多数の小規模メーカーが標準化されたプラットフォーム上で競争し始め、やがて少数の大型統合メーカーと高級・ニッチ製品メーカーに二極化しました。AEC産業も同じ転換点を迎えつつあります。BIM（ビルディング・インフォメーション・モデリング）と共有デジタルプラットフォーム、標準化されたデータモデル（IFC等）により、計画・設計・施工・運用の各段階間における摩擦が大きく低減される見通しが立っているからです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Graphisoftのアンドラーシュ・フェレンツィは、AIが産業全体レベルと設計実務レベルの両面で変革をもたらすと指摘しています。産業全体では、AIと共有プラットフォームが断片化した価値チェーンを統合し、企業戦略に二つの道を示します。一つは専門領域を深掘りする垂直統合、もう一つは建設ライフサイクル全体に展開する水平統合です。設計実務レベルでは、ソフトウェア開発業界における「機能横断型チーム（クロスファンクショナル）」の台頭になぞらえられます。従来の建築・インテリア・ビジュアライゼーション・BIMといった部門ごとの組織から、建物タイプ別・クライアント層別・プロジェクト「商品」別の小規模チーム編成へシフトします。各チームが戦略から設計・モデリング・分析・ドキュメント作成まで一貫して所有し、AIシステムが調整作業と定型業務を自動化するモデルが出現するのです。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>AEC産業におけるAI導入論は多く存在しますが、実際の業界変革の道筋は不明確なままです。過去の技術革新から教訓を引き出すことが重要です。自動車業界の1910年代における組立生産方式の導入と産業再編を見ると、多数の小規模メーカーが標準化されたプラットフォーム上で競争し始め、やがて少数の大型統合メーカーと高級・ニッチ製品メーカーに二極化しました。AEC産業も同じ転換点を迎えつつあります。<a class="glossary-link" href="../guides/bim.html">BIM</a>（ビルディング・インフォメーション・モデリング）と共有デジタルプラットフォーム、標準化されたデータモデル（<a class="glossary-link" href="../guides/ifc.html">IFC</a>等）により、計画・設計・施工・運用の各段階間における摩擦が大きく低減される見通しが立っているからです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Graphisoftのアンドラーシュ・フェレンツィは、AIが産業全体レベルと設計実務レベルの両面で変革をもたらすと指摘しています。産業全体では、AIと共有プラットフォームが断片化した価値チェーンを統合し、企業戦略に二つの道を示します。一つは専門領域を深掘りする垂直統合、もう一つは建設ライフサイクル全体に展開する水平統合です。設計実務レベルでは、ソフトウェア開発業界における「機能横断型チーム（クロスファンクショナル）」の台頭になぞらえられます。従来の建築・インテリア・ビジュアライゼーション・BIMといった部門ごとの組織から、建物タイプ別・クライアント層別・プロジェクト「商品」別の小規模チーム編成へシフトします。各チームが戦略から設計・モデリング・分析・ドキュメント作成まで一貫して所有し、AIシステムが調整作業と定型業務を自動化するモデルが出現するのです。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/aec-magazine-may-june-2026.html">Agentic BIMの実装課題が顕在化、Palantir・HVAC AI等が2026年の業界トレンド</a>
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

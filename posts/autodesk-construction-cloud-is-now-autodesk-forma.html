@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,13 +1751,13 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Autodeskは数年来、建築・エンジニアリング・建設・オーナー企業（AECO）向けのクラウドプラットフォーム戦略を進めてきました。従来のAEC業界では、設計フェーズでRevitやAutoCADが使われ、施工段階ではAccuralやPlanGrid等の施工管理ツールが導入されるなど、ツール間のデータの断裂が常態化していました。2025年AU（Autodesk University）では、このギャップを埋める統合クラウドプラットフォーム「Autodesk Forma」が発表されました。今回のAccの統合は、その戦略的な次段階であり、設計から施工、運用までのライフサイクル全体を一つのプラットフォーム上で実現するための重要なマイルストーンです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskは2026年3月25日より、従来の「Autodesk Construction Cloud（ACC）」を正式に「Autodesk Forma」に統合します。重要なポイントは、既存ユーザーのデータ移行や機能損失がないこと。AccのユーザーはFormaのエコシステム内で同じ機能を継続利用でき、むしろ設計ツールとの接続性が強化されます。同時に発表された主要機能は以下の通りです。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Autodeskは数年来、建築・エンジニアリング・建設・オーナー企業（AECO）向けのクラウドプラットフォーム戦略を進めてきました。従来のAEC業界では、設計フェーズで<a class="glossary-link" href="../guides/revit.html">Revit</a>やAutoCADが使われ、施工段階ではAccuralやPlanGrid等の施工管理ツールが導入されるなど、ツール間のデータの断裂が常態化していました。2025年AU（Autodesk University）では、このギャップを埋める統合クラウドプラットフォーム「Autodesk Forma」が発表されました。今回のAccの統合は、その戦略的な次段階であり、設計から施工、運用までのライフサイクル全体を一つのプラットフォーム上で実現するための重要なマイルストーンです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskは2026年3月25日より、従来の「Autodesk Construction Cloud（ACC）」を正式に「Autodesk Forma」に統合します。重要なポイントは、既存ユーザーのデータ移行や機能損失がないこと。AccのユーザーはFormaのエコシステム内で同じ機能を継続利用でき、むしろ設計ツールとの接続性が強化されます。同時に発表された主要機能は以下の通りです。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
       <span class="mid-related-cat">Revit</span>
-    </div><h2 class="article-section-h2"><span>1.「Forma Build Essentials」</span></h2><p>小〜中規模施工者向けの現場連携ツール。パンチリスト、写真・位置情報の記録、最新図面・モデルの閲覧、図面マークアップ、日報作成をWebおよびモバイルアプリで実装。</p><h2 class="article-section-h2"><span>2.「Forma Data Management Essentials」</span></h2><p>AutoCADやRevit、Civil 3Dなどデスクトップユーザーがクラウドプロジェクトデータにアクセス可能に。単独契約ユーザーも対象拡大。</p><h2 class="article-section-h2"><span>3.「Bidding Tool（ベータ版）」</span></h2><p>BuildingConnectedの入札管理ワークフローをFroraの発注前段階に統合。複数RFPの一元管理とテイクオフ・積算との連携を実現。</p><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>FormaはAutodesk Platform Services と共通データ基盤（Forma Data Management、旧Autodesk Docs）の上に構築されています。これにより、設計時のBIMモデル、施工時の現場データ、運用段階の資産情報が同一のデータベースで一元管理されるようになります。従来のAccはファイルベース（PDFやDWG等の静的ハンドオフ）の課題がありましたが、Formaは共有・粒度の高いデータ構造により、上流（設計意図）の決定が下流（現場実行）に自動的に反映される仕組みです。</p>
-<p>IFC形式などのオープンスタンダードとの互換性は記事では明記されていませんが、業界標準準拠は必須です。また「AI-native」という表現は、BIMモデルやプロジェクトデータに基づいた予測分析や自動化機能の搭載を示唆しています。Revitなどでの設計情報が自動抽出され、施工計画や発注書生成に活用される将来像が想定されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この統合により、グローバルなAEC業界は「フェーズごとの専門ツール」から「統一プラットフォーム」へのシフトが加速するでしょう。特に大型プロジェクトでは、設計段階と施工段階の情報伝達効率が劇的に向上する可能性があります。同時に、AccやBuildingConnectedの単独ツール利用者は段階的にFormaエコシステムへ吸収される傾向が強まります。</p>
+    </div><h2 class="article-section-h2"><span>1.「Forma Build Essentials」</span></h2><p>小〜中規模施工者向けの現場連携ツール。パンチリスト、写真・位置情報の記録、最新図面・モデルの閲覧、図面マークアップ、日報作成をWebおよびモバイルアプリで実装。</p><h2 class="article-section-h2"><span>2.「Forma Data Management Essentials」</span></h2><p>AutoCADやRevit、Civil 3Dなどデスクトップユーザーがクラウドプロジェクトデータにアクセス可能に。単独契約ユーザーも対象拡大。</p><h2 class="article-section-h2"><span>3.「Bidding Tool（ベータ版）」</span></h2><p>BuildingConnectedの入札管理ワークフローをFroraの発注前段階に統合。複数RFPの一元管理とテイクオフ・積算との連携を実現。</p><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>FormaはAutodesk Platform Services と共通データ基盤（Forma Data Management、旧Autodesk Docs）の上に構築されています。これにより、設計時の<a class="glossary-link" href="../guides/bim.html">BIM</a>モデル、施工時の現場データ、運用段階の資産情報が同一のデータベースで一元管理されるようになります。従来のAccはファイルベース（PDFやDWG等の静的ハンドオフ）の課題がありましたが、Formaは共有・粒度の高いデータ構造により、上流（設計意図）の決定が下流（現場実行）に自動的に反映される仕組みです。</p>
+<p><a class="glossary-link" href="../guides/ifc.html">IFC</a>形式などのオープンスタンダードとの互換性は記事では明記されていませんが、業界標準準拠は必須です。また「AI-native」という表現は、BIMモデルやプロジェクトデータに基づいた予測分析や自動化機能の搭載を示唆しています。Revitなどでの設計情報が自動抽出され、施工計画や発注書生成に活用される将来像が想定されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この統合により、グローバルなAEC業界は「フェーズごとの専門ツール」から「統一プラットフォーム」へのシフトが加速するでしょう。特に大型プロジェクトでは、設計段階と施工段階の情報伝達効率が劇的に向上する可能性があります。同時に、AccやBuildingConnectedの単独ツール利用者は段階的にFormaエコシステムへ吸収される傾向が強まります。</p>
 <p>一方、Autodesk以外のプレイヤー（Trimble、Oracle、ServiceNow等の施工管理クラウド）の立場は相対的に弱くなる可能性があります。Autodeskの圧倒的なエコシステム規模（Revitシェア、ドキュメント管理、予算積算ツール等の統合）を前にして、部分的なソリューション提供では競争が困難になるでしょう。</p>
           </div>
         </div>
@@ -2010,6 +2021,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

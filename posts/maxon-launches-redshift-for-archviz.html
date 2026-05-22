@@ -912,6 +912,17 @@
       line-height: 1.4;
     }
     .mid-related-link:hover { color: var(--blue); }
+    .glossary-link {
+      color: var(--navy);
+      border-bottom: 1px dotted var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .glossary-link:hover {
+      color: var(--blue);
+      border-bottom-color: var(--navy);
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1740,12 +1751,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>アーキテクチャルビジュアライゼーション（建築プレゼンテーション用3DCG）市場では、設計者が日々使うBIMソフト内での高品質レンダリング需要が急速に高まっています。従来、Revit・Archicad・Vectorworksで作成した3Dモデルは、別途Cinema4DやVrayなどの専門レンダリングツールに書き出して高度な画像生成を行うフローが一般的でした。しかし設計スケジュールの圧縮や表現力の期待値上昇により、BIM環境内での高速・高品質なビジュアライゼーション統合への需要が顕在化していました。Maxonはハリウッド映画のVFX制作で知られるプロダクション企業で、その高度なレンダリング技術をAEC市場へ展開する戦略を加速させています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Maxonは「RedShift for Archviz」として、Vectorworks向け商用版、Revit向けベータ版、Archicad向けベータ版（本年内リリース予定）のプラグインセットを発表しました。これらのネイティブプラグインにより、建築家やインテリアデザイナーがBIM編集環境から直接Redshiftのシネマティックレンダリング技術にアクセス可能になります。主な機能は、3Dモデルの変更をリアルタイムで正確な照明・材質・環境効果とともにプレビュー、太陽位置や時間帯・空の状態を自由に調整、クラウドカバレッジ制御、高品質アセット（家具・車両・植物・人物キャラクター）による室内外家具配置、ポリゴナルベースの正確な物理ベース材質表現（研磨コンクリート・ブラッシュドメタル・ガラス・木材・テキスタイル）です。より高度なビジュアル制作が必要な場合は、ワンクリックでシーン全体をCinema4Dに送出し、複雑な照明、フライスルー、シミュレーションの追加作業が可能です。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>アーキテクチャルビジュアライゼーション（建築プレゼンテーション用3DCG）市場では、設計者が日々使う<a class="glossary-link" href="../guides/bim.html">BIM</a>ソフト内での高品質レンダリング需要が急速に高まっています。従来、<a class="glossary-link" href="../guides/revit.html">Revit</a>・<a class="glossary-link" href="../guides/archicad.html">Archicad</a>・Vectorworksで作成した3Dモデルは、別途Cinema4DやVrayなどの専門レンダリングツールに書き出して高度な画像生成を行うフローが一般的でした。しかし設計スケジュールの圧縮や表現力の期待値上昇により、BIM環境内での高速・高品質なビジュアライゼーション統合への需要が顕在化していました。Maxonはハリウッド映画のVFX制作で知られるプロダクション企業で、その高度なレンダリング技術をAEC市場へ展開する戦略を加速させています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Maxonは「RedShift for Archviz」として、Vectorworks向け商用版、Revit向けベータ版、Archicad向けベータ版（本年内リリース予定）のプラグインセットを発表しました。これらのネイティブプラグインにより、建築家やインテリアデザイナーがBIM編集環境から直接Redshiftのシネマティックレンダリング技術にアクセス可能になります。主な機能は、3Dモデルの変更をリアルタイムで正確な照明・材質・環境効果とともにプレビュー、太陽位置や時間帯・空の状態を自由に調整、クラウドカバレッジ制御、高品質アセット（家具・車両・植物・人物キャラクター）による室内外家具配置、ポリゴナルベースの正確な物理ベース材質表現（研磨コンクリート・ブラッシュドメタル・ガラス・木材・テキスタイル）です。より高度なビジュアル制作が必要な場合は、ワンクリックでシーン全体をCinema4Dに送出し、複雑な照明、フライスルー、シミュレーションの追加作業が可能です。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
       <span class="mid-related-cat">Revit</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>RedShift for Archvizは、Maxonの業界標準GPU加速レンダラーであるRedshiftをBIM環境に統合した設計です。既存のVrayやArniereなどのプラグインレンダラーとの主な差異は、Redshiftがハリウッド級のフォトリアリスティック表現力を持ちながら、GPU処理による高速フィードバックループを実現する点です。BIM内での変更時に数秒〜数十秒での再レンダリングが可能になり、設計検討サイクル内での意思決定スピードが向上します。また、物理ベース材質システム（PBR）の実装により、実際の素材特性をパラメータ化して正確に表現可能です。Revit・Archicad・VectorworksはいずれもIFC準拠のジオメトリとメタデータ構造を保持しているため、プラグインがこれらを直接解釈し、追加フォーマット変換なしでレンダリングする仕様が採用されています。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この展開は、アーキテクチャルビジュアライゼーション産業全体に大きな影響をもたらします。第一に、設計事務所内部での画像制作能力の民主化が進みます。従来は高度なレンダリング経験者かビジュアライゼーション専門部署が担当していた作業が、一般の設計者でも高品質に実行可能になります。第二に、クライアント提案フェーズの迅速化です。設計変更後の即座なビジュアル確認が可能になり、クライアント会議でのリアルタイムレスポンスが強化されます。第三に、BIM環境の中心的な価値命題が拡張されます。従来BIMは「定量情報（数量・コスト・スケジュール）管理ツール」と見なされることが多かったのに対し、「高品質な可視化と設計検討の統合プラットフォーム」としての地位が強化されます。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>RedShift for Archvizは、Maxonの業界標準GPU加速レンダラーであるRedshiftをBIM環境に統合した設計です。既存のVrayやArniereなどのプラグインレンダラーとの主な差異は、Redshiftがハリウッド級のフォトリアリスティック表現力を持ちながら、GPU処理による高速フィードバックループを実現する点です。BIM内での変更時に数秒〜数十秒での再レンダリングが可能になり、設計検討サイクル内での意思決定スピードが向上します。また、物理ベース材質システム（PBR）の実装により、実際の素材特性をパラメータ化して正確に表現可能です。Revit・Archicad・Vectorworksはいずれも<a class="glossary-link" href="../guides/ifc.html">IFC</a>準拠のジオメトリとメタデータ構造を保持しているため、プラグインがこれらを直接解釈し、追加フォーマット変換なしでレンダリングする仕様が採用されています。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この展開は、アーキテクチャルビジュアライゼーション産業全体に大きな影響をもたらします。第一に、設計事務所内部での画像制作能力の民主化が進みます。従来は高度なレンダリング経験者かビジュアライゼーション専門部署が担当していた作業が、一般の設計者でも高品質に実行可能になります。第二に、クライアント提案フェーズの迅速化です。設計変更後の即座なビジュアル確認が可能になり、クライアント会議でのリアルタイムレスポンスが強化されます。第三に、BIM環境の中心的な価値命題が拡張されます。従来BIMは「定量情報（数量・コスト・スケジュール）管理ツール」と見なされることが多かったのに対し、「高品質な可視化と設計検討の統合プラットフォーム」としての地位が強化されます。</p>
           </div>
         </div>
         
@@ -2008,6 +2019,8 @@
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
       <a href="../about.html">運営者情報</a>
+      <a href="../newsletter.html">ニュースレター</a>
+      <a href="../sponsor.html">広告掲載</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-catchcopy">BIM・AEC・建設DXの最新ニュースをAIが日本語で解説</div>

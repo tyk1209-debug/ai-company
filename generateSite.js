@@ -2430,7 +2430,7 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1rem;
       margin-bottom: 1.5rem;
-      align-items: start;
+      align-items: stretch;
     }
     .guide-card {
       background: var(--white);
@@ -2440,12 +2440,18 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      height: 100%;
+    }
+    .guide-card .card-thumb {
+      flex-shrink: 0;
+      aspect-ratio: 16 / 9;
     }
     .guide-card-body {
       padding: 1.1rem 1.15rem 1.2rem;
       display: flex;
       flex-direction: column;
       gap: 0.7rem;
+      flex: 1;
     }
     .guide-card-kicker {
       font-size: 0.72rem;
@@ -2459,12 +2465,23 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       line-height: 1.45;
       color: var(--navy);
       margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: calc(1.45em * 2);
     }
     .guide-card-excerpt {
       font-size: 0.93rem;
       line-height: 1.8;
       color: var(--text-muted);
       margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: calc(1.8em * 3);
+      flex: 1;
     }
     .guide-card-link {
       display: inline-flex;
@@ -2473,7 +2490,7 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       font-weight: 700;
       color: var(--blue);
       text-decoration: none;
-      margin-top: 0.1rem;
+      margin-top: auto;
     }
     .guide-card-link:hover { text-decoration: none; }
     .guide-intro {

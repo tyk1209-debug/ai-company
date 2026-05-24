@@ -923,6 +923,297 @@
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1751,12 +2042,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>ネメッテックグループは、<a class="glossary-link" href="../guides/bim.html">BIM</a>・設計・建設管理ソフトウェア分野で欧州を中心にグローバル展開する大手ソフトウェア企業です。同社は<a class="glossary-link" href="../guides/revit.html">Revit</a>のプラグイン開発やBluebeamの買収などを通じて、AEC産業デジタル化のプレイヤーとして知られています。一方、北米の建設業界では土木・インフラ工事の大型化が進む中、道路・橋梁・水道などの老朽化対策と、インフラ投資の政策的加速が重要課題となっています。米国バイデン政権のインフラ投資法、エネルギー転換、都市化に伴い、従来の建築分野だけでなく、インフラ・土木建設市場への事業拡大を求めるプレッシャーが強まっていました。ネメッテックは既に建築セクターで強い立場を持つものの、土木・重機械建設分野での競争力強化が経営戦略上の課題だったのです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>ネメッテックグループは、北米を拠点とする土木・インフラ建設技術企業HCSS（Heavy Construction Systems Specialists）の買収に合意しました。HCSSは1986年創業で、従業員550名以上、4,000社以上のクライアント（小規模事業者から年間売上10億ドル超の大手ゼネコンまで）を支えるエンドツーエンドのプラットフォーム企業です。同社のソリューションは現場管理、安全、コミュニケーション最適化に特化しており、インフラ・土木建設プロジェクトの効率化を実現しています。買収額はEUR450百万相当で、HCSSは現在ソフトウェア投資ファンドのThoma Bravoに所有されており、取引後もThoma Bravoはネメッテックの建設部門（Build &amp; Construct）の約28%を少数株主として保有します。ネメッテックSEは約72%を保有する構造となり、買収は2026年下半期のクローズを予定しています。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>ネメッテックグループは、<a class="glossary-link" href="../guides/bim.html">BIM</a>・設計・建設管理ソフトウェア分野で欧州を中心にグローバル展開する大手ソフトウェア企業です。同社は<a class="glossary-link" href="../guides/revit.html">Revit</a>のプラグイン開発や<a class="glossary-link" href="../glossary.html#term-bluebeam">Bluebeam</a>の買収などを通じて、AEC産業デジタル化のプレイヤーとして知られています。一方、北米の建設業界では土木・インフラ工事の大型化が進む中、道路・橋梁・水道などの老朽化対策と、インフラ投資の政策的加速が重要課題となっています。米国バイデン政権のインフラ投資法、エネルギー転換、都市化に伴い、従来の建築分野だけでなく、インフラ・土木建設市場への事業拡大を求めるプレッシャーが強まっていました。ネメッテックは既に建築セクターで強い立場を持つものの、土木・重機械建設分野での競争力強化が経営戦略上の課題だったのです。</p><h2 class="article-section-h2"><span>内容</span></h2><p>ネメッテックグループは、北米を拠点とする土木・インフラ建設技術企業HCSS（Heavy Construction Systems Specialists）の買収に合意しました。HCSSは1986年創業で、従業員550名以上、4,000社以上のクライアント（小規模事業者から年間売上10億ドル超の大手ゼネコンまで）を支えるエンドツーエンドのプラットフォーム企業です。同社のソリューションは現場管理、安全、コミュニケーション最適化に特化しており、インフラ・土木建設プロジェクトの効率化を実現しています。買収額はEUR450百万相当で、HCSSは現在ソフトウェア投資ファンドのThoma Bravoに所有されており、取引後もThoma Bravoはネメッテックの建設部門（Build &amp; Construct）の約28%を少数株主として保有します。ネメッテックSEは約72%を保有する構造となり、買収は2026年下半期のクローズを予定しています。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>HCSSはエンタープライズレベルの建設管理プラットフォームであり、現場デバイスとクラウドを統合したアーキテクチャが特徴です。既にネメッテックが保有するBluebeam（PDF・図面管理）、GoCanvas/SiteDocs（現場報告・デジタル化）、Nevaris（予算・原価管理）とは異なるレイヤーをカバーしており、統合による相乗効果が期待されます。特に、HCSSの強みである計画管理（plan management）、安全管理、機械・リソース最適化の機能は、土木・大規模インフラプロジェクト特有の複雑性（多数の下請け、長期工程、変動要因の多さ）に対応したものです。これをBluebeamのビジュアル・コラボレーション、GoCanvasの現場デジタル化と組み合わせることで、プレデザイン段階からアズビルト段階までの統合管理プラットフォームが実現します。また、ネメッテックはAI革新能力を強調しており、機械学習を用いた工程予測、リソース最適化、安全リスク検出などの高度化が考えられます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>本買収は、建設テックの競争地図を大きく変えます。グローバルには、オートデスク（Autodesk Construction Cloud）、Oracle Netsuite（建設ERP）、SAP（エンタープライズソリューション）といった大型プレイヤーが建設業界への浸透を加速させています。ネメッテックは、この中でも「設計～施工～FM」の全フェーズをカバーする統合プラットフォーム企業としてのポジションを確立する動きです。土木・インフラ領域での買収は、グローバル建設市場全体における成長機会の認識でもあります。インフラ老朽化対応、電力網転換（EV、再生可能エネルギー）、スマートシティ投資など、構造的な需要が支える分野です。一方、HCSS買収により、北米での足がかりが強化され、欧州と米国の二大市場での事業統合が進むことで、多国籍企業としてのスケールメリットが生まれます。既存の建築向けBIMユーザーと土木・インフラ現場のユーザーの連携可能性も広がります。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>HCSSはエンタープライズレベルの建設管理プラットフォームであり、現場デバイスとクラウドを統合したアーキテクチャが特徴です。既にネメッテックが保有するBluebeam（PDF・図面管理）、GoCanvas/SiteDocs（現場報告・デジタル化）、Nevaris（予算・原価管理）とは異なるレイヤーをカバーしており、統合による相乗効果が期待されます。特に、HCSSの強みである計画管理（plan management）、安全管理、機械・リソース最適化の機能は、土木・大規模インフラプロジェクト特有の複雑性（多数の下請け、長期工程、変動要因の多さ）に対応したものです。これをBluebeamのビジュアル・コラボレーション、GoCanvasの現場デジタル化と組み合わせることで、プレデザイン段階からアズビルト段階までの統合管理プラットフォームが実現します。また、ネメッテックはAI革新能力を強調しており、機械学習を用いた工程予測、リソース最適化、安全リスク検出などの高度化が考えられます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>本買収は、建設テックの競争地図を大きく変えます。グローバルには、オートデスク（Autodesk <a class="glossary-link" href="../glossary.html#term-forma">Construction Cloud</a>）、Oracle Netsuite（建設ERP）、SAP（エンタープライズソリューション）といった大型プレイヤーが建設業界への浸透を加速させています。ネメッテックは、この中でも「設計～施工～FM」の全フェーズをカバーする統合プラットフォーム企業としてのポジションを確立する動きです。土木・インフラ領域での買収は、グローバル建設市場全体における成長機会の認識でもあります。インフラ老朽化対応、電力網転換（EV、再生可能エネルギー）、スマートシティ投資など、構造的な需要が支える分野です。一方、HCSS買収により、北米での足がかりが強化され、欧州と米国の二大市場での事業統合が進むことで、多国籍企業としてのスケールメリットが生まれます。既存の建築向けBIMユーザーと土木・インフラ現場のユーザーの連携可能性も広がります。</p>
           </div>
         </div>
         
@@ -2018,6 +2309,9 @@
     <div class="footer-nav">
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
+      <a href="../compare.html">BIMツール比較</a>
+      <a href="../glossary.html">用語集</a>
+      <a href="../timeline.html">ベンダー履歴</a>
       <a href="../about.html">運営者情報</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>

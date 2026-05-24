@@ -921,6 +921,297 @@
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1815,6 +2106,96 @@
     </section>
         
         
+        
+        <div class="article-related-group" style="margin-top:3rem;">
+          <h2 class="section-title" style="margin-top:0;">CDEとは関連の最新ニュース</h2>
+          <p class="reference-books-desc" style="margin-bottom:1.25rem;">「CDEとは」カテゴリの公開済みニュース記事12本を時系列順に整理しています。基礎解説と合わせて参照することで業界の動向を把握できます。</p>
+          <ul class="cluster-news-list">
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/the-great-brain-robbery.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月28日</div>
+          <div class="cluster-news-title">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</div>
+          <div class="cluster-news-excerpt">生成AIと自動化技術の急速な進化により、AEC業界にも転機が訪れている。ソフトウェア業界ではDevinなどの自動コーディングエージェントが、最小限の指示で複数のコード記述・デバッグ…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/agentic-bims-missing-infrastructure.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月28日</div>
+          <div class="cluster-news-title">エージェンティックBIMの致命的な欠陥──検証インフラ不在が引き起こす問題</div>
+          <div class="cluster-news-excerpt">AIが建築・設計プロセスに深く統合される「エージェンティックBIM」の時代が近づいている。しかし、現在のBIMプラットフォームとAIエージェントの組み合わせは、極めて限定的な「提案…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/nxt-bld-time-to-rethink-your-tech-stack.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月25日</div>
+          <div class="cluster-news-title">BIM 2.0時代の到来——AIが変える建築設計の技術スタック</div>
+          <div class="cluster-news-excerpt">建築・土木・設備設計（AEC）業界は、生成AIと大規模言語モデルの普及により、ソフトウェア選定の根本的な再検討を迫られている。従来のBIM導入では、Revit・Archicad・V…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/matterport-3d-spatial-data-platform-for-aec.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月18日</div>
+          <div class="cluster-news-title">Matterportとは｜AEC・BIM・デジタルツインをつなぐ3D空間データプラットフォーム</div>
+          <div class="cluster-news-excerpt">建設・不動産・施設管理の現場では、「現地に行かないと状況がわからない」「既存建物の正確な寸法や状況が図面にない」「竣工後に建物情報が散逸する」という課題が長年続いています。従来の対…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/mckinsey-and-alice-technologies-form-alliance.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月17日</div>
+          <div class="cluster-news-title">マッキンゼーがAlice Technologiesと提携、AI生成スケジューリングで工期20～40％短縮を実現</div>
+          <div class="cluster-news-excerpt">建設業界において、大型資本プロジェクト（インフラ、データセンター、エネルギー、鉱業など）の工期遅延と予算超過は構造的な課題として存在し続けています。グローバルな建設生産性は他の産業…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/gxdx.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月17日</div>
+          <div class="cluster-news-title">令和８年度「建築GX・DX推進事業」本登録受付開始、BIM実装加速へ</div>
+          <div class="cluster-news-excerpt">国土交通省は建築分野のカーボンニュートラル実現とデジタル化の急速な推進を目指し、「建築GX・DX推進事業」を継続実施しています。令和７年度末に実施された事前登録（プレエントリー）に…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/chaos-brings-real-time-rendering-to-v-ray-viewport.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月15日</div>
+          <div class="cluster-news-title">V-Ray 7がリアルタイムレンダリング対応、最終品質を viewport で実現</div>
+          <div class="cluster-news-excerpt">建築・設計業界でのビジュアライゼーション（可視化）は、従来「プレゼンテーション用の最終レンダリング」と「制作中の迅速な確認」の二つのフローが分離していました。設計者やアーキテクトは…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/nemetschek-group-bets-big-on-construction.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月14日</div>
+          <div class="cluster-news-title">ネメッテック、北米の土木建設大手HCSS買収で建設DXの版図再編</div>
+          <div class="cluster-news-excerpt">ネメッテックグループは、BIM・設計・建設管理ソフトウェア分野で欧州を中心にグローバル展開する大手ソフトウェア企業です。同社はRevitのプラグイン開発やBluebeamの買収など…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/graitec-earns-autodesk-gold-partner-status.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月14日</div>
+          <div class="cluster-news-title">Graitec、Autodesk Gold Partnerに認定——ファイル同期ツールで統合データ環境を実現</div>
+          <div class="cluster-news-excerpt">AEC（建築・エンジニアリング・建設）業界では、複数のプラットフォームやツール間でのデータ管理が常に課題となってきました。Autodesk Forma、Procore、Bluebe…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/intel-moves-to-build-pro-graphics-trust.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月9日</div>
+          <div class="cluster-news-title">IntelがBIM信頼獲得へ一手──Arc Pro統合GPU認証大幅拡大</div>
+          <div class="cluster-news-excerpt">Intelの統合グラフィックスがCAD・BIM業界で認知を得られなかった歴史的背景がある。従来、モバイルワークステーション市場ではNvidiaの独立型GPU搭載機が圧倒的シェアを占…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/qonic-introduces-native-drawing-generation.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月9日</div>
+          <div class="cluster-news-title">Qonicが図面自動生成機能を実装へ――BIMから寸法・室名も自動付与</div>
+          <div class="cluster-news-excerpt">BIM導入の理想と現実のギャップは、日本を含む世界的な課題です。BIMツールは「モデルと図面の統合ワークフロー」を謳いながらも、実務では寸法付けや室名タグ、各種注釈は手作業に頼る設…</div>
+        </a>
+      </li>
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/puget-systems-expands-server-portfolio.html">
+          <div class="cluster-news-meta">BIM全般 · 2026年4月8日</div>
+          <div class="cluster-news-title">Puget Systems、AI・レンダリング対応の新型サーバー11機種を投入——BIM・デジタルツイン向けGPU強化</div>
+          <div class="cluster-news-excerpt">AEC産業におけるデジタルツイン、リアリティキャプチャ、AI活用の拡大に伴い、建築・設計・施工現場が求めるコンピュート要件は劇的に変化しています。特にRevitやArchicadな…</div>
+        </a>
+      </li></ul>
+        </div>
         <div class="article-related-group">
           <h2 class="section-title" style="margin-top:0;">あわせて読みたい基礎解説</h2>
           <div class="guide-grid">
@@ -1938,6 +2319,9 @@
     <div class="footer-nav">
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
+      <a href="../compare.html">BIMツール比較</a>
+      <a href="../glossary.html">用語集</a>
+      <a href="../timeline.html">ベンダー履歴</a>
       <a href="../about.html">運営者情報</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>

@@ -923,6 +923,297 @@
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1751,12 +2042,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Information Delivery Specification（IDS）は、buildingSMART Internationalが策定した<a class="glossary-link" href="../guides/bim.html">BIM</a>実装の標準化ツールです。BIMモデルが設計・施工・維持管理の各段階でどのような情報を含むべきかを機械的に検証・管理するための仕様書であり、2024年6月の初版公開から2年が経過しました。BIM導入が進む欧米や豪州では、IDSは<a class="glossary-link" href="../guides/ifc.html">IFC</a>（Industry Foundation Classes）と組み合わせることで、プロジェクト間での情報交換品質を大幅に向上させるツールとして認識されています。一方、日本国内ではBIM推進会議やCIM技術検討会においても、IFCやIDSといった国際標準仕様の実装が重要課題とされており、IDSの改善動向は国内の建築・土木BIM活用にも直結しています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>buildingSMART Internationalは、2026年6月末までの期間限定でIDSユーザーおよび実装者からのフィードバック調査を実施しています。調査では、現在のIDS機能で「うまく機能している点」「実際の利用経験」「改善が必要な領域」の3点に焦点を当てています。buildingSMARTは、このコミュニティからの声を次期バージョンの開発に反映させることを明言しており、IDSの実装状況や利用シーンに関する現場からのデータを体系的に収集する狙いがあります。対象となるのは、設計事務所、ゼネコン、BIMソフトウェア開発企業、BIM咨詢企業、そして<a class="glossary-link" href="../guides/bim-manager.html">BIMマネージャー</a>など、実務の現場でIDSを運用している立場の回答者です。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Information Delivery Specification（IDS）は、<a class="glossary-link" href="../glossary.html#term-buildingsmart">buildingSMART</a> Internationalが策定した<a class="glossary-link" href="../guides/bim.html">BIM</a>実装の標準化ツールです。BIMモデルが設計・施工・維持管理の各段階でどのような情報を含むべきかを機械的に検証・管理するための仕様書であり、2024年6月の初版公開から2年が経過しました。BIM導入が進む欧米や豪州では、IDSは<a class="glossary-link" href="../guides/ifc.html">IFC</a>（Industry Foundation Classes）と組み合わせることで、プロジェクト間での情報交換品質を大幅に向上させるツールとして認識されています。一方、日本国内ではBIM推進会議やCIM技術検討会においても、IFCやIDSといった国際標準仕様の実装が重要課題とされており、IDSの改善動向は国内の建築・土木BIM活用にも直結しています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>buildingSMART Internationalは、2026年6月末までの期間限定でIDSユーザーおよび実装者からのフィードバック調査を実施しています。調査では、現在のIDS機能で「うまく機能している点」「実際の利用経験」「改善が必要な領域」の3点に焦点を当てています。buildingSMARTは、このコミュニティからの声を次期バージョンの開発に反映させることを明言しており、IDSの実装状況や利用シーンに関する現場からのデータを体系的に収集する狙いがあります。対象となるのは、設計事務所、ゼネコン、BIMソフトウェア開発企業、BIM咨詢企業、そして<a class="glossary-link" href="../guides/bim-manager.html">BIMマネージャー</a>など、実務の現場でIDSを運用している立場の回答者です。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/industry-insights-embracing-challenges-and-opportunities-of-using-openbim-for-in.html">openBIM導入で建設プロセス効率化、課題と機会をいかに乗り越えるか</a>
       <span class="mid-related-cat">IFC</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>IDSは、IFCファイルに対して「このプロジェクトではどの属性が必須か」「どの分類体系を使うべきか」といった要件を機械的に検証するスキーマです。既存のIFCは情報内容の定義には長けていますが、プロジェクト固有の「情報要件」をどう運用するかは属人的になりやすい課題がありました。IDSはこの運用課題に対して、XML形式のルールセットを用いることで、BIMソフト側が自動検証できる環境を提供します。2年の運用期間を経て、実装の課程で「ルール記述の複雑さ」「ソフト間の互換性」「属性値の標準化」といった実務的な課題が浮き彫りになっている可能性が高く、今回の調査はそれらを定量的に把握するための機会です。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>IDS改善の動向は、グローバルなBIM実装の成熟度を左右します。特にNederlands、オーストラリア、北米ではIDS運用ガイダンスが既に業界標準として機能しており、発注者側がIDS準拠をプロジェクト要件に組み込む事例が増加しています。今回のフィードバック調査の結果は、次の3～4年間のIDS標準化の方向性を決定し、ひいてはIFC運用全体の効率化につながります。ソフトウェア企業側では、Autodesk <a class="glossary-link" href="../guides/revit.html">Revit</a>、Graphisoft <a class="glossary-link" href="../guides/archicad.html">ArchiCAD</a>、Nemetschek AllplanなどのメジャープレイヤーがIDS対応機能を段階的に実装しており、フィードバック結果はこれら製品ロードマップにも直接反映される可能性があります。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>IDSは、IFCファイルに対して「このプロジェクトではどの属性が必須か」「どの分類体系を使うべきか」といった要件を機械的に検証するスキーマです。既存のIFCは情報内容の定義には長けていますが、プロジェクト固有の「情報要件」をどう運用するかは属人的になりやすい課題がありました。IDSはこの運用課題に対して、XML形式のルールセットを用いることで、BIMソフト側が自動検証できる環境を提供します。2年の運用期間を経て、実装の課程で「ルール記述の複雑さ」「ソフト間の互換性」「属性値の標準化」といった実務的な課題が浮き彫りになっている可能性が高く、今回の調査はそれらを定量的に把握するための機会です。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>IDS改善の動向は、グローバルなBIM実装の成熟度を左右します。特にNederlands、オーストラリア、北米ではIDS運用ガイダンスが既に業界標準として機能しており、発注者側がIDS準拠をプロジェクト要件に組み込む事例が増加しています。今回のフィードバック調査の結果は、次の3～4年間のIDS標準化の方向性を決定し、ひいてはIFC運用全体の効率化につながります。ソフトウェア企業側では、Autodesk <a class="glossary-link" href="../guides/revit.html">Revit</a>、Graphisoft <a class="glossary-link" href="../guides/archicad.html">ArchiCAD</a>、Nemetschek <a class="glossary-link" href="../glossary.html#term-allplan">Allplan</a>などのメジャープレイヤーがIDS対応機能を段階的に実装しており、フィードバック結果はこれら製品ロードマップにも直接反映される可能性があります。</p>
           </div>
         </div>
         
@@ -2018,6 +2309,9 @@
     <div class="footer-nav">
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
+      <a href="../compare.html">BIMツール比較</a>
+      <a href="../glossary.html">用語集</a>
+      <a href="../timeline.html">ベンダー履歴</a>
       <a href="../about.html">運営者情報</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>

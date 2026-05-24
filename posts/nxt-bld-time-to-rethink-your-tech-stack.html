@@ -923,6 +923,297 @@
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1751,12 +2042,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>建築・土木・設備設計（AEC）業界は、生成AIと大規模言語モデルの普及により、ソフトウェア選定の根本的な再検討を迫られている。従来の<a class="glossary-link" href="../guides/bim.html">BIM</a>導入では、<a class="glossary-link" href="../guides/revit.html">Revit</a>・<a class="glossary-link" href="../guides/archicad.html">Archicad</a>・Vectorworksなどの主要プラットフォームを中心に、点在する専門ツール群を組み合わせるワークフローが標準化されていた。しかし2024～2025年は、AIが単なる付加機能ではなく、製品アーキテクチャそのものの中核となる転換点を迎えた。予算圧力の高まりと新しいAI駆動ワークフローの登場により、既存のテック・スタックの有効性が問われている。2026年5月のロンドン開催予定のNXT BLD（建築・エンジニアリング・建設技術展）の出展者ラインアップは、この業界の急速な転換を象徴している。</p><h2 class="article-section-h2"><span>内容</span></h2><p>NXT BLDで展示される主な技術トレンドは、以下の3つのカテゴリに分かれている。第一が「BIM 2.0」と呼ぶ次世代BIMプラットフォームで、Arcol（クラウドベースのリアルタイム多人数協働）、Qonic（高性能モデルビューアーで自動クラッシュ検出・図面セット自動生成）、Motif（2D/3Dスケッチとライブデータの統合）、Snaptrude（ゾーニング・敷地分析・ボリューム検討・平面計画に特化したAIエージェント群）が該当する。第二は既存BIMワークフローを拡張するツール層で、Skema（スケッチ段階のBIMモデル品質向上）、TwinMaster（持続可能性・コスト・採光・法令遵守のリアルタイムフィードバック）、Graebert（Revit・<a class="glossary-link" href="../guides/ifc.html">IFC</a>向けAI自動製図）、Endra（自律的MEP設計による配管・ダクト・電気自動配置）がある。第三が大手プラットフォーム企業（Autodesk・Bentley Systems・Graphisoft・Siemens・Dassault Systèmes）によるAI統合・クラウド化・データスキーマ拡張である。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建築・土木・設備設計（AEC）業界は、生成AIと大規模言語モデルの普及により、ソフトウェア選定の根本的な再検討を迫られている。従来の<a class="glossary-link" href="../guides/bim.html">BIM</a>導入では、<a class="glossary-link" href="../guides/revit.html">Revit</a>・<a class="glossary-link" href="../guides/archicad.html">Archicad</a>・<a class="glossary-link" href="../glossary.html#term-vectorworks">Vectorworks</a>などの主要プラットフォームを中心に、点在する専門ツール群を組み合わせるワークフローが標準化されていた。しかし2024～2025年は、AIが単なる付加機能ではなく、製品アーキテクチャそのものの中核となる転換点を迎えた。予算圧力の高まりと新しいAI駆動ワークフローの登場により、既存のテック・スタックの有効性が問われている。2026年5月のロンドン開催予定のNXT BLD（建築・エンジニアリング・建設技術展）の出展者ラインアップは、この業界の急速な転換を象徴している。</p><h2 class="article-section-h2"><span>内容</span></h2><p>NXT BLDで展示される主な技術トレンドは、以下の3つのカテゴリに分かれている。第一が「BIM 2.0」と呼ぶ次世代BIMプラットフォームで、Arcol（クラウドベースのリアルタイム多人数協働）、Qonic（高性能モデルビューアーで自動<a class="glossary-link" href="../glossary.html#term-clash-detection">クラッシュ検出</a>・図面セット自動生成）、Motif（2D/3Dスケッチとライブデータの統合）、Snaptrude（ゾーニング・敷地分析・ボリューム検討・平面計画に特化したAIエージェント群）が該当する。第二は既存BIMワークフローを拡張するツール層で、Skema（スケッチ段階のBIMモデル品質向上）、TwinMaster（持続可能性・コスト・採光・法令遵守のリアルタイムフィードバック）、Graebert（Revit・<a class="glossary-link" href="../guides/ifc.html">IFC</a>向けAI自動製図）、Endra（自律的<a class="glossary-link" href="../glossary.html#term-mep">MEP</a>設計による配管・ダクト・電気自動配置）がある。第三が大手プラットフォーム企業（Autodesk・Bentley Systems・Graphisoft・Siemens・Dassault Systèmes）によるAI統合・クラウド化・データスキーマ拡張である。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>これまでのBIM環境は、Revit→IFC変換→解析ツール→図面出力という単方向パイプラインが典型だった。BIM 2.0では、ライブモデルデータを複数のAIエージェントが同時に読み取り、リアルタイムにデザイン提案・検証・更新を行う仕組みに転換している。Snaptrude・Endra・TwinMasterのような「ドメイン特化AIエージェント」が注目される理由は、単なるテンプレート検索ではなく、物理シミュレーション・法令ルール・エネルギー計算を内蔵したモデルAIが、設計者の意思決定を直接支援するからだ。また、Speckle・Tektome・Egnytcといったデータ層の技術が台頭しているのは、IFC・<a class="glossary-link" href="../guides/openbim.html">OpenBIM</a>の標準化が進むなか、異なるツール間のデータ同期・品質検証・変更追跡を自動化する必要が生じたためである。既存のRevit・Archicad単独時代とは異なり、マルチプラットフォーム環境での「データ信頼性」が技術的な焦点になっている。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この転換がプロジェクト実務に与える影響は多面的である。第一に、設計プロセスの時間短縮である。スケッチ段階から配置案・MEP配管・図面セット生成まで、従来は各段階で異なるツール・人員・レビューサイクルが必要だったが、AI統合で並列化・自動化される。第二に、小規模プロジェクトチームの生産性向上である。少人数事務所でも大規模プロジェクト対応が可能になれば、人材獲得競争が緩和される。第三に、ベンダー業界の再編である。既存のRevit・Archicad一極集中体制から、スケーラブルなクラウドプラットフォーム・AI統合ツールへシェアが流動化する局面が訪れている。一方、既存投資資産（Revitマクロ・アドイン）との互換性維持が急務になるため、Autodesk・Bentleyが旧プラットフォーム上でAI機能を層厚くしている。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>これまでのBIM環境は、Revit→IFC変換→解析ツール→図面出力という単方向パイプラインが典型だった。BIM 2.0では、ライブモデルデータを複数のAIエージェントが同時に読み取り、リアルタイムにデザイン提案・検証・更新を行う仕組みに転換している。Snaptrude・Endra・TwinMasterのような「ドメイン特化AIエージェント」が注目される理由は、単なるテンプレート検索ではなく、物理シミュレーション・法令ルール・エネルギー計算を内蔵したモデルAIが、設計者の意思決定を直接支援するからだ。また、<a class="glossary-link" href="../glossary.html#term-speckle">Speckle</a>・Tektome・Egnytcといったデータ層の技術が台頭しているのは、IFC・<a class="glossary-link" href="../guides/openbim.html">OpenBIM</a>の標準化が進むなか、異なるツール間のデータ同期・品質検証・変更追跡を自動化する必要が生じたためである。既存のRevit・Archicad単独時代とは異なり、マルチプラットフォーム環境での「データ信頼性」が技術的な焦点になっている。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この転換がプロジェクト実務に与える影響は多面的である。第一に、設計プロセスの時間短縮である。スケッチ段階から配置案・MEP配管・図面セット生成まで、従来は各段階で異なるツール・人員・レビューサイクルが必要だったが、AI統合で並列化・自動化される。第二に、小規模プロジェクトチームの生産性向上である。少人数事務所でも大規模プロジェクト対応が可能になれば、人材獲得競争が緩和される。第三に、ベンダー業界の再編である。既存のRevit・Archicad一極集中体制から、スケーラブルなクラウドプラットフォーム・AI統合ツールへシェアが流動化する局面が訪れている。一方、既存投資資産（Revitマクロ・アドイン）との互換性維持が急務になるため、Autodesk・Bentleyが旧プラットフォーム上でAI機能を層厚くしている。</p>
           </div>
         </div>
         
@@ -2018,6 +2309,9 @@
     <div class="footer-nav">
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
+      <a href="../compare.html">BIMツール比較</a>
+      <a href="../glossary.html">用語集</a>
+      <a href="../timeline.html">ベンダー履歴</a>
       <a href="../about.html">運営者情報</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>

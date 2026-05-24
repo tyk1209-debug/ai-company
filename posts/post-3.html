@@ -923,6 +923,297 @@
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1751,7 +2042,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>建設業界のデジタル化が急速に進行している。i-Construction 2.0に代表される政策推進のもと、ドローンによる現場把握、<a class="glossary-link" href="../guides/bim.html">BIM</a>/CIM、AI解析などが現場で当たり前のように活用される時代へ移行している。一方、建設業界は深刻な人手不足に直面しており、インフラの老朽化は同時進行で加速している。このような状況下で、ヒューマノイド（ヒト型ロボット）が実用化段階に入りつつあることで、建設技術者の存在意義そのものが問い直される局面を迎えている。技術者不足の解決とAI・ロボット技術の導入という二つの流れが交差するなかで、建設技術者のキャリアと責任の在り方が根本的に変わることが必然となってきたのである。</p><h2 class="article-section-h2"><span>内容</span></h2><p>投稿者の建設コンサルタント・済木鉄哉氏は、今後の建設技術者に求められる資質として「仕事の在り方を変える覚悟」を提唱している。従来型の効率化施策だけでは、人手不足とインフラ老朽化という二重苦に対応しきれないという指摘である。より重要なのは、デジタル機器に頼りきることの危険性だ。AIが提供する解析結果や施工計画についても、技術者自身が検証し、間違いを指摘できる能力が不可欠という主張である。特に、施工計画書をAIだけに委ねることの可否という問題提起は、BIM/CIM時代の実務現場での判断と責任をめぐる本質的な課題を浮き彫りにしている。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建設業界のデジタル化が急速に進行している。i-Construction 2.0に代表される政策推進のもと、ドローンによる現場把握、<a class="glossary-link" href="../guides/bim.html">BIM</a>/CIM、AI解析などが現場で当たり前のように活用される時代へ移行している。一方、建設業界は深刻な人手不足に直面しており、インフラの老朽化は同時進行で加速している。このような状況下で、ヒューマノイド（ヒト型ロボット）が実用化段階に入りつつあることで、建設技術者の存在意義そのものが問い直される局面を迎えている。技術者不足の解決とAI・ロボット技術の導入という二つの流れが交差するなかで、建設技術者のキャリアと責任の在り方が根本的に変わることが必然となってきたのである。</p><h2 class="article-section-h2"><span>内容</span></h2><p>投稿者の建設コンサルタント・済木鉄哉氏は、今後の建設技術者に求められる資質として「仕事の在り方を変える覚悟」を提唱している。従来型の効率化施策だけでは、人手不足とインフラ老朽化という二重苦に対応しきれないという指摘である。より重要なのは、デジタル機器に頼りきることの危険性だ。AIが提供する解析結果や施工計画についても、技術者自身が検証し、間違いを指摘できる能力が不可欠という主張である。特に、施工計画書をAIだけに委ねることの可否という問題提起は、<a class="glossary-link" href="../glossary.html#term-mlit-bim-cim">BIM/CIM</a>時代の実務現場での判断と責任をめぐる本質的な課題を浮き彫りにしている。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/aec-magazine-may-june-2026.html">Agentic BIMの実装課題が顕在化、Palantir・HVAC AI等が2026年の業界トレンド</a>
@@ -2018,6 +2309,9 @@
     <div class="footer-nav">
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
+      <a href="../compare.html">BIMツール比較</a>
+      <a href="../glossary.html">用語集</a>
+      <a href="../timeline.html">ベンダー履歴</a>
       <a href="../about.html">運営者情報</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>

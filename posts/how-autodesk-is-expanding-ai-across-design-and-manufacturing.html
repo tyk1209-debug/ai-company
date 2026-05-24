@@ -923,6 +923,297 @@
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1751,12 +2042,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>Design and Manufacturing領域におけるAI活用は、ここ2～3年で劇的な転換点を迎えています。従来、3D設計ツールは設計者の操作スキルに大きく依存していましたが、LLMやマルチモーダルAIの進化により、自然言語で複雑な設計タスクを自動化する可能性が現実化してきました。Autodesk Fusion、Inventor、Moldflowといったプロダクトポートフォリオを持つAutodeskは、設計・製造業務の自動化において業界をリードする立場にあります。日本国内でも、建築<a class="glossary-link" href="../guides/bim.html">BIM</a>推進会議や国土交通省のBIM/CIMロードマップでは、設計業務の効率化と自動化がテーマとなっており、Autodeskの動向は国内の設計事務所やゼネコンにも大きな影響を与えています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskが今回発表した主要な施策は、以下の3つの層で構成されています。まず第1層が「Autodesk Assistant」で、Fusion、Inventor、Moldflow、Vaultの全主要プロダクトに実装されました。Fusionではプロンプト-API連携により、Fusionのほぼ全機能をAIが直接操作でき、自然言語で複雑なタスクを実行します。Inventorでは機械設計データからの情報抽出や設計変更タスクをコード記述なしで実行可能です。Moldflowではシミュレーション結果の解釈と トラブルシューティングをAIがガイドします。第2層が「Model Context Protocols（MCPs）」で、Fusion MCP（アクション拡張）とFusion Data MCP（データ理解）の2つの公開MCPにより、開発チームがFusionを外部システムに統合し、カスタムAIワークフローを構築できるようになります。第3層が「サードパーティ連携」で、Anthropicの「Claude for Creative Work」を通じてFusionがClaudeに統合され、設計概念から製造可能な出力へと直結するワークフローが実現しました。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>Design and Manufacturing領域におけるAI活用は、ここ2～3年で劇的な転換点を迎えています。従来、3D設計ツールは設計者の操作スキルに大きく依存していましたが、LLMやマルチモーダルAIの進化により、自然言語で複雑な設計タスクを自動化する可能性が現実化してきました。Autodesk Fusion、Inventor、Moldflowといったプロダクトポートフォリオを持つAutodeskは、設計・製造業務の自動化において業界をリードする立場にあります。日本国内でも、建築<a class="glossary-link" href="../guides/bim.html">BIM</a>推進会議や国土交通省の<a class="glossary-link" href="../glossary.html#term-mlit-bim-cim">BIM/CIM</a>ロードマップでは、設計業務の効率化と自動化がテーマとなっており、Autodeskの動向は国内の設計事務所やゼネコンにも大きな影響を与えています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskが今回発表した主要な施策は、以下の3つの層で構成されています。まず第1層が「Autodesk Assistant」で、Fusion、Inventor、Moldflow、Vaultの全主要プロダクトに実装されました。Fusionではプロンプト-API連携により、Fusionのほぼ全機能をAIが直接操作でき、自然言語で複雑なタスクを実行します。Inventorでは機械設計データからの情報抽出や設計変更タスクをコード記述なしで実行可能です。Moldflowではシミュレーション結果の解釈と トラブルシューティングをAIがガイドします。第2層が「Model Context Protocols（MCPs）」で、Fusion MCP（アクション拡張）とFusion Data MCP（データ理解）の2つの公開MCPにより、開発チームがFusionを外部システムに統合し、カスタムAIワークフローを構築できるようになります。第3層が「サードパーティ連携」で、Anthropicの「Claude for Creative Work」を通じてFusionがClaudeに統合され、設計概念から製造可能な出力へと直結するワークフローが実現しました。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
       <span class="mid-related-cat">Revit</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Autodeskのアプローチで注目すべきは、単なるLLMの統合ではなく「産業特化型の所有モデル」と「プロトコルベースの拡張性」を両立させている点です。Autodeskは境界モデル（frontier models）と自社の3D設計専用モデルを組み合わせることで、汎用LLMの精度限界を補完しています。MCPは、OpenAI的なプラグインアーキテクチャではなく、XML-RPC的な軽量プロトコルとして設計されており、企業のレガシーシステムやオンプレミス環境との統合にも対応しやすくなっています。Fusion MCPが「prompt to API」を実現することで、自然言語がそのままFusion APIコールに変換され、複数ステップの設計タスク（パターン生成→CAM準備→BOM抽出）をシーケンシャルに自動実行できる仕組みです。既存の<a class="glossary-link" href="../guides/revit.html">Revit</a> APIやInventor APIによるマクロ記述とは異なり、ノーコードでワークフロー設計が可能になり、スキルセット要件が大幅に低下します。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバルな製造・設計業界全体では、このAI自動化の波が生産性向上の新しい基準になると予想されます。従来、製造業のDX推進では「IoT→データ分析」という段階的なアプローチが主流でしたが、Autodeskの展開は「設計自動化→生産性ジャンプ」という異なるベクトルを示しています。特に機械設計分野では、パラメトリック設計やジェネレーティブデザインがAIアシスタントの組み込みで劇的に操作性が向上し、設計期間の短縮が実現可能になります。建築分野でもMoldflowの自動化は複合部材の設計検証を加速化し、施工時の品質問題の予測が早期段階で可能になります。プロジェクトレベルでは、大規模な国際プロジェクトにおいて、言語や操作スキルの障壁が低下することで、グローバル設計チームの協働がより効率化されるでしょう。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Autodeskのアプローチで注目すべきは、単なるLLMの統合ではなく「産業特化型の所有モデル」と「プロトコルベースの拡張性」を両立させている点です。Autodeskは境界モデル（frontier models）と自社の3D設計専用モデルを組み合わせることで、汎用LLMの精度限界を補完しています。MCPは、OpenAI的なプラグインアーキテクチャではなく、XML-RPC的な軽量プロトコルとして設計されており、企業のレガシーシステムやオンプレミス環境との統合にも対応しやすくなっています。Fusion MCPが「prompt to API」を実現することで、自然言語がそのままFusion APIコールに変換され、複数ステップの設計タスク（パターン生成→CAM準備→BOM抽出）をシーケンシャルに自動実行できる仕組みです。既存の<a class="glossary-link" href="../guides/revit.html">Revit</a> APIやInventor APIによるマクロ記述とは異なり、ノーコードでワークフロー設計が可能になり、スキルセット要件が大幅に低下します。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバルな製造・設計業界全体では、このAI自動化の波が生産性向上の新しい基準になると予想されます。従来、製造業のDX推進では「IoT→データ分析」という段階的なアプローチが主流でしたが、Autodeskの展開は「設計自動化→生産性ジャンプ」という異なるベクトルを示しています。特に機械設計分野では、パラメトリック設計や<a class="glossary-link" href="../glossary.html#term-generative-design">ジェネレーティブデザイン</a>がAIアシスタントの組み込みで劇的に操作性が向上し、設計期間の短縮が実現可能になります。建築分野でもMoldflowの自動化は複合部材の設計検証を加速化し、施工時の品質問題の予測が早期段階で可能になります。プロジェクトレベルでは、大規模な国際プロジェクトにおいて、言語や操作スキルの障壁が低下することで、グローバル設計チームの協働がより効率化されるでしょう。</p>
           </div>
         </div>
         
@@ -2018,6 +2309,9 @@
     <div class="footer-nav">
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
+      <a href="../compare.html">BIMツール比較</a>
+      <a href="../glossary.html">用語集</a>
+      <a href="../timeline.html">ベンダー履歴</a>
       <a href="../about.html">運営者情報</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>

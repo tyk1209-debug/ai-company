@@ -923,6 +923,297 @@
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1751,7 +2042,7 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/revit.html">Revit</a>はAutodeskが提供する建築<a class="glossary-link" href="../guides/bim.html">BIM</a>プラットフォームとして、日本でも設計事務所やゼネコンに急速に普及しています。BIM/CIM推進ロードマップ（国土交通省）の施行に伴い、公共事業でのBIM活用が本格化する中、Revitユーザーの裾野も拡大しています。しかし、Revitの最大の特徴である「ファミリ」という概念は、初心者にとって理解が難しく、多くのプロジェクトでファミリ管理の不統一や属性情報の欠落が問題化してきました。特に日本の設計事務所やゼネコンでは、既存のCADワークフローからの移行期にあり、ファミリの正確な理解と運用が、BIM導入の成否を分ける重要な要素になっています。本ガイドは、Revitの根幹を成すファミリ構造について、実務的かつ体系的に解説する教育リソースとして公開されました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>RevitにおけるBIMオブジェクトは「ファミリ」と呼ばれ、「カテゴリ→ファミリ（階層構成）→タイプ→インスタンス」という4段階の階層構造で管理されています。カテゴリは壁やドア、家具などの部材分類であり、表示制御や集計の基準となります。ファミリは部品定義のひな形であり、同じ種類の要素を生成するためのテンプレートです。タイプは同一ファミリ内での仕様バリエーション（例：コンクリート壁180mm、乾式間仕切り壁100mmなど）を管理し、タイプを変更するとそのタイプに属するすべてのインスタンスに影響します。インスタンスはモデル上に配置された個々の要素であり、タイプで定義されていない個別属性（例：特定の壁の高さ）を設定できます。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/revit.html">Revit</a>はAutodeskが提供する建築<a class="glossary-link" href="../guides/bim.html">BIM</a>プラットフォームとして、日本でも設計事務所やゼネコンに急速に普及しています。<a class="glossary-link" href="../glossary.html#term-mlit-bim-cim">BIM/CIM</a>推進ロードマップ（国土交通省）の施行に伴い、公共事業でのBIM活用が本格化する中、Revitユーザーの裾野も拡大しています。しかし、Revitの最大の特徴である「<a class="glossary-link" href="../glossary.html#term-family">ファミリ</a>」という概念は、初心者にとって理解が難しく、多くのプロジェクトでファミリ管理の不統一や属性情報の欠落が問題化してきました。特に日本の設計事務所やゼネコンでは、既存のCADワークフローからの移行期にあり、ファミリの正確な理解と運用が、BIM導入の成否を分ける重要な要素になっています。本ガイドは、Revitの根幹を成すファミリ構造について、実務的かつ体系的に解説する教育リソースとして公開されました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>RevitにおけるBIMオブジェクトは「ファミリ」と呼ばれ、「カテゴリ→ファミリ（階層構成）→タイプ→インスタンス」という4段階の階層構造で管理されています。カテゴリは壁やドア、家具などの部材分類であり、表示制御や集計の基準となります。ファミリは部品定義のひな形であり、同じ種類の要素を生成するためのテンプレートです。タイプは同一ファミリ内での仕様バリエーション（例：コンクリート壁180mm、乾式間仕切り壁100mmなど）を管理し、タイプを変更するとそのタイプに属するすべてのインスタンスに影響します。インスタンスはモデル上に配置された個々の要素であり、タイプで定義されていない個別属性（例：特定の壁の高さ）を設定できます。</p>
 <p>Revitのファミリは3種類に分類されます。システムファミリは壁・床・屋根など建物の基本要素で、プロジェクトに内包され外部ファイルとして保存できません。ロード可能なファミリ（.rfa形式）は建具・家具・設備など、外部ファイルとして管理・カスタマイズ可能で、メーカーが提供するBIMオブジェクトの大部分がこれに該当します。インプレイスファミリはプロジェクト専用の個別形状や例外的要素の表現に用いられます。ファミリは「タイプパラメータ」（タイプに属するすべての要素に共通）と「インスタンスパラメータ」（個々の要素ごとに異なる）の二階層パラメータを持つ点が特徴です。さらにパラメータの適用範囲として、ファミリ内だけで使用する「ファミリパラメータ」、プロジェクト全体で共通の「プロジェクトパラメータ」、複数ファミリやプロジェクト間で共有される「共有パラメータ」があります。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
@@ -2020,6 +2311,9 @@
     <div class="footer-nav">
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
+      <a href="../compare.html">BIMツール比較</a>
+      <a href="../glossary.html">用語集</a>
+      <a href="../timeline.html">ベンダー履歴</a>
       <a href="../about.html">運営者情報</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>

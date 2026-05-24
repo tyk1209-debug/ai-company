@@ -923,6 +923,297 @@
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1751,12 +2042,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>建築・エンジニアリング業界において、デジタル技術の応用範囲は新築建設から既存建物の保全・修復へと広がりつつあります。特に世界中の文化遺産は、気候変動、老朽化、自然災害といった脅威に直面しており、従来の修復技法だけでは対応が困難になっています。デジタルツイン、<a class="glossary-link" href="../guides/bim.html">BIM</a>、リアリティキャプチャといったAEC業界の先進ツールを文化財保存に適用する動きは、建築業界のイノベーション戦略として注目されるようになりました。Autodeskが2年連続で「Fast Company Most Innovative Companies」のArchitecture部門に選出されたのは、こうした業界変化を象徴する出来事です。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskは、ノートルダム・ド・パリ大聖堂とフランク・ロイド・ライトの名作「落水荘」（Fallingwater）の保存・修復プロジェクトを通じて、文化遺産保護におけるデジタル技術の価値を実証してきました。2019年の火災後、Autodeskは仏の非営利団体Art Graphique et Patrimoine（AGP）と協力し、詳細な3D BIMモデルを作成・寄贈しました。このモデルはレーザースキャンとフォトグラメトリーのデータに基づいており、風や採光条件のシミュレーション、250社を超える企業に属する2,000名以上の建築家、エンジニア、専門家による協働作業を可能にしました。5年後の2024年12月のノートルダム再開は、伝統工芸とデジタルイノベーションの融合の成果を示しています。一方、ペンシルベニア州の落水荘では、Case Technologiesと西ペンシルベニア保全協会（WPC）と協働し、ドローンとレーザースキャナーで数百万データポイントを取得。構造状態の分析、修復計画、長期保管用デジタルアーカイブの構築が進行中です。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建築・エンジニアリング業界において、デジタル技術の応用範囲は新築建設から既存建物の保全・修復へと広がりつつあります。特に世界中の文化遺産は、気候変動、老朽化、自然災害といった脅威に直面しており、従来の修復技法だけでは対応が困難になっています。<a class="glossary-link" href="../glossary.html#term-digital-twin">デジタルツイン</a>、<a class="glossary-link" href="../guides/bim.html">BIM</a>、リアリティキャプチャといったAEC業界の先進ツールを文化財保存に適用する動きは、建築業界のイノベーション戦略として注目されるようになりました。Autodeskが2年連続で「Fast Company Most Innovative Companies」のArchitecture部門に選出されたのは、こうした業界変化を象徴する出来事です。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskは、ノートルダム・ド・パリ大聖堂とフランク・ロイド・ライトの名作「落水荘」（Fallingwater）の保存・修復プロジェクトを通じて、文化遺産保護におけるデジタル技術の価値を実証してきました。2019年の火災後、Autodeskは仏の非営利団体Art Graphique et Patrimoine（AGP）と協力し、詳細な3D BIMモデルを作成・寄贈しました。このモデルはレーザースキャンとフォトグラメトリーのデータに基づいており、風や採光条件のシミュレーション、250社を超える企業に属する2,000名以上の建築家、エンジニア、専門家による協働作業を可能にしました。5年後の2024年12月のノートルダム再開は、伝統工芸とデジタルイノベーションの融合の成果を示しています。一方、ペンシルベニア州の落水荘では、Case Technologiesと西ペンシルベニア保全協会（WPC）と協働し、ドローンとレーザースキャナーで数百万データポイントを取得。構造状態の分析、修復計画、長期保管用デジタルアーカイブの構築が進行中です。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>これらのプロジェクトで採用される技術スタックは、従来の新築BIMワークフローを文化財領域に拡張したものです。リアリティキャプチャ（Autodesk ReCap Proなど）により、既存建造物を高精度デジタルツインに変換し、ポイントクラウドとして3D BIMモデルを生成します。これにより、修復チームは単なる目視調査ではなく、数値化された構造データに基づいて意思決定できるようになります。ノートルダムの場合、250社以上が「共有された単一情報源」（single source of truth）として同じBIMモデルを参照しながら、施工計画・工程管理・チーム間調整を実行しました。この協働体制は、新築プロジェクトと同様のクラウドベース協働プラットフォームに支えられています。文化財保存特有の課題は、不可逆的な損傷が発生する前に、膨大な形状・材質・施工履歴データを記録する必要という点です。スキャンtoBIMワークフロー自体は建設業界で定着しつつありますが、500年以上の歴史を持つ石造建築の複雑さは新築プロジェクトを大きく上回ります。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この取り組みは、BIM・デジタルツイン技術の適用範囲を根本的に拡張します。従来、BIMは「設計・施工・運用」の新築建物ライフサイクルに特化していました。しかし文化財修復での成功事例は、既存建物の診断・保全・管理領域でのBIM活用の可能性を業界に示唆しました。特に以下の点で影響が期待されます。第一に、修復プロジェクトマネジメントの透明化と品質向上です。数千人規模の作業者が関わる大規模修復では、情報分断や指示の不統一が発生しやすく、ノートルダムのようなマルチパーティ協働モデルは業界標準化の先駆けになり得ます。第二に、文化遺産データのアーカイブ化と長期保全の新規事業機会です。建築物のデジタルツインは、将来の修復・改修時に極めて高い価値を持ちます。第三に、BIMツールベンダーの事業ポートフォリオ拡大です。Autodeskは新築中心の顧客層に加え、保全・修復市場へのソリューション拡販が可能になります。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>これらのプロジェクトで採用される技術スタックは、従来の新築BIMワークフローを文化財領域に拡張したものです。リアリティキャプチャ（Autodesk ReCap Proなど）により、既存建造物を高精度デジタルツインに変換し、<a class="glossary-link" href="../glossary.html#term-point-cloud">ポイントクラウド</a>として3D BIMモデルを生成します。これにより、修復チームは単なる目視調査ではなく、数値化された構造データに基づいて意思決定できるようになります。ノートルダムの場合、250社以上が「共有された単一情報源」（single source of truth）として同じBIMモデルを参照しながら、施工計画・工程管理・チーム間調整を実行しました。この協働体制は、新築プロジェクトと同様のクラウドベース協働プラットフォームに支えられています。文化財保存特有の課題は、不可逆的な損傷が発生する前に、膨大な形状・材質・施工履歴データを記録する必要という点です。スキャンtoBIMワークフロー自体は建設業界で定着しつつありますが、500年以上の歴史を持つ石造建築の複雑さは新築プロジェクトを大きく上回ります。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>この取り組みは、BIM・デジタルツイン技術の適用範囲を根本的に拡張します。従来、BIMは「設計・施工・運用」の新築建物ライフサイクルに特化していました。しかし文化財修復での成功事例は、既存建物の診断・保全・管理領域でのBIM活用の可能性を業界に示唆しました。特に以下の点で影響が期待されます。第一に、修復プロジェクトマネジメントの透明化と品質向上です。数千人規模の作業者が関わる大規模修復では、情報分断や指示の不統一が発生しやすく、ノートルダムのようなマルチパーティ協働モデルは業界標準化の先駆けになり得ます。第二に、文化遺産データのアーカイブ化と長期保全の新規事業機会です。建築物のデジタルツインは、将来の修復・改修時に極めて高い価値を持ちます。第三に、BIMツールベンダーの事業ポートフォリオ拡大です。Autodeskは新築中心の顧客層に加え、保全・修復市場へのソリューション拡販が可能になります。</p>
           </div>
         </div>
         
@@ -2018,6 +2309,9 @@
     <div class="footer-nav">
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
+      <a href="../compare.html">BIMツール比較</a>
+      <a href="../glossary.html">用語集</a>
+      <a href="../timeline.html">ベンダー履歴</a>
       <a href="../about.html">運営者情報</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>

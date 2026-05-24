@@ -1986,6 +1986,297 @@ ${articleMeta ? articleMeta + '\n' : ''}  <link rel="icon" type="image/svg+xml" 
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -2891,6 +3182,9 @@ function htmlFooter(base = '.', articleCount = 0) {
     <div class="footer-nav">
       <a href="${base}/">ホーム</a>
       <a href="${base}/events.html">イベント</a>
+      <a href="${base}/compare.html">BIMツール比較</a>
+      <a href="${base}/glossary.html">用語集</a>
+      <a href="${base}/timeline.html">ベンダー履歴</a>
       <a href="${base}/about.html">運営者情報</a>
       <a href="${base}/privacy.html">プライバシーポリシー</a>
     </div>
@@ -3211,6 +3505,44 @@ function buildGuideFaqSection(guide) {
     </section>`;
 }
 
+// ピラーページ内の関連ニュースクラスタ：各ガイドのカテゴリに紐づく全ニュースを
+// 自動収集して表示する。E-E-A-T のうち Expertise / Authoritativeness シグナル強化、
+// 内部リンクの凝集度UP、AdSense 評価対策。
+function buildGuideNewsCluster(guide, posts) {
+  if (!posts || posts.length === 0) return '';
+  const targetCategory = String(guide.category || '').toUpperCase();
+  const matching = posts
+    .filter((p) => String(p.category || '').toUpperCase() === targetCategory)
+    .filter((p) => (p.titleJa || '').trim().length > 0)
+    .sort((a, b) => {
+      const da = a.pubDate ? new Date(a.pubDate).getTime() : 0;
+      const db = b.pubDate ? new Date(b.pubDate).getTime() : 0;
+      return db - da;
+    })
+    .slice(0, 12);
+  if (matching.length === 0) return '';
+
+  const items = matching.map((p) => {
+    const date = p.pubDate ? formatDate(p.pubDate) : '';
+    const excerptText = excerpt(p.bodyJa || p.summary || '', 90);
+    return `
+      <li class="cluster-news-item">
+        <a class="cluster-news-link" href="../posts/${escape(p.slug)}.html">
+          <div class="cluster-news-meta">${escape(categoryLabel(p.category))}${date ? ` · ${escape(date)}` : ''}</div>
+          <div class="cluster-news-title">${escape(p.titleJa || p.title)}</div>
+          ${excerptText ? `<div class="cluster-news-excerpt">${escape(excerptText)}</div>` : ''}
+        </a>
+      </li>`;
+  }).join('');
+
+  return `
+        <div class="article-related-group" style="margin-top:3rem;">
+          <h2 class="section-title" style="margin-top:0;">${escape(guide.title)}関連の最新ニュース</h2>
+          <p class="reference-books-desc" style="margin-bottom:1.25rem;">「${escape(guide.title)}」カテゴリの公開済みニュース記事${matching.length}本を時系列順に整理しています。基礎解説と合わせて参照することで業界の動向を把握できます。</p>
+          <ul class="cluster-news-list">${items}</ul>
+        </div>`;
+}
+
 function buildExplainerPage(guide, posts) {
   const pageTitle = `${guide.title} | ${SITE_NAME}`;
   const pageDesc = guide.description;
@@ -3256,6 +3588,7 @@ function buildExplainerPage(guide, posts) {
         ${buildGuideExtraSections(guide)}
         ${buildGuideFaqSection(guide)}
         ${buildExplainerBooks(guide)}
+        ${buildGuideNewsCluster(guide, posts)}
         <div class="article-related-group">
           <h2 class="section-title" style="margin-top:0;">あわせて読みたい基礎解説</h2>
           ${buildGuideGrid(relatedGuides, '..', '関連解説')}
@@ -3629,7 +3962,8 @@ function buildIndex(posts, totalCount = 0) {
 // SEO: トピックピラー（guides/*.html）への内部リンクを増やしGoogleでの主題関連度を強化。
 // UX: 読者が用語を1クリックで学べる導線を提供。
 
-const GLOSSARY_LINKS = [
+// メイン基礎解説（/guides/<slug>.html）へのリンク。優先度高。
+const GLOSSARY_GUIDE_LINKS = [
   { terms: ['BIMマネージャー'], slug: 'bim-manager' },
   { terms: ['Archicad', 'ArchiCAD', 'アーキキャド'], slug: 'archicad' },
   { terms: ['Revit', 'レビット'], slug: 'revit' },
@@ -3640,13 +3974,58 @@ const GLOSSARY_LINKS = [
   { terms: ['BIM'], slug: 'bim' },
 ];
 
+// 用語集ページ（/glossary.html#term-<id>）への補助リンク。
+// ガイドが無い用語をカバーしてコンテンツハブ凝集度を上げる。
+const GLOSSARY_TERM_LINKS = [
+  { terms: ['ST-Bridge'], id: 'st-bridge' },
+  { terms: ['ジェネレーティブデザイン', 'Generative Design'], id: 'generative-design' },
+  { terms: ['Forma'], id: 'forma' },
+  { terms: ['Tekla'], id: 'tekla' },
+  { terms: ['Vectorworks'], id: 'vectorworks' },
+  { terms: ['Allplan'], id: 'allplan' },
+  { terms: ['Bluebeam'], id: 'bluebeam' },
+  { terms: ['Speckle'], id: 'speckle' },
+  { terms: ['Revizto'], id: 'revizto' },
+  { terms: ['Construction Cloud'], id: 'forma' },
+  { terms: ['BCF'], id: 'bcf' },
+  { terms: ['COBie'], id: 'cobie' },
+  { terms: ['MVD'], id: 'mvd' },
+  { terms: ['LOD'], id: 'lod' },
+  { terms: ['LOIN'], id: 'loin' },
+  { terms: ['BEP'], id: 'bep' },
+  { terms: ['EIR'], id: 'eir' },
+  { terms: ['CDE'], id: 'cde' },
+  { terms: ['ISO 19650', 'ISO19650'], id: 'iso19650' },
+  { terms: ['国土交通省BIM/CIM', 'BIM/CIM'], id: 'mlit-bim-cim' },
+  { terms: ['建築BIM推進会議'], id: 'kentiku-bim' },
+  { terms: ['Extensions JPN'], id: 'extensions-jpn' },
+  { terms: ['MEP'], id: 'mep' },
+  { terms: ['エンボディドカーボン', 'Embodied Carbon', '埋蔵炭素'], id: 'embodied-carbon' },
+  { terms: ['ポイントクラウド', '点群'], id: 'point-cloud' },
+  { terms: ['デジタルツイン', 'Digital Twin'], id: 'digital-twin' },
+  { terms: ['ファミリ', 'Family'], id: 'family' },
+  { terms: ['ワークセット'], id: 'workset' },
+  { terms: ['ワークシェアリング'], id: 'worksharing' },
+  { terms: ['クラッシュ検出', 'Clash Detection', '干渉チェック'], id: 'clash-detection' },
+  { terms: ['4D BIM'], id: '4d-bim' },
+  { terms: ['5D BIM'], id: '5d-bim' },
+  { terms: ['Grasshopper'], id: 'grasshopper' },
+  { terms: ['Rhino', 'Rhinoceros'], id: 'rhino' },
+  { terms: ['buildingSMART'], id: 'buildingsmart' },
+];
+
+const GLOSSARY_LINKS = GLOSSARY_GUIDE_LINKS;
+
 function linkifyGlossary(escapedHtml, currentSlug, base = '..', used) {
   if (!escapedHtml) return escapedHtml;
   if (!used) used = new Set();
   let result = escapedHtml;
-  for (const entry of GLOSSARY_LINKS) {
+
+  // 1st pass: 基礎解説ガイドへのリンク（優先度高）
+  for (const entry of GLOSSARY_GUIDE_LINKS) {
     if (entry.slug === currentSlug) continue;
-    if (used.has(entry.slug)) continue;
+    const usedKey = 'guide:' + entry.slug;
+    if (used.has(usedKey)) continue;
     for (const term of entry.terms) {
       const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const pattern = new RegExp(`(^|[^"\\w/>-])(${escapedTerm})(?![^<]*</a>)`, '');
@@ -3656,11 +4035,31 @@ function linkifyGlossary(escapedHtml, currentSlug, base = '..', used) {
         const after = result.slice(match.index + match[1].length + match[2].length);
         const link = `<a class="glossary-link" href="${base}/guides/${entry.slug}.html">${match[2]}</a>`;
         result = before + link + after;
-        used.add(entry.slug);
+        used.add(usedKey);
         break;
       }
     }
   }
+
+  // 2nd pass: 用語集ページへのアンカーリンク（補助）
+  for (const entry of GLOSSARY_TERM_LINKS) {
+    const usedKey = 'term:' + entry.id;
+    if (used.has(usedKey)) continue;
+    for (const term of entry.terms) {
+      const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const pattern = new RegExp(`(^|[^"\\w/>-])(${escapedTerm})(?![^<]*</a>)`, '');
+      const match = pattern.exec(result);
+      if (match) {
+        const before = result.slice(0, match.index + match[1].length);
+        const after = result.slice(match.index + match[1].length + match[2].length);
+        const link = `<a class="glossary-link" href="${base}/glossary.html#term-${entry.id}">${match[2]}</a>`;
+        result = before + link + after;
+        used.add(usedKey);
+        break;
+      }
+    }
+  }
+
   return result;
 }
 
@@ -4389,6 +4788,625 @@ function buildAboutPage() {
     htmlFooter();
 }
 
+// ---- BIM/AEC専門用語集ページ -----------------------------------------
+// 50+ の専門用語を独自編集で整理した用語集データベース。
+// 各エントリは「定義」「詳細解説」「関連用語」を含み、他では一覧化されていない構造化情報を提供。
+// AdSense「有用性」評価向上と、記事本文中の自動リンクソースを兼ねる。
+
+const BIM_GLOSSARY = [
+  // === BIMコア概念 ===
+  { id: 'bim', term: 'BIM', reading: 'ビム', aliases: ['Building Information Modeling'], category: 'BIMコア概念',
+    short: '建物のデータベース化を中心とした設計・施工・維持管理のデジタル基盤',
+    detail: 'Building Information Modeling の略。建物を構成するすべての要素（壁、柱、設備機器など）を、形状だけでなく属性データを持つ「レコード」としてモデル化し、図面・数量・仕様をその一元データから生成する考え方。CADが「線の集合」であるのに対し、BIMは「データベース＋3D可視化」という構造を持つ。' },
+  { id: 'cad', term: 'CAD', reading: 'キャド', aliases: ['Computer-Aided Design'], category: 'BIMコア概念',
+    short: '線・面で図面を作成するコンピュータ支援設計の旧来手法',
+    detail: 'Computer-Aided Design の略。2Dの線情報や3Dの幾何形状を手作業で組み合わせて図面を作成する手法。BIMと違って「壁」「柱」といったオブジェクト属性は持たず、データベース的な集計や属性検索ができない。AutoCADがデファクトスタンダード。' },
+  { id: 'lod', term: 'LOD', reading: 'エルオーディー', aliases: ['Level of Development', 'Level of Detail'], category: 'BIMコア概念',
+    short: 'BIMモデルの詳細度を段階的に定義する指標',
+    detail: 'Level of Development（情報の確度＋幾何精度）または Level of Detail（幾何の詳しさのみ）。LOD 100〜500の5段階で、基本計画から維持管理段階までのモデル成熟度を表現する。日米英で運用が微妙に異なり、日本では国土交通省BIM/CIMが独自定義を持つ。' },
+  { id: 'loin', term: 'LOIN', reading: 'エルオーアイエヌ', aliases: ['Level of Information Need'], category: 'BIMコア概念',
+    short: '目的駆動型でBIM情報の必要レベルを定義する欧州発の概念',
+    detail: 'ISO 19650 系で導入された新しい指標。LOD が「どこまで作り込むか」を機械的に決めるのに対し、LOIN は「何のために、誰が、いつ、どの情報を必要とするか」という目的から逆算して必要情報を定義する。過剰モデリングを避ける現実的な考え方。' },
+  { id: 'bep', term: 'BEP', reading: 'ビーイーピー', aliases: ['BIM Execution Plan', 'BIM実行計画書'], category: 'BIMコア概念',
+    short: 'プロジェクト単位のBIM運用ルール文書',
+    detail: 'BIM Execution Plan。プロジェクト開始時に、関係者間で「誰が何のBIMモデルを、いつまでに、どんな品質で作るか」を文書化する計画書。役割分担、命名規則、データ受け渡し方法、座標系、LOD、ソフト互換性、CDE運用などを規定する。' },
+  { id: 'eir', term: 'EIR', reading: 'イーアイアール', aliases: ['Exchange Information Requirements', '情報交換要件'], category: 'BIMコア概念',
+    short: '発注者が受注者に求めるBIM情報の仕様書',
+    detail: 'Exchange Information Requirements。ISO 19650 で定義される文書で、発注者・施主側が「BIM成果物として何を、どんなフォーマットで、どのタイミングで受け取りたいか」を事前に明示する。これに基づいて受注者が BEP を策定する。' },
+  { id: 'cde', term: 'CDE', reading: 'シーディーイー', aliases: ['Common Data Environment', '共通データ環境'], category: 'BIMコア概念',
+    short: 'プロジェクトの全情報を一元管理するクラウド基盤',
+    detail: 'Common Data Environment。BIMモデル、図面、文書、議事録、確認事項などを一元管理し、関係者全員が同じ最新情報にアクセスできるクラウド環境。Autodesk Construction Cloud、Trimble Connect、ProjectWise、BIMcloud、Bluebeam Studio などが代表的な実装。' },
+  { id: 'pim', term: 'PIM', reading: 'ピーアイエム', aliases: ['Project Information Model'], category: 'BIMコア概念',
+    short: '設計・施工段階のBIMモデル一式',
+    detail: 'Project Information Model。設計から施工までの段階で蓄積されるBIMモデル、関連文書、ジオメトリ情報、属性データの総体。完成・引渡し時に AIM（Asset Information Model）へ移行する。' },
+  { id: 'aim', term: 'AIM', reading: 'エーアイエム', aliases: ['Asset Information Model'], category: 'BIMコア概念',
+    short: '維持管理段階で使う資産BIMモデル',
+    detail: 'Asset Information Model。建物完成後、運用・維持管理フェーズで使うBIMモデル。設計時のPIMから、運用に必要な情報（機器型番、保守履歴、保証期限など）だけを抽出して構築する。FM（ファシリティマネジメント）BIM とも呼ばれる。' },
+  { id: 'digital-twin', term: 'デジタルツイン', reading: 'デジタルツイン', aliases: ['Digital Twin'], category: 'BIMコア概念',
+    short: '物理空間とリアルタイム同期する仮想モデル',
+    detail: '実在する建物・インフラ・都市に対応する仮想モデルで、IoTセンサーや運用データとリアルタイムに同期する。AIM の進化形と位置づけられることが多く、エネルギー最適化、群衆解析、災害シミュレーションなどに活用される。' },
+
+  // === ソフトウェア ===
+  { id: 'revit', term: 'Revit', reading: 'レビット', category: 'ソフトウェア',
+    short: 'Autodesk が開発する BIM 統合設計ソフトウェア',
+    detail: '2002年にAutodeskが Revit Technology Corporation を買収して以降、BIM 市場のデファクトスタンダードとなった統合設計プラットフォーム。意匠・構造・MEP（設備）の3製品群を統合し、ファミリ（パラメトリック部品）とテンプレートで日本実務にも適用される。Autodesk AEC Collection に含まれる。' },
+  { id: 'archicad', term: 'Archicad', reading: 'アーキキャド', aliases: ['ArchiCAD'], category: 'ソフトウェア',
+    short: 'Graphisoft が開発する BIM 設計ソフトウェア',
+    detail: 'ハンガリーの Graphisoft（現 Nemetschek Group 傘下）が1984年から開発する世界最古級のBIMソフト。意匠設計事務所での採用比率が高く、Teamwork（共同編集）、BIMx（モバイルプレゼン）、BIMcloud（CDE基盤）と一体運用される。日本では Extensions JPN や ST-Bridge Converter で日本実務に対応。' },
+  { id: 'gloobe', term: 'GLOOBE', reading: 'グローブ', category: 'ソフトウェア',
+    short: '福井コンピュータ製の日本特化BIMソフトウェア',
+    detail: '福井コンピュータアーキテクトが開発する純国産BIM。日本の建築実務（確認申請、構造図、設備図、積算）に最適化された設計で、Architect・Construction・設備の製品ラインがある。J-BIM シリーズと連携し、ST-Bridge にも直接対応。' },
+  { id: 'vectorworks', term: 'Vectorworks', reading: 'ベクターワークス', category: 'ソフトウェア',
+    short: 'Nemetschek 傘下の汎用 BIM/CAD ソフト',
+    detail: 'Architect、Designer、Spotlight など複数のラインアップで建築・舞台・ランドスケープ・インテリアに対応。小規模事務所や教育機関でも採用され、永久ライセンスが選べる柔軟さを持つ。' },
+  { id: 'allplan', term: 'Allplan', reading: 'アルプラン', category: 'ソフトウェア',
+    short: 'ドイツ発の Nemetschek 主力BIMソフト',
+    detail: 'Nemetschek 創業期から続くドイツ・欧州標準のBIM。構造設計向けの精度と、SCIA Engineer などとの構造解析連携に強みを持つ。Allplan Bimplus（CDE）と組み合わせて運用される。' },
+  { id: 'tekla', term: 'Tekla Structures', reading: 'テクラ ストラクチャーズ', aliases: ['Tekla'], category: 'ソフトウェア',
+    short: 'Trimble が提供する構造特化型 BIM ソフト',
+    detail: '鉄骨、PC（プレキャスト）、現場打ちRCなどの構造設計・製作・施工に特化。詳細なディテール表現と製作図出力で世界の鉄骨ファブで採用され、構造設計者と製作者の橋渡しを担う。' },
+  { id: 'forma', term: 'Autodesk Forma', reading: 'オートデスク フォーマ', aliases: ['Forma'], category: 'ソフトウェア',
+    short: 'Autodesk のクラウドネイティブな建築初期検討プラットフォーム',
+    detail: '2023年に旧 Spacemaker をベースに Autodesk Construction Cloud と統合する形で発展中の次世代 AEC プラットフォーム。初期計画段階の敷地分析、日影、風、エネルギー解析を AI 支援で行い、Revit との往復編集を見据えた設計を持つ。' },
+  { id: 'sketchup', term: 'SketchUp', reading: 'スケッチアップ', category: 'ソフトウェア',
+    short: 'Trimble 傘下のスケッチ/モデリングソフト',
+    detail: 'Pro、Studio、Go、Free などのラインアップを持つ汎用3Dモデラー。BIMほどデータベース型ではないが、初期検討・プレゼン用途に強く、Trimble Connect 経由で BIM ワークフローにも組み込める。' },
+  { id: 'rhino', term: 'Rhinoceros', reading: 'ライノ', aliases: ['Rhino', 'Rhino3D'], category: 'ソフトウェア',
+    short: 'NURBS ベースの自由曲面3Dモデラー',
+    detail: 'Robert McNeel & Associates が開発する3Dモデラー。曲面表現に強く、複雑形状を扱う建築デザイン、プロダクト、ジュエリーなどで広く使われる。Grasshopper と組み合わせてジェネレーティブデザインの基盤としても機能する。' },
+  { id: 'grasshopper', term: 'Grasshopper', reading: 'グラスホッパー', category: 'ソフトウェア',
+    short: 'Rhino 上で動くビジュアルプログラミング環境',
+    detail: 'ノードベースでアルゴリズミックなジオメトリ生成を可能にする Rhino 拡張。建築設計におけるジェネレーティブデザイン、パラメトリック最適化、解析連携で事実上の標準ツールとなっている。' },
+
+  // === 標準・規格 ===
+  { id: 'ifc', term: 'IFC', reading: 'アイエフシー', aliases: ['Industry Foundation Classes'], category: '標準・規格',
+    short: 'BIMモデルのベンダー中立交換フォーマット',
+    detail: 'Industry Foundation Classes。buildingSMART International が策定する BIM データの中立交換フォーマット。Revit、Archicad などベンダーロックインを越えてモデルを受け渡すための共通言語。IFC2x3、IFC4、IFC4.3（インフラ拡張） などのバージョンがある。' },
+  { id: 'openbim', term: 'openBIM', reading: 'オープンビム', category: '標準・規格',
+    short: 'ベンダー中立な BIM 運用を推進する国際イニシアチブ',
+    detail: 'buildingSMART International が推進する、IFC・BCF・MVD・IDS などのオープン規格に基づく BIM ワークフロー。特定ベンダー製品に依存しないデータ交換、長期保存、関係者間共有を可能にする。' },
+  { id: 'buildingsmart', term: 'buildingSMART', reading: 'ビルディングスマート', category: '標準・規格',
+    short: 'openBIM 規格を策定する国際非営利団体',
+    detail: 'IFC、BCF、MVD、bSDD、IDS などの BIM 関連オープン規格を策定・維持する国際組織。各国チャプターがあり、日本では buildingSMART Japan が活動している。' },
+  { id: 'iso19650', term: 'ISO 19650', reading: 'アイエスオー イチキューロクゴーゼロ', category: '標準・規格',
+    short: 'BIM プロジェクト情報管理の国際標準',
+    detail: '英国 PAS 1192 をベースに国際化された BIM プロセス標準。Part 1（概念）、Part 2（プロジェクト段階）、Part 3（運用段階）、Part 5（セキュリティ）などからなり、EIR、BEP、CDE、命名規則、承認フローを規定する。' },
+  { id: 'bcf', term: 'BCF', reading: 'ビーシーエフ', aliases: ['BIM Collaboration Format'], category: '標準・規格',
+    short: 'BIM上の指摘事項を交換するオープンフォーマット',
+    detail: 'BIM Collaboration Format。Solibri、Revizto、Navisworks などのレビュー指摘を、ベンダー横断で受け渡すための XML/JSON ベース仕様。BCFビューアでスクリーンショット、コメント、対象オブジェクトIDを共有できる。' },
+  { id: 'cobie', term: 'COBie', reading: 'コビー', aliases: ['Construction-Operations Building information exchange'], category: '標準・規格',
+    short: '維持管理に必要な属性情報をスプレッドシートで受け渡す規格',
+    detail: '建物完成時に発注者へ引き渡す機器・部材・空間情報を、スプレッドシート形式で構造化する米国発の規格。FM 段階での資産管理に直結し、ISO 19650 系のワークフローにも組み込まれる。' },
+  { id: 'mvd', term: 'MVD', reading: 'エムブイディー', aliases: ['Model View Definition'], category: '標準・規格',
+    short: '特定用途向けの IFC サブセット定義',
+    detail: 'Model View Definition。IFC は巨大な仕様のため、用途ごとに必要な情報の部分集合を MVD として定義する。Coordination View、Reference View、Design Transfer View など、目的別の MVD が存在する。' },
+  { id: 'ids', term: 'IDS', reading: 'アイディーエス', aliases: ['Information Delivery Specification'], category: '標準・規格',
+    short: 'IFC で受け渡すべき情報を機械可読に規定する新規格',
+    detail: 'Information Delivery Specification。発注者の EIR を機械可読な仕様として記述し、納品BIMが要件を満たしているかを自動検証できるようにする buildingSMART の新標準。IFC ファイルに対する単体テストの仕様書のような位置づけ。' },
+  { id: 'st-bridge', term: 'ST-Bridge', reading: 'エスティーブリッジ', category: '標準・規格',
+    short: '日本独自の構造設計BIM中立フォーマット',
+    detail: '日本建築構造技術者協会（JSCA）が策定する、構造設計データの中立交換フォーマット。Revit、Archicad、構造解析ソフト間でやり取りされ、Archicad には公式 ST-Bridge Converter が提供されるなど日本のBIM実務で重要な役割を持つ。' },
+  { id: 'j-landxml', term: 'J-LandXML', reading: 'ジェイランドエックスエムエル', category: '標準・規格',
+    short: '国土交通省BIM/CIMで採用される土木データ規格',
+    detail: '北米発の LandXML をベースに、日本の道路・河川・土工に必要な拡張を加えた規格。3D設計成果物の納品形式として国土交通省BIM/CIM要領で採用されている。' },
+
+  // === モデリング概念 ===
+  { id: 'parametric', term: 'パラメトリックモデリング', reading: 'パラメトリックモデリング', aliases: ['Parametric Modeling'], category: 'モデリング',
+    short: '寸法や条件をパラメータ化し連動変更可能にするモデリング手法',
+    detail: '個別の幾何形状を直接編集するのではなく、寸法・関係性・条件をパラメータとして定義し、それらを変更すると関連する形状が自動更新されるモデリング方式。BIM、Revit のファミリ、Grasshopper、Solidworks などで採用される。' },
+  { id: 'family', term: 'ファミリ', reading: 'ファミリ', aliases: ['Family', 'Revitファミリ'], category: 'モデリング',
+    short: 'Revit における再利用可能なパラメトリック部品',
+    detail: 'Revit でドア、窓、家具、機器などを定義する再利用可能なコンポーネント。寸法・素材・属性をパラメータで管理し、プロジェクト内に配置されたインスタンス全てに影響する。社内ファミリライブラリの整備がBIM運用の鍵となる。' },
+  { id: 'worksharing', term: 'ワークシェアリング', reading: 'ワークシェアリング', aliases: ['Worksharing'], category: 'モデリング',
+    short: '複数人で同一BIMモデルを並行編集する仕組み',
+    detail: 'Revit のセントラルモデル方式や Archicad の Teamwork に代表される、複数の設計者が同じBIMモデルを同時に編集できる仕組み。ワークセット（編集領域の分割）、要素のロック・解放、変更の同期管理が中核機能。' },
+  { id: 'workset', term: 'ワークセット', reading: 'ワークセット', aliases: ['Workset'], category: 'モデリング',
+    short: 'Revit のワークシェアリングで編集領域を分割する単位',
+    detail: '「外壁」「内部間仕切り」「構造」「設備」など、モデルを編集領域に区切る論理グループ。誰がどのワークセットを所有しているかで編集権限が決まり、ロック・解放の運用ルールがチーム生産性を左右する。' },
+  { id: 'view-template', term: 'ビューテンプレート', reading: 'ビューテンプレート', aliases: ['View Template'], category: 'モデリング',
+    short: 'BIM ビューの表示設定を再利用可能にする仕組み',
+    detail: '平面、立面、断面、3Dビューにおける、表示するカテゴリ、線種、ハッチ、注釈表示などをテンプレート化する機能。プロジェクト全体で統一した図面表現を実現し、テンプレート整備の質が成果物品質を決める。' },
+  { id: 'schedule', term: 'スケジュール', reading: 'スケジュール', aliases: ['Schedule', '集計表', '数量表'], category: 'モデリング',
+    short: 'BIM オブジェクトを集計して表として出力する機能',
+    detail: 'Revit や Archicad における、モデル内のオブジェクトを属性条件でフィルタ・集計し、表として出力する機能。建具表、室面積表、機器リストなど、図面と同期する数量計算が可能になる。' },
+
+  // === ワークフロー ===
+  { id: 'clash-detection', term: 'クラッシュ検出', reading: 'クラッシュケンシュツ', aliases: ['Clash Detection', '干渉チェック'], category: 'ワークフロー',
+    short: '複数BIMモデル間の干渉を自動検出する機能',
+    detail: '意匠・構造・設備の異なるBIMモデルを統合し、配管が梁を貫通している、設備機器が天井裏に収まらない、といった物理的干渉を自動検出する機能。Navisworks、Solibri、Revizto などが代表的な専用ツール。' },
+  { id: '4d-bim', term: '4D BIM', reading: 'ヨンディービム', category: 'ワークフロー',
+    short: '時間軸を加えた施工シミュレーション',
+    detail: 'BIMモデルに「いつ施工されるか」のスケジュール情報を加えて、施工順序を3Dで可視化する手法。Synchro、Navisworks、Bentley SYNCHRO 4D などが代表的。安全計画、仮設計画、進捗管理に活用される。' },
+  { id: '5d-bim', term: '5D BIM', reading: 'ゴディービム', category: 'ワークフロー',
+    short: 'コスト情報を加えたBIM活用',
+    detail: '4D BIM にコスト情報を統合し、設計変更時のコスト影響をリアルタイムに把握する手法。Revit + 積算ソフトの連携や、Vico、CostX、CMap などの専用ツールで実現する。' },
+  { id: 'quantity-takeoff', term: '数量積算', reading: 'スウリョウセキサン', aliases: ['Quantity Takeoff', 'QTO'], category: 'ワークフロー',
+    short: 'BIMモデルから材料数量を自動算出する作業',
+    detail: 'BIM オブジェクトの属性情報を集計して、コンクリート体積、鉄筋重量、仕上面積などを自動算出する。手作業の積算に比べて精度と速度が大幅に向上する。日本ではヘリオス、ROBOT BIM、各社積算ソフト連携が活用される。' },
+  { id: 'generative-design', term: 'ジェネレーティブデザイン', reading: 'ジェネレーティブデザイン', aliases: ['Generative Design'], category: 'ワークフロー',
+    short: '制約条件を与えてAIに多数の設計案を生成させる手法',
+    detail: '設計者が制約条件と評価基準を入力すると、コンピュータが組合せ最適化やパラメトリック探索で多数の候補案を自動生成する手法。Autodesk Forma、Refinery（Dynamo）、Spacemaker などが代表的。' },
+  { id: 'point-cloud', term: 'ポイントクラウド', reading: 'ポイントクラウド', aliases: ['Point Cloud', '点群'], category: 'ワークフロー',
+    short: '3Dスキャンで取得した点の集合データ',
+    detail: 'レーザースキャナーやドローンSfMで取得した、空間内の点（XYZ座標と色情報）の集合データ。既存建物の現況把握、リノベ前のBIM作成、施工中の出来形検査、文化遺産アーカイブなどに活用される。' },
+  { id: 'reality-capture', term: 'リアリティキャプチャ', reading: 'リアリティキャプチャ', aliases: ['Reality Capture'], category: 'ワークフロー',
+    short: '実空間を3Dデータ化する技術全般',
+    detail: 'レーザースキャン、写真測量、ドローンSfM、LiDAR、フォトグラメトリなどを総称した、実空間の3Dデータ化技術。BIM プロジェクトの開始点として、既存建物・敷地の正確な現況モデルを作る手段。' },
+
+  // === 日本固有 ===
+  { id: 'mlit-bim-cim', term: '国土交通省BIM/CIM', reading: 'コクドコウツウショウビムシム', aliases: ['BIM/CIM'], category: '日本固有',
+    short: '国土交通省が推進する公共インフラのBIM化政策',
+    detail: '2023年度より「BIM/CIM原則化」が始まった、国土交通省直轄事業における3Dモデル活用の方針。橋梁、トンネル、河川、道路などの土木分野でモデル成果物の納品が必須化されている。要領・基準書が公式に整備されている。' },
+  { id: 'kentiku-bim', term: '建築BIM推進会議', reading: 'ケンチクビムスイシンカイギ', category: '日本固有',
+    short: '国土交通省主導の建築分野BIM推進プラットフォーム',
+    detail: '国土交通省、関係省庁、業界団体、ベンダーが参加する建築分野のBIM推進体。「建築BIMガイドライン」「建築BIM加速化事業」「BIM確認申請」など、建築分野のBIM運用標準を策定している。' },
+  { id: 'bim-guideline', term: '建築BIMガイドライン', reading: 'ケンチクビムガイドライン', category: '日本固有',
+    short: '日本の建築BIM運用標準を示す国交省ガイドライン',
+    detail: '建築BIM推進会議が策定する、設計から施工・維持管理までのBIM運用フレームワーク。LOD相当の情報レベル、ステークホルダー間の役割分担、データ受け渡しの考え方を示す。' },
+  { id: 'bim-acceleration', term: '建築BIM加速化事業', reading: 'ケンチクビムカソクカジギョウ', category: '日本固有',
+    short: '国交省によるBIM導入補助金事業',
+    detail: '中小設計事務所・ゼネコンを対象に、BIMソフトのライセンス費用やコンサル費用の一部を補助する国交省事業。対象案件で BIM 成果物を作成することが条件で、日本の BIM 普及を支える施策。' },
+  { id: 'bim-manager', term: 'BIMマネージャー', reading: 'ビムマネージャー', aliases: ['BIM Manager'], category: '日本固有',
+    short: '組織のBIM運用全体を統括する役割',
+    detail: 'BIM ワークフロー、テンプレート、ファミリライブラリ、教育、品質管理、ソフトウェア戦略を統括する役割。海外では確立されたポジションで、日本でも近年専門職としての位置づけが進む。BEP の策定・運用も担う。' },
+  { id: 'bim-coordinator', term: 'BIMコーディネーター', reading: 'ビムコーディネーター', aliases: ['BIM Coordinator'], category: '日本固有',
+    short: 'プロジェクト単位でBIM運用を回す役割',
+    detail: 'BIMマネージャーが組織全体の標準を作るのに対し、コーディネーターは個別プロジェクトで意匠・構造・設備の調整、CDE運用、クラッシュ検出、関係者間の情報橋渡しを担う実務役。' },
+  { id: 'bim-operator', term: 'BIMオペレーター', reading: 'ビムオペレーター', aliases: ['BIM Operator', 'BIMオペレータ'], category: '日本固有',
+    short: 'BIMモデリング実務を担う実行役',
+    detail: 'BIM ソフトウェアの実機操作、モデル入力、図面化、属性入力を担当する実務者。設計者本人がオペレーターを兼ねるケースと、外注を含めて専門オペレーターを配置するケースがある。' },
+  { id: 'kakunin-shinsei', term: '建築確認申請BIM', reading: 'ケンチクカクニンシンセイビム', aliases: ['BIM確認申請'], category: '日本固有',
+    short: 'BIMモデルでの建築確認申請の取り組み',
+    detail: '従来の図面ベースの建築確認申請を、BIM モデルで提出可能にする取り組み。一部の指定確認検査機関で試行が進み、IFC、PDF、専用フォーマットを組み合わせた運用が検討されている。' },
+  { id: 'extensions-jpn', term: 'Extensions JPN', reading: 'エクステンションズジェーピーエヌ', category: '日本固有',
+    short: 'Archicad の日本仕様向け拡張機能',
+    detail: 'Graphisoft Japan が提供する Archicad 拡張で、建具、断面リスト、ST-Bridge Converter など日本の建築実務に直結する機能群。バージョンアップで継続的に強化されている。' },
+
+  // === その他重要用語 ===
+  { id: 'mep', term: 'MEP', reading: 'エムイーピー', aliases: ['Mechanical Electrical Plumbing', '設備'], category: 'モデリング',
+    short: '機械・電気・配管の設備系BIMの総称',
+    detail: 'Mechanical（空調・機械）、Electrical（電気）、Plumbing（給排水）の頭文字。建物の設備系BIMをまとめて指す用語。Revit MEP、Archicad MEP Modeler、Magicad などが代表的なMEP特化ツール。' },
+  { id: 'embodied-carbon', term: 'エンボディドカーボン', reading: 'エンボディドカーボン', aliases: ['Embodied Carbon', '埋蔵炭素', '内包炭素'], category: 'ワークフロー',
+    short: '建材製造・施工に伴う温室効果ガス排出量',
+    detail: '建物の運用段階ではなく、建材製造、輸送、施工、解体段階で発生する温室効果ガス排出。BIMモデルの数量情報と材料原単位を組み合わせて LCA（ライフサイクルアセスメント）を実施する。脱炭素時代の建築設計で注目度が高まる。' },
+  { id: 'speckle', term: 'Speckle', reading: 'スペックル', category: 'ソフトウェア',
+    short: 'オープンソースの AEC データ連携プラットフォーム',
+    detail: '英国発のオープンソース AEC データプラットフォーム。Revit、Rhino、Grasshopper、Archicad、IFC などの間でデータを流通させ、Web ベースで可視化・コラボレーションできる。Suffolk Technologies の出資など、業界注目度が高い。' },
+  { id: 'revizto', term: 'Revizto', reading: 'レビズト', category: 'ソフトウェア',
+    short: 'BIM 統合レビュー・課題管理プラットフォーム',
+    detail: 'スイス発の BIM レビューツール。Revit、Archicad、Navisworks、IFC など複数モデルを統合し、Web/モバイル/VR で確認・指摘交換できる。Hexagon Multivista との連携など、施工現場のデータと BIM をつなぐ動きが進む。' },
+  { id: 'bluebeam', term: 'Bluebeam', reading: 'ブルービーム', category: 'ソフトウェア',
+    short: '建築・建設業界向けPDFマークアップ・コラボツール',
+    detail: 'Nemetschek 傘下の Bluebeam Revu が代表製品。PDF 図面へのマークアップ、Studio Session でのリアルタイム共同編集、施工現場での承認ワークフローで広く使われる。' },
+];
+
+const GLOSSARY_CATEGORIES = ['BIMコア概念', 'ソフトウェア', '標準・規格', 'モデリング', 'ワークフロー', '日本固有'];
+
+function buildGlossaryPage() {
+  const pageTitle = `BIM/AEC用語集 完全版（${BIM_GLOSSARY.length}語） | ${SITE_NAME}`;
+  const pageDesc = `BIM、IFC、openBIM、LOD、BEP、CDE、ST-Bridge、Revit、Archicad、GLOOBE、ジェネレーティブデザイン、ポイントクラウドなど、BIM/AEC領域の専門用語${BIM_GLOSSARY.length}語を独自編集でまとめた完全用語集です。`;
+  const canonicalUrl = `${SITE_URL}/glossary.html`;
+  const pageJsonLd = webPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: 'BIM/AEC用語集', url: canonicalUrl },
+  ]);
+
+  const grouped = GLOSSARY_CATEGORIES.map((cat) => ({
+    category: cat,
+    items: BIM_GLOSSARY.filter((g) => g.category === cat),
+  })).filter((g) => g.items.length > 0);
+
+  const tocBlocks = grouped.map((g) => `
+    <div class="glossary-toc-block">
+      <h3 class="glossary-toc-cat">${escape(g.category)} (${g.items.length}語)</h3>
+      <ul class="glossary-toc-list">
+        ${g.items.map((item) => `<li><a href="#term-${item.id}">${escape(item.term)}</a></li>`).join('')}
+      </ul>
+    </div>`).join('');
+
+  const sectionBlocks = grouped.map((g) => `
+    <section class="glossary-section">
+      <h2 class="glossary-cat-title">${escape(g.category)}</h2>
+      ${g.items.map((item) => `
+        <article class="glossary-term" id="term-${item.id}">
+          <h3 class="glossary-term-name">
+            ${escape(item.term)}
+            ${item.reading && item.reading !== item.term ? `<span class="glossary-term-reading">${escape(item.reading)}</span>` : ''}
+          </h3>
+          ${item.aliases && item.aliases.length > 0 ? `<div class="glossary-term-aliases">別名: ${item.aliases.map((a) => escape(a)).join(' / ')}</div>` : ''}
+          <p class="glossary-term-short"><strong>${escape(item.short)}</strong></p>
+          <p class="glossary-term-detail">${escape(item.detail)}</p>
+        </article>`).join('')}
+    </section>`).join('');
+
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [pageJsonLd, breadcrumbLd], {
+    robots: 'index, follow, max-snippet:-1, max-image-preview:large',
+    keywords: ['BIM 用語', 'IFC 用語', 'BIM 用語集', 'BIM/AEC 専門用語', 'BIM/CIM 用語'],
+  }) +
+    htmlHeader() +
+    `
+  <div class="container">
+    <main class="main-content">
+      <div class="static-page">
+        <h1>BIM/AEC用語集 完全版 — ${BIM_GLOSSARY.length}語の専門用語を独自編集</h1>
+
+        <p>BIM・AEC・建設DX領域の専門用語${BIM_GLOSSARY.length}語を、編集部が独自に整理した用語集です。海外発信の用語と、日本の建築実務固有の用語（国土交通省BIM/CIM、ST-Bridge、Extensions JPN、建築BIM推進会議など）を統合的にカバーしています。</p>
+
+        <p style="background: var(--blue-pale); padding: 1rem 1.25rem; border-radius:8px; border-left:4px solid var(--blue); font-size:0.9rem; line-height:1.7;"><strong>本用語集の特徴:</strong> 1行の定義に加え、各用語に「なぜ重要か」「実務でどう使うか」「日本市場での文脈」を含めた詳細解説を付与しています。BIM/AECの実務者・研究者・営業・経営層・学生が、業界の構造を素早く把握するための一次資料としてご活用ください。</p>
+
+        <div class="glossary-toc">
+          <h2 class="glossary-toc-title">目次（カテゴリ別）</h2>
+          ${tocBlocks}
+        </div>
+
+        ${sectionBlocks}
+
+        <h2>関連リソース</h2>
+        <ul>
+          <li><a href="./compare.html">主要BIMツール比較マトリクス</a> — ツール選定の判断軸</li>
+          <li><a href="./timeline.html">ベンダーアップデート履歴</a> — 業界の時系列動向</li>
+          <li><a href="./guides/index.html">BIM基礎解説</a> — トピック別の深掘り解説</li>
+        </ul>
+
+        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">最終更新日: ${formatDate(new Date().toISOString())}</p>
+        <p style="color: var(--text-muted); font-size:0.85rem;">本用語集は編集部による独自整理です。各用語の公式定義は、buildingSMART、ISO、各ベンダー公式ドキュメントをご参照ください。</p>
+      </div>
+    </main>
+  </div>` +
+    htmlFooter();
+}
+
+// ---- BIMツール比較マトリクスページ -----------------------------------------
+// 独自データ資産。AdSense「有用性」評価向上を狙う。
+// 主要BIM/AECツールを多次元で比較した、他では一覧化されていない情報。
+// 価格・仕様は変動するため「公式確認を推奨」の注記を必ず添える。
+
+const BIM_TOOL_COMPARISON = {
+  tools: [
+    { id: 'revit', name: 'Revit', vendor: 'Autodesk', country: '米国' },
+    { id: 'archicad', name: 'Archicad', vendor: 'Graphisoft', country: 'ハンガリー' },
+    { id: 'gloobe', name: 'GLOOBE Architect', vendor: '福井コンピュータ', country: '日本' },
+    { id: 'vectorworks', name: 'Vectorworks Architect', vendor: 'Nemetschek', country: '米国' },
+    { id: 'allplan', name: 'Allplan Architecture', vendor: 'Nemetschek', country: 'ドイツ' },
+    { id: 'tekla', name: 'Tekla Structures', vendor: 'Trimble', country: 'フィンランド' },
+    { id: 'openbuildings', name: 'OpenBuildings Designer', vendor: 'Bentley', country: '米国' },
+    { id: 'bricscad-bim', name: 'BricsCAD BIM', vendor: 'Bricsys', country: 'ベルギー' },
+  ],
+  criteria: [
+    { label: '価格帯（参考）', values: {
+      'revit': '個別: 約49万円/年（AEC Collection）',
+      'archicad': 'Solo/Studio: 月額または年額（販社経由）',
+      'gloobe': '年額50万円台〜（販社見積）',
+      'vectorworks': '個別: 約20万円台〜（永久ライセンスあり）',
+      'allplan': '年額40万円台〜（販社見積）',
+      'tekla': '構造特化のため個別見積',
+      'openbuildings': 'エンタープライズ向け個別見積',
+      'bricscad-bim': '永久ライセンス比較的安価',
+    }, note: '価格は2026年時点の参考値。最新は各販社にお問い合わせください' },
+    { label: 'IFC入出力', values: {
+      'revit': '◯（IFC2x3/4対応）',
+      'archicad': '◎（buildingSMART認証）',
+      'gloobe': '◯（IFC2x3/4対応）',
+      'vectorworks': '◯（IFC2x3/4対応）',
+      'allplan': '◎（buildingSMART認証）',
+      'tekla': '◎（構造IFC強い）',
+      'openbuildings': '◯（IFC2x3/4対応）',
+      'bricscad-bim': '◯',
+    }},
+    { label: '日本拡張機能', values: {
+      'revit': '販社が個別に拡張（建築検査機能等）',
+      'archicad': '◯（Extensions JPN／ST-Bridge Converter等公式）',
+      'gloobe': '◎（日本の建築実務に最適化）',
+      'vectorworks': '△（A&A経由で限定的）',
+      'allplan': '△（ドイツ規格寄り）',
+      'tekla': '△',
+      'openbuildings': '△',
+      'bricscad-bim': '△',
+    }},
+    { label: 'ST-Bridge対応', values: {
+      'revit': '×（サードパーティ製変換要）',
+      'archicad': '◎（公式Converter提供）',
+      'gloobe': '◎（直接対応）',
+      'vectorworks': '×',
+      'allplan': '×',
+      'tekla': '△（変換ツール経由）',
+      'openbuildings': '×',
+      'bricscad-bim': '×',
+    }, note: 'ST-Bridgeは日本の構造設計向け中立フォーマット' },
+    { label: '構造設計連携', values: {
+      'revit': '◯（Robot Structural Analysis連携）',
+      'archicad': '◯（外部構造ソフト連携、ST-Bridge）',
+      'gloobe': '◯（構造専用GLOOBE Construction）',
+      'vectorworks': '△',
+      'allplan': '◎（SCIA Engineer連携）',
+      'tekla': '◎（構造特化）',
+      'openbuildings': '◎（STAAD/RAM連携）',
+      'bricscad-bim': '△',
+    }},
+    { label: 'MEP（設備）対応', values: {
+      'revit': '◎（Revit MEPで設備設計可）',
+      'archicad': '◯（Archicad MEP Modeler）',
+      'gloobe': '◯（GLOOBE構造/設備）',
+      'vectorworks': '△',
+      'allplan': '◯',
+      'tekla': '×',
+      'openbuildings': '◎',
+      'bricscad-bim': '◯',
+    }},
+    { label: '施工管理連携', values: {
+      'revit': '◎（Autodesk Construction Cloud / Forma）',
+      'archicad': '◯（BIMcloud／BIMx現場連携）',
+      'gloobe': '◯（J-BIMシリーズで施工連携）',
+      'vectorworks': '△',
+      'allplan': '◯（Bimplus連携）',
+      'tekla': '◎（Tekla Field 3D）',
+      'openbuildings': '◯（SYNCHRO 4D）',
+      'bricscad-bim': '△',
+    }},
+    { label: 'AI機能（2026年時点）', values: {
+      'revit': '◎（Forma Spatial AI、Project Bernini、Help MCP）',
+      'archicad': '◯（AI Visualizer、Graphisoft AI Assist）',
+      'gloobe': '△（部分的なAI機能）',
+      'vectorworks': '◯（AI Visualizer）',
+      'allplan': '△',
+      'tekla': '△',
+      'openbuildings': '◯',
+      'bricscad-bim': '△',
+    }},
+    { label: 'クラウド共同編集', values: {
+      'revit': '◎（Revit Cloud Worksharing）',
+      'archicad': '◎（BIMcloud / Teamwork）',
+      'gloobe': '◯（J-BIMサーバ）',
+      'vectorworks': '◯（Vectorworks Cloud Services）',
+      'allplan': '◯（Allplan Share）',
+      'tekla': '◎（Tekla Model Sharing）',
+      'openbuildings': '◎（ProjectWise）',
+      'bricscad-bim': '△',
+    }},
+    { label: '国土交通省BIM/CIM対応', values: {
+      'revit': '◯（公共案件で広く採用）',
+      'archicad': '◯（公共案件で採用例多数）',
+      'gloobe': '◎（日本仕様に標準準拠）',
+      'vectorworks': '△',
+      'allplan': '△',
+      'tekla': '◯（橋梁等インフラ系）',
+      'openbuildings': '◯（インフラ強い）',
+      'bricscad-bim': '△',
+    }},
+    { label: '主要ターゲット', values: {
+      'revit': '大手設計事務所・ゼネコン',
+      'archicad': '意匠設計事務所・中小〜大手',
+      'gloobe': '日本の意匠・住宅・公共建築',
+      'vectorworks': '小〜中規模設計・空間デザイン',
+      'allplan': 'ゼネコン・大型公共',
+      'tekla': '構造設計・鉄骨・PC',
+      'openbuildings': '大型インフラ・複合施設',
+      'bricscad-bim': 'DWG互換重視層',
+    }},
+    { label: '日本国内採用規模感', values: {
+      'revit': '★★★★★ 国内BIMシェア首位級',
+      'archicad': '★★★★ 意匠設計領域で強い',
+      'gloobe': '★★★ 日本特化として独自ポジション',
+      'vectorworks': '★★★',
+      'allplan': '★★',
+      'tekla': '★★★★（構造分野）',
+      'openbuildings': '★★（インフラ・大型案件）',
+      'bricscad-bim': '★',
+    }, note: '編集部の市場観測に基づく相対評価（公式統計ではない）' },
+    { label: '学習曲線', values: {
+      'revit': '中〜急（パラメトリック概念の習得が必要）',
+      'archicad': '比較的緩やか（直感的操作）',
+      'gloobe': '緩やか（日本実務に馴染む）',
+      'vectorworks': '緩やか',
+      'allplan': '中',
+      'tekla': '急（構造専門知識前提）',
+      'openbuildings': '急（大規模システム）',
+      'bricscad-bim': '緩やか（DWGユーザーは特に）',
+    }},
+  ],
+};
+
+// ---- ベンダーアップデート履歴ページ -----------------------------------------
+// posts.json から自動抽出した独自の時系列データベース。
+// 業界全体の動きを「ベンダー軸」で再編集することで、他では一覧化されていない価値を提供。
+
+const VENDOR_TRACKERS = [
+  { id: 'autodesk', name: 'Autodesk', keywords: ['autodesk', 'revit', 'forma', 'construction cloud', 'fusion', 'navisworks', 'civil 3d', 'autocad'] },
+  { id: 'graphisoft', name: 'Graphisoft', keywords: ['graphisoft', 'archicad', 'bimcloud', 'bimx'] },
+  { id: 'nemetschek', name: 'Nemetschek Group', keywords: ['nemetschek', 'allplan', 'vectorworks', 'bluebeam', 'maxon', 'redshift'] },
+  { id: 'trimble', name: 'Trimble', keywords: ['trimble', 'tekla', 'sketchup'] },
+  { id: 'bentley', name: 'Bentley', keywords: ['bentley', 'openbuildings', 'projectwise', 'synchro', 'staad'] },
+  { id: 'fukui-computer', name: '福井コンピュータ', keywords: ['福井コンピュータ', 'gloobe', 'glooobe', 'j-bim'] },
+  { id: 'hexagon', name: 'Hexagon', keywords: ['hexagon', 'leica', 'multivista'] },
+  { id: 'buildingsmart', name: 'buildingSMART', keywords: ['buildingsmart', 'building smart', 'openbim'] },
+  { id: 'procore', name: 'Procore', keywords: ['procore'] },
+  { id: 'speckle', name: 'Speckle', keywords: ['speckle'] },
+];
+
+function matchesVendor(post, vendor) {
+  const haystack = `${post.title || ''} ${post.titleJa || ''} ${post.summary || ''} ${post.bodyJa || ''}`.toLowerCase();
+  return vendor.keywords.some((kw) => haystack.includes(kw.toLowerCase()));
+}
+
+function buildTimelinePage(posts) {
+  const pageTitle = `BIM/AECベンダー アップデート履歴データベース | ${SITE_NAME}`;
+  const pageDesc = 'Autodesk、Graphisoft、Nemetschek、Trimble、Bentley、福井コンピュータなど主要BIM/AECベンダーの製品アップデート・買収・戦略発表を時系列で整理した独自データベースです。';
+  const canonicalUrl = `${SITE_URL}/timeline.html`;
+  const pageJsonLd = webPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: 'ベンダーアップデート履歴', url: canonicalUrl },
+  ]);
+
+  const vendorBlocks = VENDOR_TRACKERS.map((vendor) => {
+    const matching = posts
+      .filter((p) => (p.titleJa || '').trim().length > 0)
+      .filter((p) => matchesVendor(p, vendor))
+      .sort((a, b) => {
+        const da = a.pubDate ? new Date(a.pubDate).getTime() : 0;
+        const db = b.pubDate ? new Date(b.pubDate).getTime() : 0;
+        return db - da;
+      });
+    if (matching.length === 0) return null;
+
+    const items = matching.slice(0, 20).map((p) => {
+      const date = p.pubDate ? formatDate(p.pubDate) : '';
+      return `
+        <li class="vendor-timeline-item">
+          <span class="vendor-timeline-date">${escape(date || '日付不明')}</span>
+          <div class="vendor-timeline-content">
+            <a class="vendor-timeline-title" href="./posts/${escape(p.slug)}.html">${escape(p.titleJa || p.title)}</a>
+            <span class="vendor-timeline-cat">${escape(categoryLabel(p.category))}</span>
+          </div>
+        </li>`;
+    }).join('');
+
+    return `
+      <section class="vendor-block" id="vendor-${vendor.id}">
+        <h2 class="vendor-block-title">${escape(vendor.name)} <span class="vendor-count">${matching.length}件</span></h2>
+        <ol class="vendor-timeline">${items}</ol>
+      </section>`;
+  }).filter(Boolean).join('');
+
+  const vendorNav = VENDOR_TRACKERS.map((v) => {
+    const count = posts.filter((p) => (p.titleJa || '').trim().length > 0 && matchesVendor(p, v)).length;
+    if (count === 0) return '';
+    return `<li><a href="#vendor-${v.id}">${escape(v.name)}<span class="vendor-nav-count">${count}</span></a></li>`;
+  }).filter(Boolean).join('');
+
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [pageJsonLd, breadcrumbLd], {
+    robots: 'index, follow, max-snippet:-1, max-image-preview:large',
+    keywords: ['BIMベンダー', 'Autodesk アップデート', 'Graphisoft アップデート', 'AEC業界 動向'],
+  }) +
+    htmlHeader() +
+    `
+  <div class="container">
+    <main class="main-content">
+      <div class="static-page">
+        <h1>BIM/AECベンダー アップデート履歴データベース</h1>
+
+        <p>本ページは、AEC News Japan が収集・編集したニュース記事から、主要BIM/AECベンダーごとの動きを自動抽出して時系列に再整理した独自データベースです。「Autodeskは過去半年で何を発表したか」「Graphisoftの最近のリリースを一覧したい」といった、ベンダー軸での情報追跡を可能にします。</p>
+
+        <p style="background: var(--blue-pale); padding: 1rem 1.25rem; border-radius:8px; border-left:4px solid var(--blue); font-size:0.9rem; line-height:1.7;"><strong>本データベースの位置づけ:</strong> 編集部が収集した記事から「ベンダー名・製品名のキーワードマッチ」で自動抽出しています。各ベンダーの戦略変化、買収、製品ローンチ、組織改編などをまとめて把握するための一次インデックスとしてご活用ください。各記事の詳細は元記事へのリンクからご確認いただけます。</p>
+
+        <nav class="vendor-nav">
+          <h2 class="vendor-nav-title">ベンダー一覧</h2>
+          <ul>${vendorNav}</ul>
+        </nav>
+
+        ${vendorBlocks}
+
+        <h2>関連リソース</h2>
+        <ul>
+          <li><a href="./compare.html">主要BIMツール比較マトリクス</a> — ツール選定の判断軸</li>
+          <li><a href="./guides/index.html">BIM基礎解説</a> — 用語と概念の整理</li>
+          <li><a href="./categories/bim-ecosystem.html">BIM全般のニュース</a> — 業界横断の動き</li>
+        </ul>
+
+        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">最終更新日: ${formatDate(new Date().toISOString())}</p>
+        <p style="color: var(--text-muted); font-size:0.85rem;">本データベースは編集部が収集した公開記事から自動抽出しています。各ベンダーの公式アップデート履歴ではありません。最新情報は各ベンダー公式サイトをご確認ください。</p>
+      </div>
+    </main>
+  </div>` +
+    htmlFooter();
+}
+
+function buildCompareTablePage(posts) {
+  const pageTitle = `主要BIMツール徹底比較マトリクス | ${SITE_NAME}`;
+  const pageDesc = 'Revit、Archicad、GLOOBE、Vectorworks、Allplan、Tekla、OpenBuildings、BricsCAD BIM の主要BIM/AECツール8製品を、価格・IFC対応・日本拡張機能・ST-Bridge対応・構造連携・MEP・施工管理・AI機能・クラウド共同編集・国土交通省BIM/CIM対応など13項目で比較した独自マトリクスです。';
+  const canonicalUrl = `${SITE_URL}/compare.html`;
+  const pageJsonLd = webPageJsonLd(pageTitle, pageDesc, canonicalUrl);
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'ホーム', url: `${SITE_URL}/` },
+    { name: '主要BIMツール比較マトリクス', url: canonicalUrl },
+  ]);
+
+  const tools = BIM_TOOL_COMPARISON.tools;
+  const criteria = BIM_TOOL_COMPARISON.criteria;
+
+  const headerRow = `<tr><th class="cmp-criterion">比較項目</th>${tools.map((t) => `<th class="cmp-tool"><span class="cmp-tool-name">${escape(t.name)}</span><span class="cmp-tool-vendor">${escape(t.vendor)}</span></th>`).join('')}</tr>`;
+  const bodyRows = criteria.map((c) => {
+    const cells = tools.map((t) => `<td>${escape(c.values[t.id] || '—')}</td>`).join('');
+    const note = c.note ? `<div class="cmp-note">${escape(c.note)}</div>` : '';
+    return `<tr><th class="cmp-row-label">${escape(c.label)}${note}</th>${cells}</tr>`;
+  }).join('');
+
+  return htmlHead(pageTitle, pageDesc, canonicalUrl, '.', [pageJsonLd, breadcrumbLd], {
+    robots: 'index, follow, max-snippet:-1, max-image-preview:large',
+    keywords: ['BIM 比較', 'Revit Archicad 比較', 'BIMツール 選定', 'GLOOBE Revit', 'ST-Bridge'],
+  }) +
+    htmlHeader() +
+    `
+  <div class="container">
+    <main class="main-content">
+      <div class="static-page">
+        <h1>主要BIMツール徹底比較マトリクス（2026年版）</h1>
+
+        <p>日本の建築・建設実務でBIM導入を検討する際、海外発信の比較記事は仕様や価格を網羅しているものの、日本特有の評価軸（日本拡張機能、ST-Bridge対応、国土交通省BIM/CIM標準への準拠、日本国内サポート体制など）が抜け落ちていることが多くあります。本マトリクスは、海外発信のグローバル仕様情報と、日本市場に特化した評価項目を統合し、編集部が独自に整理した8製品×13項目の比較表です。</p>
+
+        <p style="background: var(--blue-pale); padding: 1rem 1.25rem; border-radius:8px; border-left:4px solid var(--blue); font-size:0.9rem; line-height:1.7;"><strong>本マトリクスの位置づけ:</strong> ツール選定の出発点となる「ファーストパス」のフィルタリング資料です。最終的な選定は、貴社の業務フロー、既存資産（CADデータ、テンプレート、ファミリ）、社内スキルセット、案件パイプラインに合わせて、各販社の実機デモ・トライアル契約を経て判断してください。価格・仕様は2026年時点の参考情報であり、変更されている可能性があります。</p>
+
+        <h2>比較マトリクス本体</h2>
+        <div class="cmp-table-wrapper">
+          <table class="cmp-table">
+            <thead>${headerRow}</thead>
+            <tbody>${bodyRows}</tbody>
+          </table>
+        </div>
+
+        <h2>編集部視点：選び方の判断軸</h2>
+        <h3>意匠設計事務所が初めてBIM導入する場合</h3>
+        <p>意匠表現の自由度、ファミリ・ライブラリの充実度、学習曲線の緩やかさを重視するなら <strong>Archicad</strong> または <strong>GLOOBE</strong> が候補。Archicadは国際的なBIMコミュニティとの親和性、GLOOBEは日本の建築実務（確認申請、構造一体運用）への適合度で優位。</p>
+
+        <h3>ゼネコン設計部門が大規模化を見据える場合</h3>
+        <p><strong>Revit</strong> が事実上の業界標準。Autodesk Construction Cloud / Forma との連携でBIM360時代から続く施工管理連携、海外案件・外注先との互換性が決め手。日本での人材プールも最大。</p>
+
+        <h3>構造設計・鉄骨ファブが中心の場合</h3>
+        <p><strong>Tekla Structures</strong> 一択に近い。構造ディテール表現力、製作図出力、鉄骨製造プロセスとの連携で他ツールを圧倒。</p>
+
+        <h3>インフラ・公共大型案件中心の場合</h3>
+        <p>Bentley の <strong>OpenBuildings Designer</strong> または Tekla / Revit の組み合わせ。国土交通省BIM/CIM案件の入札条件にも依存。</p>
+
+        <h3>DWG資産との互換を最重視する場合</h3>
+        <p><strong>BricsCAD BIM</strong> が現実解。AutoCAD互換ながらBIMモデリング機能を持ち、コスト面でも他のBIMツールより抑えやすい。</p>
+
+        <h2>導入時に見落としがちな観点</h2>
+        <ul>
+          <li><strong>クラウド共同編集の運用コスト</strong>：複数人で同時編集する場合、サブスクの追加ライセンス費用が必要なケースが多い</li>
+          <li><strong>テンプレート・ファミリ整備の社内工数</strong>：ツール選定後、社内テンプレ整備に半年〜1年かかる前提を持つ</li>
+          <li><strong>下請け・協力会社の互換性</strong>：自社で導入してもデータの受け渡し相手が異なるツールを使う場合、IFC経由でのやり取りに精度ロスが生じる</li>
+          <li><strong>サポート言語</strong>：海外ツールは日本語サポートの厚みに差がある。販社経由の保守体制を必ず事前確認</li>
+          <li><strong>建築確認申請対応</strong>：BIM確認申請対応の動きが進む中、各ツールの図面出力品質と確認機関の運用相性を確認</li>
+        </ul>
+
+        <h2>ツール別の最新ニュース</h2>
+        <p>各ツールの最新動向・アップデート情報は、以下のカテゴリ別ニュース一覧から確認できます。</p>
+        <ul>
+          <li><a href="./categories/revit.html">Revit関連ニュース</a></li>
+          <li><a href="./categories/archicad.html">Archicad関連ニュース</a></li>
+          <li><a href="./categories/gloobe.html">GLOOBE関連ニュース</a></li>
+          <li><a href="./categories/bim-ecosystem.html">BIM全般のニュース</a></li>
+        </ul>
+
+        <h2>合わせて読みたい基礎解説</h2>
+        <ul>
+          <li><a href="./guides/bim.html">BIMとは何か（基礎解説）</a></li>
+          <li><a href="./guides/revit.html">Revit徹底解説</a></li>
+          <li><a href="./guides/archicad.html">Archicad徹底解説</a></li>
+          <li><a href="./guides/ifc.html">IFCとは何か</a></li>
+          <li><a href="./guides/openbim.html">openBIMの考え方</a></li>
+          <li><a href="./guides/bim-manager.html">BIMマネージャーの役割</a></li>
+        </ul>
+
+        <p style="margin-top:2rem; color: var(--text-muted); font-size:0.85rem;">最終更新日: ${formatDate(new Date().toISOString())}</p>
+        <p style="color: var(--text-muted); font-size:0.85rem;">本マトリクスは編集部の独自整理によるものであり、各ベンダーの公式比較資料ではありません。詳細な仕様確認は各社公式情報をご参照ください。</p>
+      </div>
+    </main>
+  </div>` +
+    htmlFooter();
+}
+
 function buildEventsPage(events) {
   const now = Date.now();
   const upcoming = events.filter((ev) => {
@@ -4669,6 +5687,15 @@ function main() {
   fs.writeFileSync(path.join(__dirname, 'about.html'), buildAboutPage(), 'utf-8');
   console.log('[generateSite] Generated about.html');
 
+  fs.writeFileSync(path.join(__dirname, 'compare.html'), buildCompareTablePage(posts), 'utf-8');
+  console.log('[generateSite] Generated compare.html');
+
+  fs.writeFileSync(path.join(__dirname, 'timeline.html'), buildTimelinePage(posts), 'utf-8');
+  console.log('[generateSite] Generated timeline.html');
+
+  fs.writeFileSync(path.join(__dirname, 'glossary.html'), buildGlossaryPage(), 'utf-8');
+  console.log('[generateSite] Generated glossary.html');
+
   // Generate events.html
   const eventsFile = path.join(__dirname, 'data', 'events.json');
   let events = [];
@@ -4696,6 +5723,9 @@ function main() {
     { loc: `${SITE_URL}/`, lastmod: now, changefreq: 'daily', priority: '1.0' },
     { loc: `${SITE_URL}/guides/index.html`, lastmod: now, changefreq: 'weekly', priority: '0.9' },
     { loc: `${SITE_URL}/events.html`, lastmod: now, changefreq: 'weekly', priority: '0.8' },
+    { loc: `${SITE_URL}/compare.html`, lastmod: now, changefreq: 'monthly', priority: '0.9' },
+    { loc: `${SITE_URL}/timeline.html`, lastmod: now, changefreq: 'weekly', priority: '0.8' },
+    { loc: `${SITE_URL}/glossary.html`, lastmod: now, changefreq: 'monthly', priority: '0.9' },
     ...paginatedHomeUrls,
     ...categoryUrls,
   ];

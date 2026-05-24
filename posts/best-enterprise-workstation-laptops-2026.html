@@ -923,6 +923,297 @@
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1751,12 +2042,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>CADや<a class="glossary-link" href="../guides/bim.html">BIM</a>設計業務の現場では、従来デスクトップワークステーションが主流でしたが、施工現場への持ち込み、遠隔コラボレーション、プロジェクトオフィスでの機動的な設計作業など、モバイル環境での高性能計算需要が急速に高まっています。特に2025年以降、AMDの「Strix Halo」「Strix Point」プロセッサやIntelの「Arrow Lake」など、統合GPU性能の飛躍的向上により、従来はNvidiaの離散GPUが必須とされていた大規模モデル処理が、軽量なノートパソコンでも実現可能になりました。国土交通省のBIM/CIM推進ロードマップにおいても、現場DX化の重要施策として施工段階でのBIM活用が掲げられており、現場対応可能なモバイルワークステーションの位置づけが強まっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026年のエンタープライズワークステーション市場は、3つの主要カテゴリに分かれています。14インチ超軽量機はHP ZBook Ultra G1a（1.57kg）とLenovo ThinkPad P14s Gen 6 AMD（1.39kg）が中心で、CAD・BIM標準業務に必要十分な性能を提供します。特にZBook Ultra G1aは「Strix Halo」AMD Ryzen AI Max+ Pro 395（16コア、最大5.7GHz）を搭載し、統合Radeon 8060S GPUは最大96GBのシステムメモリをVRAM代わりに利用できる統一メモリアーキテクチャが特徴です。一方ThinkPad P14s Gen 6 AMDはRyzen AI 9 HX 370を採用し、1.39kgという業界最軽量クラスながらCAD・BIM業務で実用的なパフォーマンスを実現しています。16インチ以上の据置型としてはLenovo ThinkPad P16 Gen 3が最新鋭で、Arrow Lake Intel Core Ultra 200HX（最大24コア）、RTX Pro 5000 Blackwell（24GB）対応、192GBメモリ搭載可能という高スペック構成で、visualization・simulation・AI処理まで対応します。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>CADや<a class="glossary-link" href="../guides/bim.html">BIM</a>設計業務の現場では、従来デスクトップワークステーションが主流でしたが、施工現場への持ち込み、遠隔コラボレーション、プロジェクトオフィスでの機動的な設計作業など、モバイル環境での高性能計算需要が急速に高まっています。特に2025年以降、AMDの「Strix Halo」「Strix Point」プロセッサやIntelの「Arrow Lake」など、統合GPU性能の飛躍的向上により、従来はNvidiaの離散GPUが必須とされていた大規模モデル処理が、軽量なノートパソコンでも実現可能になりました。国土交通省の<a class="glossary-link" href="../glossary.html#term-mlit-bim-cim">BIM/CIM</a>推進ロードマップにおいても、現場DX化の重要施策として施工段階でのBIM活用が掲げられており、現場対応可能なモバイルワークステーションの位置づけが強まっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>2026年のエンタープライズワークステーション市場は、3つの主要カテゴリに分かれています。14インチ超軽量機はHP ZBook Ultra G1a（1.57kg）とLenovo ThinkPad P14s Gen 6 AMD（1.39kg）が中心で、CAD・BIM標準業務に必要十分な性能を提供します。特にZBook Ultra G1aは「Strix Halo」AMD Ryzen AI Max+ Pro 395（16コア、最大5.7GHz）を搭載し、統合Radeon 8060S GPUは最大96GBのシステムメモリをVRAM代わりに利用できる統一メモリアーキテクチャが特徴です。一方ThinkPad P14s Gen 6 AMDはRyzen AI 9 HX 370を採用し、1.39kgという業界最軽量クラスながらCAD・BIM業務で実用的なパフォーマンスを実現しています。16インチ以上の据置型としてはLenovo ThinkPad P16 Gen 3が最新鋭で、Arrow Lake Intel Core Ultra 200HX（最大24コア）、RTX Pro 5000 Blackwell（24GB）対応、192GBメモリ搭載可能という高スペック構成で、visualization・simulation・AI処理まで対応します。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/the-great-brain-robbery.html">AI設計エージェントが建築職人の思考を奪う？AEC業界の岐路</a>
       <span class="mid-related-cat">BIM全般</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>従来のワークステーション選定では「GPU性能＝Nvidia RTX Pro」が絶対視されていましたが、2026年の大きな転換点は統合GPU（iGPU）性能の劇的向上です。HP ZBook Ultra G1aのRadeon 8060S、ThinkPad P14s Gen 6のRadeon 890M、さらにIntel Iris Xe等の統合GPUは、従来の「補助的な存在」から「実用性能を担う中核」へと位置づけが変わります。特にAMDの統一メモリアーキテクチャは、従来のNvedia GPU設計（独立したVRAM領域）の制約を排除し、メモリ密集的な大規模建築モデルやポイントクラウド処理を効率化します。V-Ray、KeyShot、Solidworks VisualizeといったメジャーなビジュアライゼーションツールがAMD統合GPUサポートを急速に拡充している点も、この転換の実装化を象徴しています。一方、ThinkPad P16 Gen 3の180W電源は、RTX Pro 5000 Blackwell搭載時に理論上の消費電力（最大175W）とのマージン不足が課題となり、ピーク負荷時の電力制御が働く可能性が指摘されています。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>モバイルワークステーションの高性能化は、建設現場のDX実装方式を本質的に変えます。従来は現場での「簡易確認・参照用」にとどまっていたBIMモデル操作が、現場で実時間編集・シミュレーション実行が可能になることで、施工チーム・設計者間の協働意思決定サイクルが短縮化します。特に大型複合施設やインフラプロジェクトでは、現場オフィスに据置型ワークステーション不要となり、施設コスト低減とセットアップ時間短縮が実現します。一方、AMDの統合GPU採用により、従来はNvidiaの独占的な高性能領域だったvisualisation・AI解析が、より手頃な価格帯のモバイル機で可能になることで、中堅・中小規模の設計事務所やサブコンの業務DX化が加速される効果も期待できます。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>従来のワークステーション選定では「GPU性能＝Nvidia RTX Pro」が絶対視されていましたが、2026年の大きな転換点は統合GPU（iGPU）性能の劇的向上です。HP ZBook Ultra G1aのRadeon 8060S、ThinkPad P14s Gen 6のRadeon 890M、さらにIntel Iris Xe等の統合GPUは、従来の「補助的な存在」から「実用性能を担う中核」へと位置づけが変わります。特にAMDの統一メモリアーキテクチャは、従来のNvedia GPU設計（独立したVRAM領域）の制約を排除し、メモリ密集的な大規模建築モデルや<a class="glossary-link" href="../glossary.html#term-point-cloud">ポイントクラウド</a>処理を効率化します。V-Ray、KeyShot、Solidworks VisualizeといったメジャーなビジュアライゼーションツールがAMD統合GPUサポートを急速に拡充している点も、この転換の実装化を象徴しています。一方、ThinkPad P16 Gen 3の180W電源は、RTX Pro 5000 Blackwell搭載時に理論上の消費電力（最大175W）とのマージン不足が課題となり、ピーク負荷時の電力制御が働く可能性が指摘されています。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>モバイルワークステーションの高性能化は、建設現場のDX実装方式を本質的に変えます。従来は現場での「簡易確認・参照用」にとどまっていたBIMモデル操作が、現場で実時間編集・シミュレーション実行が可能になることで、施工チーム・設計者間の協働意思決定サイクルが短縮化します。特に大型複合施設やインフラプロジェクトでは、現場オフィスに据置型ワークステーション不要となり、施設コスト低減とセットアップ時間短縮が実現します。一方、AMDの統合GPU採用により、従来はNvidiaの独占的な高性能領域だったvisualisation・AI解析が、より手頃な価格帯のモバイル機で可能になることで、中堅・中小規模の設計事務所やサブコンの業務DX化が加速される効果も期待できます。</p>
           </div>
         </div>
         
@@ -2018,6 +2309,9 @@
     <div class="footer-nav">
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
+      <a href="../compare.html">BIMツール比較</a>
+      <a href="../glossary.html">用語集</a>
+      <a href="../timeline.html">ベンダー履歴</a>
       <a href="../about.html">運営者情報</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>

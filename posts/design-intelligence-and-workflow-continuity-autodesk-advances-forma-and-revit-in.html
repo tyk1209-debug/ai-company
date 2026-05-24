@@ -923,6 +923,297 @@
       color: var(--blue);
       border-bottom-color: var(--navy);
     }
+    .cluster-news-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .cluster-news-item {
+      border-left: 3px solid var(--blue);
+      background: var(--blue-pale);
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .cluster-news-item:hover { background: rgba(37,99,235,0.14); transform: translateX(2px); }
+    .cluster-news-link {
+      display: block;
+      padding: 0.85rem 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .cluster-news-meta {
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cluster-news-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .cluster-news-excerpt {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-top: 0.35rem;
+    }
+    .cmp-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 980px;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #f1f5f9;
+    }
+    .cmp-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .cmp-table th.cmp-criterion {
+      background: var(--navy-mid);
+      min-width: 180px;
+    }
+    .cmp-tool-name { display: block; font-size: 0.95rem; }
+    .cmp-tool-vendor { display: block; font-size: 0.7rem; opacity: 0.75; font-weight: 500; margin-top: 0.15rem; }
+    .cmp-row-label {
+      background: var(--blue-pale);
+      font-weight: 600;
+      color: var(--navy);
+      min-width: 180px;
+    }
+    .cmp-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.3rem;
+      line-height: 1.4;
+    }
+    .cmp-table tbody tr:hover { background: #fafbff; }
+    .vendor-nav {
+      margin: 1.25rem 0 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+    .vendor-nav-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .vendor-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .vendor-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .vendor-nav a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .vendor-nav-count {
+      font-size: 0.7rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-nav a:hover .vendor-nav-count { background: #fff; color: var(--blue); }
+    .vendor-block { margin-top: 2.5rem; }
+    .vendor-block-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .vendor-count {
+      font-size: 0.75rem;
+      background: var(--blue);
+      color: #fff;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .vendor-timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      border-left: 2px solid #e0e7ff;
+    }
+    .vendor-timeline-item {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.1rem;
+    }
+    .vendor-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.42rem;
+      top: 1.1rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+    .vendor-timeline-date {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .vendor-timeline-content {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .vendor-timeline-title {
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+    .vendor-timeline-title:hover { color: var(--blue); text-decoration: underline; }
+    .vendor-timeline-cat {
+      font-size: 0.7rem;
+      background: rgba(37,99,235,0.1);
+      color: var(--blue);
+      padding: 0.1rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .glossary-toc {
+      margin: 1.5rem 0 2.5rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .glossary-toc-title {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin: 0 0 1.25rem;
+    }
+    .glossary-toc-block { margin-bottom: 1.25rem; }
+    .glossary-toc-block:last-child { margin-bottom: 0; }
+    .glossary-toc-cat {
+      font-size: 0.85rem;
+      color: var(--blue);
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .glossary-toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+    }
+    .glossary-toc-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .glossary-toc-list a:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .glossary-section { margin-top: 3rem; }
+    .glossary-cat-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--blue);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .glossary-term {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+    }
+    .glossary-term-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin: 0 0 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .glossary-term-reading {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .glossary-term-aliases {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .glossary-term-short {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin: 0 0 0.6rem;
+      line-height: 1.55;
+    }
+    .glossary-term-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 0;
+    }
     .mid-related-cat {
       flex-shrink: 0;
       font-size: 0.65rem;
@@ -1751,12 +2042,12 @@
       <main class="article-main">
         <div class="article-body-wrap">
           <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p>建築設計プロセスでは、企画・基本設計・実施設計・施工の各段階でデータが分断され、設計意図や判断根拠が喪失する課題が業界全体で認識されてきました。特に基本設計段階で決定された意思決定が、詳細設計段階では文脈を失い、同じ検討を繰り返すロスが生じています。日本国土交通省の<a class="glossary-link" href="../guides/bim.html">BIM</a>推進ロードマップでも、BIM活用による設計・施工情報の一元化と連続性の確保が重要施策として掲げられており、国内外を問わず「設計情報の連続性」がBIM時代の課題となっていました。Autodeskはこうしたワークフローの断絶を解決する方向へ、クラウドベースの統合環境の構築を進めてきました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskが発表した主な施策は、以下の通りです。第一に、新たな設計・分析環境「Forma Building Design」を導入し、基本設計段階での設計案の生成と性能分析の統合を実現しました。このツールは地理情報を含むサイトの設定、複数の建築案の自動生成、日照・太陽熱・炭素排出量などの性能指標を備えており、設計初期段階でパフォーマンスフィードバックを設計判断に組み込めます。従来は詳細設計後に性能検証を行うのが通例でしたが、Formaでは基本設計段階で複数案の性能を比較検討し、合理的な判断が可能になります。第二に、<a class="glossary-link" href="../guides/revit.html">Revit</a>を「Forma Connected Client」として認定し、両プラットフォーム間でのダイレクトなデータ流通を実現しました。Formaで決定された基本設計案は、地理情報やサイトデータを保有した状態でRevitのネイティブモデルに移行され、Forma Data Marketplaceからのコンテクスト情報も自動的に組み込まれます。第三に「Forma Carbon Insights」で、基本設計段階での炭素分析を詳細設計以降まで追跡可能にしました。これにより、初期段階で設定された持続可能性の方針がプロジェクト全体で可視化され続けます。</p>
+            <h2 class="article-section-h2"><span>背景</span></h2><p>建築設計プロセスでは、企画・基本設計・実施設計・施工の各段階でデータが分断され、設計意図や判断根拠が喪失する課題が業界全体で認識されてきました。特に基本設計段階で決定された意思決定が、詳細設計段階では文脈を失い、同じ検討を繰り返すロスが生じています。日本国土交通省の<a class="glossary-link" href="../guides/bim.html">BIM</a>推進ロードマップでも、BIM活用による設計・施工情報の一元化と連続性の確保が重要施策として掲げられており、国内外を問わず「設計情報の連続性」がBIM時代の課題となっていました。Autodeskはこうしたワークフローの断絶を解決する方向へ、クラウドベースの統合環境の構築を進めてきました。</p><h2 class="article-section-h2"><span>内容</span></h2><p>Autodeskが発表した主な施策は、以下の通りです。第一に、新たな設計・分析環境「<a class="glossary-link" href="../glossary.html#term-forma">Forma</a> Building Design」を導入し、基本設計段階での設計案の生成と性能分析の統合を実現しました。このツールは地理情報を含むサイトの設定、複数の建築案の自動生成、日照・太陽熱・炭素排出量などの性能指標を備えており、設計初期段階でパフォーマンスフィードバックを設計判断に組み込めます。従来は詳細設計後に性能検証を行うのが通例でしたが、Formaでは基本設計段階で複数案の性能を比較検討し、合理的な判断が可能になります。第二に、<a class="glossary-link" href="../guides/revit.html">Revit</a>を「Forma Connected Client」として認定し、両プラットフォーム間でのダイレクトなデータ流通を実現しました。Formaで決定された基本設計案は、地理情報やサイトデータを保有した状態でRevitのネイティブモデルに移行され、Forma Data Marketplaceからのコンテクスト情報も自動的に組み込まれます。第三に「Forma Carbon Insights」で、基本設計段階での炭素分析を詳細設計以降まで追跡可能にしました。これにより、初期段階で設定された持続可能性の方針がプロジェクト全体で可視化され続けます。</p>
     <div class="mid-related-card">
       <span class="mid-related-label">関連記事</span>
       <a class="mid-related-link" href="../posts/hypars-big-bet-against-schema.html">スキーマ不要の設計へ――HyparのAI戦略が示す「BIM常識」の転換</a>
       <span class="mid-related-cat">Revit</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>この統合の核は、従来のファイルベースのワークフローから「共有データ環境」への転換です。Forma→Revit間のデータ流通では、LOD（Level of Detail）に応じた段階的な情報構造を保持したまま移行でき、基本設計の意思決定メタデータが詳細設計段階でも活用可能になります。特に「Forma Connected Client」仕様により、Revit内でFormaのパフォーマンス分析結果にアクセス可能になった点が重要です。従来のRevitは詳細設計に特化し、初期段階の性能検討は別ツール（Ecotect等）で行われていましたが、本統合によりRevitが性能情報の統合プラットフォームに進化しました。<a class="glossary-link" href="../guides/ifc.html">IFC</a>形式の運用を前提とした設計では、ツール間での属性情報損失が課題でしたが、Autodesk独自のクラウドネイティブデータモデルにより、Forma固有の設計生成ロジックやパラメータ情報もRevitで保持されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバル規模では、このアプローチは設計プロセスの根本的な再構成を意味します。従来のシーケンシャル型（企画→基本→詳細→施工）から、段階ごとの成果物を次段階で再利用する「情報継承型」への転換が進みます。結果として、設計案の検討回数削減（基本設計段階での複数案比較が効率化）、性能検証時間の短縮（Forma→Revit移行時のモデル再構築が不要）、決定根拠の追跡可能性向上（メタデータの保有）が実現します。施工段階への影響としては、Revitで確定した設計情報にFormaの早期検討結果が紐付くため、変更時の影響範囲評価が容易になり、VE（Value Engineering）提案の判断根拠も明確化されます。</p>
+    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>この統合の核は、従来のファイルベースのワークフローから「共有データ環境」への転換です。Forma→Revit間のデータ流通では、<a class="glossary-link" href="../glossary.html#term-lod">LOD</a>（Level of Detail）に応じた段階的な情報構造を保持したまま移行でき、基本設計の意思決定メタデータが詳細設計段階でも活用可能になります。特に「Forma Connected Client」仕様により、Revit内でFormaのパフォーマンス分析結果にアクセス可能になった点が重要です。従来のRevitは詳細設計に特化し、初期段階の性能検討は別ツール（Ecotect等）で行われていましたが、本統合によりRevitが性能情報の統合プラットフォームに進化しました。<a class="glossary-link" href="../guides/ifc.html">IFC</a>形式の運用を前提とした設計では、ツール間での属性情報損失が課題でしたが、Autodesk独自のクラウドネイティブデータモデルにより、Forma固有の設計生成ロジックやパラメータ情報もRevitで保持されます。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>グローバル規模では、このアプローチは設計プロセスの根本的な再構成を意味します。従来のシーケンシャル型（企画→基本→詳細→施工）から、段階ごとの成果物を次段階で再利用する「情報継承型」への転換が進みます。結果として、設計案の検討回数削減（基本設計段階での複数案比較が効率化）、性能検証時間の短縮（Forma→Revit移行時のモデル再構築が不要）、決定根拠の追跡可能性向上（メタデータの保有）が実現します。施工段階への影響としては、Revitで確定した設計情報にFormaの早期検討結果が紐付くため、変更時の影響範囲評価が容易になり、VE（Value Engineering）提案の判断根拠も明確化されます。</p>
           </div>
         </div>
         
@@ -2018,6 +2309,9 @@
     <div class="footer-nav">
       <a href="../">ホーム</a>
       <a href="../events.html">イベント</a>
+      <a href="../compare.html">BIMツール比較</a>
+      <a href="../glossary.html">用語集</a>
+      <a href="../timeline.html">ベンダー履歴</a>
       <a href="../about.html">運営者情報</a>
       <a href="../privacy.html">プライバシーポリシー</a>
     </div>

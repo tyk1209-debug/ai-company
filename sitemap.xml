@@ -181,6 +181,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aec-news.com/posts/post.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/forward-archicad28.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/velux-project-development-guide.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/626-tech.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aec-news.com/posts/archicad-2840-update.html</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -265,7 +289,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/post.html</loc>
+    <loc>https://aec-news.com/posts/post-1.html</loc>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -283,7 +307,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/post-3.html</loc>
+    <loc>https://aec-news.com/posts/post-4.html</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -337,7 +361,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/post-1.html</loc>
+    <loc>https://aec-news.com/posts/post-2.html</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -529,7 +553,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/post-2.html</loc>
+    <loc>https://aec-news.com/posts/post-3.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -625,7 +649,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/post-4.html</loc>
+    <loc>https://aec-news.com/posts/post-5.html</loc>
     <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

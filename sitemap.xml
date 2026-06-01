@@ -97,6 +97,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aec-news.com/categories/ai-dx.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aec-news.com/categories/bim-ai.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -110,12 +116,6 @@
   </url>
   <url>
     <loc>https://aec-news.com/categories/ifc.html</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/categories/ai-dx.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -187,8 +187,32 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aec-news.com/posts/bimbim-classes.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/nvidia-factory-operations-blueprint-gives-factories-a-new-ai-brain.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/nvidia-levels-up-local-ai-agents-across-rtx-pcs-and-dgx-spark.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aec-news.com/posts/626-tech.html</loc>
     <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/autodesk-to-acquire-maintainx-advancing-unified-platform-in-operations.html</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

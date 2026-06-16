@@ -5,7 +5,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-07T15:00:12.000Z",
     "summary": "Autodesk's mature BIM authoring tool connects to the Forma AECO platform The post Autodesk strengthens bridge between Revit and Forma appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
+    "fetchedAt": "2026-06-16T15:49:31.267Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -24,36 +24,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "Maxon launches RedShift for Archviz",
-    "link": "https://aecmag.com/visualisation/maxon-launches-redshift-for-archviz",
-    "source": "AEC Magazine",
-    "pubDate": "2026-03-18T09:25:14.000Z",
-    "summary": "Users of Vectorworks, Revit and Archicad given access to Maxon’s “cinematic rendering technology” The post Maxon launches RedShift for Archviz appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "ARCHICAD",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "archicad",
-      "aec"
-    ],
-    "score": 15.21,
-    "freshnessScore": 0
-  },
-  {
     "title": "VELUX Project Development Guide",
     "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/VELUX-Project-Development-Guide/ba-p/703327",
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-05-21T11:47:03.000Z",
     "summary": "より効率的で持続可能な建築設計・建設を推進するため、VELUX と GRAPHISOFT Center Danmark は、実践的な BIM ガイド「Project Development Guide」を公開しました。本ガイドは、6本のウェビナー、書籍形式のオンライン出版物、そして BIM プロジェクトデータで構成されており、BIM がどのように建築設計全体を支援できるかを紹介しています。 BIM は建設業界においてますます普及しています。しかし、設計プロセスへのさらなる統合や、設計者・建築家がワークフローを効率化し、リソースをより有効活用し、より良い建築と持続可能な建物を実現するためには、まだ多くの可能性が残されています。 こうした BIM のメリットを業界関係者がより活用できるようにするため、VELUX は GRAPHISOFT Center Denmark と協力し、「VELUX Project Development Guide」を立ち上げました。 本プロジェクトは、大規模なランドマーク建築ではなく、一般的な戸建住宅を題材としている点が特徴です。ガイドでは、周辺環境・日照・風・エネルギー・採光などの解析やシミュレーションを含め、初期スケッチ段階から BIM をプロジェクトの中核として活用する方法を紹介しています。 また、スケッチやビジュアライゼーションから、LCA（ライフサイクルアセスメント）計算、採光シミュレーション、設計詳細化、分野間調整に至るまで、すべてを統合された BIM ワークフローの中でどのように行うかを解説しています。 6本のウェビナーとオンラインブック 公開に合わせて、5月末まで6本の無料ウェビナーが開催されます。これらのウェビナーでは、建築プロジェクトのあらゆる側面について学ぶことができ、統合 BIM ワークフローが、設計品質・技術的精度・持続可能性・居住者の快適性をバランスよく実現しながら、より良い建築につながることを理解できます。 過去に配信されたウェビナーは、プレイリストから視聴可能です。(字幕は英語字幕を設定変更で表示することができます） さらに、コンサルタントや設計者向けに、BIM プロジェクトの構成を確認できる各種プロジェクトデータもダウンロード可能となっています。 最終的には、小規模建築プロジェクトにおいて BIM がどのような付加価値を生み出すかをまとめたオンラインブックとして公開される予定です。 建築設計者向けの実践的ガイド VELUX の BIM Manager であり、本ガイドの発案者でもある Martin Let Hansen 氏は次のように述べています。 「Project Development Guide では、LCA 計算や採光・室内環境シミュレーションを、BIM ワークフロー全体の中にどのように統合できるかを紹介しています。また、その結果をもとに設計を調整することで、環境負荷を低減し、居住者の快適性を向上させる建築を実現できることを示しています。 私たちの目標は、実際の建築プロジェクトをベースに、広く認知されたさまざまなツールを活用した BIM ワークフロー全体を紹介することで、建築家や設計者にとって実践的で “hands-on” なガイドを提供することです。」 また、GRAPHISOFT Center Danmark のオーナーである Thomas Graabæk 氏は、建設業界におけるベストプラクティス BIM ガイドの登場を歓迎しています。 「病院やオフィスビル、文化施設といった大規模プロジェクトでは、BIM が価値を生み出すことはすでに広く認識されています。 このガイドでは、BIM は小規模プロジェクトでも価値を生み出せることを示しています。重要なのは、BIM ツールの持つ可能性を最大限に活用し、ボリューム検討、ビジュアライゼーション、LCA 計算、採光解析、材料比較などを行うことです。 VELUX と共に、建築家や設計者が、クライアント・経済性・そして環境にとってメリットのある BIM 活用を実践できることを示せるのを嬉しく思います。」 BIMx HYPER-MODELを 開く／ダウンロードする VELUX Project Development Guide では、主要な BIM ツールとして Archicad を使用しています。さらに、DesignLCA、Daylight Visualizer、MEP Designer、FEM-Design、BIMx、BIMcloud などのツールも活用し、プロジェクト全体の各フェーズをカバーしています。 よろしくお願いいたします。GRAPHISOFT Center Danmark / VELUX",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.315Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -79,7 +55,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-27T10:39:26.000Z",
     "summary": "「今月のヒント」は、インターナショナルのコミュニティで毎月公開されている「Tip of the Month」を翻訳してお届けしています！Tip of the Month（今月のヒント） は、インターナショナルのコミュニティで投稿されているものから、モデレータメンバーがよいTips! と選んでいるものです。海外のユーザーの使い方が、日本のユーザーのみなさんにもヒントになるのでは？と思っています。※原稿内容はオリジナルページに合わせていますが、できるだけインターフェイスの画像は、Archicad日本語版にしています。 ターゲットを絞ったIFC出力は、設計者やコンサルタントとの調整をよりスムーズにします。今月のTipsでは、@Laszlo Nagy による実用的なアイデアをご紹介します。Archicadの衝突判定設定とIFCジオメトリフィルタを組み合わせることで、壁などのホスト要素を含めずにドアと窓だけをIFCとして出力する方法です。 課題 コンサルタントから、開口部（ドアや窓）のみを含むIFCデータを求められることがあります。これは、構造モデルやMEPモデルとの位置確認、クリアランス、干渉チェックに集中するためであり、壁・スラブなどの余分な要素は不要とされるケースです。 解決方法 Archicadの「ビルディングマテリアル」には「干渉検出に参加」というフラグがあり、IFCトランスレータには「”干渉検出に参加”する要素のみを出力」というオプションがあります。 すべてのビルディングマテリアルでこのフラグを一時的にオフにし、その上でIFCトランスレータ側で「”干渉検出に参加”する要素のみを出力」を有効にすると、壁やスラブなどの構成要素は除外されます。一方、ライブラリパーツとして実装されているドアや窓はこの条件に影響されないため、引き続き出力されます。 Step 1：プロジェクトのコピーで作業する 元のプロジェクトを開き、「ファイル → 名前を付けて保存」で別ファイルを作成します。（例：Project_IFC_DoorsWindowsOnly.pln）以降の操作はこのコピー上で行い、本体プロジェクトの設定には影響を与えないようにします。 Step 2：すべてのビルディングマテリアルの干渉検出をオフにする 「オプション → 要素属性 → ビルディングマテリアル」を開きます。リストの最初のマテリアルを選択し、Shiftキーや「すべて選択」で全マテリアルを選択します。プロパティ内の「干渉検出に参加」のチェックを外し、OKで確定します。 これにより、このコピー内では壁・スラブ・屋根・梁・柱など、マテリアルに依存する構成要素は干渉検出対象外となります。 ※操作は下記の動画をご覧ください。 Step 3：IFCトランスレータの設定 「ファイル → 相互運用 → IFC → IFCトランスレータ」を開きます。 通常使用しているトランスレータ（例：「Exact Geometry Export」）を複製し、「IFC – Doors & Windows only」などにリネームします。 新しいトランスレータを選択し、「設定」→「形状変換」パネルでを開きます。 「”干渉検出に参加”する形状のみを出力する」を有効にします。 その他の設定（IFCバージョン、プロパティセットなど）は標準設定のままで問題ありません。 Step 4：ドアと窓のみのIFCを書き出す エクスポート用のコピーで、「ファイル → 名前を付けて保存」を選択し、フォーマット／ファイルの種類をIFCファイルに設定します。 ファイル名は、例えば「Project_DoorsWindowsOnly.ifc」のように分かりやすく付けます。 同じダイアログ内で、設定したトランスレータ（IFC – Doors & Windows only）を選択します。 「保存」をクリックし、Archicadによるエクスポートが完了するのを待ちます。 作成されたIFCを任意のビューア、またはArchicad（「ファイル → 開く → IFCファイル」）で開き、ドアと窓（およびその他の純粋なライブラリパーツ）のみが含まれ、壁・スラブ・梁・屋根が含まれていないことを確認します。 オプション：フルモデルとの併用 この方法ではビルディングマテリアルを持つ要素がすべて除外されるため、必要に応じて以下も併せて提供できます。 通常どおり標準のトランスレータを使用して、建物全体モデルをエクスポートします。 または、「ドア／窓を含まないモデル」として、「3Dでの表示要素のフィルタと切断」においてドアと窓の3D表示をオフにし、その後、通常のトランスレータで再度エクスポートします。 受信側には、調整に必要な内容に応じて、ドア／窓のみのIFCファイルと、それ以外を含むIFCファイルの2つを読み込んでもらいます。 結果 この方法を使えば、プロジェクト構成を変更したり、要素をレイヤーに移動したりすることなく、ドアと窓のみのIFCを簡単に作成できます。 ぜひ試してみてください！また、このTipsを共有してくれた @Laszlo Nagy に感謝を伝えたい方は、元のフォーラム投稿もぜひご覧ください。 日々の業務で役立つ工夫やアイデアがあれば、ぜひコミュニティで共有してください。Insightsブログで紹介されるかもしれません！",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.316Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -98,34 +74,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "Maxon launches Redshift for Revit",
-    "link": "https://aecmag.com/visualisation/maxon-launches-redshift-for-revit",
-    "source": "AEC Magazine",
-    "pubDate": "2026-06-10T13:48:41.000Z",
-    "summary": "Real-time arch viz tool said to deliver physically accurate lighting, reflections, shadows, and materials The post Maxon launches Redshift for Revit appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "aec"
-    ],
-    "score": 11.7,
-    "freshnessScore": 2
-  },
-  {
     "title": "BIM確認申請に向けた新しい上級BIM Classesのご案内",
     "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/BIM%E7%A2%BA%E8%AA%8D%E7%94%B3%E8%AB%8B%E3%81%AB%E5%90%91%E3%81%91%E3%81%9F%E6%96%B0%E3%81%97%E3%81%84%E4%B8%8A%E7%B4%9ABIM-Classes%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/ba-p/704080",
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-06-01T08:29:03.000Z",
     "summary": "BIM確認申請に向けた新しい上級BIM Classesのご案内 Graphisoft Learnで提供されているBIM Classesに、 上級クラス「確認申請におけるBIM図面審査入門：入出力基準の解説」が新設されました。 本クラスは、建築確認におけるBIM確認申請・BIM図面審査をテーマに、 国土交通省の入出力基準の対応方法をArchicadを例に学ぶ上級向けコンテンツです。 BIM Classes「初級」「中級」を修了された方の次のステップとしてご活用いただけます。 BIM確認申請の流れやBIM図面審査の位置づけについては、 GraphisoftのBIM確認申請 特設ページでも情報を公開しています。 制度の動きや今後のスケジュールを整理したうえで、学習に取り組みたい方は是非ご参考にしてください。 もっと詳しい情報はこちら： フリートーク：BIM確認申請に向けた新しいBIM Classes 上級クラスのご案内",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.315Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -149,7 +103,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-06-03T04:38:29.000Z",
     "summary": "2026/6/3 13:30 更新 2名キャンセルが出ましたので、再度申込画面を公開しました。※申し込み画面右下の「チケットを申し込む」が有効になっていたら、お申込みいただけます。キャンセルのご連絡がありましたら、この後もエントリー再開もありますので、お申込みできなかった方は、Communityを時々チェックしてください。2026/6/2 更新おかげさまで、締め切りをまたず昨夕満席となりました。以降は、キャンセルが出た場合にご案内をいたします。お申し込みのみなさまには本日確認のメールをお送りします。また事前配布の資料については、今週中にご案内予定となっております。開催まであと10日！お楽しみに！ -------- いよいよ USERFEST2026 の開催が近づいてきました！ おかげさまで多くのお申し込みをいただいており、残席も少なくなってきています。また、懇親会につきましては現在キャンセル待ちとなっております。ありがとうございます！なお本編イベントにつきましては、まだお申し込みいただけます。申込締切：2026年6月2日（火） ただし定員になりました時点で、締め切りますのでどうぞお早めに！※ご自身が申し込んだかどうかわからないという方は、Peatixというシステムを利用しておりますので、アプリからチケットをご確認ください。Peatixでの申し込み方は下記の参加申込に関する投稿をご覧ください。 お申し込み方法などの詳細は、下記の記事をご覧ください。USERFEST2026 参加申し込みスタートしました！社内申請にもご利用いただけるパンフレットもご用意しています！USERFEST は、全国の Archicad ユーザーが集まり、新しいご縁を紡ぐ場所でもあります。ぜひ多くの方と交流いただき、日々の業務はもちろん、これからの BIM・Archicad 活用につながる新しい発見や刺激を持ち帰っていただければと思います。 みなさまのご参加を心よりお待ちしています。",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.315Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -173,7 +127,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-05-29T04:22:18.000Z",
     "summary": "Graphisoft Techセミナー 大阪 BIM図面審査の制度や申請手順やレイヤー設定による図面表現を紹介。さらにGraphisoftが日本仕様ツールの活用を解説する対面型実務セミナーです。 お申し込みはこちら Vienna 22, Austria Delugan Meissl Associated Architects | DMAA dmaa.at Image: ©K18 本セミナーについて Graphisoft Techセミナー 大阪 6月26日（金）にTechセミナーを大阪にて開催いたします。BIM図面審査の最新動向から、Archicadの実務に役立つテクニックまで、これからの設計業務に直結する内容をお届けします。 設計者・BIM担当者の皆さまにとって、実務にすぐ活かせる知識を習得いただける機会ですので、是非ご参加ください。 こんな方におすすめ BIM図面審査の最新動向を知りたい方 Archicadの活用レベルを高めたい方 図面表現や業務効率を改善したい設計者・BIM担当者 開催概要 日時 2026年6月26日（金）14:00-17:00（13:30開場） 参加費 無料 会場 JAM BASE ルーム 6-2大阪市北区大深町6-38 グラングリーン大阪 北館 内アクセス＞＞ お申し込みはこちら プログラム ※当日変更になる場合もございます。予めご了承ください。 1. 基調講演 BIM図面審査の超基本 4月からBIM図面審査が始まりました。本セミナーでは、国の施策や制度の考え方、入出力基準や申告書の概要、確認申請用CDE「ArchSync」を使った申請手順を説明します。 一般財団法人建築行政情報センター荒川 暁郎 氏 2011年～2020年指定確認検査機関 意匠審査2020年～竹中工務店大阪本店設計部2025年～建築行政情報センターBIM推進室（出向中） 2. Archicadの基礎シリーズ「Archicadの図面表現を広げよう：レイヤー編」 レイヤーの設定が表現の上書きにも利いてくるんです。それはどんな設定をすればいいのでしょう？そんなワザや基本の扱い方も学べるセミナーです。前回の「Archicadの図面表現を広げよう：ペン設定編」に続くシリーズです。 Atelier NAGI奈木 紀子 氏 Atelier-NAGI 代表中央工学校OSAKA 非常勤講師BIM Classes 講師 3. Archicadの日本仕様のツールを使おう 日本の設計実務にフィットするExtensions JPNツール。図面表現の強化に加え、BIM図面審査に役立つ敷地マネージャー（テクノロジープレビュー機能）をはじめ、最新の機能についてもご案内します。「Archicadの図面表現を広げよう」の内容とあわせて、より実務に活かせる充実のセミナーです。 グラフィソフトジャパン株式会社カスタマーサクセスチーム お申し込み 本セミナーは事前登録制です。定員に達し次第、受付を終了させていただく場合がございますので、ぜひお早めにお申し込みください。 お申し込みはこちら",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.315Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -197,7 +151,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-21T02:45:59.000Z",
     "summary": "Beta Program2026へは、日本からも参加することはできますが、英語版で実施され、すべてのコミュニケーションおよびレポートは英語のみで行われ、応募後選考があります。ご了承ください。 このたび、Graphisoft Beta Program 2026 の応募受付を開始しましたことをお知らせいたします。 Archicad および Graphisoft エコシステムの次に向けた最新機能をいち早く体験し、開発の最前線に参加したい方にとって、絶好の機会です。 ベータテスターとして参加をご希望の方は、ぜひご応募ください。 応募をご希望の方は、申請ページのフォームにご記入ください。選考後、結果はメールにてご連絡いたします。 Graphisoft Beta Program 2026 は、今後リリース予定の製品を対象とした、実務環境に近い形での検証プログラムです。選ばれたユーザーは、Archicad 30、MEP Designer、BIMx、BIMcloud などのほぼ完成版（INT、USA、GER ローカライズ対応）に早期アクセスできます。 本プログラムでは、実運用に影響のない環境でベータ版を使用しながら、新しいワークフローや機能をリリース前に試すことができるほか、不具合やユーザビリティの問題の発見・改善に貢献いただきます。 また、アドオン開発者の方は、正式リリース前に開発キットを用いて Archicad 30 向けの対応準備や移植も可能です。 なお、プログラム期間中のすべてのコミュニケーションおよびレポートは英語で行われます。 参加するメリット 一般公開前に最新バージョンへいち早くアクセス可能 実務ベースの検証を通じて、製品の品質・安定性・ワークフロー改善に直接貢献できる 専用ベータフォーラムで、他のテスターや Graphisoft の専門家と情報共有・交流ができる アドオン開発者は、新しい開発キットを活用して Archicad 30 対応の準備が可能 プログラム終了時には、貢献度の高いテスターを対象に表彰も行われます。 Graphisoft Beta Program に関するご質問は、betasupport@graphisoft.com までお問い合わせください。",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.316Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -221,7 +175,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-03T08:20:37.000Z",
     "summary": "Multidisciplinary collaboration environment keeps models, documents, issues and decisions synchronised across teams The post Graphisoft to preview collaboration layer and Archicad–Forma connection appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
+    "fetchedAt": "2026-06-16T15:49:31.266Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -240,12 +194,56 @@
     "freshnessScore": 0
   },
   {
+    "title": "Maxon launches Redshift for Revit",
+    "link": "https://aecmag.com/visualisation/maxon-launches-redshift-for-revit",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-10T13:48:41.000Z",
+    "summary": "Real-time arch viz tool said to deliver physically accurate lighting, reflections, shadows, and materials The post Maxon launches Redshift for Revit appeared first on AEC Magazine.",
+    "fetchedAt": "2026-06-16T15:49:31.266Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "revit",
+      "aec"
+    ],
+    "score": 10.53,
+    "freshnessScore": 1
+  },
+  {
+    "title": "USERFEST2026 金曜日に盛況のうちに終了いたしました！",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/USERFEST2026-%E9%87%91%E6%9B%9C%E6%97%A5%E3%81%AB%E7%9B%9B%E6%B3%81%E3%81%AE%E3%81%86%E3%81%A1%E3%81%AB%E7%B5%82%E4%BA%86%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/ba-p/705231",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-06-15T12:35:50.000Z",
+    "summary": "浜松町に集まった約300人のArchicadが共通語の方たち。今年も無事、楽しくタメになる時間をご一緒することができました！ ※人が多すぎて普通の撮影では入りきらないので、ドローンの登場です。 12時から18時半までのUSERFEST2026レポートは、ここCommunityのインフォメーションページでご案内していきます。また参加のみなさまへは今日明日で、アンケートのお知らせメールをお送りします。ご回答いただくと、セッション内の資料やこちらの集合写真などダウンロードいただけるリンクをお知らせします。さて、来年はどこで開催となりますでしょうか。 詳しくはこちら 「USERFEST2026 インフォメーション」をご覧ください。 これを読むと、来年こそは行ってみよう！と思っていただけるのではないかと思います！",
+    "fetchedAt": "2026-06-16T15:49:27.315Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD"
+    ],
+    "keywordHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "score": 10,
+    "freshnessScore": 2
+  },
+  {
     "title": "Industry Insights “Embracing Challenges and Opportunities of using openBIM® for Increasing Efficiency in the Construction Process”",
     "link": "https://www.buildingsmart.org/industry-insights-embracing-challenges-and-opportunities-of-using-openbim-for-increasing-efficiency-in-the-construction-process",
     "source": "buildingSMART International",
     "pubDate": "2026-04-16T12:30:14.000Z",
     "summary": "Read about Construction Industry leaders perspective on embracing challenges and opportunities of using openBIM for increasing efficiency: Link The post Industry Insights “Embracing Challenges and Opportunities of using openBIM® for Increasing Efficiency in the Construction Process” appeared first on buildingSMART International.",
-    "fetchedAt": "2026-06-13T12:20:46.324Z",
+    "fetchedAt": "2026-06-16T15:49:30.244Z",
     "category": "IFC",
     "categoryHits": [
       "openbim",
@@ -267,7 +265,7 @@
     "source": "buildingSMART International",
     "pubDate": "2026-04-14T15:05:06.000Z",
     "summary": "The first buildingSMART openBIM Hackathon is complete - and it delivered more than expected. Over 50 hours, 47 participants across 9 teams worked under real pressure to build solutions that work in practice.… The post The first buildingSMART openBIM Hackathon in Porto is complete appeared first on buildingSMART International.",
-    "fetchedAt": "2026-06-13T12:20:46.324Z",
+    "fetchedAt": "2026-06-16T15:49:30.244Z",
     "category": "IFC",
     "categoryHits": [
       "openbim",
@@ -284,23 +282,25 @@
     "freshnessScore": 0
   },
   {
-    "title": "Jing'An Investment Center / Nikken Sekkei",
-    "link": "https://www.archdaily.com/1042339/jingan-investment-center-nikken-sekkei",
-    "source": "ArchDaily",
-    "pubDate": "2026-06-12T19:00:00.000Z",
-    "summary": "The JIC Jing'An Center is an urban regeneration project that integrates mixed-use functions (offices, retail, and residential) and is situated adjacent to the Nanjing West Road commercial area in Shanghai's Jing'An District. There, traditional streetscapes coexist alongside large-scale business hubs. The Center comprises a 180-meter-tall super-high-rise tower. Preserved and revitalized historic buildings are retained and incorporated at the lower level across the site. The project focuses on preserving historical context while integrating modern functions, presenting a model that transcends the dichotomy of \"preservation vs. development.\" Shanghai was once home to dense clusters of traditional communal housing known as 'Lilong', where people used the alleyways between buildings as communal living spaces. This project adopts the concept of a 'three-dimensional Lilong', extending its richness and vibrancy in a vertical fashion. Centered on a three-dimensional circulation route linking the preserved low-rise buildings to the sky gardens and the lower and middle tower section lounges, the design draws the city's bustle to the upper floors. By seamlessly connecting open spaces that encourage diverse user interactions, the proposal presents a new model for urban regeneration: a next-generation landmark that passes the city's memories on to the future.",
-    "fetchedAt": "2026-06-13T12:20:45.076Z",
-    "category": "REVIT",
+    "title": "S造事務所構造BIM図面審査サンプルプロジェクトを公開",
+    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/S%E9%80%A0%E4%BA%8B%E5%8B%99%E6%89%80%E6%A7%8B%E9%80%A0BIM%E5%9B%B3%E9%9D%A2%E5%AF%A9%E6%9F%BB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E5%85%AC%E9%96%8B/ba-p/705319",
+    "source": "Graphisoft Insights Japan",
+    "pubDate": "2026-06-16T01:45:44.000Z",
+    "summary": "",
+    "fetchedAt": "2026-06-16T15:49:27.315Z",
+    "category": "ARCHICAD",
     "categoryHits": [
-      "revit"
+      "graphisoft"
     ],
     "allCategories": [
-      "REVIT"
+      "ARCHICAD",
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
-      "revit"
+      "bim",
+      "graphisoft"
     ],
-    "score": 9.36,
+    "score": 9,
     "freshnessScore": 3
   },
   {
@@ -309,7 +309,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-21T11:36:32.000Z",
     "summary": "Archicadのライブラリパッケージでは、JSON（Mapping Valuesテーブル）を編集することで属性を一括変更できますが、手作業での編集には課題がありました。 この課題に対し、ドイツのパワーユーザーを中心に改善が進められ、Community内でのコラボレーションを経て、AIを活用したブラウザベースのツールとして公開されています。これにより、より直感的にライブラリ属性をカスタマイズすることが可能となりました。 なお、本ツールはGraphisoftの公式製品ではなく、日本語には対応しておらず、サポートやアップデートの対象外となります。本記事は、AIも活用したユーザー同士のコミュニケーションから生まれた事例としてご紹介するものです。 詳細は原文（英語）のポストをご参照ください。",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.316Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -328,28 +328,27 @@
     "freshnessScore": 0
   },
   {
-    "title": "USERFEST2026 エントリー開始しています！",
-    "link": "https://community.graphisoft.com/t5/Graphisoft-Insights/USERFEST2026-%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC%E9%96%8B%E5%A7%8B%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99/ba-p/699703",
-    "source": "Graphisoft Insights Japan",
-    "pubDate": "2026-04-16T05:28:55.000Z",
-    "summary": "今年は東京（浜松町）開催！ 開催まであと2か月を切りました！エントリーも始まっていますので、過去に参加された方も、初めましてな方も、ぜひご参加ください！ 開催日時：2026年6月12日（金） 11：00開場 12：00スタート 会 場：東京都立産業貿易センター「浜松町館」5F参 加 費 ：無料 （懇親会は6,000円を予定しています） 申込締切：2026年6月2日 参加申し込みや、セッションの内容など、USERFEST2026特集ページをチェックしてください！※社内申請に使えるパンフレットもご用意しています！USERFEST2026特集ページ 初心者から上級者まで、設計、施工、AI、ビジュアライズなどさまざまなテーマでArchicadを語るスペシャルなイチニチとなります！なにより共通言語＝Archicadで語り合える仲間とたくさん出会えます！みなさんのご参加をお待ちしています！",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
-    "category": "ARCHICAD",
+    "title": "Neural CAD AI foundational models",
+    "link": "https://aecmag.com/ai/neural-cad-ai-foundational-models",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-16T15:00:48.000Z",
+    "summary": "Autodesk's Mike Haley takes a closer look at what Autodesk is calling the next stage in 3D design The post Neural CAD AI foundational models appeared first on AEC Magazine.",
+    "fetchedAt": "2026-06-16T15:49:31.266Z",
+    "category": "BIM_ECOSYSTEM",
     "categoryHits": [
-      "archicad",
-      "graphisoft"
+      "aec"
     ],
     "allCategories": [
-      "ARCHICAD",
+      "BIM_ECOSYSTEM",
       "AI_DX"
     ],
     "keywordHits": [
-      "archicad",
-      "graphisoft",
+      "aec",
+      "autodesk",
       "ai"
     ],
     "score": 9,
-    "freshnessScore": 0
+    "freshnessScore": 3
   },
   {
     "title": "Procore CDE lays foundation for agentic AI",
@@ -357,7 +356,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-01T10:12:41.000Z",
     "summary": "Datagrid embedded directly into Procore to move AI beyond surfacing information and toward executing work, from approved design to handover. Procore has launched a connected Common Data Environment (CDE) that brings together project data, workflows, BIM models, and asset information in a single environment — connecting the structured datasets that AI needs to reason across The post Procore CDE lays foundation for agentic AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
+    "fetchedAt": "2026-06-16T15:49:31.267Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -384,7 +383,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-06-03T05:01:44.000Z",
     "summary": "Archicad 29 ライブラリアップデート 2 のリリースをお知らせいたします。 本アップデートでは、ドアおよび窓の図面表現の柔軟性向上、各地域向けワークフローの効率化、MEP 配管機能の拡張に重点を置いています。 主な変更点は以下のとおりです。 INT および SWE ライブラリ向け MVO ドア／窓の開口線上書きInternational および Swedish ライブラリにおいて、ドアおよび窓の開口線コントロールが大幅に拡張されました。ユーザーは、個々の障子や扉に対して 5 種類の開口線タイプを割り当てられるようになり、テラスドア、固定袖、複数障子の窓など、複雑な構成に対してより正確な図面表現が可能になります。新しいワークフローでは、MVO による一元的なコントロール、追加の軸線オプション、複数障子要素に対する統一編集機能の改善も導入されています。 INT および SWE のドア／窓設定ダイアログの再設計「開口タイプと角度」のインターフェースが再構成され、すべてのドアおよび窓タイプにおいて、より明確で一貫性のある編集操作ができるようになりました。更新されたダイアログでは、一度に 1 つの障子に焦点を当てる構成となっており、開口設定をより理解しやすく、管理しやすくするとともに、全体的な使いやすさが向上しています。 手洗い器およびシンク向け MEP サイフォン対応Plumbing Fixtures and Bathroom ライブラリパッケージに、新しいサイフォンオブジェクトが追加されました。このオブジェクトは単体のオブジェクトとしても、対応する衛生器具要素内の統合コンポーネントとしても使用できます。新機能には、調整可能なサイフォン接続設定、編集可能なホットスポット、MEP システムとの統合強化が含まれており、より詳細で現実的な配管表現をサポートします。 日本語ライブラリの不具合修正本アップデートでは、日本語ライブラリ部品に関する一連の修正も提供されます。平面図、断面図、立面図でのドア、窓、ラベルに関する表示および表現上の問題が解決されています。 インストーラーは、関連アップデートページ（現在は英文表記）から入手できます。詳細については、リリースノート（現在は英文）をご確認ください。※英文表記のものは日本語化されたらこちらのリンクを更新します。 よろしくお願いいたします。 Magdolna MarosváriManager, Product Management",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.315Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -406,7 +405,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-06-03T02:59:38.000Z",
     "summary": "「今月のヒント」は、インターナショナルのコミュニティで毎月公開されている「Tip of the Month」を翻訳してお届けしています！Tip of the Month（今月のヒント） は、インターナショナルのコミュニティで投稿されているものから、モデレータメンバーがよいTips! と選んでいるものです。海外のユーザーの使い方が、日本のユーザーのみなさんにもヒントになるのでは？と思っています。※原稿内容はオリジナルページに合わせていますが、できるだけインターフェイスの画像は、Archicad日本語版にしています。 Archicadで、同じグラフィックや注記を複数のレイアウトに配置する場合は、マスタレイアウトを使用するのが最適です。繰り返し使用するコンテンツを一元管理でき、更新も簡単になります。一方で、同じ要素をシートごとに異なる位置に表示したい場合は、ワークシートをもとにした図面を使用すると、柔軟に対応でき、コンテンツの管理もしやすくなります。 今月のTipsでは、@Yukari Yamamoto さんからの質問と、@vlahtinen さんによる実践的な説明をもとに、この方法を効果的に活用する手順をご紹介します。 課題 凡例、図表、方位記号、安全に関する注記、QRコードなど、複数のレイアウトで再利用したいグラフィックがあるとします。ただし、それぞれのレイアウトで配置位置を変える必要があります。 すべてのシートで同じ位置に配置する場合は、マスタレイアウトを使用するのが推奨されます。一方、レイアウトごとに配置位置が異なる場合は、ワークシートをもとにした図面を使用することで、各シート上での配置を個別に調整できます。 解決方法 専用のワークシートにコンテンツを一度だけ作成し、それをオーガナイザから図面としてレイアウトに配置します。その後、レイアウトブック内で追加のレイアウトへコピーします。 配置された各図面は同じワークシートを参照しているため、元のワークシートを一度編集するだけで、すべてのレイアウトに自動的に反映されます。 Step 1：ワークシートを作成し、共通コンテンツを追加する プロジェクト一覧の「ワークシート」で、「新規ワークシート」を作成します。名前は、「凡例」「図面注記」「防火安全注記」など、内容がわかりやすいものにします。 ワークシートを開き、再利用したい内容を作図または貼り付けます。対象となるものは、テキスト、シンボル、図表、スケールバー、矢印、ロゴ、QRコードなどです。これで、このコンテンツは1か所だけに存在する状態になります。 独立ワークシートに配置された方位記号 Step 2：ワークシートのビューを保存する ワークシートを開いた状態で、ナビゲータ内のワークシートを右クリックし、「現在のビューを保存」を選択します。 これでワークシートがビュー一覧に表示され、レイアウトに配置できる状態になります。 Step 3：最初のレイアウトにワークシートを配置する オーガナイザを開き、片側をビュー一覧、もう片側をレイアウトブックに設定します。 ビュー一覧から対象のワークシートビューを目的のレイアウトへドラッグし、そのシート上で配置したい位置に図面として配置します。 Step 4：追加のレイアウトへ図面をコピーする レイアウトブック（オーガナイザまたはナビゲータ）で、すでにワークシート図面が配置されているレイアウトを見つけ、そのレイアウトのコンテンツリスト内で対象の図面を選択します。 macOSではOptionキー、WindowsではCtrlキーを押しながら、その図面を追加したい各レイアウトへドラッグします。 コピーされた図面は、元の図面と同じ位置に配置されます。必要に応じて、各レイアウト上でそのシートに合う位置へ移動してください。 💡 コンテンツをすべてのレイアウトで同じ位置に表示したい場合は、マスタレイアウトの使用を検討してください。その場合は、マスタレイアウトの方が効率的です。 結果 元のワークシートを編集すると、凡例の更新、注記の変更、図表の調整などが、ワークシート図面を含むすべてのレイアウトに自動的に反映されます。 管理する元データは1つだけで済み、同時に各シート上では、それぞれのレイアウトに最適な位置へ自由に配置できます。 ご存じでしたか？ワークシートの便利な活用方法 ワークシートは、今回のような使い方以外にも、Archicadのワークフローをよりスムーズにするさまざまな用途に活用できます。 プロジェクト全体で使用する凡例やシンボルドア・窓の凡例、材料キー、防火安全シンボル、表記キーなどを保存できます。一度編集すれば、配置されているすべての場所に反映されます。 整理された2D詳細作図スペース接合部詳細、注釈、設計バリエーションなどを、平面図や断面図を煩雑にすることなく、モデルとは独立して作成できます。 レビューとコーディネーションスクリーンショットや図面を集め、コメントやマークアップを追加して社内調整に使用できます。制作図面とは分けて管理できます。 オフィステンプレート用の保管場所共有テンプレート内に、標準注記、QAチェックリスト、タイトル用グラフィック、再利用可能なコンテンツなどを保存しておくことで、チームメンバーが新規プロジェクトにドラッグして利用できます。 プロジェクト内ドキュメントレイヤーの使い方、線幅の例、モデリングガイドラインなどを保存し、新しいチームメンバーがプロジェクトファイル内で参照できるようにできます。 ぜひ試してみて、使ってみた感想をお知らせください。こちらが元のフォーラムディスカッションへのリンクです。@vlahtinen さんの解決方法に、ぜひいいね！を送ってください。 日々の課題に役立つ便利な解決方法や、お気に入りのTipsはありますか？ぜひコミュニティで共有してください。Insightsブログで紹介されるかもしれません。",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.315Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -428,7 +427,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-05-25T01:31:06.000Z",
     "summary": "",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.316Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -450,7 +449,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-05-19T07:33:25.000Z",
     "summary": "Archicad 28.4.0 Update（7006、7007）が、Full版およびSolo版の全言語向けに利用可能となりましたことをお知らせします。インストーラーは弊社Webサイトのダウンロードページ内の「アップデート」セクションより入手いただけます。 今回のアップデートでは、Preview版とFinal版の間でいくつか変更が行われたため、ビルド番号が若干異なっています。ただし、Preview版をインストール済みの場合でも互換性の問題は発生しません。Archicad 28.4.0 Update Final版（7006）をインストールするだけで、シームレスに移行できます。※日本語版にはPreview版はありませんので、このバージョンのみとなります。 このアップデートには、以下のようないくつかの重要な不具合修正が含まれています。 macOS 26.4 Tahoe において、入力した値が変更されることなく数値入力が正しく動作するようになりました。 ホットリンクコンテンツ使用時に、Keynote接続が時間経過とともに失われる問題を修正しました。 改善点および修正内容の完全な一覧については、関連するリリースノートページ をご確認ください。 なお、このアップデートはTeamwork互換性に影響するため、同じプロジェクトで作業するすべてのユーザーが同じアップデートバージョンを使用する必要があります。 自動アップデート確認機能を有効にしているユーザーには、本リリースの通知が表示されます。 Teamwork互換性にご注意のうえ、この重要なアップデートをインストールされることを推奨します。 本リリースをもって、Archicad 28 は予定されていた最終アップデートに到達しました。今後、重大な問題が確認された場合には、それに対応するHotfixをリリースする可能性があります。 ご質問やフィードバックがございましたら、ぜひお知らせください。 Graphisoft Customer Support",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.316Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -472,7 +471,7 @@
     "source": "Graphisoft Insights Japan",
     "pubDate": "2026-04-16T05:42:09.000Z",
     "summary": "ここ数か月、多くの皆さまから「クラウドライセンスの障害が日々の業務に大きな支障を与えている」という声をいただいていました。私たちはそのご意見を真摯に受け止め、グラフィソフトでは、クラウドライセンスの障害時にも業務に支障が出ない環境の実現に取り組んできました。今回、Archicad 29.1.0 および BIMcloud SaaS 2026年4月リリースにおいて、クラウドライセンス機能を強化しました。 これにより、万が一クラウドライセンスサービスに障害が発生した場合でも、すでに当該コンピュータで有効なクラウドライセンスを取得していれば、Archicadでの作業を中断することなく継続できます。 また、最新バージョンをご利用いただくことで、本機能は自動的に有効となります。 私たちは、クラウドサービスの信頼性および耐障害性の向上に継続的に取り組んでおり、今回の改善はその重要な一歩です。本機能は、一時的なライセンスサービスの停止に対応し、短時間の障害による影響を最小限に抑えることを目的としています。 今後とも、皆さまからの貴重なフィードバックをよろしくお願いいたします。 Graphisoft カスタマーサポートチーム",
-    "fetchedAt": "2026-06-13T12:20:43.695Z",
+    "fetchedAt": "2026-06-16T15:49:27.316Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -489,12 +488,32 @@
     "freshnessScore": 0
   },
   {
+    "title": "Christina Hvid Steps Down from buildingSMART International Board of Directors",
+    "link": "https://www.buildingsmart.org/christina-hvid-resigned-from-the-board",
+    "source": "buildingSMART International",
+    "pubDate": "2026-06-16T09:56:56.000Z",
+    "summary": "London, U.K. – June 9th, 2026 — buildingSMART International (bSI) announces that Christina Hvid resigned from the Board of Directors on 9 June 2026. We extend our sincere thanks to Christina… The post Christina Hvid Steps Down from buildingSMART International Board of Directors appeared first on buildingSMART International.",
+    "fetchedAt": "2026-06-16T15:49:30.244Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "allCategories": [
+      "IFC"
+    ],
+    "keywordHits": [
+      "buildingsmart"
+    ],
+    "score": 8,
+    "freshnessScore": 3
+  },
+  {
     "title": "AEC Magazine May / June 2026",
     "link": "https://aecmag.com/technology/aec-magazine-may-june-2026",
     "source": "AEC Magazine",
     "pubDate": "2026-04-27T16:00:34.000Z",
     "summary": "We put the spotlight on construction, explore AI in MEP design and the limitations of Agentic BIM The post AEC Magazine May / June 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
+    "fetchedAt": "2026-06-16T15:49:31.267Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -520,7 +539,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-10T10:06:51.000Z",
     "summary": "Bluebeam Max subscription adds automation, intelligent markups and AI-powered review tools The post Bluebeam brings AI-powered workflows to Revu appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
+    "fetchedAt": "2026-06-16T15:49:31.266Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -539,32 +558,12 @@
     "freshnessScore": 1
   },
   {
-    "title": "Herzog & de Meuron to revitalise communist-era Palace of Congresses in Tirana",
-    "link": "https://www.dezeen.com/2026/06/10/herzog-de-meuron-palace-congresses-tirana",
-    "source": "Dezeen",
-    "pubDate": "2026-06-10T09:45:25.000Z",
-    "summary": "Swiss architecture studio Herzog & de Meuron has revealed plans to update the Palace of Congresses concert venue in Tirana, Albania, with a 260-metre-tall skyscraper. Herzog & de Meuron will oversee the renovation of the 40-year-old concert venue's existing performance spaces, while introducing a mixed-use office tower and a public plaza. The studio's proposal seeks The post Herzog & de Meuron to revitalise communist-era Palace of Congresses in Tirana appeared first on Dezeen.",
-    "fetchedAt": "2026-06-13T12:20:44.117Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT"
-    ],
-    "keywordHits": [
-      "revit"
-    ],
-    "score": 7.02,
-    "freshnessScore": 1
-  },
-  {
     "title": "Suffolk Technologies invests in Speckle",
     "link": "https://aecmag.com/collaboration/suffolk-technologies-invests-in-speckle",
     "source": "AEC Magazine",
     "pubDate": "2026-04-22T09:59:15.000Z",
     "summary": "Construction-focused VC firm aims to normalise BIM data for AI and analytics pipelines The post Suffolk Technologies invests in Speckle appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
+    "fetchedAt": "2026-06-16T15:49:31.267Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -589,7 +588,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-25T05:52:20.000Z",
     "summary": "Hvakr provides further evidence that discipline-specific AI is landing in engineering software faster than it is in mainstream BIM The post HVAKR: integrated AI HVAC design appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
+    "fetchedAt": "2026-06-16T15:49:31.267Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -609,33 +608,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "nima and DOWG to bridge ‘Project-to-Operations’ data gap",
-    "link": "https://aecmag.com/operations/nima-and-dowg-to-bridge-project-to-operations-data-gap",
-    "source": "AEC Magazine",
-    "pubDate": "2026-06-12T05:49:50.000Z",
-    "summary": "Collaboration aims to ensure greater data interoperability across the entire lifecycle for the UK’s complex estates The post nima and DOWG to bridge ‘Project-to-Operations’ data gap appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "aec",
-      "interoperability"
-    ],
-    "score": 6.3,
-    "freshnessScore": 2
-  },
-  {
     "title": "Autodesk buys MaintainX for $3.6bn",
     "link": "https://aecmag.com/operations/autodesk-buys-maintainx-for-3-6bn",
     "source": "AEC Magazine",
     "pubDate": "2026-05-31T12:23:55.000Z",
     "summary": "Autodesk pays record money to make its AI story load-bearing The post Autodesk buys MaintainX for $3.6bn appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
+    "fetchedAt": "2026-06-16T15:49:31.267Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -658,7 +636,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-28T06:00:19.000Z",
     "summary": "A Google research paper provides the framework for making agentic BIM work – but also exposes a yawning gap The post Agentic BIM’s missing infrastructure appeared first on AEC Magazine.",
-    "fetchedAt": "2026-06-13T12:20:48.072Z",
+    "fetchedAt": "2026-06-16T15:49:31.267Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -677,27 +655,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "Autodesk’s Built to Move docuseries wins at Tribeca X",
-    "link": "https://adsknews.autodesk.com/en/news/autodesks-built-to-move-docuseries-wins-at-tribeca-x",
-    "source": "Autodesk News",
-    "pubDate": "2026-06-12T17:03:01.000Z",
-    "summary": "The Autodesk docuseries follows Mike Schultz, BioDapt, and adaptive sports innovation.",
-    "fetchedAt": "2026-06-13T12:20:45.860Z",
-    "category": "OTHER",
-    "categoryHits": [],
-    "keywordHits": [
-      "autodesk"
-    ],
-    "score": 6,
-    "freshnessScore": 3
-  },
-  {
     "title": "Exploring early generative AI workflows with Building Layout Explorer in Autodesk Forma",
     "link": "https://adsknews.autodesk.com/en/news/building-layout-explorer-in-autodesk-forma",
     "source": "Autodesk News",
     "pubDate": "2026-06-02T17:48:16.000Z",
     "summary": "Experimental feature helps teams generate and evaluate floor plan options.",
-    "fetchedAt": "2026-06-13T12:20:45.860Z",
+    "fetchedAt": "2026-06-16T15:49:29.797Z",
     "category": "AI_DX",
     "categoryHits": [
       "ai",
@@ -718,7 +681,7 @@
   {
     "title": "[Nemetschek] Nemetschek And Its Brand Graphisoft Unveil Next Design Intelligence Strategy Phase Aia",
     "link": "https://www.nemetschek.com/en/news-media/nemetschek-and-its-brand-graphisoft-unveil-next-design-intelligence-strategy-phase-aia",
-    "pubDate": "2026-06-13T12:20:55.872Z",
+    "pubDate": "2026-06-16T15:49:38.433Z",
     "summary": "Nemetschek And Its Brand Graphisoft Unveil Next Design Intelligence Strategy Phase Aia",
     "source": "Nemetschek Newsroom",
     "category": "ARCHICAD",

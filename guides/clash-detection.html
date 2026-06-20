@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archicad国内最大級イベント「USERFEST2026」満席→再開、6月開催まで10日 | AEC News Japan</title>
-  <meta name="description" content="ArchicadはGraphisoftが開発する建築設計用BIMソフトウェアで、日本国内でも設計事務所や大手ゼネコンを中心に導入が進んでいます。国土交通省のBIM/CIMロードマップ推進に伴い、国内でもBIM活用への関心が急速に高まっており…">
-  <meta name="keywords" content="Archicad国内最大級イベント「USERFEST2026」満席→再開、6月開催まで10日, Archicad, Graphisoft Insights Japan">
-  <link rel="canonical" href="https://aec-news.com/posts/userfest202663-1330.html">
+  <title>干渉チェック（クラッシュ検出）とは | AEC News Japan</title>
+  <meta name="description" content="干渉チェックは、意匠・構造・設備などのBIMモデルを統合し、物理的なぶつかりを施工前に検出する作業です。ハード/ソフトクラッシュの違い、統合モデルとツール、フロントローディングとしての効果、運用のコツを整理した基礎解説です。">
+  <meta name="keywords" content="干渉チェック（クラッシュ検出）とは, CONSTRUCTION_TECH, BIM, 検出精度に関わるモデル詳細度（LOD）はこちら, 多職種統合に強いRevitはこちら, 課題共有の基盤となるCDEはこちら">
+  <link rel="canonical" href="https://aec-news.com/guides/clash-detection.html">
   <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large">
   <meta name="author" content="AEC News Japan 編集部">
-  <meta property="og:title" content="Archicad国内最大級イベント「USERFEST2026」満席→再開、6月開催まで10日 | AEC News Japan">
-  <meta property="og:description" content="ArchicadはGraphisoftが開発する建築設計用BIMソフトウェアで、日本国内でも設計事務所や大手ゼネコンを中心に導入が進んでいます。国土交通省のBIM/CIMロードマップ推進に伴い、国内でもBIM活用への関心が急速に高まっており…">
-  <meta property="og:url" content="https://aec-news.com/posts/userfest202663-1330.html">
+  <meta property="og:title" content="干渉チェック（クラッシュ検出）とは | AEC News Japan">
+  <meta property="og:description" content="干渉チェックは、意匠・構造・設備などのBIMモデルを統合し、物理的なぶつかりを施工前に検出する作業です。ハード/ソフトクラッシュの違い、統合モデルとツール、フロントローディングとしての効果、運用のコツを整理した基礎解説です。">
+  <meta property="og:url" content="https://aec-news.com/guides/clash-detection.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="AEC News Japan">
   <meta property="og:locale" content="ja_JP">
@@ -19,17 +19,15 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Archicad国内最大級イベント「USERFEST2026」満席→再開、6月開催まで10日 | AEC News Japan">
-  <meta name="twitter:description" content="ArchicadはGraphisoftが開発する建築設計用BIMソフトウェアで、日本国内でも設計事務所や大手ゼネコンを中心に導入が進んでいます。国土交通省のBIM/CIMロードマップ推進に伴い、国内でもBIM活用への関心が急速に高まっており…">
+  <meta name="twitter:title" content="干渉チェック（クラッシュ検出）とは | AEC News Japan">
+  <meta name="twitter:description" content="干渉チェックは、意匠・構造・設備などのBIMモデルを統合し、物理的なぶつかりを施工前に検出する作業です。ハード/ソフトクラッシュの違い、統合モデルとツール、フロントローディングとしての効果、運用のコツを整理した基礎解説です。">
   <meta name="twitter:image" content="https://aec-news.com/assets/og-image.png">
-  <meta property="article:published_time" content="2026-06-03T04:38:29.000Z">
-  <meta property="article:modified_time" content="2026-06-03T04:38:29.000Z">
-  <meta property="article:section" content="Archicad">
+  <meta property="article:section" content="基礎解説">
   <link rel="icon" type="image/svg+xml" href="https://aec-news.com/favicon.svg">
   <link rel="icon" type="image/png" sizes="48x48" href="https://aec-news.com/favicon.png">
   <link rel="apple-touch-icon" href="https://aec-news.com/favicon.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Archicad国内最大級イベント「USERFEST2026」満席→再開、6月開催まで10日","description":"ArchicadはGraphisoftが開発する建築設計用BIMソフトウェアで、日本国内でも設計事務所や大手ゼネコンを中心に導入が進んでいます。国土交通省のBIM/CIMロードマップ推進に伴い、国内でもBIM活用への関心が急速に高まっており…","datePublished":"2026-06-03T04:38:29.000Z","dateModified":"2026-06-03T04:38:29.000Z","inLanguage":"ja","url":"https://aec-news.com/posts/userfest202663-1330.html","articleSection":"Archicad","publisher":{"@context":"https://schema.org","@type":"Organization","name":"AEC News Japan","url":"https://aec-news.com/","logo":"https://aec-news.com/assets/logo-mark.png","contactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https://forms.gle/kF7Jf8PErq6S15tu5","availableLanguage":["ja"]}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aec-news.com/posts/userfest202663-1330.html"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://aec-news.com/"},{"@type":"ListItem","position":2,"name":"Archicad","item":"https://aec-news.com/categories/archicad.html"},{"@type":"ListItem","position":3,"name":"Archicad国内最大級イベント「USERFEST2026」満席→再開、6月開催まで10日","item":"https://aec-news.com/posts/userfest202663-1330.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"干渉チェック（クラッシュ検出）とは | AEC News Japan","description":"干渉チェックは、意匠・構造・設備などのBIMモデルを統合し、物理的なぶつかりを施工前に検出する作業です。ハード/ソフトクラッシュの違い、統合モデルとツール、フロントローディングとしての効果、運用のコツを整理した基礎解説です。","url":"https://aec-news.com/guides/clash-detection.html","inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"AEC News Japan","url":"https://aec-news.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://aec-news.com/"},{"@type":"ListItem","position":2,"name":"基礎解説","item":"https://aec-news.com/guides/index.html"},{"@type":"ListItem","position":3,"name":"干渉チェック（クラッシュ検出）とは","item":"https://aec-news.com/guides/clash-detection.html"}]}</script>
   <!-- Google AdSense (一時停止: 審査品質改善中) -->
   <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3218594531291732" crossorigin="anonymous"></script> -->
   <!-- Google Analytics 4 -->
@@ -2030,65 +2028,88 @@
       </a>
     </div>
   </header>
-  <div class="article-hero" style="background: linear-gradient(135deg, rgba(10,22,40,0.87) 0%, rgba(15,42,74,0.83) 100%), url('../assets/Archicad用.png') center/cover no-repeat;">
+  <div class="article-hero" style="background: linear-gradient(135deg, rgba(7,15,30,0.82) 0%, rgba(15,42,74,0.78) 52%, rgba(12,32,60,0.84) 100%), url('../assets/csm_KI_Bau_2a4ab20acc.jpg') center/cover no-repeat;">
     <div class="article-hero-inner">
-      <nav class="article-hero-breadcrumb">
-        <a href="../">ホーム</a> › <a href="../categories/archicad.html">Archicad</a>
-      </nav>
-      <div class="article-hero-tags">
-        <span class="article-hero-tag article-hero-tag--cat">Archicad</span>
-        <span class="article-hero-tag article-hero-tag--source">Graphisoft Insights Japan</span>
-      </div>
-      <h1 class="article-hero-title">Archicad国内最大級イベント「USERFEST2026」満席→再開、6月開催まで10日</h1>
-      <p class="article-hero-summary">ArchicadはGraphisoftが開発する建築設計用BIMソフトウェアで、日本国内でも設計事務所や大手ゼネコンを中心に導入が進んでいます。国土交通省のBIM/CIMロードマップ推進に伴い、国内でもBIM活用への関心が急速に高まっており、Archicadは…</p>
-      <div class="article-hero-meta">
-        <span>📅 2026年6月3日</span>
-        <span class="article-hero-meta-sep">·</span>
-        <span>⏱ 約4分</span>
-        <span class="article-hero-meta-sep">·</span>
-        <span>出典: Graphisoft Insights Japan</span>
-      </div>
+      <div class="article-hero-breadcrumb"><a href="../">ホーム</a><span class="article-hero-meta-sep">·</span><span>基礎解説</span></div>
+      <h1 class="article-hero-title">干渉チェック（クラッシュ検出）とは</h1>
+      <p class="article-hero-summary">干渉チェック（クラッシュ検出）は、意匠・構造・設備のモデルを重ね合わせ、配管が梁を貫く、ダクトと構造がぶつかるといった不具合を施工前に見つける作業です。現場での手戻りを減らすフロントローディングの代表例で、BIM活用の効果が分かりやすい場面です。</p>
       <div class="article-hero-actions">
-        <a class="article-hero-btn article-hero-btn--primary" href="https://community.graphisoft.com/t5/Graphisoft-Insights/USERFEST2026-%E3%81%8A%E3%81%8B%E3%81%92%E3%81%95%E3%81%BE%E3%81%A7%E6%BA%80%E5%B8%AD%E3%81%A8%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F-6-3-13-30-%E7%94%B3%E8%BE%BC%E5%86%8D%E9%96%8B%E4%B8%AD-%E9%96%8B%E5%82%AC%E3%81%8C%E8%BF%91%E3%81%A5%E3%81%84%E3%81%A6%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F/ba-p/703827" target="_blank" rel="noopener noreferrer">原文を読む →</a>
-        <a class="article-hero-btn article-hero-btn--share" href="https://twitter.com/intent/tweet?text=Archicad%E5%9B%BD%E5%86%85%E6%9C%80%E5%A4%A7%E7%B4%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%80%8CUSERFEST2026%E3%80%8D%E6%BA%80%E5%B8%AD%E2%86%92%E5%86%8D%E9%96%8B%E3%80%816%E6%9C%88%E9%96%8B%E5%82%AC%E3%81%BE%E3%81%A710%E6%97%A5&url=https%3A%2F%2Faec-news.com%2Fposts%2Fuserfest202663-1330.html" target="_blank" rel="noopener noreferrer">𝕏 シェア</a>
+        <a class="article-hero-btn article-hero-btn--primary" href="../#guides">基礎解説一覧を見る</a>
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="article-layout">
-      <main class="article-main">
-        <div class="article-body-wrap">
-          <div class="article-body">
-            <h2 class="article-section-h2"><span>背景</span></h2><p><a class="glossary-link" href="../guides/archicad.html">Archicad</a>はGraphisoftが開発する建築設計用<a class="glossary-link" href="../guides/bim.html">BIM</a>ソフトウェアで、日本国内でも設計事務所や大手ゼネコンを中心に導入が進んでいます。国土交通省の<a class="glossary-link" href="../glossary.html#term-mlit-bim-cim">BIM/CIM</a>ロードマップ推進に伴い、国内でもBIM活用への関心が急速に高まっており、Archicadはその中核ツールの一つとして位置付けられています。USERFEST（ユーザーフェスト）は、全国のArchicadユーザーが一堂に集い、最新機能や活用事例を共有する業界内でも有数のイベントとなっています。2026年開催予定のUSERFEST2026は、この高い関心を反映して、予想以上の申し込み需要が集中した形となっています。</p><h2 class="article-section-h2"><span>内容</span></h2><p>USERFEST2026は2026年6月3日に開催予定で、初期段階で定員に達してしまいました。しかし、キャンセルが発生したため、同日13時30分以降、申し込み画面が再度公開されました。本編イベントについては定員に余裕が出た場合のみ追加受け付けが行われる予定で、申し込み方法はPeatixというチケッティングシステムを利用しています。懇親会については現在キャンセル待ちの状態にあります。Graphisoftから配布資料も用意されており、事前配布は開催週中に案内される予定です。参加者向けには、社内の予算申請に利用できるパンフレットも用意されています。</p>
-    <div class="mid-related-card">
-      <span class="mid-related-label">関連記事</span>
-      <a class="mid-related-link" href="../posts/post.html">Archicad新機能：梁柱の躯体シンボル線が自動生成、図面作成が効率化</a>
-      <span class="mid-related-cat">Archicad</span>
-    </div><h2 class="article-section-h2"><span>技術的ポイント</span></h2><p>Archicadは<a class="glossary-link" href="../guides/ifc.html">IFC</a>（Industry Foundation Classes）フォーマットに完全対応しており、他のBIMソフトウェアとのデータ相互運用性が高い点が特徴です。USERFEST2026では、新しいバージョンのArchicadの機能アップデートや、BIM運用における実務的なベストプラクティスが共有される見込みです。特に<a class="glossary-link" href="../glossary.html#term-lod">LOD</a>（Level of Detail）の管理、マルチユーザー環境でのコラボレーション機能、CLOUDWORKSなどのクラウド連携ツール、そしてIFC変換精度の向上などが、国内の実務者にとって重要な情報になると考えられます。また、<a class="glossary-link" href="../guides/revit.html">Revit</a>など競合製品との相互運用性向上も継続的な課題であり、イベントを通じた情報共有が実務ワークフローの効率化につながります。</p><h2 class="article-section-h2"><span>業界への影響</span></h2><p>Archicadの国内ユーザーコミュニティの拡大は、日本の建築設計業界全体のBIM浸透度を示す重要な指標です。満席状態での高い申し込み需要は、国内設計事務所やゼネコンのBIM導入がすでに初期段階を過ぎ、より実践的な運用段階に移行していることを示唆しています。特に、BIM導入による設計生産性の向上、確認申請との連動、施工監理データとの連携など、プロジェクト全体での活用が進んでいることが背景にあると考えられます。グローバルには、Graphisoftは欧州を中心に展開し、<a class="glossary-link" href="../glossary.html#term-digital-twin">デジタルツイン</a>技術やAI統合による次世代BIMソリューションを開発していますが、こうした海外トレンドが日本市場にも波及する重要な接点がUSERFESTになります。</p>
-          </div>
-        </div>
+    <div class="content-with-sidebar" style="padding: 2.5rem 0 4rem;">
+      <main>
+        <section class="guide-intro">
+          <div class="reference-books-label">一言でいうと</div><h2 class="reference-books-title">干渉チェックは、複数分野のBIMモデルを統合し、施工前にぶつかり（干渉）を見つける作業です。</h2>
+          <p class="reference-books-desc">干渉チェック（クラッシュ検出、Clash Detection）は、意匠・構造・設備など複数の専門分野で作られたBIMモデルを一つに統合し、要素どうしが物理的にぶつかっている箇所や、必要なすき間が確保されていない箇所を洗い出す作業です。従来は2次元図面を重ねて目視で確認していましたが、見落としや分野間の調整漏れが起こりやすく、現場で初めて干渉が発覚して手戻りになることが少なくありませんでした。BIMでは3次元の統合モデル上で機械的に干渉を検出できるため、施工前に問題を見つけて解消できます。これはフロントローディング（検討を前倒しして後工程の手戻りを減らす考え方）の代表的な実践であり、BIM導入の効果が比較的分かりやすい領域です。</p>
+        </section>
         
-    <div class="article-editorial">
-      <div class="article-editorial-header">
-        <span class="article-editorial-icon">🇯🇵</span>
-        <span class="article-editorial-title">日本への影響 — AEC News Japan 編集部視点</span>
-      </div>
-      <div class="article-editorial-text"><p>国土交通省は「建築分野のデジタル化戦略」において、2030年までに公共建築全体のBIM活用率を100%に高める目標を掲げており、USERFEST2026のような業界イベントはその推進機関として機能しています。ArchicadはRevitと並び、国内の大規模な建築プロジェクトで採用されることが増えており、特に複雑な意匠設計や構造設計、設備設計の統合モデル構築で存在感を高めています。一方、Graphisoftの日本支社は東京に拠点を置き、国内の代理店やパートナー企業を通じたサポート体制を構築していますが、言語対応やローカライズの課題は依然として存在します。USERFEST2026での事例共有を通じて、これらの課題への解決策や、日本固有の建築基準法への対応、確認申請システム（建築確認DXなど）との連携が検討されると考えられます。また、GLOOBE（国内製BIMソリューション）との競争関係の中で、Archicadが国内実務にどの程度対応できるかが、参加者にとって重要な判断材料になります。</p></div>
-    </div>
+    <section class="guide-section">
+      <h2>特徴</h2>
+      
+      <ul><li>意匠・構造・設備など複数分野のモデルを統合し、3次元で干渉を検出する</li><li>配管と梁、ダクトと構造といった分野をまたぐぶつかりを施工前に把握できる</li><li>目視に頼らず機械的に検出できるため、見落としや調整漏れを減らせる</li><li>検出結果を関係者で共有し、設計段階で解消するフロントローディングを実践できる</li></ul>
+      
+    </section>
+    <section class="guide-section">
+      <h2>他との違い</h2>
+      
+      <ul><li>ハードクラッシュ（実際に要素が重なっている）とソフトクラッシュ（重なってはいないが必要なクリアランスが不足している）は区別して扱います。ソフトクラッシュは点検・施工スペースの確保など運用上の要件に関わります。</li><li>2次元図面の重ね合わせによる目視確認に対し、BIMの干渉チェックは3次元統合モデル上で網羅的・機械的に検出できる点が異なります。</li><li>干渉チェックは「検出」が目的ではなく、検出結果を関係者で調整・解消して初めて価値が出ます。検出件数の多さ自体は成果ではありません。</li></ul>
+      <div class="guide-links"><a href="../guides/lod.html">検出精度に関わるモデル詳細度（LOD）はこちら</a><a href="../guides/revit.html">多職種統合に強いRevitはこちら</a><a href="../guides/cde.html">課題共有の基盤となるCDEはこちら</a></div>
+    </section>
+    <section class="guide-section">
+      <h2>向いている人</h2>
+      
+      <ul><li>意匠・構造・設備の総合調整を担う設計者・BIMマネージャー</li><li>施工前に手戻りを減らしたいゼネコン・施工会社</li><li>設備の納まりやメンテナンススペースを確保したい設備設計者</li><li>BIM導入効果を分かりやすく示したいDX推進担当</li></ul>
+      
+    </section>
+    <section class="guide-section">
+      <h2>実務での使われ方</h2>
+      
+      <ul><li>各分野のモデルを統合し、ツール上で干渉ルールを設定して検出します。</li><li>ハードクラッシュとソフトクラッシュを区別し、優先度をつけて関係者で調整します。</li><li>検出・調整の状況を課題（Issue）として記録し、解消までを管理します。</li><li>設計の節目ごとに干渉チェックを繰り返し、手戻りを前倒しで解消します。</li></ul>
+      
+    </section>
+    <section class="guide-section">
+      <h2>学習の難しさ</h2>
+      <p>干渉チェックの難所は検出そのものより、「大量の検出結果をどう仕分け、誰が・いつまでに解消するか」という調整・運用にあります。ルールを甘くすると重要な干渉を見落とし、厳しくすると膨大な軽微干渉に埋もれます。意味のある干渉に絞り込み、関係者間で責任と期限を決めて解消まで回す体制づくりが成果を左右します。モデルの精度（LOD）が低いと、そもそも正確な検出ができない点にも注意が必要です。</p>
+      
+      
+    </section>
+    <section class="guide-section">
+      <h2>つまずくポイント</h2>
+      
+      <ul><li>検出件数を成果と捉えがちだが、解消されなければ意味がない</li><li>ルール設定が適切でないと、重要な干渉が軽微干渉に埋もれる</li><li>モデルの精度（LOD）が不十分だと、検出結果の信頼性が下がる</li><li>検出後の調整役・責任分担を決めないと、課題が放置されやすい</li></ul>
+      
+    </section>
+    <section class="guide-section">
+      <h2>学習方法</h2>
+      <p>まず「干渉チェック＝統合モデルでぶつかりを前倒しで解消するフロントローディング」という位置づけを押さえ、ハードクラッシュとソフトクラッシュの違いを理解するのが効率的です。次に、検出よりも調整・解消の運用（課題管理・責任分担）に重点を置いて学ぶと、実務に結びつけやすくなります。モデル精度（LOD）との関係もあわせて押さえておくと効果的です。</p>
+      
+      
+    </section>
         
-    <section class="guide-intro">
-      <div class="reference-books-label">理解を深める</div>
-      <h2 class="reference-books-title">この内容を理解するならこちら</h2>
-      <p class="reference-books-desc">ニュースだけではつかみにくい前提知識を、基礎解説でまとめています。まず概念を押さえてから読むと、記事の意味が追いやすくなります。</p>
-      <div class="guide-grid">
+        
+    <section class="guide-section">
+      <h2>検出より「解消の運用」が成果を決める</h2>
+      <p>干渉チェックで価値を生むのは、検出した干渉を関係者で調整し、実際に解消するところまで回す運用です。検出された干渉は、重要度に応じて仕分けし、誰が・いつまでに・どう直すかを決めて管理する必要があります。検出結果を課題（Issue）として記録し、解消状況を追えるようにすると、調整が滞りなく進みます。逆に、検出して満足してしまうと、現場で同じ手戻りが発生します。干渉チェックは「見つける技術」より「解消まで回す運用」が肝心です。</p>
+      
+      
+    </section>
+        
+        
+        
+        <div class="article-related-group">
+          <h2 class="section-title" style="margin-top:0;">あわせて読みたい基礎解説</h2>
+          <div class="guide-grid">
     <article class="guide-card">
       <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/未来の建設技術とBIM.png') center/cover no-repeat;">
         <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
       </div>
       <div class="guide-card-body">
-        <h3 class="guide-card-title"><a href="../guides/bim.html">BIMとは</a></h3>
-        <p class="guide-card-excerpt">BIMモデルとは建物のデータベースであり、そこを中心にしたワークフローへの転換がBIM導入の本質です。CADとの違い、データベースとしての構造、実務DXとの関係を整理した基礎解説です。</p>
-        <a class="guide-card-link" href="../guides/bim.html">詳しく読む →</a>
+        <h3 class="guide-card-title"><a href="../guides/lod.html">LOD（モデル詳細度）とは</a></h3>
+        <p class="guide-card-excerpt">LODは、BIMモデルの各要素がどの程度作り込まれ、どこまで信頼できるかを示す指標です。LOD 100〜500の意味、Level of DetailとLevel of Developmentの違い、発注者要件やBIM実行計画（BEP）での使われ方、つまずきやすい点を整理した基礎解説です。</p>
+        <a class="guide-card-link" href="../guides/lod.html">詳しく読む →</a>
       </div>
     </article>
     <article class="guide-card">
@@ -2102,124 +2123,15 @@
       </div>
     </article>
     <article class="guide-card">
-      <div class="card-thumb" style="background: url('../assets/Archicad用.png') top center/cover no-repeat;">
-        <div class="card-thumb-badge"><span class="badge">Archicad</span></div>
+      <div class="card-thumb" style="background: linear-gradient(135deg, rgba(30,58,95,0.55) 0%, rgba(59,130,246,0.55) 100%), url('../assets/未来の建設技術とBIM.png') center/cover no-repeat;">
+        <div class="card-thumb-badge"><span class="badge">BIM全般</span></div>
       </div>
       <div class="guide-card-body">
-        <h3 class="guide-card-title"><a href="../guides/archicad.html">Archicadとは</a></h3>
-        <p class="guide-card-excerpt">Archicadの特徴、Revitとの違い、設計実務での使われ方、学び方を整理した基礎解説です。</p>
-        <a class="guide-card-link" href="../guides/archicad.html">詳しく読む →</a>
+        <h3 class="guide-card-title"><a href="../guides/cde.html">CDEとは</a></h3>
+        <p class="guide-card-excerpt">CDEの基本、オンラインストレージとの違い、BIMやIFCとの関係、導入時に決めるべきことを実務目線で整理した解説です。</p>
+        <a class="guide-card-link" href="../guides/cde.html">詳しく読む →</a>
       </div>
     </article></div>
-      <div style="margin-top:1rem;">
-        <a class="cta-block-btn" href="../guides/index.html">基礎解説を一覧で見る</a>
-      </div>
-    </section>
-        <div class="article-source-card">
-          <span class="article-source-card-label">元記事・出典</span>
-          <div class="article-source-card-info">
-            <span class="article-source-card-name">Graphisoft Insights Japan</span>
-            <a href="https://community.graphisoft.com/t5/Graphisoft-Insights/USERFEST2026-%E3%81%8A%E3%81%8B%E3%81%92%E3%81%95%E3%81%BE%E3%81%A7%E6%BA%80%E5%B8%AD%E3%81%A8%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F-6-3-13-30-%E7%94%B3%E8%BE%BC%E5%86%8D%E9%96%8B%E4%B8%AD-%E9%96%8B%E5%82%AC%E3%81%8C%E8%BF%91%E3%81%A5%E3%81%84%E3%81%A6%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F/ba-p/703827" target="_blank" rel="noopener noreferrer" class="article-source-card-link">原文を読む →</a>
-          </div>
-        </div>
-        <div class="article-tags-row">
-          <span class="article-tags-label">タグ:</span>
-          <a class="article-tag" href="../categories/archicad.html">Archicad</a>
-          
-          <span class="article-tag article-tag--source">Graphisoft Insights Japan</span>
-        </div>
-        <div class="article-share-footer">
-          <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=Archicad%E5%9B%BD%E5%86%85%E6%9C%80%E5%A4%A7%E7%B4%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%80%8CUSERFEST2026%E3%80%8D%E6%BA%80%E5%B8%AD%E2%86%92%E5%86%8D%E9%96%8B%E3%80%816%E6%9C%88%E9%96%8B%E5%82%AC%E3%81%BE%E3%81%A710%E6%97%A5&url=https%3A%2F%2Faec-news.com%2Fposts%2Fuserfest202663-1330.html" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
-          <a class="back-btn" href="../">← 記事一覧に戻る</a>
-        </div>
-        
-        
-        <div class="article-rail">
-          
-      <div class="article-related-group">
-        <h2 class="section-title" style="margin-top:0;">関連記事</h2>
-        <div class="article-related-grid">
-      <article class="article-related-card">
-        <div class="card-thumb" style="background: url('../assets/Archicad用.png') top center/cover no-repeat;">
-          <div class="card-thumb-badge"><span class="badge">Archicad</span></div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/userfest2026-2.html">Archicad国内最大級ユーザーイベント「USERFEST2026」申込受付中、残席わずか</a>
-          </h3>
-          <p class="card-excerpt">Graphisoftが年1回開催するUSERFESTは、日本国内のArchicadユーザーコミュニティ最大級の集合イベントとして定着しており、設計事務所やゼネコ…</p>
-          <div class="card-footer">
-            <div class="card-meta-info"><span>Graphisoft Insights Japan</span><span class="card-meta-sep">·</span><span>2026年5月28日</span></div>
-            <a class="card-read-more" href="../posts/userfest2026-2.html">続きを読む →</a>
-          </div>
-        </div>
-      </article>
-      <article class="article-related-card">
-        <div class="card-thumb" style="background: url('../assets/Archicad用.png') top center/cover no-repeat;">
-          <div class="card-thumb-badge"><span class="badge">Archicad</span></div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/velux-project-development-guide.html">戸建住宅で BIM の価値を実証、VELUX が実践的開発ガイドを公開</a>
-          </h3>
-          <p class="card-excerpt">BIM（ビルディング・インフォメーション・モデリング）は建設業界で急速に普及していますが、その活用の大部分は病院やオフィスビル、大規模ランドマーク建築に集中して…</p>
-          <div class="card-footer">
-            <div class="card-meta-info"><span>Graphisoft Insights Japan</span><span class="card-meta-sep">·</span><span>2026年5月21日</span></div>
-            <a class="card-read-more" href="../posts/velux-project-development-guide.html">続きを読む →</a>
-          </div>
-        </div>
-      </article></div>
-      </div>
-          
-      <div class="article-related-group">
-        <h2 class="section-title" style="margin-top:0;">同カテゴリの関連記事</h2>
-        <div class="article-related-grid">
-      <article class="article-related-card">
-        <div class="card-thumb" style="background: url('../assets/Archicad用.png') top center/cover no-repeat;">
-          <div class="card-thumb-badge"><span class="badge">Archicad</span></div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/post.html">Archicad新機能：梁柱の躯体シンボル線が自動生成、図面作成が効率化</a>
-          </h3>
-          <p class="card-excerpt">ArchicadはGraphisoftが開発するBIM対応の建築設計ソフトで、日本国内でも設計事務所やゼネコンの基本設計から実施設計段階で広く採用されています。…</p>
-          <div class="card-footer">
-            <div class="card-meta-info"><span>Graphisoft Insights Japan</span><span class="card-meta-sep">·</span><span>2026年6月19日</span></div>
-            <a class="card-read-more" href="../posts/post.html">続きを読む →</a>
-          </div>
-        </div>
-      </article>
-      <article class="article-related-card">
-        <div class="card-thumb" style="background: url('../assets/Archicad用.png') top center/cover no-repeat;">
-          <div class="card-thumb-badge"><span class="badge">Archicad</span></div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/graphisoft-tech84.html">Archicadの最新AIツール、設計現場で本当に使えるのか—8月東京セミナーで実演デモ</a>
-          </h3>
-          <p class="card-excerpt">建築設計業界では、ChatGPTや画像生成AIなど生成系AIの話題が増える一方で、「実際の設計業務にどう活かすのか」という実装面での疑問が設計者の間に根強く残っ…</p>
-          <div class="card-footer">
-            <div class="card-meta-info"><span>Graphisoft Insights Japan</span><span class="card-meta-sep">·</span><span>2026年6月18日</span></div>
-            <a class="card-read-more" href="../posts/graphisoft-tech84.html">続きを読む →</a>
-          </div>
-        </div>
-      </article>
-      <article class="article-related-card">
-        <div class="card-thumb" style="background: url('../assets/Archicad用.png') top center/cover no-repeat;">
-          <div class="card-thumb-badge"><span class="badge">Archicad</span></div>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title" style="font-size:0.95rem;">
-            <a href="../posts/nemetschek-nemetschek-and-its-brand-graphisoft-unveil-next-design-intelligence-s.html">Archicad、Autodesk Formaとの直接連携開始──BIM業界の「壁」が崩れる</a>
-          </h3>
-          <p class="card-excerpt">BIM業界では過去10年間、Autodesk Revitの圧倒的シェアに対して、Graphisoft Archicadが欧州や日本で徐々に存在感を高めてきた。し…</p>
-          <div class="card-footer">
-            <div class="card-meta-info"><span>Nemetschek Newsroom</span><span class="card-meta-sep">·</span><span>2026年6月17日</span></div>
-            <a class="card-read-more" href="../posts/nemetschek-nemetschek-and-its-brand-graphisoft-unveil-next-design-intelligence-s.html">続きを読む →</a>
-          </div>
-        </div>
-      </article></div>
-      </div>
         </div>
       </main>
       
@@ -2306,22 +2218,6 @@
     </aside>
     </div>
   </div>
-  <script>
-    (function() {
-      var fired = false;
-      function onScroll() {
-        if (fired) return;
-        var scrolled = window.scrollY + window.innerHeight;
-        var total = document.documentElement.scrollHeight;
-        if (total > 0 && scrolled / total >= 0.5) {
-          fired = true;
-          if (typeof gtag === 'function') gtag('event', 'scroll_50', { event_category: 'engagement' });
-          window.removeEventListener('scroll', onScroll);
-        }
-      }
-      window.addEventListener('scroll', onScroll, { passive: true });
-    })();
-  </script>
   <footer class="site-footer">
     <div class="footer-nav">
       <a href="../">ホーム</a>

@@ -103,6 +103,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aec-news.com/categories/ai-dx.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aec-news.com/categories/archicad.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -122,12 +128,6 @@
   </url>
   <url>
     <loc>https://aec-news.com/categories/other.html</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://aec-news.com/categories/ai-dx.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -253,7 +253,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/post.html</loc>
+    <loc>https://aec-news.com/posts/autodesk-commits-350-million-to-prepare-the-next-generation-for-the-ai-jobs-that.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/autodeskllmcad.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/post-2.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -349,7 +361,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/post-1.html</loc>
+    <loc>https://aec-news.com/posts/post.html</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -523,7 +535,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/posts/post-2.html</loc>
+    <loc>https://aec-news.com/posts/post-1.html</loc>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

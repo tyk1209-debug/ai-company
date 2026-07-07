@@ -1,11 +1,299 @@
 [
   {
+    "title": "Graphisoft to preview collaboration layer and Archicad–Forma connection",
+    "link": "https://aecmag.com/collaboration/graphisoft-to-preview-collaboration-layer-and-archicad-forma-connection",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-03T08:20:37.000Z",
+    "summary": "Multidisciplinary collaboration environment keeps models, documents, issues and decisions synchronised across teams The post Graphisoft to preview collaboration layer and Archicad–Forma connection appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "archicad",
+      "aec",
+      "graphisoft"
+    ],
+    "score": 11,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Maxon launches Redshift for Revit",
+    "link": "https://aecmag.com/visualisation/maxon-launches-redshift-for-revit",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-10T13:48:41.000Z",
+    "summary": "Real-time arch viz tool said to deliver physically accurate lighting, reflections, shadows, and materials The post Maxon launches Redshift for Revit appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "revit",
+      "aec"
+    ],
+    "score": 9.36,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Procore CDE lays foundation for agentic AI",
+    "link": "https://aecmag.com/collaboration/procore-cde-lays-foundation-for-agentic-ai",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-01T10:12:41.000Z",
+    "summary": "Datagrid embedded directly into Procore to move AI beyond surfacing information and toward executing work, from approved design to handover. Procore has launched a connected Common Data Environment (CDE) that brings together project data, workflows, BIM models, and asset information in a single environment — connecting the structured datasets that AI needs to reason across The post Procore CDE lays foundation for agentic AI appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai",
+      "agent",
+      "workflow"
+    ],
+    "score": 9,
+    "freshnessScore": 0
+  },
+  {
+    "title": "AEC Magazine May / June 2026",
+    "link": "https://aecmag.com/technology/aec-magazine-may-june-2026",
+    "source": "AEC Magazine",
+    "pubDate": "2026-04-27T16:00:34.000Z",
+    "summary": "We put the spotlight on construction, explore AI in MEP design and the limitations of Agentic BIM The post AEC Magazine May / June 2026 appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai",
+      "agent"
+    ],
+    "score": 8,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Suffolk Technologies invests in Speckle",
+    "link": "https://aecmag.com/collaboration/suffolk-technologies-invests-in-speckle",
+    "source": "AEC Magazine",
+    "pubDate": "2026-04-22T09:59:15.000Z",
+    "summary": "Construction-focused VC firm aims to normalise BIM data for AI and analytics pipelines The post Suffolk Technologies invests in Speckle appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai"
+    ],
+    "score": 7,
+    "freshnessScore": 0
+  },
+  {
+    "title": "HVAKR: integrated AI HVAC design",
+    "link": "https://aecmag.com/mep/hvakr-integrated-ai-hvac-design",
+    "source": "AEC Magazine",
+    "pubDate": "2026-04-25T05:52:20.000Z",
+    "summary": "Hvakr provides further evidence that discipline-specific AI is landing in engineering software faster than it is in mainstream BIM The post HVAKR: integrated AI HVAC design appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai"
+    ],
+    "score": 7,
+    "freshnessScore": 0
+  },
+  {
+    "title": "RIB Unify platform launches for construction",
+    "link": "https://aecmag.com/collaboration/rib-unify-ai-native-cloud-platform-launches",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-18T12:44:25.000Z",
+    "summary": "Cloud platform combines document management, process management and estimating with embedded AI The post RIB Unify platform launches for construction appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec",
+      "construction cloud"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "construction cloud",
+      "ai"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Neural CAD AI foundational models",
+    "link": "https://aecmag.com/ai/neural-cad-ai-foundational-models",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-16T15:00:48.000Z",
+    "summary": "Autodesk's Mike Haley takes a closer look at what Autodesk is calling the next stage in 3D design The post Neural CAD AI foundational models appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "ai"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Which workstation is right for your AEC workflow?",
+    "link": "https://aecmag.com/sponsored-content/which-workstation-is-right-for-your-aec-workflow",
+    "source": "AEC Magazine",
+    "pubDate": "2026-07-07T06:04:28.000Z",
+    "summary": "Matching the right machine to the right role matters as much as the hardware itself The post Which workstation is right for your AEC workflow? appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "aec",
+      "workflow"
+    ],
+    "score": 6.3,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Bluebeam brings AI-powered workflows to Revu",
+    "link": "https://aecmag.com/collaboration/bluebeam-brings-ai-powered-workflows-to-revu",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-10T10:06:51.000Z",
+    "summary": "Bluebeam Max subscription adds automation, intelligent markups and AI-powered review tools The post Bluebeam brings AI-powered workflows to Revu appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "automation",
+      "ai",
+      "workflow"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Autodesk buys MaintainX for $3.6bn",
+    "link": "https://aecmag.com/operations/autodesk-buys-maintainx-for-3-6bn",
+    "source": "AEC Magazine",
+    "pubDate": "2026-05-31T12:23:55.000Z",
+    "summary": "Autodesk pays record money to make its AI story load-bearing The post Autodesk buys MaintainX for $3.6bn appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "ai"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Agentic BIM’s missing infrastructure",
+    "link": "https://aecmag.com/ai/agentic-bims-missing-infrastructure",
+    "source": "AEC Magazine",
+    "pubDate": "2026-04-28T06:00:19.000Z",
+    "summary": "A Google research paper provides the framework for making agentic BIM work – but also exposes a yawning gap The post Agentic BIM’s missing infrastructure appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-07T13:12:49.584Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "bim",
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "agent"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0
+  },
+  {
     "title": "Exploring early generative AI workflows with Building Layout Explorer in Autodesk Forma",
     "link": "https://adsknews.autodesk.com/en/news/building-layout-explorer-in-autodesk-forma",
     "source": "Autodesk News",
     "pubDate": "2026-06-02T17:48:16.000Z",
     "summary": "Experimental feature helps teams generate and evaluate floor plan options.",
-    "fetchedAt": "2026-07-04T12:01:44.670Z",
+    "fetchedAt": "2026-07-07T13:12:47.204Z",
     "category": "AI_DX",
     "categoryHits": [
       "ai",

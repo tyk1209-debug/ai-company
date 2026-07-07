@@ -4348,6 +4348,7 @@ function buildExplainerPage(guide, posts) {
       <p class="article-hero-summary">${escape(guide.heroSummary)}</p>
       <div class="article-hero-actions">
         <a class="article-hero-btn article-hero-btn--primary" href="../#guides">基礎解説一覧を見る</a>
+        <a class="article-hero-btn article-hero-btn--share" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(`${guide.title}｜${SITE_NAME}`)}&url=${encodeURIComponent(canonicalUrl)}" target="_blank" rel="noopener noreferrer">𝕏 シェア</a>
       </div>
     </div>
   </div>
@@ -4364,6 +4365,10 @@ function buildExplainerPage(guide, posts) {
         ${buildGuideFaqSection(guide)}
         ${buildExplainerBooks(guide)}
         ${buildGuideNewsCluster(guide, posts)}
+        <div class="article-share-footer">
+          <a class="share-btn-large" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(`${guide.title}｜${SITE_NAME}`)}&url=${encodeURIComponent(canonicalUrl)}" target="_blank" rel="noopener noreferrer">𝕏 でシェアする</a>
+          <a class="back-btn" href="./index.html">← 基礎解説一覧に戻る</a>
+        </div>
         <div class="article-related-group">
           <h2 class="section-title" style="margin-top:0;">あわせて読みたい基礎解説</h2>
           ${buildGuideGrid(relatedGuides, '..', '関連解説')}

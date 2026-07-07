@@ -4057,6 +4057,13 @@ function guideUrl(slug, base = '.') {
   return `${base}/guides/${slug}.html`;
 }
 
+// OGP用: ヒーローと同じカテゴリ画像の絶対URL（SNSシェアカードに表示される）
+function heroOgImageUrl(catKey, item = null) {
+  const visualKey = resolveVisualKey(catKey, item);
+  const img = THUMB_IMAGES[visualKey] || './assets/Getting-real-about-technology-part-1.webp';
+  return encodeURI(img.replace('./assets/', `${SITE_URL}/assets/`));
+}
+
 const {
   buildSidebar,
   buildHomeSidebarWidgets,
@@ -4337,6 +4344,7 @@ function buildExplainerPage(guide, posts) {
   return htmlHead(pageTitle, pageDesc, canonicalUrl, '..', [pageLd, breadcrumbLd, faqLd], {
     ogType: 'article',
     articleSection: '基礎解説',
+    image: heroOgImageUrl(guide.category, guide),
     keywords: [guide.title, guide.category, 'BIM', ...(guide.guideLinks || []).map((item) => item.text)],
   }) +
     htmlHeader('..') +

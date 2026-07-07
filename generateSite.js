@@ -6543,9 +6543,10 @@ ${allUrls.map((u) => `  <url>
   console.log(`[generateSite] Generated sitemap.xml (${allUrls.length} URLs)`);
 
   // Generate robots.txt
+  // 注意: /assets/ をDisallowするとX/Facebook等のカードクローラーがOGP画像を
+  // 取得できずシェアカードに画像が出なくなるため、ブロックしない。
   const robotsTxt = `User-agent: *
 Allow: /
-Disallow: /assets/
 Crawl-delay: 10
 
 Sitemap: ${SITE_URL}/sitemap.xml

@@ -12,8 +12,8 @@ const SITE_URL = 'https://aec-news.com';
 const CONTACT_FORM_URL = 'https://forms.gle/kF7Jf8PErq6S15tu5';
 const CURRENT_YEAR = new Date().getFullYear();
 // AdSense審査モード: 有用性審査中はアフィリエイト枠を全停止し、編集コンテンツのみ表示する。
-// 環境変数 ADSENSE_REVIEW_MODE=false で明示的に解除するまで ON のままにする。
-const ADSENSE_REVIEW_MODE = process.env.ADSENSE_REVIEW_MODE !== 'false';
+// 通常はOFF（アフィリエイト表示）。再審査時は環境変数 ADSENSE_REVIEW_MODE=true で停止する。
+const ADSENSE_REVIEW_MODE = process.env.ADSENSE_REVIEW_MODE === 'true';
 const RECOMMENDED_BOOKS = {
   REVIT: [
     {

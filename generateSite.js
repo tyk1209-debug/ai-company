@@ -1806,7 +1806,7 @@ function htmlHead(title, desc, canonical, base = '.', jsonLd = null, options = {
     .join('');
   const metaDesc = desc && desc.length > 140 ? desc.substring(0, 139) + '...' : (desc || SITE_DESC);
   const ogType = options.ogType || 'website';
-  const imageUrl = options.image || `${SITE_URL}/assets/og-image.png`;
+  const imageUrl = options.image || DEFAULT_OG_IMAGE;
   const robots = options.robots || 'index, follow, max-snippet:150, max-image-preview:large';
   const articleMeta = [
     options.articlePublishedTime
@@ -4057,11 +4057,43 @@ function guideUrl(slug, base = '.') {
   return `${base}/guides/${slug}.html`;
 }
 
+// OGP画像は /og/ 配下にASCIIファイル名で複製して配信する。
+// 旧robots.txtが /assets/ をDisallowしており、X等のクローラーが古いrobotsキャッシュを
+// 参照している間は /assets/ の画像を取得できないため、別パスで回避する。
+const OG_IMAGE_FILES = {
+  SITE: { src: './assets/og-image.png', out: 'site.png' },
+  REVIT: { src: './assets/Cyclone-3DR-BIM-Analysis-1600x856-06.jpg', out: 'revit.jpg' },
+  ARCHICAD: { src: './assets/Archicad用.png', out: 'archicad.png' },
+  BIM_ECOSYSTEM: { src: './assets/未来の建設技術とBIM.png', out: 'bim-ecosystem.png' },
+  BIM_AI: { src: './assets/csm_KI_Bau_2a4ab20acc.jpg', out: 'bim-ai.jpg' },
+  CONSTRUCTION_TECH: { src: './assets/csm_KI_Bau_2a4ab20acc.jpg', out: 'bim-ai.jpg' },
+  AI_DX: { src: './assets/blue-ai-digital-cube.jpg', out: 'ai-dx.jpg' },
+  AI: { src: './assets/blue-ai-digital-cube.jpg', out: 'ai-dx.jpg' },
+  DIGITAL_TWIN: { src: './assets/Arups__Digital_Twins_of_Water_Cube_Pilot_PMlBC2aLE.jpeg', out: 'digital-twin.jpg' },
+  IFC: { src: './assets/blueprint3_smart_cities_Adobe_rt.jpg', out: 'ifc.jpg' },
+  GIS: { src: './assets/blueprint3_smart_cities_Adobe_rt.jpg', out: 'ifc.jpg' },
+  DEFAULT: { src: './assets/Getting-real-about-technology-part-1.webp', out: 'default.webp' },
+};
+
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og/site.png`;
+
+function generateOgImages() {
+  const ogDir = path.join(__dirname, 'og');
+  if (!fs.existsSync(ogDir)) fs.mkdirSync(ogDir);
+  const copied = new Set();
+  for (const { src, out } of Object.values(OG_IMAGE_FILES)) {
+    if (copied.has(out)) continue;
+    fs.copyFileSync(path.join(__dirname, src), path.join(ogDir, out));
+    copied.add(out);
+  }
+  console.log(`[generateSite] Generated og/ images (${copied.size} files)`);
+}
+
 // OGP用: ヒーローと同じカテゴリ画像の絶対URL（SNSシェアカードに表示される）
 function heroOgImageUrl(catKey, item = null) {
   const visualKey = resolveVisualKey(catKey, item);
-  const img = THUMB_IMAGES[visualKey] || './assets/Getting-real-about-technology-part-1.webp';
-  return encodeURI(img.replace('./assets/', `${SITE_URL}/assets/`));
+  const entry = OG_IMAGE_FILES[visualKey] || OG_IMAGE_FILES.DEFAULT;
+  return `${SITE_URL}/og/${entry.out}`;
 }
 
 const {
@@ -6553,6 +6585,8 @@ Sitemap: ${SITE_URL}/sitemap.xml
 `;
   fs.writeFileSync(path.join(__dirname, 'robots.txt'), robotsTxt, 'utf-8');
   console.log('[generateSite] Generated robots.txt');
+
+  generateOgImages();
 
   console.log('[generateSite] Done.');
 }

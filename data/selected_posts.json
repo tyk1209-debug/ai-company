@@ -5,7 +5,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-03T08:20:37.000Z",
     "summary": "Multidisciplinary collaboration environment keeps models, documents, issues and decisions synchronised across teams The post Graphisoft to preview collaboration layer and Archicad–Forma connection appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
+    "fetchedAt": "2026-07-19T11:50:03.933Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -29,7 +29,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-10T13:48:41.000Z",
     "summary": "Real-time arch viz tool said to deliver physically accurate lighting, reflections, shadows, and materials The post Maxon launches Redshift for Revit appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
+    "fetchedAt": "2026-07-19T11:50:03.933Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -51,7 +51,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-01T10:12:41.000Z",
     "summary": "Datagrid embedded directly into Procore to move AI beyond surfacing information and toward executing work, from approved design to handover. Procore, the construction management software provider, has launched a connected Common Data Environment (CDE) that brings together project data, workflows, BIM models, and asset information in a single environment. The platform is designed to keep The post Procore CDE lays foundation for agentic AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
+    "fetchedAt": "2026-07-19T11:50:03.934Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -73,12 +73,32 @@
     "freshnessScore": 0
   },
   {
+    "title": "Ferro Offices / GROUP A",
+    "link": "https://www.archdaily.com/1041959/ferro-offices-group-a",
+    "source": "ArchDaily",
+    "pubDate": "2026-07-17T10:00:00.000Z",
+    "summary": "Ferro Offices is a radical transformation of a former industrial headquarters in Rotterdam's evolving Merwe-Vierhavens (M4H) harbor district. Originally built in 1969, the building was revitalized by architecture studio GROUP A for the Port of Rotterdam into a future-proof multi-tenant workplace for innovators shaping the future port economy. Combining adaptive reuse, contemporary architecture, and sustainable design strategies, Ferro Offices demonstrates how former industrial port buildings can be re-imagined as dynamic environments for innovation, work, and urban life.",
+    "fetchedAt": "2026-07-19T11:50:01.488Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT"
+    ],
+    "keywordHits": [
+      "revit"
+    ],
+    "score": 8.19,
+    "freshnessScore": 2
+  },
+  {
     "title": "AEC Magazine May / June 2026",
     "link": "https://aecmag.com/technology/aec-magazine-may-june-2026",
     "source": "AEC Magazine",
     "pubDate": "2026-04-27T16:00:34.000Z",
     "summary": "We put the spotlight on construction, explore AI in MEP design and the limitations of Agentic BIM The post AEC Magazine May / June 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
+    "fetchedAt": "2026-07-19T11:50:03.934Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -104,7 +124,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-22T09:59:15.000Z",
     "summary": "Construction-focused VC firm aims to normalise BIM data for AI and analytics pipelines The post Suffolk Technologies invests in Speckle appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
+    "fetchedAt": "2026-07-19T11:50:03.934Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -129,7 +149,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-25T05:52:20.000Z",
     "summary": "Hvakr provides further evidence that discipline-specific AI is landing in engineering software faster than it is in mainstream BIM The post HVAKR: integrated AI HVAC design appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.746Z",
+    "fetchedAt": "2026-07-19T11:50:03.934Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -149,34 +169,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "AEC Magazine July / August 2026",
-    "link": "https://aecmag.com/technology/aec-magazine-july-august-2026",
-    "source": "AEC Magazine",
-    "pubDate": "2026-07-16T06:28:45.000Z",
-    "summary": "Everyone assumes the future of AI in AEC belongs to software vendors. But that might not be the case. The post AEC Magazine July / August 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai"
-    ],
-    "score": 6.3,
-    "freshnessScore": 3
-  },
-  {
     "title": "RIB Unify platform launches for construction",
     "link": "https://aecmag.com/collaboration/rib-unify-ai-native-cloud-platform-launches",
     "source": "AEC Magazine",
     "pubDate": "2026-06-18T12:44:25.000Z",
     "summary": "Cloud platform combines document management, process management and estimating with embedded AI The post RIB Unify platform launches for construction appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
+    "fetchedAt": "2026-07-19T11:50:03.933Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec",
@@ -200,7 +198,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-16T15:00:48.000Z",
     "summary": "Autodesk's Mike Haley takes a closer look at what Autodesk is calling the next stage in 3D design The post Neural CAD AI foundational models appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
+    "fetchedAt": "2026-07-19T11:50:03.933Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -223,7 +221,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-10T10:06:51.000Z",
     "summary": "Bluebeam Max subscription adds automation, intelligent markups and AI-powered review tools The post Bluebeam brings AI-powered workflows to Revu appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
+    "fetchedAt": "2026-07-19T11:50:03.933Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -247,7 +245,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-05-31T12:23:55.000Z",
     "summary": "Autodesk pays record money to make its AI story load-bearing The post Autodesk buys MaintainX for $3.6bn appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
+    "fetchedAt": "2026-07-19T11:50:03.934Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -270,7 +268,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-04-28T06:00:19.000Z",
     "summary": "A Google research paper provides the framework for making agentic BIM work – but also exposes a yawning gap The post Agentic BIM’s missing infrastructure appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-16T12:15:06.745Z",
+    "fetchedAt": "2026-07-19T11:50:03.934Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -289,33 +287,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "Autodesk 2026 AI Jobs Report: AI hiring in Design and Make more than doubles as students face a new skills gap",
-    "link": "https://adsknews.autodesk.com/en/news/2026-ai-jobs-report",
-    "source": "Autodesk News",
-    "pubDate": "2026-07-13T23:44:27.000Z",
-    "summary": "AI Jobs Report shows an AI confidence gap in Design and Make",
-    "fetchedAt": "2026-07-16T12:15:04.546Z",
-    "category": "AI_DX",
-    "categoryHits": [
-      "ai"
-    ],
-    "allCategories": [
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "autodesk",
-      "ai"
-    ],
-    "score": 6,
-    "freshnessScore": 2
-  },
-  {
     "title": "Exploring early generative AI workflows with Building Layout Explorer in Autodesk Forma",
     "link": "https://adsknews.autodesk.com/en/news/building-layout-explorer-in-autodesk-forma",
     "source": "Autodesk News",
     "pubDate": "2026-06-02T17:48:16.000Z",
     "summary": "Experimental feature helps teams generate and evaluate floor plan options.",
-    "fetchedAt": "2026-07-16T12:15:04.546Z",
+    "fetchedAt": "2026-07-19T11:50:02.268Z",
     "category": "AI_DX",
     "categoryHits": [
       "ai",

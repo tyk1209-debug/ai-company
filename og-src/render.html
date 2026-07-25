@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>OGP画像レンダリング</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0; padding: 24px; }
+  h1 { font-size: 18px; margin-bottom: 12px; }
+  #status { font-size: 14px; margin-bottom: 20px; color: #7dd3fc; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  figure { margin: 0; background: #1e293b; padding: 8px; border-radius: 8px; }
+  img { width: 100%; display: block; border-radius: 4px; }
+  figcaption { font-size: 12px; margin-top: 6px; color: #94a3b8; }
+</style>
+</head>
+<body>
+<h1>OGP画像レンダリング</h1>
+<div id="status">準備中...</div>
+<div class="grid" id="grid"></div>
+
+<script>
+const SCALE = 1;
+const W = 1200, H = 630;
+
+async function svgToPng(name) {
+  const svgText = await (await fetch(`./${name}.svg`)).text();
+  const blob = new Blob([svgText], { type: 'image/svg+xml;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const img = new Image();
+  await new Promise((resolve, reject) => {
+    img.onload = resolve;
+    img.onerror = () => reject(new Error(`load failed: ${name}`));
+    img.src = url;
+  });
+  const canvas = document.createElement('canvas');
+  canvas.width = W * SCALE;
+  canvas.height = H * SCALE;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#0a1020';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  URL.revokeObjectURL(url);
+  return canvas.toDataURL('image/png');
+}
+
+async function run() {
+  const status = document.getElementById('status');
+  const grid = document.getElementById('grid');
+  const names = await (await fetch('./manifest.json')).json();
+  const results = [];
+  for (let i = 0; i < names.length; i++) {
+    const name = names[i];
+    status.textContent = `レンダリング中 ${i + 1}/${names.length}: ${name}`;
+    try {
+      const dataUrl = await svgToPng(name);
+      const res = await fetch('/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, dataUrl }),
+      });
+      const json = await res.json();
+      results.push({ name, ok: !!json.ok });
+      const fig = document.createElement('figure');
+      fig.innerHTML = `<img src="${dataUrl}" alt="${name}"><figcaption>${name}.png</figcaption>`;
+      grid.appendChild(fig);
+    } catch (err) {
+      results.push({ name, ok: false, error: err.message });
+    }
+  }
+  const okCount = results.filter((r) => r.ok).length;
+  status.textContent = `完了: ${okCount}/${names.length} 枚を og/ に保存しました`;
+  window.__renderResults = results;
+  window.__renderDone = true;
+}
+
+run();
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1426"/>
+      <stop offset="0.55" stop-color="#0a1020"/>
+      <stop offset="1" stop-color="#060b16"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.45" r="0.65">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#2dd4bf" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accentBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="0" x2="0" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="60" y1="0" x2="60" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="120" y1="0" x2="120" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="180" y1="0" x2="180" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="240" y1="0" x2="240" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="300" y1="0" x2="300" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="360" y1="0" x2="360" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="420" y1="0" x2="420" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="480" y1="0" x2="480" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="540" y1="0" x2="540" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="660" y1="0" x2="660" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="720" y1="0" x2="720" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="780" y1="0" x2="780" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="840" y1="0" x2="840" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="900" y1="0" x2="900" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="960" y1="0" x2="960" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="1020" y1="0" x2="1020" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="1080" y1="0" x2="1080" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="1140" y1="0" x2="1140" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="1200" y1="0" x2="1200" y2="630" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="0" x2="1200" y2="0" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="60" x2="1200" y2="60" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="120" x2="1200" y2="120" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="180" x2="1200" y2="180" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="240" x2="1200" y2="240" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="300" x2="1200" y2="300" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="360" x2="1200" y2="360" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="480" x2="1200" y2="480" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="540" x2="1200" y2="540" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <line x1="0" y1="600" x2="1200" y2="600" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g><rect x="620" y="130" width="470" height="360" fill="none" stroke="#2dd4bf" stroke-opacity="0.9" stroke-width="3"/>
+<line x1="800" y1="130" x2="800" y2="340" stroke="#2dd4bf" stroke-opacity="0.75" stroke-width="3"/>
+<line x1="620" y1="340" x2="920" y2="340" stroke="#2dd4bf" stroke-opacity="0.75" stroke-width="3"/>
+<line x1="920" y1="250" x2="920" y2="490" stroke="#2dd4bf" stroke-opacity="0.75" stroke-width="3"/>
+<line x1="920" y1="250" x2="1090" y2="250" stroke="#2dd4bf" stroke-opacity="0.75" stroke-width="3"/>
+<path d="M 800 230 A 60 60 0 0 1 860 290" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="2"/>
+<line x1="800" y1="230" x2="800" y2="290" stroke="#0a1020" stroke-width="5"/>
+<path d="M 710 340 A 55 55 0 0 1 655 395" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="2"/>
+<line x1="680" y1="130" x2="730" y2="130" stroke="#9fdcd6" stroke-opacity="0.9" stroke-width="6"/>
+<line x1="870" y1="130" x2="920" y2="130" stroke="#9fdcd6" stroke-opacity="0.9" stroke-width="6"/>
+<line x1="1000" y1="130" x2="1050" y2="130" stroke="#9fdcd6" stroke-opacity="0.9" stroke-width="6"/>
+<line x1="620" y1="96" x2="1090" y2="96" stroke="#8fa3bd" stroke-opacity="0.8" stroke-width="1.4"/>
+<line x1="620" y1="88" x2="620" y2="104" stroke="#8fa3bd" stroke-opacity="0.8" stroke-width="1.4"/>
+<line x1="1090" y1="88" x2="1090" y2="104" stroke="#8fa3bd" stroke-opacity="0.8" stroke-width="1.4"/>
+<text x="855" y="86" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#8fa3bd" letter-spacing="2">12,400</text>
+<line x1="586" y1="130" x2="586" y2="490" stroke="#8fa3bd" stroke-opacity="0.8" stroke-width="1.4"/>
+<text x="576" y="310" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#8fa3bd" letter-spacing="2" transform="rotate(-90 576 310)">9,600</text>
+<line x1="710" y1="60" x2="710" y2="520" stroke="#8fa3bd" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="14 6 2 6"/>
+<circle cx="710" cy="46" r="13" fill="none" stroke="#8fa3bd" stroke-opacity="0.6" stroke-width="1.4"/>
+<line x1="1010" y1="60" x2="1010" y2="520" stroke="#8fa3bd" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="14 6 2 6"/>
+<circle cx="1010" cy="46" r="13" fill="none" stroke="#8fa3bd" stroke-opacity="0.6" stroke-width="1.4"/>
+<rect x="950" y="300" width="90" height="46" rx="4" fill="#2dd4bf" fill-opacity="0.16" stroke="#2dd4bf" stroke-opacity="0.4" stroke-width="1.5"/>
+<rect x="660" y="390" width="120" height="60" rx="4" fill="#2dd4bf" fill-opacity="0.16" stroke="#2dd4bf" stroke-opacity="0.4" stroke-width="1.5"/></g>
+  
+  <g>
+    <rect x="64" y="72" width="8" height="34" rx="2" fill="url(#accentBar)"/>
+    <text x="92" y="99" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="6" fill="#e6ecf5">ARCHICAD</text>
+  </g>
+  <g>
+    <text x="66" y="566" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1" fill="#f3f6fb">AEC News Japan</text>
+    <text x="66" y="596" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" letter-spacing="3" fill="#8fa3bd">BIM &#183; AEC &#183; CONSTRUCTION DX</text>
+  </g>
+  <rect x="0" y="624" width="1200" height="6" fill="url(#accentBar)"/>
+</svg>

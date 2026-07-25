@@ -4077,6 +4077,24 @@ const OG_IMAGE_FILES = {
 
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og/site.png`;
 
+// カテゴリごとのOGP画像プール。写真1枚だとシェアカードが全部同じ絵になるため、
+// 自作の作図系ビジュアル（tools/generateOgSvgs.js で生成）を混ぜて記事ごとに出し分ける。
+// 追加/更新手順は docs/OG_IMAGES.md を参照。
+const OG_IMAGE_POOLS = {
+  REVIT: ['revit.jpg', 'revit-2.png', 'revit-3.png'],
+  ARCHICAD: ['archicad.png', 'archicad-2.png', 'archicad-3.png', 'archicad-4.png'],
+  BIM_ECOSYSTEM: ['bim-ecosystem.png', 'bim-ecosystem-2.png', 'bim-ecosystem-3.png', 'bim-ecosystem-4.png'],
+  BIM_AI: ['bim-ai.jpg', 'bim-ai-2.png', 'bim-ai-3.png'],
+  CONSTRUCTION_TECH: ['bim-ai.jpg', 'bim-ai-2.png', 'bim-ai-3.png'],
+  AI_DX: ['ai-dx.jpg', 'ai-dx-2.png', 'ai-dx-3.png'],
+  AI: ['ai-dx.jpg', 'ai-dx-2.png', 'ai-dx-3.png'],
+  DIGITAL_TWIN: ['digital-twin.jpg', 'digital-twin-2.png'],
+  IFC: ['ifc.jpg', 'ifc-2.png'],
+  GIS: ['ifc.jpg', 'ifc-2.png'],
+  GLOOBE: ['gloobe-1.png'],
+  DEFAULT: ['site.png', 'default-2.png', 'default-3.png'],
+};
+
 function generateOgImages() {
   const ogDir = path.join(__dirname, 'og');
   if (!fs.existsSync(ogDir)) fs.mkdirSync(ogDir);
@@ -4087,13 +4105,33 @@ function generateOgImages() {
     copied.add(out);
   }
   console.log(`[generateSite] Generated og/ images (${copied.size} files)`);
+
+  // プール内のファイルが実在するか検証する。欠けたままだとシェアカードが壊れるので早期に気付きたい。
+  const missing = [...new Set(Object.values(OG_IMAGE_POOLS).flat())]
+    .filter((file) => !fs.existsSync(path.join(ogDir, file)));
+  if (missing.length > 0) {
+    console.warn(`[generateSite] WARNING: og/ に存在しない画像がプールに含まれています: ${missing.join(', ')}`);
+  }
 }
 
-// OGP用: ヒーローと同じカテゴリ画像の絶対URL（SNSシェアカードに表示される）
+// slugから決定的にプール内の1枚を選ぶ。同じ記事は常に同じ画像になり、
+// 記事が増えるほどカテゴリ内でばらける。
+function hashString(str) {
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+// OGP用: カテゴリのプールから記事ごとに1枚選んだ絶対URL（SNSシェアカードに表示される）
 function heroOgImageUrl(catKey, item = null) {
   const visualKey = resolveVisualKey(catKey, item);
-  const entry = OG_IMAGE_FILES[visualKey] || OG_IMAGE_FILES.DEFAULT;
-  return `${SITE_URL}/og/${entry.out}`;
+  const pool = OG_IMAGE_POOLS[visualKey] || OG_IMAGE_POOLS.DEFAULT;
+  const seed = item?.slug || item?.titleJa || item?.title || '';
+  const file = pool[hashString(String(seed)) % pool.length];
+  return `${SITE_URL}/og/${file}`;
 }
 
 const {
@@ -5250,6 +5288,7 @@ function buildArticlePage(post, allPosts) {
     inLanguage: 'ja',
     url: shareUrl,
     articleSection: catLabel,
+    image: [heroOgImageUrl(post.category, post)],
     publisher: organizationJsonLd(),
     mainEntityOfPage: { '@type': 'WebPage', '@id': shareUrl },
   };
@@ -5277,6 +5316,7 @@ function buildArticlePage(post, allPosts) {
       articleModifiedTime: isoDate,
       articleSection: catLabel,
       articleTags: post.tags || [],
+      image: heroOgImageUrl(post.category, post),
       keywords: articleKeywords,
     }
   ) +

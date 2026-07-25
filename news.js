@@ -86,12 +86,14 @@ function mergeWithExistingPosts(freshPosts, existingPostsPath) {
 
   const freshLinks = new Set(enrichedFresh.map((p) => (p.link || "").trim().toLowerCase()));
 
-  const preserved = existingPosts.filter((p) => {
-    if (freshLinks.has((p.link || "").trim().toLowerCase())) return false;
-    if (!p.pubDate) return true;
-    const ageDays = (Date.now() - new Date(p.pubDate).getTime()) / (1000 * 60 * 60 * 24);
-    return ageDays <= 180;
-  });
+  // 過去記事は期限で消さない（恒久アーカイブ）。
+  // 以前は180日を超えた記事を posts.json から落としていたが、generateSite.js が
+  // posts.json に無いページを posts/ から削除するため、公開済みURLが404化して
+  // 被リンク・検索流入・回遊導線を失っていた（2026-07-22 に実害を確認）。
+  // メディアとして過去記事はストック資産なので、重複リンク以外は全件維持する。
+  const preserved = existingPosts.filter(
+    (p) => !freshLinks.has((p.link || "").trim().toLowerCase())
+  );
 
   return [...enrichedFresh, ...preserved];
 }

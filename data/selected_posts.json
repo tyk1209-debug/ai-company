@@ -1,37 +1,11 @@
 [
   {
-    "title": "Autodesk’s journey to AI",
-    "link": "https://aecmag.com/cad/autodesks-journey-to-ai",
-    "source": "AEC Magazine",
-    "pubDate": "2026-07-21T11:23:24.000Z",
-    "summary": "Martyn Day examines the company’s emerging AI strategy and what it could mean for the future of BIM and CAD The post Autodesk’s journey to AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
-    "category": "BIM_AI",
-    "categoryHits": [
-      "bim",
-      "ai"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
-    ],
-    "keywordHits": [
-      "bim",
-      "aec",
-      "autodesk",
-      "ai"
-    ],
-    "score": 11,
-    "freshnessScore": 1
-  },
-  {
     "title": "Graphisoft to preview collaboration layer and Archicad–Forma connection",
     "link": "https://aecmag.com/collaboration/graphisoft-to-preview-collaboration-layer-and-archicad-forma-connection",
     "source": "AEC Magazine",
     "pubDate": "2026-06-03T08:20:37.000Z",
     "summary": "Multidisciplinary collaboration environment keeps models, documents, issues and decisions synchronised across teams The post Graphisoft to preview collaboration layer and Archicad–Forma connection appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
+    "fetchedAt": "2026-07-28T12:48:57.999Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -50,12 +24,38 @@
     "freshnessScore": 0
   },
   {
+    "title": "Autodesk’s journey to AI",
+    "link": "https://aecmag.com/cad/autodesks-journey-to-ai",
+    "source": "AEC Magazine",
+    "pubDate": "2026-07-21T11:23:24.000Z",
+    "summary": "Martyn Day examines the company’s emerging AI strategy and what it could mean for the future of BIM and CAD The post Autodesk’s journey to AI appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-28T12:48:57.998Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "autodesk",
+      "ai"
+    ],
+    "score": 10,
+    "freshnessScore": 0
+  },
+  {
     "title": "Maxon launches Redshift for Revit",
     "link": "https://aecmag.com/visualisation/maxon-launches-redshift-for-revit",
     "source": "AEC Magazine",
     "pubDate": "2026-06-10T13:48:41.000Z",
     "summary": "Real-time arch viz tool said to deliver physically accurate lighting, reflections, shadows, and materials The post Maxon launches Redshift for Revit appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
+    "fetchedAt": "2026-07-28T12:48:57.999Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -72,30 +72,28 @@
     "freshnessScore": 0
   },
   {
-    "title": "ODA opens its CAD and BIM tools to AI",
-    "link": "https://aecmag.com/cad/oda-opens-its-cad-and-bim-tools-to-ai",
+    "title": "Revizto opens project data to external AI platforms via new API and MCP server",
+    "link": "https://aecmag.com/news/revizto-opens-project-data-to-external-ai-platforms-via-new-api-and-mcp-server",
     "source": "AEC Magazine",
-    "pubDate": "2026-07-21T11:11:07.000Z",
-    "summary": "The Open Design Alliance (ODA) plans to expose its CAD-format SDKs to AI agents through a set of self-hosted MCP servers The post ODA opens its CAD and BIM tools to AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
-    "category": "BIM_AI",
+    "pubDate": "2026-07-28T07:30:13.000Z",
+    "summary": "Developer portal, model API and Model Context Protocol integration allow AECO teams to connect ChatGPT, Claude or Copilot directly to live Revizto data The post Revizto opens project data to external AI platforms via new API and MCP server appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-28T12:48:57.998Z",
+    "category": "BIM_ECOSYSTEM",
     "categoryHits": [
-      "bim",
-      "ai"
+      "aec"
     ],
     "allCategories": [
       "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
+      "AI_DX"
     ],
     "keywordHits": [
-      "bim",
       "aec",
+      "api",
       "ai",
-      "agent"
+      "copilot"
     ],
     "score": 9,
-    "freshnessScore": 1
+    "freshnessScore": 3
   },
   {
     "title": "Procore CDE lays foundation for agentic AI",
@@ -103,7 +101,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-01T10:12:41.000Z",
     "summary": "Datagrid embedded directly into Procore to move AI beyond surfacing information and toward executing work, from approved design to handover. Procore, the construction management software provider, has launched a connected Common Data Environment (CDE) that brings together project data, workflows, BIM models, and asset information in a single environment. The platform is designed to keep The post Procore CDE lays foundation for agentic AI appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
+    "fetchedAt": "2026-07-28T12:48:57.999Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -125,57 +123,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "Hangzhou LOFT49 Regeneration / line+ studio",
-    "link": "https://www.archdaily.com/1148709/hangzhou-loft49-regeneration-line-plus-studio",
-    "source": "ArchDaily",
-    "pubDate": "2026-07-24T00:00:00.000Z",
-    "summary": "Hangzhou LOFT49 Regeneration is located along the Grand Canal in Hangzhou. Its history can be traced back to the Hangzhou Chemical Fiber Factory, founded in 1958, before the compound was transformed in 2003 into one of the city's earliest creative industry parks. Led by Peidong Zhu, co-founder and chief architect of line+ studio, the regeneration project explores a path for revitalizing ageing factory buildings in a high-density urban core, negotiating industrial heritage conservation, urban regeneration, and contemporary lifestyles.",
-    "fetchedAt": "2026-07-25T11:58:10.459Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT"
-    ],
-    "keywordHits": [
-      "revit"
-    ],
-    "score": 8.19,
-    "freshnessScore": 2
-  },
-  {
-    "title": "Symetri BIM Summit 2026",
-    "link": "https://aecmag.com/bim/symetri-bim-summit-2026",
+    "title": "ODA opens its CAD and BIM tools to AI",
+    "link": "https://aecmag.com/cad/oda-opens-its-cad-and-bim-tools-to-ai",
     "source": "AEC Magazine",
-    "pubDate": "2026-07-21T11:21:11.000Z",
-    "summary": "Symetri showcased how customers such as Henning Larsen are building their own AI stacks using its Naviate technology The post Symetri BIM Summit 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
-    "category": "BIM_AI",
-    "categoryHits": [
-      "bim",
-      "ai"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
-    ],
-    "keywordHits": [
-      "bim",
-      "aec",
-      "ai"
-    ],
-    "score": 8,
-    "freshnessScore": 1
-  },
-  {
-    "title": "AEC Magazine May / June 2026",
-    "link": "https://aecmag.com/technology/aec-magazine-may-june-2026",
-    "source": "AEC Magazine",
-    "pubDate": "2026-04-27T16:00:34.000Z",
-    "summary": "We put the spotlight on construction, explore AI in MEP design and the limitations of Agentic BIM The post AEC Magazine May / June 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
+    "pubDate": "2026-07-21T11:11:07.000Z",
+    "summary": "The Open Design Alliance (ODA) plans to expose its CAD-format SDKs to AI agents through a set of self-hosted MCP servers The post ODA opens its CAD and BIM tools to AI appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-28T12:48:57.999Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -196,48 +149,29 @@
     "freshnessScore": 0
   },
   {
-    "title": "Dassault Systèmes’ bet on construction as manufacturing",
-    "link": "https://aecmag.com/digital-fabrication/dassault-systemes-bet-on-construction-as-manufacturing",
+    "title": "Symetri BIM Summit 2026",
+    "link": "https://aecmag.com/bim/symetri-bim-summit-2026",
     "source": "AEC Magazine",
-    "pubDate": "2026-07-21T11:01:00.000Z",
-    "summary": "The next big battle in AEC software may not be about BIM, but who builds the best manufacturing platform for construction The post Dassault Systèmes’ bet on construction as manufacturing appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
-    "category": "BIM_ECOSYSTEM",
+    "pubDate": "2026-07-21T11:21:11.000Z",
+    "summary": "Symetri showcased how customers such as Henning Larsen are building their own AI stacks using its Naviate technology The post Symetri BIM Summit 2026 appeared first on AEC Magazine.",
+    "fetchedAt": "2026-07-28T12:48:57.999Z",
+    "category": "BIM_AI",
     "categoryHits": [
       "bim",
-      "aec"
+      "ai"
     ],
     "allCategories": [
-      "BIM_ECOSYSTEM"
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
     ],
     "keywordHits": [
       "bim",
-      "aec"
+      "aec",
+      "ai"
     ],
-    "score": 6.3,
-    "freshnessScore": 1
-  },
-  {
-    "title": "HighArc pushes ‘buildings as data’ thinking into new areas",
-    "link": "https://aecmag.com/architecture/higharc-pushes-buildings-as-data-thinking-into-new-areas",
-    "source": "AEC Magazine",
-    "pubDate": "2026-07-21T11:07:46.000Z",
-    "summary": "HighArc, the developer of a cloud-based BIM system is building out its next generation business model The post HighArc pushes ‘buildings as data’ thinking into new areas appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "bim",
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "bim",
-      "aec"
-    ],
-    "score": 6.3,
-    "freshnessScore": 1
+    "score": 7,
+    "freshnessScore": 0
   },
   {
     "title": "RIB Unify platform launches for construction",
@@ -245,7 +179,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-18T12:44:25.000Z",
     "summary": "Cloud platform combines document management, process management and estimating with embedded AI The post RIB Unify platform launches for construction appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
+    "fetchedAt": "2026-07-28T12:48:57.999Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec",
@@ -269,7 +203,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-06-16T15:00:48.000Z",
     "summary": "Autodesk's Mike Haley takes a closer look at what Autodesk is calling the next stage in 3D design The post Neural CAD AI foundational models appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
+    "fetchedAt": "2026-07-28T12:48:57.999Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -287,34 +221,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "That Open Company raises the stakes",
-    "link": "https://aecmag.com/software/that-open-company-raises-the-stakes",
-    "source": "AEC Magazine",
-    "pubDate": "2026-07-21T11:13:39.000Z",
-    "summary": "That Open Platform is a cloud BIM OS with authentication, collaboration, versioning and deployment built in The post That Open Company raises the stakes appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "bim",
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "bim",
-      "aec"
-    ],
-    "score": 6.3,
-    "freshnessScore": 1
-  },
-  {
     "title": "Bluebeam brings AI-powered workflows to Revu",
     "link": "https://aecmag.com/collaboration/bluebeam-brings-ai-powered-workflows-to-revu",
     "source": "AEC Magazine",
     "pubDate": "2026-06-10T10:06:51.000Z",
     "summary": "Bluebeam Max subscription adds automation, intelligent markups and AI-powered review tools The post Bluebeam brings AI-powered workflows to Revu appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
+    "fetchedAt": "2026-07-28T12:48:57.999Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -338,7 +250,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-05-31T12:23:55.000Z",
     "summary": "Autodesk pays record money to make its AI story load-bearing The post Autodesk buys MaintainX for $3.6bn appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
+    "fetchedAt": "2026-07-28T12:48:57.999Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -356,87 +268,26 @@
     "freshnessScore": 0
   },
   {
-    "title": "Agentic BIM’s missing infrastructure",
-    "link": "https://aecmag.com/ai/agentic-bims-missing-infrastructure",
-    "source": "AEC Magazine",
-    "pubDate": "2026-04-28T06:00:19.000Z",
-    "summary": "A Google research paper provides the framework for making agentic BIM work – but also exposes a yawning gap The post Agentic BIM’s missing infrastructure appeared first on AEC Magazine.",
-    "fetchedAt": "2026-07-25T11:58:14.158Z",
+    "title": "NVIDIA Harnesses Vera CPU to Speed Up Design of Next-Generation CPUs and GPUs",
+    "link": "https://blogs.nvidia.com/blog/vera-cpu-eda",
+    "source": "NVIDIA Blog",
+    "pubDate": "2026-07-27T00:45:42.000Z",
+    "summary": "The complexity of modern chip design continues to grow as engineering teams work to develop increasingly sophisticated CPUs, GPUs and AI systems. To help meet that challenge, NVIDIA is collaborating with industry leaders Cadence and Synopsys to optimize critical electronic design automation (EDA) applications for the NVIDIA Vera CPU. NVIDIA is now deploying Vera across […]",
+    "fetchedAt": "2026-07-28T12:48:54.092Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
-      "bim",
-      "aec"
+      "design automation"
     ],
     "allCategories": [
       "BIM_ECOSYSTEM",
       "AI_DX"
     ],
     "keywordHits": [
-      "bim",
-      "aec",
-      "agent"
-    ],
-    "score": 6.3,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Autodesk announces new tools to accelerate animation and VFX workflows at SIGGRAPH 2026",
-    "link": "https://adsknews.autodesk.com/en/news/autodesk-siggraph-2026-animation-vfx-tools",
-    "source": "Autodesk News",
-    "pubDate": "2026-07-22T16:18:07.000Z",
-    "summary": "New Maya, 3ds Max, Flow Production Tracking, and Arnold capabilities streamline animation workflows.",
-    "fetchedAt": "2026-07-25T11:58:10.944Z",
-    "category": "OTHER",
-    "categoryHits": [],
-    "keywordHits": [
-      "autodesk",
-      "workflow"
-    ],
-    "score": 6,
-    "freshnessScore": 2
-  },
-  {
-    "title": "How data and AI are transforming manufacturing workflows",
-    "link": "https://adsknews.autodesk.com/en/stories/ai-in-manufacturing-connected-data-fusion",
-    "source": "Autodesk News",
-    "pubDate": "2026-07-20T15:44:05.000Z",
-    "summary": "Manufacturing is entering a new era where AI, connected data, and intelligent workflows are reshaping how products are designed, engineered, and delivered.",
-    "fetchedAt": "2026-07-25T11:58:10.944Z",
-    "category": "AI_DX",
-    "categoryHits": [
-      "ai"
-    ],
-    "allCategories": [
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "autodesk",
-      "ai",
-      "workflow"
-    ],
-    "score": 6,
-    "freshnessScore": 1
-  },
-  {
-    "title": "How AI automation can fit into construction workflows: McKinsey",
-    "link": "https://www.constructiondive.com/news/ai-report-construction-mckinsey-engineering-build-buy/825927",
-    "source": "Construction Dive",
-    "pubDate": "2026-07-22T17:20:00.000Z",
-    "summary": "As artificial intelligence continues to shake up the building industry, choosing how to build versus how to buy solutions is important, said an expert for the consulting firm.",
-    "fetchedAt": "2026-07-25T11:58:09.400Z",
-    "category": "AI_DX",
-    "categoryHits": [
-      "ai"
-    ],
-    "allCategories": [
-      "AI_DX"
-    ],
-    "keywordHits": [
+      "design automation",
       "automation",
-      "ai",
-      "workflow"
+      "ai"
     ],
-    "score": 6,
+    "score": 6.3,
     "freshnessScore": 2
   }
 ]

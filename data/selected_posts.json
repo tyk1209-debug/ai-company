@@ -1,1 +1,290 @@
-[]
+[
+  {
+    "title": "Graphisoft to preview collaboration layer and Archicad–Forma connection",
+    "link": "https://aecmag.com/collaboration/graphisoft-to-preview-collaboration-layer-and-archicad-forma-connection",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-03T08:20:37.000Z",
+    "summary": "Multidisciplinary collaboration environment keeps models, documents, issues and decisions synchronised across teams The post Graphisoft to preview collaboration layer and Archicad–Forma connection appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.008Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
+      "ARCHICAD",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "archicad",
+      "aec",
+      "graphisoft"
+    ],
+    "score": 11,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Autodesk’s journey to AI",
+    "link": "https://aecmag.com/cad/autodesks-journey-to-ai",
+    "source": "AEC Magazine",
+    "pubDate": "2026-07-21T11:23:24.000Z",
+    "summary": "Martyn Day examines the company’s emerging AI strategy and what it could mean for the future of BIM and CAD The post Autodesk’s journey to AI appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.007Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "autodesk",
+      "ai"
+    ],
+    "score": 10,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Maxon launches Redshift for Revit",
+    "link": "https://aecmag.com/visualisation/maxon-launches-redshift-for-revit",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-10T13:48:41.000Z",
+    "summary": "Real-time arch viz tool said to deliver physically accurate lighting, reflections, shadows, and materials The post Maxon launches Redshift for Revit appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.007Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "revit",
+      "aec"
+    ],
+    "score": 9.36,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Luxe Lakes CPI Island / Vari Architects",
+    "link": "https://www.archdaily.com/1018806/luxe-lakes-cpi-island-vari-architects",
+    "source": "ArchDaily",
+    "pubDate": "2026-08-01T02:00:00.000Z",
+    "summary": "The Luxe Lakes CPI Island Commercial Renewal Project is a collection of villa models located on the east side of Luke Island in the \"Luxe Lakes Ecological City\" of Chengdu. More than 20 former Luxe Lakes Villa models have been located on the island. CPI Island needs a revitalized urban renewal and commercial iteration to reset the idle old properties on these islands, activate the connection between waterfront, human habitation, and commerce. Through a series of systematic planning and design, vari architects renovated and expanded ten existing buildings, and designed and built ten new buildings based on the terrain, reconstructing the axis system and spatial relationships of the original site - paying tribute to the past with a new life.",
+    "fetchedAt": "2026-08-01T11:56:45.377Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT"
+    ],
+    "keywordHits": [
+      "revit"
+    ],
+    "score": 9.36,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Procore CDE lays foundation for agentic AI",
+    "link": "https://aecmag.com/collaboration/procore-cde-lays-foundation-for-agentic-ai",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-01T10:12:41.000Z",
+    "summary": "Datagrid embedded directly into Procore to move AI beyond surfacing information and toward executing work, from approved design to handover. Procore, the construction management software provider, has launched a connected Common Data Environment (CDE) that brings together project data, workflows, BIM models, and asset information in a single environment. The platform is designed to keep The post Procore CDE lays foundation for agentic AI appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.008Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai",
+      "agent",
+      "workflow"
+    ],
+    "score": 9,
+    "freshnessScore": 0
+  },
+  {
+    "title": "ODA opens its CAD and BIM tools to AI",
+    "link": "https://aecmag.com/cad/oda-opens-its-cad-and-bim-tools-to-ai",
+    "source": "AEC Magazine",
+    "pubDate": "2026-07-21T11:11:07.000Z",
+    "summary": "The Open Design Alliance (ODA) plans to expose its CAD-format SDKs to AI agents through a set of self-hosted MCP servers The post ODA opens its CAD and BIM tools to AI appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.007Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai",
+      "agent"
+    ],
+    "score": 8,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Revizto opens project data to external AI platforms",
+    "link": "https://aecmag.com/project-management/revizto-opens-project-data-to-external-ai-platforms-via-new-api-and-mcp-server",
+    "source": "AEC Magazine",
+    "pubDate": "2026-07-28T07:30:13.000Z",
+    "summary": "Developer portal, model API and MCP integration allow AECO teams to connect ChatGPT, Claude or Copilot directly to live Revizto data The post Revizto opens project data to external AI platforms appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.007Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "api",
+      "ai",
+      "copilot"
+    ],
+    "score": 7.2,
+    "freshnessScore": 1
+  },
+  {
+    "title": "Symetri BIM Summit 2026",
+    "link": "https://aecmag.com/bim/symetri-bim-summit-2026",
+    "source": "AEC Magazine",
+    "pubDate": "2026-07-21T11:21:11.000Z",
+    "summary": "Symetri showcased how customers such as Henning Larsen are building their own AI stacks using its Naviate technology The post Symetri BIM Summit 2026 appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.007Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai"
+    ],
+    "score": 7,
+    "freshnessScore": 0
+  },
+  {
+    "title": "RIB Unify platform launches for construction",
+    "link": "https://aecmag.com/collaboration/rib-unify-ai-native-cloud-platform-launches",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-18T12:44:25.000Z",
+    "summary": "Cloud platform combines document management, process management and estimating with embedded AI The post RIB Unify platform launches for construction appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.007Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec",
+      "construction cloud"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "construction cloud",
+      "ai"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Neural CAD AI foundational models",
+    "link": "https://aecmag.com/ai/neural-cad-ai-foundational-models",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-16T15:00:48.000Z",
+    "summary": "Autodesk's Mike Haley takes a closer look at what Autodesk is calling the next stage in 3D design The post Neural CAD AI foundational models appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.007Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "ai"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Bluebeam brings AI-powered workflows to Revu",
+    "link": "https://aecmag.com/collaboration/bluebeam-brings-ai-powered-workflows-to-revu",
+    "source": "AEC Magazine",
+    "pubDate": "2026-06-10T10:06:51.000Z",
+    "summary": "Bluebeam Max subscription adds automation, intelligent markups and AI-powered review tools The post Bluebeam brings AI-powered workflows to Revu appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.008Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "automation",
+      "ai",
+      "workflow"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Autodesk buys MaintainX for $3.6bn",
+    "link": "https://aecmag.com/operations/autodesk-buys-maintainx-for-3-6bn",
+    "source": "AEC Magazine",
+    "pubDate": "2026-05-31T12:23:55.000Z",
+    "summary": "Autodesk pays record money to make its AI story load-bearing The post Autodesk buys MaintainX for $3.6bn appeared first on AEC Magazine.",
+    "fetchedAt": "2026-08-01T11:56:51.008Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
+      "ai"
+    ],
+    "score": 6.3,
+    "freshnessScore": 0
+  }
+]

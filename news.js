@@ -29,11 +29,12 @@ const { checkArticles } = require("./hallucination-checker.js");
 const DATA_DIR = path.join(__dirname, "data");
 const MIN_SCORE_SELECTED = 6;
 
-// 更新ペース: 3日おきの実行で1件公開する（= 3日に1件）。
-// 翻訳は2件ぶん回す。relevance判定やハルシネーションチェックで
-// 1件目が落ちても、その回が空振りにならないようにするための予備枠。
-const MAX_NEW_POSTS_PER_RUN = 1;
-const SUMMARIZE_LIMIT = 2;
+// 更新ペース: 3日おきの実行で最大5件。最低ラインは1件。
+// ネタがある回は5件まで出す。無い回は1〜2件でよく、無理に埋めない。
+// 翻訳は上限+1件ぶん回す。relevance判定やハルシネーションチェックで
+// 落ちる分を見込んだ予備枠。
+const MAX_NEW_POSTS_PER_RUN = 5;
+const SUMMARIZE_LIMIT = MAX_NEW_POSTS_PER_RUN + 1;
 const TOP_DISPLAY_COUNT = 10;
 const ENABLE_X_AUTO_POST = false;
 

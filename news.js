@@ -28,6 +28,12 @@ const { checkArticles } = require("./hallucination-checker.js");
 
 const DATA_DIR = path.join(__dirname, "data");
 const MIN_SCORE_SELECTED = 6;
+
+// 更新ペース: 3日おきの実行で1件公開する（= 3日に1件）。
+// 翻訳は2件ぶん回す。relevance判定やハルシネーションチェックで
+// 1件目が落ちても、その回が空振りにならないようにするための予備枠。
+const MAX_NEW_POSTS_PER_RUN = 1;
+const SUMMARIZE_LIMIT = 2;
 const TOP_DISPLAY_COUNT = 10;
 const ENABLE_X_AUTO_POST = false;
 
@@ -303,7 +309,7 @@ async function main() {
     const tb = b.pubDate ? new Date(b.pubDate).getTime() : 0;
     return tb - ta;
   });
-  const summarizedRaw = await summarizeArticles(summarizeQueue, { limit: 20 });
+  const summarizedRaw = await summarizeArticles(summarizeQueue, { limit: SUMMARIZE_LIMIT });
   // 日本語本文を含めてカテゴリを再判定（英語要約では拾えないRevit等を救済）
   const summarized = refineCategories(summarizedRaw);
   saveJson("summarized_news.json", summarized);
@@ -322,7 +328,16 @@ async function main() {
     blocked.forEach((a) => console.log(`  - ${(a.title || "").slice(0, 60)}`));
   }
 
-  const freshPosts = applyAffiliateLinks(generatePosts(passed));
+  // 1回の実行で公開するのは MAX_NEW_POSTS_PER_RUN 件まで。
+  // summarizeQueue は pubDate 降順なので、残るのは常に最も新しい記事。
+  const publishing = passed.slice(0, MAX_NEW_POSTS_PER_RUN);
+  if (passed.length > publishing.length) {
+    console.log(
+      `\n[pace] ${passed.length}件中 ${publishing.length}件を公開（残りは次回以降の候補に戻す）`
+    );
+  }
+
+  const freshPosts = applyAffiliateLinks(generatePosts(publishing));
 
   // Merge with existing posts.json to preserve articles that aged out of RSS feeds
   // 過去記事も日本語本文を含めてカテゴリを再判定（誤分類の是正）

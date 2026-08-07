@@ -159,10 +159,21 @@ feeds → normalize → dedupe → score → summarize → post → generate →
 
 ## KPI
 
-- 記事: 毎日3件
+- 記事: 3日に1件（2026-08-07 にオーナー判断で「毎日3件」から変更）
 - 品質: 400文字以上
-- X投稿: 3件/日
 - パイプライン: 全green
+
+X投稿はKPIから除外（`ENABLE_X_AUTO_POST=false` で完全停止中）。
+
+### 更新ペースを勝手に上げない
+
+量より質を取る方針。以下は変更前に必ず確認すること：
+
+- `.github/workflows/autopilot.yml` の cron（3日おき）
+- `news.js` の `MAX_NEW_POSTS_PER_RUN`（1件）と `SUMMARIZE_LIMIT`（2件）
+
+候補が滞留していても、それは詰まりではなく意図した抑制。
+「バックログが溜まっているから増やす」という判断はしない。
 
 ---
 

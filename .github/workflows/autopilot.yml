@@ -2,9 +2,8 @@ name: AI News Autopilot
 
 on:
   schedule:
-    # 毎日 11:00 UTC = 20:00 JST。
-    # 3日おきではKPI（記事 毎日3件）に構造的に届かないため日次に変更。
-    - cron: '0 11 * * *'
+    # 3日おき 11:00 UTC = 20:00 JST。狙いは「3日に1件」の更新ペース。
+    - cron: '0 11 */3 * *'
   workflow_dispatch:
 
 jobs:

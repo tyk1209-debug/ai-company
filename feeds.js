@@ -18,18 +18,11 @@ module.exports = [
   // ── Graphisoft / Archicad 系 ──────────────────────────────
   {
     name: "Graphisoft Blog",
-    url: "https://blog.graphisoft.com/feed/",
+    // 旧 blog.graphisoft.com は DNS ごと消滅。本体ドメインの feed に移行済み。
+    url: "https://graphisoft.com/feed",
   },
-  {
-    name: "Graphisoft Insights Japan",
-    url: "https://community.graphisoft.com/rss/board?board.id=gs-insights-jp",
-    category: "BIM_ECOSYSTEM",
-  },
-  {
-    name: "BIM Design Japan",
-    url: "https://bim-design.com/feed/",
-    category: "BIM_ECOSYSTEM",
-  },
+  // 削除: Graphisoft Insights Japan（community.graphisoft.com が Cloudflare 判定で常時403）
+  // 削除: BIM Design Japan（https://bim-design.com/feed/ が 404、RSS配信自体を停止）
 
   // ── openBIM / buildingSMART 系 ────────────────────────────
   {
@@ -38,10 +31,7 @@ module.exports = [
   },
 
   // ── AEC / 建設テック専門メディア ─────────────────────────
-  {
-    name: "AECbytes",
-    url: "https://www.aecbytes.com/aecbytes-news-and-reviews-feed.rss",
-  },
+  // 削除: AECbytes（配信URLが全て404、RSS提供終了）
   {
     name: "AEC Magazine",
     url: "https://aecmag.com/feed/",
@@ -51,10 +41,7 @@ module.exports = [
     name: "Construction Dive",
     url: "https://www.constructiondive.com/feeds/news/",
   },
-  {
-    name: "ENR - Engineering News-Record",
-    url: "https://www.enr.com/rss/news",
-  },
+  // 削除: ENR（www.enr.com が Cloudflare 判定で常時403）
   {
     name: "ArchDaily",
     url: "https://www.archdaily.com/feed/",
@@ -95,16 +82,8 @@ module.exports = [
     url: "https://www.graphisoft.com/jp/feed",
     category: "BIM_ECOSYSTEM",
   },
-  {
-    name: "Vectorworks Blog",
-    url: "https://blog.vectorworks.net/rss.xml",
-    category: "BIM_ECOSYSTEM",
-  },
-  {
-    name: "Nemetschek Group",
-    url: "https://www.nemetschek.com/en/feed",
-    category: "BIM_ECOSYSTEM",
-  },
+  // 削除: Vectorworks Blog（rss.xml がリダイレクトループ＋XML不正で解析不能）
+  // 削除: Nemetschek Group（/en/feed はHTMLを返す。scraper.js の Nemetschek Newsroom で取得済み）
   {
     name: "NYKシステムズ（Rebro）",
     url: "https://www.nyk-systems.co.jp/feed/",

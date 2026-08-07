@@ -61,6 +61,40 @@ const SCORE_KEYWORDS = [
 ];
 
 // ─────────────────────────────────────────────────────────────
+// ソース信頼度（ベースライン加点）
+//
+// AEC専門ソースは「その媒体が出している時点でAEC文脈」なので、
+// 英語タイトルにBIM系キーワードが無くても実務価値が高い。
+// キーワード一致だけで判定すると、AEC Magazine や Autodesk の
+// 中核ニュースが軒並み閾値を割って落ちるため、媒体そのものを加点する。
+//
+// 逆に汎用メディア（Dezeen / ArchDaily / NVIDIA / 日経クロステック）は
+// 0点のままにして、キーワードで実力勝負させる。
+// ─────────────────────────────────────────────────────────────
+
+const SOURCE_TRUST = {
+  // 日本のBIM政策・実務に直結（編集方針の最重要軸「日本への影響」）
+  "国土交通省 建築BIM推進会議": 5,
+  "BIMゲート": 5,
+
+  // BIMベンダー・標準化団体の一次情報
+  "Autodesk AEC Blog": 4,
+  "Autodesk News": 4,
+  "Graphisoft Blog": 4,
+  "Graphisoft Japan": 4,
+  "buildingSMART International": 4,
+  "Nemetschek Newsroom": 4,
+
+  // AEC専門メディア
+  "AEC Magazine": 3,
+  "Construction Dive": 3,
+};
+
+function getSourceTrust(source) {
+  return SOURCE_TRUST[(source || "").trim()] || 0;
+}
+
+// ─────────────────────────────────────────────────────────────
 // カテゴリ定義
 // ─────────────────────────────────────────────────────────────
 
@@ -189,17 +223,26 @@ function calcFreshnessScore(pubDate) {
 function scoreArticle(article) {
   const text = getSearchText(article);
 
-  const { score, keywordHits }     = calcKeywordScore(text);
+  const { score: keywordScore, keywordHits } = calcKeywordScore(text);
   const { category, categoryHits, allCategories } = detectCategory(text);
-  const freshnessScore             = calcFreshnessScore(article.pubDate);
+  const sourceScore    = getSourceTrust(article.source);
+  const freshnessScore = calcFreshnessScore(article.pubDate);
 
+  // relevanceScore: 記事そのものの価値。時間が経っても減らない。
+  // score:          掲載順の並べ替え用。新しさのボーナスを含む。
+  //
+  // 以前は freshness 込みの score だけで採否を決めていたため、
+  // 7日で freshness が 0 に落ちた瞬間に良質な記事が閾値割れして
+  // 二度と拾われなくなり、候補が滞留したまま更新が止まっていた。
   return {
     ...article,
     category,
     categoryHits,
     allCategories,
     keywordHits,
-    score:          score + freshnessScore,
+    sourceScore,
+    relevanceScore: keywordScore + sourceScore,
+    score:          keywordScore + sourceScore + freshnessScore,
     freshnessScore,
   };
 }
@@ -209,7 +252,8 @@ function scoreNews(articles, weights = {}) {
     .map(scoreArticle)
     .map((a) => {
       const w = weights[a.category] ?? 1.0;
-      return { ...a, score: Math.round(a.score * w * 100) / 100 };
+      const round = (n) => Math.round(n * w * 100) / 100;
+      return { ...a, score: round(a.score), relevanceScore: round(a.relevanceScore) };
     })
     .sort((a, b) => b.score - a.score);
 }
@@ -276,4 +320,4 @@ function refineCategories(articles) {
   return articles.map(refineCategory);
 }
 
-module.exports = { scoreNews, scoreArticle, refineCategory, refineCategories };
+module.exports = { scoreNews, scoreArticle, refineCategory, refineCategories, SOURCE_TRUST };

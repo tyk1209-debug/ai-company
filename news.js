@@ -31,7 +31,25 @@ const MIN_SCORE_SELECTED = 6;
 const TOP_DISPLAY_COUNT = 10;
 const ENABLE_X_AUTO_POST = false;
 
-const parser = new Parser({ timeout: 12000 });
+// 配信元によって通る UA が割れる。
+//   - Autodesk AEC Blog / Graphisoft: UA無しだと 403（ブラウザUAが必要）
+//   - buildingSMART International:    ブラウザUAだと 403（UA無しが必要）
+// どちらか一方に固定すると必ずどこかが恒常的に0件になるため、
+// ブラウザUA → UA無し の順で試すフォールバック方式にする。
+const FEED_USER_AGENT =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+  "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
+
+const FEED_PARSERS = [
+  new Parser({
+    timeout: 12000,
+    headers: {
+      "User-Agent": FEED_USER_AGENT,
+      Accept: "application/rss+xml, application/xml, text/xml, */*",
+    },
+  }),
+  new Parser({ timeout: 12000 }),
+];
 
 /**
  * Merge freshly fetched posts with the existing posts.json to avoid losing
@@ -48,6 +66,24 @@ function isBrokenRecord(post) {
   const title = (post.titleJa || "").trim();
   const body = (post.bodyJa || "").trim();
   return (!title || title === "undefined") && body.length < 100;
+}
+
+// RSSにはナビゲーションや申込フォーム等の非記事ページが混入する
+// （例: 「問い合わせ完了」「価格表（2022年第2四半期）」「当サイトについて」）。
+// ソース信頼度で加点する以上、こうしたページが翻訳枠を食わないよう先に落とす。
+const NON_ARTICLE_TITLE_PATTERNS = [
+  /^(問い合わせ|お問い合わせ|お問合せ)/,
+  /^(当サイト|このサイト)について/,
+  /^価格表/,
+  /^保護中[:：]/,
+  /(メールフォーム|登録フォーム|申込フォーム)$/,
+  /^(プライバシーポリシー|利用規約|会社概要|サイトマップ)/,
+];
+
+function isNonArticle(article) {
+  const title = (article.title || "").trim();
+  if (!title) return true;
+  return NON_ARTICLE_TITLE_PATTERNS.some((re) => re.test(title));
 }
 
 function mergeWithExistingPosts(freshPosts, existingPostsPath) {
@@ -110,13 +146,19 @@ function saveJson(filename, data) {
 }
 
 async function fetchFeed(feed) {
-  try {
-    const result = await parser.parseURL(feed.url);
-    const articles = normalizeArticles(result.items || [], feed.name);
-    return { ok: true, feed: feed.name, articles };
-  } catch (err) {
-    return { ok: false, feed: feed.name, error: err.message };
+  let lastError = "unknown error";
+
+  for (const feedParser of FEED_PARSERS) {
+    try {
+      const result = await feedParser.parseURL(feed.url);
+      const articles = normalizeArticles(result.items || [], feed.name);
+      return { ok: true, feed: feed.name, articles };
+    } catch (err) {
+      lastError = err.message;
+    }
   }
+
+  return { ok: false, feed: feed.name, error: lastError };
 }
 
 async function fetchAllFeeds() {
@@ -243,8 +285,11 @@ async function main() {
   const scored = scoreNews(deduped, weights);
   saveJson("scored_news.json", scored);
 
+  // 採否は relevanceScore（記事そのものの価値・時間で減らない）で判定する。
+  // score は freshness を含むので並べ替え専用。
   const selected = scored.filter((a) => {
-    if (a.score < MIN_SCORE_SELECTED) return false;
+    if (isNonArticle(a)) return false;
+    if ((a.relevanceScore ?? a.score) < MIN_SCORE_SELECTED) return false;
     if (!a.pubDate) return true;
     const ageDays = (Date.now() - new Date(a.pubDate).getTime()) / (1000 * 60 * 60 * 24);
     return ageDays <= 90;
@@ -303,9 +348,13 @@ async function main() {
   console.log("=".repeat(60));
 }
 
-main()
-  .then(() => process.exit(0))
-  .catch((err) => {
-    console.error("Pipeline failed:", err);
-    process.exit(1);
-  });
+// require された時点でパイプラインが走ると data/*.json を意図せず上書きするため、
+// 直接実行されたときだけ起動する。
+if (require.main === module) {
+  main()
+    .then(() => process.exit(0))
+    .catch((err) => {
+      console.error("Pipeline failed:", err);
+      process.exit(1);
+    });
+}

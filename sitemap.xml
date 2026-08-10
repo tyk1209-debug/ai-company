@@ -121,6 +121,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aec-news.com/categories/ifc.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aec-news.com/categories/other.html</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -133,19 +139,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/categories/bim-ai.html</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://aec-news.com/categories/revit.html</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aec-news.com/categories/ifc.html</loc>
+    <loc>https://aec-news.com/categories/bim-ai.html</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -266,7 +266,19 @@
   </url>
   <url>
     <loc>https://aec-news.com/posts/nemetschek-nemetschek-and-novatr-join-hands-build-indias-industry-ready-aec-work.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/buildingsmart-international-announces-outcomes-of-2026-international-council-agm.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aec-news.com/posts/autodesk-and-the-university-of-florida-open-the-most-advanced-robotics-industria.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

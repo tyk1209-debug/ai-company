@@ -197,7 +197,13 @@ async function scrapeNemetschekNewsroom() {
       // 日付抽出: YYYY-MM-DD または月名パターン
       const datePattern = /(\d{4}[-/]\d{2}[-/]\d{2})|(\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4})/i;
       const dateMatch = html.slice(Math.max(0, html.indexOf(relPath) - 500), html.indexOf(relPath) + 500).match(datePattern);
-      const pubDate = dateMatch ? new Date(dateMatch[0].replace(/[-/]/g, "-")).toISOString() : new Date().toISOString();
+      // 日付が取れないときに実行時刻を入れてはいけない。
+      // 毎回「今日の記事」に化けて常に最新扱いになり、
+      // 同じ記事がトップに居座り続ける原因になる。
+      // 不明なときは空にして、公開時に一度だけ日付を確定させる。
+      const pubDate = dateMatch
+        ? new Date(dateMatch[0].replace(/[-/]/g, "-")).toISOString()
+        : "";
 
       articles.push({
         title: `[Nemetschek] ${titleGuess}`,

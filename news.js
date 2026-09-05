@@ -84,6 +84,7 @@ const NON_ARTICLE_TITLE_PATTERNS = [
   /^価格表/,
   /^保護中[:：]/,
   /(メールフォーム|登録フォーム|申込フォーム)$/,
+  /メルマガ/,
   /^(プライバシーポリシー|利用規約|会社概要|サイトマップ)/,
 ];
 
@@ -91,6 +92,22 @@ function isNonArticle(article) {
   const title = (article.title || "").trim();
   if (!title) return true;
   return NON_ARTICLE_TITLE_PATTERNS.some((re) => re.test(title));
+}
+
+/**
+ * 公開済み記事のリンク集合を返す。選抜時に既出記事を弾くために使う。
+ *
+ * @param {string} existingPostsPath - posts.json の絶対パス
+ * @returns {Set<string>} 正規化済みリンクの集合
+ */
+function loadPublishedLinks(existingPostsPath) {
+  if (!fs.existsSync(existingPostsPath)) return new Set();
+  try {
+    const posts = JSON.parse(fs.readFileSync(existingPostsPath, "utf8"));
+    return new Set(posts.map((p) => (p.link || "").trim().toLowerCase()).filter(Boolean));
+  } catch {
+    return new Set();
+  }
 }
 
 function mergeWithExistingPosts(freshPosts, existingPostsPath) {
@@ -292,9 +309,15 @@ async function main() {
   const scored = scoreNews(deduped, weights);
   saveJson("scored_news.json", scored);
 
+  // 公開済みの記事は候補から外す。
+  // これが無いと、既に出した記事が毎回また選抜・再翻訳され、
+  // タイトルと日付が上書きされて延々とトップに居座り続ける。
+  const publishedLinks = loadPublishedLinks(path.join(DATA_DIR, "posts.json"));
+
   // 採否は relevanceScore（記事そのものの価値・時間で減らない）で判定する。
   // score は freshness を含むので並べ替え専用。
   const selected = scored.filter((a) => {
+    if (publishedLinks.has((a.link || "").trim().toLowerCase())) return false;
     if (isNonArticle(a)) return false;
     if ((a.relevanceScore ?? a.score) < MIN_SCORE_SELECTED) return false;
     if (!a.pubDate) return true;
@@ -338,7 +361,13 @@ async function main() {
     );
   }
 
-  const freshPosts = applyAffiliateLinks(generatePosts(publishing));
+  // 発行日が取れなかった記事は、公開するこの瞬間の日付で確定させる。
+  // 選抜段階で公開済みリンクを弾いているので、ここを通るのは一度きり。
+  // 以降この日付は変わらず、記事が毎回トップに戻ることもない。
+  const publishedAt = new Date().toISOString();
+  const dated = publishing.map((a) => (a.pubDate ? a : { ...a, pubDate: publishedAt }));
+
+  const freshPosts = applyAffiliateLinks(generatePosts(dated));
 
   // Merge with existing posts.json to preserve articles that aged out of RSS feeds
   // 過去記事も日本語本文を含めてカテゴリを再判定（誤分類の是正）

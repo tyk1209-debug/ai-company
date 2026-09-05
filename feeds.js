@@ -10,10 +10,9 @@ module.exports = [
     name: "Autodesk AEC Blog",
     url: "https://www.autodesk.com/blogs/aec/feed/",
   },
-  {
-    name: "Autodesk News",
-    url: "https://adsknews.autodesk.com/feed",
-  },
+  // 削除: Autodesk News（adsknews.autodesk.com が 2026-09 時点でRSS配信を廃止。
+  //       200は返すが item が0件で、feed宣言もページから消えている。
+  //       Autodesk関連は Autodesk AEC Blog で拾う）
 
   // ── Graphisoft / Archicad 系 ──────────────────────────────
   {

@@ -47,16 +47,8 @@ const FEED_USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
-const FEED_PARSERS = [
-  new Parser({
-    timeout: 12000,
-    headers: {
-      "User-Agent": FEED_USER_AGENT,
-      Accept: "application/rss+xml, application/xml, text/xml, */*",
-    },
-  }),
-  new Parser({ timeout: 12000 }),
-];
+// 取得は fetchFeedText が行うので、パーサは解析専用。
+const FEED_PARSER = new Parser({ timeout: 12000 });
 
 /**
  * Merge freshly fetched posts with the existing posts.json to avoid losing
@@ -169,12 +161,35 @@ function saveJson(filename, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
 }
 
+/**
+ * フィード本文を自前で取得する。
+ *
+ * rss-parser の内蔵HTTPは一部サイト（Autodesk等）で403になるが、
+ * 同じURL・同じUAでも fetch なら200で取れる。取得と解析を分離して、
+ * ライブラリのHTTP層の癖に供給を左右されないようにする。
+ *
+ * @param {string} url
+ * @param {boolean} withUserAgent - ブラウザUAを送るか
+ * @returns {Promise<string>} フィードのXML文字列
+ */
+async function fetchFeedText(url, withUserAgent) {
+  const headers = { Accept: "application/rss+xml, application/xml, text/xml, */*" };
+  if (withUserAgent) headers["User-Agent"] = FEED_USER_AGENT;
+
+  const res = await fetch(url, { headers, redirect: "follow" });
+  if (!res.ok) throw new Error(`Status code ${res.status}`);
+  return res.text();
+}
+
 async function fetchFeed(feed) {
   let lastError = "unknown error";
 
-  for (const feedParser of FEED_PARSERS) {
+  // UAあり / UAなし の両方を試す。
+  // Autodesk等はUA必須、buildingSMART等は逆にUAがあると弾かれる。
+  for (const withUserAgent of [true, false]) {
     try {
-      const result = await feedParser.parseURL(feed.url);
+      const xml = await fetchFeedText(feed.url, withUserAgent);
+      const result = await FEED_PARSER.parseString(xml);
       const articles = normalizeArticles(result.items || [], feed.name);
       return { ok: true, feed: feed.name, articles };
     } catch (err) {

@@ -48,6 +48,11 @@ jobs:
       - name: Collect events
         run: node collectEvents.js
 
+      # 出力そのものを検証する。ここが無かったせいで
+      # 記事の消失や同記事の再公開を毎回オーナーに発見させていた。
+      - name: Health check
+        run: node healthCheck.js
+
       - name: Commit and push website
         run: |
           git config user.email "action@github.com"
@@ -75,7 +80,10 @@ jobs:
           const fs = require('fs');
           let count = 0;
           try { count = JSON.parse(fs.readFileSync('data/posts.json','utf-8')).length; } catch(e) {}
-          const text = 'AEC News Japan - 自動更新完了\n' + time + '\n候補記事数: ' + count + '件\nhttps://aec-news.com/';
+          let health = { warnings: [], newPosts: null };
+          try { health = JSON.parse(fs.readFileSync('data/health.json','utf-8')); } catch(e) {}
+          const warn = (health.warnings || []).length ? '  [要確認] ' + health.warnings.join(' / ') : '';
+          const text = 'AEC News Japan - 自動更新完了\n' + time + '\n候補記事数: ' + count + '件\nhttps://aec-news.com/' + warn;
           const body = JSON.stringify({ chat_id: chatId, text });
           const req = https.request({ hostname:'api.telegram.org', path:'/bot'+token+'/sendMessage', method:'POST', headers:{'Content-Type':'application/json','Content-Length':Buffer.byteLength(body)} });
           req.write(body); req.end();

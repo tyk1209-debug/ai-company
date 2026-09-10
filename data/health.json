@@ -1,10 +1,10 @@
 {
   "ok": false,
-  "checkedAt": "2026-09-07T16:14:03.349Z",
-  "totalPosts": 152,
+  "checkedAt": "2026-09-10T14:44:43.079Z",
+  "totalPosts": 157,
   "newPosts": 5,
-  "topPost": "Autodesk Platform Services、プロトタイプから本番運用へ—AMC Bridgeが示す実装の課題と",
+  "topPost": "RevitにAIが直接モデル編集権を獲得、Claude+pyRevitで実証",
   "warnings": [
-    "記事を返さなかったフィード 2/14件: Autodesk AEC Blog, NYKシステムズ（Rebro）"
+    "記事を返さなかったフィード 1/14件: Autodesk AEC Blog"
   ]
 }

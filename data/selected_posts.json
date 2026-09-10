@@ -1,11 +1,38 @@
 [
   {
-    "title": "CRAFT Engineering Studio",
-    "link": "https://aecmag.com/sponsored-content/craft-engineering-studio",
+    "title": "Inside Motif: the agent-native BIM platform",
+    "link": "https://aecmag.com/bim/inside-motif-the-agent-native-bim-platform",
     "source": "AEC Magazine",
-    "pubDate": "2026-09-04T13:11:16.000Z",
-    "summary": "How a small firm building big-firm infrastructure made its Revit content accessible across teams The post CRAFT Engineering Studio appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
+    "pubDate": "2026-09-08T15:00:36.000Z",
+    "summary": "One database, one platform, unlimited agents — Motif’s answer to Revit’s ageing architecture The post Inside Motif: the agent-native BIM platform appeared first on AEC Magazine.",
+    "fetchedAt": "2026-09-10T14:41:07.176Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "revit",
+      "bim",
+      "aec",
+      "agent"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 17.55,
+    "score": 19.89,
+    "freshnessScore": 2
+  },
+  {
+    "title": "BIM 2.0: unfinished business",
+    "link": "https://aecmag.com/bim/bim-2-0-unfinished-business",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-08T14:59:22.000Z",
+    "summary": "Revit wasn't finished at launch — so why demand perfection from its challengers now? The post BIM 2.0: unfinished business appeared first on AEC Magazine.",
+    "fetchedAt": "2026-09-10T14:41:07.176Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -16,12 +43,39 @@
     ],
     "keywordHits": [
       "revit",
+      "bim",
       "aec"
     ],
     "sourceScore": 3,
-    "relevanceScore": 12.87,
-    "score": 14.04,
-    "freshnessScore": 1
+    "relevanceScore": 16.38,
+    "score": 18.72,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Giving AI actual write access in Revit",
+    "link": "https://aecmag.com/bim/giving-ai-actual-write-access-in-revit",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-09T09:09:19.000Z",
+    "summary": "Can AI move past querying Revit models and start actually building inside them? The post Giving AI actual write access in Revit appeared first on AEC Magazine.",
+    "fetchedAt": "2026-09-10T14:41:07.176Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "revit",
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 14.04,
+    "score": 16.38,
+    "freshnessScore": 2
   },
   {
     "title": "IFC 4.4 Integration for ISO Submission approval voting",
@@ -29,7 +83,7 @@
     "source": "buildingSMART International",
     "pubDate": "2026-07-03T12:36:12.000Z",
     "summary": "Vote closing date: 21 Aug 2026 Project plan: Link The IFC 4.4 Integration for ISO Submission has been submitted to the Standards Committee for voting to proceed. The post IFC 4.4 Integration for ISO Submission approval voting appeared first on buildingSMART International.",
-    "fetchedAt": "2026-09-07T16:10:18.011Z",
+    "fetchedAt": "2026-09-10T14:41:06.465Z",
     "category": "IFC",
     "categoryHits": [
       "ifc",
@@ -53,7 +107,7 @@
     "source": "Graphisoft Blog",
     "pubDate": "2026-06-17T07:51:16.000Z",
     "summary": "Building Information Modeling (BIM) has significantly changed the way we approach design and construction in the architecture, engineering, and construction (AEC) industries. However, we have yet to see those industries fully unlock the benefits of BIM. That's because communication becomes fragmented, leading to costly delays, difficulties conveying design concepts, and inefficiencies that can threaten a project's success. The post Bridging the 2D and 3D Gap: Improving Communication in BIM-Driven AEC Projects – whitepaper appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-07T16:10:17.021Z",
+    "fetchedAt": "2026-09-10T14:41:05.020Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft"
@@ -73,36 +127,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "Beyond the API: Autodesk Platform Services",
-    "link": "https://aecmag.com/sponsored-content/beyond-the-api-autodesk-platform-services",
-    "source": "AEC Magazine",
-    "pubDate": "2026-09-07T09:26:19.000Z",
-    "summary": "How Autodesk and AMC Bridge Operationalize APS Across AEC & Manufacturing The post Beyond the API: Autodesk Platform Services appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "aec",
-      "autodesk",
-      "api"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 9.9,
-    "score": 12.6,
-    "freshnessScore": 3
-  },
-  {
     "title": "Archicad authentication with Graphisoft ID",
     "link": "https://www.graphisoft.com/en-us/pulse/archicad-authentication-with-graphisoft-id",
     "source": "Graphisoft Blog",
     "pubDate": "2026-06-17T07:46:20.000Z",
     "summary": "Speed things up with Graphisoft ID authentication - log in faster and unlock seamless access to premium features. The post Archicad authentication with Graphisoft ID appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-07T16:10:17.021Z",
+    "fetchedAt": "2026-09-10T14:41:05.020Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "archicad",
@@ -126,7 +156,7 @@
     "source": "Graphisoft Blog",
     "pubDate": "2026-06-17T07:50:14.000Z",
     "summary": "Successfully automating the management of your architectural projects relies on Building Information Modeling (BIM). Given how fast-paced and demanding the world of architecture is, it might seem like an aspiration, but it can be a reality. Traditional manual management of project files and design concepts can be time-consuming and expensive. That’s why integrating a powerful platform that links your BIM and project management systems is the smart solution you’ve been seeking! The post How a Management Platform Bridges Building Information Modeling (BIM) and Project Management for Architectural Success appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-07T16:10:17.021Z",
+    "fetchedAt": "2026-09-10T14:41:05.020Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft"
@@ -150,7 +180,7 @@
     "source": "Graphisoft Blog",
     "pubDate": "2026-06-17T07:47:45.000Z",
     "summary": "With BIMx’s Web Viewer, share your interactive 3D model so anyone can explore it right in their browser — no extra software needed! The post Did you know you can publish your BIMx model directly to a website? appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-07T16:10:17.021Z",
+    "fetchedAt": "2026-09-10T14:41:05.020Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft",
@@ -174,7 +204,7 @@
     "source": "buildingSMART International",
     "pubDate": "2026-06-16T09:56:56.000Z",
     "summary": "London, U.K. – June 9th, 2026 — buildingSMART International (bSI) announces that Christina Hvid resigned from the Board of Directors on 9 June 2026. We extend our sincere thanks to Christina… The post Christina Hvid Steps Down from buildingSMART International Board of Directors appeared first on buildingSMART International.",
-    "fetchedAt": "2026-09-07T16:10:18.011Z",
+    "fetchedAt": "2026-09-10T14:41:06.465Z",
     "category": "IFC",
     "categoryHits": [
       "buildingsmart"
@@ -191,36 +221,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "HighArc pushes ‘buildings as data’ thinking into new areas",
-    "link": "https://aecmag.com/architecture/higharc-pushes-buildings-as-data-thinking-into-new-areas",
-    "source": "AEC Magazine",
-    "pubDate": "2026-07-21T11:07:46.000Z",
-    "summary": "HighArc, the developer of a cloud-based BIM system is building out its next generation business model The post HighArc pushes ‘buildings as data’ thinking into new areas appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "bim",
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "bim",
-      "aec"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 8.1,
-    "score": 8.1,
-    "freshnessScore": 0
-  },
-  {
     "title": "令和8年度「建築GX・DX推進事業」交付申請受付開始のお知らせ ― 申請期限は9月30日まで",
     "link": "https://bimgate.jp/knowledge/3282",
     "source": "BIMゲート",
     "pubDate": "2026-07-17T01:48:36.000Z",
     "summary": "令和8年度に実施される「建築GX・DX推進事業」について、補助金の交付申請の受付が開始されました。申請期間は令和8年7月1日から9月30日までです。本事業の活用をご検討中の事業者様は、期限内での手続きが必要です。 交付申 […]",
-    "fetchedAt": "2026-09-07T16:10:16.760Z",
+    "fetchedAt": "2026-09-10T14:41:05.176Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim"
@@ -242,7 +248,7 @@
     "source": "Graphisoft Blog",
     "pubDate": "2026-06-17T14:18:46.000Z",
     "summary": "For the past three decades, green buildings and energy efficient building design has grown from a fad to a major movement. Driven by growing awareness of CO2 emissions and the large percentage of these emissions attributed to buildings, the industry saw the rise of sustainable buildings. With approximately 27% of global emissions stemming from building […] The post The Rise of Sustainable Buildings appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-07T16:10:17.021Z",
+    "fetchedAt": "2026-09-10T14:41:05.020Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft"
@@ -264,7 +270,7 @@
     "source": "Graphisoft Blog",
     "pubDate": "2026-06-17T14:06:10.000Z",
     "summary": "While selecting low-carbon products and materials, and designing energy-efficient systems is one way to design green buildings, adaptability and adaptive reuse are also effective sustainable strategies. The post Sustainable Design and Construction appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-07T16:10:17.021Z",
+    "fetchedAt": "2026-09-10T14:41:05.020Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft"
@@ -286,7 +292,7 @@
     "source": "Graphisoft Blog",
     "pubDate": "2026-06-17T11:54:37.000Z",
     "summary": "While most design professionals, building product manufacturers and organizations support the notion of green buildings, there’s a difference between checking a few green boxes and truly exploring ways to reduce carbon and promote a circular economy. The post Sustainable Buildings and Healthy Materials appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-07T16:10:17.021Z",
+    "fetchedAt": "2026-09-10T14:41:05.020Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft"
@@ -308,7 +314,7 @@
     "source": "Graphisoft Blog",
     "pubDate": "2026-06-16T09:10:32.000Z",
     "summary": "Stevens Lawson Architects leveraged a major software transition to deliver Auckland's groundbreaking supportive housing project. The post Stevens Lawson Architects leveraged a major software transition appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-07T16:10:17.021Z",
+    "fetchedAt": "2026-09-10T14:41:05.020Z",
     "category": "ARCHICAD",
     "categoryHits": [
       "graphisoft"
@@ -330,7 +336,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-07-07T06:04:28.000Z",
     "summary": "Matching the right machine to the right role matters as much as the hardware itself The post Which workstation is right for your AEC workflow? appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
+    "fetchedAt": "2026-09-10T14:41:07.177Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -348,36 +354,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "Dawn of the Judgement Stack",
-    "link": "https://aecmag.com/ai/dawn-of-the-judgement-stack",
-    "source": "AEC Magazine",
-    "pubDate": "2026-07-21T11:22:46.000Z",
-    "summary": "Why the future of AI in AEC could belong less to software vendors and more to practices and the knowledge they’ve built The post Dawn of the Judgement Stack appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 6.3,
-    "score": 6.3,
-    "freshnessScore": 0
-  },
-  {
     "title": "The word “agent” is doing too much work",
     "link": "https://aecmag.com/ai/the-word-agent-is-doing-too-much-work",
     "source": "AEC Magazine",
     "pubDate": "2026-07-21T10:47:17.000Z",
     "summary": "At NXT BLD, Campbell Yule heard four things called “agents.” He explores why mislabelling matters and where value lies The post The word “agent” is doing too much work appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
+    "fetchedAt": "2026-09-10T14:41:07.177Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -396,36 +378,12 @@
     "freshnessScore": 0
   },
   {
-    "title": "AI: the technology that just won’t wait",
-    "link": "https://aecmag.com/opinion/ai-the-technology-that-just-wont-wait",
-    "source": "AEC Magazine",
-    "pubDate": "2026-07-21T11:02:45.000Z",
-    "summary": "In the AEC sector AI is running up against a brick wall in the form of outdated practices and legacy technology The post AI: the technology that just won’t wait appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 6.3,
-    "score": 6.3,
-    "freshnessScore": 0
-  },
-  {
     "title": "Buildots extends AI tracking platform into superstructures",
     "link": "https://aecmag.com/structural-engineering/buildots-extends-ai-tracking-platform-into-superstructure-phase",
     "source": "AEC Magazine",
     "pubDate": "2026-07-06T11:25:32.000Z",
     "summary": "Construction intelligence platform adds structural progress monitoring to close visibility gap between foundations and fit-out The post Buildots extends AI tracking platform into superstructures appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
+    "fetchedAt": "2026-09-10T14:41:07.177Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -449,7 +407,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-07-01T19:58:00.000Z",
     "summary": "London and New York-based startup backed by Index Ventures says its systems compress weeks of site assessment into hours The post Build raises $8.5m seed for AI-driven infrastructure due diligence platform appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
+    "fetchedAt": "2026-09-10T14:41:07.177Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -473,7 +431,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-07-01T19:58:48.000Z",
     "summary": "Automated symbol recognition, conduit routing and natural language querying now available across Trimble's MEP estimating platform The post Trimble adds AI-driven takeoff and estimating tools for MEP contractors appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
+    "fetchedAt": "2026-09-10T14:41:07.177Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -497,7 +455,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-07-16T13:42:09.000Z",
     "summary": "Investment signals growing focus on governed data infrastructure as foundation for AI adoption across AEC The post Nemetschek takes stake in data exchange platform Dawex appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-07T16:10:20.065Z",
+    "fetchedAt": "2026-09-10T14:41:07.177Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"

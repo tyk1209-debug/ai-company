@@ -1,265 +1,63 @@
 [
   {
-    "title": "IFC 4.4 Integration for ISO Submission approval voting",
-    "link": "https://www.buildingsmart.org/ifc-4-4-integration-for-iso-submission-approval-voting",
-    "source": "buildingSMART International",
-    "pubDate": "2026-07-03T12:36:12.000Z",
-    "summary": "Vote closing date: 21 Aug 2026 Project plan: Link The IFC 4.4 Integration for ISO Submission has been submitted to the Standards Committee for voting to proceed. The post IFC 4.4 Integration for ISO Submission approval voting appeared first on buildingSMART International.",
-    "fetchedAt": "2026-09-13T14:43:43.633Z",
-    "category": "IFC",
-    "categoryHits": [
-      "ifc",
-      "buildingsmart"
-    ],
-    "allCategories": [
-      "IFC"
-    ],
-    "keywordHits": [
-      "ifc",
-      "buildingsmart"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 14,
-    "score": 14,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Bridging the 2D and 3D Gap: Improving Communication in BIM-Driven AEC Projects – whitepaper",
-    "link": "https://www.graphisoft.com/en-us/pulse/improving-communication-in-bim-driven-aec-projects",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-06-17T07:51:16.000Z",
-    "summary": "Building Information Modeling (BIM) has significantly changed the way we approach design and construction in the architecture, engineering, and construction (AEC) industries. However, we have yet to see those industries fully unlock the benefits of BIM. That's because communication becomes fragmented, leading to costly delays, difficulties conveying design concepts, and inefficiencies that can threaten a project's success. The post Bridging the 2D and 3D Gap: Improving Communication in BIM-Driven AEC Projects – whitepaper appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-13T14:43:41.874Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "bim",
-      "aec",
-      "graphisoft"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 13,
-    "score": 13,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Archicad authentication with Graphisoft ID",
-    "link": "https://www.graphisoft.com/en-us/pulse/archicad-authentication-with-graphisoft-id",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-06-17T07:46:20.000Z",
-    "summary": "Speed things up with Graphisoft ID authentication - log in faster and unlock seamless access to premium features. The post Archicad authentication with Graphisoft ID appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-13T14:43:41.874Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 12,
-    "score": 12,
-    "freshnessScore": 0
-  },
-  {
-    "title": "How a Management Platform Bridges Building Information Modeling (BIM) and Project Management for Architectural Success",
-    "link": "https://www.graphisoft.com/en-us/pulse/bridging-bim-and-project-management-for-architectural-success",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-06-17T07:50:14.000Z",
-    "summary": "Successfully automating the management of your architectural projects relies on Building Information Modeling (BIM). Given how fast-paced and demanding the world of architecture is, it might seem like an aspiration, but it can be a reality. Traditional manual management of project files and design concepts can be time-consuming and expensive. That’s why integrating a powerful platform that links your BIM and project management systems is the smart solution you’ve been seeking! The post How a Management Platform Bridges Building Information Modeling (BIM) and Project Management for Architectural Success appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-13T14:43:41.874Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "bim",
-      "graphisoft"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 10,
-    "score": 10,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Did you know you can publish your BIMx model directly to a website?",
-    "link": "https://www.graphisoft.com/en-us/pulse/publish-your-bimx-model-directly-to-a-website",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-06-17T07:47:45.000Z",
-    "summary": "With BIMx’s Web Viewer, share your interactive 3D model so anyone can explore it right in their browser — no extra software needed! The post Did you know you can publish your BIMx model directly to a website? appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-13T14:43:41.874Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft",
-      "bimx"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "graphisoft",
-      "bimx"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 10,
-    "score": 10,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Christina Hvid Steps Down from buildingSMART International Board of Directors",
-    "link": "https://www.buildingsmart.org/christina-hvid-resigned-from-the-board",
-    "source": "buildingSMART International",
-    "pubDate": "2026-06-16T09:56:56.000Z",
-    "summary": "London, U.K. – June 9th, 2026 — buildingSMART International (bSI) announces that Christina Hvid resigned from the Board of Directors on 9 June 2026. We extend our sincere thanks to Christina… The post Christina Hvid Steps Down from buildingSMART International Board of Directors appeared first on buildingSMART International.",
-    "fetchedAt": "2026-09-13T14:43:43.633Z",
-    "category": "IFC",
-    "categoryHits": [
-      "buildingsmart"
-    ],
-    "allCategories": [
-      "IFC"
-    ],
-    "keywordHits": [
-      "buildingsmart"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 9,
-    "score": 9,
-    "freshnessScore": 0
-  },
-  {
-    "title": "The Rise of Sustainable Buildings",
-    "link": "https://www.graphisoft.com/en-us/pulse/the-rise-of-sustainable-buildings",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-06-17T14:18:46.000Z",
-    "summary": "For the past three decades, green buildings and energy efficient building design has grown from a fad to a major movement. Driven by growing awareness of CO2 emissions and the large percentage of these emissions attributed to buildings, the industry saw the rise of sustainable buildings. With approximately 27% of global emissions stemming from building […] The post The Rise of Sustainable Buildings appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-13T14:43:41.874Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "graphisoft"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 7,
-    "score": 7,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Sustainable Design and Construction",
-    "link": "https://www.graphisoft.com/en-us/pulse/sustainable-design-and-construction",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-06-17T14:06:10.000Z",
-    "summary": "While selecting low-carbon products and materials, and designing energy-efficient systems is one way to design green buildings, adaptability and adaptive reuse are also effective sustainable strategies. The post Sustainable Design and Construction appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-13T14:43:41.874Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "graphisoft"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 7,
-    "score": 7,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Sustainable Buildings and Healthy Materials",
-    "link": "https://www.graphisoft.com/en-us/pulse/sustainable-buildings-and-healthy-materials",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-06-17T11:54:37.000Z",
-    "summary": "While most design professionals, building product manufacturers and organizations support the notion of green buildings, there’s a difference between checking a few green boxes and truly exploring ways to reduce carbon and promote a circular economy. The post Sustainable Buildings and Healthy Materials appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-13T14:43:41.874Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "graphisoft"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 7,
-    "score": 7,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Stevens Lawson Architects leveraged a major software transition",
-    "link": "https://www.graphisoft.com/en-us/pulse/leverage-a-major-software-transition",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-06-16T09:10:32.000Z",
-    "summary": "Stevens Lawson Architects leveraged a major software transition to deliver Auckland's groundbreaking supportive housing project. The post Stevens Lawson Architects leveraged a major software transition appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-13T14:43:41.874Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "graphisoft"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 7,
-    "score": 7,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Which workstation is right for your AEC workflow?",
-    "link": "https://aecmag.com/sponsored-content/which-workstation-is-right-for-your-aec-workflow",
+    "title": "Autodesk confirms Forma will replace Revit ‘over time’",
+    "link": "https://aecmag.com/bim/autodesk-confirms-forma-will-replace-revit-over-time",
     "source": "AEC Magazine",
-    "pubDate": "2026-07-07T06:04:28.000Z",
-    "summary": "Matching the right machine to the right role matters as much as the hardware itself The post Which workstation is right for your AEC workflow? appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-13T14:43:43.884Z",
-    "category": "BIM_ECOSYSTEM",
+    "pubDate": "2026-09-15T16:00:49.000Z",
+    "summary": "More and more of the work that happens in Revit today will happen directly in Forma The post Autodesk confirms Forma will replace Revit ‘over time’ appeared first on AEC Magazine.",
+    "fetchedAt": "2026-09-16T15:11:59.310Z",
+    "category": "REVIT",
     "categoryHits": [
-      "aec"
+      "revit"
     ],
     "allCategories": [
+      "REVIT",
       "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
+      "revit",
       "aec",
-      "workflow"
+      "autodesk"
     ],
     "sourceScore": 3,
-    "relevanceScore": 6.3,
-    "score": 6.3,
-    "freshnessScore": 0
+    "relevanceScore": 16.38,
+    "score": 19.89,
+    "freshnessScore": 3
   },
   {
-    "title": "Buildots extends AI tracking platform into superstructures",
-    "link": "https://aecmag.com/structural-engineering/buildots-extends-ai-tracking-platform-into-superstructure-phase",
+    "title": "HP ZBook Ultra G3a brings local AI to Revit",
+    "link": "https://aecmag.com/workstations/hp-zbook-ultra-g3a-brings-local-ai-to-revit",
     "source": "AEC Magazine",
-    "pubDate": "2026-07-06T11:25:32.000Z",
-    "summary": "Construction intelligence platform adds structural progress monitoring to close visibility gap between foundations and fit-out The post Buildots extends AI tracking platform into superstructures appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-13T14:43:43.884Z",
+    "pubDate": "2026-09-15T12:00:09.000Z",
+    "summary": "Mobile workstation paired with Perplexity’s agentic platform to run substantial AI models locally alongside Revit The post HP ZBook Ultra G3a brings local AI to Revit appeared first on AEC Magazine.",
+    "fetchedAt": "2026-09-16T15:11:59.310Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "revit",
+      "aec",
+      "ai",
+      "agent"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 15.21,
+    "score": 17.55,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Autodesk extends reach of AI with standalone Assistant",
+    "link": "https://aecmag.com/ai/autodesk-extends-reach-of-ai-with-standalone-assistant",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-15T16:00:34.000Z",
+    "summary": "Agent-first Assistant spans products, projects and teams to understand entire workflows The post Autodesk extends reach of AI with standalone Assistant appeared first on AEC Magazine.",
+    "fetchedAt": "2026-09-16T15:11:59.310Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -270,11 +68,133 @@
     ],
     "keywordHits": [
       "aec",
+      "autodesk",
+      "ai",
+      "agent",
+      "workflow"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 10.8,
+    "score": 13.5,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Autodesk puts updated AI Transparency Cards inside Assistant",
+    "link": "https://aecmag.com/ai/autodesk-puts-updated-ai-transparency-cards-inside-assistant",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-15T16:00:37.000Z",
+    "summary": "Helps customers understand what an AI feature does, its limitations, the data it is trained on, and the protections in place The post Autodesk puts updated AI Transparency Cards inside Assistant appeared first on AEC Magazine.",
+    "fetchedAt": "2026-09-16T15:11:59.310Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
       "ai"
     ],
     "sourceScore": 3,
-    "relevanceScore": 6.3,
-    "score": 6.3,
+    "relevanceScore": 9,
+    "score": 11.7,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Autodesk pushes Forma upstream and connects Civil 3D",
+    "link": "https://aecmag.com/civil-engineering/autodesk-pushes-forma-upstream-and-connects-civil-3d",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-15T16:00:03.000Z",
+    "summary": "Autodesk launches Forma Street Design and makes Civil 3D a “Forma Connected Client” The post Autodesk pushes Forma upstream and connects Civil 3D appeared first on AEC Magazine.",
+    "fetchedAt": "2026-09-16T15:11:59.310Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 8.1,
+    "score": 10.8,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Anagnost pitches ‘project intelligence’ across Autodesk",
+    "link": "https://aecmag.com/ai/anagnost-pitches-project-intelligence-across-autodesk",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-15T16:00:31.000Z",
+    "summary": "A “connected brain” at the centre of each project brings together data and decisions across Autodesk's industry clouds The post Anagnost pitches ‘project intelligence’ across Autodesk appeared first on AEC Magazine.",
+    "fetchedAt": "2026-09-16T15:11:59.310Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 8.1,
+    "score": 10.8,
+    "freshnessScore": 3
+  },
+  {
+    "title": "HP improves automation in SitePrint and Build Workspace",
+    "link": "https://aecmag.com/construction/hp-improves-automation-in-siteprint-and-build-workspace",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-15T12:00:57.000Z",
+    "summary": "Robot printer gains cloud CAD editing and ‘Smart Navigation’ while Build Workspace improves drawing management The post HP improves automation in SitePrint and Build Workspace appeared first on AEC Magazine.",
+    "fetchedAt": "2026-09-16T15:11:59.310Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "aec",
+      "automation"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 7.2,
+    "score": 9,
+    "freshnessScore": 2
+  },
+  {
+    "title": "[Nemetschek] Allplan Trend Report Ai And Bim Are Converging Shape Future Construction",
+    "link": "https://www.nemetschek.com/en/news-media/allplan-trend-report-ai-and-bim-are-converging-shape-future-construction",
+    "pubDate": "",
+    "summary": "Allplan Trend Report Ai And Bim Are Converging Shape Future Construction",
+    "source": "Nemetschek Newsroom",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "ai"
+    ],
+    "sourceScore": 4,
+    "relevanceScore": 8,
+    "score": 8,
     "freshnessScore": 0
   },
   {
@@ -283,55 +203,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-07-01T19:58:00.000Z",
     "summary": "London and New York-based startup backed by Index Ventures says its systems compress weeks of site assessment into hours The post Build raises $8.5m seed for AI-driven infrastructure due diligence platform appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-13T14:43:43.884Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 6.3,
-    "score": 6.3,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Trimble adds AI-driven takeoff and estimating tools for MEP contractors",
-    "link": "https://aecmag.com/ai/trimble-adds-ai-driven-takeoff-and-estimating-tools-for-mep-contractors",
-    "source": "AEC Magazine",
-    "pubDate": "2026-07-01T19:58:48.000Z",
-    "summary": "Automated symbol recognition, conduit routing and natural language querying now available across Trimble's MEP estimating platform The post Trimble adds AI-driven takeoff and estimating tools for MEP contractors appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-13T14:43:43.884Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 6.3,
-    "score": 6.3,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Nemetschek takes stake in data exchange platform Dawex",
-    "link": "https://aecmag.com/data-management/nemetschek-takes-stake-in-data-exchange-platform-dawex",
-    "source": "AEC Magazine",
-    "pubDate": "2026-07-16T13:42:09.000Z",
-    "summary": "Investment signals growing focus on governed data infrastructure as foundation for AI adoption across AEC The post Nemetschek takes stake in data exchange platform Dawex appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-13T14:43:43.884Z",
+    "fetchedAt": "2026-09-16T15:11:59.310Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"

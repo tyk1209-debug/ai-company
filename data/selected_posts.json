@@ -1,36 +1,11 @@
 [
   {
-    "title": "Autodesk confirms Forma will replace Revit ‘over time’",
-    "link": "https://aecmag.com/bim/autodesk-confirms-forma-will-replace-revit-over-time",
-    "source": "AEC Magazine",
-    "pubDate": "2026-09-15T16:00:49.000Z",
-    "summary": "More and more of the work that happens in Revit today will happen directly in Forma The post Autodesk confirms Forma will replace Revit ‘over time’ appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-16T15:11:59.310Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "aec",
-      "autodesk"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 16.38,
-    "score": 19.89,
-    "freshnessScore": 3
-  },
-  {
     "title": "HP ZBook Ultra G3a brings local AI to Revit",
     "link": "https://aecmag.com/workstations/hp-zbook-ultra-g3a-brings-local-ai-to-revit",
     "source": "AEC Magazine",
     "pubDate": "2026-09-15T12:00:09.000Z",
     "summary": "Mobile workstation paired with Perplexity’s agentic platform to run substantial AI models locally alongside Revit The post HP ZBook Ultra G3a brings local AI to Revit appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-16T15:11:59.310Z",
+    "fetchedAt": "2026-09-19T14:01:59.984Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -48,8 +23,8 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 15.21,
-    "score": 17.55,
-    "freshnessScore": 2
+    "score": 16.38,
+    "freshnessScore": 1
   },
   {
     "title": "Autodesk extends reach of AI with standalone Assistant",
@@ -57,7 +32,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-09-15T16:00:34.000Z",
     "summary": "Agent-first Assistant spans products, projects and teams to understand entire workflows The post Autodesk extends reach of AI with standalone Assistant appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-16T15:11:59.310Z",
+    "fetchedAt": "2026-09-19T14:01:59.984Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -75,100 +50,50 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 10.8,
-    "score": 13.5,
-    "freshnessScore": 3
-  },
-  {
-    "title": "Autodesk puts updated AI Transparency Cards inside Assistant",
-    "link": "https://aecmag.com/ai/autodesk-puts-updated-ai-transparency-cards-inside-assistant",
-    "source": "AEC Magazine",
-    "pubDate": "2026-09-15T16:00:37.000Z",
-    "summary": "Helps customers understand what an AI feature does, its limitations, the data it is trained on, and the protections in place The post Autodesk puts updated AI Transparency Cards inside Assistant appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-16T15:11:59.310Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "autodesk",
-      "ai"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 9,
     "score": 11.7,
-    "freshnessScore": 3
+    "freshnessScore": 1
   },
   {
-    "title": "Autodesk pushes Forma upstream and connects Civil 3D",
-    "link": "https://aecmag.com/civil-engineering/autodesk-pushes-forma-upstream-and-connects-civil-3d",
-    "source": "AEC Magazine",
-    "pubDate": "2026-09-15T16:00:03.000Z",
-    "summary": "Autodesk launches Forma Street Design and makes Civil 3D a “Forma Connected Client” The post Autodesk pushes Forma upstream and connects Civil 3D appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-16T15:11:59.310Z",
-    "category": "BIM_ECOSYSTEM",
+    "title": "Deregistration",
+    "link": "https://www.graphisoft.com/en-us/pulse/deregistration",
+    "source": "Graphisoft Blog",
+    "pubDate": "2026-09-17T12:36:28.000Z",
+    "summary": "The post Deregistration appeared first on Graphisoft.",
+    "fetchedAt": "2026-09-19T14:01:57.943Z",
+    "category": "ARCHICAD",
     "categoryHits": [
-      "aec"
+      "graphisoft"
     ],
     "allCategories": [
-      "BIM_ECOSYSTEM"
+      "ARCHICAD"
     ],
     "keywordHits": [
-      "aec",
-      "autodesk"
+      "graphisoft"
     ],
-    "sourceScore": 3,
-    "relevanceScore": 8.1,
-    "score": 10.8,
-    "freshnessScore": 3
+    "sourceScore": 4,
+    "relevanceScore": 7,
+    "score": 9,
+    "freshnessScore": 2
   },
   {
-    "title": "Anagnost pitches ‘project intelligence’ across Autodesk",
-    "link": "https://aecmag.com/ai/anagnost-pitches-project-intelligence-across-autodesk",
-    "source": "AEC Magazine",
-    "pubDate": "2026-09-15T16:00:31.000Z",
-    "summary": "A “connected brain” at the centre of each project brings together data and decisions across Autodesk's industry clouds The post Anagnost pitches ‘project intelligence’ across Autodesk appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-16T15:11:59.310Z",
-    "category": "BIM_ECOSYSTEM",
+    "title": "Abmeldebestätigung",
+    "link": "https://www.graphisoft.com/en-us/pulse/abmeldebestatigung",
+    "source": "Graphisoft Blog",
+    "pubDate": "2026-09-17T12:13:29.000Z",
+    "summary": "The post Abmeldebestätigung appeared first on Graphisoft.",
+    "fetchedAt": "2026-09-19T14:01:57.943Z",
+    "category": "ARCHICAD",
     "categoryHits": [
-      "aec"
+      "graphisoft"
     ],
     "allCategories": [
-      "BIM_ECOSYSTEM"
+      "ARCHICAD"
     ],
     "keywordHits": [
-      "aec",
-      "autodesk"
+      "graphisoft"
     ],
-    "sourceScore": 3,
-    "relevanceScore": 8.1,
-    "score": 10.8,
-    "freshnessScore": 3
-  },
-  {
-    "title": "HP improves automation in SitePrint and Build Workspace",
-    "link": "https://aecmag.com/construction/hp-improves-automation-in-siteprint-and-build-workspace",
-    "source": "AEC Magazine",
-    "pubDate": "2026-09-15T12:00:57.000Z",
-    "summary": "Robot printer gains cloud CAD editing and ‘Smart Navigation’ while Build Workspace improves drawing management The post HP improves automation in SitePrint and Build Workspace appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-16T15:11:59.310Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "aec",
-      "automation"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 7.2,
+    "sourceScore": 4,
+    "relevanceScore": 7,
     "score": 9,
     "freshnessScore": 2
   },
@@ -203,7 +128,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-07-01T19:58:00.000Z",
     "summary": "London and New York-based startup backed by Index Ventures says its systems compress weeks of site assessment into hours The post Build raises $8.5m seed for AI-driven infrastructure due diligence platform appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-16T15:11:59.310Z",
+    "fetchedAt": "2026-09-19T14:01:59.984Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"

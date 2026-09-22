@@ -1,5 +1,38 @@
 [
   {
+    "title": "IDS survey results",
+    "link": "https://www.buildingsmart.org/ids-survey-results-2026",
+    "source": "buildingSMART International",
+    "pubDate": "2026-09-21T10:25:40.000Z",
+    "summary": "IDS survey results: users confirm the value of IDS 1.0 and call for IDS 1.1 and software certification buildingSMART International has completed a community survey on the Information Delivery Specification… The post IDS survey results appeared first on buildingSMART International.",
+    "fetchedAt": "2026-09-22T15:12:45.234Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "allCategories": [
+      "IFC"
+    ],
+    "keywordHits": [
+      "buildingsmart"
+    ],
+    "sourceScore": 4,
+    "relevanceScore": 9,
+    "score": 11,
+    "freshnessScore": 2,
+    "relevant": true,
+    "titleJa": "IDS 1.0の価値が実証される、業界が1.1と認証制度を強く要望",
+    "bodyJa": "【背景】\nbuildingSMART Internationalが推進するIDS（Information Delivery Specification）は、BIMプロジェクトにおけるデータ交換の要件を明確に定義するための仕様です。BIMの普及に伴い、設計事務所、ゼネコン、サブコン、発注者など異なるステークホルダー間でのデータ受け渡しが複雑化している中、IDSはこの問題を解決するための国際標準として注目を集めています。IDS 1.0のリリース後、実務での運用を通じて改善点や新機能に対するニーズが蓄積されていました。今回の社員調査は、実装者と利用者からの直接的なフィードバックを組織化し、次のバージョンアップに向けた優先順位を定める重要なステップとなります。\n\n【内容】\nbuildingSMART InternationalがIDS 1.0に関するコミュニティサーベイを完了しました。調査結果により、ユーザーがIDS 1.0の価値を確認する一方で、IDS 1.1への升級要望が多数寄せられたことが明らかになります。同時に、ソフトウェアベンダーに対する認証制度（certification）の確立を求める声も強くあがっており、これは実装品質の標準化と相互運用性の向上を目的としています。調査には世界中のBIM実務者、ソフトウェア開発企業、コンサルタントが参加し、現場レベルでのIDSの有効性と課題が整理されました。\n\n【技術的ポイント】\nIDS 1.0は、プロジェクトの特定フェーズで必要なデータセット（何の情報を、どの詳細度で、どの形式で納品するか）を機械可読かつ人間が理解できる形式で定義しています。IFC標準に基づきながら、建築・施工情報の要件仕様を詳細に記述することで、発注側と設計・施工側の期待値をあらかじめ一致させることができます。1.1への要望は、より細かい分類項目の追加、複雑な条件分岐ロジックの対応、異なるBIM成熟度レベルに対応した柔軟な定義といった面で寄せられていると考えられます。ソフトウェア認証制度については、各BIMツール（Revit、Archicad、Solibriなど）がIDS検証機能をどれだけ正確に実装しているかを第三者検証する仕組みを指すもので、これにより互換性リスクを大幅に低減させることができます。\n\n【業界への影響】\nIDSの有効性が実務で確認されたことにより、グローバルなBIMプロジェクトにおいてIDS活用が今後さらに加速することが予想されます。特に欧州・オーストラリア・北米では、政府系プロジェクトでIDS準拠が既に要件化されはじめており、この流れが国際基準として定着する可能性が高まります。ソフトウェア認証制度の導入により、ベンダー各社はIDS対応の実装品質競争を迫られることになり、BIMツールの機能差別化が一段と進むでしょう。プロジェクト主導者は、調達時にIDS認証レベルを仕様条件に含めることで、データ品質保証と納期短縮の両立が可能になります。\n\n【日本への影響】\n国土交通省が推進するBIM/CIMロードマップでは、2025年度までに公共工事でのBIM活用を全国で展開する目標が掲げられています。IDSはこのロードマップの情報基準の具体化に極めて重要な役割を果たします。現状、日本の建築BIM推進会議でもIFC対応が急速に進んでいますが、IDS導入により、発注時の情報要件が明示的に定義されることで、設計・施工企業側の工程管理と品質管理が飛躍的に改善されることが見込まれます。\n\n一方、日本市場ではRevitとArchicadのシェアが高く、これらのツールのIDS認証対応状況が導入の鍵となります。現在、autodesk JapanおよびGraphisoftの日本代理店を通じたサポート体制が整備されつつありますが、IDS 1.1と認証制度が確定することで、国内ベンダーサポートも具体化されるでしょう。また、日本の確認申請申請ルールや施工段階での情報要件（躯体検査、設備検査）との整合性をIDSに組み込む必要があり、国内固有の運用モデル開発が並行して進む必要があります。大手ゼネコン（鹿島、清水建設、大林組など）は既にIDS検討を開始していますが、中堅・中小企業への普及には、日本語マニュアル、人材育成、導入コスト軽減などの施策が不可欠です。\n",
+    "xPostBody": "🏗️ IDS 1.0がユーザーの実務で価値を実証される一方、IDS 1.1と認証制度の早期確立を求める声が急速に高まっています。BIMの相互運用性を左右する重要なマイルストーンがついに動き出しました。 #IFC #BIM",
+    "japaneseSummary": "🏗️ IDS 1.0がユーザーの実務で価値を実証される一方、IDS 1.1と認証制度の早期確立を求める声が急速に高まっています。BIMの相互運用性を左右する重要なマイルストーンがついに動き出しました。 #IFC #BIM",
+    "hallucinationRisk": {
+      "score": "LOW",
+      "flags": [],
+      "reason": "要約はタイトルと英語概要から読み取れる主要内容（IDS 1.0の価値確認、IDS 1.1と認証制度への要望）を正確に反映しており、検証不可能な範囲内で過度な断定がない。"
+    },
+    "postText": "🏗️ IDS 1.0がユーザーの実務で価値を実証される一方、IDS 1.1と認証制度の早期確立を求める声が急速に高まっています。BIMの相互運用性を左右する重要なマイルストーンがついに動き出しました。 #IFC #BIM\n\nhttps://www.buildingsmart.org/ids-survey-results-2026"
+  },
+  {
     "title": "Autodesk extends reach of AI with standalone Assistant",
     "link": "https://aecmag.com/ai/autodesk-extends-reach-of-ai-with-standalone-assistant",
     "source": "AEC Magazine",

@@ -1,149 +1,48 @@
 [
   {
-    "title": "HP ZBook Ultra G3a brings local AI to Revit",
-    "link": "https://aecmag.com/workstations/hp-zbook-ultra-g3a-brings-local-ai-to-revit",
-    "source": "AEC Magazine",
-    "pubDate": "2026-09-15T12:00:09.000Z",
-    "summary": "Mobile workstation paired with Perplexity’s agentic platform to run substantial AI models locally alongside Revit The post HP ZBook Ultra G3a brings local AI to Revit appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-19T14:01:59.984Z",
-    "category": "REVIT",
+    "title": "High & Medium Voltage Power transmission & distribution Project Plan out for voting.",
+    "link": "https://www.buildingsmart.org/high-medium-voltage-power-transmission-distribution-project-plan-out-for-voting",
+    "source": "buildingSMART International",
+    "pubDate": "2026-09-22T10:10:39.000Z",
+    "summary": "Vote closing date: 13 Nov 2026Report: Link This project investigates how openBIM can support high and medium voltage power transmission and distribution infrastructure across the asset lifecycle. It will develop… The post High & Medium Voltage Power transmission & distribution Project Plan out for voting. appeared first on buildingSMART International.",
+    "fetchedAt": "2026-09-22T15:12:45.234Z",
+    "category": "IFC",
     "categoryHits": [
-      "revit"
+      "openbim",
+      "buildingsmart"
     ],
     "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM",
-      "AI_DX"
+      "IFC"
     ],
     "keywordHits": [
-      "revit",
-      "aec",
-      "ai",
-      "agent"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 15.21,
-    "score": 16.38,
-    "freshnessScore": 1
-  },
-  {
-    "title": "Autodesk extends reach of AI with standalone Assistant",
-    "link": "https://aecmag.com/ai/autodesk-extends-reach-of-ai-with-standalone-assistant",
-    "source": "AEC Magazine",
-    "pubDate": "2026-09-15T16:00:34.000Z",
-    "summary": "Agent-first Assistant spans products, projects and teams to understand entire workflows The post Autodesk extends reach of AI with standalone Assistant appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-19T14:01:59.984Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "autodesk",
-      "ai",
-      "agent",
-      "workflow"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 10.8,
-    "score": 11.7,
-    "freshnessScore": 1
-  },
-  {
-    "title": "Deregistration",
-    "link": "https://www.graphisoft.com/en-us/pulse/deregistration",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-09-17T12:36:28.000Z",
-    "summary": "The post Deregistration appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-19T14:01:57.943Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "graphisoft"
+      "openbim",
+      "buildingsmart"
     ],
     "sourceScore": 4,
-    "relevanceScore": 7,
-    "score": 9,
+    "relevanceScore": 14,
+    "score": 17,
+    "freshnessScore": 3
+  },
+  {
+    "title": "IDS survey results",
+    "link": "https://www.buildingsmart.org/ids-survey-results-2026",
+    "source": "buildingSMART International",
+    "pubDate": "2026-09-21T10:25:40.000Z",
+    "summary": "IDS survey results: users confirm the value of IDS 1.0 and call for IDS 1.1 and software certification buildingSMART International has completed a community survey on the Information Delivery Specification… The post IDS survey results appeared first on buildingSMART International.",
+    "fetchedAt": "2026-09-22T15:12:45.234Z",
+    "category": "IFC",
+    "categoryHits": [
+      "buildingsmart"
+    ],
+    "allCategories": [
+      "IFC"
+    ],
+    "keywordHits": [
+      "buildingsmart"
+    ],
+    "sourceScore": 4,
+    "relevanceScore": 9,
+    "score": 11,
     "freshnessScore": 2
-  },
-  {
-    "title": "Abmeldebestätigung",
-    "link": "https://www.graphisoft.com/en-us/pulse/abmeldebestatigung",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-09-17T12:13:29.000Z",
-    "summary": "The post Abmeldebestätigung appeared first on Graphisoft.",
-    "fetchedAt": "2026-09-19T14:01:57.943Z",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD"
-    ],
-    "keywordHits": [
-      "graphisoft"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 7,
-    "score": 9,
-    "freshnessScore": 2
-  },
-  {
-    "title": "[Nemetschek] Allplan Trend Report Ai And Bim Are Converging Shape Future Construction",
-    "link": "https://www.nemetschek.com/en/news-media/allplan-trend-report-ai-and-bim-are-converging-shape-future-construction",
-    "pubDate": "",
-    "summary": "Allplan Trend Report Ai And Bim Are Converging Shape Future Construction",
-    "source": "Nemetschek Newsroom",
-    "category": "BIM_AI",
-    "categoryHits": [
-      "bim",
-      "ai"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
-    ],
-    "keywordHits": [
-      "bim",
-      "ai"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 8,
-    "score": 8,
-    "freshnessScore": 0
-  },
-  {
-    "title": "Build raises $8.5m seed for AI-driven infrastructure due diligence platform",
-    "link": "https://aecmag.com/ai/build-raises-8-5m-seed-for-ai-driven-infrastructure-due-diligence-platform",
-    "source": "AEC Magazine",
-    "pubDate": "2026-07-01T19:58:00.000Z",
-    "summary": "London and New York-based startup backed by Index Ventures says its systems compress weeks of site assessment into hours The post Build raises $8.5m seed for AI-driven infrastructure due diligence platform appeared first on AEC Magazine.",
-    "fetchedAt": "2026-09-19T14:01:59.984Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 6.3,
-    "score": 6.3,
-    "freshnessScore": 0
   }
 ]

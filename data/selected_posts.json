@@ -5,7 +5,7 @@
     "source": "buildingSMART International",
     "pubDate": "2026-09-22T10:10:39.000Z",
     "summary": "Vote closing date: 13 Nov 2026Report: Link This project investigates how openBIM can support high and medium voltage power transmission and distribution infrastructure across the asset lifecycle. It will develop… The post High & Medium Voltage Power transmission & distribution Project Plan out for voting. appeared first on buildingSMART International.",
-    "fetchedAt": "2026-09-22T15:12:45.234Z",
+    "fetchedAt": "2026-09-25T15:39:00.296Z",
     "category": "IFC",
     "categoryHits": [
       "openbim",
@@ -20,29 +20,7 @@
     ],
     "sourceScore": 4,
     "relevanceScore": 14,
-    "score": 17,
-    "freshnessScore": 3
-  },
-  {
-    "title": "IDS survey results",
-    "link": "https://www.buildingsmart.org/ids-survey-results-2026",
-    "source": "buildingSMART International",
-    "pubDate": "2026-09-21T10:25:40.000Z",
-    "summary": "IDS survey results: users confirm the value of IDS 1.0 and call for IDS 1.1 and software certification buildingSMART International has completed a community survey on the Information Delivery Specification… The post IDS survey results appeared first on buildingSMART International.",
-    "fetchedAt": "2026-09-22T15:12:45.234Z",
-    "category": "IFC",
-    "categoryHits": [
-      "buildingsmart"
-    ],
-    "allCategories": [
-      "IFC"
-    ],
-    "keywordHits": [
-      "buildingsmart"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 9,
-    "score": 11,
-    "freshnessScore": 2
+    "score": 15,
+    "freshnessScore": 1
   }
 ]

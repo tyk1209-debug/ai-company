@@ -5,7 +5,7 @@
     "source": "buildingSMART International",
     "pubDate": "2026-09-22T10:10:39.000Z",
     "summary": "Vote closing date: 13 Nov 2026Report: Link This project investigates how openBIM can support high and medium voltage power transmission and distribution infrastructure across the asset lifecycle. It will develop… The post High & Medium Voltage Power transmission & distribution Project Plan out for voting. appeared first on buildingSMART International.",
-    "fetchedAt": "2026-09-28T18:17:45.040Z",
+    "fetchedAt": "2026-10-01T17:10:32.675Z",
     "category": "IFC",
     "categoryHits": [
       "openbim",
@@ -20,7 +20,133 @@
     ],
     "sourceScore": 4,
     "relevanceScore": 14,
-    "score": 15,
-    "freshnessScore": 1
+    "score": 14,
+    "freshnessScore": 0
+  },
+  {
+    "title": "AI and the BIM workstation: what if the LLM lives on your laptop?",
+    "link": "https://aecmag.com/workstations/ai-and-the-bim-workstation-what-if-the-llm-lives-on-your-laptop",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-29T19:07:22.000Z",
+    "summary": "What the AMD AI Ryzen AI Max Pro processor in the HP ZBook Ultra G3a can do for AEC workflows The post AI and the BIM workstation: what if the LLM lives on your laptop? appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-01T17:10:34.010Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai",
+      "llm",
+      "workflow"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 12,
+    "score": 14,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Endra’s AI turns a week of design into hours",
+    "link": "https://aecmag.com/mep/endras-ai-turns-a-week-of-design-into-hours",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-01T15:44:38.000Z",
+    "summary": "Endra says Power Studio cuts a week of electrical design work to about three hours The post Endra’s AI turns a week of design into hours appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-01T17:10:34.010Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 6.3,
+    "score": 9,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Rayon raises €10m for 3D and agentic AI",
+    "link": "https://aecmag.com/cad/rayon-raises-e10m-for-3d-and-agentic-ai",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-29T11:13:38.000Z",
+    "summary": "Cloud CAD developer plans to expand beyond its 2D roots with V4 later this year The post Rayon raises €10m for 3D and agentic AI appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-01T17:10:34.010Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai",
+      "agent"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 7.2,
+    "score": 9,
+    "freshnessScore": 2
+  },
+  {
+    "title": "AMD to buy World Labs for $8.2bn",
+    "link": "https://aecmag.com/geospatial/amd-to-buy-world-labs-for-8-2bn",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-29T07:36:06.000Z",
+    "summary": "Deal brings spatial AI research into AMD's hardware business. The post AMD to buy World Labs for $8.2bn appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-01T17:10:34.010Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 6.3,
+    "score": 8.1,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Accenture forms Accenture Construct",
+    "link": "https://aecmag.com/construction/accenture-forms-accenture-construct",
+    "source": "AEC Magazine",
+    "pubDate": "2026-09-29T07:43:20.000Z",
+    "summary": "Aimed at owners of large infrastructure projects and pitched as a single accountable partner, supported by AI and a shared data platform The post Accenture forms Accenture Construct appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-01T17:10:34.010Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 6.3,
+    "score": 8.1,
+    "freshnessScore": 2
   }
 ]

@@ -1,62 +1,224 @@
 [
   {
-    "title": "Lumion launches Axogram for architectural diagramming",
-    "link": "https://aecmag.com/visualisation/lumion-launches-axogram-for-architectural-diagramming",
+    "title": "BIMlogiq boosts Argus AI platform for Revit",
+    "link": "https://aecmag.com/bim/bimlogiq-argus-ai-platform-launches-for-revit",
     "source": "AEC Magazine",
-    "pubDate": "2026-10-02T07:42:47.000Z",
-    "summary": "Generates architectural diagrams that stay connected to your SketchUp, Revit or Archicad CAD / BIM model The post Lumion launches Axogram for architectural diagramming appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-04T15:32:03.138Z",
+    "pubDate": "2026-10-05T15:34:31.000Z",
+    "summary": "Multi-agent platform designed to automate BIM workflows from the creation of Revit families to rebar modelling The post BIMlogiq boosts Argus AI platform for Revit appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-07T17:34:31.655Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
     ],
     "allCategories": [
       "REVIT",
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "revit",
+      "bim",
+      "aec",
+      "ai",
+      "agent",
+      "workflow"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 19.89,
+    "score": 22.23,
+    "freshnessScore": 2
+  },
+  {
+    "title": "QA/QC platform links BIM models and drawing sets",
+    "link": "https://aecmag.com/bim/qa-qc-platform-links-bim-models-and-drawing-sets",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-06T08:15:38.000Z",
+    "summary": "In Structured AI, a problem found on a drawing can now be traced to the element in the Revit model The post QA/QC platform links BIM models and drawing sets appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-07T17:34:31.655Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "revit",
+      "bim",
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 17.55,
+    "score": 19.89,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Graphisoft unveils Archicad 30 and shares AI roadmap",
+    "link": "https://aecmag.com/bim/graphisoft-unveils-archicad-30-and-shares-ai-roadmap",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-07T15:37:38.000Z",
+    "summary": "Graphisoft introduces workflow improvements, expanded AI ambitions, a new Max subscription and connected design tools The post Graphisoft unveils Archicad 30 and shares AI roadmap appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-07T17:34:31.655Z",
+    "category": "ARCHICAD",
+    "categoryHits": [
+      "archicad",
+      "graphisoft"
+    ],
+    "allCategories": [
       "ARCHICAD",
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "archicad",
+      "aec",
+      "graphisoft",
+      "ai",
+      "workflow"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 16,
+    "score": 19,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Pirros adds AI-powered QA/QC to its Revit-centric platform",
+    "link": "https://aecmag.com/bim/pirros-adds-ai-powered-qa-qc-to-its-revit-centric-platform",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-07T05:39:45.000Z",
+    "summary": "Allows users to check entire Revit projects against codes, standards, specifications, and model performance The post Pirros adds AI-powered QA/QC to its Revit-centric platform appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-07T17:34:31.655Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "revit",
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 14.04,
+    "score": 17.55,
+    "freshnessScore": 3
+  },
+  {
+    "title": "Vectorworks 2027 targets real-world workflows",
+    "link": "https://aecmag.com/bim/vectorworks-2027-targets-real-world-workflows",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-06T11:29:20.000Z",
+    "summary": "New release promises enhanced performance, better visualisation, expanded support for Revit and more The post Vectorworks 2027 targets real-world workflows appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-07T17:34:31.655Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
       "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
       "revit",
-      "archicad",
-      "bim",
-      "aec"
+      "aec",
+      "workflow"
     ],
     "sourceScore": 3,
-    "relevanceScore": 22.23,
-    "score": 24.57,
+    "relevanceScore": 14.04,
+    "score": 16.38,
     "freshnessScore": 2
   },
   {
-    "title": "High & Medium Voltage Power transmission & distribution Project Plan out for voting.",
-    "link": "https://www.buildingsmart.org/high-medium-voltage-power-transmission-distribution-project-plan-out-for-voting",
-    "source": "buildingSMART International",
-    "pubDate": "2026-09-22T10:10:39.000Z",
-    "summary": "Vote closing date: 13 Nov 2026Report: Link This project investigates how openBIM can support high and medium voltage power transmission and distribution infrastructure across the asset lifecycle. It will develop… The post High & Medium Voltage Power transmission & distribution Project Plan out for voting. appeared first on buildingSMART International.",
-    "fetchedAt": "2026-10-04T15:32:02.565Z",
-    "category": "IFC",
+    "title": "Kora Studio 1.0 launches for façade design",
+    "link": "https://aecmag.com/bim/kora-studio-1-0-launches-for-facade-design",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-05T08:53:10.000Z",
+    "summary": "Revit plug-in said to enable junior architects to design complete façades in minutes The post Kora Studio 1.0 launches for façade design appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-07T17:34:31.655Z",
+    "category": "REVIT",
     "categoryHits": [
-      "openbim",
-      "buildingsmart"
+      "revit"
     ],
     "allCategories": [
-      "IFC"
+      "REVIT",
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
-      "openbim",
-      "buildingsmart"
+      "revit",
+      "aec"
     ],
-    "sourceScore": 4,
-    "relevanceScore": 14,
-    "score": 14,
-    "freshnessScore": 0
+    "sourceScore": 3,
+    "relevanceScore": 12.87,
+    "score": 15.21,
+    "freshnessScore": 2
   },
   {
-    "title": "Formas.AI unveils native agentic 3D modeller",
-    "link": "https://aecmag.com/cad/formas-ai-unveils-native-agentic-3d-modeller",
+    "title": "Volve AI to help automate tendering and pre-construction tasks",
+    "link": "https://aecmag.com/construction/volve-ai-to-help-automate-tendering-and-pre-construction-tasks",
     "source": "AEC Magazine",
-    "pubDate": "2026-10-02T11:04:09.000Z",
-    "summary": "Cartesian billed as a native agentic 3D modeller for the physical world, where editable geometry meets spatial design reasoning The post Formas.AI unveils native agentic 3D modeller appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-04T15:32:03.138Z",
+    "pubDate": "2026-10-06T12:30:34.000Z",
+    "summary": "New orchestration layer enables contractors to more easily compare information across specifications, drawings and BIM models The post Volve AI to help automate tendering and pre-construction tasks appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-07T17:34:31.655Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 10,
+    "score": 12,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Buildcheck raises $12m in Series A",
+    "link": "https://aecmag.com/construction/buildcheck-raises-12m-in-series-a",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-07T08:12:43.000Z",
+    "summary": "Contractor-focused “drawing intelligence” platform uses vision-based AI for drawing reviews The post Buildcheck raises $12m in Series A appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-07T17:34:31.655Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 6.3,
+    "score": 9,
+    "freshnessScore": 3
+  },
+  {
+    "title": "OpenSpace AI to help firms make faster decisions on site",
+    "link": "https://aecmag.com/reality-capture-modelling/openspace-ai-to-help-firms-make-faster-decisions-on-site",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-05T08:17:50.000Z",
+    "summary": "Reality capture platform includes AI agents that can see, understand, and act on job site data The post OpenSpace AI to help firms make faster decisions on site appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-07T17:34:31.655Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -74,5 +236,29 @@
     "relevanceScore": 7.2,
     "score": 9,
     "freshnessScore": 2
+  },
+  {
+    "title": "vBrief aims to take control of project information",
+    "link": "https://aecmag.com/data-management/vbrief-aims-to-take-control-of-project-information",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-07T07:17:23.000Z",
+    "summary": "AEC platform uses AI to help to stop valuable information “drowning in inboxes and folders” The post vBrief aims to take control of project information appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-07T17:34:31.656Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 6.3,
+    "score": 9,
+    "freshnessScore": 3
   }
 ]

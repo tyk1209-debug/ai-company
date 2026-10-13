@@ -1,94 +1,35 @@
 [
   {
-    "title": "BIMlogiq boosts Argus AI platform for Revit",
-    "link": "https://aecmag.com/bim/bimlogiq-argus-ai-platform-launches-for-revit",
-    "source": "AEC Magazine",
-    "pubDate": "2026-10-05T15:34:31.000Z",
-    "summary": "Multi-agent platform designed to automate BIM workflows from the creation of Revit families to rebar modelling The post BIMlogiq boosts Argus AI platform for Revit appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-10T15:58:31.797Z",
-    "category": "REVIT",
+    "title": "The buildingSMART openBIM Awards 2026 – Winners Announced",
+    "link": "https://www.buildingsmart.org/the-buildingsmart-openbim-awards-2026-winners-announced",
+    "source": "buildingSMART International",
+    "pubDate": "2026-10-12T11:47:41.000Z",
+    "summary": "Tokyo, Japan – October 12, 2026 The winners of the buildingSMART openBIM Awards 2026 were announced during a celebratory ceremony on Thursday 8 October, as part of the closing plenary… The post The buildingSMART openBIM Awards 2026 – Winners Announced appeared first on buildingSMART International.",
+    "fetchedAt": "2026-10-13T17:50:41.209Z",
+    "category": "IFC",
     "categoryHits": [
-      "revit"
+      "openbim",
+      "buildingsmart"
     ],
     "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
+      "IFC"
     ],
     "keywordHits": [
-      "revit",
-      "bim",
-      "aec",
-      "ai",
-      "agent",
-      "workflow"
+      "openbim",
+      "buildingsmart"
     ],
-    "sourceScore": 3,
-    "relevanceScore": 19.89,
-    "score": 21.06,
-    "freshnessScore": 1
+    "sourceScore": 4,
+    "relevanceScore": 14,
+    "score": 16,
+    "freshnessScore": 2
   },
   {
-    "title": "QA/QC platform links BIM models and drawing sets",
-    "link": "https://aecmag.com/bim/qa-qc-platform-links-bim-models-and-drawing-sets",
+    "title": "IES Sync for Revit launches",
+    "link": "https://aecmag.com/sustainability/ies-sync-for-revit-launches",
     "source": "AEC Magazine",
-    "pubDate": "2026-10-06T08:15:38.000Z",
-    "summary": "In Structured AI, a problem found on a drawing can now be traced to the element in the Revit model The post QA/QC platform links BIM models and drawing sets appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-10T15:58:31.797Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
-    ],
-    "keywordHits": [
-      "revit",
-      "bim",
-      "aec",
-      "ai"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 17.55,
-    "score": 18.72,
-    "freshnessScore": 1
-  },
-  {
-    "title": "Vectorworks 2027 targets real-world workflows",
-    "link": "https://aecmag.com/bim/vectorworks-2027-targets-real-world-workflows",
-    "source": "AEC Magazine",
-    "pubDate": "2026-10-06T11:29:20.000Z",
-    "summary": "New release promises enhanced performance, better visualisation, expanded support for Revit and more The post Vectorworks 2027 targets real-world workflows appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-10T15:58:31.797Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "aec",
-      "workflow"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 14.04,
-    "score": 15.21,
-    "freshnessScore": 1
-  },
-  {
-    "title": "Kora Studio 1.0 launches for façade design",
-    "link": "https://aecmag.com/bim/kora-studio-1-0-launches-for-facade-design",
-    "source": "AEC Magazine",
-    "pubDate": "2026-10-05T08:53:10.000Z",
-    "summary": "Revit plug-in said to enable junior architects to design complete façades in minutes The post Kora Studio 1.0 launches for façade design appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-10T15:58:31.797Z",
+    "pubDate": "2026-10-11T07:26:45.000Z",
+    "summary": "Connection between Revit and IES VE smooths path from building design to performance simulation The post IES Sync for Revit launches appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-13T17:50:21.909Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -103,8 +44,32 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 12.87,
-    "score": 14.04,
-    "freshnessScore": 1
+    "score": 15.21,
+    "freshnessScore": 2
+  },
+  {
+    "title": "High & Medium Voltage Power transmission & distribution Project Plan out for voting.",
+    "link": "https://www.buildingsmart.org/high-medium-voltage-power-transmission-distribution-project-plan-out-for-voting",
+    "source": "buildingSMART International",
+    "pubDate": "2026-09-22T10:10:39.000Z",
+    "summary": "Vote closing date: 13 Nov 2026Report: Link This project investigates how openBIM can support high and medium voltage power transmission and distribution infrastructure across the asset lifecycle. It will develop… The post High & Medium Voltage Power transmission & distribution Project Plan out for voting. appeared first on buildingSMART International.",
+    "fetchedAt": "2026-10-13T17:50:41.209Z",
+    "category": "IFC",
+    "categoryHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "allCategories": [
+      "IFC"
+    ],
+    "keywordHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "sourceScore": 4,
+    "relevanceScore": 14,
+    "score": 14,
+    "freshnessScore": 0
   },
   {
     "title": "[Nemetschek] Graphisoft Unveils 2026 Product Portfolio Led Archicad And Ai Enabled Design",
@@ -132,28 +97,57 @@
     "freshnessScore": 0
   },
   {
-    "title": "OpenSpace AI to help firms make faster decisions on site",
-    "link": "https://aecmag.com/reality-capture-modelling/openspace-ai-to-help-firms-make-faster-decisions-on-site",
+    "title": "GPT-6 Astra and the future of BIM modelling",
+    "link": "https://aecmag.com/bim/gpt-6-astra-and-the-future-of-bim-modelling",
     "source": "AEC Magazine",
-    "pubDate": "2026-10-05T08:17:50.000Z",
-    "summary": "Reality capture platform includes AI agents that can see, understand, and act on job site data The post OpenSpace AI to help firms make faster decisions on site appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-10T15:58:31.797Z",
-    "category": "BIM_ECOSYSTEM",
+    "pubDate": "2026-10-11T06:00:00.000Z",
+    "summary": "OpenAI’s new AI model shows promise as a 3D modeller, but how might it fit into a design process subject to constant change? The post GPT-6 Astra and the future of BIM modelling appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-13T17:50:21.909Z",
+    "category": "BIM_AI",
     "categoryHits": [
-      "aec"
+      "bim",
+      "ai"
     ],
     "allCategories": [
       "BIM_ECOSYSTEM",
-      "AI_DX"
+      "AI_DX",
+      "BIM_AI"
     ],
     "keywordHits": [
+      "bim",
       "aec",
-      "ai",
-      "agent"
+      "ai"
     ],
     "sourceScore": 3,
-    "relevanceScore": 7.2,
-    "score": 8.1,
-    "freshnessScore": 1
+    "relevanceScore": 10,
+    "score": 12,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Why AI should influence your next AEC workstation purchase",
+    "link": "https://aecmag.com/sponsored-content/why-ai-should-influence-your-next-aec-workstation-purchase",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-12T16:58:40.000Z",
+    "summary": "CPU and GPU power for CAD, BIM and viz are no longer the only benchmarks. AI matters too. The post Why AI should influence your next AEC workstation purchase appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-13T17:50:21.909Z",
+    "category": "BIM_AI",
+    "categoryHits": [
+      "bim",
+      "ai"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "bim",
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 10,
+    "score": 12,
+    "freshnessScore": 2
   }
 ]

@@ -1,100 +1,55 @@
 [
   {
-    "title": "The buildingSMART openBIM Awards 2026 – Winners Announced",
-    "link": "https://www.buildingsmart.org/the-buildingsmart-openbim-awards-2026-winners-announced",
-    "source": "buildingSMART International",
-    "pubDate": "2026-10-12T11:47:41.000Z",
-    "summary": "Tokyo, Japan – October 12, 2026 The winners of the buildingSMART openBIM Awards 2026 were announced during a celebratory ceremony on Thursday 8 October, as part of the closing plenary… The post The buildingSMART openBIM Awards 2026 – Winners Announced appeared first on buildingSMART International.",
-    "fetchedAt": "2026-10-13T17:50:41.209Z",
-    "category": "IFC",
-    "categoryHits": [
-      "openbim",
-      "buildingsmart"
-    ],
-    "allCategories": [
-      "IFC"
-    ],
-    "keywordHits": [
-      "openbim",
-      "buildingsmart"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 14,
-    "score": 16,
-    "freshnessScore": 2
-  },
-  {
-    "title": "IES Sync for Revit launches",
-    "link": "https://aecmag.com/sustainability/ies-sync-for-revit-launches",
+    "title": "AEC Magazine September / October 2026",
+    "link": "https://aecmag.com/technology/aec-magazine-september-october-2026-out",
     "source": "AEC Magazine",
-    "pubDate": "2026-10-11T07:26:45.000Z",
-    "summary": "Connection between Revit and IES VE smooths path from building design to performance simulation The post IES Sync for Revit launches appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-13T17:50:21.909Z",
+    "pubDate": "2026-10-15T09:53:35.000Z",
+    "summary": "We explore Motif, the agent-native BIM platform challenging Revit’s ageing architecture The post AEC Magazine September / October 2026 appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-16T15:03:10.778Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
     ],
     "allCategories": [
       "REVIT",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "aec"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 12.87,
-    "score": 15.21,
-    "freshnessScore": 2
-  },
-  {
-    "title": "High & Medium Voltage Power transmission & distribution Project Plan out for voting.",
-    "link": "https://www.buildingsmart.org/high-medium-voltage-power-transmission-distribution-project-plan-out-for-voting",
-    "source": "buildingSMART International",
-    "pubDate": "2026-09-22T10:10:39.000Z",
-    "summary": "Vote closing date: 13 Nov 2026Report: Link This project investigates how openBIM can support high and medium voltage power transmission and distribution infrastructure across the asset lifecycle. It will develop… The post High & Medium Voltage Power transmission & distribution Project Plan out for voting. appeared first on buildingSMART International.",
-    "fetchedAt": "2026-10-13T17:50:41.209Z",
-    "category": "IFC",
-    "categoryHits": [
-      "openbim",
-      "buildingsmart"
-    ],
-    "allCategories": [
-      "IFC"
-    ],
-    "keywordHits": [
-      "openbim",
-      "buildingsmart"
-    ],
-    "sourceScore": 4,
-    "relevanceScore": 14,
-    "score": 14,
-    "freshnessScore": 0
-  },
-  {
-    "title": "[Nemetschek] Graphisoft Unveils 2026 Product Portfolio Led Archicad And Ai Enabled Design",
-    "link": "https://www.nemetschek.com/en/news-media/graphisoft-unveils-2026-product-portfolio-led-archicad-and-ai-enabled-design",
-    "pubDate": "",
-    "summary": "Graphisoft Unveils 2026 Product Portfolio Led Archicad And Ai Enabled Design",
-    "source": "Nemetschek Newsroom",
-    "category": "ARCHICAD",
-    "categoryHits": [
-      "archicad",
-      "graphisoft"
-    ],
-    "allCategories": [
-      "ARCHICAD",
+      "BIM_ECOSYSTEM",
       "AI_DX"
     ],
     "keywordHits": [
-      "archicad",
-      "graphisoft",
+      "revit",
+      "bim",
+      "aec",
+      "agent"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 17.55,
+    "score": 19.89,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Autodesk’s most ambitious AI play yet",
+    "link": "https://aecmag.com/ai/autodesks-most-ambitious-ai-play-yet",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-16T14:24:48.000Z",
+    "summary": "Autodesk’s AI vision goes beyond faster tools: a connected Assistant that decides how to solve tasks for you The post Autodesk’s most ambitious AI play yet appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-16T15:03:10.778Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk",
       "ai"
     ],
-    "sourceScore": 4,
-    "relevanceScore": 13,
-    "score": 13,
-    "freshnessScore": 0
+    "sourceScore": 3,
+    "relevanceScore": 9,
+    "score": 11.7,
+    "freshnessScore": 3
   },
   {
     "title": "GPT-6 Astra and the future of BIM modelling",
@@ -102,7 +57,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-10-11T06:00:00.000Z",
     "summary": "OpenAI’s new AI model shows promise as a 3D modeller, but how might it fit into a design process subject to constant change? The post GPT-6 Astra and the future of BIM modelling appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-13T17:50:21.909Z",
+    "fetchedAt": "2026-10-16T15:03:10.778Z",
     "category": "BIM_AI",
     "categoryHits": [
       "bim",
@@ -120,34 +75,53 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 10,
-    "score": 12,
-    "freshnessScore": 2
+    "score": 11,
+    "freshnessScore": 1
   },
   {
-    "title": "Why AI should influence your next AEC workstation purchase",
-    "link": "https://aecmag.com/sponsored-content/why-ai-should-influence-your-next-aec-workstation-purchase",
-    "source": "AEC Magazine",
-    "pubDate": "2026-10-12T16:58:40.000Z",
-    "summary": "CPU and GPU power for CAD, BIM and viz are no longer the only benchmarks. AI matters too. The post Why AI should influence your next AEC workstation purchase appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-13T17:50:21.909Z",
-    "category": "BIM_AI",
+    "title": "[国交省BIM] 第25回建築BIM環境整備部会を10月28日に開催します。",
+    "link": "https://www.mlit.go.jp/jutakukentiku/build/jutakukentiku_house_tk_000239.html",
+    "pubDate": "2026-10-16T00:00:00.000Z",
+    "summary": "第25回建築BIM環境整備部会を10月28日に開催します。",
+    "source": "国土交通省 建築BIM推進会議",
+    "category": "BIM_ECOSYSTEM",
     "categoryHits": [
-      "bim",
-      "ai"
+      "bim"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "bim"
+    ],
+    "sourceScore": 5,
+    "relevanceScore": 7.2,
+    "score": 9.9,
+    "freshnessScore": 3
+  },
+  {
+    "title": "How local AI is transforming AEC workflows",
+    "link": "https://aecmag.com/sponsored-content/how-local-ai-is-transforming-aec-workflows",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-15T09:04:20.000Z",
+    "summary": "AI models running on workstations are helping AEC firms automate workflows while controlling data and costs The post How local AI is transforming AEC workflows appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-16T15:03:10.779Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
     ],
     "allCategories": [
       "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
+      "AI_DX"
     ],
     "keywordHits": [
-      "bim",
       "aec",
-      "ai"
+      "ai",
+      "workflow"
     ],
     "sourceScore": 3,
-    "relevanceScore": 10,
-    "score": 12,
+    "relevanceScore": 7.2,
+    "score": 9,
     "freshnessScore": 2
   }
 ]

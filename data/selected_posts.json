@@ -1,11 +1,40 @@
 [
   {
+    "title": "Boosting graphics performance in Revit and AutoCAD – Special Report",
+    "link": "https://aecmag.com/sponsored-content/boosting-revit-autocad-2027-special-report",
+    "source": "AEC Magazine",
+    "pubDate": "2026-10-19T09:45:25.000Z",
+    "summary": "Accelerate CAD / BIM workflows with HP Z Workstations powered by the AMD Ryzen™ AI Max PRO processor The post Boosting graphics performance in Revit and AutoCAD – Special Report appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-19T17:13:56.139Z",
+    "category": "REVIT",
+    "categoryHits": [
+      "revit"
+    ],
+    "allCategories": [
+      "REVIT",
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
+    ],
+    "keywordHits": [
+      "revit",
+      "bim",
+      "aec",
+      "ai",
+      "workflow"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 18.72,
+    "score": 22.23,
+    "freshnessScore": 3
+  },
+  {
     "title": "AEC Magazine September / October 2026",
     "link": "https://aecmag.com/technology/aec-magazine-september-october-2026-out",
     "source": "AEC Magazine",
     "pubDate": "2026-10-15T09:53:35.000Z",
     "summary": "We explore Motif, the agent-native BIM platform challenging Revit’s ageing architecture The post AEC Magazine September / October 2026 appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-16T15:03:10.778Z",
+    "fetchedAt": "2026-10-19T17:13:56.139Z",
     "category": "REVIT",
     "categoryHits": [
       "revit"
@@ -23,59 +52,7 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 17.55,
-    "score": 19.89,
-    "freshnessScore": 2
-  },
-  {
-    "title": "Autodesk’s most ambitious AI play yet",
-    "link": "https://aecmag.com/ai/autodesks-most-ambitious-ai-play-yet",
-    "source": "AEC Magazine",
-    "pubDate": "2026-10-16T14:24:48.000Z",
-    "summary": "Autodesk’s AI vision goes beyond faster tools: a connected Assistant that decides how to solve tasks for you The post Autodesk’s most ambitious AI play yet appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-16T15:03:10.778Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "autodesk",
-      "ai"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 9,
-    "score": 11.7,
-    "freshnessScore": 3
-  },
-  {
-    "title": "GPT-6 Astra and the future of BIM modelling",
-    "link": "https://aecmag.com/bim/gpt-6-astra-and-the-future-of-bim-modelling",
-    "source": "AEC Magazine",
-    "pubDate": "2026-10-11T06:00:00.000Z",
-    "summary": "OpenAI’s new AI model shows promise as a 3D modeller, but how might it fit into a design process subject to constant change? The post GPT-6 Astra and the future of BIM modelling appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-16T15:03:10.778Z",
-    "category": "BIM_AI",
-    "categoryHits": [
-      "bim",
-      "ai"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
-    ],
-    "keywordHits": [
-      "bim",
-      "aec",
-      "ai"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 10,
-    "score": 11,
+    "score": 18.72,
     "freshnessScore": 1
   },
   {
@@ -96,32 +73,7 @@
     ],
     "sourceScore": 5,
     "relevanceScore": 7.2,
-    "score": 9.9,
-    "freshnessScore": 3
-  },
-  {
-    "title": "How local AI is transforming AEC workflows",
-    "link": "https://aecmag.com/sponsored-content/how-local-ai-is-transforming-aec-workflows",
-    "source": "AEC Magazine",
-    "pubDate": "2026-10-15T09:04:20.000Z",
-    "summary": "AI models running on workstations are helping AEC firms automate workflows while controlling data and costs The post How local AI is transforming AEC workflows appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-16T15:03:10.779Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai",
-      "workflow"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 7.2,
-    "score": 9,
-    "freshnessScore": 2
+    "score": 8.1,
+    "freshnessScore": 1
   }
 ]

@@ -1,37 +1,11 @@
 [
   {
-    "title": "【工学院大学】「BIM×AI 建築人材養成プログラム」受講申込受付中（2026年11月30日開講）",
-    "link": "https://bimgate.jp/knowledge/3532",
-    "source": "BIMゲート",
-    "pubDate": "2026-10-21T05:09:10.000Z",
-    "summary": "プログラム概要 工学院大学 デジタル構築環境研究センター（DigiBEセンター）が、建築実務者向けのオンデマンド講座「BIM×AI 建築人材養成プログラム」を2026年11月30日（月）に開講します。 本プログラムは、B […]",
-    "fetchedAt": "2026-10-25T14:38:16.308Z",
-    "category": "BIM_AI",
-    "categoryHits": [
-      "bim",
-      "ai"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
-    ],
-    "keywordHits": [
-      "bim",
-      "ai"
-    ],
-    "sourceScore": 5,
-    "relevanceScore": 9,
-    "score": 10,
-    "freshnessScore": 1
-  },
-  {
-    "title": "Qonic edges towards BIM authoring",
-    "link": "https://aecmag.com/bim/qonic-edges-towards-bim-authoring",
+    "title": "Chaos continues to expand Enscape beyond arch viz",
+    "link": "https://aecmag.com/visualisation/chaos-continues-to-expand-enscape-beyond-arch-viz",
     "source": "AEC Magazine",
-    "pubDate": "2026-10-22T18:37:23.000Z",
-    "summary": "Users can start to build complete BIM models from scratch The post Qonic edges towards BIM authoring appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-25T14:38:18.478Z",
+    "pubDate": "2026-10-28T11:02:39.000Z",
+    "summary": "Vyssuals acquisition to add live BIM data insights to Enscape as Chaos broadens its role in architectural design The post Chaos continues to expand Enscape beyond arch viz appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-28T16:52:15.013Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "bim",
@@ -46,27 +20,26 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 8.1,
-    "score": 9.9,
-    "freshnessScore": 2
+    "score": 10.8,
+    "freshnessScore": 3
   },
   {
-    "title": "Revizto: putting the ‘I’ in BIM to work",
-    "link": "https://aecmag.com/collaboration/revizto-putting-the-i-in-bim-to-work",
+    "title": "Autodesk: beyond the seat, the meter",
+    "link": "https://aecmag.com/ai/autodesk-beyond-the-seat-the-meter",
     "source": "AEC Magazine",
-    "pubDate": "2026-10-22T18:43:08.000Z",
-    "summary": "Revizto’s MCP server is packaged with reusable Claude skills modelled on how project teams actually work The post Revizto: putting the ‘I’ in BIM to work appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-25T14:38:18.478Z",
+    "pubDate": "2026-10-27T12:13:38.000Z",
+    "summary": "How much of the new AEC computing stack does Autodesk intend to own, and how many meters does it intend to attach to it? The post Autodesk: beyond the seat, the meter appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-28T16:52:15.013Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
-      "bim",
       "aec"
     ],
     "allCategories": [
       "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
-      "bim",
-      "aec"
+      "aec",
+      "autodesk"
     ],
     "sourceScore": 3,
     "relevanceScore": 8.1,
@@ -74,12 +47,12 @@
     "freshnessScore": 2
   },
   {
-    "title": "AI’s next bottleneck is the engineer’s desk",
-    "link": "https://aecmag.com/automation/ais-next-bottleneck-is-the-engineers-desk",
+    "title": "Allplan Max delivers engineering AI across portfolio",
+    "link": "https://aecmag.com/bim/allplan-max-delivers-engineering-ai-across-portfolio",
     "source": "AEC Magazine",
-    "pubDate": "2026-10-22T18:51:23.000Z",
-    "summary": "Nomic is helping Arcadis automate engineering reviews, but AI’s next bottleneck may be the checking The post AI’s next bottleneck is the engineer’s desk appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-25T14:38:18.478Z",
+    "pubDate": "2026-10-28T15:38:23.000Z",
+    "summary": "Purpose-built engineering AI helps firms automate repetitive work and get “expert guidance” The post Allplan Max delivers engineering AI across portfolio appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-28T16:52:15.013Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -94,32 +67,8 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 6.3,
-    "score": 8.1,
-    "freshnessScore": 2
-  },
-  {
-    "title": "Compliance software in AEC",
-    "link": "https://aecmag.com/cad/compliance-software-in-aec",
-    "source": "AEC Magazine",
-    "pubDate": "2026-10-22T18:57:09.000Z",
-    "summary": "The growing wave of AI tools that help AEC professionals navigate complex building codes and regulations The post Compliance software in AEC appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-25T14:38:18.478Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 6.3,
-    "score": 8.1,
-    "freshnessScore": 2
+    "score": 9,
+    "freshnessScore": 3
   },
   {
     "title": "[国交省BIM] 第25回建築BIM環境整備部会を10月28日に開催します。",

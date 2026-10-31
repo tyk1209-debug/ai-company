@@ -1,49 +1,31 @@
 [
   {
-    "title": "Chaos continues to expand Enscape beyond arch viz",
-    "link": "https://aecmag.com/visualisation/chaos-continues-to-expand-enscape-beyond-arch-viz",
+    "title": "Snaptrude Agent launches for BIM workflows",
+    "link": "https://aecmag.com/bim/snaptrude-agent-launches-for-bim-workflows",
     "source": "AEC Magazine",
-    "pubDate": "2026-10-28T11:02:39.000Z",
-    "summary": "Vyssuals acquisition to add live BIM data insights to Enscape as Chaos broadens its role in architectural design The post Chaos continues to expand Enscape beyond arch viz appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-28T16:52:15.013Z",
-    "category": "BIM_ECOSYSTEM",
+    "pubDate": "2026-10-29T15:38:39.000Z",
+    "summary": "AI agent supports workflows from concept design and BIM modelling, to MEP and construction documentation The post Snaptrude Agent launches for BIM workflows appeared first on AEC Magazine.",
+    "fetchedAt": "2026-10-31T15:54:15.190Z",
+    "category": "BIM_AI",
     "categoryHits": [
       "bim",
-      "aec"
+      "ai"
     ],
     "allCategories": [
-      "BIM_ECOSYSTEM"
+      "BIM_ECOSYSTEM",
+      "AI_DX",
+      "BIM_AI"
     ],
     "keywordHits": [
       "bim",
-      "aec"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 8.1,
-    "score": 10.8,
-    "freshnessScore": 3
-  },
-  {
-    "title": "Autodesk: beyond the seat, the meter",
-    "link": "https://aecmag.com/ai/autodesk-beyond-the-seat-the-meter",
-    "source": "AEC Magazine",
-    "pubDate": "2026-10-27T12:13:38.000Z",
-    "summary": "How much of the new AEC computing stack does Autodesk intend to own, and how many meters does it intend to attach to it? The post Autodesk: beyond the seat, the meter appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-28T16:52:15.013Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
       "aec",
-      "autodesk"
+      "ai",
+      "agent",
+      "workflow"
     ],
     "sourceScore": 3,
-    "relevanceScore": 8.1,
-    "score": 9.9,
+    "relevanceScore": 12,
+    "score": 14,
     "freshnessScore": 2
   },
   {
@@ -52,7 +34,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-10-28T15:38:23.000Z",
     "summary": "Purpose-built engineering AI helps firms automate repetitive work and get “expert guidance” The post Allplan Max delivers engineering AI across portfolio appeared first on AEC Magazine.",
-    "fetchedAt": "2026-10-28T16:52:15.013Z",
+    "fetchedAt": "2026-10-31T15:54:15.190Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -67,8 +49,8 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 6.3,
-    "score": 9,
-    "freshnessScore": 3
+    "score": 7.2,
+    "freshnessScore": 1
   },
   {
     "title": "[国交省BIM] 第25回建築BIM環境整備部会を10月28日に開催します。",
@@ -87,6 +69,29 @@
       "bim"
     ],
     "sourceScore": 5,
+    "relevanceScore": 7.2,
+    "score": 7.2,
+    "freshnessScore": 0
+  },
+  {
+    "title": "[Nemetschek] Ngroup Brings Ai To Aec With Max Releases",
+    "link": "https://www.nemetschek.com/en/news-media/ngroup-brings-ai-to-aec-with-max-releases",
+    "pubDate": "",
+    "summary": "Ngroup Brings Ai To Aec With Max Releases",
+    "source": "Nemetschek Newsroom",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 4,
     "relevanceScore": 7.2,
     "score": 7.2,
     "freshnessScore": 0

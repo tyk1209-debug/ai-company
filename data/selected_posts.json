@@ -1,109 +1,39 @@
 [
   {
-    "title": "Autom8Labs launches AEC skills for AI agents",
-    "link": "https://aecmag.com/automation/autom8labs-launches-aec-skills-for-ai-agents",
+    "title": "Qonic AI launches inside BIM platform",
+    "link": "https://aecmag.com/bim/qonic-ai-launches-inside-bim-platform",
     "source": "AEC Magazine",
-    "pubDate": "2026-11-03T15:38:49.000Z",
-    "summary": "Guides AI agent through tasks in Revit, AutoCAD, Grasshopper, 3ds Max and more The post Autom8Labs launches AEC skills for AI agents appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-04T18:18:09.664Z",
-    "category": "REVIT",
+    "pubDate": "2026-11-05T09:34:32.000Z",
+    "summary": "AI agents work directly inside the model, letting users find, check, fix and create BIM data using plain language The post Qonic AI launches inside BIM platform appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-07T16:40:13.139Z",
+    "category": "BIM_AI",
     "categoryHits": [
-      "revit"
+      "bim",
+      "ai"
     ],
     "allCategories": [
-      "REVIT",
       "BIM_ECOSYSTEM",
-      "AI_DX"
+      "AI_DX",
+      "BIM_AI"
     ],
     "keywordHits": [
-      "revit",
+      "bim",
       "aec",
       "ai",
       "agent"
     ],
     "sourceScore": 3,
-    "relevanceScore": 15.21,
-    "score": 17.55,
+    "relevanceScore": 11,
+    "score": 13,
     "freshnessScore": 2
   },
   {
-    "title": "Why BIM Still Doesn't Know What Your Building Is Made Of",
-    "link": "https://www.archdaily.com/1187161/why-bim-still-doesnt-know-what-your-building-is-made-of",
-    "source": "ArchDaily",
-    "pubDate": "2026-11-04T06:45:00.000Z",
-    "summary": "Move a wall in Revit and every plan, section and schedule follows. Change a material, though, and the team is often back in specifications, spreadsheets and drawings, checking that they all describe the same choice.",
-    "fetchedAt": "2026-11-04T18:18:07.135Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT",
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "revit",
-      "bim"
-    ],
-    "sourceScore": 0,
-    "relevanceScore": 9.36,
-    "score": 12.87,
-    "freshnessScore": 3
-  },
-  {
-    "title": "How the 2028 Olympics is shaping downtown revitalization — in St. Louis",
-    "link": "https://www.constructiondive.com/news/2028-olympics-shaping-downtown-revitalization-st-louis/873428",
-    "source": "Construction Dive",
-    "pubDate": "2026-11-02T14:53:00.000Z",
-    "summary": "The city is making the urban core a priority, betting on office-to-residential conversions, innovation zones and private-sector partnerships to tackle vacancies and blight and improve public safety.",
-    "fetchedAt": "2026-11-04T18:18:06.434Z",
-    "category": "REVIT",
-    "categoryHits": [
-      "revit"
-    ],
-    "allCategories": [
-      "REVIT"
-    ],
-    "keywordHits": [
-      "revit"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 9.36,
-    "score": 11.7,
-    "freshnessScore": 2
-  },
-  {
-    "title": "Mach9 adds aerial LiDAR and photogrammetry support",
-    "link": "https://aecmag.com/civil-engineering/mach9-adds-aerial-lidar-and-photogrammetry-support",
+    "title": "Chaos brings AI design exploration into Enscape",
+    "link": "https://aecmag.com/visualisation/chaos-brings-ai-design-exploration-into-enscape",
     "source": "AEC Magazine",
-    "pubDate": "2026-11-04T14:00:11.000Z",
-    "summary": "AI CAD software combines feature extraction, point cloud editing and surface modelling for aerial survey workflows The post Mach9 adds aerial LiDAR and photogrammetry support appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-04T18:18:09.664Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai",
-      "workflow"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 7.2,
-    "score": 9.9,
-    "freshnessScore": 3
-  },
-  {
-    "title": "nCircle Tech launches nVibe AI app builder",
-    "link": "https://aecmag.com/automation/ncircletech-launches-nvibe-ai-app-builder",
-    "source": "AEC Magazine",
-    "pubDate": "2026-11-03T15:00:54.000Z",
-    "summary": "AEC professionals describe the workflow and AI application platform builds the app The post nCircle Tech launches nVibe AI app builder appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-04T18:18:09.664Z",
+    "pubDate": "2026-11-06T10:53:04.000Z",
+    "summary": "Enscape 4.22 integrates Veras 2.0 more closely into the visualisation workflow The post Chaos brings AI design exploration into Enscape appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-07T16:40:13.140Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -123,12 +53,12 @@
     "freshnessScore": 2
   },
   {
-    "title": "The home brew estate: Q&A with AMC Bridge",
-    "link": "https://aecmag.com/ai/the-home-brew-estate-qa-with-amc-bridge",
+    "title": "Chaos brings AI deeper into V-Ray Collection",
+    "link": "https://aecmag.com/visualisation/chaos-brings-ai-deeper-into-v-ray-collection",
     "source": "AEC Magazine",
-    "pubDate": "2026-11-02T15:37:43.000Z",
-    "summary": "With AI, making AEC software is easy, but making it safe, supportable and accountable is another matter entirely The post The home brew estate: Q&A with AMC Bridge appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-04T18:18:09.664Z",
+    "pubDate": "2026-11-06T12:08:04.000Z",
+    "summary": "Features include in-product AI guidance, MCP support and 3D asset generation The post Chaos brings AI deeper into V-Ray Collection appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-07T16:40:13.139Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -147,24 +77,51 @@
     "freshnessScore": 2
   },
   {
-    "title": "[国交省BIM] 第25回建築BIM環境整備部会を10月28日に開催します。",
-    "link": "https://www.mlit.go.jp/jutakukentiku/build/jutakukentiku_house_tk_000239.html",
-    "pubDate": "2026-10-16T00:00:00.000Z",
-    "summary": "第25回建築BIM環境整備部会を10月28日に開催します。",
-    "source": "国土交通省 建築BIM推進会議",
+    "title": "LightYX connects layout and verification",
+    "link": "https://aecmag.com/construction/lightyx-connects-layout-and-verification",
+    "source": "AEC Magazine",
+    "pubDate": "2026-11-05T17:38:11.000Z",
+    "summary": "Combines laser-guided layout, verification and visual documentation in one connected workflow The post LightYX connects layout and verification appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-07T16:40:13.139Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
-      "bim"
+      "aec"
     ],
     "allCategories": [
       "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
-      "bim"
+      "aec",
+      "workflow"
     ],
-    "sourceScore": 5,
+    "sourceScore": 3,
+    "relevanceScore": 6.3,
+    "score": 8.1,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Mach9 adds aerial LiDAR and photogrammetry support",
+    "link": "https://aecmag.com/civil-engineering/mach9-adds-aerial-lidar-and-photogrammetry-support",
+    "source": "AEC Magazine",
+    "pubDate": "2026-11-04T14:00:11.000Z",
+    "summary": "AI CAD software combines feature extraction, point cloud editing and surface modelling for aerial survey workflows The post Mach9 adds aerial LiDAR and photogrammetry support appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-07T16:40:13.139Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai",
+      "workflow"
+    ],
+    "sourceScore": 3,
     "relevanceScore": 7.2,
-    "score": 7.2,
-    "freshnessScore": 0
+    "score": 8.1,
+    "freshnessScore": 1
   }
 ]

@@ -1,39 +1,42 @@
 [
   {
-    "title": "Qonic AI launches inside BIM platform",
-    "link": "https://aecmag.com/bim/qonic-ai-launches-inside-bim-platform",
-    "source": "AEC Magazine",
-    "pubDate": "2026-11-05T09:34:32.000Z",
-    "summary": "AI agents work directly inside the model, letting users find, check, fix and create BIM data using plain language The post Qonic AI launches inside BIM platform appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-07T16:40:13.139Z",
-    "category": "BIM_AI",
+    "title": "Archicad MCP: AI automation of repetitive BIM tasks for architects",
+    "link": "https://www.graphisoft.com/en-us/pulse/archicad-mcp-ai-automation-of-repetitive-bim-tasks-for-architects",
+    "source": "Graphisoft Blog",
+    "pubDate": "2026-11-09T15:12:51.000Z",
+    "summary": "Archicad MCP (Beta) simplifies and speeds up mundane, tedious tasks, leaving architects with more time for meaningful design work. This is primarily made possible by the fact that, with MCP workflows, the architect can batch-edit the BIM model and its data. In many cases, this can save many hours of work. Where does AI create […] The post Archicad MCP: AI automation of repetitive BIM tasks for architects appeared first on Graphisoft.",
+    "fetchedAt": "2026-11-10T18:20:48.291Z",
+    "category": "ARCHICAD",
     "categoryHits": [
-      "bim",
-      "ai"
+      "archicad",
+      "graphisoft"
     ],
     "allCategories": [
+      "ARCHICAD",
       "BIM_ECOSYSTEM",
       "AI_DX",
       "BIM_AI"
     ],
     "keywordHits": [
+      "archicad",
       "bim",
-      "aec",
+      "graphisoft",
+      "automation",
       "ai",
-      "agent"
+      "workflow"
     ],
-    "sourceScore": 3,
-    "relevanceScore": 11,
-    "score": 13,
+    "sourceScore": 4,
+    "relevanceScore": 19,
+    "score": 21,
     "freshnessScore": 2
   },
   {
-    "title": "Chaos brings AI design exploration into Enscape",
-    "link": "https://aecmag.com/visualisation/chaos-brings-ai-design-exploration-into-enscape",
+    "title": "Trimble embeds AI across AECO",
+    "link": "https://aecmag.com/collaboration/trimble-embeds-ai-across-aeco",
     "source": "AEC Magazine",
-    "pubDate": "2026-11-06T10:53:04.000Z",
-    "summary": "Enscape 4.22 integrates Veras 2.0 more closely into the visualisation workflow The post Chaos brings AI design exploration into Enscape appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-07T16:40:13.140Z",
+    "pubDate": "2026-11-10T09:19:34.000Z",
+    "summary": "Trimble Connect platform introduces AI agents and automation to improve project coordination, manage risk and streamline workflows The post Trimble embeds AI across AECO appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-10T18:20:49.584Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -44,21 +47,46 @@
     ],
     "keywordHits": [
       "aec",
+      "automation",
       "ai",
+      "agent",
       "workflow"
     ],
     "sourceScore": 3,
-    "relevanceScore": 7.2,
-    "score": 9,
-    "freshnessScore": 2
+    "relevanceScore": 9.9,
+    "score": 12.6,
+    "freshnessScore": 3
   },
   {
-    "title": "Chaos brings AI deeper into V-Ray Collection",
-    "link": "https://aecmag.com/visualisation/chaos-brings-ai-deeper-into-v-ray-collection",
+    "title": "Ageiro launches Ark Watcher",
+    "link": "https://aecmag.com/project-management/ageiro-launches-ark-watcher",
     "source": "AEC Magazine",
-    "pubDate": "2026-11-06T12:08:04.000Z",
-    "summary": "Features include in-product AI guidance, MCP support and 3D asset generation The post Chaos brings AI deeper into V-Ray Collection appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-07T16:40:13.139Z",
+    "pubDate": "2026-11-10T13:48:30.000Z",
+    "summary": "Continuously monitors project information across Autodesk Forma, Aconex, Procore and more The post Ageiro launches Ark Watcher appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-10T18:20:49.584Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "aec",
+      "autodesk"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 8.1,
+    "score": 10.8,
+    "freshnessScore": 3
+  },
+  {
+    "title": "G2 Digital launches quad-GPU 2U server",
+    "link": "https://aecmag.com/workstations/g2-digital-launches-quad-gpu-2u-server",
+    "source": "AEC Magazine",
+    "pubDate": "2026-11-10T07:50:27.000Z",
+    "summary": "UK-manufactured 2U Q-Power offers firms an alternative to premium cloud AI services The post G2 Digital launches quad-GPU 2U server appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-10T18:20:49.584Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -73,8 +101,8 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 6.3,
-    "score": 8.1,
-    "freshnessScore": 2
+    "score": 9,
+    "freshnessScore": 3
   },
   {
     "title": "LightYX connects layout and verification",
@@ -82,7 +110,7 @@
     "source": "AEC Magazine",
     "pubDate": "2026-11-05T17:38:11.000Z",
     "summary": "Combines laser-guided layout, verification and visual documentation in one connected workflow The post LightYX connects layout and verification appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-07T16:40:13.139Z",
+    "fetchedAt": "2026-11-10T18:20:49.584Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -96,32 +124,7 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 6.3,
-    "score": 8.1,
-    "freshnessScore": 2
-  },
-  {
-    "title": "Mach9 adds aerial LiDAR and photogrammetry support",
-    "link": "https://aecmag.com/civil-engineering/mach9-adds-aerial-lidar-and-photogrammetry-support",
-    "source": "AEC Magazine",
-    "pubDate": "2026-11-04T14:00:11.000Z",
-    "summary": "AI CAD software combines feature extraction, point cloud editing and surface modelling for aerial survey workflows The post Mach9 adds aerial LiDAR and photogrammetry support appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-07T16:40:13.139Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM",
-      "AI_DX"
-    ],
-    "keywordHits": [
-      "aec",
-      "ai",
-      "workflow"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 7.2,
-    "score": 8.1,
+    "score": 7.2,
     "freshnessScore": 1
   }
 ]

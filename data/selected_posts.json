@@ -1,45 +1,67 @@
 [
   {
-    "title": "Archicad MCP: AI automation of repetitive BIM tasks for architects",
-    "link": "https://www.graphisoft.com/en-us/pulse/archicad-mcp-ai-automation-of-repetitive-bim-tasks-for-architects",
-    "source": "Graphisoft Blog",
-    "pubDate": "2026-11-09T15:12:51.000Z",
-    "summary": "Archicad MCP (Beta) simplifies and speeds up mundane, tedious tasks, leaving architects with more time for meaningful design work. This is primarily made possible by the fact that, with MCP workflows, the architect can batch-edit the BIM model and its data. In many cases, this can save many hours of work. Where does AI create […] The post Archicad MCP: AI automation of repetitive BIM tasks for architects appeared first on Graphisoft.",
-    "fetchedAt": "2026-11-10T18:20:48.291Z",
-    "category": "ARCHICAD",
+    "title": "SketchUp 2027 bridges design workflows",
+    "link": "https://aecmag.com/cad/sketchup-2027-bridges-design-workflows",
+    "source": "AEC Magazine",
+    "pubDate": "2026-11-10T18:22:40.000Z",
+    "summary": "Trimble introduces non-destructive modelling and enhanced Revit interoperability The post SketchUp 2027 bridges design workflows appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-13T18:13:40.560Z",
+    "category": "REVIT",
     "categoryHits": [
-      "archicad",
-      "graphisoft"
+      "revit"
     ],
     "allCategories": [
-      "ARCHICAD",
-      "BIM_ECOSYSTEM",
-      "AI_DX",
-      "BIM_AI"
+      "REVIT",
+      "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
-      "archicad",
-      "bim",
-      "graphisoft",
-      "automation",
-      "ai",
+      "revit",
+      "aec",
+      "interoperability",
       "workflow"
     ],
-    "sourceScore": 4,
-    "relevanceScore": 19,
-    "score": 21,
+    "sourceScore": 3,
+    "relevanceScore": 16.38,
+    "score": 18.72,
     "freshnessScore": 2
   },
   {
-    "title": "Trimble embeds AI across AECO",
-    "link": "https://aecmag.com/collaboration/trimble-embeds-ai-across-aeco",
+    "title": "SketchUp add-on brings BIM to smaller practices",
+    "link": "https://aecmag.com/bim/sketchup-add-on-brings-bim-to-smaller-practices",
     "source": "AEC Magazine",
-    "pubDate": "2026-11-10T09:19:34.000Z",
-    "summary": "Trimble Connect platform introduces AI agents and automation to improve project coordination, manage risk and streamline workflows The post Trimble embeds AI across AECO appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-10T18:20:49.584Z",
+    "pubDate": "2026-11-13T09:45:34.000Z",
+    "summary": "Archeform BIM brings BIM elements, drawings, schedules and IFC to SketchUp, with new 1.1 release targeting renovation workflows The post SketchUp add-on brings BIM to smaller practices appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-13T18:13:40.560Z",
+    "category": "IFC",
+    "categoryHits": [
+      "ifc"
+    ],
+    "allCategories": [
+      "IFC",
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "ifc",
+      "bim",
+      "aec",
+      "workflow"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 15,
+    "score": 18,
+    "freshnessScore": 3
+  },
+  {
+    "title": "AI makes scanned buildings searchable",
+    "link": "https://aecmag.com/cafm/ai-makes-scanned-buildings-searchable",
+    "source": "AEC Magazine",
+    "pubDate": "2026-11-13T11:17:46.000Z",
+    "summary": "qentin helps facility managers find assets, check safety features and explore “digital twins“ using natural language The post AI makes scanned buildings searchable appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-13T18:13:40.560Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
-      "aec"
+      "aec",
+      "digital twin"
     ],
     "allCategories": [
       "BIM_ECOSYSTEM",
@@ -47,46 +69,21 @@
     ],
     "keywordHits": [
       "aec",
-      "automation",
-      "ai",
-      "agent",
-      "workflow"
+      "digital twin",
+      "ai"
     ],
     "sourceScore": 3,
-    "relevanceScore": 9.9,
-    "score": 12.6,
+    "relevanceScore": 9,
+    "score": 11.7,
     "freshnessScore": 3
   },
   {
-    "title": "Ageiro launches Ark Watcher",
-    "link": "https://aecmag.com/project-management/ageiro-launches-ark-watcher",
+    "title": "Rhino World 2026: McNeel lets AI in",
+    "link": "https://aecmag.com/cad/rhino-world-2026-mcneel-lets-ai-in",
     "source": "AEC Magazine",
-    "pubDate": "2026-11-10T13:48:30.000Z",
-    "summary": "Continuously monitors project information across Autodesk Forma, Aconex, Procore and more The post Ageiro launches Ark Watcher appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-10T18:20:49.584Z",
-    "category": "BIM_ECOSYSTEM",
-    "categoryHits": [
-      "aec"
-    ],
-    "allCategories": [
-      "BIM_ECOSYSTEM"
-    ],
-    "keywordHits": [
-      "aec",
-      "autodesk"
-    ],
-    "sourceScore": 3,
-    "relevanceScore": 8.1,
-    "score": 10.8,
-    "freshnessScore": 3
-  },
-  {
-    "title": "G2 Digital launches quad-GPU 2U server",
-    "link": "https://aecmag.com/workstations/g2-digital-launches-quad-gpu-2u-server",
-    "source": "AEC Magazine",
-    "pubDate": "2026-11-10T07:50:27.000Z",
-    "summary": "UK-manufactured 2U Q-Power offers firms an alternative to premium cloud AI services The post G2 Digital launches quad-GPU 2U server appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-10T18:20:49.584Z",
+    "pubDate": "2026-11-12T09:55:20.000Z",
+    "summary": "As McNeel rolls out Rhino 9, we look at how it’s embracing AI and accelerating development. The post Rhino World 2026: McNeel lets AI in appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-13T18:13:40.560Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
@@ -101,30 +98,31 @@
     ],
     "sourceScore": 3,
     "relevanceScore": 6.3,
-    "score": 9,
-    "freshnessScore": 3
+    "score": 8.1,
+    "freshnessScore": 2
   },
   {
-    "title": "LightYX connects layout and verification",
-    "link": "https://aecmag.com/construction/lightyx-connects-layout-and-verification",
+    "title": "Archiboost looks beyond construction document checking",
+    "link": "https://aecmag.com/data-management/archiboost-looks-beyond-construction-document-checking",
     "source": "AEC Magazine",
-    "pubDate": "2026-11-05T17:38:11.000Z",
-    "summary": "Combines laser-guided layout, verification and visual documentation in one connected workflow The post LightYX connects layout and verification appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-10T18:20:49.584Z",
+    "pubDate": "2026-11-11T11:56:35.000Z",
+    "summary": "Company secures $6.2m to develop a connected model of building information and advance its AI AECO platform The post Archiboost looks beyond construction document checking appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-13T18:13:40.560Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
       "aec"
     ],
     "allCategories": [
-      "BIM_ECOSYSTEM"
+      "BIM_ECOSYSTEM",
+      "AI_DX"
     ],
     "keywordHits": [
       "aec",
-      "workflow"
+      "ai"
     ],
     "sourceScore": 3,
     "relevanceScore": 6.3,
-    "score": 7.2,
-    "freshnessScore": 1
+    "score": 8.1,
+    "freshnessScore": 2
   }
 ]

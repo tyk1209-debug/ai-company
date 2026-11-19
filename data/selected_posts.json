@@ -1,53 +1,194 @@
 [
   {
-    "title": "SketchUp add-on brings BIM to smaller practices",
-    "link": "https://aecmag.com/bim/sketchup-add-on-brings-bim-to-smaller-practices",
+    "title": "Pliera: a new BIM 2.0",
+    "link": "https://aecmag.com/bim/pliera-a-new-bim-2-0",
     "source": "AEC Magazine",
-    "pubDate": "2026-11-13T09:45:34.000Z",
-    "summary": "Archeform BIM brings BIM elements, drawings, schedules and IFC to SketchUp, with new 1.1 release targeting renovation workflows The post SketchUp add-on brings BIM to smaller practices appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-16T20:42:39.260Z",
-    "category": "IFC",
+    "pubDate": "2026-11-18T18:13:49.000Z",
+    "summary": "New BIM platform comes with rule-based building configurators and ambitious plans to challenge Revit The post Pliera: a new BIM 2.0 appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-19T19:13:03.740Z",
+    "category": "REVIT",
     "categoryHits": [
-      "ifc"
+      "revit"
     ],
     "allCategories": [
-      "IFC",
+      "REVIT",
       "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
-      "ifc",
+      "revit",
       "bim",
-      "aec",
-      "workflow"
+      "aec"
     ],
     "sourceScore": 3,
-    "relevanceScore": 15,
-    "score": 16,
-    "freshnessScore": 1
+    "relevanceScore": 16.38,
+    "score": 18.72,
+    "freshnessScore": 2
   },
   {
-    "title": "Beyond BIM: From Engineering Data to Engineering Intelligence",
-    "link": "https://aecmag.com/sponsored-content/beyond-bim-from-engineering-data-to-engineering-intelligence",
+    "title": "buildingSMART and Khronos enter liaison to advance IFC and glTF interoperability",
+    "link": "https://www.buildingsmart.org/buildingsmart-and-khronos-enter-liaison-to-advance-ifc-and-gltf-interoperability",
+    "source": "buildingSMART International",
+    "pubDate": "2026-10-26T13:53:46.000Z",
+    "summary": "26 October 2026 – buildingSMART International and the Khronos® Group have established a new liaison agreement to strengthen cooperation between their organisations, with an initial focus on improving interoperability between… The post buildingSMART and Khronos enter liaison to advance IFC and glTF interoperability appeared first on buildingSMART International.",
+    "fetchedAt": "2026-11-19T19:13:02.391Z",
+    "category": "IFC",
+    "categoryHits": [
+      "ifc",
+      "buildingsmart"
+    ],
+    "allCategories": [
+      "IFC"
+    ],
+    "keywordHits": [
+      "ifc",
+      "buildingsmart",
+      "interoperability"
+    ],
+    "sourceScore": 4,
+    "relevanceScore": 16,
+    "score": 16,
+    "freshnessScore": 0
+  },
+  {
+    "title": "The buildingSMART openBIM Awards 2026 – Winners Announced",
+    "link": "https://www.buildingsmart.org/the-buildingsmart-openbim-awards-2026-winners-announced",
+    "source": "buildingSMART International",
+    "pubDate": "2026-10-12T11:47:41.000Z",
+    "summary": "Tokyo, Japan – October 12, 2026 The winners of the buildingSMART openBIM Awards 2026 were announced during a celebratory ceremony on Thursday 8 October, as part of the closing plenary… The post The buildingSMART openBIM Awards 2026 – Winners Announced appeared first on buildingSMART International.",
+    "fetchedAt": "2026-11-19T19:13:02.391Z",
+    "category": "IFC",
+    "categoryHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "allCategories": [
+      "IFC"
+    ],
+    "keywordHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "sourceScore": 4,
+    "relevanceScore": 14,
+    "score": 14,
+    "freshnessScore": 0
+  },
+  {
+    "title": "High & Medium Voltage Power transmission & distribution Project Plan out for voting.",
+    "link": "https://www.buildingsmart.org/high-medium-voltage-power-transmission-distribution-project-plan-out-for-voting",
+    "source": "buildingSMART International",
+    "pubDate": "2026-09-22T10:10:39.000Z",
+    "summary": "Vote closing date: 13 Nov 2026Report: Link This project investigates how openBIM can support high and medium voltage power transmission and distribution infrastructure across the asset lifecycle. It will develop… The post High & Medium Voltage Power transmission & distribution Project Plan out for voting. appeared first on buildingSMART International.",
+    "fetchedAt": "2026-11-19T19:13:02.391Z",
+    "category": "IFC",
+    "categoryHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "allCategories": [
+      "IFC"
+    ],
+    "keywordHits": [
+      "openbim",
+      "buildingsmart"
+    ],
+    "sourceScore": 4,
+    "relevanceScore": 14,
+    "score": 14,
+    "freshnessScore": 0
+  },
+  {
+    "title": "Tekla API helps transform structural steel reuse",
+    "link": "https://aecmag.com/structural-engineering/tekla-api-helps-transform-structural-steel-reuse",
     "source": "AEC Magazine",
-    "pubDate": "2026-11-16T10:22:33.000Z",
-    "summary": "BIM provided the structured data foundation on which next-gen engineering workflows can be built The post Beyond BIM: From Engineering Data to Engineering Intelligence appeared first on AEC Magazine.",
-    "fetchedAt": "2026-11-16T20:42:39.260Z",
+    "pubDate": "2026-11-18T14:05:11.000Z",
+    "summary": "William Hare uses bespoke automation to maximise reclaimed steel on landmark London project The post Tekla API helps transform structural steel reuse appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-19T19:13:03.740Z",
     "category": "BIM_ECOSYSTEM",
     "categoryHits": [
-      "bim",
       "aec"
     ],
     "allCategories": [
       "BIM_ECOSYSTEM"
     ],
     "keywordHits": [
-      "bim",
       "aec",
-      "workflow"
+      "api",
+      "automation"
     ],
     "sourceScore": 3,
     "relevanceScore": 9,
-    "score": 11.7,
-    "freshnessScore": 3
+    "score": 10.8,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Rayon V4: a different bet on the future of CAD",
+    "link": "https://aecmag.com/cad/rayon-v4-a-different-bet-on-the-future-of-cad",
+    "source": "AEC Magazine",
+    "pubDate": "2026-11-18T13:00:49.000Z",
+    "summary": "3D modelling, an AI agent, generative rendering and mobile access comes to the browser-based CAD software The post Rayon V4: a different bet on the future of CAD appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-19T19:13:03.740Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai",
+      "agent"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 7.2,
+    "score": 9,
+    "freshnessScore": 2
+  },
+  {
+    "title": "Renda and Nexalus launch liquid-cooled AI server",
+    "link": "https://aecmag.com/workstations/renda-and-nexalus-launch-liquid-cooled-ai-server",
+    "source": "AEC Magazine",
+    "pubDate": "2026-11-18T12:34:10.000Z",
+    "summary": "Nova8 delivers eight GPUs in 4U to facilities that were never built for liquid cooling The post Renda and Nexalus launch liquid-cooled AI server appeared first on AEC Magazine.",
+    "fetchedAt": "2026-11-19T19:13:03.740Z",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM",
+      "AI_DX"
+    ],
+    "keywordHits": [
+      "aec",
+      "ai"
+    ],
+    "sourceScore": 3,
+    "relevanceScore": 6.3,
+    "score": 8.1,
+    "freshnessScore": 2
+  },
+  {
+    "title": "[Nemetschek] Aicte And Nemetschek Group Forge Landmark Alliance Power Indias Future Ready Aec",
+    "link": "https://www.nemetschek.com/en/news-media/aicte-and-nemetschek-group-forge-landmark-alliance-power-indias-future-ready-aec",
+    "pubDate": "",
+    "summary": "Aicte And Nemetschek Group Forge Landmark Alliance Power Indias Future Ready Aec",
+    "source": "Nemetschek Newsroom",
+    "category": "BIM_ECOSYSTEM",
+    "categoryHits": [
+      "aec"
+    ],
+    "allCategories": [
+      "BIM_ECOSYSTEM"
+    ],
+    "keywordHits": [
+      "aec"
+    ],
+    "sourceScore": 4,
+    "relevanceScore": 6.3,
+    "score": 6.3,
+    "freshnessScore": 0
   }
 ]
